@@ -1,7 +1,7 @@
 project:
-    machine_name: blted8
-    prefix: BLT
-    human_name: 'BLTed 8'
+    machine_name: capitalcamp
+    prefix: DGC
+    human_name: 'Drupal GovCon'
     profile:
         name: lightning
     local:
@@ -10,7 +10,7 @@ project:
 git:
     default_branch: master
     remotes:
-        - 'bolt8@svn-5223.devcloud.hosting.acquia.com:bolt8.git'
+        - 'capitalcamp@svn-6971.prod.hosting.acquia.com:capitalcamp.git'
 drush:
     aliases:
         remote: '${project.machine_name}.test'
