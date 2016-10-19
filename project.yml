@@ -1,0 +1,34 @@
+project:
+    machine_name: blted8
+    prefix: BLT
+    human_name: 'BLTed 8'
+    profile:
+        name: lightning
+    local:
+        protocol: http
+        hostname: 'local.${project.machine_name}.com'
+git:
+    default_branch: master
+    remotes:
+        - 'bolt8@svn-5223.devcloud.hosting.acquia.com:bolt8.git'
+drush:
+    aliases:
+        remote: '${project.machine_name}.test'
+        local: self
+        ci: self
+    default_alias: '${drush.aliases.local}'
+target-hooks:
+    frontend-setup:
+        dir: '${docroot}'
+        command: 'echo ''No frontend-setup configured.'''
+    frontend-build:
+        dir: '${docroot}'
+        command: 'echo ''No frontend-build configured.'''
+    post-deploy-build:
+        dir: '${docroot}'
+        command: 'echo ''No post-deploy build configured.'''
+    post-setup-build:
+        dir: '${docroot}'
+        command: 'echo ''No post-setup build configured.'''
+import: null
+
