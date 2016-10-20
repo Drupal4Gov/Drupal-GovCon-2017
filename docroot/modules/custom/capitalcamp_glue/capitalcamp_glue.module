@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * @file
+ * Contains helper and installation functions.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function capitalcamp_glue_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.capitalcamp_glue':
+      $return_value = '<p>' . t('This module contains all the installation hooks') . '</p>';
+      return $return_value;
+  }
+}
