@@ -1,0 +1,57 @@
+<?php
+
+/**
+ * @file
+ * Theme specific functionality.
+ */
+
+use Drupal\Component\Utility\Html;
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function twentyseventeen_preprocess_html(&$variables) {
+  // Body classes for sidebars.
+  if (isset($variables['page']['sidebar_first']) && isset($variables['page']['sidebar_second'])) {
+    $variables['attributes']['class'][] = Html::cleanCssIdentifier('body-sidebars-both');
+  }
+  elseif (isset($variables['page']['sidebar_first'])) {
+    $variables['attributes']['class'][] = Html::cleanCssIdentifier('body-sidebars-first');
+  }
+  elseif (isset($variables['page']['sidebar_second'])) {
+    $variables['attributes']['class'][] = Html::cleanCssIdentifier('body-sidebars-second');
+  }
+  else {
+    $variables['attributes']['class'][] = Html::cleanCssIdentifier('body-sidebars-none');
+  }
+  $system_path = \Drupal::service('path.current')->getPath();
+  $page_path = explode('/', $system_path)[1];
+  if (!empty($page_path)) {
+    $variables['attributes']['class'][] = Html::cleanCssIdentifier('path--' . $page_path);
+  }
+}
+
+/**
+ * Implements template_preprocess_block().
+ */
+function twentyseventeen_preprocess_block(&$variables) {
+  // Custom block type helper classes.
+  if (isset($variables['elements']['content']['#block_content'])) {
+    $bundle = $variables['elements']['content']['#block_content']->bundle();
+    $bundle_class = str_replace('_', '-', $bundle);
+    if (isset($variables['attributes']['class'])) {
+      $variables['attributes']['class'] = Html::cleanCssIdentifier('block--' . $bundle_class);
+      $variables['attributes']['data-bundle-class'] = $bundle_class;
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function twentyseventeen_preprocess_node(&$variables) {
+  // Helper variables for multiple nodes.
+  if ($variables['elements']['#entity_type']) {
+    $variables['attributes']['class'][] = Html::cleanCssIdentifier('entity--type-' . $variables['elements']['#entity_type']);
+  }
+}

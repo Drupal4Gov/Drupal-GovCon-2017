@@ -1,0 +1,20 @@
+name: twentyseventeen
+type: theme
+description: 'Acquia D8 starter theme'
+core: 8.x
+base theme: cog
+libraries:
+  - twentyseventeen/lib
+regions:
+  branding: Branding
+  header: Header
+  pre_content: 'Pre Content'
+  content: Content
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  post_content: 'Post Content'
+  footer: Footer
+
+# Information added by Drupal.org packaging script on 2016-09-26
+version: '8.x-1.0'
+datestamp: 1474908678

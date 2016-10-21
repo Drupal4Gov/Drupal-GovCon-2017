@@ -19,16 +19,16 @@ drush:
     default_alias: '${drush.aliases.local}'
 target-hooks:
     frontend-setup:
-        dir: '${docroot}'
-        command: 'echo ''No frontend-setup configured.'''
+        dir: '${docroot}/themes/custom/twentyseventeen'
+        command: 'npm run install-tools'
     frontend-build:
-        dir: '${docroot}'
-        command: 'echo ''No frontend-build configured.'''
+        dir: '${docroot}/themes/custom/twentyseventeen'
+        command: 'npm run build'
     post-deploy-build:
-        dir: '${docroot}'
-        command: 'echo ''No post-deploy build configured.'''
+        dir: '${deploy.dir}/docroot/profiles/contrib/lightning'
+        command: 'npm run install-libraries'
     post-setup-build:
-        dir: '${docroot}'
-        command: 'echo ''No post-setup build configured.'''
+        dir: '${docroot}/profiles/contrib/lightning'
+        command: 'npm run install-libraries'
 import: null
 
