@@ -1,0 +1,15 @@
+// Sidebar Block
+//
+// Sidebar block styling.
+//
+// Markup: block.hbs
+//
+// Style guide: components.block
+aside .block {
+  @extend .blk-style;
+  margin-bottom: 25px;
+  h2 {
+    font-size: 175%;
+    color: $lt-blk;
+  }
+}

@@ -1,0 +1,64 @@
+// Colors ///////////////
+$wht: #fafafa;
+$lt-blk: #323232;
+$red: #ee696c;
+$sft-blu: #226e8e;
+$lt-blu: #f3f9fc;
+$md-gr: #999;
+$slv: #ccc;
+$lt-gr: #ddd;
+$ltr-gr: #fafafa;
+
+// Utility color variables ///////////////
+$heading: $sft-blu;
+$link: $sft-blu;
+
+// Fonts ///////////////
+$opensans: 'Open Sans';
+$signika: 'Signika';
+
+$heading_font: $opensans;
+$body_font: $signika;
+
+// Susy config ///////////////
+$susy: (
+ columns: 12, // The number of columns in your grid
+ gutters: 1/4, // The size of a gutter in relation to a single column
+);
+
+// Breakpoints ///////////////
+$min-tablet: 768px;
+
+// Example Mixins ///////////////
+@mixin opac-color($r, $g, $b, $pertc) {
+  background: rgb($r, $g, $b);
+  background: rgba($r, $g, $b, $pertc);
+}
+@mixin region-spacer($color, $direction: bottom) {
+  border-top: 1px dotted $color;
+  @if $direction == top {
+    padding-top: 25px;
+    margin-top: 25px;
+  } @else {
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+  }
+}
+
+// Example Placeholders ///////////////
+.no-ul-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  > li {
+    display: inline-block;
+    list-style-type: none;
+    margin: 2px;
+  }
+}
+.blk-style {
+  border: 1px solid $lt-gr;
+  padding: 10px;
+  border-radius: 5px;
+  background: $lt-blu;
+}
