@@ -1,0 +1,4 @@
+## Base Theme
+A base theme provides a consistent starting point and tools for Drupal theming work. There are several base themes within Drupal core and many others that are provided as contrib projects (Some popular examples: [Zen](https://www.drupal.org/project/zen), [Omega](https://www.drupal.org/project/omega)). Base themes are meant to be extended by sub themes and often contain tools for generating these sub themes with minimal effort. A base theme is meant to be left unaltered and used as a reference point. Custom work should be done in the generated sub theme.  
+
+In most situations a full blown framework as a base theme isn’t recommended. Frameworks such as Bootstrap or Foundation are great starting points when the site is designed based on the framework. But, when they aren’t, they can add over 100kb & 6000 lines of CSS to a project that is mostly being overwritten or largely unused.

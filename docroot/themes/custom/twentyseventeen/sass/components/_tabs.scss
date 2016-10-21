@@ -1,0 +1,23 @@
+// Primary Tabs
+//
+// Simple tabs styling.
+//
+// Markup: tabs.hbs
+//
+// Style guide: components.tabs
+.block-tabs {
+  margin: 1.5em 0;
+  ul {
+    display: block;
+    padding-left: 0;
+    border-bottom: 1px solid $lt-gr;
+    li {
+      display: inline-block;
+      a {
+        margin: 0;
+        padding: 0.4em;
+        text-decoration: none;
+      }
+    }
+  }
+}
