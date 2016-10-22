@@ -18,13 +18,13 @@ env_refresh() {
   drush @${drush_alias} --strict=0 config-import --partial --source=/mnt/www/html/capitalcamp.${env}/config/default -y
 
   echo "Run features revert ..."
-  drush @${drush_alias} features-import-all
+  drush @${drush_alias} features-import-all -y
 
   echo "Making any necessary Drupal database updates..."
   drush @${drush_alias} updb --entity-updates -y
 
   echo "Run another features revert ..."
-  drush @${drush_alias} features-import-all
+  drush @${drush_alias} features-import-all -y
 
   echo "Rebuilding Cache ..."
   drush @${drush_alias} cache-rebuild
