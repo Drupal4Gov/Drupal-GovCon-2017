@@ -10,7 +10,7 @@ env_refresh() {
 # case ${env} in
 #    "prod" )
 #          echo "Making backup of Database..."
-#          drush @${drush_alias} ac-database-instance-backup cbriver --endpoint=${endpoint} --email=${email} --key=${key}
+#          drush @${drush_alias} ac-database-instance-backup capitalcamp --endpoint=${endpoint} --email=${email} --key=${key}
 #      * )
 #  esac
 
@@ -39,11 +39,11 @@ env_refresh() {
 #  drush @${drush_alias} ac-domain-purge capitalcamp{env}.prod.acquia-sites.com --endpoint=${endpoint} --email=${email} --key=${key}
   echo "Deployment script run for ${env}"
 
-  case ${env} in
-    "prod" )
+#  case ${env} in
+#    "prod" )
           echo "Clearing Varnish..."
 #          drush @${drush_alias} ac-domain-purge capitalcamp.prod.acquia-sites.com --endpoint=${endpoint} --email=${email} --key=${key}
 #          echo "Deployment script run for ${env}";;
-      * )
-  esac
+#      * )
+#  esac
 }
