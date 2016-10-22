@@ -1,0 +1,26 @@
+uuid: c11699a4-dad8-4d58-987e-dc3703e856cc
+langcode: en
+status: true
+dependencies: {  }
+id: page_creator
+label: 'Basic page Creator'
+weight: 2
+is_admin: null
+permissions:
+  - 'create page content'
+  - 'edit own page content'
+  - 'view page revisions'
+  - 'view own unpublished content'
+  - 'create url aliases'
+  - 'access panels in-place editing'
+  - 'change layouts in place editing'
+  - 'administer panelizer node page content'
+  - 'administer panelizer node page layout'
+  - 'use text format rich_text'
+  - 'access media_browser entity browser pages'
+  - 'view any unpublished content'
+  - 'use draft_draft transition'
+  - 'use draft_needs_review transition'
+  - 'use needs_review_needs_review transition'
+  - 'view latest version'
+  - 'access image_browser entity browser pages'
