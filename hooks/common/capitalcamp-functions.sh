@@ -37,7 +37,7 @@ env_refresh() {
 
 #  echo "Clearing Varnish..."
 #  drush @${drush_alias} ac-domain-purge capitalcamp{env}.prod.acquia-sites.com --endpoint=${endpoint} --email=${email} --key=${key}
-  echo "Deployment script run for ${env}";;
+  echo "Deployment script run for ${env}"
 
   case ${env} in
     "prod" )
