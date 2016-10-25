@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c7e8a361924393a99c63f9116cbe8037",
-    "content-hash": "d1e982bf88ecd69c6878b8ad772715c6",
+    "hash": "921be5e60240db4a571572c911e8d0ab",
+    "content-hash": "2618fb64140d7df69d7d1f9e18053f41",
     "packages": [
         {
             "name": "acquia/blt",
@@ -3044,6 +3044,44 @@
                 "Drupal"
             ],
             "time": "2016-10-05 06:23:30"
+        },
+        {
+            "name": "drupal/xmlsitemap",
+            "version": "8.1.0-alpha2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/xmlsitemap",
+                "reference": "94b9d51597c2152d06357aba7a5eb5aa7498608d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/xmlsitemap-8.x-1.0-alpha2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/core": "8.*"
+            },
+            "replace": {
+                "drupal/xmlsitemap_custom": "self.version",
+                "drupal/xmlsitemap_engines": "self.version"
+            },
+            "suggest": {
+                "drupal/core": "Required by drupal/xmlsitemap_custom, drupal/xmlsitemap_engines"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Creates an XML sitemap conforming to the <a href=\"http://sitemaps.org/\">sitemaps.org protocol</a>.",
+            "homepage": "https://www.drupal.org/project/xmlsitemap",
+            "time": "2016-05-25 15:36:17"
         },
         {
             "name": "easyrdf/easyrdf",
