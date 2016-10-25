@@ -10,6 +10,7 @@
 
 // Environment_indicator settings
 $config['environment_indicator_overwrite'] = TRUE;
+$config['environment_indicator.indicator']['fg_color'] = '#ffffff';
 
 if ($is_ah_env) {
   $config['environment_indicator.indicator']['name'] = ucfirst($_ENV['AH_SITE_ENVIRONMENT']);
