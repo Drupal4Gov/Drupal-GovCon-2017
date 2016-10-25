@@ -718,3 +718,9 @@ $settings['container_yamls'][] = __DIR__ . '/services.yml';
 #   include __DIR__ . '/settings.local.php';
 # }
 require DRUPAL_ROOT . "/../vendor/acquia/blt/settings/blt.settings.php";
+
+/**
+ * Environment Specific Customizations based on the Environment Indicator
+ */
+
+require DRUPAL_ROOT . "/sites/default/settings/environment.settings.php";
