@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "19b09763836945ff4f06a36c03ee7f6e",
-    "content-hash": "79ab020a24d3d88f7ca22d2cd70fccfd",
+    "hash": "0a289fe8716e3780372be71af188a952",
+    "content-hash": "8211bb8aca5cd0481ced485523d13ff3",
     "packages": [
         {
             "name": "acquia/blt",
@@ -1135,7 +1135,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/adminimal_admin_toolbar-8.x-1.3.zip",
-                "reference": null,
+                "reference": "fbe2fbfd5e34fb72e28b40ceb5bb8c3f3e708037",
                 "shasum": null
             },
             "require": {
@@ -1770,6 +1770,38 @@
                 "Drupal"
             ],
             "time": "2016-08-11 08:38:41"
+        },
+        {
+            "name": "drupal/environment_indicator",
+            "version": "8.3.0-beta1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/environment_indicator",
+                "reference": "a2dee2b1dd12587c49355a23ad4beebc56f84a77"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/environment_indicator-8.x-3.0-beta1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/color": "8.*",
+                "drupal/core": "8.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-3.x": "8.3.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Adds a color indicator for the different environments.",
+            "homepage": "https://www.drupal.org/project/environment_indicator",
+            "time": "2016-09-16 07:10:22"
         },
         {
             "name": "drupal/features",
