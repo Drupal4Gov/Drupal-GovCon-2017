@@ -15,6 +15,13 @@ regions:
   post_content: 'Post Content'
   footer: Footer
 
-# Information added by Drupal.org packaging script on 2016-09-26
 version: '8.x-1.0'
 datestamp: 1474908678
+
+# This section is used by the contrib module, Component Libraries. It enables
+# references to .twig files in the sass/ directory by using the Twig namespace:
+# @components
+component-libraries:
+  components:
+    paths:
+      - sass

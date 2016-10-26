@@ -147,6 +147,9 @@ var options = {
       path.relative(paths.styleGuide, paths.styles.destination + 'kss-only.css')
     ],
     js: [],
+    builder: 'builder/twig',
+    namespace: 'components:sass',
+    'extend-drupal8': true,
     homepage: 'style-guide-only/homepage.md',
     title: 'Living Style Guide'
   }
