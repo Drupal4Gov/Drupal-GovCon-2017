@@ -148,7 +148,7 @@ var options = {
     ],
     js: [],
     builder: 'builder/twig',
-    namespace: 'Components:sass',
+    namespace: 'components:sass',
     'extend-drupal8': true,
     homepage: 'style-guide-only/homepage.md',
     title: 'Living Style Guide'
