@@ -11,11 +11,12 @@ Tools we are using:
 - [Vagrant](https://www.vagrantup.com/)
  - [Vagrant hostsupdater plugin](https://github.com/cogitatio/vagrant-hostsupdater)
 - [Composer](https://getcomposer.org/)
+- [Drush](http://www.drush.org/en/master/install/) > 8
 - [Ansible](https://github.com/ansible/ansible) > 2.1
 
 ## Quickstart Instructions
 
-- Before you start, do `ssh-add l` to ensure your private key is registered. If not (especially after a system update), do `ssh-add -K ~/.ssh/id_rsa` to do this.
+- Before you start, do `ssh-add -l` to ensure your private key is registered. If not (especially after a system update), do `ssh-add -K ~/.ssh/id_rsa` to do this.
 - Install the prereqs above by following [BLT's Installing Requirements](https://github.com/acquia/blt/blob/8.x/INSTALL.md#installing-requirements) and then `vagrant plugin install vagrant-hostsupdater`
 - **Fork this repo**
 - Clone repo locally (clone **your fork**, do NOT clone the main repo)
