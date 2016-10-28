@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "921be5e60240db4a571572c911e8d0ab",
-    "content-hash": "2618fb64140d7df69d7d1f9e18053f41",
+    "hash": "f74ab5981246138df8446cf07d55e0b4",
+    "content-hash": "6334ad3fda88588f80a1961ade23856d",
     "packages": [
         {
             "name": "acquia/blt",
@@ -390,6 +390,65 @@
             ],
             "description": "Provides a way to patch Composer packages.",
             "time": "2016-10-04 16:21:31"
+        },
+        {
+            "name": "d8-contrib-modules/cloudflarephpsdk",
+            "version": "1.0.0-alpha3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/d8-contrib-modules/cloudflarephpsdk.git",
+                "reference": "bc4eb1615f71442a3ae45017b3955656d193275d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/d8-contrib-modules/cloudflarephpsdk/zipball/bc4eb1615f71442a3ae45017b3955656d193275d",
+                "reference": "bc4eb1615f71442a3ae45017b3955656d193275d",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "~6.1",
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "drupal/coder": "8.2.*",
+                "pdepend/pdepend": "1.1.*",
+                "phing/phing": "2.11.*",
+                "phploc/phploc": "2.0.*@dev",
+                "phpmd/phpmd": "1.*",
+                "phpunit/phpunit": "~4.8",
+                "sebastian/phpcpd": "2.0.*@dev",
+                "squizlabs/php_codesniffer": "2.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "CloudFlarePhpSdk\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Adam Weingarten",
+                    "email": "aweingarten@users.noreply.github.com",
+                    "homepage": "https://github.com/aweingarten"
+                }
+            ],
+            "description": "PHP client for interacting with CloudFlare's SDK. CloudFlare is a copyright of CloudFlare, Inc.  The authors of this tool has no association with CloudFlare, Inc.",
+            "homepage": "https://github.com/d8-contrib-modules/cloudflarephpsdk",
+            "keywords": [
+                "Cloud Flare",
+                "client",
+                "cloudflare",
+                "curl",
+                "framework",
+                "http client",
+                "rest",
+                "web service"
+            ],
+            "time": "2016-03-27 13:17:25"
         },
         {
             "name": "dflydev/dot-access-data",
@@ -1163,6 +1222,82 @@
             "time": "2016-07-19 05:22:46"
         },
         {
+            "name": "drupal/cloudflare",
+            "version": "8.1.0-alpha4",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/cloudflare",
+                "reference": "d285f05c640672f287a637b802342dca006ef433"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/cloudflare-8.x-1.0-alpha4.zip",
+                "reference": "d285f05c640672f287a637b802342dca006ef433",
+                "shasum": null
+            },
+            "require": {
+                "d8-contrib-modules/cloudflarephpsdk": "^1.0.0",
+                "drupal/core": "8.*",
+                "drupal/ctools": "8.*"
+            },
+            "replace": {
+                "drupal/cloudflarepurger": "self.version"
+            },
+            "require-dev": {
+                "behat/behat": "^3.0",
+                "composer/installers": "^1.0.20",
+                "drupal-composer/drupal-scaffold": "^2.0.0",
+                "drupal/coder": "8.*",
+                "drupal/core": "8.*",
+                "drupal/drupal-extension": "^3.1",
+                "drush/drush": "^9.0",
+                "jakoch/phantomjs-installer": "1.9.8",
+                "lakion/mink-debug-extension": "^1.0.3",
+                "phpunit/phpunit": "~4.8",
+                "squizlabs/php_codesniffer": "~2"
+            },
+            "suggest": {
+                "drupal/core": "Required by drupal/cloudflarepurger",
+                "drupal/purge": "Required by drupal/cloudflarepurger"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "installer-paths": {
+                    "docroot/core": [
+                        "type:drupal-core"
+                    ],
+                    "docroot/modules/contrib/{$name}": [
+                        "type:drupal-module"
+                    ],
+                    "docroot/profiles/contrib/{$name}": [
+                        "type:drupal-profile"
+                    ],
+                    "docroot/themes/contrib/{$name}": [
+                        "type:drupal-theme"
+                    ],
+                    "drush/contrib/{$name}": [
+                        "type:drupal-drush"
+                    ]
+                },
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "CloudFlare CDN integration.",
+            "homepage": "https://github.com/d8-contrib-modules/cloudflare",
+            "keywords": [
+                "CDN",
+                "Cloud Flare",
+                "CloudFlare",
+                "Drupal"
+            ],
+            "time": "2016-10-10 11:54:59"
+        },
+        {
             "name": "drupal/coder",
             "version": "8.2.9",
             "source": {
@@ -1172,9 +1307,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/coder-8.x-2.9.zip",
+                "url": "https://api.github.com/repos/klausi/coder/zipball/b08682bd939cf7d3ac7034bee792aa17f80e19d7",
                 "reference": "b08682bd939cf7d3ac7034bee792aa17f80e19d7",
-                "shasum": null
+                "shasum": ""
             },
             "require": {
                 "ext-mbstring": "*",
@@ -1186,7 +1321,7 @@
                 "phpunit/phpunit": ">=3.7"
             },
             "type": "library",
-            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0+"
             ],
@@ -2671,6 +2806,80 @@
             "time": "2016-08-07 10:52:55"
         },
         {
+            "name": "drupal/purge",
+            "version": "8.3.0-beta6",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/purge",
+                "reference": "067aa717f01c5a394e5f1b7ad5ebba3c46931223"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/purge-8.x-3.0-beta6.zip",
+                "reference": "067aa717f01c5a394e5f1b7ad5ebba3c46931223",
+                "shasum": null
+            },
+            "require": {
+                "drupal/core": "8.*"
+            },
+            "replace": {
+                "drupal/purge_drush": "self.version",
+                "drupal/purge_processor_cron": "self.version",
+                "drupal/purge_processor_lateruntime": "self.version",
+                "drupal/purge_queuer_coretags": "self.version",
+                "drupal/purge_tokens": "self.version",
+                "drupal/purge_ui": "self.version"
+            },
+            "suggest": {
+                "drupal/core": "Required by drupal/purge_drush, drupal/purge_processor_cron, drupal/purge_processor_lateruntime, drupal/purge_queuer_coretags, drupal/purge_tokens, drupal/purge_ui"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-3.x": "8.3.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Provides a generic external cache invalidation API and queue service.",
+            "homepage": "https://www.drupal.org/project/purge",
+            "time": "2016-10-26 12:16:03"
+        },
+        {
+            "name": "drupal/purge_queuer_url",
+            "version": "8.1.0-beta5",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/purge_queuer_url.git",
+                "reference": "d93a2931872f42aa55782ce8578f276741001181"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/purge_queuer_url-8.x-1.0-beta5.zip",
+                "reference": "d93a2931872f42aa55782ce8578f276741001181",
+                "shasum": null
+            },
+            "require": {
+                "drupal/core": "8.*",
+                "drupal/purge": "8.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Queues URLs or paths to your Purge queue utilizing a traffic database.",
+            "homepage": "https://www.drupal.org/project/purge_queuer_url",
+            "time": "2016-09-07 10:52:56"
+        },
+        {
             "name": "drupal/replication",
             "version": "8.1.0-alpha4",
             "source": {
@@ -3056,7 +3265,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/xmlsitemap-8.x-1.0-alpha2.zip",
-                "reference": null,
+                "reference": "94b9d51597c2152d06357aba7a5eb5aa7498608d",
                 "shasum": null
             },
             "require": {
@@ -3607,6 +3816,21 @@
                 "object graph"
             ],
             "time": "2016-09-16 13:37:59"
+        },
+        {
+            "name": "nielsvm/acquia_purge",
+            "version": "8.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nielsvm/acquia_purge.git",
+                "reference": "8.x-1.x"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "patches_applied": {
+                    "Hacking Acquia Purge for path based purging.": "patches/acquia-purge-path-hack.patch"
+                }
+            }
         },
         {
             "name": "padraic/humbug_get_contents",
