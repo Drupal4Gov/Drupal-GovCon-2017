@@ -1,5 +1,6 @@
 module:
   acquia_connector: 0
+  acquia_purge: 0
   admin_toolbar: 0
   adminimal_admin_toolbar: 0
   block: 0
@@ -7,6 +8,8 @@ module:
   breakpoint: 0
   capitalcamp_glue: 0
   ckeditor: 0
+  cloudflare: 0
+  cloudflarepurger: 0
   color: 0
   config: 0
   config_update: 0
@@ -15,6 +18,7 @@ module:
   ctools: 0
   ctools_block: 0
   datetime: 0
+  dblog: 0
   editor: 0
   embed: 0
   entity: 0
@@ -59,6 +63,13 @@ module:
   panels: 0
   panels_ipe: 0
   path: 0
+  purge: 0
+  purge_drush: 0
+  purge_processor_cron: 0
+  purge_processor_lateruntime: 0
+  purge_queuer_coretags: 0
+  purge_queuer_url: 0
+  purge_ui: 0
   quickedit: 0
   rdf: 0
   scheduled_updates: 0
