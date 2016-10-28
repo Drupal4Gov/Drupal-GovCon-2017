@@ -24,8 +24,12 @@
         "drupal/adminimal_admin_toolbar": "^8.1",
         "drupal/environment_indicator": "~8",
         "drupal/pathauto": "~8",
+        "drupal/components": "~8",
         "drupal/xmlsitemap": "~8",
-        "drupal/components": "~8"
+        "nielsvm/acquia_purge": "~8",
+        "drupal/cloudflare": "~8",
+        "drupal/purge": "~8",
+        "drupal/purge_queuer_url": "~8"
     },
     "require-dev": {
         "behat/behat": "^3.1",
@@ -59,6 +63,19 @@
         {
             "type": "composer",
             "url": "https://packagist.drupal-composer.org"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "nielsvm/acquia_purge",
+                "type": "drupal-module",
+                "version": "8.1",
+                "source": {
+                    "url": "https://github.com/nielsvm/acquia_purge.git",
+                    "type": "git",
+                    "reference": "8.x-1.x"
+                }
+            }
         }
     ],
     "autoload-dev": {
@@ -93,6 +110,9 @@
             },
             "drupal/features": {
                 "Bundle support": "https://www.drupal.org/files/issues/features-2808303-2.patch"
+            },
+            "nielsvm/acquia_purge": {
+                "Hacking Acquia Purge for path based purging.": "patches/acquia-purge-path-hack.patch"
             }
         }
     }
