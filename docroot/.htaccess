@@ -134,6 +134,14 @@ AddEncoding gzip svgz
   RewriteCond %{REQUEST_URI} !core
   RewriteRule ^ %1/core/%2 [L,QSA,R=301]
 
+  RewriteCond %{REQUEST_URI} ^/drupal-govcon-2015 [NC]
+  RewriteRule ^drupal-govcon-2015/?$  /drupal-govcon-2015/index.html [NC,R,L]
+  # Redirect GovCon 2015 path with or without / to index.html
+  RewriteCond %{REQUEST_URI} ^/drupal-govcon-2015/ [NC]
+  RewriteRule ^drupal-govcon-2015/(.*)$ /sites/default/files/static-sites/2015/$1 [PT,L]
+  # Pass-through the matching file from beneath /sites/default/files/SOME-FOLDER and stop processing
+
+
   # Rewrite install.php during installation to see if mod_rewrite is working
   RewriteRule ^core/install.php core/install.php?rewrite=ok [QSA,L]
 
