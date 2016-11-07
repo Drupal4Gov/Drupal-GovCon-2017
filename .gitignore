@@ -114,3 +114,6 @@ nbproject/*
 *.gz
 *.sql
 *.zip
+
+# Ignore cloudflare CMI export file because it includes API keys.
+config/default/cloudflare.settings.yml
