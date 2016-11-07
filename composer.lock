@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7317a9ad2d84d717dcef17e6a27eac90",
-    "content-hash": "293ebee2b63cb5fe35dec2aecfe4be8e",
+    "hash": "e39ee34e97e3822a4ef4562af4f7c6b9",
+    "content-hash": "26a5e7bbf2ca05d6dab1bb796a130479",
     "packages": [
         {
             "name": "acquia/blt",
@@ -1114,7 +1114,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/acquia_connector-8.x-1.6.zip",
-                "reference": null,
+                "reference": "07d3fc1894071949e8d934ce6cfb3b5c0d3f1bd6",
                 "shasum": null
             },
             "require": {
@@ -1445,7 +1445,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/components-8.x-1.0.zip",
-                "reference": null,
+                "reference": "d6f3df460ca16373782f442ca92f9c251fbf311b",
                 "shasum": null
             },
             "require": {
@@ -1476,7 +1476,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/config_update-8.x-1.2.zip",
-                "reference": null,
+                "reference": "4ed2a8790097723e2dcdc522684ababecac1de70",
                 "shasum": null
             },
             "require": {
@@ -1745,8 +1745,7 @@
             "type": "drupal-core",
             "extra": {
                 "patches_applied": {
-                    "Ignore front end vendor folders to improve directory search performance": "https://www.drupal.org/files/issues/ignore_front_end_vendor-2329453-116.patch",
-                    "2818031 - Trailing slashes can cause FileSystem::mkdir() to return a false negative": "https://www.drupal.org/files/issues/2818031-6.patch"
+                    "Ignore front end vendor folders to improve directory search performance": "https://www.drupal.org/files/issues/ignore_front_end_vendor-2329453-116.patch"
                 }
             },
             "autoload": {
@@ -1886,7 +1885,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/entity_browser-8.x-1.0-alpha10.zip",
-                "reference": null,
+                "reference": "ccc949f9bd09c032034910b57e61dbfded4d32c2",
                 "shasum": null
             },
             "require": {
@@ -2217,11 +2216,17 @@
         },
         {
             "name": "drupal/lightning",
-            "version": "dev-8.x-1.x",
+            "version": "8.1.12",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/lightning.git",
-                "reference": "3bf93adc21ddc1e66f5f293790f1b3ef0c7c6422"
+                "reference": "dd2a4d6a2bf97be127acbc2f5ad1d93c8755a66e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/lightning-8.x-1.12.zip",
+                "reference": null,
+                "shasum": null
             },
             "require": {
                 "composer/installers": "^1.0",
@@ -2385,12 +2390,12 @@
                     "drupal/workspace": {
                         "2791789 - Workspace should report conflicts before replication": "https://www.drupal.org/files/issues/2791789-34.patch"
                     },
+                    "drupal/multiversion": {
+                        "2822915 - Migration source plugin makes bad assumptions that can lead to data loss": "https://www.drupal.org/files/issues/2822915-2.patch"
+                    },
                     "drupal/replication": {
                         "2814055 - Allow modules to react to replication events": "https://www.drupal.org/files/issues/2814055-2.patch",
                         "2820105 - User references are not replicated": "https://www.drupal.org/files/issues/2820105-10.patch"
-                    },
-                    "drupal/core": {
-                        "2818031 - Trailing slashes can cause FileSystem::mkdir() to return a false negative": "https://www.drupal.org/files/issues/2818031-6.patch"
                     }
                 },
                 "branch-alias": {
@@ -2408,7 +2413,7 @@
             ],
             "description": "A fast and feature-rich Drupal distribution.",
             "homepage": "https://www.drupal.org/project/lightning",
-            "time": "2016-10-28 17:22:16"
+            "time": "2016-11-03 16:18:32"
         },
         {
             "name": "drupal/media_entity",
@@ -2634,7 +2639,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/metatag-8.x-1.0-beta10.zip",
-                "reference": null,
+                "reference": "c0610ad2ad9318298823c24db66b8769095910a3",
                 "shasum": null
             },
             "require": {
@@ -2772,7 +2777,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/panelizer-8.x-3.0-alpha2.zip",
-                "reference": null,
+                "reference": "75a432927539383b391e6905fb5614cbe85a4b84",
                 "shasum": null
             },
             "require": {
@@ -2813,7 +2818,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/panels-8.x-3.0-beta5.zip",
-                "reference": null,
+                "reference": "9de5382bf248af198391a22be27d770f94396dbc",
                 "shasum": null
             },
             "require": {
@@ -2977,7 +2982,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/replication-8.x-1.0-alpha5.zip",
-                "reference": null,
+                "reference": "034bf02ad53d4d154ad1d58f666fe2526cac1a06",
                 "shasum": null
             },
             "require": {
@@ -3013,7 +3018,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/scheduled_updates-8.x-1.0-alpha5.zip",
-                "reference": null,
+                "reference": "cdeceb8fd89a3644fb34a8a5bcc194ca7cbd84fe",
                 "shasum": null
             },
             "require": {
@@ -3273,7 +3278,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/workbench_moderation-8.x-1.1.zip",
-                "reference": null,
+                "reference": "661c2108c84e961a00ae7174c91053858447a7d2",
                 "shasum": null
             },
             "require": {
@@ -3313,7 +3318,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/workspace-8.x-1.0-alpha3.zip",
-                "reference": null,
+                "reference": "6b21cbeada234f6bfb0e3ca24ddd11033578c9ff",
                 "shasum": null
             },
             "require": {
@@ -9010,7 +9015,6 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "cweagans/composer-patches": 20,
-        "drupal/lightning": 20,
         "drupal-composer/drupal-security-advisories": 20
     },
     "prefer-stable": true,
