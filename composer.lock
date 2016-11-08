@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e39ee34e97e3822a4ef4562af4f7c6b9",
-    "content-hash": "26a5e7bbf2ca05d6dab1bb796a130479",
+    "hash": "f71a7d0aa07302c1a3ffe37a3ab992aa",
+    "content-hash": "713d7efe6905b2ab5e03f271a1b3b6cf",
     "packages": [
         {
             "name": "acquia/blt",
@@ -1143,6 +1143,39 @@
             "time": "2016-10-26 13:52:51"
         },
         {
+            "name": "drupal/acquia_lift",
+            "version": "8.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/acquia_lift",
+                "reference": "ac35229acb6c7521a15386ab7426bcd477d59dae"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/acquia_lift-8.x-3.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/core": "8.*",
+                "drupal/node": "8.*",
+                "drupal/taxonomy": "8.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-3.x": "8.3.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Provides integration to the Acquia Lift service for personalization and visitor data collection.",
+            "homepage": "https://www.drupal.org/project/acquia_lift",
+            "time": "2016-10-26 20:37:28"
+        },
+        {
             "name": "drupal/acsf",
             "version": "8.1.32",
             "source": {
@@ -2225,7 +2258,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/lightning-8.x-1.12.zip",
-                "reference": null,
+                "reference": "dd2a4d6a2bf97be127acbc2f5ad1d93c8755a66e",
                 "shasum": null
             },
             "require": {
@@ -2709,6 +2742,9 @@
             "extra": {
                 "branch-alias": {
                     "dev-8.x-1.x": "8.1.x-dev"
+                },
+                "patches_applied": {
+                    "2822915 - Migration source plugin makes bad assumptions that can lead to data loss": "https://www.drupal.org/files/issues/2822915-2.patch"
                 }
             },
             "notification-url": "https://packagist.drupal-composer.org/downloads/",
