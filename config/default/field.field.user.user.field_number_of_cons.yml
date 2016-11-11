@@ -1,0 +1,21 @@
+uuid: e8dbf5f1-5687-4562-ab4b-49027f738cd3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_number_of_cons
+  module:
+    - options
+    - user
+id: user.user.field_number_of_cons
+field_name: field_number_of_cons
+entity_type: user
+bundle: user
+label: 'How many Drupal Camps do you typically attend each year?'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,76 @@
+uuid: e199f4de-41c0-4d31-b384-3122ad4c1ac5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_company_organization
+    - field.field.user.user.field_first_name
+    - field.field.user.user.field_industry
+    - field.field.user.user.field_last_name
+    - field.field.user.user.field_motivation
+    - field.field.user.user.field_number_of_cons
+    - field.field.user.user.field_role
+  module:
+    - user
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  account:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+  contact:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+  field_company_organization:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_first_name:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_industry:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+  field_last_name:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_motivation:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+  field_number_of_cons:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+  field_role:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+  timezone:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  google_analytics: true
+  language: true
+  path: true

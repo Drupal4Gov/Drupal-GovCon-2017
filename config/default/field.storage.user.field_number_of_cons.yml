@@ -1,0 +1,30 @@
+uuid: 32a894af-e37b-4830-a9ee-51906942de3f
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - user
+id: user.field_number_of_cons
+field_name: field_number_of_cons
+entity_type: user
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1 - GovCon is it'
+      label: '1 - GovCon is it'
+    -
+      value: 2-3
+      label: 2-3
+    -
+      value: '4 or more'
+      label: '4 or more'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

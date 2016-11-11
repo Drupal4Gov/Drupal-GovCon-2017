@@ -1,0 +1,29 @@
+uuid: 67e423f0-ae1a-41c8-867e-c66909437294
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_industry
+    - taxonomy.vocabulary.industry
+  module:
+    - user
+id: user.user.field_industry
+field_name: field_industry
+entity_type: user
+bundle: user
+label: 'In what industry do you work?'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      industry: industry
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

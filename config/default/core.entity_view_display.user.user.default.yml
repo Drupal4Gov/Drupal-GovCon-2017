@@ -1,0 +1,71 @@
+uuid: 753fc4c3-bd1b-499c-9208-f529ee09f012
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_company_organization
+    - field.field.user.user.field_first_name
+    - field.field.user.user.field_industry
+    - field.field.user.user.field_last_name
+    - field.field.user.user.field_motivation
+    - field.field.user.user.field_number_of_cons
+    - field.field.user.user.field_role
+  module:
+    - options
+    - user
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  field_company_organization:
+    weight: 8
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_first_name:
+    weight: 6
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_industry:
+    weight: 10
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_last_name:
+    weight: 7
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_motivation:
+    weight: 11
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  field_number_of_cons:
+    weight: 12
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_role:
+    weight: 9
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+  member_for:
+    weight: 5
+hidden: {  }

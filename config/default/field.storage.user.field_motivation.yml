@@ -1,0 +1,20 @@
+uuid: 507c2736-67fc-47a8-8e13-eb2f47f61cbf
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - user
+id: user.field_motivation
+field_name: field_motivation
+entity_type: user
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

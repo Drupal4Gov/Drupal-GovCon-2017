@@ -1,0 +1,29 @@
+uuid: 4f189511-7705-4145-85f6-bd1d74c210b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_motivation
+    - taxonomy.vocabulary.motivation
+  module:
+    - user
+id: user.user.field_motivation
+field_name: field_motivation
+entity_type: user
+bundle: user
+label: 'Why do you want to attend GovCon? Choose as many as you like'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      motivation: motivation
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,29 @@
+uuid: a2891522-262d-45c5-8454-5e1110904cbe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_role
+    - taxonomy.vocabulary.role
+  module:
+    - user
+id: user.user.field_role
+field_name: field_role
+entity_type: user
+bundle: user
+label: 'Please choose the role that best describes you. Choose as many as you like.'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      role: role
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
