@@ -31,4 +31,14 @@ target-hooks:
         dir: '${docroot}/profiles/contrib/lightning'
         command: 'npm run install-libraries'
 import: null
+#modules:
+#    ci:
+#        enable: {  }
+#        uninstall: [acquia_connector, shield]
+#    deploy:
+#        enable: [acquia_connector, shield]
+#        uninstall: [devel, field_ui, views_ui]
+#    local:
+#        enable: [dblog, devel, field_ui, seckit, views_ui]
+#        uninstall: [acsf, acquia_connector, dblog, shield]
 

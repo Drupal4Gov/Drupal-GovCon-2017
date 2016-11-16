@@ -14,8 +14,8 @@
         "drupal/cog": "^8.1.0",
         "drupal/console": "1.0.0-beta5",
         "drupal/core": "~8",
-        "drupal/features": "^8.3.0-beta9",
-        "drupal/lightning": "^8.1",
+        "drupal/features": "^8.3.0",
+        "drupal/lightning": "^8.1.12",
         "drupal/memcache": "^8.2.0-alpha2",
         "drupal/search_api": "8.1.0-alpha14",
         "drupal/search_api_solr": "8.1.0-alpha3",
@@ -30,7 +30,8 @@
         "nielsvm/acquia_purge": "~8",
         "drupal/cloudflare": "~8",
         "drupal/purge": "~8",
-        "drupal/purge_queuer_url": "~8"
+        "drupal/purge_queuer_url": "~8",
+        "drupal/seckit": "^8.1.0-alpha2"
     },
     "require-dev": {
         "behat/behat": "^3.1",
@@ -43,7 +44,8 @@
         "phpunit/phpunit": "^5.4",
         "se/selenium-server-standalone": "^2.53",
         "squizlabs/php_codesniffer": "^2.7",
-        "geerlingguy/drupal-vm": "~3.4"
+        "geerlingguy/drupal-vm": "~3.4",
+        "drupal/devel": "^8.1.0-alpha1"
     },
     "scripts": {
         "post-create-project-cmd": [
@@ -57,7 +59,8 @@
             "rm -rf vendor composer.lock",
             "@composer clearcache",
             "@composer install"
-        ]
+        ],
+        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
     },
     "repositories": [
         {
@@ -108,12 +111,16 @@
             "drupal/core": {
                 "Ignore front end vendor folders to improve directory search performance": "https://www.drupal.org/files/issues/ignore_front_end_vendor-2329453-116.patch"
             },
-            "drupal/features": {
-                "Bundle support": "https://www.drupal.org/files/issues/features-2808303-2.patch"
-            },
             "nielsvm/acquia_purge": {
                 "Hacking Acquia Purge for path based purging.": "patches/acquia-purge-path-hack.patch"
             }
-        }
+        },
+        "drupal-scaffold": {
+            "initial": {
+                "sites/default/default.services.yml": "sites/default/services.yml",
+                "sites/default/default.settings.php": "sites/default/settings.php"
+            }
+        },
+        "enable-patching": true
     }
 }
