@@ -30,7 +30,7 @@ target-hooks:
     post-setup-build:
         dir: '${docroot}/profiles/contrib/lightning'
         command: 'npm run install-libraries'
-import: null
+import: '${repo.root}/custom.xml'
 #modules:
 #    ci:
 #        enable: {  }
