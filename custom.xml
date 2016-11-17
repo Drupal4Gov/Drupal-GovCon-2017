@@ -1,0 +1,5 @@
+<project name="ci" default="ci:setup">
+    <!-- Override the core ci:build:validate:test target to include a local refresh-->
+    <target name="ci:build:validate:test" description="Builds, validates, tests, and deploys an artifact."
+            depends="validate:all, ci:setup, local:update, tests:all" />
+</project>
