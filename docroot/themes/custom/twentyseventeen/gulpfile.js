@@ -147,7 +147,7 @@ var options = {
       path.relative(paths.styleGuide, paths.styles.destination + 'kss-only.css')
     ],
     js: [],
-    builder: 'builder/twig',
+    builder: 'styleguide-builder/twig-govcon',
     namespace: 'components:sass',
     'extend-drupal8': true,
     homepage: 'style-guide-only/homepage.md',
