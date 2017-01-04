@@ -144,7 +144,8 @@ var options = {
     destination: 'styleguide/',
     css: [
       path.relative(paths.styleGuide, paths.styles.destination + 'styles.css'),
-      path.relative(paths.styleGuide, paths.styles.destination + 'kss-only.css')
+      path.relative(paths.styleGuide, paths.styles.destination + 'style-guide-only/kss-only.css'),
+      '//fonts.googleapis.com/css?family=Fira+Sans:400,500,700'
     ],
     js: [],
     builder: 'builder/twig',
