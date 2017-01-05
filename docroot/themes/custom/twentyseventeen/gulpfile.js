@@ -148,7 +148,7 @@ var options = {
       '//fonts.googleapis.com/css?family=Fira+Sans:400,500,700'
     ],
     js: [],
-    builder: 'builder/twig',
+    builder: 'styleguide-builder/twig-govcon',
     namespace: 'components:sass',
     'extend-drupal8': true,
     homepage: 'style-guide-only/homepage.md',
