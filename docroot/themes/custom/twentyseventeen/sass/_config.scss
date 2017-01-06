@@ -1,9 +1,12 @@
 // Colors ///////////////
-$wht: #fafafa;
+$wht: #fff;
+$trans-wht: rgba(255,255,255,0.7);
 $lt-blk: #323232;
 $red: #ee696c;
+$blu: #003e6a;
 $sft-blu: #226e8e;
 $lt-blu: #f3f9fc;
+$green: #869739;
 $md-gr: #999;
 $slv: #ccc;
 $lt-gr: #ddd;
@@ -29,6 +32,9 @@ $susy: (
 
 // Breakpoints ///////////////
 $min-tablet: 768px;
+
+// Utility sizes ///////////////
+$page-width: 80em;
 
 // Example Mixins ///////////////
 @mixin opac-color($r, $g, $b, $pertc) {

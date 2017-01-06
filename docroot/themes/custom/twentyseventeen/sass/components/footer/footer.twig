@@ -1,0 +1,28 @@
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__disclaimer">{{footer_disclaimer}}</div>
+    <ul class="footer__links">
+      {% for item in footer_links %}
+        <li><a href="{{item.url}}">{{item.text}}</a></li>
+      {% endfor %}
+    </ul>
+    <ul class="footer__social">
+      {% for item in footer_social %}
+        <li>
+          <a href="{{item.url}}" title="{{item.title}}">
+            <svg class="icon {{item.icon}}">
+              <use xlink:href="#{{item.icon}}"></use>
+            </svg>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+    <div class="footer__logo">
+      <a href="/" title="GovCon 2017">
+        <svg class="{{footer_logo}}">
+          <use xlink:href="#{{footer_logo}}"></use>
+        </svg>
+      </a>
+    </div>
+  </div>
+</footer>

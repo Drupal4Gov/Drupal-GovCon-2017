@@ -1,0 +1,95 @@
+// Footer
+//
+// Secondary links, disclaimers and social links
+//
+// Markup: footer.twig
+//
+// Style guide: components.footer
+
+.footer {
+  text-align: center;
+  background: $blu;
+  color: $wht;
+
+  a {
+    color: $wht;
+    display: inline-block;
+    transition: opacity 0.5s ease;
+    opacity: 0.7;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+  }
+
+  &__inner {
+    @include container($page-width);
+    padding: 2rem;
+  }
+
+  &__disclaimer {
+    margin-bottom: 1rem;
+    opacity: 0.7;
+
+    @include breakpoint($min-tablet) {
+      @include span(6 of 12);
+      text-align: left;
+    }
+  }
+
+  &__links {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1rem;
+
+    @include breakpoint($min-tablet) {
+      @include span(6 of 12 last);
+      text-align: right;
+    }
+
+    li {
+      display: inline-block;
+      padding: 0 0.5em;
+    }
+
+    li~li {
+      border-left: 1px solid $trans-wht;
+    }
+  }
+
+  &__social {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1rem;
+
+    @include breakpoint($min-tablet) {
+      @include span(6 of 12 last);
+      text-align: right;
+    }
+
+    li {
+      display: inline-block;
+      padding: 0.3em;
+    }
+  }
+
+  &__logo {
+    @include full;
+
+    svg {
+      fill: $wht;
+      width: 60px;
+      height: 60px;
+      opacity: 0.7;
+    }
+
+    a:hover,
+    a:focus {
+
+      svg {
+        opacity: 0.7;
+      }
+    }
+  }
+}
