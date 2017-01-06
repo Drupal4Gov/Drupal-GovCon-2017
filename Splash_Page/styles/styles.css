@@ -1,0 +1,657 @@
+/* Styles for GovCon 2017 Static Site Splash Page */
+/* Site is set up to be mobile-first */
+
+/** Colors
+Green rgba(134,151,58,1)
+Blue rgba(0,62,106,1)
+Yellow rgb(239,172,55)
+
+
+
+**/
+
+/* Custom Font Code */
+
+
+/* End Custom Font Code */
+
+/* Global Styling */
+
+
+
+body {
+	font-size: 1em;
+	font-family: 'Fira Sans', sans-serif;
+	text-rendering: optimizeLegibility;
+	padding: 0;
+	margin: 0;
+	color: rgb(80,80,80);
+	background-color: rgba(0,62,106,1);
+}
+
+img {
+	max-width: 100%;
+}
+
+#navwrapper,
+#mainwrapper,
+#contentwrapper,
+#footerwrapper {
+	margin: 0;
+	padding: 0.5em;
+}
+
+h2 {
+	margin-bottom: 0;
+}
+
+h3 {
+	color: rgba(134,151,58,1);
+	margin-bottom: 0;
+}
+
+h4 {
+	margin-bottom: 0;
+}
+
+h2 + p,
+h3 + p,
+h3 + ul,
+h3 + ol {
+  margin-top: 0;
+}
+
+h4 + p,
+h4 + ul,
+h4 + ol {
+  margin-top: 0;
+}
+
+ol > li {
+	margin-bottom: 0.25em;
+}
+
+#maincontent p {
+	line-height: 1.4;
+}
+
+/* Main Navigation Styling */
+#navwrapper {
+	background: rgba(134,151,58,1);
+	position: relative;
+}
+
+#homelink {
+	position: fixed;
+	top: 0.5em;
+	left: 0.5em;
+	z-index: 999999;
+}
+
+#homelink .home-logo {
+	width: 2em;
+}
+
+#homelink a:link img.home-logo,
+#homelink a:visited img.home-logo {
+	opacity: 1;
+}
+
+#homelink a:hover img.home-logo {
+	opacity: 0.5;
+}
+
+
+nav ul {
+	padding-left: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	text-align: center;
+}
+
+nav li {
+	list-style-type: none;
+	list-style-image: none;
+	display: inline-block;
+	padding: 0.5em;
+}
+
+nav a:link,
+nav a:visited {
+	text-decoration: none;
+	color: rgba(255,255,255,0.8);
+	font-size: 1.2em;
+}
+
+nav a:hover {
+	color: rgba(255,255,255,1);
+}
+
+/* End Main Navigation styling */
+
+/* Mean Menu Styling */
+.mean-container div.mean-bar {
+	background: rgba(134,151,58,1);
+}
+
+.mean-container .mean-nav ul li {
+	background-color: rgba(134,151,58,1);
+}
+
+.mean-container .mean-nav li {
+	padding: 0; /* Removes default nav element padding */
+}
+
+.mean-container .mean-nav ul li a {
+	border-top: none;
+	border-top: 1px solid rgba(255,255,255,0.2);
+	text-transform: inherit;
+}
+
+
+/* Header Area Styling */
+#headerwrapper {
+	position: relative;
+	margin-bottom: -0.5em; /* Removes spacing at bottom */
+}
+
+#headerwrapper img.mobile_hero {
+	display: inherit;
+	width: 100%;
+}
+#headerwrapper img.tablet_hero {
+	display: none;
+}
+#headerwrapper img.desktop_hero {
+	display: none;
+}
+
+
+#headerwrapper .site-logo {
+	filter: drop-shadow(0 0 2em rgba(0,0,0,0.5)); /* Limited Support */
+	width: 65%;
+	display: block;
+	margin: 0 auto;
+	position: absolute;
+	top: 4em;
+	left: 0;
+	right: 0;
+}
+
+#headertext {
+	position: absolute;
+	display: block;
+	bottom: 0.5em;
+	left: 0;
+	right: 0;
+	//border: 1px solid #f00;
+}
+
+#headerwrapper h1 {
+	font-family: 'GovCon', sans-serif;
+	text-transform: uppercase;
+	font-size: 14vw;
+	letter-spacing: 0.1em;
+	color: rgba(255,255,255,1);
+	margin-bottom: 0;
+	text-align: center;
+	padding: 0 0.5em;
+	text-shadow: 0 0 0.5em rgba(0,0,0,0.5);
+}
+
+
+/* Main Area Styling */
+#mainwrapper {
+	background: rgba(255,255,255,1);
+}
+
+/* Homepage Styling */
+#introdek {
+	text-align: center;
+}
+
+#introdek h2 {
+	font-size: 2em;
+	margin-bottom: 0.25em;
+}
+
+#introdek h3 {
+	color: rgba(134,151,58,1);
+	font-size: 1.6em;
+	margin-top: 0.25em;
+	line-height: 1.4em;
+	margin-bottom: 0.5em;
+}
+
+#introdek p {
+	text-align: left;
+	font-size: 1.2em;
+	line-height: 1.35em;
+	margin-top: 0.5em;
+}
+
+#homeinfo {
+	margin: 2em 0;
+	-webkit-column-count: 1; /* Chrome, Safari, Opera */
+    -moz-column-count: 1; /* Firefox */
+	column-count: ;
+}
+
+#homeinfo h3:first-child {
+	margin-top: 0;
+}
+
+#secondarybanners {
+	margin: 0 -1em;
+}
+
+.secondarybannertext {
+	position: absolute;
+	bottom: 0.5em;
+	padding-bottom: 0.5em;
+}
+
+.home_cta {
+	width: 100%;
+	display: block;
+	float: left;
+	position: relative;
+	margin-bottom: -0.5em; /* Removes spacing at bottom */
+}
+
+.home_cta img {
+	width: 100%;
+}
+
+.home_cta h3 {
+	font-family: 'GovCon', Helvetica, sans-serif;
+	font-size: 2.5em;
+	letter-spacing: 0.05em;
+	color: rgba(255,255,255,1);
+	text-shadow: 0 0 0.5em rgba(0,0,0,0.5);
+	margin: 0 0.5em;
+}
+
+.home_cta p {
+	color: rgba(239,172,55,1);
+	margin: 0 1em;
+	padding: 0 0 0.5em 0;
+}
+
+#mainwrapper {
+	padding-bottom: 0;
+}
+
+/* Zurb Responsive Tables */
+table.responsive {
+  border-spacing: 0;
+}
+
+.pinned table {
+  border-spacing: 0;
+}
+
+.responsive tbody tr:nth-child(even),
+.pinned tbody tr:nth-child(even) {
+	background: rgba(134,151,58,0.2);
+}
+
+.responsive tbody tr:nth-child(odd),
+.pinned tbody tr:nth-child(odd) {
+	background: rgba(134,151,58,0.1);
+}
+
+.responsive tbody tr th,
+.pinned tbody tr th {
+	color: rgba(255,255,255,1);
+	background: rgba(134,151,58,0.7);
+	border-bottom: 2px solid rgba(134,151,58,1);
+}
+
+.responsive tbody tr:last-child td,
+.pinned tbody tr:last-child td {
+	border-bottom: 2px solid rgba(134,151,58,1);
+}
+
+.responsive tr td:first-child {
+	font-weight: bold;
+}
+
+.responsive tr:nth-child(even) td:first-child,
+.pinned tr:nth-child(even) td:first-child {
+	background: rgba(134,151,58,0.2);
+}
+
+.responsive tr:nth-child(odd) td:first-child,
+.pinned tr:nth-child(odd) td:first-child {
+	background: rgba(134,151,58,0.1);
+}
+
+.pinned {
+	border-left: none;
+	border-right: none;
+}
+
+.scrollable {
+	border-right: none;
+	box-shadow: 0 0 5px 5px rgba(0,0,0,0.3) inset; // This Works!
+}
+
+/* End Zurb Responsive Tables */
+
+/* Stat Listing Widgets */
+.statlistings_01 {
+	display: block;
+	width: 100%;
+	margin: 1em 0;
+}
+
+.statlistings_01 .statsub_01 {
+	display: block;
+	width: 100%;
+	background: rgba(0,0,0,0.2);
+	float: left;
+}
+
+.statlistings_01 .statsub_01 .statheader {
+	display: table;
+	background-image: url('../images/GovCon2017_BackgroundDark01_400sq.jpg');
+	background-position: center;
+	background-repeat: none;
+	width: 100%;
+}
+
+.statlistings_01 .statsub_01 .statheader h3 {
+	text-align: center;
+	color: rgba(255,255,255,1);
+	font-family: 'GovCon', sans-serif;
+	font-size: 2em;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	text-shadow: 0 0 0.5em rgba(0,0,0,0.5);
+	margin: 0em;
+	padding: 1em 0.5em 0.25em 0.5em;
+}
+
+.statlistings_01 .statsub_01 .statheader > h3 {
+	display: table-cell;
+	vertical-align: bottom;
+	height: 2.5em;
+}
+
+.statlistings_01 .statsub_01 .statinfo {
+	display: table;
+	background: rgba(134,151,58,0.3);
+	width: 100%;
+}
+
+.statlistings_01 .statsub_01 .statinfo p {
+	text-align: center;
+	color: rgba(0,62,106,1);
+	margin: 0 auto;
+	padding: 1em 0.5em 1em 0.5em;
+	font-style: italic;
+	font-size: 1.25em;
+	width: 100%;
+}
+
+.statlistings_01 .statsub_01 .statinfo  > p {
+	display: table-cell;
+	height: 4em;
+	vertical-align: middle;
+}
+
+/* End Stat Listing Widgets */
+
+
+/* Footer Styling */
+footer {
+	color: rgba(255,255,255,0.7);
+	padding: 1em 1em;
+}
+
+footer a:link,
+footer a:visited {
+	color: rgba(255,255,255,0.7);
+	text-decoration: none;
+}
+
+footer a:hover {
+	color: rgba(255,255,255,1);
+}
+
+footer p {
+	margin-top: 0;
+}
+
+#footerleft,
+#footerright {
+	width: 100%;
+	text-align: center;
+	display: inline-block;
+}
+
+#footermark {
+	width: 100%;
+	text-align: center;
+	display: block;
+	float: left;
+}
+
+#footermark img {
+	width: 3em;
+	opacity: 0.5;
+}
+
+img.sm-icons {
+	opacity: 0.5;
+	padding: 0 0.5em;
+}
+
+img.sm-icons:hover {
+	opacity: 1;
+}
+
+/* End Footer Styling */
+
+
+
+/* Clearfix hack */
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Breakpoint Stylting Below */
+
+/* Tablet-Old dimesions 768-940 */
+@media only screen
+	and (min-width: 768px)
+	and (max-width: 1099px) {
+		body {
+			
+		}
+
+		nav,
+		header,
+		#maincontent,
+		footer {
+
+		}
+
+		#homelink {
+			display: none;
+		}
+
+		#headerwrapper .site-logo {
+		width: 40%;
+		margin: 0 auto;
+		top: 2em;
+		}
+
+		#headerwrapper img.mobile_hero {
+			display: none;
+			width: 100%;
+		}
+		#headerwrapper img.tablet_hero {
+			display: inherit;
+			width: 100%;
+		}
+		#headerwrapper img.desktop_hero {
+			display: none;
+		}
+
+		#headerwrapper h1 {
+		font-size: 9vw;
+		}
+
+
+		#introdek {
+			padding: 0 10%;
+		}
+
+
+		#homeinfo {
+			-webkit-column-count: 2; /* Chrome, Safari, Opera */
+		    -moz-column-count: 2; /* Firefox */
+			column-count: 2;
+			padding: 0 10%;
+		}
+
+
+		.statlistings_01 .statsub_01 {
+			width: 33%;
+		}
+
+		.statlistings_01 .statsub_01 .statheader > h3 {
+			height: 2.5em;
+		}
+
+		.statlistings_01 .statsub_01 .statinfo  > p {
+			height: 4em;
+		}
+
+
+
+		#secondarybanners {
+			margin: 0;
+		}
+
+		.home_cta {
+			width: 50%;
+		}
+
+		#footerleft {
+			width: 45%;
+			display: block;
+			float: left;
+			text-align: left;
+		}
+
+		#footerright {
+			width: 45%;
+			display: block;
+			float: right;
+			text-align: right;
+		}
+
+		#footermark {
+			width: 100%;
+			text-align: center;
+			display: block;
+		}
+
+	}
+
+
+/* Desktop */
+@media screen
+	and (min-width: 1200px) {
+		body {
+			
+		}
+
+		nav,
+		header,
+		#maincontent,
+		footer {
+			width: 1200px;
+			margin: 0 auto;
+		}
+
+		#homelink {
+			display: none;
+		}
+
+		#headerwrapper .site-logo {
+		width: 20%;
+		margin: 0 auto;
+		top: 3em;
+		}	
+
+		#headerwrapper img.mobile_hero {
+			display: none;
+			width: 100%;
+		}
+		#headerwrapper img.tablet_hero {
+			display: none;
+			width: 100%;
+		}
+		#headerwrapper img.desktop_hero {
+			display: inherit;
+			width: 100%;
+		}
+
+		#headerwrapper h1 {
+			font-size: 6vw;
+		}
+
+		#introdek {
+			padding: 0 10%;
+		}
+
+		#homeinfo {
+			-webkit-column-count: 2; /* Chrome, Safari, Opera */
+		    -moz-column-count: 2; /* Firefox */
+			column-count: 2;
+			padding: 0 10%;
+		}		
+
+
+		.statlistings_01 .statsub_01 {
+			width: 33%;
+		}
+
+
+		#secondarybanners {
+			margin: 0;
+		}
+
+		.home_cta {
+			width: 50%;
+		}
+
+		#footerleft {
+			width: 45%;
+			display: block;
+			float: left;
+			text-align: left;
+		}
+
+		#footerright {
+			width: 45%;
+			display: block;
+			float: right;
+			text-align: right;
+		}
+
+		#footermark {
+			width: 100%;
+			text-align: center;
+			display: block;
+		}		
+
+	}
+
+/* End Breakpoint Styling */
