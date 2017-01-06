@@ -11,6 +11,7 @@
 //   `gulp clean`
 //   `gulp clean:css`
 //   `gulp clean:styleguide`
+//   'gulp clean:svg'
 //   `gulp compile:sass`
 //   `gulp compile:styleguide`
 //   'gulp compile:svg'
@@ -169,6 +170,7 @@ require('./gulp-tasks/build')(gulp, plugins, options);
 require('./gulp-tasks/clean')(gulp, plugins, options);
 require('./gulp-tasks/clean-css')(gulp, plugins, options);
 require('./gulp-tasks/clean-styleguide')(gulp, plugins, options);
+require('./gulp-tasks/clean-svg')(gulp, plugins, options);
 require('./gulp-tasks/compile-sass')(gulp, plugins, options);
 require('./gulp-tasks/compile-styleguide')(gulp, plugins, options);
 require('./gulp-tasks/compile-svg')(gulp, plugins, options);
