@@ -14,11 +14,12 @@ $heading: $sft-blu;
 $link: $sft-blu;
 
 // Fonts ///////////////
-$opensans: 'Open Sans';
-$signika: 'Signika';
+$fira: 'Fira Sans';
+$govcon: 'GovCon';
 
-$heading_font: $opensans;
-$body_font: $signika;
+$heading_font: $fira, 'Trebuchet MS', sans-serif;
+$body_font: $fira, 'Trebuchet MS', sans-serif;;
+$display_font: $govcon, 'Trebuchet MS', sans-serif;;
 
 // Susy config ///////////////
 $susy: (
