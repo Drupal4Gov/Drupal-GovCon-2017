@@ -30,7 +30,8 @@
         "nielsvm/acquia_purge": "~8",
         "drupal/cloudflare": "~8",
         "drupal/purge": "~8",
-        "drupal/purge_queuer_url": "~8"
+        "drupal/purge_queuer_url": "~8",
+        "drupal-cod/event": "~8"
     },
     "require-dev": {
         "behat/behat": "^3.1",
@@ -75,6 +76,19 @@
                     "url": "https://github.com/nielsvm/acquia_purge.git",
                     "type": "git",
                     "reference": "8.x-1.x"
+                }
+            }
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "drupal-cod/event",
+                "type": "drupal-module",
+                "version": "8.1",
+                "source": {
+                    "url": "https://github.com/drupal-cod/event.git",
+                    "type": "git",
+                    "reference": "master"
                 }
             }
         }

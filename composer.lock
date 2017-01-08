@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c1379f02429dbf1d98979de09e61ba9f",
-    "content-hash": "dd7ca5ecd3c1a9a13371d7ab73427069",
+    "hash": "b90ad2b1037b328efaef0993443f2790",
+    "content-hash": "fa19f69f63482c8f2caafeb5936a3e78",
     "packages": [
         {
             "name": "acquia/blt",
@@ -1069,6 +1069,16 @@
             "time": "2014-09-09 13:34:57"
         },
         {
+            "name": "drupal-cod/event",
+            "version": "8.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/drupal-cod/event.git",
+                "reference": "master"
+            },
+            "type": "drupal-module"
+        },
+        {
             "name": "drupal-composer/drupal-security-advisories",
             "version": "8.0.x-dev",
             "source": {
@@ -1367,9 +1377,9 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/klausi/coder/zipball/b08682bd939cf7d3ac7034bee792aa17f80e19d7",
+                "url": "https://ftp.drupal.org/files/projects/coder-8.x-2.9.zip",
                 "reference": "b08682bd939cf7d3ac7034bee792aa17f80e19d7",
-                "shasum": ""
+                "shasum": null
             },
             "require": {
                 "ext-mbstring": "*",
@@ -1381,7 +1391,7 @@
                 "phpunit/phpunit": ">=3.7"
             },
             "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
             "license": [
                 "GPL-2.0+"
             ],
@@ -8724,6 +8734,75 @@
                 "web"
             ],
             "time": "2016-06-30 21:12:18"
+        },
+        {
+            "name": "drupal/og",
+            "version": "dev-8.x-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/og",
+                "reference": "a61e2f0a08303796ff0da4de3b94ebb74b44841d"
+            },
+            "require": {
+                "drupal/core": "8.*",
+                "drupal/field": "8.*",
+                "drupal/options": "8.*",
+                "drupal/text": "8.*",
+                "drupal/user": "8.*"
+            },
+            "replace": {
+                "drupal/og_ui": "self.version"
+            },
+            "require-dev": {
+                "drupal/coder": "~8.2"
+            },
+            "suggest": {
+                "drupal/core": "Required by drupal/og_ui"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "API to allow associating content with groups.",
+            "homepage": "https://drupal.org/project/og",
+            "time": "2016-11-16 17:55:38"
+        },
+        {
+            "name": "drupal/seckit",
+            "version": "8.1.0-alpha2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/seckit",
+                "reference": "15324266793e6a3c103bebb7ce3dddffb9537e71"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/seckit-8.x-1.0-alpha2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/core": "8.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Enhance security of your Drupal website.",
+            "homepage": "https://www.drupal.org/project/seckit",
+            "time": "2016-08-10 18:02:58"
         },
         {
             "name": "fabpot/goutte",
