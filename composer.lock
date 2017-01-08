@@ -4,25 +4,26 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c1379f02429dbf1d98979de09e61ba9f",
-    "content-hash": "dd7ca5ecd3c1a9a13371d7ab73427069",
+    "hash": "edd9eeadac41abad8f78640672de4521",
+    "content-hash": "b06d9157a5bb45f0603816e5dbbe64fc",
     "packages": [
         {
             "name": "acquia/blt",
-            "version": "8.5.0",
+            "version": "8.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acquia/blt.git",
-                "reference": "f623cf3aa2fb107cdf491e94547f9eaa403e38ab"
+                "reference": "adfe2c5f2bb9caa7f84b1de702ed41b492e88d89"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acquia/blt/zipball/f623cf3aa2fb107cdf491e94547f9eaa403e38ab",
-                "reference": "f623cf3aa2fb107cdf491e94547f9eaa403e38ab",
+                "url": "https://api.github.com/repos/acquia/blt/zipball/adfe2c5f2bb9caa7f84b1de702ed41b492e88d89",
+                "reference": "adfe2c5f2bb9caa7f84b1de702ed41b492e88d89",
                 "shasum": ""
             },
             "require": {
                 "composer-plugin-api": "^1.0.0",
+                "composer/installers": "^1.2.0",
                 "dflydev/dot-access-data": "^1.0",
                 "drupal/coder": "^8.2.8",
                 "drupal/console": "1.0.0-beta5",
@@ -71,7 +72,7 @@
                 "template",
                 "testing"
             ],
-            "time": "2016-10-19 15:32:41"
+            "time": "2016-11-09 21:51:08"
         },
         {
             "name": "alchemy/zippy",
@@ -3134,6 +3135,37 @@
             "description": "Offers an implementation of the Search API that uses an Apache Solr server for indexing content.",
             "homepage": "https://www.drupal.org/project/search_api_solr",
             "time": "2016-03-22 11:35:00"
+        },
+        {
+            "name": "drupal/seckit",
+            "version": "8.1.0-alpha2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/seckit",
+                "reference": "15324266793e6a3c103bebb7ce3dddffb9537e71"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/seckit-8.x-1.0-alpha2.zip",
+                "reference": "15324266793e6a3c103bebb7ce3dddffb9537e71",
+                "shasum": null
+            },
+            "require": {
+                "drupal/core": "8.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Enhance security of your Drupal website.",
+            "homepage": "https://www.drupal.org/project/seckit",
+            "time": "2016-08-10 18:02:58"
         },
         {
             "name": "drupal/security_review",
@@ -8606,6 +8638,55 @@
             ],
             "description": "Composer Plugin for updating the Drupal scaffold files when using drupal/core",
             "time": "2016-08-29 16:56:02"
+        },
+        {
+            "name": "drupal/devel",
+            "version": "8.1.0-alpha1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/devel",
+                "reference": "930b7b89c2fa2047ebbb0fb3ba53f45a67409242"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/devel-8.x-1.0-alpha1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/core": "8.*"
+            },
+            "replace": {
+                "drupal/devel_generate": "self.version",
+                "drupal/devel_node_access": "self.version",
+                "drupal/kint": "self.version",
+                "drupal/webprofiler": "self.version"
+            },
+            "suggest": {
+                "drupal/core": "Required by drupal/devel_generate, drupal/devel_node_access, drupal/kint, drupal/webprofiler",
+                "drupal/menu_ui": "Required by drupal/devel_node_access"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Moshe Weitzman",
+                    "email": "weitzman@tejasa.com",
+                    "homepage": "https://github.com/weitzman",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Various blocks, pages, and functions for developers.",
+            "homepage": "http://drupal.org/project/devel",
+            "time": "2016-06-23 14:14:07"
         },
         {
             "name": "drupal/drupal-driver",
