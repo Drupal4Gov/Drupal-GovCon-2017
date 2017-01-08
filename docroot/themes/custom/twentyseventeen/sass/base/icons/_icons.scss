@@ -1,0 +1,20 @@
+// Icons
+//
+// SVG Icons from a sprite
+//
+// Markup: icons.twig
+//
+// Style guide: base.icons
+
+
+// Hide the svg sprite that must be loaded at the top of the page before using
+.svg-sprite {
+  display: none;
+}
+
+// Inherit the parent element text color and set default size
+.icon {
+  fill: currentColor;
+  width: 30px;
+  height: 30px;
+}
