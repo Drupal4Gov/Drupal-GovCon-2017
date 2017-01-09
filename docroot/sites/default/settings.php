@@ -266,7 +266,7 @@ $config_directories = array();
  *
  * @see install_select_profile()
  */
-# $settings['install_profile'] = '';
+$settings['install_profile'] = 'lightning';
 
 /**
  * Salt for one-time login links, cancel links, form tokens, etc.
@@ -728,3 +728,8 @@ require DRUPAL_ROOT . "/sites/default/settings/environment.settings.php";
  * Caching settings.
  */
 require DRUPAL_ROOT . "/sites/default/settings/cache.settings.php";
+
+/**
+ * Trusted Host settings.
+ */
+require DRUPAL_ROOT . "/sites/default/settings/trusted_host.settings.php";
