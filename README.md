@@ -47,5 +47,13 @@ blt/composer may complain that you have the wrong PHP version. If this happens t
 - To Checkout a branch type in your command line `git checkout -b dgc-[issue-number]-[description] upstream/master`
 - Commit frequently when working on larger issues. This helps to assist with potential troubleshooting. To help track which commits are to which issues, please prefix all your messages with 'DGC-[issue-number]'
 - Your work is done for this ticket! Hooray! Before Submitting your work be sure to rebase you work against master.
-- On your feature branch, type `git rebase master`
+- On your feature branch, type `git rebase upstream/master`
 - If you rebase successfully, push your branch to upstream and submit a pull request :)
+
+### Troubleshooting Git
+
+- If you are unable to rebase, it may be due to merge conflicts. Type `git status` in the command line and see which file(s) are identified as 'both modified'
+- Resolve the merge conflicts in the files that are both modified, being sure to not delete anyone's work.
+- Once you have resolved the conflicts and saved your file(s), type `git add [file]` and type `git rebase --continue`
+- Once you have gotten the message `Successfully rebased and updated refs/heads/[branch-name]`, it is safe to push.
+- You can also abort your rebase at anytime by typing `git rebase --abort`
