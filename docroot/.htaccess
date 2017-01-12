@@ -141,11 +141,23 @@ AddEncoding gzip svgz
   RewriteCond %{REQUEST_URI} ^/drupal-govcon-2015/ [NC]
   RewriteRule ^drupal-govcon-2015/(.*)$ /static-sites/2015/$1 [PT,L]
   # Pass-through the matching file from beneath folder and stop processing
+  # Pass-through the matching file from beneath /sites/default/files/SOME-FOLDER and stop processing
+  RewriteCond %{REQUEST_URI} ^/2015 [NC]
+  RewriteRule ^2015/?$  /drupal-govcon-2015/index.html [NC,R,L]
+  # Redirect GovCon 2015 path with or without / to index.html
+  RewriteCond %{REQUEST_URI} ^/2015/ [NC]
+  RewriteRule ^2015/(.*)$ /static-sites/2015/$1 [PT,L]
   RewriteCond %{REQUEST_URI} ^/drupal-govcon-2016 [NC]
   RewriteRule ^drupal-govcon-2016/?$  /drupal-govcon-2016/index.html [NC,R,L]
   # Redirect GovCon 2016 path with or without / to index.html
   RewriteCond %{REQUEST_URI} ^/drupal-govcon-2016/ [NC]
   RewriteRule ^drupal-govcon-2016/(.*)$ /static-sites/2016/$1 [PT,L]
+  # Pass-through the matching file from beneath folder and stop processing
+  RewriteCond %{REQUEST_URI} ^/2016 [NC]
+  RewriteRule ^2016/?$  /drupal-govcon-2016/index.html [NC,R,L]
+  # Redirect GovCon 2016 path with or without / to index.html
+  RewriteCond %{REQUEST_URI} ^/2016/ [NC]
+  RewriteRule ^2016/(.*)$ /static-sites/2016/$1 [PT,L]
   # Pass-through the matching file from beneath /sites/default/files/SOME-FOLDER and stop processing
 
 
