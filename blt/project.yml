@@ -30,5 +30,7 @@ target-hooks:
     post-setup-build:
         dir: '${docroot}/profiles/contrib/lightning'
         command: 'npm run install-libraries'
-import: null
-
+import: '${repo.root}/blt/custom.xml'
+behat:
+  paths:
+    - '${repo.root}/tests/behat'

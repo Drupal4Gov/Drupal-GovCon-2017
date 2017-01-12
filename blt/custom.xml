@@ -1,0 +1,46 @@
+<project name="custom" default="build">
+  <!-- Override setup:drupal:install for CI installation with 'config-dir'. -->
+  <target name="setup:drupal:install"
+          description="Installs a specific Drupal site."
+          depends="setup:drupal:settings, setup:drush:settings, setup:hash-salt">
+
+    <if>
+      <istrue value="${drush.verbose}"/>
+      <then>
+        <echo level="verbose">Printing drush status</echo>
+        <drush command="status"/>
+      </then>
+    </if>
+
+    <echo>Installing Drupal...</echo>
+    <drush command="site-install">
+      <option name="site-name">"${project.human_name}"</option>
+      <option name="site-mail">"${drupal.account.mail}"</option>
+      <option name="account-name">"${drupal.account.name}"</option>
+      <option name="account-pass">"${drupal.account.password}"</option>
+      <option name="account-mail">"${drupal.account.mail}"</option>
+      <!-- Addition: Add config-dir option so Drush overwrites config. -->
+      <option name="config-dir">../config/default</option>
+      <param>"${project.profile.name}"</param>
+      <param>"install_configure_form.update_status_module='array(FALSE,FALSE)'"</param>
+    </drush>
+
+    <phingcall target="setup:update"/>
+
+    <!-- Set sites directory file permissions. -->
+    <echo level="verbose">Making ${docroot}/sites/default writable...</echo>
+    <chmod mode="0755" failonerror="false">
+      <fileset dir="${docroot}/sites/default">
+        <type type="dir" />
+        <exclude name="files/**" />
+      </fileset>
+    </chmod>
+    <chmod mode="0644" failonerror="false">
+      <fileset dir="${docroot}/sites/default">
+        <type type="file" />
+        <exclude name="files/**" />
+      </fileset>
+    </chmod>
+
+  </target>
+</project>
