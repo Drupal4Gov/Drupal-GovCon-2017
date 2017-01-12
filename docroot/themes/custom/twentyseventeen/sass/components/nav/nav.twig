@@ -1,0 +1,24 @@
+<div class="nav__bar">
+  <div class="nav__logo">
+    <a href="/">
+      <span class="nav__logo-text">{{home_link.text}}</span>
+      <svg class="icon {{home_link.logo}}">
+        <use xlink:href="#{{home_link.logo}}"></use>
+      </svg>
+    </a>
+  </div>
+  <input type="checkbox" id="toggle" aria-hidden="true" />
+  <label for="toggle" class="nav__icon" aria-hidden="true">
+    Expand the menu
+    <span class="nav__icon-line"></span>
+    <span class="nav__icon-line"></span>
+    <span class="nav__icon-line"></span>
+  </label>
+  <nav role="navigation" class="nav">
+    <ul class="nav__items">
+      {% for item in nav_links %}
+        <li class="nav__item"><a href="{{item.url}}">{{item.text}}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+</div>
