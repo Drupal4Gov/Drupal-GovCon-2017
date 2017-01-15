@@ -57,3 +57,6 @@ blt/composer may complain that you have the wrong PHP version. If this happens t
 - Once you have resolved the conflicts and saved your file(s), type `git add [file]` and type `git rebase --continue`
 - Once you have gotten the message `Successfully rebased and updated refs/heads/[branch-name]`, it is safe to push.
 - You can also abort your rebase at anytime by typing `git rebase --abort`
+- If you have any trouble rebasing, you can rebase interactively which allows you to update your commits. Type `git rebase -i upstream/master`
+- There you can reword, drop, squash commits, but please do this with caution as you can accidentally delete work.
+- Read up on rebasing and rebasing interactively at: https://git-scm.com/docs/git-rebase and https://git-scm.com/docs/git-rebase#git-rebase---interactive
