@@ -21,6 +21,7 @@ Tools we are using:
 - **Fork this repo**
 - Clone repo locally (clone **your fork**, do NOT clone the main repo)
 - Configure a remote for the main repo (replace upstream with whatever naming makes sense to you) `git remote add upstream git@github.com:Drupal4Gov/Drupal-GovCon-2017.git`
+- First Run: from the repo root, go to /box/project.local.yml, anc change line 5 from `local: capitalcamp.local` to `local: self`
 - From the repo root, run `composer install`
 - `composer blt-alias`
 - `source ~/.bash_profile`
