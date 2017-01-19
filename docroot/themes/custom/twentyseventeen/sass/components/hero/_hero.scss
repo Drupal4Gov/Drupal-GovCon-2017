@@ -1,0 +1,51 @@
+// Hero
+//
+// Hero styling
+//
+// Markup: hero.twig
+//
+// Style guide: components.hero
+
+
+.hero__wrapper {
+  background: url(/themes/custom/twentyseventeen/images/GovCon2017_BannerImage-Mobile_02.jpg);
+  @include breakpoint($tablet-to-desktop) {
+    background: url(/themes/custom/twentyseventeen/images/GovCon2017_BannerImage-Tablet_02.jpg);
+  }
+  @include breakpoint($desktop) {
+    background: url(/themes/custom/twentyseventeen/images/GovCon2017_BannerImage-Desktop_02.jpg);
+  }
+}
+
+.hero__logo {
+  filter: drop-shadow(0 0 2em rgba(0,0,0,0.5));
+  width: 65%;
+  display: block;
+  margin: 0 auto;
+  padding-top: 4rem;
+  @include breakpoint($tablet-to-desktop) {
+    width: 40%;
+    padding-top: 2rem;
+  }
+  @include breakpoint($desktop)  {
+    width: 20%;
+    padding-top: 3rem;
+  }
+}
+.hero__title {
+  font-family: $govcon;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,1);
+  margin-bottom: 0;
+  text-align: center;
+  padding: 0 0.5em;
+  text-shadow: 0 0 0.5em rgba(0,0,0,0.5);
+  font-size: 14vw;
+  @include breakpoint($tablet-to-desktop) {
+    font-size: 9vw;
+  }
+  @include breakpoint($desktop) {
+    font-size: 6vw;
+  }
+}
