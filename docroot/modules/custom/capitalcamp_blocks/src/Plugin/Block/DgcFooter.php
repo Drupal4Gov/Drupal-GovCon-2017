@@ -9,7 +9,7 @@ use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
- * Provides a DGC Footer
+ * Provides a DGC Footer.
  *
  * @Block(
  *  id = "dgc_footer",
