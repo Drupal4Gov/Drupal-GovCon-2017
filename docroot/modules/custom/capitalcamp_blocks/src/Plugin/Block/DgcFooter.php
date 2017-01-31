@@ -50,7 +50,7 @@ class DgcFooter extends BlockBase implements ContainerFactoryPluginInterface {
     foreach ($tree as $treeElement) {
       $currentParsedRecord = [];
       $currentParsedRecord['text'] = $treeElement->link->getTitle();
-      $currentParsedRecord['url'] = 'https://www.drupalgovcon.org';
+      $currentParsedRecord['url'] = $treeElement->link->getUrlObject();
       $processedFooter[] = $currentParsedRecord;
     }
 
