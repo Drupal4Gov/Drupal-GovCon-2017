@@ -38,7 +38,7 @@ $desktop: 1200px;
 // Utility sizes ///////////////
 $page-width: 80em;
 
-// Example Mixins ///////////////
+// Mixins ///////////////
 @mixin opac-color($r, $g, $b, $pertc) {
   background: rgb($r, $g, $b);
   background: rgba($r, $g, $b, $pertc);
@@ -54,20 +54,31 @@ $page-width: 80em;
   }
 }
 
-// Example Placeholders ///////////////
-.no-ul-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  > li {
-    display: inline-block;
-    list-style-type: none;
-    margin: 2px;
-  }
+// Makes an element visually hidden, but accessible.
+// @see http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+@mixin element-invisible {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
 }
-.blk-style {
-  border: 1px solid $lt-gr;
-  padding: 10px;
-  border-radius: 5px;
-  background: $lt-blu;
+
+// Turns off the element-invisible effect.
+@mixin element-invisible-off {
+  position: static !important;
+  clip: auto;
+  height: auto;
+  width: auto;
+  overflow: auto;
+}
+
+// Makes an element visually hidden by default, but visible when focused.
+@mixin element-focusable {
+  @include element-invisible;
+
+  &:active,
+  &:focus {
+    @include element-invisible-off;
+  }
 }
