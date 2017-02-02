@@ -1,0 +1,20 @@
+uuid: b9f63c36-c920-48a3-a50e-86c3ed4f2939
+langcode: en
+status: true
+dependencies:
+  module:
+    - capitalcamp_blocks
+  theme:
+    - twentyseventeen
+id: dgcfooter
+theme: twentyseventeen
+region: footer
+weight: -6
+provider: null
+plugin: dgc_footer
+settings:
+  id: dgc_footer
+  label: 'DGC Footer'
+  provider: capitalcamp_blocks
+  label_display: '0'
+visibility: {  }
