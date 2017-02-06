@@ -1,0 +1,20 @@
+uuid: c621a5a5-cc0f-4321-823f-eaa4337e7dbd
+langcode: en
+status: true
+dependencies:
+  module:
+    - capitalcamp_blocks
+  theme:
+    - twentyseventeen
+id: dgcnav
+theme: twentyseventeen
+region: header
+weight: -7
+provider: null
+plugin: dgc_nav
+settings:
+  id: dgc_nav
+  label: 'DGC Nav'
+  provider: capitalcamp_blocks
+  label_display: '0'
+visibility: {  }

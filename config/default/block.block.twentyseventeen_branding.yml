@@ -1,0 +1,25 @@
+uuid: fb4bfee9-fa60-440a-a778-75f8dbd2af11
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - twentyseventeen
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: twentyseventeen_branding
+theme: twentyseventeen
+region: '-1'
+weight: -3
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }
