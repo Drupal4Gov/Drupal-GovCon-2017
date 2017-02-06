@@ -12,6 +12,7 @@
   &__bar {
     background-color: $green;
     padding-top: 55px;
+    position: relative;
 
     @include breakpoint($min-tablet) {
       padding-top: 0;
