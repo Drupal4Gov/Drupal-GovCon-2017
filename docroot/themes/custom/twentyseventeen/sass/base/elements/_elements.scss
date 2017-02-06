@@ -37,6 +37,7 @@ h4 {
 h1 {
   font-size: 280%;
   line-height: 165%;
+  color: $blu;
 }
 h2 {
   font-size: 230%;
@@ -45,10 +46,12 @@ h2 {
 h3 {
   font-size: 210%;
   line-height: 145%;
+  color: $green;
 }
 h4 {
   font-size: 190%;
   line-height: 145%;
+  color: $md-gr;
 }
 body .menu-item {
   padding-top: 0;
@@ -63,8 +66,8 @@ a,
 a:link,
 a:visited {
   text-decoration: none;
-  color: $link;
   //color: rgba(134,151,58,1);
+  color: $link;
   cursor: inherit;
   &:hover {
     text-decoration: underline;
@@ -81,11 +84,14 @@ body p {
 // Style guide: base.blockquote
 blockquote {
   padding: 0 15px;
-  color: $lt-blk;
-  border-left: 4px solid $lt-gr;
+  color: $green;
+  border-left: 4px solid $blu;
   &:last-child {
     margin-bottom: 0;
   }
+}
+blockquote p {
+  color: $green;
 }
 // List Types
 //
