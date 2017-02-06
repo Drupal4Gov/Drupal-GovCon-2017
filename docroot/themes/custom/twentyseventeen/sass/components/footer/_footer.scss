@@ -21,6 +21,7 @@
     &:focus {
       opacity: 1;
     }
+
   }
 
   &__inner {
@@ -56,6 +57,10 @@
     li~li {
       border-left: 1px solid $trans-wht;
     }
+
+    a:link {
+      color: $wht;
+    }
   }
 
   &__social {
@@ -71,6 +76,10 @@
     li {
       display: inline-block;
       padding: 0.3em;
+    }
+
+    a:link {
+      color: $wht;
     }
   }
 
