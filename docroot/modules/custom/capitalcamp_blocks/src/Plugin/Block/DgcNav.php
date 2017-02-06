@@ -44,17 +44,34 @@ class DgcNav extends BlockBase implements ContainerFactoryPluginInterface {
   public function build() {
     $parameters = new MenuTreeParameters();
     $tree = $this->menuTree->load('main', $parameters);
-    $processedFooter = [];
+    $processedTopMenuBar = [];
 
     // Normalize the menu so that we don't need to in twig.
     foreach ($tree as $treeElement) {
       $currentParsedRecord = [];
       $currentParsedRecord['text'] = $treeElement->link->getTitle();
-      $currentParsedRecord['url'] = $treeElement->link->getUrlObject();
-      $processedFooter[] = $currentParsedRecord;
+      $currentParsedRecord['url'] = $treeElement->link->getUrlObject()->getUri();
+      $currentParsedRecord['children'] = [];
+      // Normalize the menu so that we don't need to in twig.
+      foreach ($treeElement->subtree as $secondLevelTreeElement) {
+        $currentL2ParsedRecord = [];
+        $currentL2ParsedRecord['text'] = $secondLevelTreeElement->link->getTitle();
+        $currentL2ParsedRecord['url'] = $secondLevelTreeElement->link->getUrlObject()->getUri();
+
+        $currentL2ParsedRecord['children'] = [];
+        foreach ($secondLevelTreeElement->subtree as $thirdLevelTreeElement) {
+          $currentL3ParsedRecord = [];
+          $currentL3ParsedRecord['text'] = $thirdLevelTreeElement->link->getTitle();
+          $currentL3ParsedRecord['url'] = $thirdLevelTreeElement->link->getUrlObject()->getUri();
+
+          $currentL2ParsedRecord['children'][] = $currentL3ParsedRecord;
+        }
+        $currentParsedRecord['children'][] = $currentL2ParsedRecord;
+      }
+      $processedTopMenuBar[] = $currentParsedRecord;
     }
 
-    $build['nav_links'] = $processedFooter;
+    $build['nav_links'] = $processedTopMenuBar;
     return $build;
   }
 
