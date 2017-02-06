@@ -10,7 +10,8 @@ module.exports = function (gulp, plugins, options) {
     plugins.runSequence(
         ['compile:sass'],
         ['clean:svg'],
-        ['compile:styleguide', 'compile:svg', 'minify:css'],
+        ['compile:svg'],
+        ['compile:styleguide', 'minify:css'],
         ['lint:js-gulp', 'lint:js-with-fail'], cb
     );
   });
@@ -19,7 +20,8 @@ module.exports = function (gulp, plugins, options) {
     plugins.runSequence(
         ['compile:sass'],
         ['clean:svg'],
-        ['compile:styleguide', 'compile:svg', 'minify:css'],
+        ['compile:svg'],
+        ['compile:styleguide', 'minify:css'],
         ['lint:js-gulp', 'lint:js'], cb
     );
   });
