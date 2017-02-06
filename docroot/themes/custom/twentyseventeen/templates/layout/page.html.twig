@@ -18,13 +18,9 @@
     <!-- ______________________ HEADER _______________________ -->
 
     <header id="header">
-        <div class="mq--t">
-            {% if page.header %}
-                <div id="header-region">
-                    {{ page.header }}
-                </div>
-            {% endif %}
-        </div>
+        {% if page.header %}
+            {{ page.header }}
+        {% endif %}
     </header>
     <!-- /header -->
 
