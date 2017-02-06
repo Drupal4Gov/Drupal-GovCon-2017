@@ -16,14 +16,12 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  *  admin_label = @Translation("DGC Nav"),
  * )
  */
-class DgcNav extends BlockBase implements ContainerFactoryPluginInterface
-{
+class DgcNav extends BlockBase implements ContainerFactoryPluginInterface {
 
   /**
    * {@inheritdoc}
    */
-  public function __construct(array $configuration, $plugin_id, $plugin_definition, MenuLinkTreeInterface $menu_tree)
-  {
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, MenuLinkTreeInterface $menu_tree) {
     parent::__construct($configuration, $plugin_id, $plugin_definition);
     $this->menuTree = $menu_tree;
   }
@@ -31,8 +29,7 @@ class DgcNav extends BlockBase implements ContainerFactoryPluginInterface
   /**
    * {@inheritdoc}
    */
-  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition)
-  {
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
     return new static(
       $configuration,
       $plugin_id,
@@ -44,8 +41,7 @@ class DgcNav extends BlockBase implements ContainerFactoryPluginInterface
   /**
    * {@inheritdoc}
    */
-  public function build()
-  {
+  public function build() {
     $parameters = new MenuTreeParameters();
     $tree = $this->menuTree->load('main', $parameters);
     $processedFooter = [];
