@@ -9,3 +9,15 @@ lib:
   dependencies:
     - core/jquery
     - core/drupal
+
+responsive-tables:
+  version: 1.x
+  css:
+    theme:
+      libraries/zurb-responsive-tables/responsive-tables.css: {}
+  js:
+    libraries/zurb-responsive-tables/responsive-tables.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/jquery.once
