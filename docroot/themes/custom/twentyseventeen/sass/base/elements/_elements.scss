@@ -1,4 +1,10 @@
 // Base HTML Elements.
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 html,
 body {
   min-height: 100%;
@@ -10,6 +16,9 @@ body {
   font-family: $body_font;
   font-size: 1em;
   line-height: 140%;
+  /* Leave space for footer */
+  position: relative;
+  padding-bottom: 350px;
 }
 // Base Headings
 //
