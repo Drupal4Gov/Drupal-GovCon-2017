@@ -15,9 +15,27 @@
     <span class="nav__icon-line"></span>
   </label>
   <nav role="navigation" class="nav">
-    <ul class="nav__items">
-      {% for item in nav_links %}
-        <li class="nav__item"><a href="{{item.url}}">{{item.text}}</a></li>
+    <ul class="nav__items nav__items--first-level">
+      {% for first_level in nav_links %}
+        <li class="nav__item nav__item--first-level">
+          <a href="{{first_level.url}}">{{first_level.text}}</a>
+          {% if first_level.children %}
+            <ul class="nav__items nav__items--second-level">
+              {% for second_level in first_level.children %}
+                <li class="nav__item nav__item--second-level">
+                  <a href="{{ second_level.url }}">{{ second_level.text }}</a>
+                  <ul class="nav__items nav__items--third-level">
+                    {% for third_level in second_level.children %}
+                      <li class="nav__item nav__item--third-level">
+                        <a href="{{ third_level.url }}">{{ third_level.text }}</a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </li>
       {% endfor %}
     </ul>
   </nav>
