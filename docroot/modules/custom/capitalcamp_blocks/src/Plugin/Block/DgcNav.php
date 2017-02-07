@@ -52,12 +52,10 @@ class DgcNav extends BlockBase implements ContainerFactoryPluginInterface {
       $currentParsedRecord['text'] = $treeElement->link->getTitle();
       $currentParsedRecord['url'] = $treeElement->link->getUrlObject();
       $currentParsedRecord['children'] = [];
-      // Normalize the menu so that we don't need to in twig.
       foreach ($treeElement->subtree as $secondLevelTreeElement) {
         $currentL2ParsedRecord = [];
         $currentL2ParsedRecord['text'] = $secondLevelTreeElement->link->getTitle();
         $currentL2ParsedRecord['url'] = $secondLevelTreeElement->link->getUrlObject();
-
         $currentL2ParsedRecord['children'] = [];
         foreach ($secondLevelTreeElement->subtree as $thirdLevelTreeElement) {
           $currentL3ParsedRecord = [];
