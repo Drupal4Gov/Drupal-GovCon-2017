@@ -39,16 +39,20 @@
   }
 
   &__items {
-    max-height: 1px; //0 would hide from screen readers
-    overflow: hidden;
     list-style: none;
     margin: 0;
     padding: 0;
-    transition: all 1s cubic-bezier(.325, 1, .22, 1);
 
-    @include breakpoint($min-tablet) {
-      max-height: none;
-      text-align: center;
+    &--first-level {
+      max-height: 1px; //0 would hide from screen readers
+      overflow: hidden;
+      transition: all 1s cubic-bezier(.325, 1, .22, 1);
+
+      @include breakpoint($min-tablet) {
+        max-height: none;
+        text-align: center;
+        overflow: visible;
+      }
     }
   }
 
@@ -69,6 +73,7 @@
       color: $wht;
       background: $green;
       font-size: 1.2rem;
+      font-weight: 500;
       transition: opacity 0.5s ease;
 
       @include breakpoint($min-tablet) {
@@ -89,6 +94,61 @@
       &:focus {
         text-decoration: none;
         opacity: 0.7;
+      }
+    }
+
+    &--first-level {
+      position: relative;
+
+      @include breakpoint($min-tablet) {
+
+        .nav__items--second-level {
+          max-height: 1px; //0 would hide from screen readers
+          margin-top: -1px; //move up to hide pixel
+          position: absolute;
+          overflow: hidden;
+        }
+
+        &:hover .nav__items--second-level,
+        &:focus .nav__items--second-level {
+          height: auto;
+          max-height: 40rem;
+          transition: all 2s cubic-bezier(.5, 1, .22, 1);
+        }
+      }
+    }
+
+    &--second-level,
+    &--third-level {
+      margin: 0;
+
+      li {
+        padding: 0;
+        margin: 0;
+      }
+
+      a {
+        font-weight: 400;
+        padding-left: 2rem;
+        font-size: 1rem;
+        text-align: left;
+
+        @include breakpoint($min-tablet) {
+          width: 14rem;
+          padding-left: 1rem;
+        }
+      }
+    }
+
+    &--third-level {
+
+      a {
+        padding-left: 3rem;
+
+        @include breakpoint($min-tablet) {
+          width: 14rem;
+          padding-left: 2rem;
+        }
       }
     }
   }
@@ -152,10 +212,10 @@ input[type=checkbox] {
 
   &:checked {
 
-    ~ nav .nav__items {
+    ~ nav .nav__items--first-level {
       height: auto;
-      max-height: 20rem;
-      transition: all 1s cubic-bezier(.5, 1, .22, 1);
+      max-height: 60rem;
+      transition: all 2s cubic-bezier(.5, 1, .22, 1);
     }
 
     ~ label .nav__icon-line:first-child {
