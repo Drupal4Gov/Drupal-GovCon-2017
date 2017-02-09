@@ -74,24 +74,24 @@ select {
   z-index: -1;
 }
 .inputfile + label {
-    font-size: 1.2em;
-    font-weight: normal;
-    color: $wht;
-    background: rgba(0,62,106,1) url('../images/GovCon-FileUpload-SM-Rev.svg') 4% center no-repeat;
-    background-size: 1em;
-    padding: 0.25em 0.5em 0.125em 0.5em;
-    padding: 0.25em 0.5em 0.125em 2em;
-    border-radius: 0.25em;
-    border: 1px solid rgba(0,62,106,1);
-    display: inline-block;
+  font-size: 1.2em;
+  font-weight: normal;
+  color: $wht;
+  background: rgba(0,62,106,1) url('../images/GovCon-FileUpload-SM-Rev.svg') 4% center no-repeat;
+  background-size: 1em;
+  padding: 0.25em 0.5em 0.125em 0.5em;
+  padding: 0.25em 0.5em 0.125em 2em;
+  border-radius: 0.25em;
+  border: 1px solid rgba(0,62,106,1);
+  display: inline-block;
 }
 
 .inputfile:focus + label,
 .inputfile + label:hover {
-    background: rgba(134,151,58,1) url('../images/GovCon-FileUpload-SM-Rev.svg') 4% center no-repeat;
-    background-size: 1em;
-    padding: 0.25em 0.5em 0.125em 2em;
-    display: inline-block;
+  background: rgba(134,151,58,1) url('../images/GovCon-FileUpload-SM-Rev.svg') 4% center no-repeat;
+  background-size: 1em;
+  padding: 0.25em 0.5em 0.125em 2em;
+  display: inline-block;
 }
 
 fieldset {
@@ -253,54 +253,54 @@ select[disabled] {
 // Radio and Checkbox Styling
 .form_radio label,
 .form_checkbox label {
-    display: inline-block;
-    display: inherit;
-    cursor: pointer;
-    position: relative;
-    padding-left: 32px; /* Added Setting for 24 px */
-    padding-right: 1em; /* Added Setting */
-    margin-right: 15px;
-    margin-bottom: 0.75em;
-    font-size: 1em; /* Added Setting */
-    font-size: 0.875em;
-    font-weight: normal;
-    color: $lt-blk;
+  display: inline-block;
+  display: inherit;
+  cursor: pointer;
+  position: relative;
+  padding-left: 32px; /* Added Setting for 24 px */
+  padding-right: 1em; /* Added Setting */
+  margin-right: 15px;
+  margin-bottom: 0.75em;
+  font-size: 1em; /* Added Setting */
+  font-size: 0.875em;
+  font-weight: normal;
+  color: $lt-blk;
 }
 
 
 .form_radio input[type=radio] {
-    display: none;
+  display: none;
 }
 
 
 .form_radio label:before,
 .form_checkbox label:before {
-    content: "";
-    display: inline-block;
-    display: block; /* Added Setting */
-    width: 16px;
-    width: 24px;
-    height: 16px;
-    height: 24px;
-    margin-right: 10px;
-    position: absolute;
-    left: 0;
-    bottom: 0.006em; /* Added Setting */
-    background-color: rgba(134,151,58,0.75); /* Added Setting */
-    box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+  content: "";
+  display: inline-block;
+  display: block; /* Added Setting */
+  width: 16px;
+  width: 24px;
+  height: 16px;
+  height: 24px;
+  margin-right: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0.006em; /* Added Setting */
+  background-color: rgba(134,151,58,0.75); /* Added Setting */
+  box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
 }
 
 .form_radio label:before {
-    border-radius: 0.875em; /* Added Setting for 24 px */
+  border-radius: 0.875em; /* Added Setting for 24 px */
 }
 
 .form_radio input[type=radio]:checked + label:before {
-    content: "\2022";
-    color: rgba(0,62,106,1);
-    font-size: 44px;
-    text-align: center;
-    line-height: 0.65em;
-    bottom: 0.006em;
+  content: "\2022";
+  color: rgba(0,62,106,1);
+  font-size: 44px;
+  text-align: center;
+  line-height: 0.65em;
+  bottom: 0.006em;
 }
 
 .form_radio input[type=radio]:disabled + label:before {
@@ -313,20 +313,20 @@ select[disabled] {
 }
 
 .form_checkbox input[type=checkbox] {
-    display: none;
+  display: none;
 }
 
 .form_checkbox label:before {
-    border-radius: 0.25em; /* Added Setting */
+  border-radius: 0.25em; /* Added Setting */
 }
 
 .form_checkbox input[type=checkbox]:checked + label:before {
-    content: "\2713";
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
-    font-size: 21px; /* Added Setting for 24 px */
-    color: rgba(0,62,106,1); /* Added Setting */
-    text-align: center;
-    line-height: 1.25em; /* Added Setting for 24 px */
+  content: "\2713";
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+  font-size: 21px; /* Added Setting for 24 px */
+  color: rgba(0,62,106,1); /* Added Setting */
+  text-align: center;
+  line-height: 1.25em; /* Added Setting for 24 px */
 }
 
 .form_checkbox input[type=checkbox]:disabled + label:before {
