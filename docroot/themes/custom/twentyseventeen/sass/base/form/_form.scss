@@ -77,7 +77,6 @@ select {
     font-size: 1.2em;
     font-weight: normal;
     color: $wht;
-    //background-color: $blu;
     background: rgba(0,62,106,1) url('../images/GovCon-FileUpload-SM-Rev.svg') 4% center no-repeat;
     background-size: 1em;
     padding: 0.25em 0.5em 0.125em 0.5em;
@@ -89,11 +88,12 @@ select {
 
 .inputfile:focus + label,
 .inputfile + label:hover {
-    background-color: rgba(134,151,58,1);
-    background: rgba(134,151,58,1) url('../images/GovCon-FileUpload-Rev-SM.svg') 4% center no-repeat;
+    background: rgba(134,151,58,1) url('../images/GovCon-FileUpload-SM-Rev.svg') 4% center no-repeat;
     background-size: 1em;
     padding: 0.25em 0.5em 0.125em 2em;
+    display: inline-block;
 }
+
 fieldset {
   border: solid 1px $lt-gr;
   padding: 1.25em;
@@ -231,8 +231,6 @@ input[type="url"][disabled] {
 }
 // Select Button Styling
 select {
-  -webkit-appearance: none;  /*Removes default chrome and safari style*/
-  -moz-appearance: none; /* Removes Default Firefox style*/
   color: rgba(255,255,255,1);
   font-size: 1.2em;
   background: rgba(0,62,106,1) url('../images/GovCon-DownArrow-SM-Rev.svg') 96% center no-repeat;
@@ -300,8 +298,8 @@ select[disabled] {
     color: rgba(0,62,106,1);
     font-size: 44px;
     text-align: center;
-    line-height: 0.4em;
-    bottom: 0.003em;
+    line-height: 0.65em;
+    bottom: 0.006em;
 }
 
 .form_radio input[type=radio]:disabled + label:before {
@@ -327,7 +325,7 @@ select[disabled] {
     font-size: 21px; /* Added Setting for 24 px */
     color: rgba(0,62,106,1); /* Added Setting */
     text-align: center;
-    line-height: 20px; /* Added Setting for 24 px */
+    line-height: 1.25em; /* Added Setting for 24 px */
 }
 
 .form_checkbox input[type=checkbox]:disabled + label:before {
@@ -364,4 +362,5 @@ fieldset {
   border-radius: 0.25em;
   border: 1px solid $slv;
 }
+
 // End Fieldset Styling
