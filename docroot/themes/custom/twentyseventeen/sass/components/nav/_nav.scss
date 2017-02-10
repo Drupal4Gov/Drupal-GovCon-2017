@@ -54,6 +54,11 @@
         overflow: visible;
       }
     }
+
+    &--second-level,
+    &--third-level {
+      z-index: 500;
+    }
   }
 
   &__item {
