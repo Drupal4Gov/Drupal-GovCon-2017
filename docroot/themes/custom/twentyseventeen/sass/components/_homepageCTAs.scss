@@ -6,4 +6,45 @@
 //
 // Style guide: components.homepageCTAs
 
+#secondarybanners {
+	margin: 0 -1em;
+}
 
+.secondarybannertext {
+	position: absolute;
+	bottom: 0.5em;
+	padding-bottom: 0.5em;
+}
+
+.home_cta {
+	width: 100%;
+	display: block;
+	float: left;
+	position: relative;
+	margin-bottom: -0.5em; /* Removes spacing at bottom */
+}
+
+.home_cta img {
+	width: 100%;
+}
+
+.home_cta h3 {
+	font-family: 'GovCon', Helvetica, sans-serif;
+	font-size: 2.5em;
+	letter-spacing: 0.05em;
+	color: rgba(255,255,255,1);
+	text-shadow: 0 0 0.5em rgba(0,0,0,0.5);
+	margin: 0 0.5em;
+}
+
+.home_cta p {
+	color: rgba(239,172,55,1);
+	margin: 0 1em;
+	padding: 0 0 0.5em 0;
+}
+
+    @include breakpoint($min-tablet) {
+		.home_cta {
+			width: 50%;
+		}
+  }
