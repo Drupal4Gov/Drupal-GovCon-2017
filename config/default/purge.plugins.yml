@@ -7,3 +7,16 @@ purgers:
     order_index: 3
     instance_id: 1f831d08eb
     plugin_id: cloudflare
+queuers:
+  -
+    plugin_id: drush_purge_queue_add
+    status: true
+  -
+    plugin_id: coretags
+    status: true
+  -
+    plugin_id: urlpath
+    status: false
+  -
+    plugin_id: purge_ui_block_queuer
+    status: true

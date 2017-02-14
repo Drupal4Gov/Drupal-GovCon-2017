@@ -25,10 +25,9 @@
         "drupal/pathauto": "^1.0.0-alpha2",
         "drupal/components": "*@stable",
         "drupal/xmlsitemap": "^1.0.0-alpha2",
-        "nielsvm/acquia_purge": "~8",
+        "drupal/acquia_purge": "1.x-dev",
         "drupal/cloudflare": "^1.0.0-alpha7",
         "drupal/purge": "^3.0.0-beta6",
-        "drupal/purge_queuer_url": "^1.0.0-beta5",
         "acquia/lightning": "2.0.1",
         "drupal/seckit": "^1.0.0-alpha2",
         "drupal/shield": "^1.0.0",
@@ -58,25 +57,6 @@
             "rm -rf vendor/bin/phantomjs",
             "PhantomInstaller\\Installer::installPhantomJS"
         ]
-    },
-    "repositories": {
-        "acquia_purge": {
-            "type": "package",
-            "package": {
-                "name": "nielsvm/acquia_purge",
-                "type": "drupal-module",
-                "version": "8.1",
-                "source": {
-                    "url": "https://github.com/nielsvm/acquia_purge.git",
-                    "type": "git",
-                    "reference": "8.x-1.x"
-                }
-            }
-        },
-        "drupal": {
-            "type": "composer",
-            "url": "https://packages.drupal.org/8"
-        }
     },
     "autoload-dev": {
         "psr-4": {
@@ -108,8 +88,8 @@
             "drupal/core": {
                 "Ignore front end vendor folders to improve directory search performance": "https://www.drupal.org/files/issues/ignore_front_end_vendor-2329453-116.patch"
             },
-            "nielsvm/acquia_purge": {
-                "Hacking Acquia Purge for path based purging.": "patches/acquia-purge-path-hack.patch"
+            "drupal/acquia_purge": {
+                "Bypass Acquia purge alpha program check to enable tag based purging.": "patches/purge-bypass-alpha-program.patch"
             },
             "acquia/lightning": {
                 "New LightningExtension subcontexts do not autoload": "https://www.drupal.org/files/issues/2836258-3-lightning-extension-autoload.patch"
