@@ -4,6 +4,9 @@ status: true
 dependencies:
   module:
     - file
+third_party_settings:
+  lightning_core:
+    internal: true
 id: file.token
 label: Token
 targetEntityType: file

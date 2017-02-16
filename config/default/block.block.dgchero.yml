@@ -1,0 +1,28 @@
+uuid: 51766097-d51b-43ae-a567-f7dbfb2d86bb
+langcode: en
+status: true
+dependencies:
+  module:
+    - capitalcamp_blocks
+    - ctools
+  theme:
+    - twentyseventeen
+id: dgchero
+theme: twentyseventeen
+region: header
+weight: 0
+provider: null
+plugin: dgc_hero
+settings:
+  id: dgc_hero
+  label: 'DGC Hero'
+  provider: capitalcamp_blocks
+  label_display: '0'
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      landing_page: landing_page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
