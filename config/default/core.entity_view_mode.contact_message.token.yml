@@ -4,6 +4,9 @@ status: true
 dependencies:
   module:
     - contact
+third_party_settings:
+  lightning_core:
+    internal: true
 id: contact_message.token
 label: Token
 targetEntityType: contact_message
