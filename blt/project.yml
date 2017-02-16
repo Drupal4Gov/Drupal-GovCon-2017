@@ -14,7 +14,7 @@ git:
 drush:
     aliases:
         remote: '${project.machine_name}.test'
-        local: self
+        local: capitalcamp.local
         ci: self
     default_alias: '${drush.aliases.local}'
 target-hooks:
