@@ -6,22 +6,18 @@
 //
 // Style guide: components.homepageintro
 
-.homepageintro {
-
-}
-
-.introdek {
+.introduction__dek {
 	text-align: center;
 }
 
-.introdek h2 {
+.introduction__dek h2 {
 	font-size: 2em;
 	margin-bottom: 0;
 	padding-bottom: 0;
 	font-weight: bold;
 }
 
-.introdek h3 {
+.introduction__dek h3 {
 	color: rgba(134,151,58,1);
 	font-size: 1.6em;
 	margin-top: 0;
@@ -29,7 +25,7 @@
 	margin-bottom: 0.5em;
 }
 
-.introdek p {
+.introduction__dek p {
 	text-align: left;
 	font-size: 1.2em;
 	line-height: 1.35em;
@@ -38,11 +34,11 @@
 }
 
 
-.homeinfo {
+.introduction__info {
 	margin: 2em 0;
 }
 
-.homeinfo h3 {
+.introduction__info h3 {
 	font-size: 1.2em;
 	font-weight: bold;
 	padding-bottom: 0;
@@ -50,23 +46,23 @@
 
 }
 
-.homeinfo h3:first-child {
+.introduction__info h3:first-child {
 	margin-top: 0;
 }
 
-.homeinfo p {
+.introduction__info p {
 	margin-top: 0;
 }
 
     @include breakpoint($min-tablet) {
-    	.introdek p {
+    	.introduction__dek p {
     	}
-    	.introdek {
+    	.introduction__dek {
 			padding: 0 10%;
 		}
 
 
-		.homeinfo {
+		.introduction__info {
 			padding: 0 10%;
 		}
   }
