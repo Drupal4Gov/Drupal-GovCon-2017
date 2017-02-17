@@ -82,3 +82,12 @@ $page-width: 80em;
     @include element-invisible-off;
   }
 }
+
+// Clearfix.
+@mixin clearfix {
+  &:after {
+    content:"";
+    display:block;
+    clear:both;
+  }
+}
