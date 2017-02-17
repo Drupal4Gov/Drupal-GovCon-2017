@@ -10,18 +10,18 @@
 
 }
 
-#introdek {
+.introdek {
 	text-align: center;
 }
 
-#introdek h2 {
+.introdek h2 {
 	font-size: 2em;
 	margin-bottom: 0;
 	padding-bottom: 0;
 	font-weight: bold;
 }
 
-#introdek h3 {
+.introdek h3 {
 	color: rgba(134,151,58,1);
 	font-size: 1.6em;
 	margin-top: 0;
@@ -29,7 +29,7 @@
 	margin-bottom: 0.5em;
 }
 
-#introdek p {
+.introdek p {
 	text-align: left;
 	font-size: 1.2em;
 	line-height: 1.35em;
@@ -38,14 +38,11 @@
 }
 
 
-#homeinfo {
+.homeinfo {
 	margin: 2em 0;
-	-webkit-column-count: 1; /* Chrome, Safari, Opera */
-    -moz-column-count: 1; /* Firefox */
-	column-count: 1;
 }
 
-#homeinfo h3 {
+.homeinfo h3 {
 	font-size: 1.2em;
 	font-weight: bold;
 	padding-bottom: 0;
@@ -53,26 +50,23 @@
 
 }
 
-#homeinfo h3:first-child {
+.homeinfo h3:first-child {
 	margin-top: 0;
 }
 
-#homeinfo p {
+.homeinfo p {
 	margin-top: 0;
 }
 
     @include breakpoint($min-tablet) {
-    	#introdek p {
+    	.introdek p {
     	}
-    	#introdek {
+    	.introdek {
 			padding: 0 10%;
 		}
 
 
-		#homeinfo {
-			-webkit-column-count: 2; /* Chrome, Safari, Opera */
-		    -moz-column-count: 2; /* Firefox */
-			column-count: 2;
+		.homeinfo {
 			padding: 0 10%;
 		}
   }
