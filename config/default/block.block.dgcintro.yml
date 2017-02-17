@@ -1,0 +1,26 @@
+uuid: b9718172-0333-4c76-b728-14e14f03052f
+langcode: en
+status: true
+dependencies:
+  module:
+    - capitalcamp_blocks
+    - system
+  theme:
+    - twentyseventeen
+id: dgcintro
+theme: twentyseventeen
+region: content
+weight: 0
+provider: null
+plugin: dgc_intro
+settings:
+  id: dgc_intro
+  label: 'DGC Intro'
+  provider: capitalcamp_blocks
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
