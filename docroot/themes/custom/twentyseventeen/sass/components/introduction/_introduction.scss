@@ -1,0 +1,68 @@
+// Introduction Typography
+//
+// Typographic Styling for Section Introductions
+//
+// Markup: introduction.twig
+//
+// Style guide: components.introduction
+
+.introduction__dek {
+	text-align: center;
+}
+
+.introduction__dek h2 {
+	font-size: 2em;
+	margin-bottom: 0;
+	padding-bottom: 0;
+	font-weight: bold;
+}
+
+.introduction__dek h3 {
+	color: rgba(134,151,58,1);
+	font-size: 1.6em;
+	margin-top: 0;
+	line-height: 1.2;
+	margin-bottom: 0.5em;
+}
+
+.introduction__dek p {
+	text-align: left;
+	font-size: 1.2em;
+	line-height: 1.35em;
+	margin-top: 0.5em;
+	color: $md-gr;
+}
+
+
+.introduction__info {
+	margin: 2em 0;
+}
+
+.introduction__info h3 {
+	font-size: 1.2em;
+	font-weight: bold;
+	padding-bottom: 0;
+	margin-top: 1em;
+
+}
+
+.introduction__info h3:first-child {
+	margin-top: 0;
+}
+
+.introduction__info p {
+	margin-top: 0;
+}
+
+    @include breakpoint($min-tablet) {
+    	.introduction__dek p {
+    	}
+    	.introduction__dek {
+			padding: 0 10%;
+		}
+
+
+		.introduction__info {
+			padding: 0 10%;
+		}
+  }
