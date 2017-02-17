@@ -16,7 +16,7 @@
 	padding-bottom: 0.5em;
 }
 
-.home_cta {
+.secondarybanner {
 	width: 100%;
 	display: block;
 	float: left;
@@ -24,11 +24,11 @@
 	margin-bottom: -0.5em; /* Removes spacing at bottom */
 }
 
-.home_cta img {
+.secondarybanner img {
 	width: 100%;
 }
 
-.home_cta h3 {
+.secondarybanner h3 {
 	font-family: 'GovCon', Helvetica, sans-serif;
 	font-size: 2.5em;
 	letter-spacing: 0.05em;
@@ -38,26 +38,26 @@
 	padding-bottom: 0;
 }
 
-.home_cta p {
+.secondarybanner p {
 	color: rgba(239,172,55,1);
 	margin: 0 1em;
 	padding: 0 0 0.5em 0;
 }
 
-.home_cta a:link,
-.home_cta a:visited {
+.secondarybanner a:link,
+.secondarybanner a:visited {
 	color: rgba(239,172,55,1);
 	text-decoration: none;
 }
 
-.home_cta p a:hover,
-.home_cta p a:visited:hover {
+.secondarybanner p a:hover,
+.secondarybanner p a:visited:hover {
 	color: rgba(239,172,55,0.7);
 	text-decoration: underline; 
 }
 
     @include breakpoint($min-tablet) {
-		.home_cta {
+		.secondarybanner {
 			width: 50%;
 		}
   }
