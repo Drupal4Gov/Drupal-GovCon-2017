@@ -4,6 +4,7 @@ if ($is_ah_env) {
     $settings['trusted_host_patterns'] = array(
       '^drupalgovcon\.org$',
       '^capitalcamp\.org$',
+      '^www\.drupalgovcon\.org$',
     );
   }
   elseif ($is_ah_stage_env) {
