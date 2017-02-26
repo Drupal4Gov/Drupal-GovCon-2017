@@ -4,3 +4,28 @@
  * @file
  * Contains install and update functions for CapitalCamp.
  */
+
+use Drupal\taxonomy\Entity\Term;
+
+/**
+ * DCG-107: Add terms to sponsorship level vocabulary.
+ */
+function capitalcamp_glue_update_8001() {
+  $sponsorshipLevelTerms = array(
+    'Core',
+    'Coffee',
+    'Contributor',
+    'Mentor',
+    'Sprinter',
+    'Exhibitor',
+    'Supporter',
+    'Personal',
+    'Training',
+  );
+  foreach ($sponsorshipLevelTerms as $sponsorshipLevelTerm) {
+    Term::create([
+      'name' => $sponsorshipLevelTerm,
+      'vid' => 'sponsorship_level',
+    ])->save();
+  }
+}
