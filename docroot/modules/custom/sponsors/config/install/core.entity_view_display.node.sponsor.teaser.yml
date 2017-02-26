@@ -1,0 +1,42 @@
+uuid: de3900bf-f823-4d92-ba15-85f14e2a854f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.sponsor.field_sponsor_logo
+    - field.field.node.sponsor.field_sponsor_related_attendees
+    - field.field.node.sponsor.field_sponsor_sponsorship_level
+    - field.field.node.sponsor.field_sponsor_url
+    - node.type.sponsor
+  module:
+    - image
+    - panelizer
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.sponsor.teaser
+targetEntityType: node
+bundle: sponsor
+mode: teaser
+content:
+  field_sponsor_logo:
+    type: image
+    weight: 2
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+  links:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_sponsor_related_attendees: true
+  field_sponsor_sponsorship_level: true
+  field_sponsor_url: true

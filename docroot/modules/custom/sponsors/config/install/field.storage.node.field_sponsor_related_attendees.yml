@@ -1,0 +1,20 @@
+uuid: 15e2d9cf-dbb8-47f4-9b25-f14d6d96c3c6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - user
+id: node.field_sponsor_related_attendees
+field_name: field_sponsor_related_attendees
+entity_type: node
+type: entity_reference
+settings:
+  target_type: user
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
