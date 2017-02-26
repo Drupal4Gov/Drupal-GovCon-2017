@@ -1,0 +1,20 @@
+uuid: 44a25ba5-4f28-4779-ab7e-c5457c9913bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.sponsor
+_core:
+  default_config_hash: QKfx-pjYePM47C93mrfkedqH2qX0eYlGRCbJ25o0rd8
+id: node.sponsor.title
+field_name: title
+entity_type: node
+bundle: sponsor
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

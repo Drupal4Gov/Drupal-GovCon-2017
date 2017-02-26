@@ -1,0 +1,30 @@
+uuid: d53d8d47-9627-4615-9509-4bcafa5c99f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sponsor_related_attendees
+    - node.type.sponsor
+_core:
+  default_config_hash: dQqB-3kDDFCjFlqoEHDkmDZ-BgNnmfF1yGpC_HkwCN8
+id: node.sponsor.field_sponsor_related_attendees
+field_name: field_sponsor_related_attendees
+entity_type: node
+bundle: sponsor
+label: 'Related Attendees'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference
