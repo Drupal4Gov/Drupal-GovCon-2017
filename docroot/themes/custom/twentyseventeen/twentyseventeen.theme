@@ -51,7 +51,7 @@ function twentyseventeen_preprocess_block(&$variables) {
  */
 function twentyseventeen_preprocess_node(&$variables) {
   // Helper variables for multiple nodes.
-  if ($variables['elements']['#entity_type']) {
+  if (isset($variables['elements']['#entity_type'])) {
     $variables['attributes']['class'][] = Html::cleanCssIdentifier('entity--type-' . $variables['elements']['#entity_type']);
   }
 }
