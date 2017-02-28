@@ -1,4 +1,4 @@
-uuid: b9718172-0333-4c76-b728-14e14f03052f
+uuid: 148116ac-ba91-45b4-b8f4-27f09bb9f76c
 langcode: en
 status: true
 dependencies:
@@ -7,15 +7,15 @@ dependencies:
     - system
   theme:
     - twentyseventeen
-id: dgcintro
+id: dgcsecondarybanners
 theme: twentyseventeen
 region: content
-weight: -3
+weight: -2
 provider: null
-plugin: dgc_intro
+plugin: dgc_secondarybanners
 settings:
-  id: dgc_intro
-  label: 'DGC Intro'
+  id: dgc_secondarybanners
+  label: 'DGC Secondary banners'
   provider: capitalcamp_blocks
   label_display: '0'
 visibility:
