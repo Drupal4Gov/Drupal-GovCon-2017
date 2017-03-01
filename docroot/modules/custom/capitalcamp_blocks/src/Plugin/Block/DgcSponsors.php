@@ -51,6 +51,14 @@ class DgcSponsors extends BlockBase implements ContainerFactoryPluginInterface {
     $this->termStorage = $termStorage;
     $this->viewEntityStorage = $viewEntityStorage;
     $this->viewExecutableFactory = $viewExecutableFactory;
+
+    // Sponsors by Level Settings.
+    $sponsorshipLevelVocabularyId = 'sponsorship_level';
+    $sponsorshipLevelTerms = $this->termStorage->loadTree($sponsorshipLevelVocabularyId);
+    $this->sponsorshipLevelTermOptions = array();
+    foreach ($sponsorshipLevelTerms as $sponsorshipLevelTerm) {
+      $this->sponsorshipLevelTermOptions[$sponsorshipLevelTerm->tid] = $sponsorshipLevelTerm->name;
+    }
   }
 
   /**
@@ -87,18 +95,11 @@ class DgcSponsors extends BlockBase implements ContainerFactoryPluginInterface {
    * {@inheritdoc}
    */
   public function blockForm($form, FormStateInterface $form_state) {
-    // Sponsors by Level Settings.
-    $sponsorshipLevelVocabularyId = 'sponsorship_level';
-    $sponsorshipLevelTerms = $this->termStorage->loadTree($sponsorshipLevelVocabularyId);
-    $sponsorshipLevelTermOptions = array();
-    foreach ($sponsorshipLevelTerms as $sponsorshipLevelTerm) {
-      $sponsorshipLevelTermOptions[$sponsorshipLevelTerm->tid] = $sponsorshipLevelTerm->name;
-    }
     $form['sponsors_block_sponsorship_level_term'] = array(
       '#type' => 'select',
       '#title' => $this->t("Sponsorship Level"),
       '#default_value' => $this->configuration['sponsorship_level_term'],
-      '#options' => $sponsorshipLevelTermOptions,
+      '#options' => $this->sponsorshipLevelTermOptions,
       '#description' => $this->t('Select the sponsorship level you would like to display.'),
     );
     return $form;
@@ -116,7 +117,6 @@ class DgcSponsors extends BlockBase implements ContainerFactoryPluginInterface {
    */
   public function build() {
     $content = array();
-
     $termId = $this->configuration['sponsorship_level_term'];
     $args = [$termId];
     $view = $this->viewEntityStorage->load('sponsors');
@@ -130,6 +130,7 @@ class DgcSponsors extends BlockBase implements ContainerFactoryPluginInterface {
       $content = $viewExecutable->buildRenderable($viewDisplayId, $args);
     }
 
+    $content['sponsor_level'] = $this->sponsorshipLevelTermOptions[$termId];
     return $content;
   }
 
