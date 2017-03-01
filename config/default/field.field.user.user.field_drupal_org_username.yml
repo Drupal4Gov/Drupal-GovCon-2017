@@ -1,0 +1,20 @@
+uuid: 5a8494f6-bd68-4242-a143-36dbec88fd7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_drupal_org_username
+  module:
+    - user
+id: user.user.field_drupal_org_username
+field_name: field_drupal_org_username
+entity_type: user
+bundle: user
+label: 'Drupal.org Username'
+description: 'Adding a drupal.org username helps Drupal GovCon attendees connect with other members of the broader Drupal community'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
