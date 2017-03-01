@@ -1,0 +1,27 @@
+.sponsor{
+  width: 100%;
+  display: inline-block;
+  padding: 10px;
+  box-sizing: border-box;
+  float: left;
+
+  @include breakpoint($min-tablet) {
+    width: 50%;
+  }
+
+  @include breakpoint($tablet-to-desktop) {
+    width: 33%;
+  }
+
+  @include breakpoint($desktop) {
+    width: 25%;
+  }
+
+  img{
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+
+

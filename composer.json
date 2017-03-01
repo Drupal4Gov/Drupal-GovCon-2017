@@ -2,6 +2,12 @@
     "name": "acquia/blt-project",
     "description": "Project template for Drupal 8 sites built with BLT.",
     "type": "project",
+    "repositories": {
+        "drupal": {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
@@ -31,7 +37,8 @@
         "acquia/lightning": "2.0.1",
         "drupal/seckit": "^1.0.0-alpha2",
         "drupal/shield": "^1.0.0",
-        "drupal/extlink": "^1.0"
+        "drupal/extlink": "^1.0",
+        "drupal/twig_xdebug": "1.x-dev"
     },
     "require-dev": {
         "behat/behat": "^3.1",

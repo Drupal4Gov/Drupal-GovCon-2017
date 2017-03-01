@@ -5,6 +5,8 @@ if ($is_ah_env) {
       '^drupalgovcon\.org$',
       '^capitalcamp\.org$',
       '^www\.drupalgovcon\.org$',
+      '^capitalcamp\.prod\.acquia-sites\.com$',
+
     );
   }
   elseif ($is_ah_stage_env) {
