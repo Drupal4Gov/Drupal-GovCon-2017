@@ -116,7 +116,7 @@ class DgcSponsors extends BlockBase implements ContainerFactoryPluginInterface {
    * {@inheritdoc}
    */
   public function build() {
-    $content = array();
+    $content = [];
     $termId = $this->configuration['sponsorship_level_term'];
     $args = [$termId];
     $view = $this->viewEntityStorage->load('sponsors');
@@ -127,7 +127,7 @@ class DgcSponsors extends BlockBase implements ContainerFactoryPluginInterface {
       $viewExecutable->setDisplay($viewDisplayId);
       $viewExecutable->preExecute();
       $viewExecutable->execute();
-      $content = $viewExecutable->buildRenderable($viewDisplayId, $args);
+      $content['sponsor_listing'] = $viewExecutable->buildRenderable($viewDisplayId, $args, FALSE);
     }
 
     $content['sponsor_level'] = $this->sponsorshipLevelTermOptions[$termId];
