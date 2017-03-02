@@ -12,7 +12,7 @@
     "prefer-stable": true,
     "require": {
         "drush/drush": "^8.1.8",
-        "acquia/blt": "^8.3",
+        "acquia/blt": "^8.6.14",
         "composer/installers": "^1.0.20",
         "cweagans/composer-patches": "^1.6.0",
         "drupal/acsf": "^1.32.0",
@@ -30,7 +30,7 @@
         "drupal/acquia_purge": "1.x-dev",
         "drupal/cloudflare": "^1.0.0-alpha7",
         "drupal/purge": "^3.0.0-beta6",
-        "acquia/lightning": "2.0.1",
+        "acquia/lightning": "2.0.3",
         "drupal/seckit": "^1.0.0-alpha2",
         "drupal/shield": "^1.0.0",
         "drupal/extlink": "^1.0",
@@ -57,8 +57,7 @@
         "behat/mink-extension": "*",
         "behat/mink-goutte-driver": "*",
         "drupal/coder": "~8.2",
-        "phing/phing": "~2",
-        "phpunit/phpunit": "~5.4"
+        "phing/phing": "~2"
     },
     "scripts": {
         "blt-alias": "blt install-alias -Dcreate_alias=true",
@@ -118,14 +117,14 @@
             ]
         },
         "patches": {
+            "acquia/blt": {
+                "Prevent BLT from linting node-modules": "patches/remove-blt-node-linting.patch"
+            },
             "drupal/core": {
                 "Ignore front end vendor folders to improve directory search performance": "https://www.drupal.org/files/issues/ignore_front_end_vendor-2329453-116.patch"
             },
             "drupal/acquia_purge": {
                 "Bypass Acquia purge alpha program check to enable tag based purging.": "patches/purge-bypass-alpha-program.patch"
-            },
-            "acquia/lightning": {
-                "New LightningExtension subcontexts do not autoload": "https://www.drupal.org/files/issues/2836258-3-lightning-extension-autoload.patch"
             }
         },
         "drupal-scaffold": {

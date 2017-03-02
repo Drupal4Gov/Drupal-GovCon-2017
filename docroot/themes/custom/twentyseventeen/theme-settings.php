@@ -5,7 +5,7 @@
  * Contains the theme's settings form.
  */
 
-use \Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Form\FormStateInterface;
 
 /**
  * Implements hook_form_system_theme_settings_alter().

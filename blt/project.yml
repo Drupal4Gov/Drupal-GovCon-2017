@@ -24,15 +24,15 @@ target-hooks:
   frontend-build:
     dir: '${docroot}/themes/custom/twentyseventeen'
     command: 'npm run build'
+  pre-config-import:
+    dir: '${docroot}'
+    command: 'echo ''No pre-config-import configured.'''
   post-deploy-build:
     dir: '${deploy.dir}/docroot/profiles/contrib/lightning'
     command: 'npm run install-libraries'
   post-setup-build:
     dir: '${docroot}/profiles/contrib/lightning'
     command: 'npm run install-libraries'
-  pre-config-import:
-    dir: '${docroot}'
-    command: 'echo ''No pre-config-import configured.'''
 import: '${repo.root}/blt/custom.xml'
 modules:
   local:
