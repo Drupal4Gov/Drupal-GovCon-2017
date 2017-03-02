@@ -1,7 +1,10 @@
 # Ignore configuration files that may contain sensitive information.
 local.settings.php
 local.drushrc.php
+local.aliases.drushrc.php
+local.services.yml
 tests/behat/local.yml
+box/local.config.yml
 *.local
 project.local.yml
 salt.txt
@@ -11,7 +14,7 @@ docroot/core
 
 # Ignore paths that contain user-generated content.
 docroot/sites/*/files
-docroot/sites/*/files-private
+/files-private
 docroot/sites/*/private
 
 # Ignore contrib modules. These should be created during build process.
@@ -25,7 +28,6 @@ drush/contrib
 docroot/themes/custom/*/node_modules
 docroot/themes/custom/*/css
 docroot/themes/custom/*/styleguide
-docroot/themes/custom/*/images/svg-sprite
 
 # Ignore build artifacts
 /deploy
@@ -121,10 +123,11 @@ nbproject/*
 *.sql
 *.zip
 
-# Ignore cloudflare CMI export file because it includes API keys.
-config/default/cloudflare.settings.yml
 # PHPStorm
 atlassian-ide-plugin.xml
 
 # Drupal console
 console
+
+# Ignore cloudflare CMI export file because it includes API keys.
+config/default/cloudflare.settings.yml
