@@ -1,5 +1,5 @@
 # Note that the example .travis.yml file for child projects lives in /install.
-sudo: required
+sudo: false
 language: php
 dist: trusty
 
@@ -20,20 +20,21 @@ cache:
   - "vendor"
   # Cache front end dependecies to dramatically improve build time.
   - "docroot/themes/custom/twentyseventeen/node_modules"
+  # - "docroot/themes/custom/mytheme/node_modules"
   # - "docroot/themes/custom/mytheme/bower_components"
 
 addons:
   ssh_known_hosts:
-   - svn-6971.prod.hosting.acquia.com
+  # - svn-4786.devcloud.hosting.acquia.com
   apt:
-    packages:
-    - mysql-server-5.6
-    - mysql-client-core-5.6
-    - mysql-client-5.6
+    sources:
+    - xvfb
 
 # @see https://docs.travis-ci.com/user/notifications
 notifications:
-  slack: drupalgovcon:cJ76qTdM0roO5zLETLKLwfWO
+-  slack: drupalgovcon:cJ76qTdM0roO5zLETLKLwfWO
+# - hipchat: [api token]@[room id or name]
+# - slack: '<account>:<token>#[channel]'
 
 before_install:
   # Decrypt private SSH key id_rsa_blt.enc, save as ~/.ssh/id_rsa_blt.
@@ -60,10 +61,7 @@ install:
   # Install proper version of node for front end tasks.
   - nvm install 4.4.1
   - nvm use 4.4.1
-  # Initialize drupal console default configuration.
-  - drupal init
   # Initialize xvfb (see https://docs.travis-ci.com/user/gui-and-headless-browsers)
-  - sudo apt-get install xvfb
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
   # Installs chromedriver to vendor/bin.
@@ -77,7 +75,7 @@ before_script:
   # Verify that no git diffs (caused by line ending variation) exist.
   # - git diff --exit-code
   # The local.hostname must be set to 127.0.0.1:8888 because we are using drush runserver to run the site on Travis CI.
-  - drupal yaml:update:value blt/project.yml project.local.hostname '127.0.0.1:8888'
+  - yaml-cli update:value blt/project.yml project.local.hostname '127.0.0.1:8888'
 
 script:
   - blt -Dbehat.run-server=true -Dcreate_alias=false -Dbehat.launch-phantom=true ci:build:validate:test -Dblt.verbose=true
@@ -88,4 +86,10 @@ deploy:
      skip_cleanup: true
      on:
        branch: master
+       php: 5.6
+   - provider: script
+     script: blt deploy -Ddeploy.commitMsg="Automated commit by Travis CI for Build ${TRAVIS_TAG}" -Ddeploy.tag="${TRAVIS_TAG}"
+     skip_cleanup: true
+     on:
+       tags: true
        php: 5.6
