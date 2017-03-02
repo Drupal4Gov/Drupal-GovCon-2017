@@ -1,0 +1,24 @@
+diff --git a/phing/tasks/filesets.xml b/phing/tasks/filesets.xml
+index 7900df4..97f87ad 100644
+--- a/phing/tasks/filesets.xml
++++ b/phing/tasks/filesets.xml
+@@ -9,6 +9,7 @@
+     <include name="**/*.test"/>
+     <include name="**/*.theme"/>
+     <exclude name="**/vendor/**/*"/>
++    <exclude name="**/node_modules/**/*"/>
+     <!-- Behat php files are ignored because method names and comments do not conform to Drupal coding standards by default. -->
+     <exclude name="**/behat/**/*"/>
+   </patternset>
+diff --git a/phing/tasks/setup.xml b/phing/tasks/setup.xml
+index 49c00bc..484bb40 100644
+--- a/phing/tasks/setup.xml
++++ b/phing/tasks/setup.xml
+@@ -182,6 +182,7 @@
+           <option name="account-name">"${drupal.account.name}"</option>
+           <option name="account-pass">"${drupal.account.password}"</option>
+           <option name="account-mail">"${drupal.account.mail}"</option>
++          <option name="config-dir">${cm.core.config-dir.path}</option>
+           <option name="locale">"${drupal.locale}"</option>
+           <param>"${project.profile.name}"</param>
+           <param>"install_configure_form.update_status_module='array(FALSE,FALSE)'"</param>

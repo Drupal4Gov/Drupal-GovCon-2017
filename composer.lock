@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "4b6c060e651994b5e46296bb75852d6d",
+    "content-hash": "5745fb362a8bfc9e78674f1f743cdf81",
     "packages": [
         {
             "name": "acquia/blt",
@@ -55,7 +55,10 @@
             ],
             "type": "composer-plugin",
             "extra": {
-                "class": "Acquia\\Blt\\Composer\\Plugin"
+                "class": "Acquia\\Blt\\Composer\\Plugin",
+                "patches_applied": {
+                    "Prevent BLT from linting node-modules": "patches/remove-blt-node-linting.patch"
+                }
             },
             "autoload": {
                 "psr-4": {
