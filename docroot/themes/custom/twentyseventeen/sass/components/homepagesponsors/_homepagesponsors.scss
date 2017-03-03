@@ -1,0 +1,22 @@
+// Homepage Sponsors
+//
+// Listing of top-level sponsors for display on the homepage.
+//
+// Markup: homepagesponsors.twig
+//
+// Style guide: components.homepagesponsors
+.homepagesponsors {
+  @include clearfix;
+	display: block;
+	position: relative;
+	margin-bottom: -0.5em; /* Removes spacing at bottom */
+
+
+}
+
+  .homepagesponsors {
+    @include breakpoint($min-tablet) {
+      width: 50%;
+      float: left;
+    }
+  }

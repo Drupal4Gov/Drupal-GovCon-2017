@@ -8,8 +8,30 @@
 .sponsor-listing{
   @include clearfix;
   padding: 0;
-  margin: 40px 0 0 0;
-
+  margin: 0;
+  text-align: center;
+}
+.front-sponsors {
+	display: block;
+}
+.front-sponsors h3 {
+	text-align: center;
+	font-size: 100%;
+}
+.front-sponsors p {
+	text-align: center;
+	font-size: 0.75em;
+	font-style: italic;
+}
+.sponsor {
+	display: block;
+	vertical-align: middle;
+}
+.front-sponsors ul.sponsor-listing li.sponsor {
+	float: none; // Centers logo artwork
+}
+.sponsor img:hover {
+	opacity: 0.5; // Hover effect for logos
 }
 
 
