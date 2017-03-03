@@ -9,7 +9,10 @@
   @include clearfix;
   padding: 0;
   margin: 0;
-
+  text-align: center;
+}
+.front-sponsors {
+	display: block;
 }
 .front-sponsors h3 {
 	text-align: center;
@@ -21,11 +24,14 @@
 	font-style: italic;
 }
 .sponsor {
-	border: 1px solid #0f0;
+	display: block;
+	vertical-align: middle;
 }
-
-.sponsor img {
-	border: 1px solid #f00;
+.front-sponsors ul.sponsor-listing li.sponsor {
+	float: none; // Centers logo artwork
+}
+.sponsor img:hover {
+	opacity: 0.5; // Hover effect for logos
 }
 
 
