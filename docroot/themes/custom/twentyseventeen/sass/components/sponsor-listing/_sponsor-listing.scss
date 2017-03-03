@@ -8,8 +8,24 @@
 .sponsor-listing{
   @include clearfix;
   padding: 0;
-  margin: 40px 0 0 0;
+  margin: 0;
 
+}
+.front-sponsors h3 {
+	text-align: center;
+	font-size: 100%;
+}
+.front-sponsors p {
+	text-align: center;
+	font-size: 0.75em;
+	font-style: italic;
+}
+.sponsor {
+	border: 1px solid #0f0;
+}
+
+.sponsor img {
+	border: 1px solid #f00;
 }
 
 
