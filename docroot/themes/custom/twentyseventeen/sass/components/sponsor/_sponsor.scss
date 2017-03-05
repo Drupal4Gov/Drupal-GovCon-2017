@@ -1,9 +1,10 @@
 .sponsor{
   width: 100%;
-  display: inline-block;
-  padding: 10px;
+  padding: 0 10px;
+  margin: 0;
   box-sizing: border-box;
-  float: left;
+  display: inline-block;
+  vertical-align: middle;
 
   @include breakpoint($min-tablet) {
     width: 50%;
@@ -21,7 +22,8 @@
     width: 100% !important;
     height: 100% !important;
   }
+
+  img:hover {
+    opacity: 0.5; // Hover effect for logos
+  }
 }
-
-
-
