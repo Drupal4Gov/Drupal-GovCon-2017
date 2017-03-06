@@ -1,0 +1,42 @@
+// Internal Page Header
+//
+// Internal Page Header styling
+//
+// Markup: internalheader.twig
+//
+// Style guide: components.internalheader
+
+
+.internalheader__wrapper {
+  background: url(/themes/custom/twentyseventeen/images/GovCon2017_InteriorBanner.jpg) top no-repeat;
+  @include breakpoint($tablet-to-desktop) {
+    display: none;
+  }
+  @include breakpoint($desktop) {
+    display: block;
+    background: url(/themes/custom/twentyseventeen/images/GovCon2017_InteriorBanner.jpg) top no-repeat;
+  }
+}
+
+.header__logo {
+  filter: drop-shadow(0 0 2em rgba(255,255,255,0.5));
+  width: 65%;
+  display: block;
+  margin: 0 auto;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  @include breakpoint($tablet-to-desktop) {
+    width: 40%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  @include breakpoint($desktop)  {
+    width: 20%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+a .header__logo:hover {
+  opacity: 0.5;
+}
