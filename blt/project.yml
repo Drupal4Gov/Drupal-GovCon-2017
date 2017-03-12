@@ -36,20 +36,20 @@ target-hooks:
 import: '${repo.root}/blt/custom.xml'
 modules:
   local:
-    enable: [dblog, devel, seckit, views_ui]
-    uninstall: [acsf, acquia_connector, shield]
+    enable: []
+    uninstall: []
   ci:
     enable: {  }
-    uninstall: [acquia_connector, shield]
+    uninstall: []
   dev:
-    enable: [acquia_connector, shield]
+    enable: []
     uninstall: {  }
   test:
-    enable: [acquia_connector, shield]
-    uninstall: [devel, views_ui]
+    enable: []
+    uninstall: []
   prod:
-    enable: [acquia_connector, shield]
-    uninstall: [devel, views_ui]
+    enable: []
+    uninstall: []
 behat:
   paths:
     - '${repo.root}/tests/behat'
