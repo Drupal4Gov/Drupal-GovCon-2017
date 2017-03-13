@@ -118,9 +118,6 @@
             ]
         },
         "patches": {
-            "acquia/blt": {
-                "Prevent BLT from linting node-modules": "patches/remove-blt-node-linting.patch"
-            },
             "drupal/core": {
                 "Ignore front end vendor folders to improve directory search performance": "https://www.drupal.org/files/issues/ignore_front_end_vendor-2329453-116.patch"
             },
