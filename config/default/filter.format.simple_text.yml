@@ -1,0 +1,35 @@
+uuid: aae2b135-3a72-4651-a340-73f3d943176c
+langcode: en
+status: true
+dependencies: {  }
+name: 'Simple Text'
+format: simple_text
+weight: 0
+filters:
+  filter_autop:
+    id: filter_autop
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -10
+    settings:
+      allowed_html: '<a href hreflang> <em> <strong> <ul type> <ol start type> <li> <b> <i>'
+      filter_html_help: true
+      filter_html_nofollow: true
+  filter_html_image_secure:
+    id: filter_html_image_secure
+    provider: filter
+    status: true
+    weight: 9
+    settings: {  }
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: true
+    weight: 10
+    settings: {  }

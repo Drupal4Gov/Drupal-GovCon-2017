@@ -1,0 +1,21 @@
+uuid: 71ae45d7-ca4a-4048-961d-191168904904
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_bio
+  module:
+    - text
+    - user
+id: user.user.field_bio
+field_name: field_bio
+entity_type: user
+bundle: user
+label: Bio
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

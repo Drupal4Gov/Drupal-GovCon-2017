@@ -1,0 +1,95 @@
+uuid: 2493cb36-d0f7-4402-9a12-165eb6cc2c47
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_bio
+    - field.field.user.user.field_company
+    - field.field.user.user.field_drupal_org_username
+    - field.field.user.user.field_first_name
+    - field.field.user.user.field_job_title
+    - field.field.user.user.field_last_name
+    - field.field.user.user.field_picture
+    - image.style.thumbnail
+  module:
+    - image
+    - path
+    - text
+    - user
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  account:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+  field_bio:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+  field_company:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_drupal_org_username:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_first_name:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_job_title:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_last_name:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_picture:
+    type: image_image
+    weight: 4
+    settings:
+      preview_image_style: thumbnail
+      progress_indicator: throbber
+    third_party_settings: {  }
+  google_analytics:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+  language:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+  timezone:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  contact: true
