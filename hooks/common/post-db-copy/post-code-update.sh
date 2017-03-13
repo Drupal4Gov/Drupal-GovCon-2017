@@ -1,12 +1,13 @@
-#!/bin/sh
+#!/bin/bash
 #
-# Cloud Hook: post-code-update
+# Cloud Hook: post-code-deploy
 #
-# The post-code-update hook runs in response to code commits. When you push
-# commits to a Git branch, the post-code-update hooks runs for each environment
-# that is currently running that branch.. See ../README.md for details.
+# The post-code-deploy hook is run whenever you use the Workflow page to
+# deploy new code to an environment, either via drag-drop or by selecting
+# an existing branch or tag from the Code drop-down list. See
+# ../README.md for details.
 #
-# Usage: post-code-update site target-env source-branch deployed-tag repo-url
+# Usage: post-code-deploy site target-env source-branch deployed-tag repo-url
 #                         repo-type
 
 site="$1"
@@ -15,10 +16,12 @@ source_branch="$3"
 deployed_tag="$4"
 repo_url="$5"
 repo_type="$6"
-drush_alias=${site}'.'${target_env}
 
-# Load utility functions.
-. `dirname $0`/../capitalcamp-functions.sh
-
-# Refresh the environment.
-env_refresh ${target_env} ${drush_alias}
+acsf_file="/mnt/files/$AH_SITE_GROUP.$AH_SITE_ENVIRONMENT/files-private/sites.json"
+if [ ! -f $acsf_file ]; then
+  . /var/www/html/$site.$target_env/vendor/acquia/blt/scripts/cloud-hooks/functions.sh
+  deploy_updates
+  # Send notifications to Slack, if configured. See readme/deploy.md for setup instructions.
+  . `dirname $0`/../slack.sh
+  exit $status
+fi

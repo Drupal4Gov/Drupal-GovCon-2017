@@ -36,20 +36,20 @@ target-hooks:
 import: '${repo.root}/blt/custom.xml'
 modules:
   local:
-    enable: []
-    uninstall: []
+    enable: {  }
+    uninstall: {  }
   ci:
     enable: {  }
-    uninstall: []
+    uninstall: {  }
   dev:
-    enable: []
+    enable: {  }
     uninstall: {  }
   test:
-    enable: []
-    uninstall: []
+    enable: {  }
+    uninstall: {  }
   prod:
-    enable: []
-    uninstall: []
+    enable: {  }
+    uninstall: {  }
 behat:
   paths:
     - '${repo.root}/tests/behat'
