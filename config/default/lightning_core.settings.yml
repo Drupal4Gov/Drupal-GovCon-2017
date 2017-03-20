@@ -1,6 +1,6 @@
 content_roles:
   creator:
-    enabled: true
+    enabled: false
     label: '? Creator'
     permissions:
       - 'create ? content'
@@ -16,7 +16,7 @@ content_roles:
       - 'access media_browser entity browser pages'
       - 'access image_browser entity browser pages'
   reviewer:
-    enabled: true
+    enabled: false
     label: '? Reviewer'
     permissions:
       - 'edit any ? content'
