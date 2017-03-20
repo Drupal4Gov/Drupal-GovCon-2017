@@ -1,0 +1,23 @@
+uuid: c42358e0-ce8d-46bd-a2d8-45609c06aa90
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_experience_level
+    - node.type.session
+  module:
+    - options
+_core:
+  default_config_hash: Z_5ftXr1fdpcQAVQpYr1SDlVAMOhQ5ESgo5Z_lsq59E
+id: node.session.field_experience_level
+field_name: field_experience_level
+entity_type: node
+bundle: session
+label: 'Experience Level'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

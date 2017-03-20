@@ -1,0 +1,29 @@
+uuid: 7425ed19-68f2-4f43-8ec1-fb27e58ac666
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_files
+    - node.type.session
+  module:
+    - file
+_core:
+  default_config_hash: v6D5dchUHK-wko8_Wmmi_5axI4hfzqqw3braQMS1GOE
+id: node.session.field_files
+field_name: field_files
+entity_type: node
+bundle: session
+label: Slides
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'session/slides/[date:custom:Y]-[date:custom:m]'
+  file_extensions: txt
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

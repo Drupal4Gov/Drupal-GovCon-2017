@@ -1,0 +1,44 @@
+uuid: d8d0e8a7-1e98-4353-992f-e20b8ee03994
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+_core:
+  default_config_hash: 43C_EwOQl0vprOdvyrS3tWdfG2zmiW-QYR8zmm4KN_I
+id: node.field_status
+field_name: field_status
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: unprocessed
+      label: Unprocessed
+    -
+      value: accepted
+      label: Accepted
+    -
+      value: declined
+      label: Declined
+    -
+      value: featured
+      label: Featured
+    -
+      value: cancelled
+      label: 'Speaker(s) Cancelled'
+    -
+      value: backup
+      label: Backup
+    -
+      value: proposed
+      label: Proposed
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
