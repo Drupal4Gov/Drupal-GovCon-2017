@@ -1,12 +1,14 @@
 uuid: 508d8dbc-5aab-4eb8-bec7-bdfb4125b13a
 langcode: en
-status: false
+status: ''
 dependencies:
   enforced:
     module:
       - webform_templates
 _core:
   default_config_hash: BrydyK5Ue5wkMQCaHP7_hNFrpGumd2e1j3U_RnPzP7g
+open: null
+close: null
 uid: null
 template: false
 id: registration
@@ -114,6 +116,24 @@ handlers:
       bcc_mail: ''
       from_mail: '[webform_submission:values:email:raw]'
       from_name: '[webform_submission:values:first_name] [webform_submission:values:last_name]'
+      subject: default
+      body: default
+      excluded_elements: {  }
+      html: true
+      attachments: false
+      debug: false
+  email:
+    id: email
+    label: Email
+    handler_id: email
+    status: true
+    weight: 1
+    settings:
+      to_mail: '[webform_submission:values:attendee_e_mail_address:raw]'
+      cc_mail: ''
+      bcc_mail: ''
+      from_mail: default
+      from_name: default
       subject: default
       body: default
       excluded_elements: {  }
