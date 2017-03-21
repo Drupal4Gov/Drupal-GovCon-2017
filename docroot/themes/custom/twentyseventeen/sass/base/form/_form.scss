@@ -19,6 +19,7 @@ label {
 input[type="text"],
 input[type="password"],
 input[type="date"],
+input[type="email"],
 textarea {
   border-radius: 0.2em;
   background: rgba(134,151,58,0.1);
@@ -35,6 +36,7 @@ textarea {
   box-sizing: border-box;
   transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
 }
+
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="date"]:focus,
@@ -170,7 +172,6 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="month"],
 input[type="week"],
-input[type="email"],
 input[type="number"],
 input[type="search"],
 input[type="tel"],
@@ -250,9 +251,34 @@ select[disabled] {
   border: 1px solid rgba(0,62,106,0.7);
 }
 
+// Submit Button Styling
+input[type=submit] {
+  appearance: none;
+  color: rgba(255,255,255,1);
+  background: rgba(0,62,106,1);
+  font-size: 1.2em;
+  background-size: 1em;
+  border: 1px solid rgba(0,62,106,1);
+  padding: 0.25em 0.5em 0.25em 0.5em;
+  border-radius: 0.25em;
+}
+
+input[type=submit]:hover {
+  color: rgba(255,255,255,1);
+  background: rgba(134,151,58,1);
+
+}
+
 // Radio and Checkbox Styling
+.form-type-checkbox,
+.form-type-radio {
+  position: relative; // Sets containing element positioning for children
+}
+
 .form_radio label,
-.form_checkbox label {
+.form_checkbox label,
+.form-type-checkbox label,
+.form-type-radio label {
   display: inherit;
   cursor: pointer;
   position: relative;
@@ -266,13 +292,15 @@ select[disabled] {
 }
 
 
-.form_radio input[type=radio] {
+.form_radio input[type=radio],
+.form-type-radio input[type=radio] {
   display: none;
 }
 
 
 .form_radio label:before,
-.form_checkbox label:before {
+.form_checkbox label:before,
+.form-type-checkbox label:before {
   content: "";
   display: block;
   width: 24px;
@@ -285,11 +313,13 @@ select[disabled] {
   box-shadow: inset 0 2px 3px 0 rgba(0, 0, 0, .3), 0 1px 0 0 rgba(255, 255, 255, .8);
 }
 
-.form_radio label:before {
+.form_radio label:before,
+.form-type-radio label:before {
   border-radius: 0.875em; /* Added Setting for 24 px */
 }
 
-.form_radio input[type=radio]:checked + label:before {
+.form_radio input[type=radio]:checked + label:before,
+.form-type-radio input[type=radio]:checked + label:before {
   content: "\2022";
   color: rgba(0,62,106,1);
   font-size: 44px;
@@ -307,15 +337,18 @@ select[disabled] {
   color: $md-gr;
 }
 
-.form_checkbox input[type=checkbox] {
+.form_checkbox input[type=checkbox],
+.form-type-checkbox input[type=checkbox] {
   display: none;
 }
 
-.form_checkbox label:before {
+.form_checkbox label:before,
+.form-type-checkbox label:before {
   border-radius: 0.25em; /* Added Setting */
 }
 
-.form_checkbox input[type=checkbox]:checked + label:before {
+.form_checkbox input[type=checkbox]:checked + label:before,
+.form-type-checkbox input[type=checkbox]:checked + label:before {
   content: "\2713";
   text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
   font-size: 21px; /* Added Setting for 24 px */
@@ -356,4 +389,12 @@ fieldset {
   background: rgba(134,151,58,0.05);
   border-radius: 0.25em;
   border: 1px solid $slv;
+}
+
+fieldset#edit-sign-up-for-news--wrapper legend {
+  margin-bottom: 0.5em; // Margin below Sign up for the News fixed.
+}
+
+fieldset#edit-address--wrapper legend:first-child {
+  display: none; // This hides the address label in the contact webform
 }
