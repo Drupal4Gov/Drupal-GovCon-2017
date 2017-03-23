@@ -37,10 +37,11 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: rgba(255,255,255,1);
-  margin-bottom: 0;
+  margin: 1em 0 0 0;
   text-align: center;
   padding: 0 0.5em;
   text-shadow: 0 0 0.5em rgba(0,0,0,0.5);
+  line-height: 105%;
   font-size: 14vw;
   @include breakpoint($tablet-to-desktop) {
     font-size: 9vw;
@@ -48,4 +49,35 @@
   @include breakpoint($desktop) {
     font-size: 6vw;
   }
+}
+.hero__ctas {
+  width: 100%;
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 0;
+  padding: 0.5em 0.5em 1em 0.5em;
+  text-align: center;
+}
+a.hero__button {
+  display: inline-block;
+  color: rgba(255,255,255,0.7);
+  border: 2px solid rgba(255,255,255,0.8);
+  background: rgba(0,0,0,0.5);
+  text-decoration: none;
+  font-size: 1.5em;
+  padding: 0.25em 0.5em;
+  margin: 0 0.5em;
+  border-radius: 0.25em;
+  text-shadow: 0 0 0.5em rgba(0, 0, 0, .5);
+}
+a.hero__button:link {
+  color: rgba(255,255,522,0.7);
+}
+a.hero__button:visited {
+  color: rgba(255,255,255,0.7);
+}
+a.hero__button:hover {
+  color: rgba(255,255,255,1);
+  border: 2px solid rgba(255,255,255,1);
+  text-decoration: none;
 }
