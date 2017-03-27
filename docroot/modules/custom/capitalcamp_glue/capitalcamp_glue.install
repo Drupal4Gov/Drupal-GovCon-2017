@@ -86,7 +86,7 @@ function capitalcamp_glue_update_8004() {
     ];
     foreach ($sessionTracks as $sessionTrack) {
         Term::create([
-            'name' => $sessionTracks,
+            'name' => $sessionTrack,
             'vid' => 'session_track',
         ])->save();
     }
@@ -100,6 +100,8 @@ function capitalcamp_glue_update_8005() {
     $roles = [
         'session_reviewer',
         'session_creator',
+        'sponsor_reviewer',
+        'sponsor_creator',
         'media_manager',
         'media_creator',
         'landing_page_reviewer',
