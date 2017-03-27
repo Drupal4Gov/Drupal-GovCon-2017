@@ -1,0 +1,28 @@
+uuid: 2c8302ca-803c-45bd-9b82-82e06a099131
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_session_track
+    - node.type.session
+    - taxonomy.vocabulary.session_track
+id: node.session.field_session_track
+field_name: field_session_track
+entity_type: node
+bundle: session
+label: 'Session Track'
+description: 'The overall focus or topic that your session falls under.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      session_track: session_track
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
