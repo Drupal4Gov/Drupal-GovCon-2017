@@ -4,6 +4,9 @@ status: true
 dependencies:
   module:
     - block_content
+third_party_settings:
+  lightning_core:
+    internal: true
 id: block_content.token
 label: Token
 targetEntityType: block_content

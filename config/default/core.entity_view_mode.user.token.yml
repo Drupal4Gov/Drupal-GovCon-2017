@@ -4,6 +4,9 @@ status: true
 dependencies:
   module:
     - user
+third_party_settings:
+  lightning_core:
+    internal: true
 id: user.token
 label: Token
 targetEntityType: user
