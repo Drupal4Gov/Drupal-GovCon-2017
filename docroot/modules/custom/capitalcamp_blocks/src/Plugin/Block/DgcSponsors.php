@@ -55,7 +55,7 @@ class DgcSponsors extends BlockBase implements ContainerFactoryPluginInterface {
     // Sponsors by Level Settings.
     $sponsorshipLevelVocabularyId = 'sponsorship_level';
     $sponsorshipLevelTerms = $this->termStorage->loadTree($sponsorshipLevelVocabularyId);
-    $this->sponsorshipLevelTermOptions = array();
+    $this->sponsorshipLevelTermOptions = [];
     foreach ($sponsorshipLevelTerms as $sponsorshipLevelTerm) {
       $this->sponsorshipLevelTermOptions[$sponsorshipLevelTerm->tid] = $sponsorshipLevelTerm->name;
     }
@@ -79,9 +79,9 @@ class DgcSponsors extends BlockBase implements ContainerFactoryPluginInterface {
    * {@inheritdoc}
    */
   public function defaultConfiguration() {
-    return array(
+    return [
       'sponsorship_level_term' => '1',
-    );
+    ];
   }
 
   /**
@@ -95,13 +95,13 @@ class DgcSponsors extends BlockBase implements ContainerFactoryPluginInterface {
    * {@inheritdoc}
    */
   public function blockForm($form, FormStateInterface $form_state) {
-    $form['sponsors_block_sponsorship_level_term'] = array(
+    $form['sponsors_block_sponsorship_level_term'] = [
       '#type' => 'select',
       '#title' => $this->t("Sponsorship Level"),
       '#default_value' => $this->configuration['sponsorship_level_term'],
       '#options' => $this->sponsorshipLevelTermOptions,
       '#description' => $this->t('Select the sponsorship level you would like to display.'),
-    );
+    ];
     return $form;
   }
 
