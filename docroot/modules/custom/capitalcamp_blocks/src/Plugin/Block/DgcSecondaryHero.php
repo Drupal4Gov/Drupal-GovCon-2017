@@ -18,10 +18,10 @@ class DgcSecondaryHero extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
-    return array(
+    return [
       '#type' => 'markup',
       '#markup' => '',
-    );
+    ];
   }
 
 }

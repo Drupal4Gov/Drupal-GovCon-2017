@@ -1,0 +1,32 @@
+uuid: e4c8e04f-df0d-4187-b194-548d3fdad4f3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+_core:
+  default_config_hash: ZZl6lORGRX6vDwAEcpyQnNpLYibbv2QZVMmJikbPM8E
+id: node.field_experience_level
+field_name: field_experience_level
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: advanced
+      label: Advanced
+    -
+      value: beginner
+      label: Beginner
+    -
+      value: intermediate
+      label: Intermediate
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

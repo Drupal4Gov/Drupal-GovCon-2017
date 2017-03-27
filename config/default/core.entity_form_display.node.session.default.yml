@@ -1,0 +1,99 @@
+uuid: ebea8705-f31f-4f8c-a5d0-e69635ab58f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.image_browser
+    - field.field.node.session.body
+    - field.field.node.session.field_experience_level
+    - field.field.node.session.field_files
+    - field.field.node.session.field_image
+    - field.field.node.session.field_status
+    - node.type.session
+  module:
+    - entity_browser
+    - file
+    - path
+    - text
+    - workbench_moderation
+_core:
+  default_config_hash: DV8OLbi-qcGglfofiDQUJ4P1qPscvwMsPVe80-OoIBo
+id: node.session.default
+targetEntityType: node
+bundle: session
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 31
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+  field_experience_level:
+    weight: 33
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_files:
+    weight: 32
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+  field_image:
+    type: entity_browser_file
+    weight: 35
+    settings:
+      entity_browser: image_browser
+      field_widget_edit: true
+      field_widget_remove: true
+      view_mode: default
+      preview_image_style: thumbnail
+      open: true
+      selection_mode: selection_append
+    third_party_settings: {  }
+  field_status:
+    weight: 34
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  path:
+    type: path
+    weight: 30
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 15
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 16
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

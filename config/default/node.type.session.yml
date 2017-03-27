@@ -1,0 +1,20 @@
+uuid: 8958aef3-f3c3-460c-b82c-0350aa11493b
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+_core:
+  default_config_hash: fDz0nQOLtgyxZepsX_6rUkhu_x_G3aBGwSDdjghelig
+name: Session
+type: session
+description: 'Use this content type to propose sessions at the event. Users can vote on proposed sessions and add sessions to their individual session agendas.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

@@ -1,0 +1,89 @@
+uuid: 79555985-4129-4582-8f35-e5b76103690e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.session.body
+    - field.field.node.session.field_experience_level
+    - field.field.node.session.field_files
+    - field.field.node.session.field_image
+    - field.field.node.session.field_status
+    - node.type.session
+  module:
+    - field_group
+    - file
+    - image
+    - options
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_audience:
+      children:
+        - field_experience_level
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      format_settings:
+        label: Audience
+        description: ''
+        id: ''
+        classes: ''
+      label: Audience
+    group_schedule_info:
+      children: {  }
+      parent_name: ''
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: 'Schedule Info'
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+_core:
+  default_config_hash: Tda_mdGceswLB5IEtanDUN-eLoQxO-iNV-i_xC8zGx8
+id: node.session.default
+targetEntityType: node
+bundle: session
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+  field_experience_level:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_files:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+  field_image:
+    weight: 22
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_status:
+    weight: 21
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+hidden:
+  links: true

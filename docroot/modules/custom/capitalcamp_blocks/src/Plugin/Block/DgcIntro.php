@@ -18,7 +18,7 @@ class DgcIntro extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
-    $build = array();
+    $build = [];
 
     $build['content'] = '';
 
