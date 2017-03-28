@@ -72,49 +72,48 @@ function capitalcamp_glue_update_8003() {
  * DCG-104: Add terms to sponsorship level vocabulary.
  */
 function capitalcamp_glue_update_8004() {
-    $sessionTracks = [
-        'Being Human',
-        'Business',
-        'Coding and Development',
-        'DevOps',
-        'Front End',
-        'Horizons',
-        'Project Management',
-        'Site Building',
-        'User Experience and Content Strategy',
+  $sessionTracks = [
+    'Being Human',
+    'Business',
+    'Coding and Development',
+    'DevOps',
+    'Front End',
+    'Horizons',
+    'Project Management',
+    'Site Building',
+    'User Experience and Content Strategy',
 
-    ];
-    foreach ($sessionTracks as $sessionTrack) {
-        Term::create([
-            'name' => $sessionTrack,
-            'vid' => 'session_track',
-        ])->save();
-    }
+  ];
+  foreach ($sessionTracks as $sessionTrack) {
+    Term::create([
+      'name' => $sessionTrack,
+      'vid' => 'session_track',
+    ])->save();
+  }
 }
-
 
 /**
  * Delete all extra not required roles created by lightning.
  */
 function capitalcamp_glue_update_8005() {
-    $roles = [
-        'session_reviewer',
-        'session_creator',
-        'sponsor_reviewer',
-        'sponsor_creator',
-        'media_manager',
-        'media_creator',
-        'landing_page_reviewer',
-        'landing_page_creator',
-        'basic_page_reviewer',
-        'basic_page_creator',
-        'layout_manager',
+  $roles = [
+    'session_reviewer',
+    'session_creator',
+    'sponsor_reviewer',
+    'sponsor_creator',
+    'media_manager',
+    'media_creator',
+    'landing_page_reviewer',
+    'landing_page_creator',
+    'basic_page_reviewer',
+    'basic_page_creator',
+    'layout_manager',
 
-    ];
-    foreach ($roles as $role) {
-        $role = Role::load($role);
-        if ($role) {
-            $role->delete();
-        }
+  ];
+  foreach ($roles as $role) {
+    $role = Role::load($role);
+    if ($role) {
+      $role->delete();
     }
+  }
 }
