@@ -8,6 +8,7 @@
 use Drupal\block\Entity\Block;
 use Drupal\taxonomy\Entity\Term;
 use Drupal\menu_link_content\Entity\MenuLinkContent;
+use Drupal\user\Entity\Role;
 
 /**
  * DCG-107: Add terms to sponsorship level vocabulary.
@@ -48,7 +49,7 @@ function capitalcamp_glue_update_8002() {
 function capitalcamp_glue_update_8003() {
   $registerLink = MenuLinkContent::create([
     'title' => 'Submit a Session',
-    'link' => ['uri' => 'internal:/node/add/session'],
+    'link' => ['uri' => 'internal:/node/add/session?destination=/user/'],
     'parent' => 'menu_link_content:cfde32b4-ff81-4a70-a608-5faf124c12ee',
     'menu_name' => 'main',
     'expanded' => FALSE,
@@ -58,11 +59,61 @@ function capitalcamp_glue_update_8003() {
 
   $registerLink = MenuLinkContent::create([
     'title' => 'Register to Attend',
-    'link' => ['uri' => 'internal:/form/register'],
+    'link' => ['uri' => 'internal:/form/registration?destination=/user/'],
     'parent' => 'menu_link_content:cfde32b4-ff81-4a70-a608-5faf124c12ee',
     'menu_name' => 'main',
     'expanded' => FALSE,
     'weight' => -45,
   ]);
   $registerLink->save();
+}
+
+/**
+ * DCG-104: Add terms to sponsorship level vocabulary.
+ */
+function capitalcamp_glue_update_8004() {
+  $sessionTracks = [
+    'Being Human',
+    'Business',
+    'Coding and Development',
+    'DevOps',
+    'Front End',
+    'Horizons',
+    'Project Management',
+    'Site Building',
+    'User Experience and Content Strategy',
+
+  ];
+  foreach ($sessionTracks as $sessionTrack) {
+    Term::create([
+      'name' => $sessionTrack,
+      'vid' => 'session_track',
+    ])->save();
+  }
+}
+
+/**
+ * Delete all extra not required roles created by lightning.
+ */
+function capitalcamp_glue_update_8005() {
+  $roles = [
+    'session_reviewer',
+    'session_creator',
+    'sponsor_reviewer',
+    'sponsor_creator',
+    'media_manager',
+    'media_creator',
+    'landing_page_reviewer',
+    'landing_page_creator',
+    'basic_page_reviewer',
+    'basic_page_creator',
+    'layout_manager',
+
+  ];
+  foreach ($roles as $role) {
+    $role = Role::load($role);
+    if ($role) {
+      $role->delete();
+    }
+  }
 }

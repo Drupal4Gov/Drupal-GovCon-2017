@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.session.field_experience_level
     - field.field.node.session.field_files
     - field.field.node.session.field_image
+    - field.field.node.session.field_session_track
     - field.field.node.session.field_status
     - node.type.session
   module:
@@ -79,6 +80,13 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+  field_session_track:
+    weight: 23
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
   field_status:
     weight: 21
     label: above
