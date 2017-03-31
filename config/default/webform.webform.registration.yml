@@ -1,6 +1,6 @@
 uuid: 508d8dbc-5aab-4eb8-bec7-bdfb4125b13a
 langcode: en
-status: ''
+status: open
 dependencies:
   enforced:
     module:
@@ -96,10 +96,12 @@ access:
     roles: {  }
     users: {  }
   view_own:
-    roles: {  }
+    roles:
+      - authenticated
     users: {  }
   update_own:
-    roles: {  }
+    roles:
+      - authenticated
     users: {  }
   delete_own:
     roles: {  }
