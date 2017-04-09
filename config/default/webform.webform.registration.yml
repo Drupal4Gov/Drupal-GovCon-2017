@@ -1,6 +1,6 @@
 uuid: 508d8dbc-5aab-4eb8-bec7-bdfb4125b13a
 langcode: en
-status: ''
+status: open
 dependencies:
   enforced:
     module:
@@ -59,10 +59,10 @@ settings:
   draft_button_attributes: {  }
   draft_saved_message: ''
   draft_loaded_message: ''
-  confirmation_type: page
+  confirmation_type: url_message
   confirmation_title: ''
   confirmation_message: 'Thank you for registering, an email is being sent to&nbsp;[webform_submission:original:values:attendee_e_mail_address].'
-  confirmation_url: ''
+  confirmation_url: /user
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
