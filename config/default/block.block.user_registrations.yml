@@ -1,0 +1,30 @@
+uuid: 3d77474b-7475-457b-b565-b1e3066a51d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.user_registrations
+  module:
+    - system
+    - views
+  theme:
+    - twentyseventeen
+id: user_registrations
+theme: twentyseventeen
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:user_registrations-block_1'
+settings:
+  id: 'views_block:user_registrations-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '/user/*'
+    negate: false
+    context_mapping: {  }
