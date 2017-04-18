@@ -1,0 +1,75 @@
+// 403-Access Blocked Page
+//
+// 403-Access Blocked Page styling. Responsively styled with CSS animations.
+//
+// Markup: 403accessblocked.twig
+//
+// Style guide: components.403accessblocked
+
+.notificationmessage__wrapper {
+  width: 100%;
+  display: block;
+  margin: 4em 0 0 0;
+  padding-bottom: 4em;
+  position: relative;
+  text-align: center;
+}
+
+.notificationmessage__wrapper h1 {
+  color: rgba(0,62,106,1);
+  font-size: 2.5em;
+  font-weight: 600;
+
+}
+
+.notificationmessage__wrapper p {
+  font-size: 1.5em;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+
+.notificationtitle {
+  width: 100%;
+  display: block;
+}
+
+.notificationtitle img {
+  width: 80%;
+  opacity: 0.25;
+}
+
+.notificationimage {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+img.pulse_image {
+  padding-top: 7.5%;
+}
+
+.pulse_image {
+  width: 50%;
+  opacity: 0.5;
+    -webkit-animation:pulse 4s infinite;
+    -moz-animation:pulse 4s infinite;
+    animation:pulse 4s infinite;
+  }
+@-moz-keyframes pulse { 
+  0% { opacity: 0.2; } 
+  50% { opacity: 0.7; }
+  100% { opacity: 0.2; }
+}
+@-webkit-keyframes pulse { 
+  0% { opacity: 0.2; } 
+  50% { opacity: 0.7; }
+  100% { opacity: 0.2; }
+}
+@keyframes pulse { 
+  0% { opacity: 0.2; } 
+  50% { opacity: 0.7; }
+  100% { opacity: 0.2; }
+}
