@@ -61,7 +61,7 @@ settings:
   draft_loaded_message: ''
   confirmation_type: url_message
   confirmation_title: ''
-  confirmation_message: 'Thank you for registering, an email is being sent to&nbsp;[webform_submission:original:values:attendee_e_mail_address].'
+  confirmation_message: 'Thank you for registering, an email is being sent to&nbsp;[webform_submission:values:attendee_e_mail_address].'
   confirmation_url: /user
   confirmation_attributes: {  }
   confirmation_back: true
@@ -135,10 +135,10 @@ handlers:
       to_mail: '[webform_submission:values:attendee_e_mail_address:raw]'
       cc_mail: ''
       bcc_mail: ''
-      from_mail: default
+      from_mail: drupal4gov@gmail.com
       from_name: default
       subject: default
-      body: default
+      body: 'Thank you for registering for DrupalGovCon.'
       excluded_elements: {  }
       html: true
       attachments: false
