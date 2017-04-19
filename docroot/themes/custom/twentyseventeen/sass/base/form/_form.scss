@@ -384,10 +384,15 @@ p.form_checkbox {
 
 // Fieldset Styling
 fieldset legend {
-  color: $wht;
-  background: $blu;
+  color: $blu;
+  //background: $blu;
+  //background: $slv;
+  background: lighten( $slv, 60% );
+  background: rgba($slv, .5);
   padding: 0.25em 0.5em;
   border-radius: 0.25em;
+  border: 1px solid $slv;
+  font-weight: normal;
 }
 
 fieldset {
@@ -396,8 +401,16 @@ fieldset {
   border: 1px solid $slv;
 }
 
-fieldset#edit-sign-up-for-news--wrapper legend {
-  margin-bottom: 0.5em; // Margin below Sign up for the News fixed.
+fieldset#edit-sign-up-for-news--wrapper legend,
+fieldset#edit-which-days-do-you-plan-to-attend-drupal-govcon---wrapper legend {
+  margin-bottom: 0.25em; // Margin below Sign up for the News fixed.
+}
+
+fieldset#edit-sign-up-for-news--wrapper,
+fieldset#edit-which-days-do-you-plan-to-attend-drupal-govcon---wrapper {
+  margin-bottom: 1em;
+  border: 1px solid $slv;
+  padding: 1em;
 }
 
 fieldset#edit-address--wrapper legend:first-child {
