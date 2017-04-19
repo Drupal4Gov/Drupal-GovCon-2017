@@ -1,6 +1,6 @@
-uuid: f5ae45e3-80f0-46bd-bc5c-364cb5c2e259
+uuid: 6ad7aa50-f1b9-4161-804a-5a6a89e13407
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - system.menu.account
@@ -8,19 +8,17 @@ dependencies:
     - system
   theme:
     - twentyseventeen
-_core:
-  default_config_hash: DweBpscQZdG0-fHkSpUzdYucrNH45G_KF7Z82V-oyQM
-id: twentyseventeen_account_menu
+id: useraccountmenu
 theme: twentyseventeen
-region: '-1'
-weight: -2
+region: header
+weight: -6
 provider: null
 plugin: 'system_menu_block:account'
 settings:
   id: 'system_menu_block:account'
-  label: 'User account menu'
+  label: 'User Account Menu'
   provider: system
   label_display: '0'
   level: 1
-  depth: 1
+  depth: 0
 visibility: {  }
