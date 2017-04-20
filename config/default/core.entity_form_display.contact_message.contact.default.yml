@@ -12,23 +12,26 @@ bundle: contact
 mode: default
 content:
   field_email:
-    weight: 51
+    weight: 0
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: email_default
   field_message:
-    weight: 52
+    weight: 1
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
+  preview:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   copy: true
   mail: true
   message: true
   name: true
-  preview: true
   subject: true

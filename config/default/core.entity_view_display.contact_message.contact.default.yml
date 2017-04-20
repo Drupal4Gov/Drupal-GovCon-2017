@@ -11,43 +11,37 @@ targetEntityType: contact_message
 bundle: contact
 mode: default
 content:
-  field_email:
-    weight: 1
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: basic_string
   field_message:
-    weight: 2
+    weight: 4
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
   mail:
-    weight: -2
-    label: above
+    weight: 1
+    label: inline
     settings: {  }
     third_party_settings: {  }
     type: basic_string
   message:
-    type: string
-    weight: 0
+    type: basic_string
+    weight: 3
     label: above
-    settings:
-      link_to_entity: false
+    settings: {  }
     third_party_settings: {  }
   name:
-    weight: -3
-    label: above
+    weight: 0
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   subject:
-    weight: -1
-    label: above
+    weight: 2
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-hidden: {  }
+hidden:
+  field_email: true
