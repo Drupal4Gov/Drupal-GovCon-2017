@@ -17,6 +17,7 @@ Tools we are using:
 ## Quickstart Instructions
 
 - Before you start, do `ssh-add -l` to ensure your private key is registered. If not (especially after a system update), do `ssh-add -K ~/.ssh/id_rsa` to do this.
+- Before you start, add your public ssh key to your Acquia account, otherwise you will be unable to sync.
 - Install the prereqs above by following [BLT's Installing Requirements](https://github.com/acquia/blt/blob/8.x/INSTALL.md#installing-requirements) and then `vagrant plugin install vagrant-hostsupdater`
 - **Fork this repo**
 - Clone repo locally (clone **your fork**, do NOT clone the main repo)
@@ -38,3 +39,27 @@ blt/composer may complain that you have the wrong PHP version. If this happens t
 `echo 'export PATH="/usr/local/bin:$PATH"' >> ~/.bash_profile`
 
 `source ~/.bash_profile`
+
+## Git Versioning Standards
+
+- Before starting, update your remote by typing `git remote update` and to be safe, `git pull upstream master`
+- Always checkout a new branch from `master` when you start on an issue.
+- To Checkout a branch type in your command line `git checkout -b dgc-[issue-number]-[description] upstream/master`
+- Commit frequently when working on larger issues. This helps to assist with potential troubleshooting. To help track which commits are to which issues, please prefix all your messages with 'DGC-[issue-number]'
+- Your work is done for this ticket! Hooray! Before Submitting your work be sure to rebase you work against master.
+- On your feature branch, type `git rebase upstream/master`
+- If you rebase successfully, push your branch to upstream and submit a pull request :)
+
+### Troubleshooting Git
+
+- If you are unable to rebase, it may be due to merge conflicts. Type `git status` in the command line and see which file(s) are identified as 'both modified'
+- Resolve the merge conflicts in the files that are both modified, being sure to not delete anyone's work.
+- Once you have resolved the conflicts and saved your file(s), type `git add [file]` and type `git rebase --continue`
+- Once you have gotten the message `Successfully rebased and updated refs/heads/[branch-name]`, it is safe to push.
+- You can also abort your rebase at anytime by typing `git rebase --abort`
+<<<<<<< HEAD
+- If you have any trouble rebasing, you can rebase interactively which allows you to update your commits. Type `git rebase -i upstream/master`
+- There you can reword, drop, squash commits, but please do this with caution as you can accidentally delete work.
+- Read up on rebasing and rebasing interactively at: https://git-scm.com/docs/git-rebase and https://git-scm.com/docs/git-rebase#git-rebase---interactive
+=======
+>>>>>>> 65f467abbbbe8d1df7596e545b33334e9b6053dd
