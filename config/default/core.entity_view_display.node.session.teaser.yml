@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.session.body
     - field.field.node.session.field_experience_level
     - field.field.node.session.field_files
-    - field.field.node.session.field_image
     - field.field.node.session.field_session_track
     - field.field.node.session.field_status
     - node.type.session
@@ -35,6 +34,5 @@ content:
 hidden:
   field_experience_level: true
   field_files: true
-  field_image: true
   field_session_track: true
   field_status: true
