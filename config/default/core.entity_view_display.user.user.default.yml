@@ -27,42 +27,42 @@ content:
     type: text_default
   field_company:
     weight: 11
-    label: above
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_drupal_org_username:
     weight: 8
-    label: above
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_first_name:
     weight: 6
-    label: above
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_job_title:
     weight: 12
-    label: above
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_last_name:
     weight: 7
-    label: above
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
   field_picture:
     weight: 9
-    label: above
+    label: hidden
     settings:
       image_style: ''
       image_link: ''
@@ -70,4 +70,6 @@ content:
     type: image
   member_for:
     weight: 5
+    settings: {  }
+    third_party_settings: {  }
 hidden: {  }
