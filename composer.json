@@ -2,38 +2,34 @@
     "name": "acquia/blt-project",
     "description": "Project template for Drupal 8 sites built with BLT.",
     "type": "project",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "repositories": {
-        "drupal": {
-            "type": "composer",
-            "url": "https://packages.drupal.org/8"
-        },
-        "drupal-cod": {
-            "type": "package",
-            "package": {
-                "name": "drupal-cod/program",
-                "type": "drupal-module",
-                "version": "master",
-                "source": {
-                    "url": "https://github.com/drupal-cod/program.git",
-                    "type": "git",
-                    "reference": "master"
-                }
+                "drupal-cod": {
+                "type": "package",
+                "package": {
+                    "name": "drupal-cod/program",
+                    "type": "drupal-module",
+                    "version": "master",
+                    "source": {
+                        "url": "https://github.com/drupal-cod/program.git",
+                        "type": "git",
+                        "reference": "master"
+                   }
             }
         }
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
     "require": {
-        "drush/drush": "^8.1.8",
-        "acquia/blt": "^8.6.14",
-        "composer/installers": "^1.0.20",
-        "cweagans/composer-patches": "^1.6.0",
-        "drupal/acsf": "^1.32.0",
-        "drupal/cog": "^1.0.0",
-        "drupal/core": "^8.0",
-        "drupal/features": "^3.0.0",
-        "drupal/memcache": "2.x-dev",
-        "drupal/security_review": "*",
+        "acquia/blt": "^8.3",
+        "acquia/lightning": "^2.1.0",
+        "drupal/honeypot": "^1.20",
+        "drupal/captcha": "dev-1.x",
+        "drupal/recaptcha": "dev-2.x",
+        "drupal/webform": "^5.0@beta",
+        "drupal/webform_views": "5.x-dev",
+        "drupal-cod/program": "dev-master",
+        "drupal/field_group": "1.0-rc6",
+        "drupal/r4032login": "dev-1.x",
         "drupal/google_analytics": "*@stable",
         "drupal/adminimal_admin_toolbar": "^1.0",
         "drupal/environment_indicator": "^3.0.0-beta1",
@@ -43,72 +39,12 @@
         "drupal/acquia_purge": "1.x-dev",
         "drupal/cloudflare": "^1.0.0-alpha7",
         "drupal/purge": "^3.0.0-beta6",
-        "acquia/lightning": "2.0.3",
-        "drupal/seckit": "^1.0.0-alpha2",
-        "drupal/shield": "^1.0.0",
         "drupal/extlink": "^1.0",
-        "drupal/twig_xdebug": "1.x-dev",
-        "drupal/console": "~1",
-        "drupal-composer/drupal-security-advisories": "8.x-dev",
-        "roave/security-advisories": "dev-master",
-        "drupal/acquia_connector": "^1.5.0",
-        "drupal/honeypot": "^1.20",
-        "drupal/captcha": "dev-1.x",
-        "drupal/recaptcha": "dev-2.x",
-        "drupal/webform": "^5.0@beta",
-        "drupal/webform_views": "5.x-dev",
-        "drupal-cod/program": "dev-master",
-        "drupal/field_group": "1.0-rc6",
-        "drupal/r4032login": "dev-1.x"
+        "drupal/twig_xdebug": "1.x-dev"
     },
-    "require-dev": {
-        "behat/behat": "^3.1",
-        "behat/mink": "~1.7",
-        "behat/mink-selenium2-driver": "^1.3.1",
-        "drupal/drupal-extension": "^3.2",
-        "drupal-composer/drupal-scaffold": "^2.1.0",
-        "jarnaiz/behat-junit-formatter": "^1.3.2",
-        "se/selenium-server-standalone": "^2.53",
-        "squizlabs/php_codesniffer": "2.*",
-        "geerlingguy/drupal-vm": "~3.4",
-        "drupal/devel": "^1.0.0-alpha1",
-        "drupal/console": "^1.0.0-rc13",
-        "jakoch/phantomjs-installer": "^2.1.1-p07",
-        "behat/mink-browserkit-driver": "*",
-        "behat/mink-extension": "*",
-        "behat/mink-goutte-driver": "*",
-        "drupal/coder": "~8.2",
-        "phing/phing": "~2",
-        "bex/behat-screenshot": "^1.2"
-    },
-    "scripts": {
-        "blt-alias": "blt install-alias -Dcreate_alias=true",
-        "nuke": [
-            "rm -rf vendor composer.lock",
-            "@composer clearcache",
-            "@composer install"
-        ],
-        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-        "install-phantomjs": [
-            "rm -rf vendor/bin/phantomjs",
-            "PhantomInstaller\\Installer::installPhantomJS"
-        ],
-        "post-install-cmd": [
-            "PhantomInstaller\\Installer::installPhantomJS"
-        ],
-        "post-update-cmd": [
-            "PhantomInstaller\\Installer::installPhantomJS"
-        ]
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Drupal\\Tests\\PHPUnit\\": "tests/phpunit/src/"
-        }
-    },
+    "require-dev": {},
     "extra": {
-        "blt": {
-            "update": true
-        },
+        "enable-patching": true,
         "installer-paths": {
             "docroot/core": [
                 "type:drupal-core"
@@ -116,45 +52,40 @@
             "docroot/modules/contrib/{$name}": [
                 "type:drupal-module"
             ],
-            "docroot/profiles/contrib/{$name}": [
-                "type:drupal-profile"
-            ],
-            "docroot/themes/contrib/{$name}": [
-                "type:drupal-theme"
-            ],
-            "drush/contrib/{$name}": [
-                "type:drupal-drush"
-            ],
             "docroot/modules/custom/{$name}": [
                 "type:drupal-custom-module"
+            ],
+            "docroot/profiles/contrib/{$name}": [
+                "type:drupal-profile"
             ],
             "docroot/profiles/custom/{$name}": [
                 "type:drupal-custom-profile"
             ],
+            "docroot/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
             "docroot/themes/custom/{$name}": [
                 "type:drupal-custom-theme"
             ],
-            "docroot/libraries": [
+            "docroot/libraries/{$name}": [
                 "type:drupal-library"
+            ],
+            "drush/contrib/{$name}": [
+                "type:drupal-drush"
             ]
         },
-        "patches": {
-            "drupal/core": {
-                "Ignore front end vendor folders to improve directory search performance": "https://www.drupal.org/files/issues/ignore_front_end_vendor-2329453-116.patch"
-            },
-            "drupal/acquia_purge": {
-                "Bypass Acquia purge alpha program check to enable tag based purging.": "patches/purge-bypass-alpha-program.patch"
-            }
-        },
-        "drupal-scaffold": {
-            "initial": {
-                "sites/default/default.services.yml": "sites/default/services.yml",
-                "sites/default/default.settings.php": "sites/default/settings.php"
-            },
-            "excludes": [
-                "sites/development.services.yml"
-            ]
-        },
-        "enable-patching": true
+        "merge-plugin": {
+            "require": [
+                "vendor/acquia/blt/composer.required.json",
+                "vendor/acquia/blt/composer.suggested.json"
+            ],
+            "include": [
+                "blt/composer.overrides.json"
+            ],
+            "merge-extra": true,
+            "merge-extra-deep": true,
+            "merge-scripts": true,
+            "replace": true
+        }
     }
 }
