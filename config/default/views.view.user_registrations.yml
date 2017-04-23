@@ -253,7 +253,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: Action
           exclude: false
           alter:
             alter_text: false
@@ -308,9 +308,35 @@ display:
           entity_field: webform_id
           plugin_id: bundle
       sorts: {  }
-      header: {  }
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: 'Register another ticket'
+          empty: false
+          tokenize: false
+          content:
+            value: '<a href="/form/registration">Reserve another ticket</a> for someone else.'
+            format: simple_text
+          plugin_id: text
       footer: {  }
-      empty: {  }
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: 'Great! You''ve got an account, but need to <a href="/form/registration">grab a ticket</a> in order to attend the event!'
+            format: simple_text
+          plugin_id: text
       relationships:
         uid:
           id: uid
