@@ -1,0 +1,28 @@
+uuid: 87a24e40-8360-4a4f-8c5d-7ad0863a03c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_co_presenter_s_
+    - node.type.session
+id: node.session.field_co_presenter_s_
+field_name: field_co_presenter_s_
+entity_type: node
+bundle: session
+label: Co-Presenter(s)
+description: 'Does your session have co-presenters? If so, please add them here. In order for them to be listed, they will have to <a href="/form/registration?destination=/user/">register</a> for Drupal GovCon, as well.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference
