@@ -1,0 +1,70 @@
+// Add Entity Fields
+//
+// Entity Field Reference Styling. This is used where multiple entity references, such as session co-presenters, are added on forms.
+//
+// Markup: addentityfields.twig
+//
+// Style guide: components.addentityfields
+
+
+.tabledrag-toggle-weight-wrapper {
+}
+
+.field--type-entity-reference {
+  margin-bottom: 1em;
+}
+
+table.field-multiple-table.responsive-enabled {
+  margin-bottom: 0.5em;
+  border: 1px solid #grn;
+}
+
+table.field-multiple-table.responsive-enabled thead tr th.field-label h4.label {
+  color: $wht;
+  font-size: 1.2em;
+  padding: 0.25em;
+}
+
+
+table.field-multiple-table.responsive-enabled tbody tr.draggable {
+}
+
+table.field-multiple-table.responsive-enabled tbody tr.draggable td {
+  padding: 0.5em 0.5em 0.5em 0;
+}
+
+table.field-multiple-table.responsive-enabled tbody tr.draggable td input {
+  margin-bottom: 0;
+}
+
+table.field-multiple-table.responsive-enabled tbody tr.draggable td.field-multiple-drag {
+  width: 2em;
+}
+
+
+table.field-multiple-table.responsive-enabled tbody tr.draggable td.field-multiple-drag a.tabledrag-handle {
+  list-style: none;
+  height: 2em;
+  top: 0;
+  margin-top: 0.75em;
+  margin-left: -0.5em;
+}
+
+table.field-multiple-table.responsive-enabled tbody tr.draggable td.field-multiple-drag a.tabledrag-handle div.handle {
+  background: rgba(0, 0, 0, 0) url(/themes/custom/twentyseventeen/images/GovCon-UpDown.svg);
+  margin: 0.25em 0.25em 0.25em 1em;
+  list-style-position: inside;
+  opacity: 0.5;
+}
+
+.tabledrag-toggle-weight-wrapper {
+  
+  @include breakpoint($tablet-to-desktop) {
+    
+  }
+  @include breakpoint($desktop) {
+    
+  }
+}
+
+
