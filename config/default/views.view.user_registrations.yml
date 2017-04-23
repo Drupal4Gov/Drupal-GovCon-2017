@@ -345,7 +345,7 @@ display:
           relationship: none
           group_type: group
           admin_label: User
-          required: false
+          required: true
           entity_type: webform_submission
           entity_field: uid
           plugin_id: standard
@@ -364,8 +364,9 @@ display:
             title: All
           title_enable: false
           title: ''
-          default_argument_type: current_user
-          default_argument_options: {  }
+          default_argument_type: user
+          default_argument_options:
+            user: false
           default_argument_skip_url: false
           summary_options:
             base_path: ''
@@ -376,11 +377,16 @@ display:
             sort_order: asc
             number_of_records: 0
             format: default_summary
-          specify_validation: false
+          specify_validation: true
           validate:
-            type: none
+            type: 'entity:user'
             fail: 'not found'
-          validate_options: {  }
+          validate_options:
+            access: true
+            operation: update
+            multiple: 0
+            restrict_roles: false
+            roles: {  }
           break_phrase: false
           not: false
           entity_type: user
