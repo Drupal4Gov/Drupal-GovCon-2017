@@ -23,15 +23,15 @@ function capitalcamp_glue_help($route_name, RouteMatchInterface $route_match) {
  * Implements hook_form_FORM_ID_alter().
  */
 function capitalcamp_glue_form_webform_submission_registration_form_alter(array &$form, FormStateInterface $form_state) {
-  // Show 'Country' as first field
+  // Show 'Country' as first field.
   $form['elements']['personal_information']['address']['#country__weight'] = -2;
-  // Show 'State' next, but conditionally
+  // Show 'State' next, but conditionally.
   $form['elements']['personal_information']['address']['#state_province__weight'] = -1;
-  $us_is_country = array(
-      'visible' => array(   // action to take.
-        ':input[name="address[country]"]' => array('value' => 'United States'),
-      ),
-    );
+  $us_is_country = [
+      'visible' => [ 
+        ':input[name="address[country]"]' => ['value' => 'United States'],
+      ],
+    ];
   // Add condition to 'States' to only show if Country is 'United States'
   $form['elements']['personal_information']['address']['#state_province__states'] = $us_is_country;
 }
