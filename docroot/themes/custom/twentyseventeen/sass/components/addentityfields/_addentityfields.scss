@@ -7,9 +7,6 @@
 // Style guide: components.addentityfields
 
 
-.tabledrag-toggle-weight-wrapper {
-}
-
 .field--type-entity-reference {
   margin-bottom: 1em;
 }
@@ -23,10 +20,6 @@ table.field-multiple-table.responsive-enabled thead tr th.field-label h4.label {
   color: $wht;
   font-size: 1.2em;
   padding: 0.25em;
-}
-
-
-table.field-multiple-table.responsive-enabled tbody tr.draggable {
 }
 
 table.field-multiple-table.responsive-enabled tbody tr.draggable td {
@@ -55,16 +48,6 @@ table.field-multiple-table.responsive-enabled tbody tr.draggable td.field-multip
   margin: 0.25em 0.25em 0.25em 1em;
   list-style-position: inside;
   opacity: 0.5;
-}
-
-.tabledrag-toggle-weight-wrapper {
-  
-  @include breakpoint($tablet-to-desktop) {
-    
-  }
-  @include breakpoint($desktop) {
-    
-  }
 }
 
 
