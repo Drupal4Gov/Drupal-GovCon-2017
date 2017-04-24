@@ -15,11 +15,6 @@ label {
   display: block;
   font-weight: 500;
   margin-bottom: 0.1875em;
-  &.form-required {
-    &:after {
-      content: '*';
-    }
-  }
 }
 input[type="text"],
 input[type="password"],
@@ -417,17 +412,12 @@ fieldset#edit-address--wrapper legend:first-child {
   display: none; // This hides the address label in the contact webform
 }
 
-//Address Field Required Fields
-.webform-address {
-  div {
-    label {
-      &:after {
-        content: '*';
-      }
-    }
-  }
-}
-
 .profile{
   display:none;
+}
+
+.form-required {
+  &:after {
+    content: '*';
+  }
 }
