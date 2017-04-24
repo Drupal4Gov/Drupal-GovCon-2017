@@ -417,17 +417,6 @@ fieldset#edit-address--wrapper legend:first-child {
   display: none; // This hides the address label in the contact webform
 }
 
-//Address Field Required Fields
-.webform-address {
-  div {
-    label {
-      &:after {
-        content: '*';
-      }
-    }
-  }
-}
-
 .profile{
   display:none;
 }
