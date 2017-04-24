@@ -15,11 +15,6 @@ label {
   display: block;
   font-weight: 500;
   margin-bottom: 0.1875em;
-  &.form-required {
-    &:after {
-      content: '*';
-    }
-  }
 }
 input[type="text"],
 input[type="password"],
@@ -419,4 +414,10 @@ fieldset#edit-address--wrapper legend:first-child {
 
 .profile{
   display:none;
+}
+
+.form-required {
+  &:after {
+    content: '*';
+  }
 }
