@@ -14,14 +14,14 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: advanced
-      label: Advanced
-    -
       value: beginner
       label: Beginner
     -
       value: intermediate
       label: Intermediate
+    -
+      value: advanced
+      label: Advanced
   allowed_values_function: ''
 module: options
 locked: false

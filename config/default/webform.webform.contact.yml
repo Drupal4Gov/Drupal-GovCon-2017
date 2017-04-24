@@ -1,0 +1,139 @@
+uuid: e02eba4c-6e83-4b4f-80d7-0d2614449f05
+langcode: en
+status: open
+dependencies: {  }
+open: null
+close: null
+uid: 1
+template: false
+id: contact
+title: Contact
+description: ''
+elements: "email:\n  '#type': email\n  '#title': Email\n  '#default_value': '[current-user:mail]'\n  '#title_display': before\n  '#description_display': after\n  '#required': true\n  '#required_error': 'Email is required'\nmessage:\n  '#type': textarea\n  '#title': Message\n  '#title_display': before\n  '#description_display': invisible\n  '#rows': '400'\n  '#required': true\n  '#required_error': 'Message is required'\ncontact:\n  '#type': captcha\n  '#captcha_type': recaptcha/reCAPTCHA\n"
+css: "#edit-message {\r\nheight: 200px;\r\n}"
+javascript: ''
+settings:
+  page: true
+  page_submit_path: contact
+  page_confirm_path: contact/confirmation
+  form_submit_label: ''
+  form_submit_once: false
+  form_submit_attributes: {  }
+  form_exception_message: ''
+  form_closed_message: ''
+  form_previous_submissions: false
+  form_confidential: false
+  form_confidential_message: ''
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_unsaved: false
+  form_disable_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_next_button_label: ''
+  wizard_next_button_attributes: {  }
+  wizard_prev_button_label: ''
+  wizard_prev_button_attributes: {  }
+  wizard_start_label: ''
+  wizard_complete: true
+  wizard_complete_label: ''
+  preview: 0
+  preview_next_button_label: 'Preview message'
+  preview_next_button_attributes: {  }
+  preview_prev_button_label: ''
+  preview_prev_button_attributes: {  }
+  preview_message: ''
+  draft: false
+  draft_auto_save: false
+  draft_button_label: ''
+  draft_button_attributes: {  }
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  confirmation_type: inline
+  confirmation_title: ''
+  confirmation_message: "<strong>Thank you for your message. Someone from the Drupal GovCon team will be in touch with you soon. Please add &nbsp;drupal4gov@gmail.com to your email contacts to make sure our response reaches you.</strong><br />\r\n<br />\r\n<strong>Your email:</strong><br />\r\n[webform_submission:values:email]<br />\r\n<br />\r\n<strong>Your message:</strong><br />\r\n[webform_submission:values:message]"
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  limit_total: null
+  limit_total_message: ''
+  limit_user: null
+  limit_user_message: ''
+  purge: none
+  purge_days: null
+  entity_limit_total: null
+  entity_limit_user: null
+  results_disabled: false
+  results_disabled_ignore: false
+  token_update: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+handlers:
+  email:
+    id: email
+    label: Email
+    handler_id: email
+    status: true
+    weight: -49
+    settings:
+      to_mail: default
+      cc_mail: ''
+      bcc_mail: ''
+      from_mail: '[webform_submission:values:email:raw]'
+      from_name: '[webform_submission:values:email:value]'
+      subject: default
+      body: default
+      excluded_elements: {  }
+      html: true
+      attachments: false
+      debug: false
+  email_1:
+    id: email
+    label: Email
+    handler_id: email_1
+    status: true
+    weight: -50
+    settings:
+      to_mail: '[webform_submission:values:email:raw]'
+      cc_mail: ''
+      bcc_mail: ''
+      from_mail: default
+      from_name: default
+      subject: default
+      body: "<br />\nThank you for your message. Someone from the Drupal GovCon team will be in touch with you soon. Please add [DGC or D4G email address] to your email contacts to make sure our response reaches you.<br />\n<br />\n&lt;p&gt;Submitted on [webform_submission:created]&lt;/p&gt;<br />\n&lt;p&gt;Submitted by: [webform_submission:user]&lt;/p&gt;<br />\n&lt;p&gt;Submitted values are:&lt;/p&gt;<br />\n[webform_submission:values]"
+      excluded_elements: {  }
+      html: true
+      attachments: false
+      debug: false
