@@ -7,6 +7,7 @@
 
 use Drupal\Core\Routing\RouteMatchInterface;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
 
 /**
  * Implements hook_help().
@@ -31,4 +32,18 @@ function capitalcamp_glue_form_webform_submission_registration_form_alter(array 
   $form['#attached']['library'][] = 'capitalcamp_glue/registration_form';
   $form['#attached']['drupalSettings']['capitalcamp_glue']['registration_form'] ['variable'] = 'Brooke!';
   return $form;
+
+function capitalcamp_glue_form_user_register_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // @todo come up with a more elegant approach here.
+  // Alter login form and add own custom submit handler.
+  $form['actions']['submit']['#submit'][] = '_capitalcamp_glue_user_register_form_submit';
+}
+
+/**
+ * Custom submit handler for registration form.
+ */
+function _capitalcamp_glue_user_register_form_submit($form, FormStateInterface $form_state) {
+  // Set redirect to login form.
+  $url = Url::fromUri('internal:/form/registration');
+  $form_state->setRedirectUrl($url);
 }
