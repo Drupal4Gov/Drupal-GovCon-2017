@@ -27,11 +27,8 @@ function capitalcamp_glue_form_webform_submission_registration_form_alter(array 
   $form['elements']['personal_information']['address']['#country__weight'] = -2;
   // Show 'State' next, but conditionally.
   $form['elements']['personal_information']['address']['#state_province__weight'] = -1;
-  $us_is_country = [
-    'visible' => [
-      ':input[name="address[country]"]' => ['value' => 'United States'],
-    ],
-  ];
-  // Add condition to 'States' to only show if Country is 'United States'.
-  $form['elements']['personal_information']['address']['#state_province__states'] = $us_is_country;
+  $form['elements']['personal_information']['address']['#city__weight'] = 0;
+  $form['#attached']['library'][] = 'capitalcamp_glue/registration_form';
+  $form['#attached']['drupalSettings']['capitalcamp_glue']['registration_form'] ['variable'] = 'Brooke!';
+  return $form;
 }
