@@ -30,9 +30,12 @@ function capitalcamp_glue_form_webform_submission_registration_form_alter(array 
   $form['elements']['personal_information']['address']['#state_province__weight'] = -1;
   $form['elements']['personal_information']['address']['#city__weight'] = 0;
   $form['#attached']['library'][] = 'capitalcamp_glue/registration_form';
-  $form['#attached']['drupalSettings']['capitalcamp_glue']['registration_form'] ['variable'] = 'Brooke!';
   return $form;
+}
 
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
 function capitalcamp_glue_form_user_register_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   // @todo come up with a more elegant approach here.
   // Alter login form and add own custom submit handler.
