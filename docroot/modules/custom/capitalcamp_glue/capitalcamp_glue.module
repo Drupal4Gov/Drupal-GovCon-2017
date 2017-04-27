@@ -23,6 +23,19 @@ function capitalcamp_glue_help($route_name, RouteMatchInterface $route_match) {
 /**
  * Implements hook_form_FORM_ID_alter().
  */
+function capitalcamp_glue_form_webform_submission_registration_form_alter(array &$form, FormStateInterface $form_state) {
+  // Show 'Country' as first field.
+  $form['elements']['personal_information']['address']['#country__weight'] = -2;
+  // Show 'State' next, but conditionally.
+  $form['elements']['personal_information']['address']['#state_province__weight'] = -1;
+  $form['elements']['personal_information']['address']['#city__weight'] = 0;
+  $form['#attached']['library'][] = 'capitalcamp_glue/registration_form';
+  return $form;
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
 function capitalcamp_glue_form_user_register_form_alter(&$form, FormStateInterface $form_state, $form_id) {
   // @todo come up with a more elegant approach here.
   // Alter login form and add own custom submit handler.
