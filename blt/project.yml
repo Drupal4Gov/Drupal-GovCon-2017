@@ -29,10 +29,10 @@ target-hooks:
     command: 'echo ''No pre-config-import configured.'''
   post-deploy-build:
     dir: '${deploy.dir}/docroot/profiles/contrib/lightning'
-    command: 'npm run install-libraries'
+    command: 'echo ''No post-setup-build hook configured.'''
   post-setup-build:
     dir: '${docroot}/profiles/contrib/lightning'
-    command: 'npm run install-libraries'
+    command: 'echo ''No post-setup-build hook configured.'''
 import: '${repo.root}/blt/custom.xml'
 modules:
   local:
