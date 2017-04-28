@@ -1,31 +1,32 @@
-uuid: 6faff749-e13c-4740-87d8-45ed6d22eb5c
+uuid: d4a355fd-873f-40a9-9042-fd51f6acaf7d
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.media.embedded
+    - core.entity_view_mode.media.thumbnail
     - field.field.media.tweet.embed_code
     - field.field.media.tweet.field_media_in_library
+    - image.style.medium
     - media_entity.bundle.tweet
   module:
-    - media_entity_twitter
-_core:
-  default_config_hash: h5mYORXehVbamAkCZmI6dOteePaae1GDnIB5Szm4oQI
-id: media.tweet.embedded
+    - image
+id: media.tweet.thumbnail
 targetEntityType: media
 bundle: tweet
-mode: embedded
+mode: thumbnail
 content:
-  embed_code:
-    type: twitter_embed
+  thumbnail:
+    type: image
     weight: 0
     label: hidden
-    settings: {  }
+    settings:
+      image_style: medium
+      image_link: ''
     third_party_settings: {  }
     region: content
 hidden:
   created: true
+  embed_code: true
   field_media_in_library: true
   name: true
-  thumbnail: true
   uid: true

@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.session.field_experience_level
     - field.field.node.session.field_files
     - field.field.node.session.field_image
+    - field.field.node.session.field_session_track
     - field.field.node.session.field_status
     - node.type.session
   module:
@@ -27,8 +28,10 @@ content:
     settings:
       trim_length: 600
     third_party_settings: {  }
+    region: content
   links:
     weight: 100
+    region: content
 hidden:
   field_experience_level: true
   field_files: true

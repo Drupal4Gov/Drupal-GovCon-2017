@@ -9,7 +9,7 @@ dependencies:
     - image.style.medium
     - media_entity.bundle.image
   module:
-    - image
+    - lightning_media
     - workbench_moderation
 _core:
   default_config_hash: LpTYmf5ylCEAcaqLWWOQBLTk-MsJ0QwXhUV3CnOocI0
@@ -24,13 +24,15 @@ content:
     settings:
       display_label: true
     third_party_settings: {  }
+    region: content
   image:
-    type: image_image
+    type: image_immutable
     weight: 0
     settings:
       preview_image_style: medium
       progress_indicator: throbber
     third_party_settings: {  }
+    region: content
   name:
     type: string_textfield
     weight: 3
@@ -38,6 +40,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
 hidden:
   created: true
   uid: true
