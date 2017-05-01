@@ -46,6 +46,7 @@ notifications:
 before_install:
   # Disable xdebug.
   - phpenv config-rm xdebug.ini
+  - echo 'sendmail_path = "/bin/true"' | sudo tee "/home/travis/.phpenv/versions/`php -i | grep "PHP Version" | head -n 1 | grep -o -P '\d+\.\d+\.\d+.*'`/etc/conf.d/sendmail.ini"
   - composer self-update
   - composer validate --no-check-all --ansi
   - composer install
