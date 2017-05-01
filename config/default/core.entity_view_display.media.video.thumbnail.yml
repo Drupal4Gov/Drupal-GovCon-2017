@@ -1,35 +1,32 @@
-uuid: 06ec4350-fb20-4754-9bdf-b89b706eb201
+uuid: 81137505-ea88-485b-9bc0-acac1288dceb
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.media.embedded
+    - core.entity_view_mode.media.thumbnail
     - field.field.media.video.field_media_in_library
     - field.field.media.video.field_media_video_embed_field
+    - image.style.medium
     - media_entity.bundle.video
   module:
-    - video_embed_field
-_core:
-  default_config_hash: _5zVhxHLl7qwxArEds2R869aXPHs3Ow8_nhjZIEqsKU
-id: media.video.embedded
+    - image
+id: media.video.thumbnail
 targetEntityType: media
 bundle: video
-mode: embedded
+mode: thumbnail
 content:
-  field_media_video_embed_field:
-    type: video_embed_field_video
-    weight: 2
+  thumbnail:
+    type: image
+    weight: 0
     label: hidden
     settings:
-      responsive: true
-      width: 854
-      height: 480
-      autoplay: true
+      image_style: medium
+      image_link: ''
     third_party_settings: {  }
     region: content
 hidden:
   created: true
   field_media_in_library: true
+  field_media_video_embed_field: true
   name: true
-  thumbnail: true
   uid: true

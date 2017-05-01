@@ -10,6 +10,7 @@ dependencies:
     - metatag
     - panelizer
     - path
+    - workbench_moderation
 _core:
   default_config_hash: VmtwZehGc73SkubyCyaa-lTzILFmC4aCGaG2LtGXCqE
 id: node.landing_page.default
@@ -22,21 +23,25 @@ content:
     weight: 2
     settings: {  }
     third_party_settings: {  }
+    region: content
   field_meta_tags:
     weight: 26
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
+    region: content
   panelizer:
     type: panelizer
     weight: 5
     settings: {  }
     third_party_settings: {  }
+    region: content
   path:
     type: path
     weight: 3
     settings: {  }
     third_party_settings: {  }
+    region: content
   title:
     type: string_textfield
     weight: 0
@@ -44,6 +49,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
   uid:
     type: entity_reference_autocomplete
     weight: 1
@@ -52,6 +58,7 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
 hidden:
   promote: true
   sticky: true

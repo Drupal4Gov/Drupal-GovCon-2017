@@ -1,6 +1,7 @@
 settings:
   default_page_base_path: form
-  default_form_closed_message: 'Sorry...This form is closed to new submissions.'
+  default_form_open_message: 'This form has not yet been opened to submissions.'
+  default_form_close_message: 'Sorry...This form is closed to new submissions.'
   default_form_exception_message: 'Unable to display this webform. Please contact the site administrator.'
   default_form_submit_label: Submit
   default_form_submit_once: false
@@ -57,6 +58,7 @@ elements:
   wrapper_classes: "container-inline clearfix\nform--inline clearfix\nmessages messages--error\nmessages messages--warning\nmessages messages--status\n"
   classes: "container-inline clearfix\nform--inline clearfix\nmessages messages--error\nmessages messages--warning\nmessages messages--status\n"
   default_description_display: ''
+  default_icheck: ''
   default_google_maps_api_key: ''
   excluded_types: {  }
 file:
@@ -87,5 +89,3 @@ library:
   cdn: false
 langcode: en
 third_party_settings: {  }
-_core:
-  default_config_hash: SCMmRNOIlKXCV4kwgZt4A45-lnoRPqsAPKA8T4czegQ
