@@ -29,8 +29,36 @@ function capitalcamp_glue_form_webform_submission_registration_form_alter(array 
   // Show 'State' next, but conditionally.
   $form['elements']['personal_information']['address']['#state_province__weight'] = -1;
   $form['elements']['personal_information']['address']['#city__weight'] = 0;
+  // If user selects 'United States' for Country, State and City fields are required.
+  $form['elements']['personal_information']['address']['#state_province__states'] = [
+    'required' => [
+      ':input[name="address[country]"]' => ['value' => 'United States']
+    ],
+  ];
+  $form['elements']['personal_information']['address']['#city__states'] = [
+    'required' => [
+      ':input[name="address[country]"]' => ['value' => 'United States']
+    ],
+  ];
   $form['#attached']['library'][] = 'capitalcamp_glue/registration_form';
+  // Add custom validation to ensure City and State are filled out if Country is 'United States'.
+  $form['#validate'][] = '_capitalcamp_glue_webform_submission_registration_form_validate';
   return $form;
+}
+
+/**
+ * Validates submission values in the FORM_ID() form.
+ */
+function _capitalcamp_glue_webform_submission_registration_form_validate($form, FormStateInterface $form_state) {
+  $values = $form_state->getValues();
+  if (!empty($values['address']['country'] && $values['address']['country'] === 'United States')) {
+    if (empty($values['address']['city'])) {
+      $form_state->setErrorByName("address[city]", t('City is a required field for U.S. locations'));
+    }
+    if (empty($values['address']['state_province'])) {
+      $form_state->setErrorByName("address[state_province]", t('State is a required field for U.S. locations'));
+    }
+  }
 }
 
 /**
