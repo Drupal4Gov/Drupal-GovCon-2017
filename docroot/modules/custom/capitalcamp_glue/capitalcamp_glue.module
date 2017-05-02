@@ -29,19 +29,19 @@ function capitalcamp_glue_form_webform_submission_registration_form_alter(array 
   // Show 'State' next, but conditionally.
   $form['elements']['personal_information']['address']['#state_province__weight'] = -1;
   $form['elements']['personal_information']['address']['#city__weight'] = 0;
-  // If user selects 'United States' for Country, State and City fields are required.
+  // If user selects 'United States', State & City are required.
   $form['elements']['personal_information']['address']['#state_province__states'] = [
     'required' => [
-      ':input[name="address[country]"]' => ['value' => 'United States']
+      ':input[name="address[country]"]' => ['value' => 'United States'],
     ],
   ];
   $form['elements']['personal_information']['address']['#city__states'] = [
     'required' => [
-      ':input[name="address[country]"]' => ['value' => 'United States']
+      ':input[name="address[country]"]' => ['value' => 'United States'],
     ],
   ];
   $form['#attached']['library'][] = 'capitalcamp_glue/registration_form';
-  // Add custom validation to ensure City and State are filled out if Country is 'United States'.
+  // Custom validation to ensure City and State are filled for 'United States'.
   $form['#validate'][] = '_capitalcamp_glue_webform_submission_registration_form_validate';
   return $form;
 }
