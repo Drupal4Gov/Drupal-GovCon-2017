@@ -11,6 +11,7 @@ module.exports = function (gulp, plugins, options) {
         ['compile:sass'],
         ['clean:svg'],
         ['compile:svg'],
+        ['uglify:js'],
         ['compile:styleguide', 'minify:css'],
         ['lint:js-gulp', 'lint:js-with-fail'], cb
     );
@@ -21,6 +22,7 @@ module.exports = function (gulp, plugins, options) {
         ['compile:sass'],
         ['clean:svg'],
         ['compile:svg'],
+        ['uglify:js'],
         ['compile:styleguide', 'minify:css'],
         ['lint:js-gulp', 'lint:js'], cb
     );
