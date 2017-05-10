@@ -124,10 +124,13 @@
           margin-top: -1px; //move up to hide pixel
           position: absolute;
           overflow: hidden;
+          &.focus {
+            height: auto;
+            max-height: 40rem;
+          }
         }
 
-        &:hover .nav__items--second-level,
-        &:focus .nav__items--second-level {
+        &:hover .nav__items--second-level {
           height: auto;
           max-height: 40rem;
           transition: all 2s cubic-bezier(.5, 1, .22, 1);
