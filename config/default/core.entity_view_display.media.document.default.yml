@@ -29,12 +29,14 @@ content:
       custom_date_format: ''
       timezone: ''
     third_party_settings: {  }
+    region: content
   field_document:
     weight: 2
     label: above
     settings: {  }
     third_party_settings: {  }
     type: file_default
+    region: content
   field_document_size:
     weight: 4
     label: above
@@ -43,6 +45,7 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     type: number_integer
+    region: content
   field_mime_type:
     weight: 3
     label: above
@@ -50,6 +53,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   name:
     label: hidden
     type: string
@@ -57,6 +61,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    region: content
   thumbnail:
     type: image
     weight: 1
@@ -65,11 +70,13 @@ content:
       image_style: thumbnail
       image_link: ''
     third_party_settings: {  }
+    region: content
   uid:
     label: hidden
     type: author
     weight: 0
     settings: {  }
     third_party_settings: {  }
+    region: content
 hidden:
   field_media_in_library: true

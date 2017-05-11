@@ -17,18 +17,21 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: basic_string
+    region: content
   mail:
     weight: 1
     label: inline
     settings: {  }
     third_party_settings: {  }
     type: basic_string
+    region: content
   message:
     type: basic_string
     weight: 3
     label: above
     settings: {  }
     third_party_settings: {  }
+    region: content
   name:
     weight: 0
     label: inline
@@ -36,6 +39,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   subject:
     weight: 2
     label: inline
@@ -43,5 +47,6 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
 hidden:
   field_email: true

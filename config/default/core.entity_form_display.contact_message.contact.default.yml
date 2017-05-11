@@ -18,6 +18,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: email_default
+    region: content
   field_message:
     weight: 1
     settings:
@@ -25,10 +26,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
+    region: content
   preview:
     weight: 2
     settings: {  }
     third_party_settings: {  }
+    region: content
 hidden:
   copy: true
   mail: true
