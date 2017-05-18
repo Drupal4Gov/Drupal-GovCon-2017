@@ -34,7 +34,6 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
-    region: content
   field_sponsor_related_attendees:
     weight: 105
     label: above
@@ -42,7 +41,6 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
-    region: content
   field_sponsor_sponsorship_level:
     weight: 104
     label: above
@@ -50,7 +48,6 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
-    region: content
   field_sponsor_url:
     weight: 102
     label: above
@@ -62,10 +59,8 @@ content:
       rel: '0'
     third_party_settings: {  }
     type: link
-    region: content
   links:
     weight: 100
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden: {  }
