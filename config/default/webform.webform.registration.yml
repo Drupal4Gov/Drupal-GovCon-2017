@@ -125,7 +125,7 @@ handlers:
       from_options: {  }
       from_name: default
       subject: 'Thank you for registering for Drupal GovCon 2017'
-      body: "You&#39;ve been&nbsp;registered&nbsp;for&nbsp;Drupal&nbsp;GovCon 2017 and have secured a ticket to the event.<br />\n<br />\nNext steps: <a href=\"https://www.drupalgovcon.org/user/login?destination=node/add/session\">Submit a session</a>! Tell your friends about <a href=\"https://www.drupalgovcon.org/\">Drupal GovCon</a>!<br />\n<br />\nusername:&nbsp;[webform-authenticated-user:account-name]<br />\npassword: your password<br />\n<br />\nSubscribe to our newsletter:<br />\n<a href=\"http://eepurl.com/bbJASn\">http://eepurl.com/bbJASn</a><br />\n<br />\nFollow us on social media:<br />\n<a href=\"https://twitter.com/drupalgovcon\">https://twitter.com/drupalgovcon</a><br />\n<a href=\"https://www.facebook.com/DrupalGovCon\">https://www.facebook.com/DrupalGovCon</a><br />\n<br />\n-- Drupal&nbsp;GovCon&nbsp;team"
+      body: "<p>You&#39;ve been registered for Drupal GovCon 2017 and have secured a ticket to the event.</p>\n\n<p>Next steps: Tell your friends about Drupal GovCon!</p>\n\n<p>username:&nbsp;[webform-authenticated-user:account-name]<br />\npassword: your password</p>\n\n<p>Change your mind about getting email alerts? Subscribe to our e-mail list:<br />\n<a href=\"http://eepurl.com/bbJASn\">http://eepurl.com/bbJASn</a></p>\nFollow us on social media:<br />\n<a href=\"https://twitter.com/drupalgovcon\">https://twitter.com/drupalgovcon</a><br />\n<a href=\"https://www.facebook.com/DrupalGovCon\">https://www.facebook.com/DrupalGovCon</a><br />\n<br />\n-- Drupal&nbsp;GovCon&nbsp;team"
       excluded_elements:
         attendee_e_mail_address: attendee_e_mail_address
         first_name: first_name
