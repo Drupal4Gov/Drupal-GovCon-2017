@@ -89,11 +89,34 @@ label.option {
   display: inline-block;
 }
 
+
 .inputfile:focus + label,
 .inputfile + label:hover {
   background: rgba(134,151,58,1) url('../images/GovCon-FileUpload-SM-Rev.svg') 4% center no-repeat;
   background-size: 1em;
   padding: 0.25em 0.5em 0.125em 2em;
+  display: inline-block;
+}
+
+
+.form-file {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.js-form-managed-file.form-managed-file input {
+  font-size: 1.2em;
+  font-weight: normal;
+  color: $wht;
+  background: rgba(0,62,106,1) url('../images/GovCon-FileUpload-SM-Rev.svg') 8% center no-repeat;
+  background-size: 1em;
+  padding: 0.25em 0.5em 0.125em 2.5em;
+  border-radius: 0.25em;
+  border: 1px solid rgba(0,62,106,1);
   display: inline-block;
 }
 
