@@ -5,6 +5,9 @@ vagrant_machine_name: capitalcamp
 # Use Ubuntu 14.04 LTS so PHP 5.6 can be installed.
 vagrant_box: geerlingguy/ubuntu1404
 
+# Set the IP address so it doesn't conflict with other Drupal VM instances.
+vagrant_ip: 192.168.25.13
+
 # Set drupal_site_name to the project's human-readable name.
 drupal_site_name: "Drupal GovCon"
 
@@ -45,13 +48,16 @@ nodejs_install_npm_user: "{{ drupalvm_user }}"
 npm_config_prefix: "/home/{{ drupalvm_user }}/.npm-global"
 installed_extras:
   - adminer
+  - drush
   - nodejs
   - selenium
   - memcached
+  - xdebug
 
 # Use PHP 5.6 and change package names to work with 5.6.
 php_version: "5.6"
 php_install_recommends: no
+php_memory_limit: "256M"
 php_packages:
   - php5.6
   - php5.6-apcu
