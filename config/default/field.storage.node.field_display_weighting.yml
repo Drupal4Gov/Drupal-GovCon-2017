@@ -1,0 +1,51 @@
+uuid: b6b0a1c6-da05-4a2e-a244-af8f35b2d4c9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_display_weighting
+field_name: field_display_weighting
+entity_type: node
+type: list_integer
+settings:
+  allowed_values:
+    -
+      value: 1
+      label: '1'
+    -
+      value: 2
+      label: '2'
+    -
+      value: 3
+      label: '3'
+    -
+      value: 4
+      label: '4'
+    -
+      value: 5
+      label: '5'
+    -
+      value: 6
+      label: '6'
+    -
+      value: 7
+      label: '7'
+    -
+      value: 8
+      label: '8'
+    -
+      value: 9
+      label: '9'
+    -
+      value: 10
+      label: '10'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

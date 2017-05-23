@@ -1,0 +1,32 @@
+uuid: eabcfaec-31fb-481c-909a-ee8e891ee51a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.special_announcement.body
+    - field.field.node.special_announcement.field_display_weighting
+    - node.type.special_announcement
+  module:
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.special_announcement.default
+targetEntityType: node
+bundle: special_announcement
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_display_weighting: true
+  links: true

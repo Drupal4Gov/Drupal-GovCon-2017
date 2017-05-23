@@ -1,0 +1,22 @@
+uuid: 37bdc718-15ea-49cf-a2db-684ac1cb18bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.special_announcement
+  module:
+    - text
+id: node.special_announcement.body
+field_name: body
+entity_type: node
+bundle: special_announcement
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

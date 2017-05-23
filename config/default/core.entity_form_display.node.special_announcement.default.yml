@@ -1,0 +1,46 @@
+uuid: 575737c7-5330-4586-b3c2-e625912e823c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.special_announcement.body
+    - field.field.node.special_announcement.field_display_weighting
+    - node.type.special_announcement
+  module:
+    - text
+    - workbench_moderation
+id: node.special_announcement.default
+targetEntityType: node
+bundle: special_announcement
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 31
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+  field_display_weighting:
+    weight: 32
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  title:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  path: true
+  promote: true
+  sticky: true
+  uid: true

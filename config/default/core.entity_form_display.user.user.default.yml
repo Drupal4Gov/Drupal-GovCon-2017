@@ -25,7 +25,6 @@ content:
     weight: 0
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_bio:
     weight: 3
     settings:
@@ -33,7 +32,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
-    region: content
   field_company:
     weight: 6
     settings:
@@ -41,7 +39,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-    region: content
   field_drupal_org_username:
     weight: 5
     settings:
@@ -49,7 +46,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-    region: content
   field_first_name:
     weight: 1
     settings:
@@ -57,7 +53,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-    region: content
   field_job_title:
     weight: 7
     settings:
@@ -65,7 +60,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-    region: content
   field_last_name:
     weight: 2
     settings:
@@ -73,7 +67,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-    region: content
   field_picture:
     type: image_image
     weight: 4
@@ -81,27 +74,22 @@ content:
       preview_image_style: thumbnail
       progress_indicator: throbber
     third_party_settings: {  }
-    region: content
   google_analytics:
     weight: 8
     settings: {  }
     third_party_settings: {  }
-    region: content
   language:
     weight: 11
     settings: {  }
     third_party_settings: {  }
-    region: content
   path:
     type: path
     weight: 12
     settings: {  }
     third_party_settings: {  }
-    region: content
   timezone:
     weight: 10
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   contact: true

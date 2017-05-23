@@ -1,0 +1,17 @@
+uuid: 85d0640c-5c43-4bee-b1e6-3d6d93f3eb92
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Special Announcement'
+type: special_announcement
+description: 'Use this to display special announcements on the homepage. By default, these are time-limited, and will expire one week after posting, unless edited again.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false
