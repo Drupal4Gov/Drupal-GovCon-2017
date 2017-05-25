@@ -27,9 +27,11 @@ body {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5,
+h6 {
   color: $heading;
-  font-weight: 400;
+  font-weight: 500;
   font-family: $heading_font;
   padding: 0 0 .3em;
   margin: 0;
@@ -37,21 +39,41 @@ h4 {
 h1 {
   font-size: 280%;
   line-height: 165%;
+  font-weight: 600;
   color: $blu;
 }
 h2 {
   font-size: 230%;
-  line-height: 145%;
+  line-height: 120%;
+  padding: 1em 0 0 0;
 }
 h3 {
   font-size: 210%;
-  line-height: 145%;
+  line-height: 100%;
   color: $green;
+  padding: .75em 0 0 0;
 }
 h4 {
   font-size: 190%;
-  line-height: 145%;
+  line-height: 100%;
   color: $md-gr;
+  padding: .5em 0 0 0;
+}
+h5 {
+  font-size: 150%;
+  line-height: 110%;
+  color: $md-gr;
+  padding: .5em 0 0 0;
+}
+h6 {
+  font-size: 120%;
+  line-height: 100%;
+  color: $md-gr;
+  padding: .5em 0 0 0;
+}
+h3 + p {
+  padding-top: 0;
+  margin-top: 0;
 }
 body .menu-item {
   padding-top: 0;
