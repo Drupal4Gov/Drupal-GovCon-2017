@@ -8,6 +8,9 @@ vagrant_box: geerlingguy/ubuntu1404
 # Set drupal_site_name to the project's human-readable name.
 drupal_site_name: "Drupal GovCon"
 
+# Set the Drush Version
+drush_version: "8.x"
+
 # Provide the path to the project root to Vagrant.
 vagrant_synced_folders:
   # Set the local_path for the first synced folder to `.`.
