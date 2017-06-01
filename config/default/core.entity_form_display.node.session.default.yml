@@ -3,20 +3,35 @@ langcode: en
 status: true
 dependencies:
   config:
-    - entity_browser.browser.image_browser
     - field.field.node.session.body
     - field.field.node.session.field_experience_level
     - field.field.node.session.field_files
-    - field.field.node.session.field_image
     - field.field.node.session.field_session_track
+    - field.field.node.session.field_slides_link
     - field.field.node.session.field_status
     - node.type.session
   module:
-    - entity_browser
+    - field_group
     - file
+    - link
     - path
     - text
     - workbench_moderation
+third_party_settings:
+  field_group:
+    group_slides:
+      children:
+        - field_files
+        - field_slides_link
+      parent_name: ''
+      weight: 9
+      format_type: fieldset
+      format_settings:
+        description: ''
+        classes: ''
+        id: ''
+        required_fields: true
+      label: Slides
 _core:
   default_config_hash: DV8OLbi-qcGglfofiDQUJ4P1qPscvwMsPVe80-OoIBo
 id: node.session.default
@@ -46,24 +61,11 @@ content:
     type: options_select
     region: content
   field_files:
-    weight: 9
+    weight: 10
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
-    region: content
-  field_image:
-    type: entity_browser_file
-    weight: 11
-    settings:
-      entity_browser: image_browser
-      field_widget_edit: true
-      field_widget_remove: true
-      view_mode: default
-      preview_image_style: thumbnail
-      open: true
-      selection_mode: selection_append
-    third_party_settings: {  }
     region: content
   field_session_track:
     weight: 1
@@ -77,6 +79,13 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
+  field_slides_link:
+    weight: 11
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
   path:
     type: path
     weight: 7
@@ -114,4 +123,5 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  field_status: true
