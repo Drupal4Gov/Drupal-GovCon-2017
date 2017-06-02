@@ -105,7 +105,8 @@ access:
       - authenticated
     users: {  }
   delete_own:
-    roles: {  }
+    roles:
+      - authenticated
     users: {  }
 handlers:
   email:
