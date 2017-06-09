@@ -1,0 +1,39 @@
+// Critical Announcements
+//
+// Critical announcements to be run in the header.
+//
+// Markup: criticalannouncements.twig
+//
+// Style guide: components.criticalannouncements
+
+.critical-announcements {
+	background: rgba(96,12,12,1);
+	padding: 1em;
+	margin: 0;
+}
+
+.critical-announcements p {
+	font-size: 1.5em;
+	color: $wht;
+	margin: 0;
+	background: url('/themes/custom/twentyseventeen/images/GovCon-AlertIcon-SM-Rev.svg') 0% center no-repeat;
+	padding-left: 1.5em;
+	padding-top: 0.25em;
+	
+}
+
+.critical-announcements a:link,
+.critical-announcements a:visited {
+	color: rgba($wht, 0.5);
+	text-decoration: none;
+}
+
+.critical-announcements a:hover {
+	color: rgba($wht, 1);
+}
+
+    @include breakpoint($min-tablet) {
+    	.critical-announcements {
+    		color: #0f0;
+    	}
+  }
