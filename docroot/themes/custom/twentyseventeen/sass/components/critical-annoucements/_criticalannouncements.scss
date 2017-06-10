@@ -13,11 +13,13 @@
 }
 
 .critical-announcements p {
-	font-size: 1.5em;
+	font-size: 1.25em;
 	color: $wht;
 	margin: 0;
 	background: url('/themes/custom/twentyseventeen/images/GovCon-AlertIcon-SM-Rev.svg') 0% center no-repeat;
-	padding-left: 1.5em;
+	background-size: 1.25em;
+	width: 100%;
+	padding-left: 2em;
 	padding-top: 0.25em;
 	
 }
@@ -33,7 +35,8 @@
 }
 
     @include breakpoint($min-tablet) {
-    	.critical-announcements {
-    		color: #0f0;
+    	.critical-announcements p {
+    		max-width: 80em;
+    		margin: 0 auto;
     	}
   }
