@@ -1,0 +1,60 @@
+// 404-Not Found Page
+//
+// 404-Not Found Page styling. Responsively styled with CSS animations.
+//
+// Markup: 404notfound.twig
+//
+// Style guide: components.404notfound
+
+.notificationmessage__wrapper {
+  width: 100%;
+  display: block;
+  margin: 4em 0 0 0;
+  padding-bottom: 4em;
+  position: relative;
+  text-align: center;
+}
+
+.notificationmessage__wrapper h1 {
+  color: rgba(0,62,106,1);
+  font-size: 2.5em;
+  font-weight: 600;
+
+}
+
+.notificationmessage__wrapper p {
+  font-size: 1.5em;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+
+.notificationtitle {
+  width: 100%;
+  display: block;
+}
+
+.notificationtitle img {
+  width: 80%;
+  opacity: 0.25;
+}
+
+.notificationimage {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.spinner_image {
+  width: 30%;
+  opacity: 0.5;
+  -webkit-animation:spin 4s linear infinite;
+  -moz-animation:spin 4s linear infinite;
+  animation:spin 4s linear infinite;
+  }
+  @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+  @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+  @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
