@@ -1,0 +1,47 @@
+.view-id-accepted_sessions,
+.view-id-new_proposed_sessions {
+  .views-row {
+    margin-bottom: 2em;
+  }
+  .views-field-name {
+    padding-bottom: .09em;
+  }
+  .views-field-view {
+    margin-bottom: 1.5rem;
+    background: rgba(134, 151, 58, 0.05);
+    border-radius: 0.25em;
+    border: 1px solid #ccc;
+    padding: 1.2rem;
+  }
+  .content__button {
+    a {
+      color: rgba(255,255,255,1);
+      background: rgba(0,62,106,1);
+      font-size: 1.2em;
+      background-size: 1em;
+      border: 1px solid rgba(0,62,106,1);
+      padding: 0.25em 0.5em 0.25em 0.5em;
+      border-radius: 0.25em;
+      &:hover {
+        background: rgba(134,151,58,1);
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.view-id-proposed_sessions {
+  .views-row {
+    margin-bottom: 0;
+    padding-bottom: 1.5em;
+  }
+  .views-field-title {
+    padding-bottom: 0;
+  }
+  .views-row-last {
+    padding-bottom: 0;
+  }
+}
+.views-row-last {
+  margin-bottom: 4grem;
+}
