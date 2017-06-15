@@ -25,7 +25,7 @@
     "prefer-stable": true,
     "require": {
         "drush/drush": "^8.1.8",
-        "acquia/blt": "^8.6.14",
+        "acquia/blt": "8.6.14",
         "composer/installers": "^1.0.20",
         "cweagans/composer-patches": "^1.6.0",
         "drupal/acsf": "^1.32.0",
@@ -43,7 +43,7 @@
         "drupal/acquia_purge": "1.x-dev",
         "drupal/cloudflare": "^1.0.0-alpha7",
         "drupal/purge": "^3.0.0-beta6",
-        "acquia/lightning": "^2",
+        "acquia/lightning": "2.0.3",
         "drupal/seckit": "^1.0.0-alpha2",
         "drupal/shield": "^1.0.0",
         "drupal/extlink": "^1.0",
@@ -148,6 +148,10 @@
             },
             "drupal/acquia_purge": {
                 "Bypass Acquia purge alpha program check to enable tag based purging.": "patches/purge-bypass-alpha-program.patch"
+            },
+            "drupal/flag": {
+                "Flag links redirect to /views/ajax when shown in an AJAX-enabled view": "https://www.drupal.org/files/issues/flag-redirect_to_parent_path-2849217-4.patch",
+                "AJAX link not working when used in view": "https://www.drupal.org/files/issues/viewsAjaxLink_2846111_11.patch"
             }
         },
         "drupal-scaffold": {

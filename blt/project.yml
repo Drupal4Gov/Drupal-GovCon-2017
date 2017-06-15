@@ -53,4 +53,8 @@ modules:
 behat:
   paths:
     - '${repo.root}/tests/behat'
+phpcs:
+  filesets:
+    - files.php.custom.modules
+    - files.php.tests
 
