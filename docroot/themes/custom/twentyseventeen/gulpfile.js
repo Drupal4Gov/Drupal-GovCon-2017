@@ -74,7 +74,9 @@ var plugins = require('gulp-load-plugins')({
     'node-sass-import-once': 'importOnce',
     'gulp-sass-glob': 'sassGlob',
     'run-sequence': 'runSequence',
-    'gulp-clean-css': 'cleanCSS'
+    'gulp-clean-css': 'cleanCSS',
+    'gulp-uglify': 'uglify',
+    'gulp-if': 'gulpif'
   }
 });
 
@@ -87,7 +89,10 @@ var paths = {
     source: 'sass/',
     destination: 'css/'
   },
-  scripts: 'js/',
+  scripts: {
+    source: 'js/src/',
+    destination: 'js/build/'
+  },
   images: 'images/',
   styleGuide: 'styleguide'
 };
@@ -113,8 +118,8 @@ var options = {
 
   // ----- JS ----- //
   js: {
-    files: paths.scripts + '**/*.js',
-    destination: paths.scripts
+    files: paths.scripts.source + '**/*.js',
+    destination: paths.scripts.destination
 
   },
 
@@ -177,6 +182,7 @@ require('./gulp-tasks/compile-styleguide')(gulp, plugins, options);
 require('./gulp-tasks/compile-svg')(gulp, plugins, options);
 require('./gulp-tasks/default')(gulp, plugins, options);
 require('./gulp-tasks/lint-js')(gulp, plugins, options);
+require('./gulp-tasks/uglify')(gulp, plugins, options);
 require('./gulp-tasks/minify-css')(gulp, plugins, options);
 require('./gulp-tasks/test-css')(gulp, plugins, options);
 require('./gulp-tasks/watch')(gulp, plugins, options);

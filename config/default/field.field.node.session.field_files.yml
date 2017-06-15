@@ -13,17 +13,17 @@ id: node.session.field_files
 field_name: field_files
 entity_type: node
 bundle: session
-label: Slides
-description: ''
+label: 'Supporting Documents'
+description: 'Upload your presentation and/or any files referenced in your session. You may also link to slides, code repos, or other external resources in the Description field.'
 required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
   file_directory: 'session/slides/[date:custom:Y]-[date:custom:m]'
-  file_extensions: txt
-  max_filesize: ''
-  description_field: false
+  file_extensions: 'ppt pptx pdf mkey odp otp odg'
+  max_filesize: '10 MB'
+  description_field: true
   handler: 'default:file'
   handler_settings: {  }
 field_type: file
