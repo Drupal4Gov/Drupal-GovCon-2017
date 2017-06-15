@@ -60,7 +60,8 @@
         "drupal-cod/program": "dev-master",
         "drupal/field_group": "1.0-rc6",
         "drupal/r4032login": "dev-1.x",
-        "drupal/block_exclude_pages": "^1.2"
+        "drupal/block_exclude_pages": "^1.2",
+        "drupal/flag": "^4.0@alpha"
     },
     "require-dev": {
         "behat/behat": "^3.1",
@@ -143,8 +144,9 @@
             "drupal/core": {
                 "Ignore front end vendor folders to improve directory search performance": "https://www.drupal.org/files/issues/ignore_front_end_vendor-2329453-116.patch"
             },
-            "drupal/acquia_purge": {
-                "Bypass Acquia purge alpha program check to enable tag based purging.": "patches/purge-bypass-alpha-program.patch"
+            "drupal/flag": {
+                "Flag links redirect to /views/ajax when shown in an AJAX-enabled view": "https://www.drupal.org/files/issues/flag-redirect_to_parent_path-2849217-4.patch",
+                "AJAX link not working when used in view": "https://www.drupal.org/files/issues/viewsAjaxLink_2846111_11.patch"
             }
         },
         "drupal-scaffold": {
