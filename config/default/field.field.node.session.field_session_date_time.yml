@@ -1,0 +1,21 @@
+uuid: a6cb1521-cb76-4de2-ab19-bca16c945ad1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_session_date_time
+    - node.type.session
+  module:
+    - datetime
+id: node.session.field_session_date_time
+field_name: field_session_date_time
+entity_type: node
+bundle: session
+label: 'Date / Time'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

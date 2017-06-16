@@ -3,8 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
-    - ctools
-    - node
+    - system
   theme:
     - twentyseventeen
 _core:
@@ -12,7 +11,7 @@ _core:
 id: twentyseventeen_page_title
 theme: twentyseventeen
 region: content
-weight: -7
+weight: -10
 provider: null
 plugin: page_title_block
 settings:
@@ -21,17 +20,8 @@ settings:
   provider: core
   label_display: '0'
 visibility:
-  node_type:
-    id: node_type
-    bundles:
-      page: page
-    negate: false
-    context_mapping:
-      node: '@node.node_route_context:node'
-  'entity_bundle:webform_submission':
-    id: 'entity_bundle:webform_submission'
-    bundles:
-      contact: contact
-    negate: false
-    context_mapping:
-      webform_submission: '@webform.webform_submission_route_context:webform_submission'
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: true
+    context_mapping: {  }

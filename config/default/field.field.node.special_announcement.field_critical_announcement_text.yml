@@ -1,0 +1,21 @@
+uuid: 3aae7be1-4897-4a2a-be86-2c31ed695b3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_critical_announcement_text
+    - node.type.special_announcement
+  module:
+    - text
+id: node.special_announcement.field_critical_announcement_text
+field_name: field_critical_announcement_text
+entity_type: node
+bundle: special_announcement
+label: 'Critical Announcement Text'
+description: 'Use this to display critical announcements at the head of the page in a special banner.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

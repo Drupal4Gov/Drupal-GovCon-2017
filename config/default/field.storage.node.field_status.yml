@@ -3,8 +3,12 @@ langcode: en
 status: true
 dependencies:
   module:
+    - field_permissions
     - node
     - options
+third_party_settings:
+  field_permissions:
+    permission_type: custom
 _core:
   default_config_hash: 43C_EwOQl0vprOdvyrS3tWdfG2zmiW-QYR8zmm4KN_I
 id: node.field_status
