@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "dc13315b120fd4481383c4f6c5bade7e",
+    "content-hash": "22b978d0b7bff7afe950873452a8e64f",
     "packages": [
         {
             "name": "acquia/blt",
@@ -3859,18 +3859,6 @@
             }
         },
         {
-            "name": "drupal/flag",
-            "version": "4.0.0-alpha2",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/flag",
-                "reference": "8.x-4.0-alpha2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/flag-8.x-4.0-alpha2.zip",
-                "reference": null,
-                "shasum": "e9ead06aadc9d26364b9ad1225354b0c47d5ce02"
             "name": "drupal/field_permissions",
             "version": "dev-1.x",
             "source": {
@@ -3923,11 +3911,17 @@
         },
         {
             "name": "drupal/flag",
-            "version": "dev-4.x",
+            "version": "4.0.0-alpha2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/flag",
-                "reference": "4f9093a3da47d95dae1a3696309a0741e667dc3d"
+                "reference": "8.x-4.0-alpha2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/flag-8.x-4.0-alpha2.zip",
+                "reference": null,
+                "shasum": "e9ead06aadc9d26364b9ad1225354b0c47d5ce02"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -11884,10 +11878,9 @@
         "drupal/recaptcha": 20,
         "drupal/webform": 10,
         "drupal/webform_views": 20,
-        "drupal-cod/program": 20,
         "drupal/r4032login": 20,
-        "drupal/flag": 15
-        "drupal/field_permissions": 20,
+        "drupal/flag": 15,
+        "drupal/field_permissions": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
