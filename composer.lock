@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "dc13315b120fd4481383c4f6c5bade7e",
+    "content-hash": "22b978d0b7bff7afe950873452a8e64f",
     "packages": [
         {
             "name": "acquia/blt",
@@ -3859,6 +3859,60 @@
             }
         },
         {
+<<<<<<< 7b4e99e24b722ac998ae569d7657786905cf67ef
+=======
+            "name": "drupal/field_permissions",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/field_permissions",
+                "reference": "2f81e6dbe209b2a8301628169af8837f4d2fa090"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-beta2+0-dev",
+                    "datestamp": "1495836183"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "RobLoach",
+                    "homepage": "https://www.drupal.org/user/61114"
+                },
+                {
+                    "name": "jhedstrom",
+                    "homepage": "https://www.drupal.org/user/208732"
+                },
+                {
+                    "name": "mariacha1",
+                    "homepage": "https://www.drupal.org/user/2210776"
+                },
+                {
+                    "name": "markus_petrux",
+                    "homepage": "https://www.drupal.org/user/39593"
+                }
+            ],
+            "description": "The Field Permissions module allows site administrators to set field-level permissions to edit, view and create fields on any entity.",
+            "homepage": "https://www.drupal.org/project/field_permissions",
+            "support": {
+                "source": "http://cgit.drupalcode.org/field_permissions",
+                "issues": "https://www.drupal.org/project/issues/field_permissions"
+            },
+            "time": "2017-05-26 21:59:32"
+        },
+        {
+>>>>>>> dgc-365: Fix composer.json syntax and rebuild composer.lock after merge conflict
             "name": "drupal/flag",
             "version": "4.0.0-alpha2",
             "source": {
@@ -11768,9 +11822,13 @@
         "drupal/recaptcha": 20,
         "drupal/webform": 10,
         "drupal/webform_views": 20,
-        "drupal-cod/program": 20,
         "drupal/r4032login": 20,
+<<<<<<< 7b4e99e24b722ac998ae569d7657786905cf67ef
         "drupal/flag": 15
+=======
+        "drupal/flag": 15,
+        "drupal/field_permissions": 20
+>>>>>>> dgc-365: Fix composer.json syntax and rebuild composer.lock after merge conflict
     },
     "prefer-stable": true,
     "prefer-lowest": false,
