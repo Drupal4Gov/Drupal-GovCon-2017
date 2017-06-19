@@ -57,13 +57,17 @@
         "drupal/recaptcha": "dev-2.x",
         "drupal/webform": "^5.0@beta",
         "drupal/webform_views": "5.x-dev",
-        "drupal-cod/program": "master",
+        "drupal-cod/program": "dev-master",
         "drupal/field_group": "1.0-rc6",
         "drupal/r4032login": "dev-1.x",
         "drupal/block_exclude_pages": "^1.2",
+<<<<<<< 7b4e99e24b722ac998ae569d7657786905cf67ef
+        "drupal/flag": "^4.0@alpha"
+=======
+        "drupal/flag": "^4.0@alpha",
         "drupal/views_field_view": "^1.0",
-        "drupal/field_permissions": "1.x-dev",
-        "drupal/flag": "4.x-dev"
+        "drupal/field_permissions": "1.x-dev"
+>>>>>>> dgc-365: Fix composer.json syntax and rebuild composer.lock after merge conflict
     },
     "require-dev": {
         "behat/behat": "^3.1",
@@ -146,8 +150,9 @@
             "drupal/core": {
                 "Ignore front end vendor folders to improve directory search performance": "https://www.drupal.org/files/issues/ignore_front_end_vendor-2329453-116.patch"
             },
-            "drupal/acquia_purge": {
-                "Bypass Acquia purge alpha program check to enable tag based purging.": "patches/purge-bypass-alpha-program.patch"
+            "drupal/flag": {
+                "Flag links redirect to /views/ajax when shown in an AJAX-enabled view": "https://www.drupal.org/files/issues/flag-redirect_to_parent_path-2849217-4.patch",
+                "AJAX link not working when used in view": "https://www.drupal.org/files/issues/viewsAjaxLink_2846111_11.patch"
             }
         },
         "drupal-scaffold": {
