@@ -18,21 +18,67 @@
 
 .program-schedule .views-exposed-form .form-item.js-form-type-select.form-type-select.form-item-sort-by,
 .program-schedule .views-exposed-form .form-item.js-form-type-select.form-type-select.form-item-sort-order,
+.program-schedule .views-exposed-form .form-item.js-form-type-select.form-type-select.form-item-field-experience-level-value,
+.program-schedule .views-exposed-form .form-item.js-form-type-select.form-type-select.form-item-field-session-track-target-id,
 .program-schedule .views-exposed-form .form-actions.js-form-wrapper.form-wrapper {
 	display: inline-block;
 }
 
-.program-schedule .views-exposed-form .form-actions.js-form-wrapper.form-wrapper {
-	margin-bottom: 1em;
+.program-schedule .views-exposed-form .form-actions.js-form-wrapper.form-wrapper,
+.program-schedule .views-exposed-form {
+	//margin-bottom: 1em;
 	//border: 1px solid #f00;
+	margin-bottom: 0;
+}
+
+.program-schedule #edit-field-schedule-date-value {
+	//border: 1px solid #0f0;
+	padding-left: 0.27em;
+	
+}
+
+.program-schedule .views-exposed-form select {
+	width: 8em;
+}
+
+
+.program-schedule #edit-field-schedule-date-value > div:first-child {
+	display: none;
+}
+
+.program-schedule #edit-field-schedule-date-value > div {
+	display: inline-block;
+	font-weight: 400;
+	font-size: 1.2em;
+}
+
+.program-schedule #edit-field-schedule-date-value > div a:link,
+.program-schedule #edit-field-schedule-date-value > div a:visited {
+	padding: 0.5em;
+	color: rgba(255,255,255,1);
+	background: rgba($green,0.75);
+	text-decoration: none;
+	margin-left: -0.23em;
+}
+
+.program-schedule #edit-field-schedule-date-value > div a.bef-link-active {
+	background: rgba($green,1);
 }
 
 
 .program-schedule .view-grouping-header {
 	text-transform: uppercase;
-	font-size: 2em;
+	font-size: 1.5em;
 	font-weight: bold;
-	color: $blu;
+	color: $wht;
+	letter-spacing: 0.02em;
+	background: rgba($green,1);
+	border-top: 2px solid $green;
+	padding: 0.5em 0.5em 0.375em 0.5em;
+}
+
+.program-schedule .view-grouping {
+	margin-top: -1em;
 }
 
 .program-schedule .view-grouping .view-grouping-content h3 time {
@@ -41,6 +87,8 @@
 	color: $green;
 	width: 100%;
 	margin-top: 1em;
+	margin-bottom: -0.29em;
+	border-bottom: 4px solid $green;
 }
 
 .program-schedule .view-grouping .view-grouping-content h3 {
@@ -54,8 +102,8 @@
 	
 }
 
-.program-schedule .views-row:nth-child(2) {
-	border-top: 4px solid $green;
+.program-schedule .views-row > div:first-child {
+	//border-top: 4px solid $green;
 	
 }
 
