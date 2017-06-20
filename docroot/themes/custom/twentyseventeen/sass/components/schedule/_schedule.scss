@@ -31,7 +31,8 @@
 	margin-bottom: 0;
 }
 
-.program-schedule #edit-field-schedule-date-value {
+.program-schedule #edit-field-schedule-date-value,
+.program-schedule #edit-field-schedule-time-value {
 	//border: 1px solid #0f0;
 	padding-left: 0.27em;
 	
@@ -42,18 +43,22 @@
 }
 
 
-.program-schedule #edit-field-schedule-date-value > div:first-child {
+.program-schedule #edit-field-schedule-date-value > div:first-child,
+.program-schedule #edit-field-schedule-time-value > div:first-child {
 	display: none;
 }
 
-.program-schedule #edit-field-schedule-date-value > div {
+.program-schedule #edit-field-schedule-date-value > div,
+.program-schedule #edit-field-schedule-time-value > div {
 	display: inline-block;
 	font-weight: 400;
 	font-size: 1.2em;
 }
 
 .program-schedule #edit-field-schedule-date-value > div a:link,
-.program-schedule #edit-field-schedule-date-value > div a:visited {
+.program-schedule #edit-field-schedule-date-value > div a:visited,
+.program-schedule #edit-field-schedule-time-value > div a:link,
+.program-schedule #edit-field-schedule-time-value > div a:visited {
 	padding: 0.5em;
 	color: rgba(255,255,255,1);
 	background: rgba($green,0.75);
@@ -61,7 +66,8 @@
 	margin-left: -0.23em;
 }
 
-.program-schedule #edit-field-schedule-date-value > div a.bef-link-active {
+.program-schedule #edit-field-schedule-date-value > div a.bef-link-active,
+.program-schedule #edit-field-schedule-time-value > div a.bef-link-active {
 	background: rgba($green,1);
 }
 
@@ -87,7 +93,7 @@
 	color: $green;
 	width: 100%;
 	margin-top: 1em;
-	margin-bottom: -0.29em;
+	margin-bottom: -0.30em;
 	border-bottom: 4px solid $green;
 }
 
@@ -100,12 +106,11 @@
 	border-top: 2px solid $green;
 	padding: 0.5em 0.25em 1em 0.25em;
 	
+
+.program-schedule .views-row:nth-child(2) {
+	background: rgba(255,0,0,1);
 }
 
-.program-schedule .views-row > div:first-child {
-	//border-top: 4px solid $green;
-	
-}
 
 .program-schedule .views-row:nth-child(even) {
 	background: rgba($green, 0.1);
@@ -124,63 +129,6 @@
 }
 
 
-.introduction__dek {
-	text-align: center;
-}
-
-.introduction__dek h2 {
-	font-size: 2em;
-	margin-bottom: 0;
-	padding-bottom: 0;
-	font-weight: bold;
-}
-
-.introduction__dek h3 {
-	color: rgba(134,151,58,1);
-	font-size: 1.6em;
-	margin-top: 0;
-	line-height: 1.2;
-	margin-bottom: 0.5em;
-}
-
-.introduction__dek p {
-	text-align: left;
-	font-size: 1.2em;
-	line-height: 1.35em;
-	margin-top: 0.5em;
-	color: $md-gr;
-}
-
-
-.introduction__info {
-	margin: 2em 0;
-}
-
-.introduction__info h3 {
-	font-size: 1.2em;
-	font-weight: bold;
-	padding-bottom: 0;
-	margin-top: 1em;
-
-}
-
-.introduction__info h3:first-child {
-	margin-top: 0;
-}
-
-.introduction__info p {
-	margin-top: 0;
-}
-
     @include breakpoint($min-tablet) {
-    	.introduction__dek p {
-    	}
-    	.introduction__dek {
-			padding: 0 10%;
-		}
-
-
-		.introduction__info {
-			padding: 0 10%;
-		}
+    	
   }

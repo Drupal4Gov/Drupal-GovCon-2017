@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.session.field_experience_level
     - field.field.node.session.field_files
     - field.field.node.session.field_image
+    - field.field.node.session.field_schedule_time
     - field.field.node.session.field_session_co_presenter_s_
     - field.field.node.session.field_session_date_time
     - field.field.node.session.field_session_room
@@ -84,6 +85,12 @@ content:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
+    region: content
+  field_schedule_time:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_session_co_presenter_s_:
     weight: 26
