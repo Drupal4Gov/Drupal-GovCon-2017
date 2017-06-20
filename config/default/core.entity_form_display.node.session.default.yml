@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.session.field_files
     - field.field.node.session.field_image
     - field.field.node.session.field_session_co_presenter_s_
+    - field.field.node.session.field_schedule_date
     - field.field.node.session.field_session_date_time
     - field.field.node.session.field_session_room
     - field.field.node.session.field_session_track
@@ -93,6 +94,11 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+  field_schedule_date:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_session_date_time:
     weight: 11

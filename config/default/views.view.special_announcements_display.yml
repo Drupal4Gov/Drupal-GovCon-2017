@@ -394,6 +394,7 @@ display:
       defaults:
         fields: false
         css_class: false
+<<<<<<< HEAD
         filters: false
         filter_groups: false
       css_class: critical-announcements
@@ -501,6 +502,10 @@ display:
         operator: AND
         groups:
           1: AND
+=======
+      css_class: critical-announcements
+      block_hide_empty: true
+>>>>>>> DGC-440: Configuration for new views and content fields exported.
     cache_metadata:
       max-age: -1
       contexts:
