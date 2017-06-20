@@ -394,7 +394,6 @@ display:
       defaults:
         fields: false
         css_class: false
-        filters: false
         filter_groups: false
       css_class: critical-announcements
       block_hide_empty: true
@@ -501,6 +500,8 @@ display:
         operator: AND
         groups:
           1: AND
+      css_class: critical-announcements
+      block_hide_empty: true
     cache_metadata:
       max-age: -1
       contexts:
