@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.session.field_files
     - field.field.node.session.field_image
     - field.field.node.session.field_schedule_date
+    - field.field.node.session.field_session_co_presenter_s_
     - field.field.node.session.field_session_date_time
     - field.field.node.session.field_session_room
     - field.field.node.session.field_session_track
@@ -99,7 +100,7 @@ content:
     third_party_settings: {  }
   field_session_track:
     weight: 4
-    label: above
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
@@ -107,7 +108,7 @@ content:
     region: content
   field_slides_link:
     weight: 6
-    label: above
+    label: inline
     settings:
       trim_length: 80
       url_only: false
@@ -119,7 +120,7 @@ content:
     region: content
   field_status:
     weight: 3
-    label: above
+    label: inline
     settings: {  }
     third_party_settings: {  }
     type: list_default
@@ -127,4 +128,7 @@ content:
 hidden:
   field_image: true
   field_schedule_date: true
+  field_session_co_presenter_s_: true
+  field_session_date_time: true
+  field_session_room: true
   links: true

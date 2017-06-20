@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a8fd0f48bff1a487e1beb6a59c2c58f7",
-    "content-hash": "f0fbe59e4b43831a16b39995ef0011f5",
+    "hash": "9f9082360b11b55900f008a21422a656",
+    "content-hash": "29d1695252839823763255a05aaca3b8",
     "packages": [
         {
             "name": "acquia/blt",
@@ -3904,6 +3904,72 @@
                 "issues": "https://www.drupal.org/project/issues/field_permissions"
             },
             "time": "2017-05-26 21:59:32"
+        },
+        {
+            "name": "drupal/flag",
+            "version": "dev-4.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/flag",
+                "reference": "4f9093a3da47d95dae1a3696309a0741e667dc3d"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-4.x": "4.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-4.0-alpha2+7-dev",
+                    "datestamp": "1497044041"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "fago",
+                    "homepage": "https://www.drupal.org/user/16747"
+                },
+                {
+                    "name": "fubhy",
+                    "homepage": "https://www.drupal.org/user/761344"
+                },
+                {
+                    "name": "joachim",
+                    "homepage": "https://www.drupal.org/user/107701"
+                },
+                {
+                    "name": "merlinofchaos",
+                    "homepage": "https://www.drupal.org/user/26979"
+                },
+                {
+                    "name": "mooffie",
+                    "homepage": "https://www.drupal.org/user/78454"
+                },
+                {
+                    "name": "quicksketch",
+                    "homepage": "https://www.drupal.org/user/35821"
+                },
+                {
+                    "name": "shabana.navas",
+                    "homepage": "https://www.drupal.org/user/1311398"
+                },
+                {
+                    "name": "socketwench",
+                    "homepage": "https://www.drupal.org/user/65793"
+                }
+            ],
+            "description": "Create customized flags that users can set on entities.",
+            "homepage": "https://www.drupal.org/project/flag",
+            "support": {
+                "source": "http://cgit.drupalcode.org/flag"
+            },
+            "time": "2017-06-09 22:01:59"
         },
         {
             "name": "drupal/google_analytics",
@@ -11808,7 +11874,8 @@
         "drupal/webform": 10,
         "drupal/webform_views": 20,
         "drupal/r4032login": 20,
-        "drupal/field_permissions": 20
+        "drupal/field_permissions": 20,
+        "drupal/flag": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
