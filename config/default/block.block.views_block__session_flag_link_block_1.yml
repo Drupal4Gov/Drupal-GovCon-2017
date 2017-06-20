@@ -1,29 +1,27 @@
-uuid: 89d99266-ab4c-4305-a4e4-03f92abedf8d
+uuid: 9f0092f4-4d00-4a2c-b43e-f74b8b6182d0
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.presenters
+    - views.view.session_flag_link
   module:
     - ctools
-    - system
     - views
   theme:
     - twentyseventeen
-id: views_block__presenters_block_1
+id: views_block__session_flag_link_block_1
 theme: twentyseventeen
 region: content
-weight: -5
+weight: 0
 provider: null
-plugin: 'views_block:presenters-block_1'
+plugin: 'views_block:session_flag_link-block_1'
 settings:
-  id: 'views_block:presenters-block_1'
+  id: 'views_block:session_flag_link-block_1'
   label: ''
   provider: views
   label_display: '0'
   views_label: ''
   items_per_page: none
-  context_mapping: {  }
 visibility:
   'entity_bundle:node':
     id: 'entity_bundle:node'
@@ -32,8 +30,3 @@ visibility:
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'
-  request_path:
-    id: request_path
-    pages: '/node/*/edit'
-    negate: true
-    context_mapping: {  }
