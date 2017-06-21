@@ -1,0 +1,31 @@
+uuid: d8e75d00-03a0-4b1d-b95c-6b372a358328
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:d428d002-c8df-43b4-8b27-45824dc65782'
+  module:
+    - block_content
+    - system
+  theme:
+    - twentyseventeen
+id: sessionclose
+theme: twentyseventeen
+region: content
+weight: -10
+provider: null
+plugin: 'block_content:d428d002-c8df-43b4-8b27-45824dc65782'
+settings:
+  id: 'block_content:d428d002-c8df-43b4-8b27-45824dc65782'
+  label: 'Sessions Close'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
