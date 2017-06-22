@@ -12,10 +12,13 @@ field_name: field_session_date_time
 entity_type: node
 bundle: session
 label: 'Date / Time'
-description: ''
+description: "Use to set the time and date for the schedule. In order to display properly, the date can be chosen by the picker, or entered as YYYY-MM-DD.\r\nThe time must be entered as HH:MM:SS"
 required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    default_date_type: now
+    default_date: now
 default_value_callback: ''
 settings: {  }
 field_type: datetime

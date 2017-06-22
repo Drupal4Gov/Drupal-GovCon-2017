@@ -7,7 +7,11 @@ dependencies:
     - field.field.node.session.field_experience_level
     - field.field.node.session.field_files
     - field.field.node.session.field_image
+<<<<<<< HEAD
     - field.field.node.session.field_session_co_presenter_s_
+=======
+>>>>>>> 6946980d79a9ebdd345697eda156b6e909523ef8
+    - field.field.node.session.field_schedule_date
     - field.field.node.session.field_session_date_time
     - field.field.node.session.field_session_room
     - field.field.node.session.field_session_track
@@ -85,14 +89,11 @@ content:
     third_party_settings: {  }
     type: file_generic
     region: content
-  field_session_co_presenter_s_:
+  field_schedule_date:
     weight: 26
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: options_select
     region: content
   field_session_date_time:
     weight: 11
