@@ -53,6 +53,9 @@ before_install:
   - composer self-update
   - composer validate --no-check-all --ansi
   - composer install
+  # Install proper version of node for front end tasks.
+  - nvm install 6.9.5
+  - nvm use 6.9.5
 
 install:
   - source ${BLT_DIR}/scripts/travis/setup_environment
