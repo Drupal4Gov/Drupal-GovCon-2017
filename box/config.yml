@@ -8,6 +8,9 @@ vagrant_box: geerlingguy/ubuntu1404
 # Set drupal_site_name to the project's human-readable name.
 drupal_site_name: "Drupal GovCon"
 
+# Set the Drush Version
+drush_version: "8.x"
+
 # Provide the path to the project root to Vagrant.
 vagrant_synced_folders:
   # Set the local_path for the first synced folder to `.`.
@@ -48,6 +51,7 @@ installed_extras:
   - nodejs
   - selenium
   - memcached
+  - drush
 
 # Use PHP 5.6 and change package names to work with 5.6.
 php_version: "5.6"
@@ -83,6 +87,7 @@ php_mysql_package: php5.6-mysql
 php_redis_package: php5.6-redis
 php_memcached_package: php5.6-memcached
 
+php_memory_limit: 256M
 # Use PHP 5.6-compatible version of XHProf.
 xhprof_download_url: https://github.com/phacility/xhprof/archive/master.tar.gz
 xhprof_download_folder_name: xhprof-master
