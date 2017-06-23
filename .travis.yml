@@ -49,6 +49,8 @@ before_install:
   - if [[ "$TRAVIS_PULL_REQUEST" == "false" ]]; then openssl aes-256-cbc -K $encrypted_8cc36a90498e_key -iv $encrypted_8cc36a90498e_iv -in drupalgovcon.enc -out ~/.ssh/id_rsa -d; chmod 600 ~/.ssh/id_rsa; ls -lash ~/.ssh; eval "$(ssh-agent -s)"; ssh-add ~/.ssh/id_rsa; fi
   # Disable xdebug.
   - phpenv config-rm xdebug.ini
+  # Increase Memory Limit
+  - phpenv config-add travis.php.ini
   - echo 'sendmail_path = "/bin/true"' | sudo tee "/home/travis/.phpenv/versions/`php -i | grep "PHP Version" | head -n 1 | grep -o -P '\d+\.\d+\.\d+.*'`/etc/conf.d/sendmail.ini"
   - composer self-update
   - composer validate --no-check-all --ansi
