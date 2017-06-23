@@ -33,6 +33,9 @@ target-hooks:
   post-setup-build:
     dir: '${docroot}/profiles/contrib/lightning'
     command: 'echo ''No post-setup-build hook configured.'''
+  post-deploy:
+    dir: '${docroot}'
+    command: 'echo ''No post-deploy build configured.'''
 import: '${repo.root}/blt/custom.xml'
 modules:
   local:
@@ -53,4 +56,6 @@ modules:
 behat:
   paths:
     - '${repo.root}/tests/behat'
+cm:
+  strategy: features
 
