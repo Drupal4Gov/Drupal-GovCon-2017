@@ -7,6 +7,7 @@ dependencies:
     - field.field.node.session.field_experience_level
     - field.field.node.session.field_files
     - field.field.node.session.field_image
+    - field.field.node.session.field_schedule_time
     - field.field.node.session.field_session_co_presenter_s_
     - field.field.node.session.field_session_date_time
     - field.field.node.session.field_session_room
@@ -39,6 +40,7 @@ third_party_settings:
       label: Slides
     group_scheduling_details:
       children:
+        - field_schedule_time
         - field_session_date_time
         - field_session_room
       parent_name: ''
@@ -85,6 +87,12 @@ content:
     third_party_settings: {  }
     type: file_generic
     region: content
+  field_schedule_time:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_session_co_presenter_s_:
     weight: 26
     settings:
@@ -95,13 +103,13 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_session_date_time:
-    weight: 11
+    weight: 28
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
   field_session_room:
-    weight: 12
+    weight: 29
     settings:
       size: 60
       placeholder: ''
