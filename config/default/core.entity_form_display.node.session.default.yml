@@ -40,6 +40,7 @@ third_party_settings:
       label: Slides
     group_scheduling_details:
       children:
+        - field_schedule_time
         - field_session_date_time
         - field_session_room
       parent_name: ''
@@ -102,13 +103,13 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_session_date_time:
-    weight: 11
+    weight: 28
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
   field_session_room:
-    weight: 12
+    weight: 29
     settings:
       size: 60
       placeholder: ''
