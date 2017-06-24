@@ -106,6 +106,9 @@ content:
     third_party_settings: {  }
     type: list_default
     region: content
+  flag_session_schedule:
+    weight: 10
+    region: content
 hidden:
   field_image: true
   field_session_co_presenter_s_: true

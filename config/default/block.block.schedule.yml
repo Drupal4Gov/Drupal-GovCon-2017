@@ -1,26 +1,29 @@
-uuid: b9718172-0333-4c76-b728-14e14f03052f
+uuid: 12ceedd7-9cd6-476e-9d6c-7c305f05d922
 langcode: en
 status: true
 dependencies:
+  config:
+    - system.menu.schedule
   module:
-    - capitalcamp_blocks
     - system
   theme:
     - twentyseventeen
-id: dgcintro
+id: schedule
 theme: twentyseventeen
 region: content
-weight: -10
+weight: -8
 provider: null
-plugin: dgc_intro
+plugin: 'system_menu_block:schedule'
 settings:
-  id: dgc_intro
-  label: 'DGC Intro'
-  provider: capitalcamp_blocks
+  id: 'system_menu_block:schedule'
+  label: Schedule
+  provider: system
   label_display: '0'
+  level: 1
+  depth: 0
 visibility:
   request_path:
     id: request_path
-    pages: '<front>'
+    pages: '/schedule*'
     negate: false
     context_mapping: {  }
