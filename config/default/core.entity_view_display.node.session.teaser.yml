@@ -37,7 +37,7 @@ content:
   body:
     label: visually_hidden
     type: smart_trim
-    weight: 5
+    weight: 6
     settings:
       trim_length: '80'
       trim_type: words
@@ -52,14 +52,14 @@ content:
     region: content
   field_experience_level:
     type: list_default
-    weight: 4
+    weight: 5
     region: content
     label: inline
     settings: {  }
     third_party_settings: {  }
   field_session_co_presenter_s_:
     type: entity_reference_label
-    weight: 0
+    weight: 1
     region: content
     label: hidden
     settings:
@@ -67,7 +67,7 @@ content:
     third_party_settings: {  }
   field_session_date_time:
     type: datetime_default
-    weight: 1
+    weight: 2
     region: content
     label: hidden
     settings:
@@ -76,7 +76,7 @@ content:
     third_party_settings: {  }
   field_session_room:
     type: string
-    weight: 2
+    weight: 3
     region: content
     label: hidden
     settings:
@@ -84,14 +84,19 @@ content:
     third_party_settings: {  }
   field_session_track:
     type: entity_reference_label
-    weight: 3
+    weight: 4
     region: content
     label: inline
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
   flag_session_schedule:
-    weight: 6
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -100,4 +105,3 @@ hidden:
   field_image: true
   field_slides_link: true
   field_status: true
-  links: true
