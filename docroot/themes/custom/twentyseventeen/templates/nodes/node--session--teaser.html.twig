@@ -9,9 +9,9 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
         <header>
             {{ title_prefix }}
             {% if not page and label %}
-                <h2{{ title_attributes }} >
+                <h3{{ title_attributes }} >
                     <a href="{{ url }}">{{ label }}</a>
-                </h2>
+                </h3>
             {% endif %}
             {{ title_suffix }}
 
@@ -19,19 +19,17 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
     {% endif %}
 
     <div class="content">
-        <div class="field__label">Presenters:</div><div>{{ author_name }}
+        <div class="session-presenters">{{ author_name }}
             {% if content.field_session_co_presenter_s_ %} {{ content.field_session_co_presenter_s_ }}
             {% endif %}
         </div>
         <div>
             {% if content.field_session_track %} {{ content.field_session_track }}
             {% endif %}
-        </div>
-        <div>
             {% if content.field_experience_level %} {{ content.field_experience_level }}
             {% endif %}
         </div>
-        <div>
+        <div class="session-location">
             {% if content.field_session_room %} {{ content.field_session_room }}
             {% endif %}
         </div>
