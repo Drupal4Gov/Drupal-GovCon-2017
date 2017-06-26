@@ -1,0 +1,43 @@
+{% set classes = [
+'node',
+'node--type-' ~ node.bundle|clean_class,
+view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+] %}
+<article {{ attributes.addClass(classes) }}>
+
+    {% if title_prefix or title_suffix or display_submitted or unpublished or page is empty and label %}
+        <header>
+            {{ title_prefix }}
+            {% if not page and label %}
+                <h3{{ title_attributes }} >
+                    <a href="{{ url }}">{{ label }}</a>
+                </h3>
+            {% endif %}
+            {{ title_suffix }}
+
+        </header>
+    {% endif %}
+
+    <div class="content">
+        <div class="session-presenters">{{ author_name }}
+            {% if content.field_session_co_presenter_s_ %} {{ content.field_session_co_presenter_s_ }}
+            {% endif %}
+        </div>
+        <div>
+            {% if content.field_session_track %} {{ content.field_session_track }}
+            {% endif %}
+            {% if content.field_experience_level %} {{ content.field_experience_level }}
+            {% endif %}
+        </div>
+        <div class="session-location">
+            {% if content.field_session_room %} {{ content.field_session_room }}
+            {% endif %}
+        </div>
+        <div>
+            {% if content.flag_session_schedule %} {{ content.flag_session_schedule }}
+            {% endif %}
+        </div>
+    </div>
+    <!-- /content -->
+</article>
+<!-- /article #node -->

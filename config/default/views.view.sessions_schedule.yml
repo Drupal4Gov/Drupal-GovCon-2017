@@ -4,10 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.storage.node.body
-    - field.storage.node.field_experience_level
-    - field.storage.node.field_session_co_presenter_s_
-    - field.storage.node.field_session_track
+    - field.storage.node.field_session_date_time
     - flag.flag.session_schedule
     - node.type.session
     - taxonomy.vocabulary.session_track
@@ -18,7 +15,6 @@ dependencies:
     - node
     - options
     - taxonomy
-    - text
     - user
     - views_infinite_scroll
 id: sessions_schedule
@@ -107,82 +103,24 @@ display:
       style:
         type: default
         options:
-          grouping: {  }
+          grouping:
+            -
+              field: field_session_date_time
+              rendered: true
+              rendered_strip: false
           row_class: ''
           default_row_class: true
+          uses_fields: true
       row:
         type: 'entity:node'
         options:
           relationship: none
           view_mode: teaser
       fields:
-        title:
-          id: title
-          table: node_field_data
-          field: title
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: h3
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: true
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_session_co_presenter_s_:
-          id: field_session_co_presenter_s_
-          table: node__field_session_co_presenter_s_
-          field: field_session_co_presenter_s_
+        rendered_entity:
+          id: rendered_entity
+          table: node
+          field: rendered_entity
           relationship: none
           group_type: group
           admin_label: ''
@@ -227,283 +165,18 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: true
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        uid:
-          id: uid
-          table: node_field_data
-          field: uid
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: Presenter
-          exclude: false
-          alter:
-            alter_text: true
-            text: "{{ uid }} {{ field_session_co_presenter_s_ }}\n"
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: strong
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: false
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
+          view_mode: teaser
           entity_type: node
-          entity_field: uid
-          plugin_id: field
-        field_session_track:
-          id: field_session_track
-          table: node__field_session_track
-          field: field_session_track
+          plugin_id: rendered_entity
+        field_session_date_time:
+          id: field_session_date_time
+          table: node__field_session_date_time
+          field: field_session_date_time
           relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Session Track'
-          exclude: false
-          alter:
-            alter_text: true
-            text: '{{ field_session_track }}'
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: strong
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: false
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: true
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_experience_level:
-          id: field_experience_level
-          table: node__field_experience_level
-          field: field_experience_level
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Experience Level'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: strong
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: list_default
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        body:
-          id: body
-          table: node__body
-          field: body
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Session Description'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: strong
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: text_trimmed
-          settings:
-            trim_length: 400
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        link_flag:
-          id: link_flag
-          table: flagging
-          field: link_flag
-          relationship: flag_relationship
           group_type: group
           admin_label: ''
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -543,8 +216,86 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          entity_type: flagging
-          plugin_id: flag_link
+          click_sort_column: value
+          type: datetime_default
+          settings:
+            timezone_override: ''
+            format_type: time
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_session_date_time_1:
+          id: field_session_date_time_1
+          table: node__field_session_date_time
+          field: field_session_date_time
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: datetime_default
+          settings:
+            timezone_override: ''
+            format_type: long
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
       filters:
         status:
           value: '1'
@@ -720,7 +471,18 @@ display:
           granularity: minute
           plugin_id: datetime
       title: Schedule
-      header: {  }
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: true
+          content: '{{ field_session_date_time_1 }}  '
+          plugin_id: text_custom
       footer: {  }
       empty:
         area:
@@ -820,6 +582,7 @@ display:
           plugin_id: datetime_day
       display_extenders: {  }
       use_ajax: true
+      css_class: program-schedule
     cache_metadata:
       max-age: -1
       contexts:
@@ -831,10 +594,17 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_experience_level'
-        - 'config:field.storage.node.field_session_co_presenter_s_'
-        - 'config:field.storage.node.field_session_track'
+        - 'config:core.entity_view_display.node.landing_page.default'
+        - 'config:core.entity_view_display.node.landing_page.full'
+        - 'config:core.entity_view_display.node.page.default'
+        - 'config:core.entity_view_display.node.page.teaser'
+        - 'config:core.entity_view_display.node.session.default'
+        - 'config:core.entity_view_display.node.session.teaser'
+        - 'config:core.entity_view_display.node.special_announcement.default'
+        - 'config:core.entity_view_display.node.special_announcement.teaser'
+        - 'config:core.entity_view_display.node.sponsor.default'
+        - 'config:core.entity_view_display.node.sponsor.teaser'
+        - 'config:field.storage.node.field_session_date_time'
   page_1:
     display_plugin: page
     id: page_1
@@ -843,7 +613,7 @@ display:
     display_options:
       display_extenders: {  }
       path: schedule
-      exposed_block: false
+      exposed_block: true
     cache_metadata:
       max-age: -1
       contexts:
@@ -855,7 +625,14 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
-        - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_experience_level'
-        - 'config:field.storage.node.field_session_co_presenter_s_'
-        - 'config:field.storage.node.field_session_track'
+        - 'config:core.entity_view_display.node.landing_page.default'
+        - 'config:core.entity_view_display.node.landing_page.full'
+        - 'config:core.entity_view_display.node.page.default'
+        - 'config:core.entity_view_display.node.page.teaser'
+        - 'config:core.entity_view_display.node.session.default'
+        - 'config:core.entity_view_display.node.session.teaser'
+        - 'config:core.entity_view_display.node.special_announcement.default'
+        - 'config:core.entity_view_display.node.special_announcement.teaser'
+        - 'config:core.entity_view_display.node.sponsor.default'
+        - 'config:core.entity_view_display.node.sponsor.teaser'
+        - 'config:field.storage.node.field_session_date_time'
