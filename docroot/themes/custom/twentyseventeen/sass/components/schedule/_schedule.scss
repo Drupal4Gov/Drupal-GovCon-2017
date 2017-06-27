@@ -6,18 +6,45 @@
 //
 // Style guide: components.schedule
 
-.program-schedule {
-	
+nav#block-schedule {
+	display: inline-block;
+	font-weight: 400;
+	font-size: 1.2em;
+  ul {
+	  padding-left: 0;
+  }
+
+  ul li {
+  	list-style-type: none;
+  	display: block;
+  	float: left;
+  }
+
+  ul li a:link,
+  ul li a:visited {
+  	padding: 0.5em 1em 0.375em 1em;
+  	color: $green;
+  	background: rgba($green,0.375);
+  	font-weight: 400;
+  	text-decoration: none;
+  }
+
+  ul li a.is-active {
+    background: rgba($green,1);
+  	color: rgba(255,255,255,1);
+  }
 }
 
-.program-schedule .views-exposed-form {
-	
-}
+.block-views-exposed-filter-blocksessions-schedule-page-1 {
+  .form-item {
+    margin-right: .75em;
+    margin-bottom: .5em;
+  }
 
-#views-exposed-form-sessions-schedule-page-1 {
-	//border: 1px solid #f00;
+  .form-actions {
+    padding-top: 1.5em;
+  }
 }
-
 
 .program-schedule .views-exposed-form .form-type-select.form-item-sort-by,
 .program-schedule .views-exposed-form .form-type-select.form-item-sort-order,
@@ -40,7 +67,7 @@
 .program-schedule #edit-field-schedule-date-value,
 .program-schedule #edit-field-schedule-time-value {
 	padding-left: 0.27em;
-	
+
 }
 
 .program-schedule .views-exposed-form select,
@@ -57,36 +84,10 @@
 
 .program-schedule #edit-field-schedule-date-value > div,
 .program-schedule #edit-field-schedule-time-value > div,
-nav#block-schedule {
+ {
 	display: inline-block;
 	font-weight: 400;
 	font-size: 1.2em;
-}
-
-nav#block-schedule ul {
-	padding-left: 0;
-}
-
-
-nav#block-schedule ul li {
-	list-style-type: none;
-	display: block;
-	float: left;
-}
-
-nav#block-schedule ul li a:link,
-nav#block-schedule ul li a:visited {
-	padding: 0.5em 1em 0.375em 1em;
-	//color: rgba($blu,1);
-	color: $green;
-	background: rgba($green,0.375);
-	font-weight: 400;
-	text-decoration: none;
-}
-
-nav#block-schedule ul li a.is-active {
-	background: rgba($green,1);
-	color: rgba(255,255,255,1);
 }
 
 .program-schedule #edit-field-schedule-date-value > div a:link,
@@ -169,7 +170,7 @@ nav#block-schedule ul li a.is-active {
 	padding-bottom: 0.5em;
 	font-style: italic;
 	font-size: 1.125em;
-	
+
 }
 
 .program-schedule .session-presenters a:link {
@@ -212,8 +213,3 @@ nav#block-schedule ul li a.is-active {
 .program-schedule .views-field-uid {
 	font-style: italic;
 }
-
-
-    @include breakpoint($min-tablet) {
-    	
-  }

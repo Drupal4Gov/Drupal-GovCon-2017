@@ -16,7 +16,6 @@ dependencies:
     - options
     - taxonomy
     - user
-    - views_infinite_scroll
 id: sessions_schedule
 label: 'Sessions Schedule'
 module: views
@@ -43,14 +42,14 @@ display:
         type: views_query
         options:
           disable_sql_rewrite: false
-          distinct: false
+          distinct: true
           replica: false
           query_comment: ''
           query_tags: {  }
       exposed_form:
         type: bef
         options:
-          submit_button: Apply
+          submit_button: 'Find Sessions'
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
@@ -61,7 +60,7 @@ display:
             general:
               allow_secondary: false
               secondary_label: 'Advanced options'
-              autosubmit: true
+              autosubmit: false
               autosubmit_hide: true
             field_session_track_target_id:
               bef_format: default
@@ -80,26 +79,9 @@ display:
                 rewrite:
                   filter_rewrite_values: ''
       pager:
-        type: infinite_scroll
+        type: none
         options:
-          items_per_page: 20
           offset: 0
-          id: 0
-          total_pages: null
-          tags:
-            previous: '‹ Previous'
-            next: 'Next ›'
-          expose:
-            items_per_page: false
-            items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
-            offset: false
-            offset_label: Offset
-          views_infinite_scroll:
-            button_text: 'Load More'
-            automatically_load_content: true
       style:
         type: default
         options:
@@ -583,13 +565,13 @@ display:
       display_extenders: {  }
       use_ajax: true
       css_class: program-schedule
+      group_by: true
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - url.query_args
         - user
         - 'user.node_grants:view'
         - user.permissions
@@ -620,7 +602,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - url.query_args
         - user
         - 'user.node_grants:view'
         - user.permissions
