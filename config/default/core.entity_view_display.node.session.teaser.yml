@@ -54,12 +54,12 @@ content:
     type: list_default
     weight: 4
     region: content
-    label: inline
+    label: hidden
     settings: {  }
     third_party_settings: {  }
   field_session_co_presenter_s_:
     type: entity_reference_label
-    weight: 0
+    weight: 1
     region: content
     label: hidden
     settings:
@@ -67,7 +67,7 @@ content:
     third_party_settings: {  }
   field_session_date_time:
     type: datetime_default
-    weight: 1
+    weight: 2
     region: content
     label: hidden
     settings:
@@ -76,7 +76,7 @@ content:
     third_party_settings: {  }
   field_session_room:
     type: string
-    weight: 2
+    weight: 6
     region: content
     label: hidden
     settings:
@@ -86,12 +86,17 @@ content:
     type: entity_reference_label
     weight: 3
     region: content
-    label: inline
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
   flag_session_schedule:
-    weight: 6
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -100,4 +105,3 @@ hidden:
   field_image: true
   field_slides_link: true
   field_status: true
-  links: true
