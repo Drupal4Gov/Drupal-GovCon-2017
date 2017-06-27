@@ -1,0 +1,17 @@
+uuid: bdf57108-608c-4635-ab2d-1b347d181195
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Special Announcement'
+type: special_announcement
+description: 'This will only display on the homepage, in order to have time-limited announcements.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

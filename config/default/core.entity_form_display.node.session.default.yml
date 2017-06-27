@@ -6,11 +6,16 @@ dependencies:
     - field.field.node.session.body
     - field.field.node.session.field_experience_level
     - field.field.node.session.field_files
+    - field.field.node.session.field_image
+    - field.field.node.session.field_session_co_presenter_s_
+    - field.field.node.session.field_session_date_time
+    - field.field.node.session.field_session_room
     - field.field.node.session.field_session_track
     - field.field.node.session.field_slides_link
     - field.field.node.session.field_status
     - node.type.session
   module:
+    - datetime
     - field_group
     - file
     - link
@@ -32,6 +37,19 @@ third_party_settings:
         id: ''
         required_fields: true
       label: Slides
+    group_scheduling_details:
+      children:
+        - field_session_date_time
+        - field_session_room
+      parent_name: ''
+      weight: 12
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Scheduling Details'
 _core:
   default_config_hash: DV8OLbi-qcGglfofiDQUJ4P1qPscvwMsPVe80-OoIBo
 id: node.session.default
@@ -67,14 +85,31 @@ content:
     third_party_settings: {  }
     type: file_generic
     region: content
-  field_session_track:
-    weight: 1
+  field_session_co_presenter_s_:
+    weight: 26
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_session_date_time:
+    weight: 11
     settings: {  }
     third_party_settings: {  }
-    type: options_select
+    type: datetime_default
     region: content
-  field_status:
-    weight: 10
+  field_session_room:
+    weight: 12
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_session_track:
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -86,6 +121,13 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
+  field_status:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   path:
     type: path
     weight: 7
@@ -124,4 +166,4 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
-  field_status: true
+  field_image: true

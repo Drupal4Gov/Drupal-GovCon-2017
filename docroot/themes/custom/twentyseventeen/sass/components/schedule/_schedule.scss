@@ -1,0 +1,215 @@
+// Schedule
+//
+// Conference Schedule Layout
+//
+// Markup: schedule.twig
+//
+// Style guide: components.schedule
+
+nav#block-schedule {
+	display: inline-block;
+	font-weight: 400;
+	font-size: 1.2em;
+  ul {
+	  padding-left: 0;
+  }
+
+  ul li {
+  	list-style-type: none;
+  	display: block;
+  	float: left;
+  }
+
+  ul li a:link,
+  ul li a:visited {
+  	padding: 0.5em 1em 0.375em 1em;
+  	color: $green;
+  	background: rgba($green,0.375);
+  	font-weight: 400;
+  	text-decoration: none;
+  }
+
+  ul li a.is-active {
+    background: rgba($green,1);
+  	color: rgba(255,255,255,1);
+  }
+}
+
+.block-views-exposed-filter-blocksessions-schedule-page-1 {
+  .form-item {
+    margin-right: .75em;
+    margin-bottom: .5em;
+  }
+
+  .form-actions {
+    padding-top: 1.5em;
+  }
+}
+
+.program-schedule .views-exposed-form .form-type-select.form-item-sort-by,
+.program-schedule .views-exposed-form .form-type-select.form-item-sort-order,
+.program-schedule .views-exposed-form .form-type-select.form-item-field-experience-level-value,
+.program-schedule .views-exposed-form .form-type-select.form-item-field-session-track-target-id,
+.program-schedule .views-exposed-form .form-actions.js-form-wrapper.form-wrapper,
+#views-exposed-form-sessions-schedule-page-1 .form-type-select.form-item-track,
+#views-exposed-form-sessions-schedule-page-1 .form-type-select.form-item-experience {
+	display: inline-block;
+}
+
+.program-schedule .views-exposed-form .form-actions.js-form-wrapper.form-wrapper,
+.program-schedule .views-exposed-form,
+#views-exposed-form-sessions-schedule-page-1 select {
+	margin-bottom: 0;
+}
+
+
+
+.program-schedule #edit-field-schedule-date-value,
+.program-schedule #edit-field-schedule-time-value {
+	padding-left: 0.27em;
+
+}
+
+.program-schedule .views-exposed-form select,
+#views-exposed-form-sessions-schedule-page-1 select {
+	width: 8em;
+}
+
+
+.program-schedule #edit-field-schedule-date-value > div:first-child,
+.program-schedule #edit-field-schedule-time-value > div:first-child {
+	display: none;
+}
+
+
+.program-schedule #edit-field-schedule-date-value > div,
+.program-schedule #edit-field-schedule-time-value > div,
+ {
+	display: inline-block;
+	font-weight: 400;
+	font-size: 1.2em;
+}
+
+.program-schedule #edit-field-schedule-date-value > div a:link,
+.program-schedule #edit-field-schedule-date-value > div a:visited,
+.program-schedule #edit-field-schedule-time-value > div a:link,
+.program-schedule #edit-field-schedule-time-value > div a:visited {
+	padding: 0.5em;
+	color: rgba(255,255,255,1);
+	background: rgba($green,0.75);
+	text-decoration: none;
+	margin-left: -0.23em;
+}
+
+.program-schedule #edit-field-schedule-date-value > div a.bef-link-active,
+.program-schedule #edit-field-schedule-time-value > div a.bef-link-active {
+	background: rgba($green,1);
+}
+
+
+.program-schedule .view-grouping-header,
+.program-schedule .view-header {
+	text-transform: uppercase;
+	font-size: 1.25em;
+	font-weight: bold;
+	color: $wht;
+	letter-spacing: 0.03em;
+	background: rgba($green,1);
+	margin-top: -0.25em;
+	border-top: 2px solid $green;
+	padding: 0.5em 0.5em 0.375em 0.5em;
+}
+
+.program-schedule .view-grouping {
+	margin-top: -1em;
+}
+
+.program-schedule .view-content h3 time,
+.program-schedule h3 time {
+	display: block;
+	color: $green;
+	width: 100%;
+	margin-top: 1em;
+	margin-bottom: -0.30em;
+	border-bottom: 4px solid $green;
+}
+
+
+.program-schedule .view-grouping .view-grouping-content h3,
+.program-schedule .view-content h3 {
+	font-size: 1.5em !important;
+}
+
+.program-schedule .views-row {
+	background: rgba($green, 0.2);
+	border-top: 2px solid $green;
+	padding: 0.5em 0.5em 1em 0.5em;
+}
+
+
+.program-schedule .views-row:nth-child(even) {
+	background: rgba($green, 0.1);
+}
+
+.program-schedule .views-row div.views-field.views-field-title h3.field-content,
+.program-schedule .views-row article header h3 {
+	font-weight: 500;
+	color: $blu;
+}
+
+.program-schedule header h3 a:link,
+.program-schedule header h3 a:visited {
+	text-decoration: none;
+}
+
+.program-schedule header h3 a:hover {
+	opacity: 0.5;
+}
+
+.program-schedule .session-presenters {
+	padding-bottom: 0.5em;
+	font-style: italic;
+	font-size: 1.125em;
+
+}
+
+.program-schedule .session-presenters a:link {
+	text-decoration: none;
+}
+
+
+.program-schedule .session-presenters a:hover {
+	opacity: 0.5;
+}
+
+.program-schedule .field--name-field-session-track {
+	padding-right: 0.25em;
+}
+
+.program-schedule .field--name-field-session-track a:link,
+.program-schedule .field--name-field-session-track a:visited {
+	color: rgba($green,1);
+	text-decoration: none;
+}
+.program-schedule .field--name-field-session-track a:hover {
+	opacity: 0.5;
+}
+
+.program-schedule .field--name-field-experience-level {
+	border-left: 2px solid rgba($green,0.75);
+	padding-left: 0.5em;
+	color: rgba($green,0.75);
+}
+
+.program-schedule .session-location {
+	margin-top: 0.25em;
+}
+
+.program-schedule .field--name-field-session-room {
+	font-style: italic;
+	color: $lt-blk;
+}
+
+.program-schedule .views-field-uid {
+	font-style: italic;
+}
