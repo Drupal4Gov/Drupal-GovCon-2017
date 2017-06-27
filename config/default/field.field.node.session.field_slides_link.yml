@@ -1,0 +1,23 @@
+uuid: 1d909aca-17b1-4c4a-844c-4a24b74f8e70
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_slides_link
+    - node.type.session
+  module:
+    - link
+id: node.session.field_slides_link
+field_name: field_slides_link
+entity_type: node
+bundle: session
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

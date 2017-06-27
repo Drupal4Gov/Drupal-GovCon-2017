@@ -1,0 +1,24 @@
+uuid: 27a5042c-73ab-4729-896c-a0c1ca7f456c
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.special_announcements_display
+  module:
+    - views
+  theme:
+    - twentyseventeen
+id: views_block__special_announcements_display_block_2
+theme: twentyseventeen
+region: header
+weight: -9
+provider: null
+plugin: 'views_block:special_announcements_display-block_2'
+settings:
+  id: 'views_block:special_announcements_display-block_2'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }

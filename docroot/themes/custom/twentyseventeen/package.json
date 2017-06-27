@@ -33,12 +33,12 @@
     "typey": "1.0.x"
   },
   "engines": {
-    "node": "4.4.x"
+    "node": "6.9.x"
   },
   "private": true,
   "//": "The postinstall script is needed to work-around this Drupal core bug: https://www.drupal.org/node/2329453",
   "scripts": {
-    "install-tools": "npm install;",
+    "install-tools": "npm install; npm rebuild node-sass",
     "postinstall": "find node_modules/ -name '*.info' -type f -delete",
     "uninstall-tools": "rm -r node_modules;",
     "build": "gulp",
