@@ -18,6 +18,8 @@ nav#block-schedule {
   	list-style-type: none;
   	display: block;
   	float: left;
+  	margin-top: 0;
+  	margin-bottom: 0;
   }
 
   ul li a:link,
@@ -27,6 +29,7 @@ nav#block-schedule {
   	background: rgba($green,0.375);
   	font-weight: 400;
   	text-decoration: none;
+  	display: block; // Added to fix
   }
 
   ul li a.is-active {
@@ -36,6 +39,7 @@ nav#block-schedule {
 }
 
 .block-views-exposed-filter-blocksessions-schedule-page-1 {
+	border: 1px solid #0f0;
   .form-item {
     margin-right: .75em;
     margin-bottom: .5em;
@@ -115,7 +119,7 @@ nav#block-schedule {
 	color: $wht;
 	letter-spacing: 0.03em;
 	background: rgba($green,1);
-	margin-top: -0.25em;
+	margin-top: -0.325em;
 	border-top: 2px solid $green;
 	padding: 0.5em 0.5em 0.375em 0.5em;
 }
