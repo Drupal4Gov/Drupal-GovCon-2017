@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.storage.node.field_session_date_time
     - flag.flag.session_schedule
+    - node.type.event
     - node.type.session
     - taxonomy.vocabulary.session_track
   module:
@@ -294,8 +295,41 @@ display:
           id: type
           table: node_field_data
           field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
           value:
+            event: event
             session: session
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+            argument: null
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
           entity_type: node
           entity_field: type
           plugin_id: bundle
@@ -405,10 +439,13 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          operator: or
+          operator: not
           value:
-            accepted: accepted
-            featured: featured
+            unprocessed: unprocessed
+            declined: declined
+            cancelled: cancelled
+            backup: backup
+            proposed: proposed
           group: 1
           exposed: false
           expose:
@@ -576,6 +613,8 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:core.entity_view_display.node.event.default'
+        - 'config:core.entity_view_display.node.event.teaser'
         - 'config:core.entity_view_display.node.landing_page.default'
         - 'config:core.entity_view_display.node.landing_page.full'
         - 'config:core.entity_view_display.node.page.default'
@@ -606,6 +645,8 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:core.entity_view_display.node.event.default'
+        - 'config:core.entity_view_display.node.event.teaser'
         - 'config:core.entity_view_display.node.landing_page.default'
         - 'config:core.entity_view_display.node.landing_page.full'
         - 'config:core.entity_view_display.node.page.default'
