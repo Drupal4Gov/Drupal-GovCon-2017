@@ -13,6 +13,7 @@ dependencies:
     - datetime
     - flag
     - node
+    - options
     - user
 id: admin_session_flags
 label: 'Admin Session Flags'
@@ -582,6 +583,45 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
+        field_status_value:
+          id: field_status_value
+          table: node__field_status
+          field: field_status_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            accepted: accepted
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          plugin_id: list_field
       sorts:
         created:
           id: created
@@ -617,6 +657,7 @@ display:
           plugin_id: flag_relationship
       arguments: {  }
       display_extenders: {  }
+      group_by: true
     cache_metadata:
       max-age: 0
       contexts:

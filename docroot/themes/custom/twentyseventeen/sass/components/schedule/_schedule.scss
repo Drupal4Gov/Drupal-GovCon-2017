@@ -9,24 +9,31 @@
 nav#block-schedule {
 	display: inline-block;
 	font-weight: 400;
-	font-size: 1.2em;
+	font-size: 0.875em;
+	width: 100%;
   ul {
 	  padding-left: 0;
+	  width: 100%;
   }
 
   ul li {
   	list-style-type: none;
   	display: block;
   	float: left;
+  	margin-top: 0;
+  	margin-bottom: 0;
+  	width: 33.33%;
   }
 
   ul li a:link,
   ul li a:visited {
-  	padding: 0.5em 1em 0.375em 1em;
+  	padding: 0.5em 0.5em 0.375em 0.5em;
   	color: $green;
   	background: rgba($green,0.375);
   	font-weight: 400;
   	text-decoration: none;
+  	display: block; // Added to fix
+  	text-align: center;
   }
 
   ul li a.is-active {
@@ -36,14 +43,18 @@ nav#block-schedule {
 }
 
 .block-views-exposed-filter-blocksessions-schedule-page-1 {
+	position: relative;
   .form-item {
     margin-right: .75em;
-    margin-bottom: .5em;
   }
 
   .form-actions {
-    padding-top: 1.5em;
+    padding-top: 0;
   }
+}
+
+#views-exposed-form-sessions-schedule-page-1 {
+	position: relative;
 }
 
 .program-schedule .views-exposed-form .form-type-select.form-item-sort-by,
@@ -56,13 +67,21 @@ nav#block-schedule {
 	display: inline-block;
 }
 
+#views-exposed-form-sessions-schedule-page-1 .form-type-select.form-item-track,
+#views-exposed-form-sessions-schedule-page-1 .form-type-select.form-item-experience {
+	margin-top: 0.5em;
+}
+
+
 .program-schedule .views-exposed-form .form-actions.js-form-wrapper.form-wrapper,
 .program-schedule .views-exposed-form,
 #views-exposed-form-sessions-schedule-page-1 select {
 	margin-bottom: 0;
 }
 
-
+div#edit-actions.form-actions.js-form-wrapper.form-wrapper {
+	position: relative;
+}
 
 .program-schedule #edit-field-schedule-date-value,
 .program-schedule #edit-field-schedule-time-value {
@@ -73,6 +92,7 @@ nav#block-schedule {
 .program-schedule .views-exposed-form select,
 #views-exposed-form-sessions-schedule-page-1 select {
 	width: 8em;
+	text-overflow: ellipsis;
 }
 
 
@@ -115,7 +135,7 @@ nav#block-schedule {
 	color: $wht;
 	letter-spacing: 0.03em;
 	background: rgba($green,1);
-	margin-top: -0.25em;
+	margin-top: -0.375em;
 	border-top: 2px solid $green;
 	padding: 0.5em 0.5em 0.375em 0.5em;
 }
@@ -137,7 +157,7 @@ nav#block-schedule {
 
 .program-schedule .view-grouping .view-grouping-content h3,
 .program-schedule .view-content h3 {
-	font-size: 1.5em !important;
+	font-size: 1.25em !important;
 }
 
 .program-schedule .views-row {
@@ -196,9 +216,21 @@ nav#block-schedule {
 }
 
 .program-schedule .field--name-field-experience-level {
-	border-left: 2px solid rgba($green,0.75);
+	position: relative;
 	padding-left: 0.5em;
 	color: rgba($green,0.75);
+}
+
+.program-schedule .field--name-field-experience-level:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 17%;
+	width: 1px;
+	height: 75%;
+	border-right: 2px solid rgba($green,0.75);
+	z-index: 100;
+
 }
 
 .program-schedule .session-location {
@@ -213,3 +245,71 @@ nav#block-schedule {
 .program-schedule .views-field-uid {
 	font-style: italic;
 }
+
+.program-schedule .flag-session_schedule {
+	margin-top: 0.5em;
+}
+
+input#edit-submit-sessions-schedule {
+	padding: 0.25em 0.5em 0.125em 0.5em;
+	font-size: 1.2em;
+	line-height: 1.4;
+}
+
+#edit-actions.form-actions.js-form-wrapper.form-wrapper {
+	display: inline-block;
+	position: absolute;
+	bottom: -0.6em;
+}
+
+    @include breakpoint($min-tablet) {
+    	nav#block-schedule {
+    	display: inline-block;
+		font-weight: 400;
+		font-size: 1.2em;
+	  ul {
+		  padding-left: 0;
+	  }
+
+	  ul li {
+	  	list-style-type: none;
+	  	display: block;
+	  	float: left;
+	  	margin-top: 0;
+	  	margin-bottom: 0;
+	  	width: auto;
+	  }
+
+		ul li a:link,
+	  	ul li a:visited {
+	  	padding: 0.5em 1em 0.375em 1em;
+	  	color: $green;
+	  	background: rgba($green,0.375);
+	  	font-weight: 400;
+	  	text-decoration: none;
+	  	display: block; // Added to fix
+	  }
+	  	ul li a.is-active {
+	    background: rgba($green,1);
+	  	color: rgba(255,255,255,1);
+	  }
+
+		.block-views-exposed-filter-blocksessions-schedule-page-1 {
+			position: relative;
+			border: 1px solid red;
+		  .form-item {
+		    margin-right: .75em;
+		  }
+
+		  .form-actions {
+		    padding-top: 1.5em;
+		    border: 1px solid red;
+		  }
+		}
+		}
+
+		.block-views-exposed-filter-blocksessions-schedule-page-1 #edit-actions.form-actions.js-form-wrapper.form-wrapper {
+			padding-top: 1.5em;
+		}
+    	
+  }

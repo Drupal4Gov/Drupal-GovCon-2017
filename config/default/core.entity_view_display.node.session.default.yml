@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.session.field_status
     - node.type.session
   module:
+    - datetime
     - field_group
     - file
     - link
@@ -37,7 +38,9 @@ third_party_settings:
         classes: ''
       label: Audience
     group_schedule_info:
-      children: {  }
+      children:
+        - field_session_date_time
+        - field_session_room
       parent_name: ''
       weight: 2
       format_type: fieldset
@@ -79,11 +82,28 @@ content:
     third_party_settings: {  }
     type: file_default
     region: content
+  field_session_date_time:
+    type: datetime_default
+    weight: 0
+    region: content
+    label: inline
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+  field_session_room:
+    type: string
+    weight: 1
+    region: content
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
   field_session_track:
     weight: 4
     label: inline
     settings:
-      link: true
+      link: false
     third_party_settings: {  }
     type: entity_reference_label
     region: content
@@ -114,6 +134,4 @@ content:
 hidden:
   field_image: true
   field_session_co_presenter_s_: true
-  field_session_date_time: true
-  field_session_room: true
   links: true
