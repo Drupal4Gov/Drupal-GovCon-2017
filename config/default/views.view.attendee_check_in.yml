@@ -3,11 +3,15 @@ langcode: en
 status: true
 dependencies:
   config:
+    - flag.flag.checked_in
     - user.role.administrator
     - user.role.volunteer
     - webform.webform.registration
   module:
+    - better_exposed_filters
+    - flag
     - user
+    - views_infinite_scroll
     - webform
     - webform_views
 id: attendee_check_in
@@ -43,7 +47,7 @@ display:
           query_comment: ''
           query_tags: {  }
       exposed_form:
-        type: basic
+        type: bef
         options:
           submit_button: Apply
           reset_button: false
@@ -52,13 +56,40 @@ display:
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
+          bef:
+            general:
+              allow_secondary: false
+              secondary_label: 'Advanced options'
+              autosubmit: true
+              autosubmit_hide: true
+            webform_submission_value:
+              bef_format: default
+              more_options:
+                is_secondary: false
+                rewrite:
+                  filter_rewrite_values: ''
+            webform_submission_value_1:
+              bef_format: default
+              more_options:
+                is_secondary: false
+                rewrite:
+                  filter_rewrite_values: ''
+            webform_submission_value_2:
+              bef_format: default
+              more_options:
+                is_secondary: false
+                rewrite:
+                  filter_rewrite_values: ''
       pager:
-        type: mini
+        type: infinite_scroll
         options:
           items_per_page: 50
           offset: 0
           id: 0
           total_pages: null
+          tags:
+            previous: ‹‹
+            next: ››
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -67,9 +98,9 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          tags:
-            previous: ‹‹
-            next: ››
+          views_infinite_scroll:
+            button_text: 'Load More'
+            automatically_load_content: false
       style:
         type: table
       row:
@@ -125,6 +156,57 @@ display:
           hide_alter_empty: true
           webform_element_format: value
           plugin_id: webform_submission_field
+        edit_webform_submission:
+          id: edit_webform_submission
+          table: webform_submission
+          field: edit_webform_submission
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Edit
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          text: edit
+          entity_type: webform_submission
+          plugin_id: entity_link_edit
         webform_submission_value:
           id: webform_submission_value
           table: webform_submission_field_registration_first_name
@@ -327,13 +409,13 @@ display:
           plugin_id: webform_submission_field
         webform_submission_value_5:
           id: webform_submission_value_5
-          table: webform_submission_field_registration_status
+          table: webform_submission_field_registration_company_name
           field: webform_submission_value
           relationship: none
           group_type: group
           admin_label: ''
-          label: Status
-          exclude: false
+          label: Company
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -375,14 +457,14 @@ display:
           hide_alter_empty: true
           webform_element_format: value
           plugin_id: webform_submission_field
-        edit_webform_submission:
-          id: edit_webform_submission
-          table: webform_submission
-          field: edit_webform_submission
-          relationship: none
+        link_flag:
+          id: link_flag
+          table: flagging
+          field: link_flag
+          relationship: flag_relationship
           group_type: group
           admin_label: ''
-          label: Edit
+          label: 'Check In'
           exclude: false
           alter:
             alter_text: false
@@ -423,9 +505,8 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          text: edit
-          entity_type: webform_submission
-          plugin_id: entity_link_edit
+          entity_type: flagging
+          plugin_id: flag_link
       filters:
         webform_id:
           id: webform_id
@@ -438,7 +519,7 @@ display:
           plugin_id: bundle
         webform_submission_value:
           id: webform_submission_value
-          table: webform_submission_field_registration_last_name
+          table: webform_submission_field_registration_first_name
           field: webform_submission_value
           relationship: none
           group_type: group
@@ -449,7 +530,7 @@ display:
           exposed: true
           expose:
             operator_id: webform_submission_value_op
-            label: 'Last Name'
+            label: 'First Name'
             description: ''
             use_operator: false
             operator: webform_submission_value_op
@@ -468,6 +549,7 @@ display:
               landing_page_reviewer: '0'
               media_creator: '0'
               media_manager: '0'
+              volunteer: '0'
           is_grouped: false
           group_info:
             label: ''
@@ -483,7 +565,7 @@ display:
           plugin_id: webform_submission_field_filter
         webform_submission_value_1:
           id: webform_submission_value_1
-          table: webform_submission_field_registration_first_name
+          table: webform_submission_field_registration_last_name
           field: webform_submission_value
           relationship: none
           group_type: group
@@ -494,7 +576,7 @@ display:
           exposed: true
           expose:
             operator_id: webform_submission_value_1_op
-            label: 'First Name'
+            label: 'Last Name'
             description: ''
             use_operator: false
             operator: webform_submission_value_1_op
@@ -513,6 +595,53 @@ display:
               landing_page_reviewer: '0'
               media_creator: '0'
               media_manager: '0'
+              volunteer: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: webform_submission_field_filter
+        webform_submission_value_2:
+          id: webform_submission_value_2
+          table: webform_submission_field_registration_company_name
+          field: webform_submission_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: webform_submission_value_2_op
+            label: Company
+            description: ''
+            use_operator: false
+            operator: webform_submission_value_2_op
+            identifier: webform_submission_value_2
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              page_creator: '0'
+              layout_manager: '0'
+              page_reviewer: '0'
+              landing_page_creator: '0'
+              landing_page_reviewer: '0'
+              media_creator: '0'
+              media_manager: '0'
+              volunteer: '0'
           is_grouped: false
           group_info:
             label: ''
@@ -543,9 +672,22 @@ display:
       header: {  }
       footer: {  }
       empty: {  }
-      relationships: {  }
+      relationships:
+        flag_relationship:
+          id: flag_relationship
+          table: webform_submission
+          field: flag_relationship
+          relationship: none
+          group_type: group
+          admin_label: Flags
+          required: false
+          flag: checked_in
+          user_scope: any
+          entity_type: webform_submission
+          plugin_id: flag_relationship
       arguments: {  }
       display_extenders: {  }
+      use_ajax: true
     cache_metadata:
       max-age: 0
       contexts:
