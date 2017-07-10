@@ -1,0 +1,54 @@
+{#
+/**
+ * @file
+ * Default theme implementation to present all user data.
+ *
+ * This template is used when viewing a registered user's page,
+ * e.g., example.com/user/123. 123 being the user's ID.
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ *   print a subset such as 'content.field_example'. Fields attached to a user
+ *   such as 'user_picture' are available as 'content.user_picture'.
+ * - attributes: HTML attributes for the container element.
+ * - user: A Drupal User entity.
+ *
+ * @see template_preprocess_user()
+ *
+ * @ingroup themeable
+ */
+#}
+<article{{ attributes }}>
+  <div class="user_profile_page">
+  <div class="bio_photo">
+  {% if content.field_picture %} {{ content.field_picture }}
+  {% endif %}
+  </div>
+  <div class="bio_name">
+  <h2>
+  {% if content.field_first_name %} {{ content.field_first_name }}
+  {% endif %}
+  {% if content.field_last_name %} {{ content.field_last_name }}
+  {% endif %}
+  </h2>
+  </div>
+  <div class="bio_organization">
+  {% if content.field_company %} {{ content.field_company }}
+  {% endif %}
+  </div>
+  <div class="bio_title">
+  {% if content.field_job_title %} {{ content.field_job_title }}
+  {% endif %}
+  </div>
+  <div class="bio_contact">
+  {% if content.field_drupal_org_username %} {{ content.field_drupal_org_username }}
+  {% endif %}
+  </div>
+  <div class="bio_biograpy">
+  {% if content.field_bio %} {{ content.field_bio }}
+  {% endif %}
+  </div>
+
+
+  <h2>This is a test </h2>
+</article>
