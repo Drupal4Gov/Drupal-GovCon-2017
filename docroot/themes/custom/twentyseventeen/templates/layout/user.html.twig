@@ -18,10 +18,21 @@
  * @ingroup themeable
  */
 #}
+
+{{ title_prefix }}
+{% if title %}
+  <h1{{ title_attributes }}>{{ title }}</h1>
+  <h2>All your bases are belong to us!</h2>
+{% endif %}
+{{ title_suffix }}
+
+
 <article{{ attributes }}>
   <div class="user_profile_page">
+  {% if title %} {{ content|without('title') }}
+  {% endif %}
   <div class="bio_photo">
-  {% if content.field_picture %} {{ content.field_picture }}
+  {% if content.field_user_picture %} {{ content.field_user_picture }}
   {% endif %}
   </div>
   <div class="bio_name">
