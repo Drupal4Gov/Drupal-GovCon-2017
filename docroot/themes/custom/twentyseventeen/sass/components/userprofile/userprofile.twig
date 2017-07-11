@@ -1,7 +1,27 @@
-<div class="secondarybanner">
+<div class="user_profile_page">
+	<div class="bio_photo">
   <img src="{{ image.source }}" alt="{{ image.alt }}">
-  <div class="secondarybanner__text">
-    <h3>{{ title }}</h3>
-    <p><a href="{{ url }}">{{ text }}</a></p>
+  </div>
+  <div class="bio_name">
+    <h2>{{ firstname }} {{ lastname }}</h2>
+   </div>
+   <div class="bio_organization">
+   <p>{{ organization }}</p>
+   </div>
+   <div class="bio_title">
+   <p>{{ jobtitle }}</p>
+   </div>
+   <div class="bio_contact">
+   <a href="#">D.O. Profile</a>
+   </div>
+   <div class="bio_biography">
+   <p>{{ bio }}</p>
+   </div>
+    
+  </div>
+  <div class="user_presentations">
+  <h3>Sessions Presented</h3>
+  <p><a href="{{ urlpreso1 }}">{{ presentationone }}</a></p>
+  <p><a href="{{ urlpreso2 }}">{{ presentationtwo }}</a></p>
   </div>
 </div>
