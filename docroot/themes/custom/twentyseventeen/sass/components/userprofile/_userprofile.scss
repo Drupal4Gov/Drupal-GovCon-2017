@@ -1,0 +1,51 @@
+// User Profile
+//
+// Display of individual user profiles.
+//
+// Markup: userprofile.twig
+//
+// Style guide: components.userprofile
+.secondarybanner {
+  @include clearfix;
+	display: block;
+	position: relative;
+	margin-bottom: -0.5em; /* Removes spacing at bottom */
+
+	&__text {
+		position: absolute;
+		bottom: 0.5em;
+		padding-bottom: 0.5em;
+	}
+
+	h3 {
+		font-family: 'GovCon', Helvetica, sans-serif;
+		font-size: 2.5em;
+		letter-spacing: 0.05em;
+		color: rgba(255,255,255,1);
+		text-shadow: 0 0 0.5em rgba(0,0,0,0.5);
+		margin: 0 0.5em -0.25em 0.5em;
+		padding-bottom: 0;
+	}
+
+	img {
+		width: 100%;
+	}
+
+	p {
+		color: rgba(239,172,55,1);
+		margin: 0 1em;
+		padding: 0 0 0.5em 0;
+
+		a:hover,
+		a:visited:hover {
+			color: rgba(239,172,55,0.7);
+			text-decoration: underline;
+		}
+	}
+
+	& a:link,
+	& a:visited {
+		color: rgba(239,172,55,1);
+		text-decoration: none;
+	}
+}
