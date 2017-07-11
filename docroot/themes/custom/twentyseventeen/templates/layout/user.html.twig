@@ -19,14 +19,6 @@
  */
 #}
 
-{{ title_prefix }}
-{% if title %}
-  <h1{{ title_attributes }}>{{ title }}</h1>
-  <h2>All your bases are belong to us!</h2>
-{% endif %}
-{{ title_suffix }}
-
-
 <article{{ attributes }}>
   <div class="user_profile_page">
   {% if title %} {{ content|without('title') }}
