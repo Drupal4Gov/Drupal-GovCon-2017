@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f4b8423904ec593cefa28906ad7a9f5b",
+    "content-hash": "3c4be54fec85872debf0969d4abfe0e9",
     "packages": [
         {
             "name": "acquia/blt",
@@ -4247,6 +4247,50 @@
             }
         },
         {
+            "name": "drupal/linkicon",
+            "version": "dev-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/linkicon",
+                "reference": "97e49bed3c60f2e363f3336cb9770635f70e10c4"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.4+2-dev",
+                    "datestamp": "1480435083"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "gausarts",
+                    "homepage": "https://www.drupal.org/u/gausarts",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Committers for linkicon",
+                    "homepage": "https://www.drupal.org/node/2208459/committers"
+                }
+            ],
+            "description": "A link field formatter to create icon classes based on predefined titles.",
+            "homepage": "https://www.drupal.org/project/linkicon",
+            "support": {
+                "source": "http://cgit.drupalcode.org/linkicon",
+                "issues": "https://www.drupal.org/project/issues/linkicon"
+            },
+            "time": "2017-04-07 14:57:42"
+        },
+        {
             "name": "drupal/media_entity",
             "version": "1.6.0",
             "source": {
@@ -5631,7 +5675,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/smart_trim-8.x-1.0.zip",
-                "reference": null,
+                "reference": "8.x-1.0",
                 "shasum": "14d8ec333c0c89367ac267eceef691417d537daf"
             },
             "require": {
