@@ -61,52 +61,6 @@
 // End Custom Icon Fonts
 
 
-
-.secondarybanner {
-  @include clearfix;
-	display: block;
-	position: relative;
-	margin-bottom: -0.5em; /* Removes spacing at bottom */
-
-	&__text {
-		position: absolute;
-		bottom: 0.5em;
-		padding-bottom: 0.5em;
-	}
-
-	h3 {
-		font-family: 'GovCon', Helvetica, sans-serif;
-		font-size: 2.5em;
-		letter-spacing: 0.05em;
-		color: rgba(255,255,255,1);
-		text-shadow: 0 0 0.5em rgba(0,0,0,0.5);
-		margin: 0 0.5em -0.25em 0.5em;
-		padding-bottom: 0;
-	}
-
-	img {
-		width: 100%;
-	}
-
-	p {
-		color: rgba(239,172,55,1);
-		margin: 0 1em;
-		padding: 0 0 0.5em 0;
-
-		a:hover,
-		a:visited:hover {
-			color: rgba(239,172,55,0.7);
-			text-decoration: underline;
-		}
-	}
-
-	& a:link,
-	& a:visited {
-		color: rgba(239,172,55,1);
-		text-decoration: none;
-	}
-}
-
 .user_profile_page {
 	overflow: scroll;
 }
@@ -145,6 +99,9 @@
 	text-align: center;
 	margin-bottom: 1em;
 }
+.bio_contact p.sm_icons {
+	padding-top: 0.5em;
+}
 .bio_biography {
 	margin-top: 2em;	
 }
@@ -161,4 +118,23 @@
 	font-size: 1.4em;
 	font-style: italic;
 	padding-bottom: 0;
+}
+.sm_icons {
+	font-size: 2em;
+	padding: 0 1em;
+}
+
+.sm_icons a:link,
+.sm_icons a:visited,
+.sm_icons a.pseudo-class-visited {
+	text-decoration: none;
+	padding: 0 1em 0 0;
+}
+
+.sm_icons a:hover {
+	color: rgba($blu, 0.5);
+}
+
+.sm_icons a:last-of-type {
+	padding: 0 !important;
 }
