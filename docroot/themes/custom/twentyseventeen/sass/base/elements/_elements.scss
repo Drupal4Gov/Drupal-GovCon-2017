@@ -44,12 +44,12 @@ h2 {
   line-height: 145%;
 }
 h3 {
-  font-size: 210%;
+  font-size: 180%;
   line-height: 145%;
   color: $green;
 }
 h4 {
-  font-size: 190%;
+  font-size: 140%;
   line-height: 145%;
   color: $md-gr;
 }
@@ -140,6 +140,10 @@ table {
     text-align: left;
     background-color: $lt-gr;
     padding: 4px 5px;
+    h4 {
+      color: rgba(255,255,255,1);
+      padding: 0;
+    }
   }
 
   td {

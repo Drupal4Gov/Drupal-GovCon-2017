@@ -163,7 +163,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Edit Link'
+          label: Action
           exclude: false
           alter:
             alter_text: false
@@ -245,9 +245,35 @@ display:
             label: ''
           granularity: second
       title: 'User Sessions'
-      header: {  }
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: 'Submit another session'
+          empty: false
+          tokenize: false
+          content:
+            value: '<a href="/node/add/session">Submit another session</a>'
+            format: simple_text
+          plugin_id: text
       footer: {  }
-      empty: {  }
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: 'Why not submit a session?'
+          empty: true
+          tokenize: false
+          content:
+            value: 'You haven''t submitted a session yet, why not <a href="/node/add/session">submit one</a>?'
+            format: simple_text
+          plugin_id: text
       relationships: {  }
       arguments:
         uid:
@@ -264,8 +290,9 @@ display:
             title: All
           title_enable: false
           title: ''
-          default_argument_type: current_user
-          default_argument_options: {  }
+          default_argument_type: user
+          default_argument_options:
+            user: false
           default_argument_skip_url: false
           summary_options:
             base_path: ''
@@ -276,11 +303,16 @@ display:
             sort_order: asc
             number_of_records: 0
             format: default_summary
-          specify_validation: false
+          specify_validation: true
           validate:
-            type: none
+            type: 'entity:user'
             fail: 'not found'
-          validate_options: {  }
+          validate_options:
+            access: true
+            operation: update
+            multiple: 0
+            restrict_roles: false
+            roles: {  }
           break_phrase: false
           not: false
           entity_type: node
@@ -293,7 +325,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
@@ -305,13 +336,13 @@ display:
     display_options:
       display_extenders: {  }
       block_description: 'User Sessions'
+      block_hide_empty: true
     cache_metadata:
       max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }

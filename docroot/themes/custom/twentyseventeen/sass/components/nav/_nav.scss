@@ -84,7 +84,7 @@
 
     a {
       display: block;
-      padding: 1em;
+      padding: 1em 0.8em;
       margin: 0;
       border-bottom: 1px solid $lt-gr;
       color: $wht;
@@ -124,10 +124,13 @@
           margin-top: -1px; //move up to hide pixel
           position: absolute;
           overflow: hidden;
+          &.focus {
+            height: auto;
+            max-height: 40rem;
+          }
         }
 
-        &:hover .nav__items--second-level,
-        &:focus .nav__items--second-level {
+        &:hover .nav__items--second-level {
           height: auto;
           max-height: 40rem;
           transition: all 2s cubic-bezier(.5, 1, .22, 1);
@@ -173,7 +176,7 @@
   &__icon {
     display: block;
     position: absolute;
-    top: 20px;
+    top: 18px;
     right: 13px;
     height: 27px;
     width: 27px;
@@ -231,7 +234,7 @@
 
     ~ nav .nav__items--first-level {
       height: auto;
-      max-height: 60rem;
+      max-height: 90rem;
       transition: all 2s cubic-bezier(.5, 1, .22, 1);
     }
 

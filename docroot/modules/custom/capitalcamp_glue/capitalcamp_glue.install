@@ -47,16 +47,14 @@ function capitalcamp_glue_update_8002() {
  */
 function capitalcamp_glue_update_8004() {
   $sessionTracks = [
-    'Being Human',
-    'Business',
-    'Coding and Development',
-    'DevOps',
-    'Front End',
-    'Horizons',
-    'Project Management',
     'Site Building',
-    'User Experience and Content Strategy',
-
+    'Front End',
+    'Back End',
+    'DevOps',
+    'Business (Gov, Non-Profit, Commercial)',
+    'End Users / Content Management / Project Management',
+    'Design/UX',
+    'Community',
   ];
   foreach ($sessionTracks as $sessionTrack) {
     Term::create([

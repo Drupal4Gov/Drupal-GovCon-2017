@@ -1,0 +1,19 @@
+uuid: 88bfe3b0-8048-40f1-a657-f95c116bd28e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_session_room
+    - node.type.event
+id: node.event.field_session_room
+field_name: field_session_room
+entity_type: node
+bundle: event
+label: Location
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
