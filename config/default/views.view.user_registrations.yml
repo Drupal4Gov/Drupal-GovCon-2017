@@ -66,6 +66,9 @@ display:
             webform_submission_value_1: webform_submission_value_1
             webform_submission_value_2: webform_submission_value_2
             webform_submission_value: webform_submission_value
+            edit_webform_submission: edit_webform_submission
+            webform_submission_value_3: webform_submission_value_3
+            webform_submission_value_4: webform_submission_value_4
           info:
             webform_submission_value_1:
               sortable: false
@@ -87,6 +90,27 @@ display:
               align: ''
               separator: ''
               empty_column: false
+              responsive: ''
+            edit_webform_submission:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            webform_submission_value_3:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: true
+              responsive: ''
+            webform_submission_value_4:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: true
               responsive: ''
           default: '-1'
           empty_table: false
@@ -297,6 +321,106 @@ display:
           text: update
           entity_type: webform_submission
           plugin_id: entity_link_edit
+        webform_submission_value_3:
+          id: webform_submission_value_3
+          table: webform_submission_field_registration_wait_list
+          field: webform_submission_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: true
+            text: "<em>*Wait List Tickets:</em> As users cancel their tickets, new tickets will be distributed to our waitlist in sequential order. You will receive an email confirmation if your name is moved from the waitlist to registered.\nAdd <a href=\"mailto:drupal4gov@gmail.com\">drupal4gov@gmail.com</a> to your email contacts to make sure the message doesn't get filtered as spam!"
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: true
+          empty_zero: true
+          hide_alter_empty: true
+          webform_element_format: value
+          plugin_id: webform_submission_field
+        webform_submission_value_4:
+          id: webform_submission_value_4
+          table: webform_submission_field_registration_wait_list
+          field: webform_submission_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '<em>Wait List*</em>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: true
+          empty_zero: true
+          hide_alter_empty: true
+          webform_element_format: value
+          plugin_id: webform_submission_field
       filters:
         webform_id:
           id: webform_id
@@ -322,7 +446,18 @@ display:
             value: '<a href="/form/registration">Reserve another ticket</a> for someone else.'
             format: simple_text
           plugin_id: text
-      footer: {  }
+      footer:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: true
+          content: '<p>{{ webform_submission_value_3 }}</p>'
+          plugin_id: text_custom
       empty:
         area:
           id: area
