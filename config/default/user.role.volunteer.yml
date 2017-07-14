@@ -11,4 +11,12 @@ id: volunteer
 label: Volunteer
 weight: 7
 is_admin: null
-permissions: {  }
+permissions:
+  - 'edit any webform'
+  - 'flag checked_in'
+  - 'flag checked_in other items'
+  - 'flag checked_in own items'
+  - 'unflag checked_in'
+  - 'unflag checked_in other items'
+  - 'unflag checked_in own items'
+  - 'view any webform submission'
