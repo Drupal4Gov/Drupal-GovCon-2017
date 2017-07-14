@@ -21,37 +21,46 @@
 
 <article{{ attributes }}>
   <div class="user_profile_page">
-  {% if title %} {{ content|without('title') }}
-  {% endif %}
-  <div class="bio_photo">
-  {% if content.field_user_picture %} {{ content.field_user_picture }}
-  {% endif %}
+    {% if title %} {{ content|without('title') }}
+    {% endif %}
+    <div class="bio_photo">
+    {% if content.field_user_picture %} {{ content.field_user_picture }}
+    {% endif %}
+    </div>
+    <div class="bio_name">
+    <h2>
+    {% if content.field_first_name %} {{ content.field_first_name }}
+    {% endif %}
+    {% if content.field_last_name %} {{ content.field_last_name }}
+    {% endif %}
+    </h2>
+    </div>
+    <div class="bio_organization">
+    <h3>
+    {% if content.field_company %} {{ content.field_company }}
+    {% endif %}
+    </h3>
+    </div>
+    <div class="bio_title">
+    <h4>
+    {% if content.field_job_title %} {{ content.field_job_title }}
+    {% endif %}
+    </h4>
+    </div>
+    <div class="bio_contact">
+    <div class="sm_icons">
+    {% if content.field_drupal_org_link %} {{ content.field_drupal_org_link }}
+    {% endif %}
+    {% if content.field_twitter_account %} {{ content.field_twitter_account }}
+    {% endif %}
+    {% if content.field_website %} {{ content.field_website }}
+    {% endif %}
+    {% if content.field_public_e_mail %} {{ content.field_public_e_mail }}
+    {% endif %}
+    </div>
+    </div>
+    <div class="bio_biography">
+    <p>{% if content.field_bio %} {{ content.field_bio }}</p>
+    {% endif %}
   </div>
-  <div class="bio_name">
-  <h2>
-  {% if content.field_first_name %} {{ content.field_first_name }}
-  {% endif %}
-  {% if content.field_last_name %} {{ content.field_last_name }}
-  {% endif %}
-  </h2>
-  </div>
-  <div class="bio_organization">
-  {% if content.field_company %} {{ content.field_company }}
-  {% endif %}
-  </div>
-  <div class="bio_title">
-  {% if content.field_job_title %} {{ content.field_job_title }}
-  {% endif %}
-  </div>
-  <div class="bio_contact">
-  {% if content.field_drupal_org_username %} {{ content.field_drupal_org_username }}
-  {% endif %}
-  </div>
-  <div class="bio_biograpy">
-  {% if content.field_bio %} {{ content.field_bio }}
-  {% endif %}
-  </div>
-
-
-  <h2>This is a test </h2>
 </article>

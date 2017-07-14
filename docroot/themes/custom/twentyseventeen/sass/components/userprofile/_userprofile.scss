@@ -81,13 +81,21 @@
 	font-size: 2.5em;
 	padding-bottom: 0;
 }
-.bio_organization p {
+.bio_name .field--name-field-first-name,
+.bio_name .field--name-field-last-name {
+	display: inline-block;
+}
+
+.bio_organization p,
+.bio_organization h3 {
 	text-align: center;
 	font-size: 1.75em;
 	font-weight: 600;
 	color: rgba($blu, 0.5);
+	padding-bottom: 0;
 }
-.bio_title p {
+.bio_title p,
+.bio_title h4 {
 	text-align: center;
 	font-style: italic;
 	color: $green;
@@ -122,6 +130,29 @@
 .sm_icons {
 	font-size: 2em;
 	padding: 0 1em;
+}
+
+.sm_icons .item-list--linkicon,
+.sm_icons .item-list--linkicon ul {
+	display: inline-block;
+}
+
+.sm_icons .item-list--linkicon ul {
+	padding: 0;
+}
+
+.sm_icons .item-list--linkicon ul li {
+	list-style-type: none;
+	display: inline-block;
+	padding: 0 0.25em 0 0.25em;
+}
+
+.sm_icons .linkicon__text span.ext {
+	display: none;
+}
+
+.sm_icons li a.linkicon__item.ext span.ext {
+	display: none;
 }
 
 .sm_icons a:link,
