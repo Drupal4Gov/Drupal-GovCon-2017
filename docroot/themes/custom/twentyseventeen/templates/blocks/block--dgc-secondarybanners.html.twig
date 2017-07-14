@@ -1,20 +1,20 @@
-<div class="secondarybanners">
+<div {{ attributes.addClass(['secondarybanners']) }}>
   {% include "@components/secondarybanner/secondarybanner.twig" with {
-  "title": "Connect",
-  "image": {
-  "source":"/themes/custom/twentyseventeen/images/GovCon2017_Connect_CTA_Image.jpg",
-  "alt":"Sponsor at GovCon 2017"
+    "title": "Connect",
+    "image": {
+    "source":"/themes/custom/twentyseventeen/images/GovCon2017_Connect_CTA_Image.jpg",
+    "alt":"Sponsor at GovCon 2017"
   },
-  "url": "/sponsor",
-  "text": "Interested in sponsoring or exhibiting?"
+    "url": "/sponsor",
+    "text": "Interested in sponsoring or exhibiting?"
   }%}
   {% include "@components/secondarybanner/secondarybanner.twig" with {
-  "title": "Present",
-  "image": {
-  "source": "/themes/custom/twentyseventeen/images/GovCon2017_Present_CTA_Image.jpg",
-  "alt": "Present at GovCon 2017"
+    "title": "Present",
+    "image": {
+    "source": "/themes/custom/twentyseventeen/images/GovCon2017_Present_CTA_Image.jpg",
+    "alt": "Present at GovCon 2017"
   },
-  "url": "/present",
-  "text": "Share your knowledge with the community"
+    "url": "/present",
+    "text": "Share your knowledge with the community"
   }%}
 </div>

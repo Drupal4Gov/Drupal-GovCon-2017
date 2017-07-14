@@ -1,5 +1,7 @@
-{% embed "@components/footer/footer.twig"  with {
-'footer_links': content.footer_links,
-'footer_disclaimer': 'Drupal GovCon is graciously hosted by the NIH Library and made possible by our generous sponsors and wonderful volunteers.',
-} %}
-{% endembed %}
+<div {{ attributes }}>
+  {% embed "@components/footer/footer.twig"  with {
+    'footer_links': content.footer_links,
+    'footer_disclaimer': 'Drupal GovCon is graciously hosted by the NIH Library and made possible by our generous sponsors and wonderful volunteers.',
+  }%}
+  {% endembed %}
+</div>
