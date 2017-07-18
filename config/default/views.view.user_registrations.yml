@@ -69,6 +69,7 @@ display:
             edit_webform_submission: edit_webform_submission
             webform_submission_value_3: webform_submission_value_3
             webform_submission_value_4: webform_submission_value_4
+            webform_submission_value_5: webform_submission_value_5
           info:
             webform_submission_value_1:
               sortable: false
@@ -106,6 +107,13 @@ display:
               empty_column: true
               responsive: ''
             webform_submission_value_4:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: true
+              responsive: ''
+            webform_submission_value_5:
               sortable: false
               default_sort_order: asc
               align: ''
@@ -321,18 +329,18 @@ display:
           text: update
           entity_type: webform_submission
           plugin_id: entity_link_edit
-        webform_submission_value_3:
-          id: webform_submission_value_3
-          table: webform_submission_field_registration_wait_list
+        webform_submission_value_5:
+          id: webform_submission_value_5
+          table: webform_submission_field_registration_wait_list_checkboxes
           field: webform_submission_value
           relationship: none
           group_type: group
-          admin_label: ''
+          admin_label: 'Wait List*'
           label: ''
-          exclude: true
+          exclude: false
           alter:
-            alter_text: true
-            text: "<em>*Wait List Tickets:</em> As users cancel their tickets, new tickets will be distributed to our waitlist in sequential order. You will receive an email confirmation if your name is moved from the waitlist to registered.\nAdd <a href=\"mailto:drupal4gov@gmail.com\">drupal4gov@gmail.com</a> to your email contacts to make sure the message doesn't get filtered as spam!"
+            alter_text: false
+            text: ''
             make_link: false
             path: ''
             absolute: false
@@ -371,18 +379,18 @@ display:
           hide_alter_empty: true
           webform_element_format: value
           plugin_id: webform_submission_field
-        webform_submission_value_4:
-          id: webform_submission_value_4
-          table: webform_submission_field_registration_wait_list
+        webform_submission_value_3:
+          id: webform_submission_value_3
+          table: webform_submission_field_registration_wait_list_checkboxes
           field: webform_submission_value
           relationship: none
           group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
+          admin_label: 'Wait List Footer'
+          label: 'Wait List Checkboxes'
+          exclude: true
           alter:
             alter_text: true
-            text: '<em>Wait List*</em>'
+            text: 'Wait List Tickets: As users cancel their tickets, new tickets will be distributed to our waitlist in sequential order. You will receive an email confirmation if your name is moved from the waitlist to registered. Add drupal4gov@gmail.com to your email contacts to make sure the message doesn''t get filtered as spam!'
             make_link: false
             path: ''
             absolute: false
@@ -411,7 +419,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
