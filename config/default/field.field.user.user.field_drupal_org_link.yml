@@ -1,0 +1,24 @@
+uuid: 5e42f1d9-5fcc-4cab-bb92-7b86c278a1d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_drupal_org_link
+  module:
+    - link
+    - user
+id: user.user.field_drupal_org_link
+field_name: field_drupal_org_link
+entity_type: user
+bundle: user
+label: 'Drupal.org Link'
+description: 'If desired, enter a link to your drupal.org user profile to help with network. The pattern for the URL is: https://www.drupal.org/u/[your username]'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+  title_predefined: ''
+field_type: link
