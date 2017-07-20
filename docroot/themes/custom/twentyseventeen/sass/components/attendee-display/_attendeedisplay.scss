@@ -4,312 +4,119 @@
 //
 // Markup: attendeedisplay.twig
 //
-// Style guide: attendeedisplay.schedule
+// Style guide: components.attendeedisplay
 
-nav#block-schedule {
-	display: inline-block;
-	font-weight: 400;
-	font-size: 0.875em;
-	width: 100%;
-  ul {
-	  padding-left: 0;
-	  width: 100%;
-  }
-
-  ul li {
-  	list-style-type: none;
-  	display: block;
-  	float: left;
-  	margin-top: 0;
-  	margin-bottom: 0;
-  	width: 33.33%;
-  }
-
-  ul li a:link,
-  ul li a:visited {
-  	padding: 0.5em 0.5em 0.375em 0.5em;
-  	color: $green;
-  	background: rgba($green,0.375);
-  	font-weight: 400;
-  	text-decoration: none;
-  	display: block; // Added to fix
-  	text-align: center;
-  }
-
-  ul li a.is-active {
-    background: rgba($green,1);
-  	color: rgba(255,255,255,1);
-  }
-}
-
-.block-views-exposed-filter-blocksessions-schedule-page-1 {
-	position: relative;
-  .form-item {
-    margin-right: .75em;
-  }
-
-  .form-actions {
-    padding-top: 0;
-  }
-}
-
-#views-exposed-form-sessions-schedule-page-1 {
-	position: relative;
-}
-
-.program-schedule .views-exposed-form .form-type-select.form-item-sort-by,
-.program-schedule .views-exposed-form .form-type-select.form-item-sort-order,
-.program-schedule .views-exposed-form .form-type-select.form-item-field-experience-level-value,
-.program-schedule .views-exposed-form .form-type-select.form-item-field-session-track-target-id,
-.program-schedule .views-exposed-form .form-actions.js-form-wrapper.form-wrapper,
-#views-exposed-form-sessions-schedule-page-1 .form-type-select.form-item-track,
-#views-exposed-form-sessions-schedule-page-1 .form-type-select.form-item-experience {
-	display: inline-block;
-}
-
-#views-exposed-form-sessions-schedule-page-1 .form-type-select.form-item-track,
-#views-exposed-form-sessions-schedule-page-1 .form-type-select.form-item-experience {
-	margin-top: 0.5em;
-}
-
-
-.program-schedule .views-exposed-form .form-actions.js-form-wrapper.form-wrapper,
-.program-schedule .views-exposed-form,
-#views-exposed-form-sessions-schedule-page-1 select {
-	margin-bottom: 0;
-}
-
-div#edit-actions.form-actions.js-form-wrapper.form-wrapper {
-	position: relative;
-}
-
-.program-schedule #edit-field-schedule-date-value,
-.program-schedule #edit-field-schedule-time-value {
-	padding-left: 0.27em;
+.attendee-display {
+	overflow-wrap: break-word;
+	word-wrap: break-word;
 
 }
 
-.program-schedule .views-exposed-form select,
-#views-exposed-form-sessions-schedule-page-1 select {
-	width: 8em;
-	text-overflow: ellipsis;
+.attendee-display .view-filters {
+	padding: 2em 0;
 }
 
 
-.program-schedule #edit-field-schedule-date-value > div:first-child,
-.program-schedule #edit-field-schedule-time-value > div:first-child {
-	display: none;
+.attendee-display .view-filters .views-exposed-form.bef-exposed-form div.form--inline.clearfix div.form-item.js-form-type-textfield.form-type-textfield.form-item-field-first-name-value,
+.attendee-display .view-filters .views-exposed-form.bef-exposed-form div.form--inline.clearfix div.form-item.js-form-type-textfield.form-type-textfield.form-item-field-last-name-value,
+.attendee-display .view-filters .views-exposed-form.bef-exposed-form div.form--inline.clearfix div.form-item.js-form-type-textfield.form-type-textfield.form-item-field-company-value {
+	padding-right: 2em;
 }
 
-
-.program-schedule #edit-field-schedule-date-value > div,
-.program-schedule #edit-field-schedule-time-value > div,
- {
-	display: inline-block;
-	font-weight: 400;
-	font-size: 1.2em;
+.attendee-display .view-filters form#views-exposed-form-attendee-displays-page-1.views-exposed-form.bef-exposed-form div.form--inline.clearfix div#edit-actions.form-actions.js-form-wrapper.form-wrapper {
+	bottom: -1.4em;
 }
 
-.program-schedule #edit-field-schedule-date-value > div a:link,
-.program-schedule #edit-field-schedule-date-value > div a:visited,
-.program-schedule #edit-field-schedule-time-value > div a:link,
-.program-schedule #edit-field-schedule-time-value > div a:visited {
-	padding: 0.5em;
-	color: rgba(255,255,255,1);
-	background: rgba($green,0.75);
-	text-decoration: none;
-	margin-left: -0.23em;
+.attendee-names .view-content {
+	-webkit-column-count: 1;
+	-moz-column-count: 1;
+	column-count: 1;
+	-webkit-column-gap: 2em;
+	-webkit-column-gap: 2em;
+	column-gap: 2em;
 }
 
-.program-schedule #edit-field-schedule-date-value > div a.bef-link-active,
-.program-schedule #edit-field-schedule-time-value > div a.bef-link-active {
-	background: rgba($green,1);
-}
-
-
-.program-schedule .view-grouping-header,
-.program-schedule .view-header {
-	text-transform: uppercase;
-	font-size: 1.25em;
-	font-weight: bold;
-	color: $wht;
-	letter-spacing: 0.03em;
-	background: rgba($green,1);
-	margin-top: -0.375em;
-	border-top: 2px solid $green;
-	padding: 0.5em 0.5em 0.375em 0.5em;
-}
-
-.program-schedule .view-grouping {
-	margin-top: -1em;
-}
-
-.program-schedule .view-content h3 time,
-.program-schedule h3 time {
+.attendee-names .view-content .views-row {
+	padding-bottom: 1em;
 	display: block;
-	color: $green;
-	width: 100%;
-	margin-top: 1em;
-	margin-bottom: -0.30em;
-	border-bottom: 4px solid $green;
 }
 
-
-.program-schedule .view-grouping .view-grouping-content h3,
-.program-schedule .view-content h3 {
-	font-size: 1.25em !important;
+// Link Styling
+.attendee-names div.view-content div.views-row a:link,
+.attendee-names div.view-content div.views-row a:visited,
+.attendee-names div.view-content div.views-row a:hover {
+	text-decoration: none;
 }
 
-.program-schedule .views-row {
-	background: rgba($green, 0.2);
-	border-top: 2px solid $green;
-	padding: 0.5em 0.5em 1em 0.5em;
+.attendee-names div.view-content div.views-row a:link,
+.attendee-names div.view-content div.views-row a:visited {
+	opacity: 1;
 }
 
-
-.program-schedule .views-row:nth-child(even) {
-	background: rgba($green, 0.1);
+.attendee-names div.view-content div.views-row a:hover {
+	opacity: 0.5;
 }
 
-.program-schedule .views-row div.views-field.views-field-title h3.field-content,
-.program-schedule .views-row article header h3 {
-	font-weight: 500;
+.attendee-names .view-content .views-row span.views-field.views-field-field-first-name span.field-content a:link,
+.attendee-names .view-content .views-row span.views-field.views-field-field-last-name span.field-content a:link {
 	color: $blu;
 }
 
-.program-schedule header h3 a:link,
-.program-schedule header h3 a:visited {
-	text-decoration: none;
-}
-
-.program-schedule header h3 a:hover {
-	opacity: 0.5;
-}
-
-.program-schedule .session-presenters {
-	padding-bottom: 0.5em;
-	font-style: italic;
-	font-size: 1.125em;
-
-}
-
-.program-schedule .session-presenters a:link {
-	text-decoration: none;
+.attendee-names .view-content .views-row div.views-field.views-field-field-company div.field-content a:link {
+	color: $green;
 }
 
 
-.program-schedule .session-presenters a:hover {
-	opacity: 0.5;
-}
-
-.program-schedule .field--name-field-session-track {
-	padding-right: 0.25em;
-}
-
-.program-schedule .field--name-field-session-track a:link,
-.program-schedule .field--name-field-session-track a:visited {
-	color: rgba($green,1);
-	text-decoration: none;
-}
-.program-schedule .field--name-field-session-track a:hover {
-	opacity: 0.5;
-}
-
-.program-schedule .field--name-field-experience-level {
-	position: relative;
-	padding-left: 0.5em;
-	color: rgba($green,0.75);
-}
-
-.program-schedule .field--name-field-experience-level:before {
-	content: "";
-	position: absolute;
-	left: 0;
-	bottom: 17%;
-	width: 1px;
-	height: 75%;
-	border-right: 2px solid rgba($green,0.75);
-	z-index: 100;
-
-}
-
-.program-schedule .session-location {
-	margin-top: 0.25em;
-}
-
-.program-schedule .field--name-field-session-room {
-	font-style: italic;
-	color: $lt-blk;
-}
-
-.program-schedule .views-field-uid {
-	font-style: italic;
-}
-
-.program-schedule .flag-session_schedule {
-	margin-top: 0.5em;
-}
-
-input#edit-submit-sessions-schedule {
-	padding: 0.25em 0.5em 0.125em 0.5em;
+.attendee-names .view-content .views-row span.views-field.views-field-field-first-name span.field-content,
+.attendee-names .view-content .views-row span.views-field.views-field-field-last-name span.field-content {
 	font-size: 1.2em;
-	line-height: 1.4;
+	font-weight: 400;
 }
 
-#edit-actions.form-actions.js-form-wrapper.form-wrapper {
-	display: inline-block;
-	position: absolute;
-	bottom: -0.6em;
+.attendee-names .view-content .views-row div.views-field.views-field-field-company div.field-content {
+	font-size: 0.875em;
+	font-style: italic;
+	color: $green;
 }
+
+
+
 
     @include breakpoint($min-tablet) {
-    	nav#block-schedule {
-    	display: inline-block;
-		font-weight: 400;
-		font-size: 1.2em;
-	  ul {
-		  padding-left: 0;
-	  }
-
-	  ul li {
-	  	list-style-type: none;
-	  	display: block;
-	  	float: left;
-	  	margin-top: 0;
-	  	margin-bottom: 0;
-	  	width: auto;
-	  }
-
-		ul li a:link,
-	  	ul li a:visited {
-	  	padding: 0.5em 1em 0.375em 1em;
-	  	color: $green;
-	  	background: rgba($green,0.375);
-	  	font-weight: 400;
-	  	text-decoration: none;
-	  	display: block; // Added to fix
-	  }
-	  	ul li a.is-active {
-	    background: rgba($green,1);
-	  	color: rgba(255,255,255,1);
-	  }
-
-		.block-views-exposed-filter-blocksessions-schedule-page-1 {
-			position: relative;
-			border: 1px solid red;
-		  .form-item {
-		    margin-right: .75em;
-		  }
-
-		  .form-actions {
-		    padding-top: 1.5em;
-		    border: 1px solid red;
-		  }
-		}
+    	.attendee-names .view-content {
+		-webkit-column-count: 2;
+		-moz-column-count: 2;
+		column-count: 2;
+		-webkit-column-gap: 2em;
+		-webkit-column-gap: 2em;
+		column-gap: 2em;
 		}
 
-		.block-views-exposed-filter-blocksessions-schedule-page-1 #edit-actions.form-actions.js-form-wrapper.form-wrapper {
-			padding-top: 1.5em;
+    	
+  }
+
+    @include breakpoint($tablet-to-desktop) {
+    	.attendee-names .view-content {
+		-webkit-column-count: 3;
+		-moz-column-count: 3;
+		column-count: 3;
+		-webkit-column-gap: 2em;
+		-webkit-column-gap: 2em;
+		column-gap: 2em;
 		}
+
+    	
+  }
+
+    @include breakpoint($desktop) {
+    	.attendee-names .view-content {
+		-webkit-column-count: 4;
+		-moz-column-count: 4;
+		column-count: 4;
+		-webkit-column-gap: 2em;
+		-webkit-column-gap: 2em;
+		column-gap: 2em;
+		}
+
     	
   }
