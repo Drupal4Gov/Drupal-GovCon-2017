@@ -1,6 +1,6 @@
 uuid: ca17fd31-0d51-40ea-be71-b434871a0b10
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - field.storage.node.body
@@ -380,7 +380,18 @@ display:
       title: 'Sessions I''m interested in'
       header: {  }
       footer: {  }
-      empty: {  }
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content: 'You have not saved any Sessions to your schedule. View the <a href="/schedule">Schedule</a> to save Sessions to your schedule. '
+          plugin_id: text_custom
       relationships:
         flag_relationship:
           id: flag_relationship
