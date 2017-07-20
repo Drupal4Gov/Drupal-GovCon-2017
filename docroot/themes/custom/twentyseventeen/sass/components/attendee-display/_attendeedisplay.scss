@@ -41,42 +41,79 @@
 	display: block;
 }
 
+.attendeepicture-display .view-content {
+	text-align: center;
+}
+
+
+.attendeepicture-display .view-content .views-row {
+	display: inline-block;
+	width: 100%;
+	padding: 2em;
+	text-align: center;
+	vertical-align: top;
+	height: auto;
+	overflow: hidden;
+}
+
+.attendeepicture-display .views-field.views-field-field-user-picture img {
+	max-width: 80%;
+	height: auto;
+	border: 6px solid $sft-blu;
+	border-radius: 50%;
+	margin-bottom: 1em;
+}
+
+
 // Link Styling
 .attendee-names div.view-content div.views-row a:link,
 .attendee-names div.view-content div.views-row a:visited,
-.attendee-names div.view-content div.views-row a:hover {
+.attendee-names div.view-content div.views-row a:hover,
+.attendeepicture-display div.view-content div.views-row a:link,
+.attendeepicture-display div.view-content div.views-row a:visited,
+.attendeepicture-display div.view-content div.views-row a:hover {
 	text-decoration: none;
 }
 
 .attendee-names div.view-content div.views-row a:link,
-.attendee-names div.view-content div.views-row a:visited {
+.attendee-names div.view-content div.views-row a:visited,
+.attendeepicture-display div.view-content div.views-row a:link,
+.attendeepicture-display div.view-content div.views-row a:visited {
 	opacity: 1;
 }
 
-.attendee-names div.view-content div.views-row a:hover {
+.attendee-names div.view-content div.views-row a:hover,
+.attendeepicture-display div.view-content div.views-row a:hover {
 	opacity: 0.5;
 }
 
 .attendee-names .view-content .views-row span.views-field.views-field-field-first-name span.field-content a:link,
-.attendee-names .view-content .views-row span.views-field.views-field-field-last-name span.field-content a:link {
+.attendee-names .view-content .views-row span.views-field.views-field-field-last-name span.field-content a:link,
+.attendeepicture-display .view-content .views-row span.views-field.views-field-field-first-name span.field-content a:link,
+.attendeepicture-display .view-content .views-row span.views-field.views-field-field-last-name span.field-content a:link {
 	color: $blu;
 }
 
-.attendee-names .view-content .views-row div.views-field.views-field-field-company div.field-content a:link {
+.attendee-names .view-content .views-row div.views-field.views-field-field-company div.field-content a:link,
+.attendee-names .view-content .views-row div.views-field.views-field-field-company div.field-content a:visited,
+.attendeepicture-display .view-content .views-row div.views-field.views-field-field-company div.field-content a:link,
+.attendeepicture-display .view-content .views-row div.views-field.views-field-field-company div.field-content a:visited {
 	color: $green;
 }
 
 
 .attendee-names .view-content .views-row span.views-field.views-field-field-first-name span.field-content,
-.attendee-names .view-content .views-row span.views-field.views-field-field-last-name span.field-content {
+.attendee-names .view-content .views-row span.views-field.views-field-field-last-name span.field-content,
+.attendeepicture-display .view-content .views-row span.views-field.views-field-field-first-name span.field-content,
+.attendeepicture-display .view-content .views-row span.views-field.views-field-field-last-name span.field-content {
 	font-size: 1.2em;
-	font-weight: 400;
+	font-weight: 600;
 }
 
-.attendee-names .view-content .views-row div.views-field.views-field-field-company div.field-content {
+.attendee-names .view-content .views-row div.views-field.views-field-field-company div.field-content,
+.attendeepicture-display .view-content .views-row div.views-field.views-field-field-company div.field-content {
 	font-size: 0.875em;
 	font-style: italic;
-	color: $green;
 }
 
 
@@ -92,6 +129,11 @@
 		column-gap: 2em;
 		}
 
+		.attendeepicture-display .view-content .views-row {
+		width: 33%;
+		height: 20em;
+		}
+
     	
   }
 
@@ -105,6 +147,11 @@
 		column-gap: 2em;
 		}
 
+		.attendeepicture-display .view-content .views-row {
+		width: 25%;
+		height: 20em;
+		}
+
     	
   }
 
@@ -116,6 +163,11 @@
 		-webkit-column-gap: 2em;
 		-webkit-column-gap: 2em;
 		column-gap: 2em;
+		}
+
+		.attendeepicture-display .view-content .views-row {
+		width: 20%;
+		height: 20em;
 		}
 
     	
