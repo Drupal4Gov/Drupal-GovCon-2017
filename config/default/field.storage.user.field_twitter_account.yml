@@ -1,0 +1,23 @@
+uuid: fe87f5ab-bfd1-44b1-a647-4d574462e881
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - link
+    - user
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: user.field_twitter_account
+field_name: field_twitter_account
+entity_type: user
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
