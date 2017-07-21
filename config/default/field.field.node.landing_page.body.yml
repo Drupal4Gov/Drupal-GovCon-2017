@@ -1,0 +1,22 @@
+uuid: 28132152-cceb-41c5-8485-af55ec2a2477
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.landing_page
+  module:
+    - text
+id: node.landing_page.body
+field_name: body
+entity_type: node
+bundle: landing_page
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

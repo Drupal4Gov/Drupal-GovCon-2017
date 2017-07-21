@@ -9,6 +9,7 @@ template: false
 id: contact
 title: Contact
 description: ''
+category: ''
 elements: "email:\n  '#type': email\n  '#title': Email\n  '#default_value': '[current-user:mail]'\n  '#title_display': before\n  '#description_display': after\n  '#required': true\n  '#required_error': 'Email is required'\nmessage:\n  '#type': textarea\n  '#title': Message\n  '#title_display': before\n  '#description_display': invisible\n  '#rows': '400'\n  '#required': true\n  '#required_error': 'Message is required'\ncontact:\n  '#type': captcha\n  '#captcha_type': recaptcha/reCAPTCHA\n"
 css: "#edit-message {\r\nheight: 200px;\r\n}"
 javascript: ''
@@ -49,7 +50,7 @@ settings:
   preview_prev_button_label: ''
   preview_prev_button_attributes: {  }
   preview_message: ''
-  draft: false
+  draft: ''
   draft_auto_save: false
   draft_button_label: ''
   draft_button_attributes: {  }
@@ -124,6 +125,11 @@ handlers:
       html: true
       attachments: false
       debug: false
+      states:
+        - completed
+      ignore_access: false
+      reply_to: ''
+      return_path: ''
   email_1:
     id: email
     label: Email
@@ -146,3 +152,8 @@ handlers:
       html: true
       attachments: false
       debug: false
+      states:
+        - completed
+      ignore_access: false
+      reply_to: ''
+      return_path: ''
