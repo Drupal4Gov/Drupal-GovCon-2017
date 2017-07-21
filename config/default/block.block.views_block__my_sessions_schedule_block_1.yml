@@ -1,22 +1,22 @@
-uuid: f3be74ac-52a4-4f82-8936-88e3cf4de458
+uuid: fbbabe31-943e-4327-8dd1-b7bc2eaf0b26
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.sessions_schedule
+    - views.view.my_sessions_schedule
   module:
     - system
     - views
   theme:
     - twentyseventeen
-id: views_block__sessions_schedule_block_1
+id: views_block__my_sessions_schedule_block_1
 theme: twentyseventeen
 region: content
 weight: 0
 provider: null
-plugin: 'views_block:sessions_schedule-block_1'
+plugin: 'views_block:my_sessions_schedule-block_1'
 settings:
-  id: 'views_block:sessions_schedule-block_1'
+  id: 'views_block:my_sessions_schedule-block_1'
   label: ''
   provider: views
   label_display: visible
