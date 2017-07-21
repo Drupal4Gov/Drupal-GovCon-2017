@@ -17,22 +17,6 @@ drush:
     local: capitalcamp.local
     ci: self
   default_alias: '${drush.aliases.local}'
-modules:
-  local:
-    enable: {  }
-    uninstall: {  }
-  ci:
-    enable: {  }
-    uninstall: {  }
-  dev:
-    enable: {  }
-    uninstall: {  }
-  test:
-    enable: {  }
-    uninstall: {  }
-  prod:
-    enable: {  }
-    uninstall: {  }
 target-hooks:
   frontend-setup:
     dir: '${docroot}/themes/custom/twentyseventeen'
@@ -54,6 +38,7 @@ behat:
     - '${repo.root}/tests/behat'
   web-driver: selenium
 cm:
+  allow-overrides: true
   strategy: features
 vm:
   enable: true
