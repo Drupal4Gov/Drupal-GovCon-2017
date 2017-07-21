@@ -17,23 +17,6 @@ drush:
     local: capitalcamp.local
     ci: self
   default_alias: '${drush.aliases.local}'
-target-hooks:
-  frontend-setup:
-    dir: '${docroot}/themes/custom/twentyseventeen'
-    command: 'npm run install-tools'
-  frontend-build:
-    dir: '${docroot}/themes/custom/twentyseventeen'
-    command: 'npm run build'
-  pre-config-import:
-    dir: '${docroot}'
-    command: 'echo ''No pre-config-import configured.'''
-  post-deploy-build:
-    dir: '${deploy.dir}/docroot/profiles/contrib/lightning'
-    command: 'echo ''No post-setup-build hook configured.'''
-  post-setup-build:
-    dir: '${docroot}/profiles/contrib/lightning'
-    command: 'echo ''No post-setup-build hook configured.'''
-import: '${repo.root}/blt/custom.xml'
 modules:
   local:
     enable: {  }
@@ -50,7 +33,27 @@ modules:
   prod:
     enable: {  }
     uninstall: {  }
+target-hooks:
+  frontend-setup:
+    dir: '${docroot}/themes/custom/twentyseventeen'
+    command: 'npm run install-tools'
+  frontend-build:
+    dir: '${docroot}/themes/custom/twentyseventeen'
+    command: 'npm run build'
+  pre-config-import:
+    dir: '${docroot}'
+    command: 'echo ''No pre-config-import configured.'''
+  post-deploy-build:
+    dir: '${deploy.dir}/docroot/profiles/contrib/lightning'
+    command: 'echo ''No post-setup-build hook configured.'''
+  post-setup-build:
+    dir: '${docroot}/profiles/contrib/lightning'
+    command: 'echo ''No post-setup-build hook configured.'''
 behat:
   paths:
     - '${repo.root}/tests/behat'
-
+  web-driver: selenium
+cm:
+  strategy: features
+vm:
+  enable: true

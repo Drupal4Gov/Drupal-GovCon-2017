@@ -37,6 +37,7 @@ cache:
 addons:
   ssh_known_hosts:
    - svn-6971.prod.hosting.acquia.com
+  chrome: stable
 
 # @see https://docs.travis-ci.com/user/notifications
 notifications:
@@ -58,6 +59,8 @@ before_install:
   # Install proper version of node for front end tasks.
   - nvm install 6.9.5
   - nvm use 6.9.5
+  # Exit build early if only documentation was changed in a Pull Request.
+  - source ${BLT_DIR}/scripts/travis/exit_early
 
 install:
   - source ${BLT_DIR}/scripts/travis/setup_environment
