@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - flag.flag.checked_in
+    - flag.flag.check_in_status
     - user.role.administrator
     - user.role.volunteer
     - webform.webform.registration
@@ -50,7 +50,7 @@ display:
         type: bef
         options:
           submit_button: Apply
-          reset_button: false
+          reset_button: true
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
           expose_sort_order: true
@@ -74,9 +74,11 @@ display:
                 is_secondary: false
                 rewrite:
                   filter_rewrite_values: ''
-            webform_submission_value_2:
+            flagged:
               bef_format: default
               more_options:
+                bef_select_all_none: false
+                bef_collapsible: false
                 is_secondary: false
                 rewrite:
                   filter_rewrite_values: ''
@@ -536,7 +538,7 @@ display:
             operator: webform_submission_value_op
             identifier: webform_submission_value
             required: false
-            remember: false
+            remember: true
             multiple: false
             remember_roles:
               authenticated: authenticated
@@ -582,7 +584,7 @@ display:
             operator: webform_submission_value_1_op
             identifier: webform_submission_value_1
             required: false
-            remember: false
+            remember: true
             multiple: false
             remember_roles:
               authenticated: authenticated
@@ -609,26 +611,26 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: webform_submission_field_filter
-        webform_submission_value_2:
-          id: webform_submission_value_2
-          table: webform_submission_field_registration_company_name
-          field: webform_submission_value
-          relationship: none
+        flagged:
+          id: flagged
+          table: flagging
+          field: flagged
+          relationship: flag_relationship
           group_type: group
           admin_label: ''
-          operator: contains
-          value: ''
+          operator: '='
+          value: '0'
           group: 1
           exposed: true
           expose:
-            operator_id: webform_submission_value_2_op
-            label: Company
+            operator_id: ''
+            label: 'Checked In?'
             description: ''
             use_operator: false
-            operator: webform_submission_value_2_op
-            identifier: webform_submission_value_2
-            required: false
-            remember: false
+            operator: flagged_op
+            identifier: checkedin
+            required: true
+            remember: true
             multiple: false
             remember_roles:
               authenticated: authenticated
@@ -654,7 +656,8 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: webform_submission_field_filter
+          entity_type: flagging
+          plugin_id: flag_filter
       sorts:
         webform_submission_value:
           id: webform_submission_value
@@ -681,7 +684,7 @@ display:
           group_type: group
           admin_label: Flags
           required: false
-          flag: checked_in
+          flag: check_in_status
           user_scope: any
           entity_type: webform_submission
           plugin_id: flag_relationship
@@ -911,6 +914,7 @@ display:
         filters: false
         filter_groups: false
         fields: false
+        relationships: false
       filter_groups:
         operator: AND
         groups:
@@ -1368,6 +1372,19 @@ display:
           hide_alter_empty: true
           entity_type: flagging
           plugin_id: flag_link
+      relationships:
+        flag_relationship:
+          id: flag_relationship
+          table: webform_submission
+          field: flag_relationship
+          relationship: none
+          group_type: group
+          admin_label: Flags
+          required: true
+          flag: check_in_status
+          user_scope: any
+          entity_type: webform_submission
+          plugin_id: flag_relationship
     cache_metadata:
       max-age: 0
       contexts:
