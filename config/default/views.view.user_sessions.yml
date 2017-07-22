@@ -136,7 +136,7 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: false
+          hide_empty: true
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
@@ -201,7 +201,7 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: false
+          hide_empty: true
           empty_zero: false
           hide_alter_empty: true
           text: edit
@@ -260,20 +260,7 @@ display:
             format: simple_text
           plugin_id: text
       footer: {  }
-      empty:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: 'Why not submit a session?'
-          empty: true
-          tokenize: false
-          content:
-            value: 'You haven''t submitted a session yet, why not <a href="/node/add/session">submit one</a>?'
-            format: simple_text
-          plugin_id: text
+      empty: {  }
       relationships: {  }
       arguments:
         uid:
