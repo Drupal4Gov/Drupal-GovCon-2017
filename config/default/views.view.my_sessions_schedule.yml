@@ -1,4 +1,4 @@
-uuid: 0e3d8005-5ae7-4cac-9b03-06aaea59c50d
+uuid: 7351cf68-6cc9-43f3-a7e1-b58b2df887b7
 langcode: en
 status: true
 dependencies:
@@ -8,17 +8,15 @@ dependencies:
     - flag.flag.session_schedule
     - node.type.event
     - node.type.session
-    - taxonomy.vocabulary.session_track
   module:
     - better_exposed_filters
     - datetime
     - flag
     - node
     - options
-    - taxonomy
     - user
-id: sessions_schedule
-label: 'Sessions Schedule'
+id: my_sessions_schedule
+label: 'My Sessions Schedule'
 module: views
 description: ''
 tag: ''
@@ -42,7 +40,7 @@ display:
       query:
         type: views_query
         options:
-          disable_sql_rewrite: false
+          disable_sql_rewrite: true
           distinct: true
           replica: false
           query_comment: ''
@@ -87,6 +85,10 @@ display:
         type: default
         options:
           grouping:
+            -
+              field: field_session_date_time_1
+              rendered: true
+              rendered_strip: false
             -
               field: field_session_date_time
               rendered: true
@@ -153,77 +155,13 @@ display:
           view_mode: teaser
           entity_type: node
           plugin_id: rendered_entity
-        field_session_date_time:
-          id: field_session_date_time
+        field_session_date_time_2:
+          id: field_session_date_time_2
           table: node__field_session_date_time
           field: field_session_date_time
           relationship: none
           group_type: group
-          admin_label: Time
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: datetime_default
-          settings:
-            timezone_override: ''
-            format_type: time
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_session_date_time_1:
-          id: field_session_date_time_1
-          table: node__field_session_date_time
-          field: field_session_date_time
-          relationship: none
-          group_type: group
-          admin_label: Day
+          admin_label: 'Date, for displayed output'
           label: ''
           exclude: true
           alter:
@@ -272,6 +210,142 @@ display:
             format_type: long
           group_column: value
           group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
+        field_session_date_time_1:
+          id: field_session_date_time_1
+          table: node__field_session_date_time
+          field: field_session_date_time
+          relationship: none
+          group_type: count_distinct
+          admin_label: 'Date, rewritten to use prev field output'
+          label: ''
+          exclude: true
+          alter:
+            alter_text: true
+            text: '{{ field_session_date_time_2 }}'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          set_precision: false
+          precision: 0
+          decimal: .
+          separator: ', '
+          format_plural: 0
+          format_plural_string: "1\x03@count"
+          prefix: ''
+          suffix: ''
+          click_sort_column: value
+          type: datetime_default
+          settings:
+            timezone_override: ''
+            format_type: long
+          group_column: entity_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          field_api_classes: false
+          plugin_id: field
+        field_session_date_time:
+          id: field_session_date_time
+          table: node__field_session_date_time
+          field: field_session_date_time
+          relationship: none
+          group_type: group
+          admin_label: 'Time of Day'
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: datetime_default
+          settings:
+            timezone_override: ''
+            format_type: time
+          group_column: value
+          group_columns:
+            value: value
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -335,105 +409,6 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
-        field_session_track_target_id:
-          id: field_session_track_target_id
-          table: node__field_session_track
-          field: field_session_track_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_session_track_target_id_op
-            label: 'Session Track'
-            description: ''
-            use_operator: false
-            operator: field_session_track_target_id_op
-            identifier: track
-            required: false
-            remember: true
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              page_creator: '0'
-              layout_manager: '0'
-              page_reviewer: '0'
-              landing_page_creator: '0'
-              landing_page_reviewer: '0'
-              media_creator: '0'
-              media_manager: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: select
-          limit: true
-          vid: session_track
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
-        field_experience_level_value:
-          id: field_experience_level_value
-          table: node__field_experience_level
-          field: field_experience_level_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_experience_level_value_op
-            label: 'Experience Level'
-            description: ''
-            use_operator: false
-            operator: field_experience_level_value_op
-            identifier: experience
-            required: false
-            remember: true
-            multiple: false
-            remember_roles:
-              anonymous: anonymous
-              authenticated: authenticated
-              administrator: '0'
-              page_creator: '0'
-              layout_manager: '0'
-              page_reviewer: '0'
-              landing_page_creator: '0'
-              landing_page_reviewer: '0'
-              media_creator: '0'
-              media_manager: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          plugin_id: list_field
         field_status_value:
           id: field_status_value
           table: node__field_status
@@ -491,21 +466,7 @@ display:
             label: ''
           granularity: minute
           plugin_id: datetime
-        title:
-          id: title
-          table: node_field_data
-          field: title
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
-          entity_type: node
-          entity_field: title
-          plugin_id: standard
-      title: Schedule
+      title: 'Sessions I''m interested in'
       header:
         area_text_custom:
           id: area_text_custom
@@ -514,9 +475,9 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          empty: true
-          tokenize: true
-          content: '{{ field_session_date_time_1 }}  '
+          empty: false
+          tokenize: false
+          content: ''
           plugin_id: text_custom
       footer: {  }
       empty:
@@ -540,18 +501,18 @@ display:
           field: flag_relationship
           relationship: none
           group_type: group
-          admin_label: Flags
-          required: false
+          admin_label: 'Flags: session schedule: any user'
+          required: true
           flag: session_schedule
-          user_scope: current
+          user_scope: any
           entity_type: node
           plugin_id: flag_relationship
       arguments:
-        field_session_date_time_value_month:
-          id: field_session_date_time_value_month
-          table: node__field_session_date_time
-          field: field_session_date_time_value_month
-          relationship: none
+        uid:
+          id: uid
+          table: flagging
+          field: uid
+          relationship: flag_relationship
           group_type: group
           admin_label: ''
           default_action: default
@@ -561,10 +522,9 @@ display:
             title: All
           title_enable: false
           title: ''
-          default_argument_type: raw
+          default_argument_type: user
           default_argument_options:
-            index: 0
-            use_alias: false
+            user: false
           default_argument_skip_url: false
           summary_options:
             base_path: ''
@@ -575,57 +535,35 @@ display:
             sort_order: asc
             number_of_records: 0
             format: default_summary
-          specify_validation: false
+          specify_validation: true
           validate:
-            type: none
+            type: 'entity:user'
             fail: 'not found'
-          validate_options: {  }
-          plugin_id: datetime_month
-        field_session_date_time_value_day:
-          id: field_session_date_time_value_day
-          table: node__field_session_date_time
-          field: field_session_date_time_value_day
-          relationship: none
-          group_type: group
-          admin_label: ''
-          default_action: default
-          exception:
-            value: all
-            title_enable: false
-            title: All
-          title_enable: false
-          title: ''
-          default_argument_type: raw
-          default_argument_options:
-            index: 1
-            use_alias: false
-          default_argument_skip_url: false
-          summary_options:
-            base_path: ''
-            count: true
-            items_per_page: 25
-            override: false
-          summary:
-            sort_order: asc
-            number_of_records: 0
-            format: default_summary
-          specify_validation: false
-          validate:
-            type: none
-            fail: 'not found'
-          validate_options: {  }
-          plugin_id: datetime_day
+          validate_options:
+            access: true
+            operation: update
+            multiple: 0
+            restrict_roles: false
+            roles: {  }
+          break_phrase: false
+          not: false
+          entity_type: flagging
+          entity_field: uid
+          plugin_id: numeric
       display_extenders: {  }
       use_ajax: true
       css_class: program-schedule
       group_by: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -642,22 +580,26 @@ display:
         - 'config:core.entity_view_display.node.sponsor.default'
         - 'config:core.entity_view_display.node.sponsor.teaser'
         - 'config:field.storage.node.field_session_date_time'
-  page_1:
-    display_plugin: page
-    id: page_1
-    display_title: Page
-    position: 3
+  block_1:
+    display_plugin: block
+    id: block_1
+    display_title: 'My Sessions Block'
+    position: 2
     display_options:
       display_extenders: {  }
-      path: schedule
-      exposed_block: true
+      display_description: 'Sessions flagged by the user as interested in'
+      defaults:
+        arguments: true
+        relationships: true
+        title: true
+        filters: true
+        filter_groups: true
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:

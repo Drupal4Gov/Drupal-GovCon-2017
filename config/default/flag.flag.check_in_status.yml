@@ -1,0 +1,28 @@
+uuid: 4e93445a-59cd-4eeb-b12f-7331bda09936
+langcode: en
+status: true
+dependencies: {  }
+id: check_in_status
+label: 'Check In Status'
+bundles:
+  - registration
+entity_type: webform_submission
+global: true
+weight: 0
+flag_short: Registered
+flag_long: 'Click to check-in this attendee'
+flag_message: 'Attendee is checked-in'
+unflag_short: Checked-in
+unflag_long: 'Click to reverse check-in'
+unflag_message: 'Attendee is NO LONGER checked-in'
+unflag_denied_text: ''
+flag_type: 'entity:webform_submission'
+link_type: ajax_link
+flagTypeConfig:
+  show_in_links: {  }
+  show_as_field: true
+  show_on_form: true
+  show_contextual_link: true
+  extra_permissions:
+    owner: '0'
+linkTypeConfig: {  }
