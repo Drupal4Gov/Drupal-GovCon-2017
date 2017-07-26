@@ -24,7 +24,9 @@
     {% if title %} {{ content|without('title') }}
     {% endif %}
     <div class="bio_photo">
-    {% if content.field_user_picture %} {{ content.field_user_picture }}
+    {% if content.field_user_picture|render is not empty %} {{ content.field_user_picture }}
+    {% else %}
+    <img src="/themes/custom/twentyseventeen/images/GovCon2017_UserProfileImage.png" alt="Default Avatar">
     {% endif %}
     </div>
     <div class="bio_name">
