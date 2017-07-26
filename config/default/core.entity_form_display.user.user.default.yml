@@ -5,14 +5,19 @@ dependencies:
   config:
     - field.field.user.user.field_bio
     - field.field.user.user.field_company
+    - field.field.user.user.field_drupal_org_link
     - field.field.user.user.field_drupal_org_username
     - field.field.user.user.field_first_name
     - field.field.user.user.field_job_title
     - field.field.user.user.field_last_name
-    - field.field.user.user.field_picture
+    - field.field.user.user.field_public_e_mail
+    - field.field.user.user.field_twitter_account
+    - field.field.user.user.field_user_picture
+    - field.field.user.user.field_website
     - image.style.thumbnail
   module:
     - image
+    - link
     - path
     - text
     - user
@@ -23,11 +28,11 @@ mode: default
 content:
   account:
     weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_bio:
-    weight: 3
+    weight: 5
     settings:
       rows: 5
       placeholder: ''
@@ -35,30 +40,6 @@ content:
     type: text_textarea
     region: content
   field_company:
-    weight: 6
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_drupal_org_username:
-    weight: 5
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_first_name:
-    weight: 1
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_job_title:
     weight: 7
     settings:
       size: 60
@@ -66,7 +47,23 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_last_name:
+  field_drupal_org_link:
+    weight: 15
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_drupal_org_username:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_first_name:
     weight: 2
     settings:
       size: 60
@@ -74,24 +71,68 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_picture:
-    type: image_image
-    weight: 4
+  field_job_title:
+    weight: 8
     settings:
-      preview_image_style: thumbnail
-      progress_indicator: throbber
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_last_name:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_public_e_mail:
+    weight: 16
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_twitter_account:
+    weight: 13
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_user_picture:
+    type: entity_browser_file
+    weight: 1
+    settings:
+      entity_browser: image_browser
+      field_widget_edit: true
+      field_widget_remove: true
+      view_mode: default
+      preview_image_style: thumbnail
+      open: true
+      selection_mode: selection_append
+    third_party_settings: {  }
+  field_website:
+    weight: 14
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
     region: content
   google_analytics:
-    weight: 8
+    weight: 9
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   language:
     weight: 11
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   path:
     type: path
     weight: 12
@@ -100,8 +141,9 @@ content:
     region: content
   timezone:
     weight: 10
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   contact: true
+  field_picture: true

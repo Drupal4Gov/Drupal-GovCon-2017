@@ -1,0 +1,174 @@
+// Attendee Display
+//
+// Attendee Display Layout
+//
+// Markup: attendeedisplay.twig
+//
+// Style guide: components.attendeedisplay
+
+.attendee-display {
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+
+}
+
+.attendee-display .view-filters {
+	padding: 2em 0;
+}
+
+
+.attendee-display .view-filters .views-exposed-form.bef-exposed-form div.form--inline.clearfix div.form-item.js-form-type-textfield.form-type-textfield.form-item-field-first-name-value,
+.attendee-display .view-filters .views-exposed-form.bef-exposed-form div.form--inline.clearfix div.form-item.js-form-type-textfield.form-type-textfield.form-item-field-last-name-value,
+.attendee-display .view-filters .views-exposed-form.bef-exposed-form div.form--inline.clearfix div.form-item.js-form-type-textfield.form-type-textfield.form-item-field-company-value {
+	padding-right: 2em;
+}
+
+.attendee-display .view-filters form#views-exposed-form-attendee-displays-page-1.views-exposed-form.bef-exposed-form div.form--inline.clearfix div#edit-actions.form-actions.js-form-wrapper.form-wrapper {
+	bottom: -1.4em;
+}
+
+.attendee-names .view-content {
+	-webkit-column-count: 1;
+	-moz-column-count: 1;
+	column-count: 1;
+	-webkit-column-gap: 2em;
+	-webkit-column-gap: 2em;
+	column-gap: 2em;
+}
+
+.attendee-names .view-content .views-row {
+	padding-bottom: 1em;
+	display: block;
+}
+
+.attendeepicture-display .view-content {
+	text-align: center;
+}
+
+
+.attendeepicture-display .view-content .views-row {
+	display: inline-block;
+	width: 100%;
+	padding: 2em;
+	text-align: center;
+	vertical-align: top;
+	height: auto;
+	overflow: hidden;
+}
+
+.attendeepicture-display .views-field.views-field-field-user-picture img {
+	max-width: 80%;
+	height: auto;
+	border: 6px solid $sft-blu;
+	border-radius: 50%;
+	margin-bottom: 1em;
+}
+
+
+// Link Styling
+.attendee-names div.view-content div.views-row a:link,
+.attendee-names div.view-content div.views-row a:visited,
+.attendee-names div.view-content div.views-row a:hover,
+.attendeepicture-display div.view-content div.views-row a:link,
+.attendeepicture-display div.view-content div.views-row a:visited,
+.attendeepicture-display div.view-content div.views-row a:hover {
+	text-decoration: none;
+}
+
+.attendee-names div.view-content div.views-row a:link,
+.attendee-names div.view-content div.views-row a:visited,
+.attendeepicture-display div.view-content div.views-row a:link,
+.attendeepicture-display div.view-content div.views-row a:visited {
+	opacity: 1;
+}
+
+.attendee-names div.view-content div.views-row a:hover,
+.attendeepicture-display div.view-content div.views-row a:hover {
+	opacity: 0.5;
+}
+
+.attendee-names .view-content .views-row span.views-field.views-field-field-first-name span.field-content a:link,
+.attendee-names .view-content .views-row span.views-field.views-field-field-last-name span.field-content a:link,
+.attendeepicture-display .view-content .views-row span.views-field.views-field-field-first-name span.field-content a:link,
+.attendeepicture-display .view-content .views-row span.views-field.views-field-field-last-name span.field-content a:link {
+	color: $blu;
+}
+
+.attendee-names .view-content .views-row div.views-field.views-field-field-company div.field-content a:link,
+.attendee-names .view-content .views-row div.views-field.views-field-field-company div.field-content a:visited,
+.attendeepicture-display .view-content .views-row div.views-field.views-field-field-company div.field-content a:link,
+.attendeepicture-display .view-content .views-row div.views-field.views-field-field-company div.field-content a:visited {
+	color: $green;
+}
+
+
+.attendee-names .view-content .views-row span.views-field.views-field-field-first-name span.field-content,
+.attendee-names .view-content .views-row span.views-field.views-field-field-last-name span.field-content,
+.attendeepicture-display .view-content .views-row span.views-field.views-field-field-first-name span.field-content,
+.attendeepicture-display .view-content .views-row span.views-field.views-field-field-last-name span.field-content {
+	font-size: 1.2em;
+	font-weight: 600;
+}
+
+.attendee-names .view-content .views-row div.views-field.views-field-field-company div.field-content,
+.attendeepicture-display .view-content .views-row div.views-field.views-field-field-company div.field-content {
+	font-size: 0.875em;
+	font-style: italic;
+}
+
+
+
+
+    @include breakpoint($min-tablet) {
+    	.attendee-names .view-content {
+		-webkit-column-count: 2;
+		-moz-column-count: 2;
+		column-count: 2;
+		-webkit-column-gap: 2em;
+		-webkit-column-gap: 2em;
+		column-gap: 2em;
+		}
+
+		.attendeepicture-display .view-content .views-row {
+		width: 33%;
+		height: 20em;
+		}
+
+    	
+  }
+
+    @include breakpoint($tablet-to-desktop) {
+    	.attendee-names .view-content {
+		-webkit-column-count: 3;
+		-moz-column-count: 3;
+		column-count: 3;
+		-webkit-column-gap: 2em;
+		-webkit-column-gap: 2em;
+		column-gap: 2em;
+		}
+
+		.attendeepicture-display .view-content .views-row {
+		width: 25%;
+		height: 20em;
+		}
+
+    	
+  }
+
+    @include breakpoint($desktop) {
+    	.attendee-names .view-content {
+		-webkit-column-count: 4;
+		-moz-column-count: 4;
+		column-count: 4;
+		-webkit-column-gap: 2em;
+		-webkit-column-gap: 2em;
+		column-gap: 2em;
+		}
+
+		.attendeepicture-display .view-content .views-row {
+		width: 20%;
+		height: 20em;
+		}
+
+    	
+  }

@@ -1,0 +1,68 @@
+{#
+/**
+ * @file
+ * Default theme implementation to present all user data.
+ *
+ * This template is used when viewing a registered user's page,
+ * e.g., example.com/user/123. 123 being the user's ID.
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ *   print a subset such as 'content.field_example'. Fields attached to a user
+ *   such as 'user_picture' are available as 'content.user_picture'.
+ * - attributes: HTML attributes for the container element.
+ * - user: A Drupal User entity.
+ *
+ * @see template_preprocess_user()
+ *
+ * @ingroup themeable
+ */
+#}
+
+<article{{ attributes }}>
+  <div class="user_profile_page">
+    {% if title %} {{ content|without('title') }}
+    {% endif %}
+    <div class="bio_photo">
+    {% if content.field_user_picture|render is not empty %} {{ content.field_user_picture }}
+    {% else %}
+    <img src="/themes/custom/twentyseventeen/images/GovCon2017_UserProfileImage.png" alt="Default Avatar">
+    {% endif %}
+    </div>
+    <div class="bio_name">
+    <h2>
+    {% if content.field_first_name %} {{ content.field_first_name }}
+    {% endif %}
+    {% if content.field_last_name %} {{ content.field_last_name }}
+    {% endif %}
+    </h2>
+    </div>
+    <div class="bio_organization">
+    <h3>
+    {% if content.field_company %} {{ content.field_company }}
+    {% endif %}
+    </h3>
+    </div>
+    <div class="bio_title">
+    <h4>
+    {% if content.field_job_title %} {{ content.field_job_title }}
+    {% endif %}
+    </h4>
+    </div>
+    <div class="bio_contact">
+    <div class="sm_icons">
+    {% if content.field_drupal_org_link %} {{ content.field_drupal_org_link }}
+    {% endif %}
+    {% if content.field_twitter_account %} {{ content.field_twitter_account }}
+    {% endif %}
+    {% if content.field_website %} {{ content.field_website }}
+    {% endif %}
+    {% if content.field_public_e_mail %} {{ content.field_public_e_mail }}
+    {% endif %}
+    </div>
+    </div>
+    <div class="bio_biography">
+    <p>{% if content.field_bio %} {{ content.field_bio }}</p>
+    {% endif %}
+  </div>
+</article>

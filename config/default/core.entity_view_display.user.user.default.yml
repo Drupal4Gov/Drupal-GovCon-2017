@@ -5,79 +5,193 @@ dependencies:
   config:
     - field.field.user.user.field_bio
     - field.field.user.user.field_company
+    - field.field.user.user.field_drupal_org_link
     - field.field.user.user.field_drupal_org_username
     - field.field.user.user.field_first_name
     - field.field.user.user.field_job_title
     - field.field.user.user.field_last_name
-    - field.field.user.user.field_picture
+    - field.field.user.user.field_public_e_mail
+    - field.field.user.user.field_twitter_account
+    - field.field.user.user.field_user_picture
+    - field.field.user.user.field_website
+    - image.style.user_profile_image
   module:
     - image
+    - linkicon
+    - panelizer
     - text
     - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: user.user.default
 targetEntityType: user
 bundle: user
 mode: default
 content:
   field_bio:
-    weight: 10
-    label: above
+    weight: 6
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_company:
-    weight: 11
-    label: inline
+    weight: 5
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
+  field_drupal_org_link:
+    weight: 10
+    label: hidden
+    settings:
+      linkicon_prefix: icon-drupalicon
+      linkicon_wrapper_class: ''
+      linkicon_style: ''
+      linkicon_color: ''
+      linkicon_maxlength: 60
+      linkicon_global_title: ''
+      linkicon_position: ''
+      linkicon_size: ''
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+      linkicon_link: false
+      linkicon_load: false
+      linkicon_vertical: false
+      linkicon_tooltip: false
+      linkicon_no_text: false
+      linkicon_bundle: ''
+      trim_length: 80
+    third_party_settings: {  }
+    type: linkicon
+    region: content
   field_drupal_org_username:
-    weight: 8
-    label: inline
+    weight: 3
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
   field_first_name:
-    weight: 6
-    label: inline
+    weight: 1
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
   field_job_title:
-    weight: 12
-    label: inline
+    weight: 4
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
   field_last_name:
-    weight: 7
-    label: inline
+    weight: 2
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
-  field_picture:
-    weight: 9
+  field_public_e_mail:
+    weight: 11
     label: hidden
     settings:
-      image_style: ''
-      image_link: ''
+      linkicon_prefix: icon-email
+      linkicon_wrapper_class: ''
+      linkicon_style: ''
+      linkicon_color: ''
+      linkicon_maxlength: 60
+      linkicon_global_title: ''
+      linkicon_position: ''
+      linkicon_size: ''
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+      linkicon_link: false
+      linkicon_load: false
+      linkicon_vertical: false
+      linkicon_tooltip: false
+      linkicon_no_text: false
+      linkicon_bundle: ''
+      trim_length: 80
+    third_party_settings: {  }
+    type: linkicon
+    region: content
+  field_twitter_account:
+    weight: 7
+    label: hidden
+    settings:
+      linkicon_prefix: icon-twitter
+      linkicon_wrapper_class: ''
+      linkicon_style: ''
+      linkicon_color: ''
+      linkicon_maxlength: 60
+      linkicon_global_title: ''
+      linkicon_position: ''
+      linkicon_size: ''
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+      linkicon_link: false
+      linkicon_load: false
+      linkicon_vertical: false
+      linkicon_tooltip: false
+      linkicon_no_text: false
+      linkicon_bundle: ''
+      trim_length: 80
+    third_party_settings: {  }
+    type: linkicon
+    region: content
+  field_user_picture:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: user_profile_image
+      image_link: content
     third_party_settings: {  }
     type: image
     region: content
-  member_for:
-    weight: 5
-    settings: {  }
+  field_website:
+    weight: 8
+    label: hidden
+    settings:
+      linkicon_prefix: icon-website
+      linkicon_wrapper_class: ''
+      linkicon_style: ''
+      linkicon_color: ''
+      linkicon_maxlength: 60
+      linkicon_global_title: ''
+      linkicon_position: ''
+      linkicon_size: ''
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+      linkicon_link: false
+      linkicon_load: false
+      linkicon_vertical: false
+      linkicon_tooltip: false
+      linkicon_no_text: false
+      linkicon_bundle: ''
+      trim_length: 80
     third_party_settings: {  }
+    type: linkicon
     region: content
-hidden: {  }
+hidden:
+  field_picture: true
+  member_for: true

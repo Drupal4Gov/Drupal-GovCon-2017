@@ -1,0 +1,38 @@
+uuid: 253f5363-a151-412d-9d1a-f1de26f10a74
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_user_picture
+  module:
+    - image
+    - user
+id: user.user.field_user_picture
+field_name: field_user_picture
+entity_type: user
+bundle: user
+label: 'Profile Photo'
+description: 'If desired, upload a photo to display on your profile.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: '1 MB'
+  max_resolution: 2000x2000
+  min_resolution: 100x100
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image
