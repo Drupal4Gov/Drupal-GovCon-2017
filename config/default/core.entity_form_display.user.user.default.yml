@@ -104,12 +104,16 @@ content:
     type: link_default
     region: content
   field_user_picture:
-    type: image_image
+    type: entity_browser_file
     weight: 1
-    region: content
     settings:
-      progress_indicator: throbber
+      entity_browser: image_browser
+      field_widget_edit: true
+      field_widget_remove: true
+      view_mode: default
       preview_image_style: thumbnail
+      open: true
+      selection_mode: selection_append
     third_party_settings: {  }
   field_website:
     weight: 14
@@ -142,3 +146,4 @@ content:
     third_party_settings: {  }
 hidden:
   contact: true
+  field_picture: true
