@@ -12,6 +12,8 @@
 
 }
 
+
+// Search form styling
 .attendee-display .view-filters {
 	padding: 2em 0;
 }
@@ -23,8 +25,21 @@
 	padding-right: 2em;
 }
 
+.attendee-display .view-filters .views-exposed-form.bef-exposed-form div.form--inline.clearfix div.form-item.js-form-type-textfield input {
+	//margin-bottom: 0.25em;
+}
+
 .attendee-display .view-filters form#views-exposed-form-attendee-displays-page-1.views-exposed-form.bef-exposed-form div.form--inline.clearfix div#edit-actions.form-actions.js-form-wrapper.form-wrapper {
 	bottom: -1.5em;
+	position: inherit;
+}
+
+.attendee-display .view-filters input#edit-submit-attendee-displays.button.js-form-submit.form-submit {
+	margin: 1.75em 1em 1em 0;
+}
+
+.attendee-display .view-filters .description {
+	font-style: italic;
 }
 
 .attendee-names .view-content {
@@ -160,6 +175,8 @@
 .attendee-display.attendee-names nav.pager ul li.pager__item.is-active a:link {
 	background: $green;
 }
+
+
 
 
 
