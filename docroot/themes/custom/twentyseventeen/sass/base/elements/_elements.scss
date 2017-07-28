@@ -18,6 +18,11 @@ body {
   /* Leave space for footer */
   position: relative;
   padding-bottom: 350px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  -moz-word-break: normal;
+  -moz-hyphens: auto;
 }
 // Base Headings
 //
