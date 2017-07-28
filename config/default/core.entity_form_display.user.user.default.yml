@@ -58,8 +58,8 @@ content:
   field_drupal_org_link:
     weight: 15
     settings:
-      placeholder_url: ''
-      placeholder_title: ''
+      placeholder_url: 'https://www.drupal.org/u/[your username]'
+      placeholder_title: 'https://www.drupal.org/u/[your username]'
     third_party_settings: {  }
     type: link_default
     region: content
@@ -98,16 +98,16 @@ content:
   field_public_e_mail:
     weight: 16
     settings:
-      placeholder_url: ''
-      placeholder_title: ''
+      placeholder_url: 'mailto:address@example.com'
+      placeholder_title: 'mailto:address@example.com'
     third_party_settings: {  }
     type: link_default
     region: content
   field_twitter_account:
     weight: 13
     settings:
-      placeholder_url: ''
-      placeholder_title: ''
+      placeholder_url: 'http://twitter.com/[your username]'
+      placeholder_title: 'http://twitter.com/[your username]'
     third_party_settings: {  }
     type: link_default
     region: content
@@ -127,8 +127,8 @@ content:
   field_website:
     weight: 14
     settings:
-      placeholder_url: ''
-      placeholder_title: ''
+      placeholder_url: 'http://example.com'
+      placeholder_title: 'http://example.com'
     third_party_settings: {  }
     type: link_default
     region: content
