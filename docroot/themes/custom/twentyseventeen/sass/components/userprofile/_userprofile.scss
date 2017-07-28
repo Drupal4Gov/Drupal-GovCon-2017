@@ -63,6 +63,11 @@
 
 .user_profile_page {
 	//overflow: scroll;
+	overflow-wrap: break-word;
+  	word-wrap: break-word;
+  	word-break: break-word;
+	-moz-word-break: normal;
+	-moz-hyphens: auto;
 }
 
 .bio_photo {
