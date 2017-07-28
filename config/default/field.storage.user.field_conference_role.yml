@@ -1,0 +1,24 @@
+uuid: f15c011b-0cbc-44da-83df-fea14f8b9d62
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - taxonomy
+    - user
+third_party_settings:
+  field_permissions:
+    permission_type: custom
+id: user.field_conference_role
+field_name: field_conference_role
+entity_type: user
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

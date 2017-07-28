@@ -3,20 +3,22 @@ langcode: en
 status: true
 dependencies:
   config:
+    - entity_browser.browser.image_browser
     - field.field.user.user.field_bio
     - field.field.user.user.field_company
+    - field.field.user.user.field_conference_role
     - field.field.user.user.field_drupal_org_link
     - field.field.user.user.field_drupal_org_username
     - field.field.user.user.field_first_name
     - field.field.user.user.field_job_title
     - field.field.user.user.field_last_name
+    - field.field.user.user.field_picture
     - field.field.user.user.field_public_e_mail
     - field.field.user.user.field_twitter_account
     - field.field.user.user.field_user_picture
     - field.field.user.user.field_website
-    - image.style.thumbnail
   module:
-    - image
+    - entity_browser
     - link
     - path
     - text
@@ -47,6 +49,12 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_conference_role:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_drupal_org_link:
     weight: 15
     settings:
@@ -64,7 +72,7 @@ content:
     type: string_textfield
     region: content
   field_first_name:
-    weight: 2
+    weight: 3
     settings:
       size: 60
       placeholder: ''
@@ -80,7 +88,7 @@ content:
     type: string_textfield
     region: content
   field_last_name:
-    weight: 3
+    weight: 4
     settings:
       size: 60
       placeholder: ''
@@ -105,7 +113,7 @@ content:
     region: content
   field_user_picture:
     type: entity_browser_file
-    weight: 1
+    weight: 2
     settings:
       entity_browser: image_browser
       field_widget_edit: true
@@ -115,6 +123,7 @@ content:
       open: true
       selection_mode: selection_append
     third_party_settings: {  }
+    region: content
   field_website:
     weight: 14
     settings:
