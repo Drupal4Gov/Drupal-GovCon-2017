@@ -24,7 +24,7 @@
 }
 
 .attendee-display .view-filters form#views-exposed-form-attendee-displays-page-1.views-exposed-form.bef-exposed-form div.form--inline.clearfix div#edit-actions.form-actions.js-form-wrapper.form-wrapper {
-	bottom: -1.4em;
+	bottom: -1.5em;
 }
 
 .attendee-names .view-content {
@@ -116,6 +116,38 @@
 	font-style: italic;
 }
 
+// Pager Styling
+.attendee-display.attendee-names nav.pager {
+	text-align: center;
+	margin-top: 2em;
+}
+
+.attendee-display.attendee-names nav.pager ul {
+	padding-left: 0;
+	list-style-type: none;
+	font-weight: 600;
+}
+
+.attendee-display.attendee-names nav.pager ul li {
+	display: inline-block;
+	padding: 0 0.25em;
+}
+
+.attendee-display.attendee-names nav.pager ul li a:link,
+.attendee-display.attendee-names nav.pager ul li a:visited,
+.attendee-display.attendee-names nav.pager ul li.pager__item--ellipsis {
+	color: rgba($green, 0.6);
+	text-decoration: none;
+}
+
+.attendee-display.attendee-names nav.pager ul li a:hover {
+	color: rgba($green, 1);
+}
+
+.attendee-display.attendee-names nav.pager ul li.pager__item.is-active a:link,
+.attendee-display.attendee-names nav.pager ul li.pager__item.is-active a:visited {
+	color: $blu;
+}
 
 
 
