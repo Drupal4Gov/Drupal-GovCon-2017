@@ -119,7 +119,7 @@
 // Pager Styling
 .attendee-display.attendee-names nav.pager {
 	text-align: center;
-	margin-top: 2em;
+	margin: 2em 0 1em 0;
 }
 
 .attendee-display.attendee-names nav.pager ul {
@@ -130,23 +130,35 @@
 
 .attendee-display.attendee-names nav.pager ul li {
 	display: inline-block;
-	padding: 0 0.25em;
+	//padding: 0.25em 0.5em;
+	//background: rgba($green, 0.2);
 }
 
 .attendee-display.attendee-names nav.pager ul li a:link,
 .attendee-display.attendee-names nav.pager ul li a:visited,
 .attendee-display.attendee-names nav.pager ul li.pager__item--ellipsis {
-	color: rgba($green, 0.6);
+	color: rgba($green, 0.75);
 	text-decoration: none;
+	padding: 0.25em 0.5em;
+	background: rgba($green, 0.2);
+}
+
+.attendee-display.attendee-names nav.pager ul li.pager__item--ellipsis {
+	background: none;
 }
 
 .attendee-display.attendee-names nav.pager ul li a:hover {
-	color: rgba($green, 1);
+	color: $wht;
+	background: rgba($green, 1);
 }
 
 .attendee-display.attendee-names nav.pager ul li.pager__item.is-active a:link,
 .attendee-display.attendee-names nav.pager ul li.pager__item.is-active a:visited {
-	color: $blu;
+	color: $wht;
+}
+
+.attendee-display.attendee-names nav.pager ul li.pager__item.is-active a:link {
+	background: $green;
 }
 
 
