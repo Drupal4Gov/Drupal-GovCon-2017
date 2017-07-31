@@ -1,0 +1,29 @@
+uuid: bf4f011e-2187-4ff8-8eb1-e2e83312e53b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_conference_role
+    - taxonomy.vocabulary.conference_role
+  module:
+    - user
+id: user.user.field_conference_role
+field_name: field_conference_role
+entity_type: user
+bundle: user
+label: 'Conference Role'
+description: 'Add conference roles to a user. This is used for reporting, grouping, and displaying users based on role. An example is displaying all organizers for a given year.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      conference_role: conference_role
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

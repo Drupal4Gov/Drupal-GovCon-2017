@@ -12,6 +12,8 @@
 
 }
 
+
+// Search form styling
 .attendee-display .view-filters {
 	padding: 2em 0;
 }
@@ -23,8 +25,21 @@
 	padding-right: 2em;
 }
 
+.attendee-display .view-filters .views-exposed-form.bef-exposed-form div.form--inline.clearfix div.form-item.js-form-type-textfield input {
+	//margin-bottom: 0.25em;
+}
+
 .attendee-display .view-filters form#views-exposed-form-attendee-displays-page-1.views-exposed-form.bef-exposed-form div.form--inline.clearfix div#edit-actions.form-actions.js-form-wrapper.form-wrapper {
-	bottom: -1.4em;
+	bottom: -1.5em;
+	position: inherit;
+}
+
+.attendee-display .view-filters input#edit-submit-attendee-displays.button.js-form-submit.form-submit {
+	margin: 1.75em 1em 1em 0;
+}
+
+.attendee-display .view-filters .description {
+	font-style: italic;
 }
 
 .attendee-names .view-content {
@@ -115,6 +130,52 @@
 	font-size: 0.875em;
 	font-style: italic;
 }
+
+// Pager Styling
+.attendee-display.attendee-names nav.pager {
+	text-align: center;
+	margin: 2em 0 1em 0;
+}
+
+.attendee-display.attendee-names nav.pager ul {
+	padding-left: 0;
+	list-style-type: none;
+	font-weight: 600;
+}
+
+.attendee-display.attendee-names nav.pager ul li {
+	display: inline-block;
+	//padding: 0.25em 0.5em;
+	//background: rgba($green, 0.2);
+}
+
+.attendee-display.attendee-names nav.pager ul li a:link,
+.attendee-display.attendee-names nav.pager ul li a:visited,
+.attendee-display.attendee-names nav.pager ul li.pager__item--ellipsis {
+	color: rgba($green, 0.75);
+	text-decoration: none;
+	padding: 0.25em 0.5em;
+	background: rgba($green, 0.2);
+}
+
+.attendee-display.attendee-names nav.pager ul li.pager__item--ellipsis {
+	background: none;
+}
+
+.attendee-display.attendee-names nav.pager ul li a:hover {
+	color: $wht;
+	background: rgba($green, 1);
+}
+
+.attendee-display.attendee-names nav.pager ul li.pager__item.is-active a:link,
+.attendee-display.attendee-names nav.pager ul li.pager__item.is-active a:visited {
+	color: $wht;
+}
+
+.attendee-display.attendee-names nav.pager ul li.pager__item.is-active a:link {
+	background: $green;
+}
+
 
 
 

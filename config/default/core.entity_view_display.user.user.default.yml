@@ -5,11 +5,13 @@ dependencies:
   config:
     - field.field.user.user.field_bio
     - field.field.user.user.field_company
+    - field.field.user.user.field_conference_role
     - field.field.user.user.field_drupal_org_link
     - field.field.user.user.field_drupal_org_username
     - field.field.user.user.field_first_name
     - field.field.user.user.field_job_title
     - field.field.user.user.field_last_name
+    - field.field.user.user.field_picture
     - field.field.user.user.field_public_e_mail
     - field.field.user.user.field_twitter_account
     - field.field.user.user.field_user_picture
@@ -46,6 +48,14 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_conference_role:
+    weight: 12
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   field_drupal_org_link:
     weight: 10
