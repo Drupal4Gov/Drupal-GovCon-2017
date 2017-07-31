@@ -1,0 +1,6 @@
+# Valid values are:
+#   install - Installs Drupal from scratch.
+#   sync - Uses `blt sync` to pull a remote db from drush.aliases.remote.
+#   import - Imports a .sql file from setup.dump-file.
+# setup.strategy: import
+# setup.dump-file: /tmp/my-dump-file.sql
