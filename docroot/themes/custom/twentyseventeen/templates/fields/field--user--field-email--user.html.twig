@@ -1,0 +1,4 @@
+{% for item in items %}
+    {% set mail = 'mailto:' ~ item.content|render %}
+    {{ link(item.content, mail, { 'target':['_blank']} ) }}
+{% endfor %}
