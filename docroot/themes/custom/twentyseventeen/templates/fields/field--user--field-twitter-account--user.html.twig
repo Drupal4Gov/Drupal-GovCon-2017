@@ -1,0 +1,4 @@
+{% for item in items %}
+    {% set twitter = 'https://twitter.com/' ~ item.content|render %}
+    {{ link(item.content, twitter, { 'target':['_blank']} ) }}
+{% endfor %}
