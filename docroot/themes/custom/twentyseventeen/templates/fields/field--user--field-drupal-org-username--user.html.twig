@@ -1,4 +1,4 @@
 {% for item in items %}
     {% set drupaluser = 'https://drupal.org/u/' ~ item.content|render %}
-    {{ link(item.content, drupaluser, { 'target':['_blank'], 'class':['linkicon__icon icon-drupalicon']} ) }}
+    {{ link('', drupaluser, { 'target':['_blank'], 'class':['linkicon__icon icon-drupalicon']} ) }}
 {% endfor %}

@@ -106,14 +106,13 @@ content:
       image_link: ''
     third_party_settings: {  }
   field_website:
-    type: linkicon
-    weight: 7
-    region: content
+    weight: 11
     label: hidden
     settings:
       target: _blank
       linkicon_prefix: icon-website
       linkicon_wrapper_class: ''
+      linkicon_link: true
       linkicon_style: ''
       linkicon_color: ''
       linkicon_maxlength: 60
@@ -123,7 +122,6 @@ content:
       url_only: false
       url_plain: false
       rel: '0'
-      linkicon_link: false
       linkicon_load: false
       linkicon_vertical: false
       linkicon_tooltip: false
@@ -131,6 +129,8 @@ content:
       linkicon_bundle: ''
       trim_length: 80
     third_party_settings: {  }
+    type: linkicon
+    region: content
   member_for:
     weight: 0
     region: content
