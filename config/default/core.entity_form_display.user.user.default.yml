@@ -7,13 +7,12 @@ dependencies:
     - field.field.user.user.field_bio
     - field.field.user.user.field_company
     - field.field.user.user.field_conference_role
-    - field.field.user.user.field_drupal_org_link
     - field.field.user.user.field_drupal_org_username
+    - field.field.user.user.field_email
     - field.field.user.user.field_first_name
     - field.field.user.user.field_job_title
     - field.field.user.user.field_last_name
     - field.field.user.user.field_picture
-    - field.field.user.user.field_public_e_mail
     - field.field.user.user.field_twitter_account
     - field.field.user.user.field_user_picture
     - field.field.user.user.field_website
@@ -55,16 +54,16 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
-  field_drupal_org_link:
-    weight: 15
-    settings:
-      placeholder_url: 'https://www.drupal.org/u/[your username]'
-      placeholder_title: 'https://www.drupal.org/u/[your username]'
-    third_party_settings: {  }
-    type: link_default
-    region: content
   field_drupal_org_username:
     weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_email:
+    weight: 18
     settings:
       size: 60
       placeholder: ''
@@ -95,21 +94,13 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_public_e_mail:
-    weight: 16
-    settings:
-      placeholder_url: 'mailto:address@example.com'
-      placeholder_title: 'mailto:address@example.com'
-    third_party_settings: {  }
-    type: link_default
-    region: content
   field_twitter_account:
-    weight: 13
+    weight: 17
     settings:
-      placeholder_url: 'http://twitter.com/[your username]'
-      placeholder_title: 'http://twitter.com/[your username]'
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: link_default
+    type: string_textfield
     region: content
   field_user_picture:
     type: entity_browser_file

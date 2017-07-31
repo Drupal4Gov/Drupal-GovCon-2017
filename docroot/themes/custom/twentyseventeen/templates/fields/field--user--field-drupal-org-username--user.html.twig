@@ -1,0 +1,4 @@
+{% for item in items %}
+    {% set drupaluser = 'https://drupal.org/u/' ~ item.content|render %}
+    {{ link(item.content, drupaluser, { 'target':['_blank']} ) }}
+{% endfor %}

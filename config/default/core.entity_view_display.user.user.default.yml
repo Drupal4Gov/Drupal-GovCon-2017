@@ -6,13 +6,12 @@ dependencies:
     - field.field.user.user.field_bio
     - field.field.user.user.field_company
     - field.field.user.user.field_conference_role
-    - field.field.user.user.field_drupal_org_link
     - field.field.user.user.field_drupal_org_username
+    - field.field.user.user.field_email
     - field.field.user.user.field_first_name
     - field.field.user.user.field_job_title
     - field.field.user.user.field_last_name
     - field.field.user.user.field_picture
-    - field.field.user.user.field_public_e_mail
     - field.field.user.user.field_twitter_account
     - field.field.user.user.field_user_picture
     - field.field.user.user.field_website
@@ -57,34 +56,16 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  field_drupal_org_link:
-    weight: 10
-    label: hidden
-    settings:
-      linkicon_prefix: icon-drupalicon
-      linkicon_wrapper_class: ''
-      linkicon_style: ''
-      linkicon_color: ''
-      linkicon_maxlength: 60
-      linkicon_global_title: ''
-      linkicon_position: ''
-      linkicon_size: ''
-      url_only: false
-      url_plain: false
-      rel: '0'
-      target: '0'
-      linkicon_link: false
-      linkicon_load: false
-      linkicon_vertical: false
-      linkicon_tooltip: false
-      linkicon_no_text: false
-      linkicon_bundle: ''
-      trim_length: 80
-    third_party_settings: {  }
-    type: linkicon
-    region: content
   field_drupal_org_username:
     weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_email:
+    weight: 14
     label: hidden
     settings:
       link_to_entity: false
@@ -115,57 +96,13 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-  field_public_e_mail:
-    weight: 11
-    label: hidden
-    settings:
-      linkicon_prefix: icon-email
-      linkicon_wrapper_class: ''
-      linkicon_style: ''
-      linkicon_color: ''
-      linkicon_maxlength: 60
-      linkicon_global_title: ''
-      linkicon_position: ''
-      linkicon_size: ''
-      url_only: false
-      url_plain: false
-      rel: '0'
-      target: '0'
-      linkicon_link: false
-      linkicon_load: false
-      linkicon_vertical: false
-      linkicon_tooltip: false
-      linkicon_no_text: false
-      linkicon_bundle: ''
-      trim_length: 80
-    third_party_settings: {  }
-    type: linkicon
-    region: content
   field_twitter_account:
-    weight: 7
+    weight: 13
     label: hidden
     settings:
-      linkicon_prefix: icon-twitter
-      linkicon_wrapper_class: ''
-      linkicon_style: ''
-      linkicon_color: ''
-      linkicon_maxlength: 60
-      linkicon_global_title: ''
-      linkicon_position: ''
-      linkicon_size: ''
-      url_only: false
-      url_plain: false
-      rel: '0'
-      target: '0'
-      linkicon_link: false
-      linkicon_load: false
-      linkicon_vertical: false
-      linkicon_tooltip: false
-      linkicon_no_text: false
-      linkicon_bundle: ''
-      trim_length: 80
+      link_to_entity: false
     third_party_settings: {  }
-    type: linkicon
+    type: string
     region: content
   field_user_picture:
     weight: 0

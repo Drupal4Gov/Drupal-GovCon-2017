@@ -1,16 +1,16 @@
-uuid: 94725897-2d72-47e7-a8fc-a9011ca0ca40
+uuid: ecb2e9d7-257e-4d59-95b3-183fc9812ccc
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.user.field_twitter_account
+    - field.storage.user.field_email
   module:
     - user
-id: user.user.field_twitter_account
-field_name: field_twitter_account
+id: user.user.field_email
+field_name: field_email
 entity_type: user
 bundle: user
-label: 'Twitter Account'
+label: Email
 description: ''
 required: false
 translatable: false
