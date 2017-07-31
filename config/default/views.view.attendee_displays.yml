@@ -8,7 +8,7 @@ dependencies:
     - field.storage.user.field_conference_role
     - field.storage.user.field_first_name
     - field.storage.user.field_last_name
-    - field.storage.user.field_user_picture
+    - field.storage.user.field_picture
     - image.style.user_profile_image
     - node.type.session
     - system.menu.main
@@ -577,9 +577,9 @@ display:
           entity_field: sid
           plugin_id: field
         field_user_picture:
-          id: field_user_picture
-          table: user__field_user_picture
-          field: field_user_picture
+          id: field_picture
+          table: user__field_picture
+          field: field_picture
           plugin_id: field
           relationship: uid
       filters:
@@ -885,7 +885,7 @@ display:
         - 'config:field.storage.user.field_company'
         - 'config:field.storage.user.field_first_name'
         - 'config:field.storage.user.field_last_name'
-        - 'config:field.storage.user.field_user_picture'
+        - 'config:field.storage.user.field_picture'
   page_1:
     display_plugin: page
     id: page_1
@@ -1527,9 +1527,9 @@ display:
           entity_field: uid
           plugin_id: field
         field_user_picture:
-          id: field_user_picture
-          table: user__field_user_picture
-          field: field_user_picture
+          id: field_picture
+          table: user__field_picture
+          field: field_picture
           relationship: uid
           group_type: group
           admin_label: ''
@@ -2375,7 +2375,7 @@ display:
         - 'config:field.storage.user.field_conference_role'
         - 'config:field.storage.user.field_first_name'
         - 'config:field.storage.user.field_last_name'
-        - 'config:field.storage.user.field_user_picture'
+        - 'config:field.storage.user.field_picture'
   page_3:
     display_plugin: page
     id: page_3
@@ -2467,9 +2467,9 @@ display:
           entity_field: uid
           plugin_id: field
         field_user_picture:
-          id: field_user_picture
-          table: user__field_user_picture
-          field: field_user_picture
+          id: field_picture
+          table: user__field_picture
+          field: field_picture
           relationship: uid
           group_type: group
           admin_label: ''
@@ -3510,7 +3510,7 @@ display:
         - 'config:field.storage.user.field_company'
         - 'config:field.storage.user.field_first_name'
         - 'config:field.storage.user.field_last_name'
-        - 'config:field.storage.user.field_user_picture'
+        - 'config:field.storage.user.field_picture'
   page_4:
     display_plugin: page
     id: page_4
@@ -3926,8 +3926,8 @@ display:
           plugin_id: field
         field_user_picture:
           id: field_user_picture
-          table: user__field_user_picture
-          field: field_user_picture
+          table: user__field_picture
+          field: field_picture
           relationship: uid
           group_type: group
           admin_label: ''
@@ -4405,4 +4405,4 @@ display:
         - 'config:field.storage.user.field_company'
         - 'config:field.storage.user.field_first_name'
         - 'config:field.storage.user.field_last_name'
-        - 'config:field.storage.user.field_user_picture'
+        - 'config:field.storage.user.field_picture'
