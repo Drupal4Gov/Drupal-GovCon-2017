@@ -34,7 +34,7 @@ bundle: user
 mode: default
 content:
   field_bio:
-    weight: 6
+    weight: 4
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -48,14 +48,6 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-  field_conference_role:
-    weight: 12
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
   field_drupal_org_username:
     weight: 3
     label: hidden
@@ -65,13 +57,13 @@ content:
     type: string
     region: content
   field_email:
-    weight: 14
+    type: string
+    weight: 9
+    region: content
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
-    region: content
   field_first_name:
     weight: 1
     label: hidden
@@ -81,7 +73,7 @@ content:
     type: string
     region: content
   field_job_title:
-    weight: 4
+    weight: 6
     label: hidden
     settings:
       link_to_entity: false
@@ -97,26 +89,29 @@ content:
     type: string
     region: content
   field_twitter_account:
-    weight: 13
+    type: string
+    weight: 8
+    region: content
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
-    region: content
   field_user_picture:
-    weight: 0
+    type: image
+    weight: 10
+    region: content
     label: hidden
     settings:
       image_style: user_profile_image
-      image_link: content
+      image_link: ''
     third_party_settings: {  }
-    type: image
-    region: content
   field_website:
-    weight: 8
+    type: linkicon
+    weight: 7
+    region: content
     label: hidden
     settings:
+      target: _blank
       linkicon_prefix: icon-website
       linkicon_wrapper_class: ''
       linkicon_style: ''
@@ -128,7 +123,6 @@ content:
       url_only: false
       url_plain: false
       rel: '0'
-      target: '0'
       linkicon_link: false
       linkicon_load: false
       linkicon_vertical: false
@@ -137,8 +131,11 @@ content:
       linkicon_bundle: ''
       trim_length: 80
     third_party_settings: {  }
-    type: linkicon
+  member_for:
+    weight: 0
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
+  field_conference_role: true
   field_picture: true
-  member_for: true
