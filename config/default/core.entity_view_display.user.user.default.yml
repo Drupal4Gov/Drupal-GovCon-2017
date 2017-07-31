@@ -13,7 +13,6 @@ dependencies:
     - field.field.user.user.field_last_name
     - field.field.user.user.field_picture
     - field.field.user.user.field_twitter_account
-    - field.field.user.user.field_user_picture
     - field.field.user.user.field_website
     - image.style.user_profile_image
   module:
@@ -58,7 +57,7 @@ content:
     region: content
   field_email:
     type: string
-    weight: 9
+    weight: 8
     region: content
     label: hidden
     settings:
@@ -88,15 +87,7 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-  field_twitter_account:
-    type: string
-    weight: 8
-    region: content
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-  field_user_picture:
+  field_picture:
     type: image
     weight: 10
     region: content
@@ -105,8 +96,16 @@ content:
       image_style: user_profile_image
       image_link: ''
     third_party_settings: {  }
+  field_twitter_account:
+    type: string
+    weight: 7
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
   field_website:
-    weight: 11
+    weight: 9
     label: hidden
     settings:
       target: _blank
@@ -138,4 +137,3 @@ content:
     third_party_settings: {  }
 hidden:
   field_conference_role: true
-  field_picture: true
