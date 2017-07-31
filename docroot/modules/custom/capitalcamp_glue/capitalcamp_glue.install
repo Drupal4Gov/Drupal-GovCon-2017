@@ -115,3 +115,25 @@ function capitalcamp_glue_update_8005() {
     }
   }
 }
+
+/**
+ * Populates the <> Vocabulary with 2017 Role Terms.
+ */
+function capitalcamp_glue_update_8006() {
+  $vocabulary = "conference_role";
+  $terms = [
+    "Organizer-2017",
+    "Presenter-2017",
+    "Sponsor-2017",
+    "Volunteer-2017",
+  ];
+
+  foreach ($terms as $name) {
+    // Check whether the term already exists.
+    $result = \Drupal::entityQuery('taxonomy_term')->condition('vid', $vocabulary)->condition('name', $name)->execute();
+    if (empty($result)) {
+      $term = Term::create(['vid' => $vocabulary, 'name' => $name]);
+      $term->save();
+    }
+  }
+}
