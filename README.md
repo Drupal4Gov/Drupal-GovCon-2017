@@ -1,31 +1,90 @@
 # Drupal GovCon
 Welcome to the repo for the Drupal GovCon event website.
 
-Tools we are using:
-[Acquia BLT](http://blt.readthedocs.io/en/8.x/)
+## Getting Started
 
-## Prereqs
+This project is based on BLT, an open-source project template and tool that enables building, testing, and deploying Drupal installations following Acquia Professional Services best practices.
 
-- A Mac (these instructions are primarily for a Mac host running El Capitan or Sierra)
-- [Virtualbox](https://www.virtualbox.org)
-- [Vagrant](https://www.vagrantup.com/)
- - [Vagrant hostsupdater plugin](https://github.com/cogitatio/vagrant-hostsupdater)
-- [Composer](https://getcomposer.org/)
-- [Drush](http://www.drush.org/en/master/install/) > 8
-- [Ansible](https://github.com/ansible/ansible) > 2.1
+* Ensure that your computer meets the minimum installation requirements (and then install the required applications). See the [System Requirements](http://blt.readthedocs.io/en/8.x/INSTALL/).
+* Fork the parent repository in GitHub
+* Request access to the Drupal4Gov organization in GitHub 
+* Request access to the Acquia Cloud Environment for Drupal GovCon
+* Setup a SSH key that can be used for GitHub and the Acquia Cloud (you CAN use the same key)
+    * [Setup GitHub SSH Keys](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
+    * [Setup Acquia Cloud SSH Keys](https://docs.acquia.com/acquia-cloud/ssh/generate)
+* Clone your fork
+```
+$ git clone git@github.com:<your repository>/Drupal-GovCon-2017.git
+```
+* Add the parent repository as an upstream
+```
+$ git remote add upstream git@github.com:Drupal4Gov/Drupal-GovCon-2017.git
+```
+* Install Composer Dependencies (warning: this can take some time based on internet speeds)
+```
+$ composer install
+```
+* Setup Virtual Machine (warning: this can take some time based on internet speeds)
+```
+$ blt vm
+```
+* Syncronize your local with the cloud
+```
+$ blt sync:refresh
+``` 
+* Access the site and do necessary work at http://local.capitalcamp.com
 
-## Quickstart Instructions
+Additional [BLT documentation](http://blt.readthedocs.io) may be useful. You may also access a list of BLT commands by running:
+```
+$ blt
+``` 
 
-- Before you start, do `ssh-add -l` to ensure your private key is registered. If not (especially after a system update), do `ssh-add -K ~/.ssh/id_rsa` to do this.
-- Install the prereqs above by following [BLT's Installing Requirements](https://github.com/acquia/blt/blob/8.x/INSTALL.md#installing-requirements) and then `vagrant plugin install vagrant-hostsupdater`
-- **Fork this repo**
-- Clone repo locally (clone **your fork**, do NOT clone the main repo)
-- Configure a remote for the main repo (replace upstream with whatever naming makes sense to you) `git remote add upstream git@github.com:Drupal4Gov/Drupal-GovCon-2017.git`
-- From the repo root, run `composer install`
-- `composer blt-alias`
-- `source ~/.bash_profile`
-- `blt vm`
-- Access local Drupal install at http://local.capitalcamp.com/
+Note the following properties of this project:
+* Primary development branch: master
+* Local environment: DrupalVM
+* Local drush alias: @capitalcamp.local
+* Local site URL: http://local.capitalcamp.com
+
+## Working With BLT
+
+This is the common workflow for this project.
+
+* Locate a ticket that you are planning on working
+* Ensure that your git is tracking the most current upstream.
+```
+$ git fetch upstream
+```
+* Create a new branch off of upstream/master that is based on the ticket you are working (e.g. D4G-XXX)
+```
+$ git checkout -b D4G-XXX upstream/master
+```
+* Reset local environment to ensure all is inline with new branch. WARNING: this is destructive
+```
+$ blt sync:refresh
+```
+* Do whatever work is required for ticket
+* Create new commit(s) as needed. All commit messages should follow the pattern: D4G-XXX: commit messages go here. They must include the Ticket Number (with a dash AND a colon), a message, and a period.
+* Run Tests / Validation Scripts
+```
+$ blt validate
+$ blt tests
+```
+* Ensure no other changes have been made to the upstream/master branch. If they have, rebase your branch.
+```
+$ git fetch upstream
+$ git rebase upstream/master
+```
+* Push your commit(s) to your origin
+```
+$  git push --set-upstream origin DGC-XXX
+```
+* Create a new Pull Request that mentions the original ticket in the body (#DGC-XXX)
+* Ensure the build passes
+
+## Resources
+
+* JIRA - https://drupal4gov.atlassian.net
+* GitHub - https://github.com/Drupal4Gov/Drupal-GovCon-2017
 
 ## Troubleshooting
 
