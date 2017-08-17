@@ -17,6 +17,22 @@ drush:
     local: capitalcamp.local
     ci: self
   default_alias: '${drush.aliases.local}'
+modules:
+  local:
+    enable: [dblog, devel, seckit, views_ui]
+    uninstall: [acsf, acquia_connector, shield]
+  ci:
+    enable: {  }
+    uninstall: [acquia_connector, shield]
+  dev:
+    enable: [acquia_connector, shield]
+    uninstall: {  }
+  test:
+    enable: [acquia_connector, shield]
+    uninstall: [devel, views_ui]
+  prod:
+    enable: [acquia_connector, shield]
+    uninstall: [devel, views_ui]
 target-hooks:
   frontend-setup:
     dir: '${docroot}/themes/custom/twentyseventeen'
@@ -33,24 +49,9 @@ target-hooks:
   post-setup-build:
     dir: '${docroot}/profiles/contrib/lightning'
     command: 'echo ''No post-setup-build hook configured.'''
-import: '${repo.root}/blt/custom.xml'
-modules:
-  local:
-    enable: {  }
-    uninstall: {  }
-  ci:
-    enable: {  }
-    uninstall: {  }
-  dev:
-    enable: {  }
-    uninstall: {  }
-  test:
-    enable: {  }
-    uninstall: {  }
-  prod:
-    enable: {  }
-    uninstall: {  }
 behat:
   paths:
     - '${repo.root}/tests/behat'
-
+cm:
+  allow-overrides: true
+  strategy: features
