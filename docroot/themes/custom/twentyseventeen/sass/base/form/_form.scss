@@ -343,6 +343,8 @@ fieldset#edit-which-days-do-you-plan-to-attend-drupal-govcon---wrapper legend {
 
 fieldset#edit-sign-up-for-news--wrapper,
 fieldset#edit-which-days-do-you-plan-to-attend-drupal-govcon---wrapper {
+fieldset#edit-field-sponsor-sponsorship-level--wrapper
+{
   margin-bottom: 1em;
   border: 1px solid $slv;
   padding: 1em;
@@ -360,4 +362,9 @@ fieldset#edit-address--wrapper legend:first-child {
   &:after {
     content: '*';
   }
+}
+
+//Styling for Sponsorship Level Checkbox Legend //
+fieldset#edit-field-sponsor-sponsorship-level--wrapper legend {
+  margin-left: .20em;
 }
