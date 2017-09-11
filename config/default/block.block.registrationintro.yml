@@ -1,0 +1,31 @@
+uuid: 488dabce-124a-4483-8656-21b5b1ecc834
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:de5f31af-5e99-48ce-a6e8-ee86dd2710b2'
+  module:
+    - block_content
+    - system
+  theme:
+    - twentyseventeen
+id: registrationintro
+theme: twentyseventeen
+region: content
+weight: -10
+provider: null
+plugin: 'block_content:de5f31af-5e99-48ce-a6e8-ee86dd2710b2'
+settings:
+  id: 'block_content:de5f31af-5e99-48ce-a6e8-ee86dd2710b2'
+  label: 'Registration Intro'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /form/registration
+    negate: false
+    context_mapping: {  }
