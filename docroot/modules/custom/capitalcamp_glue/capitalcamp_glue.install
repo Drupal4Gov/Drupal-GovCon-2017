@@ -7,7 +7,6 @@
 
 use Drupal\block\Entity\Block;
 use Drupal\taxonomy\Entity\Term;
-use Drupal\menu_link_content\Entity\MenuLinkContent;
 use Drupal\user\Entity\Role;
 
 /**
@@ -41,31 +40,6 @@ function capitalcamp_glue_update_8002() {
   if ($block) {
     $block->delete();
   }
-}
-
-/**
- * Add user registation and submission links.
- */
-function capitalcamp_glue_update_8003() {
-  $registerLink = MenuLinkContent::create([
-    'title' => 'Submit a Session',
-    'link' => ['uri' => 'internal:/node/add/session?destination=/user/'],
-    'parent' => 'menu_link_content:cfde32b4-ff81-4a70-a608-5faf124c12ee',
-    'menu_name' => 'main',
-    'expanded' => FALSE,
-    'weight' => -46,
-  ]);
-  $registerLink->save();
-
-  $registerLink = MenuLinkContent::create([
-    'title' => 'Register to Attend',
-    'link' => ['uri' => 'internal:/form/registration?destination=/user/'],
-    'parent' => 'menu_link_content:cfde32b4-ff81-4a70-a608-5faf124c12ee',
-    'menu_name' => 'main',
-    'expanded' => FALSE,
-    'weight' => -45,
-  ]);
-  $registerLink->save();
 }
 
 /**
