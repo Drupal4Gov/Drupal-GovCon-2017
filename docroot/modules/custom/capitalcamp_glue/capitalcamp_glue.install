@@ -69,6 +69,31 @@ function capitalcamp_glue_update_8003() {
 }
 
 /**
+ * Add 2015 and 2016 archive links to footer menu.
+ */
+function capitalcamp_glue_update_8007() {
+  $archive2016Link = MenuLinkContent::create([
+    'title' => '2016',
+    'link' => ['uri' => 'https://www.drupalgovcon.org/drupal-govcon-2016/index.html'],
+    'parent' => '',
+    'menu_name' => 'footer',
+    'expanded' => FALSE,
+    'weight' => 0,
+  ]);
+  $archive2016Link->save();
+
+  $archive2015Link = MenuLinkContent::create([
+    'title' => '2015',
+    'link' => ['uri' => 'https://www.drupalgovcon.org/drupal-govcon-2015/index.html'],
+    'parent' => '',
+    'menu_name' => 'footer',
+    'expanded' => FALSE,
+    'weight' => 0,
+  ]);
+  $archive2015Link->save();
+}
+
+/**
  * DCG-104: Add terms to sponsorship level vocabulary.
  */
 function capitalcamp_glue_update_8004() {
