@@ -7,6 +7,10 @@
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         },
+        "asset-packagist": {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        },
         "drupal-cod": {
             "type": "package",
             "package": {
@@ -22,14 +26,14 @@
         }
     },
     "config": {
-      "platform": {
-        "php": "5.6"
-      }
+        "platform": {
+            "php": "5.6"
+        }
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "drush/drush": "^8.1.8",
+        "drush/drush": "8.1.15",
         "acquia/blt": "~8.9",
         "composer/installers": "^1.0.20",
         "cweagans/composer-patches": "^1.6.0",
@@ -44,7 +48,6 @@
         "drupal/acquia_purge": "1.x-dev",
         "drupal/cloudflare": "^1.0.0-alpha7",
         "drupal/purge": "^3.0.0-beta6",
-        "acquia/lightning": "^2",
         "drupal/extlink": "^1.0",
         "drupal/twig_xdebug": "1.x-dev",
         "drupal/console": "~1",
@@ -64,7 +67,9 @@
         "drupal/flag": "4.x-dev",
         "drupal/better_exposed_filters": "^3.0@alpha",
         "drupal/smart_trim": "^1.0",
-        "drupal/linkicon": "^1.4"
+        "drupal/linkicon": "^1.4",
+        "drupal/core": "8.4.0",
+        "acquia/lightning": "2.2.0"
     },
     "require-dev": {
         "behat/behat": "^3.1",
@@ -121,7 +126,9 @@
                 "type:drupal-library"
             ],
             "docroot/libraries/{$name}": [
-                "type:drupal-library"
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset"
             ]
         },
         "patches": {
@@ -143,10 +150,7 @@
         },
         "enable-patching": true,
         "merge-plugin": {
-            "require": [
-                "vendor/acquia/blt/composer.required.json",
-                "vendor/acquia/blt/composer.suggested.json"
-            ],
+            "require": [],
             "include": [
                 "blt/composer.overrides.json"
             ],
@@ -155,6 +159,10 @@
             "merge-scripts": true,
             "replace": false,
             "ignore-duplicates": true
-        }
+        },
+        "installer-types": [
+            "bower-asset",
+            "npm-asset"
+        ]
     }
 }
