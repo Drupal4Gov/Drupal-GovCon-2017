@@ -114,6 +114,7 @@ handlers:
     label: Email
     handler_id: email
     status: true
+    conditions: {  }
     weight: 1
     settings:
       to_mail: '[webform_submission:values:attendee_e_mail_address:raw]'
@@ -159,3 +160,6 @@ handlers:
       ignore_access: false
       reply_to: ''
       return_path: ''
+      exclude_empty: true
+      sender_mail: ''
+      sender_name: ''

@@ -108,6 +108,7 @@ handlers:
     label: Email
     handler_id: email
     status: true
+    conditions: {  }
     weight: -49
     settings:
       to_mail: default
@@ -130,11 +131,15 @@ handlers:
       ignore_access: false
       reply_to: ''
       return_path: ''
+      exclude_empty: true
+      sender_mail: ''
+      sender_name: ''
   email_1:
     id: email
     label: Email
     handler_id: email_1
     status: true
+    conditions: {  }
     weight: -50
     settings:
       to_mail: '[webform_submission:values:email:raw]'
@@ -157,3 +162,6 @@ handlers:
       ignore_access: false
       reply_to: ''
       return_path: ''
+      exclude_empty: true
+      sender_mail: ''
+      sender_name: ''
