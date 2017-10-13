@@ -11,12 +11,12 @@ third_party_settings:
       - main
     parent: 'main:'
   workbench_moderation:
-    enabled: false
+    enabled: true
     allowed_moderation_states:
-      - published
       - archived
       - draft
       - needs_review
+      - published
     default_moderation_state: draft
 _core:
   default_config_hash: F9lS2X3VyFwsFON4Qr-Y-pD4n9Cam3YniCuMkJGdNvM

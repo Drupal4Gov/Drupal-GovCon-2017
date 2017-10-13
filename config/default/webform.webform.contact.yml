@@ -1,4 +1,3 @@
-uuid: e02eba4c-6e83-4b4f-80d7-0d2614449f05
 langcode: en
 status: open
 dependencies: {  }
@@ -10,50 +9,54 @@ id: contact
 title: Contact
 description: ''
 category: ''
-elements: "email:\n  '#type': email\n  '#title': Email\n  '#default_value': '[current-user:mail]'\n  '#title_display': before\n  '#description_display': after\n  '#required': true\n  '#required_error': 'Email is required'\nmessage:\n  '#type': textarea\n  '#title': Message\n  '#title_display': before\n  '#description_display': invisible\n  '#rows': '400'\n  '#required': true\n  '#required_error': 'Message is required'\ncontact:\n  '#type': captcha\n  '#captcha_type': recaptcha/reCAPTCHA\n"
+elements: "email:\n  '#type': email\n  '#title': Email\n  '#default_value': '[current-user:mail]'\n  '#title_display': before\n  '#description_display': after\n  '#required': true\n  '#required_error': 'Email is required'\nmessage:\n  '#type': textarea\n  '#title': Message\n  '#title_display': before\n  '#description_display': invisible\n  '#rows': '400'\n  '#required': true\n  '#required_error': 'Message is required'\ncontact:\n  '#type': captcha\n  '#captcha_type': recaptcha/reCAPTCHA\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#preview_next__label': 'Preview message'\n"
 css: "#edit-message {\r\nheight: 200px;\r\n}"
 javascript: ''
 settings:
+  ajax: false
+  ajax_scroll_top: form
   page: true
   page_submit_path: contact
   page_confirm_path: contact/confirmation
-  form_submit_label: ''
   form_submit_once: false
-  form_submit_attributes: {  }
   form_exception_message: ''
   form_open_message: ''
-  form_close_message: ''
+  form_close_message: null
   form_previous_submissions: false
   form_confidential: false
   form_confidential_message: ''
+  form_convert_anonymous: false
   form_prepopulate: false
   form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_reset: false
   form_disable_autocomplete: false
   form_novalidate: false
   form_unsaved: false
   form_disable_back: false
   form_autofocus: false
   form_details_toggle: false
+  submission_label: ''
+  submission_log: false
+  submission_user_columns: {  }
   wizard_progress_bar: true
   wizard_progress_pages: false
   wizard_progress_percentage: false
-  wizard_next_button_label: ''
-  wizard_next_button_attributes: {  }
-  wizard_prev_button_label: ''
-  wizard_prev_button_attributes: {  }
   wizard_start_label: ''
-  wizard_complete: true
-  wizard_complete_label: ''
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
   preview: 0
-  preview_next_button_label: 'Preview message'
-  preview_next_button_attributes: {  }
-  preview_prev_button_label: ''
-  preview_prev_button_attributes: {  }
+  preview_label: ''
+  preview_title: ''
   preview_message: ''
-  draft: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  draft: none
+  draft_multiple: false
   draft_auto_save: false
-  draft_button_label: ''
-  draft_button_attributes: {  }
   draft_saved_message: ''
   draft_loaded_message: ''
   confirmation_type: inline
@@ -75,33 +78,43 @@ settings:
   results_disabled: false
   results_disabled_ignore: false
   token_update: false
+  wizard_comfirmation: true
+  wizard_comfirmation_label: ''
 access:
   create:
     roles:
       - anonymous
       - authenticated
     users: {  }
+    permissions: {  }
   view_any:
     roles: {  }
     users: {  }
+    permissions: {  }
   update_any:
     roles: {  }
     users: {  }
+    permissions: {  }
   delete_any:
     roles: {  }
     users: {  }
+    permissions: {  }
   purge_any:
     roles: {  }
     users: {  }
+    permissions: {  }
   view_own:
     roles: {  }
     users: {  }
+    permissions: {  }
   update_own:
     roles: {  }
     users: {  }
+    permissions: {  }
   delete_own:
     roles: {  }
     users: {  }
+    permissions: {  }
 handlers:
   email:
     id: email
@@ -111,6 +124,8 @@ handlers:
     conditions: {  }
     weight: -49
     settings:
+      states:
+        - completed
       to_mail: default
       to_options: {  }
       cc_mail: ''
@@ -119,19 +134,17 @@ handlers:
       bcc_options: {  }
       from_mail: '[webform_submission:values:email:raw]'
       from_options: {  }
-      from_name: '[webform_submission:values:email:value]'
+      from_name: '[webform_submission:values:email:raw]'
       subject: default
       body: default
       excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
       html: true
       attachments: false
       debug: false
-      states:
-        - completed
-      ignore_access: false
       reply_to: ''
       return_path: ''
-      exclude_empty: true
       sender_mail: ''
       sender_name: ''
   email_1:
@@ -142,6 +155,8 @@ handlers:
     conditions: {  }
     weight: -50
     settings:
+      states:
+        - completed
       to_mail: '[webform_submission:values:email:raw]'
       to_options: {  }
       cc_mail: ''
@@ -154,14 +169,13 @@ handlers:
       subject: default
       body: "<br />\nThank you for your message. Someone from the Drupal GovCon team will be in touch with you soon. Please add [DGC or D4G email address] to your email contacts to make sure our response reaches you.<br />\n<br />\n&lt;p&gt;Submitted on [webform_submission:created]&lt;/p&gt;<br />\n&lt;p&gt;Submitted by: [webform_submission:user]&lt;/p&gt;<br />\n&lt;p&gt;Submitted values are:&lt;/p&gt;<br />\n[webform_submission:values]"
       excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
       html: true
       attachments: false
       debug: false
-      states:
-        - completed
-      ignore_access: false
       reply_to: ''
       return_path: ''
-      exclude_empty: true
       sender_mail: ''
       sender_name: ''
+uuid: e02eba4c-6e83-4b4f-80d7-0d2614449f05

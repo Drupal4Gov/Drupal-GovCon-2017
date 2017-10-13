@@ -5,12 +5,12 @@ dependencies:
   config:
     - image.style.medium
     - image.style.thumbnail
-    - media_entity.bundle.image
+    - media.type.image
   module:
     - entity_browser
     - file
     - image
-    - media_entity
+    - media
     - user
     - views_infinite_scroll
 _core:
