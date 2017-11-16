@@ -162,3 +162,23 @@ function capitalcamp_glue_update_8006() {
     }
   }
 }
+
+/**
+ * DCG-153: Add terms to Conference Year vocabulary.
+ */
+function capitalcamp_glue_update_8008() {
+  $vocabulary = "conference_year";
+  $terms = [
+    '2017',
+    '2018',
+  ];
+
+  foreach ($terms as $name) {
+    // Check whether the term already exists.
+    $result = \Drupal::entityQuery('taxonomy_term')->condition('vid', $vocabulary)->condition('name', $name)->execute();
+    if (empty($result)) {
+      $term = Term::create(['vid' => $vocabulary, 'name' => $name]);
+      $term->save();
+    }
+  }
+}
