@@ -1,0 +1,105 @@
+uuid: 3ca89283-40f1-45bc-a0f0-35632dbaea46
+langcode: en
+status: open
+dependencies: {  }
+open: null
+close: null
+uid: 1
+template: false
+id: scholarship_application
+title: 'Scholarship Application'
+description: ''
+category: ''
+elements: "first_name:\n  '#type': textfield\n  '#title': 'First Name'\n  '#required': true\nlast_name:\n  '#type': textfield\n  '#title': 'Last Name'\n  '#required': true\ndrupal_org_user_name:\n  '#type': textfield\n  '#title': 'Drupal.org User Name'\nemployer:\n  '#type': textfield\n  '#title': Employer\n  '#required': true\njob_title:\n  '#type': textfield\n  '#title': 'Job Title'\n  '#required': true\nphone_number:\n  '#type': textfield\n  '#title': 'Phone Number'\nemail:\n  '#type': textfield\n  '#title': Email\n  '#required': true\nwhere_will_you_be_traveling_from_:\n  '#type': textfield\n  '#title': 'Where will you be traveling from?'\n  '#required': true\nprovide_link_to_your_resume_linkedin_profile_and_or_other_profes:\n  '#type': textfield\n  '#title': 'Provide link to your resume, LinkedIn profile, and/or other professional summary'\nwhy_is_it_important_to_you_to_attend_drupal_govcon_:\n  '#type': textarea\n  '#title': 'Why is it important to you to attend Drupal GovCon?'\n  '#required': true\ntravel_expenses:\n  '#type': fieldset\n  '#title': 'Travel Expenses'\n  estimate_of_travel_expenses:\n    '#type': select\n    '#title': 'Estimate of Travel Expenses'\n    '#options':\n      'employer not paying': 'My employer is not paying for expenses related to GovCon.'\n      'employer paying': 'My employer is paying for some expenses related to GovCon. Please explain below.'\n    '#required': true\n  explanation_of_employer_covered_travel_expenses:\n    '#type': textarea\n    '#title': 'Explanation of employer covered travel expenses'\n    '#states':\n      required:\n        ':input[name=\"estimate_of_travel_expenses\"]':\n          value: 'employer paying'\n    '#format_items': comma\nare_you_a_member_of_the_drupal_govcon_planning_committee_:\n  '#type': select\n  '#title': 'Are you a member of the Drupal GovCon planning committee?'\n  '#options':\n    'yes': 'yes'\n    'no': 'no'\n  '#required': true\n"
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  form_submit_once: false
+  form_exception_message: ''
+  form_open_message: ''
+  form_close_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_unsaved: false
+  form_disable_back: false
+  form_autofocus: false
+  form_details_toggle: false
+  submission_label: ''
+  submission_log: false
+  submission_user_columns: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_start_label: ''
+  wizard_complete: true
+  wizard_complete_label: ''
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  confirmation_type: page
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_url: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  limit_total: null
+  limit_total_message: ''
+  limit_user: null
+  limit_user_message: ''
+  purge: none
+  purge_days: null
+  entity_limit_total: null
+  entity_limit_user: null
+  results_disabled: false
+  results_disabled_ignore: false
+  token_update: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+handlers: {  }
