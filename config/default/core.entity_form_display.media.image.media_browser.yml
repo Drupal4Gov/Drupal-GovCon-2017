@@ -7,9 +7,11 @@ dependencies:
     - field.field.media.image.field_media_in_library
     - field.field.media.image.image
     - image.style.medium
-    - media_entity.bundle.image
+    - media.type.image
   module:
+    - image
     - lightning_media
+    - path
     - workbench_moderation
 _core:
   default_config_hash: LpTYmf5ylCEAcaqLWWOQBLTk-MsJ0QwXhUV3CnOocI0
@@ -26,12 +28,15 @@ content:
     third_party_settings: {  }
     region: content
   image:
-    type: image_immutable
+    type: image_image
     weight: 0
     settings:
       preview_image_style: medium
       progress_indicator: throbber
-    third_party_settings: {  }
+    third_party_settings:
+      lightning_media:
+        file_links: false
+        remove_button: false
     region: content
   name:
     type: string_textfield
@@ -41,6 +46,19 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 100
+    region: content
+    third_party_settings: {  }
 hidden:
   created: true
   uid: true

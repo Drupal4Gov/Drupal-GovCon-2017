@@ -6,8 +6,9 @@ dependencies:
     - core.entity_form_mode.media.media_browser
     - field.field.media.instagram.embed_code
     - field.field.media.instagram.field_media_in_library
-    - media_entity.bundle.instagram
+    - media.type.instagram
   module:
+    - path
     - workbench_moderation
 _core:
   default_config_hash: uS6RS8T1jzj6mCSW2DqzkczI3oII6mbRTOYO8wKerBg
@@ -31,11 +32,24 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   preview:
     weight: null
     settings: {  }
     third_party_settings: {  }
     region: content
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 100
+    region: content
+    third_party_settings: {  }
 hidden:
   created: true
   embed_code: true
