@@ -1,0 +1,22 @@
+uuid: 3bec4a26-b0e8-40f6-aded-f288dfc3a2e4
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - twentyeighteen
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: twentyeighteen_messages
+theme: twentyeighteen
+region: branding
+weight: -2
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

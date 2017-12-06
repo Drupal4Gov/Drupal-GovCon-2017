@@ -1,0 +1,50 @@
+@import '../node_modules/susy/sass/susy';
+@import '../node_modules/breakpoint-sass/stylesheets/breakpoint';
+
+/**
+  Normal reset
+*/
+@import "reset";
+
+/**
+  Config file that contains centralized variables
+*/
+@import "config";
+
+// Base
+//
+// These are the default base styles applied to HTML elements.
+//
+// Component classes can override these styles, but if no class applies a style
+// to an HTML element, these styles will be the ones displayed.
+//
+// Style guide: base
+
+// Form
+//
+// These are the default form styles applied to HTML elements.
+//
+// Style guide: form
+@import "base/**/*";
+
+// Layout
+//
+// These are the layout rules.
+//
+// Style guide: layout
+@import "layout/**/*";
+
+// Components
+//
+// Design components are reusable styling that can be applied using just the CSS
+// class names specified in the component. Also known as design 'modules'.
+//
+// Style guide: components
+@import "components/**/*";
+
+// States
+//
+// States are variations that are usually applied via js, such as `.is-active`.
+// 
+// Style guide: states
+@import "state/**/*";
