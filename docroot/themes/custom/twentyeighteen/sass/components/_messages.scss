@@ -1,0 +1,28 @@
+.drupal-messages {
+  padding: 15px;
+  margin: 15px 0;
+  border: 1px solid white;
+
+  @include borderradius();
+
+  @extend .tmp-shadow;
+
+  ol {
+    @extend .no-ul-list;
+  }
+
+  &.messages--status {
+    background: $off-white;
+    color: $dark-gray;
+  }
+
+  &.messages--warning {
+    background: rgba($yellow, 0.3);
+    color: $dark-gray;
+  }
+
+  &.messages--error {
+    background: rgba($red, 0.3);
+    color: $red;
+  }
+}

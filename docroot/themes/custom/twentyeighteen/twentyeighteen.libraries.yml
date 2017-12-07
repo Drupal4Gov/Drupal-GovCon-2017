@@ -1,0 +1,16 @@
+fonts:
+  version: VERSION
+  css:
+    theme:
+      '//fonts.googleapis.com/css?family=Open+Sans:400,700,300': {type: external} # external font
+      fonts/poppins.css: {} # local font
+fontawesome:
+  version: 4.7.0
+  css:
+    component:
+      '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css': {type: external}
+global_styles:
+  version: VERSION
+  css:
+    theme:
+      css/styles.css: {}

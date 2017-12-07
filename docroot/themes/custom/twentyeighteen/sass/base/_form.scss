@@ -1,0 +1,218 @@
+// Forms
+// 
+// Base form elements.
+//
+// Markup: form_html.twig
+//
+// Style guide: form.common
+form {
+  margin: 0 0 1em;
+}
+
+label {
+  display: inline-block;
+  color: $dark-gray;
+  cursor: pointer;
+  font-weight: 500;
+  margin: 0 0 0.1875em;
+  padding-right: 4px;
+  vertical-align: top;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+textarea {
+  background-color: white;
+  font-family: inherit;
+  border: 1px solid $lighter-gray;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.75);
+  display: block;
+  font-size: 0.875em;
+  margin: 0 0 1em;
+  padding: 0.5em;
+  width: auto;
+  box-sizing: border-box;
+  transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+textarea:focus {
+  box-shadow: 0 0 5px $light-gray;
+  border-color: $light-gray;
+  background: white;
+  outline: none;
+}
+
+input[type="file"],
+input[type="checkbox"],
+input[type="radio"],
+select {
+  margin: 0 0 1em;
+}
+
+input[type="file"] {
+  width: 100%;
+}
+
+fieldset {
+  border: solid 1px $light-gray;
+  padding: 1.25em;
+  margin: 1.125em 0;
+}
+
+fieldset legend {
+  font-weight: bold;
+  background: #fff;
+  padding: 0 0.1875em;
+  margin: 0;
+  margin-left: -0.1875em;
+}
+// buttons /////////////////////////
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  @include borderradius();
+
+  border: 1px solid $white;
+  padding: 5px 11px;
+  background: $off-white;
+  color: $med-gray;
+
+  @extend .tmp-shadow;
+
+  &:hover,
+  &:focus {
+    background: $lighter-gray;
+  }
+}
+// Error conditions ////////////////////////////
+.error,
+.error textarea,
+.error select {
+  border-color: $red;
+  background-color: rgba(198, 15, 19, 0.1);
+  margin-bottom: 0;
+}
+
+.error input:focus,
+.error textarea:focus,
+.error select:focus {
+  background: $off-white;
+  border-color: $light-gray;
+}
+
+.error label,
+.error label.error {
+  color: $red;
+}
+
+.error > small,
+.error small.error {
+  display: block;
+  padding: 0.375em 0.25em;
+  margin-top: 0;
+  margin-bottom: 1em;
+  font-size: 0.75em;
+  font-weight: bold;
+  background: $red;
+  color: #fff;
+}
+
+.error span.error-message {
+  display: block;
+}
+
+input.error,
+textarea.error {
+  border-color: $red;
+  background-color: rgba(198, 15, 19, 0.1);
+  margin-bottom: 0;
+}
+
+input.error:focus,
+textarea.error:focus {
+  background: $off-white;
+  border-color: $light-gray;
+}
+
+.error select {
+  border-color: $red;
+  background-color: rgba(198, 15, 19, 0.1);
+}
+
+.error select:focus {
+  background: $off-white;
+  border-color: $light-gray;
+}
+
+label.error {
+  color: $red;
+}
+// Form HTML5
+//
+// Markup: form_html5.twig
+//
+// Style guide: form.html5
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"] {
+  background-color: white;
+  font-family: inherit;
+  border: 1px solid $lighter-gray;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.75);
+  display: block;
+  font-size: 0.875em;
+  margin: 0 0 1em;
+  padding: 0.5em;
+  height: 2.3125em;
+  width: auto;
+  box-sizing: border-box;
+  transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
+}
+
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus {
+  box-shadow: 0 0 5px $light-gray;
+  border-color: $light-gray;
+  outline: none;
+}
+
+form input[disabled],
+form button[disabled] {
+  background-color: $light-gray;
+  box-shadow: none;
+
+  &:hover {
+    background-color: $light-gray;
+  }
+}
+// simple transitions ////////////////////
+form button,
+form input {
+  transition: all 0.3s ease;
+
+  &[disabled] {
+    transition: auto;
+  }
+}
