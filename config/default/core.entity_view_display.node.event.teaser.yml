@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.event.body
+    - field.field.node.event.field_conference_year
     - field.field.node.event.field_session_date_time
     - field.field.node.event.field_session_room
     - node.type.event
@@ -29,7 +30,7 @@ content:
     region: content
     label: hidden
     settings:
-      timezone_override: ''
+      timezone_override: America/New_York
       format_type: day
     third_party_settings: {  }
   field_session_room:
@@ -47,3 +48,4 @@ content:
     third_party_settings: {  }
 hidden:
   body: true
+  field_conference_year: true
