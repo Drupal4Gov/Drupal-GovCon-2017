@@ -1,0 +1,28 @@
+uuid: a5e80c04-82d8-4cc4-a5f3-7a0196dd0ff3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_room_monitor
+    - node.type.session
+id: node.session.field_room_monitor
+field_name: field_room_monitor
+entity_type: node
+bundle: session
+label: 'Room Monitor'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: false
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+field_type: entity_reference

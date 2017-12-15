@@ -1,0 +1,23 @@
+uuid: a5c3cd92-1d6a-4e85-8a5b-ef2aa0f290ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_male_attendees
+    - node.type.session
+id: node.session.field_male_attendees
+field_name: field_male_attendees
+entity_type: node
+bundle: session
+label: 'Male Attendees'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer
