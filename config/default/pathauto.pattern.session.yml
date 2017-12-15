@@ -7,16 +7,16 @@ dependencies:
 id: session
 label: Session
 type: 'canonical_entities:node'
-pattern: 'program/sessions/[node:title]'
+pattern: '[node:field_conference_year:entity:name]/program/sessions/[node:title]'
 selection_criteria:
-  cf83f6bb-e141-4f45-aead-18d606a59786:
+  6ed4e452-7693-40eb-a4ee-201cb06fff12:
     id: node_type
     bundles:
       session: session
     negate: false
     context_mapping:
       node: node
-    uuid: cf83f6bb-e141-4f45-aead-18d606a59786
+    uuid: 6ed4e452-7693-40eb-a4ee-201cb06fff12
 selection_logic: and
 weight: -5
 relationships: {  }
