@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - entity_browser.browser.image_browser
+    - field.field.node.sponsor.field_conference_year
     - field.field.node.sponsor.field_sponsor_logo
     - field.field.node.sponsor.field_sponsor_related_attendees
     - field.field.node.sponsor.field_sponsor_sponsorship_level
@@ -26,6 +27,12 @@ content:
     weight: 6
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_conference_year:
+    weight: 122
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_sponsor_logo:
     type: entity_browser_file

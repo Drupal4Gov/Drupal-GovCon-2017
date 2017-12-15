@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.session.body
+    - field.field.node.session.field_conference_year
     - field.field.node.session.field_experience_level
     - field.field.node.session.field_files
     - field.field.node.session.field_image
@@ -71,6 +72,12 @@ content:
     weight: 4
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_conference_year:
+    weight: 122
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_experience_level:
     weight: 2
