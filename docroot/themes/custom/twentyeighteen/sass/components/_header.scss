@@ -9,3 +9,60 @@
 .region-header {
   @include region-spacer($light-gray);
 }
+
+.menu--main {
+  background: $teal;
+}
+
+.menu-main {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+
+  @include breakpoint($small-max) {
+    flex-direction: row;
+    width: 50%;
+  }
+
+  &__item {
+    position: relative;
+
+    @include breakpoint($small-max) {
+      &:hover .menu-submenu {
+        z-index: 10;
+        height: auto;
+        background: $teal;
+      }
+    }
+
+    > a {
+      text-transform: uppercase;
+    }
+  }
+
+  a,
+  a:hover {
+    padding: 0 10px;
+    color: $white;
+  }
+}
+
+.menu-submenu {
+  position: relative;
+  padding: 0;
+  list-style: none;
+
+  @include breakpoint($small-max) {
+    position: absolute;
+    height: 0;
+    overflow: hidden;
+  }
+
+  &__item {
+    margin: 12px 0;
+    width: 14em;
+  }
+}

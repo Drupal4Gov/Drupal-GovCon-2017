@@ -1,0 +1,26 @@
+uuid: ee52756d-66fb-40c5-94cf-724b6490bf3f
+langcode: en
+status: true
+dependencies:
+  module:
+    - capitalcamp_blocks
+    - system
+  theme:
+    - twentyeighteen
+id: twentyeighteen_dgcsecondarybanners
+theme: twentyeighteen
+region: content
+weight: -5
+provider: null
+plugin: dgc_secondarybanners
+settings:
+  id: dgc_secondarybanners
+  label: 'DGC Secondary banners'
+  provider: capitalcamp_blocks
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

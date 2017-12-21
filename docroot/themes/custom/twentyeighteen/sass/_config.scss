@@ -1,15 +1,27 @@
-// Colors ///////////////
-// common colors
+// Common Colors
 $white: #fff;
 $red: #ee696c;
 $yellow: #e8ed57;
+
 // b&w colors as placeholders
 $blk: #000;
-$dark-gray: lighten($blk, 20%);
 $med-gray: lighten($blk, 40%);
 $light-gray: lighten($blk, 70%);
 $lighter-gray: lighten($blk, 90%);
 $off-white: lighten($blk, 97%);
+
+// gold colors
+$gold: rgb(254, 218, 0);
+$med-gold: rgba($gold, 0.5);
+$light-gold: rgba($gold, 0.4);
+$light-yellow: rgba($gold, 0.2);
+$pale-yellow: rgba($gold, 0.05);
+
+// theme colors
+$teal: rgb(54, 114, 122);
+$sienna: rgb(142, 47, 15);
+$orange: rgb(255, 157, 1);
+$dark-gray: rgb(80, 80, 80);
 
 // Utility color variables ///////////////
 $heading: $dark-gray;
@@ -17,9 +29,9 @@ $link: $med-gray;
 
 // Fonts ///////////////
 $opensans: 'Open Sans';
-$poppins: 'Poppins';
+$montserrat: 'Montserrat', Helvetica, Arial, sans-serif;
 $heading_font: $opensans;
-$body_font: $poppins;
+$body_font: $montserrat;
 
 // Susy config ///////////////
 $susy: (
