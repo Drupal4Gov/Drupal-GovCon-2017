@@ -54,17 +54,6 @@ third_party_settings:
         classes: ''
         description: ''
       label: 'Schedule Info'
-    group_video:
-      children: {  }
-      parent_name: ''
-      weight: 11
-      format_type: details
-      format_settings:
-        label: Video
-        id: ''
-        classes: ''
-        open: false
-      label: Video
   panelizer:
     enable: false
     custom: false
@@ -146,7 +135,7 @@ content:
     weight: 7
     label: hidden
     settings:
-      view_mode: default
+      view_mode: embedded
       link: false
     third_party_settings: {  }
     type: entity_reference_entity_view
