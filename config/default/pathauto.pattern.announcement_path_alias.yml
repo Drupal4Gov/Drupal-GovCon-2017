@@ -1,0 +1,22 @@
+uuid: 71745b25-e229-40ec-9547-7c0a5a125bbb
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: announcement_path_alias
+label: 'Announcement Path Alias'
+type: 'canonical_entities:node'
+pattern: '[node:field_conference_year:entity:name]/announcements/[node:title]'
+selection_criteria:
+  0b90a7cd-5ceb-413a-b476-bf2863b55215:
+    id: node_type
+    bundles:
+      special_announcement: special_announcement
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 0b90a7cd-5ceb-413a-b476-bf2863b55215
+selection_logic: and
+weight: -5
+relationships: {  }

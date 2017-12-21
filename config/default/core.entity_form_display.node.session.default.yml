@@ -4,9 +4,13 @@ status: true
 dependencies:
   config:
     - field.field.node.session.body
+    - field.field.node.session.field_conference_year
     - field.field.node.session.field_experience_level
+    - field.field.node.session.field_female_attendees
     - field.field.node.session.field_files
     - field.field.node.session.field_image
+    - field.field.node.session.field_male_attendees
+    - field.field.node.session.field_room_monitor
     - field.field.node.session.field_session_co_presenter_s_
     - field.field.node.session.field_session_date_time
     - field.field.node.session.field_session_room
@@ -42,7 +46,7 @@ third_party_settings:
         - field_session_date_time
         - field_session_room
       parent_name: ''
-      weight: 12
+      weight: 11
       format_type: fieldset
       format_settings:
         id: ''
@@ -50,6 +54,20 @@ third_party_settings:
         description: ''
         required_fields: true
       label: 'Scheduling Details'
+    group_room:
+      children:
+        - field_room_monitor
+        - field_male_attendees
+        - field_female_attendees
+      parent_name: ''
+      weight: 16
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Room Monitor'
 _core:
   default_config_hash: DV8OLbi-qcGglfofiDQUJ4P1qPscvwMsPVe80-OoIBo
 id: node.session.default
@@ -72,11 +90,24 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  field_conference_year:
+    weight: 14
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_experience_level:
     weight: 2
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_female_attendees:
+    weight: 17
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
     region: content
   field_files:
     weight: 10
@@ -85,8 +116,24 @@ content:
     third_party_settings: {  }
     type: file_generic
     region: content
+  field_male_attendees:
+    weight: 16
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_room_monitor:
+    weight: 15
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_session_co_presenter_s_:
-    weight: 26
+    weight: 12
     settings:
       match_operator: CONTAINS
       size: 60
@@ -145,7 +192,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 121
+    weight: 13
     third_party_settings: {  }
     region: content
   sticky:

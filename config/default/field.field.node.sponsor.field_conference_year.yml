@@ -1,0 +1,33 @@
+uuid: b6f565a1-2eeb-4a9c-9581-44f115a22d7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_conference_year
+    - node.type.sponsor
+    - taxonomy.vocabulary.conference_year
+  content:
+    - 'taxonomy_term:conference_year:e0d74f66-8bcf-47b1-9403-2f289a84f558'
+id: node.sponsor.field_conference_year
+field_name: field_conference_year
+entity_type: node
+bundle: sponsor
+label: 'Conference Year'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    target_uuid: e0d74f66-8bcf-47b1-9403-2f289a84f558
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      conference_year: conference_year
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

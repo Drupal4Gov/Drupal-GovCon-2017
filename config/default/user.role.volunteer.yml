@@ -12,7 +12,16 @@ label: Volunteer
 weight: 7
 is_admin: null
 permissions:
+  - 'create field_female_attendees'
+  - 'create field_male_attendees'
+  - 'create field_room_monitor'
   - 'edit any webform'
+  - 'edit field_female_attendees'
+  - 'edit field_male_attendees'
+  - 'edit field_room_monitor'
+  - 'edit own field_female_attendees'
+  - 'edit own field_male_attendees'
+  - 'edit own field_room_monitor'
   - 'flag check_in_status'
   - 'flag checked_in'
   - 'flag checked_in other items'
@@ -22,3 +31,9 @@ permissions:
   - 'unflag checked_in other items'
   - 'unflag checked_in own items'
   - 'view any webform submission'
+  - 'view field_female_attendees'
+  - 'view field_male_attendees'
+  - 'view field_room_monitor'
+  - 'view own field_female_attendees'
+  - 'view own field_male_attendees'
+  - 'view own field_room_monitor'

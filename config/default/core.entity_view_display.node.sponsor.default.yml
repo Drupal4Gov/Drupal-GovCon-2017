@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.sponsor.field_conference_year
     - field.field.node.sponsor.field_sponsor_logo
     - field.field.node.sponsor.field_sponsor_related_attendees
     - field.field.node.sponsor.field_sponsor_sponsorship_level
@@ -65,7 +66,8 @@ content:
     region: content
   links:
     weight: 4
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
-hidden: {  }
+hidden:
+  field_conference_year: true

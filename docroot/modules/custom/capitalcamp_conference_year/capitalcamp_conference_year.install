@@ -1,0 +1,44 @@
+<?php
+
+/**
+ * @file
+ * Contains install and update functions for CapitalCamp.
+ */
+
+/**
+ * Tagging existing content with conference year 2017.
+ */
+function capitalcamp_conference_year_install() {
+  conference_year_setter('event', '2017');
+  conference_year_setter('sponsor', '2017');
+  conference_year_setter('special_announcement', '2017');
+  conference_year_setter('session', '2017');
+}
+
+/**
+ * Helper function to automatically tag existing nodes with the correct year.
+ *
+ * @param string $content_type
+ *   The content type to modify.
+ * @param int $year
+ *   The year to set.
+ *
+ * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+ * @throws \Drupal\Core\Entity\EntityStorageException
+ */
+function conference_year_setter($content_type, $year) {
+  $conference_year = \Drupal::entityQuery('taxonomy_term')->condition('vid', 'conference_year')->condition('name', $year)->execute();
+  if ($conference_year) {
+    foreach ($conference_year as $cy) {
+      $conference_year = $cy;
+    }
+    $query = \Drupal::entityTypeManager()->getStorage('node')->getQuery();
+    $nids = $query->condition('type', $content_type)
+      ->execute();
+    $nodes = \Drupal::entityTypeManager()->getStorage('node')->loadMultiple($nids);
+    foreach ($nodes as $node) {
+      $node->set('field_conference_year', $conference_year);
+      $node->save();
+    }
+  }
+}

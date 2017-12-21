@@ -1,0 +1,22 @@
+uuid: 490879df-b6a2-48a8-87cc-55e500ec4b2c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: sponsor_path_alias
+label: 'Sponsor Path Alias'
+type: 'canonical_entities:node'
+pattern: '[node:field_conference_year:entity:name]/sponsors/[node:title]'
+selection_criteria:
+  b82ab470-74f1-4631-9f46-734b2a5c1ec1:
+    id: node_type
+    bundles:
+      sponsor: sponsor
+    negate: false
+    context_mapping:
+      node: node
+    uuid: b82ab470-74f1-4631-9f46-734b2a5c1ec1
+selection_logic: and
+weight: -5
+relationships: {  }

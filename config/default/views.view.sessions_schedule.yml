@@ -645,12 +645,13 @@ display:
   page_1:
     display_plugin: page
     id: page_1
-    display_title: Page
+    display_title: '2017 Schedule'
     position: 3
     display_options:
       display_extenders: {  }
-      path: schedule
+      path: 2017/schedule
       exposed_block: true
+      display_description: ''
     cache_metadata:
       max-age: -1
       contexts:

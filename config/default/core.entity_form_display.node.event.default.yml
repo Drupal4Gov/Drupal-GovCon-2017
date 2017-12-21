@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.event.body
+    - field.field.node.event.field_conference_year
     - field.field.node.event.field_session_date_time
     - field.field.node.event.field_session_room
     - node.type.event
@@ -32,6 +33,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_conference_year:
+    weight: 122
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_session_date_time:
     weight: 8
     settings: {  }

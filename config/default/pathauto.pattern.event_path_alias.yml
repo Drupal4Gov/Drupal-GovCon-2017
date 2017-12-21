@@ -1,0 +1,22 @@
+uuid: e88862b2-dc7d-4f4a-922c-6cb22ff28507
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: event_path_alias
+label: 'Event Path Alias'
+type: 'canonical_entities:node'
+pattern: '[node:field_conference_year:entity:name]/events/[node:title]'
+selection_criteria:
+  a102240c-9466-4e63-b215-362b3f0ad24d:
+    id: node_type
+    bundles:
+      event: event
+    negate: false
+    context_mapping:
+      node: node
+    uuid: a102240c-9466-4e63-b215-362b3f0ad24d
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.special_announcement.body
+    - field.field.node.special_announcement.field_conference_year
     - field.field.node.special_announcement.field_critical_announcement_text
     - field.field.node.special_announcement.field_is_critical_
     - field.field.node.special_announcement.field_sort_order
@@ -36,6 +37,7 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_conference_year: true
   field_critical_announcement_text: true
   field_is_critical_: true
   field_sort_order: true
