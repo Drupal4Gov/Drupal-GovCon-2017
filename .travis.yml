@@ -57,8 +57,8 @@ before_install:
   - composer validate --no-check-all --ansi
   - composer install
   # Install proper version of node for front end tasks.
-  - nvm install 6.9.5
-  - nvm use 6.9.5
+  - nvm install 8.9.2
+  - nvm use 8.9.2
   # Exit build early if only documentation was changed in a Pull Request.
   - source ${BLT_DIR}/scripts/travis/exit_early
 
