@@ -6,8 +6,9 @@
 //
 // Style guide: components.header
 
-.region-header {
-  @include region-spacer($light-gray);
+.mq-header,
+.mq-branding {
+  margin: 0;
 }
 
 .menu--main {
@@ -29,12 +30,14 @@
 
   &__item {
     position: relative;
+    margin: 0.5em 0;
 
     @include breakpoint($small-max) {
       &:hover .menu-submenu {
         z-index: 10;
         height: auto;
-        background: $teal;
+        background: rgba($teal, 0.95);
+        border-radius: 0 0 0.5em 0.5em;
       }
     }
 
@@ -45,8 +48,9 @@
 
   a,
   a:hover {
-    padding: 0 10px;
-    color: $white;
+    color: $med-gray;
+    font-size: 1em;
+    font-weight: 700;
   }
 }
 
@@ -62,7 +66,21 @@
   }
 
   &__item {
-    margin: 12px 0;
+    margin: 0;
     width: 14em;
+
+    &:hover {
+      background-color: rgba(94, 142, 149, 0.95);
+    }
+  }
+
+  a {
+    //padding: 1em 0.5em;
+    font-size: 0.875em;
+
+    &:hover {
+      color: $white;
+      font-size: 0.875em;
+    }
   }
 }
