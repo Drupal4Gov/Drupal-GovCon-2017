@@ -1,0 +1,34 @@
+// Call to Action Block
+//
+// Styling for three call to action blocks on bottom of homepage
+//
+// Markup: call-to-action.twig
+//
+// Style guide: components.call_to_action
+
+.call-to-action-block {
+  @include span(4 of 12);
+
+  /*  position: relative; */
+}
+
+.call-to-action-text {
+  /* position: absolute; */
+  margin-top: -30%;
+  margin-left: 3%;
+}
+
+.call-to-action-text h1 {
+  font-family: $body_font;
+  color: rgba(254, 218, 0, 1);
+  font-size: 2em;
+  padding: 0;
+  line-height: 80%;
+}
+
+.call-to-action-text p {
+  font-family: $body_font;
+  color: rgba(80, 80, 80, 1);
+  margin: 0;
+  font-size: 0.75em;
+}
