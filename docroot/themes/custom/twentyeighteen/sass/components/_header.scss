@@ -15,6 +15,64 @@
   background: $teal;
 }
 
+input.toggle {
+  visibility: hidden;
+}
+
+.toggle {
+  position: absolute;
+  right: 20px;
+
+  ~ .menu-main {
+    display: none;
+
+    @include breakpoint($small-max) {
+      display: flex;
+    }
+  }
+
+  &:checked ~ .menu-main {
+    display: flex;
+  }
+
+  &__icon {
+    height: 40px;
+    width: 27px;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+
+    @include breakpoint($small-max) {
+      display: none;
+    }
+  }
+
+  &__icon-line {
+    position: absolute;
+    display: block;
+    background: $med-gray;
+    width: 27px;
+    height: 0.2rem;
+    border-radius: 0.2rem;
+    right: 0;
+    text-indent: 0;
+    transition: all 0.6s cubic-bezier(0.5, 0.1, 0, 1.2);
+    z-index: 2000;
+
+    &:first-child {
+      top: 16px;
+    }
+
+    &:nth-child(2) {
+      top: 24px;
+    }
+
+    &:last-child {
+      top: 32px;
+    }
+  }
+}
+
 .menu-main {
   list-style: none;
   display: flex;
@@ -67,7 +125,13 @@
 
   &__item {
     margin: 0;
+    padding: 0.875em 0 0.875em 0.5em;
     width: 14em;
+
+    &:first-child {
+      margin-top: 0.5em;
+      padding-top: 0.375em;
+    }
 
     &:hover {
       background-color: rgba(94, 142, 149, 0.95);
