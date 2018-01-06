@@ -6,19 +6,19 @@
 //
 // Style guide: components.call_to_action
 
-.call-to-action-block {
+.call-to-action {
   @include span(4 of 12);
 
-  /*  position: relative; */
+  position: relative;
 }
 
-.call-to-action-text {
-  /* position: absolute; */
-  margin-top: -30%;
-  margin-left: 3%;
+.call-to-action__text {
+  position: absolute;
+  top: 55%;
+  left: 3%;
 }
 
-.call-to-action-text h1 {
+.call-to-action__text-header {
   font-family: $body_font;
   color: rgba(254, 218, 0, 1);
   font-size: 2em;
@@ -26,7 +26,7 @@
   line-height: 80%;
 }
 
-.call-to-action-text p {
+.call-to-action__text-details {
   font-family: $body_font;
   color: rgba(80, 80, 80, 1);
   margin: 0;
