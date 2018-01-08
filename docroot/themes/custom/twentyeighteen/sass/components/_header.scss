@@ -11,17 +11,42 @@
   margin: 0;
 }
 
-.menu--main {
+.region-header {
   background: $teal;
 }
 
 input.toggle {
-  visibility: hidden;
+  opacity: 0;
+
+  //@include breakpoint($small-max) {
+  //  display: none;
+  //}
+}
+
+input.toggle:focus + label.toggle::before {
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+label.toggle::before {
+  content: "\00a0";
+  height: 40px;
+  right: -1px;
+  background-color: transparent;
+  width: 29px;
+  position: absolute;
+
+  @include breakpoint($small-max) {
+    content: '';
+  }
 }
 
 .toggle {
   position: absolute;
   right: 20px;
+
+  //@include breakpoint($small-max) {
+  //  display: none;
+  //}
 
   ~ .menu-main {
     display: none;
@@ -71,6 +96,24 @@ input.toggle {
       top: 32px;
     }
   }
+
+  &:checked ~ label .toggle__icon-line {
+    &:first-child {
+      top: 12px;
+      width: 27px;
+      transform: translateX(-8px) rotate(-45deg) translateY(12px);
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
+    }
+
+    &:last-child {
+      top: 26px;
+      width: 27px;
+      transform: translateX(-5px) rotate(45deg) translateY(-8px);
+    }
+  }
 }
 
 .menu-main {
@@ -80,15 +123,17 @@ input.toggle {
   flex-direction: column;
   width: 100%;
   margin: 0 auto;
+  padding-top: 3em;
 
   @include breakpoint($small-max) {
     flex-direction: row;
     width: 50%;
+    padding-top: 0;
   }
 
   &__item {
     position: relative;
-    margin: 0.5em 0;
+    margin: 0.5em;
 
     @include breakpoint($small-max) {
       &:hover .menu-submenu {
