@@ -1,0 +1,26 @@
+// Hero
+//
+// Hero Styling
+//
+// Markup: hero.twig
+//
+// Style guide: components.hero
+
+.hero-block {
+  width: 100%;
+}
+
+.hero-background-img {
+  position: relative;
+}
+
+.hero-logo {
+  display: none;
+
+  @include breakpoint($small-max) {
+    display: block;
+    position: absolute;
+    top: 40%;
+    left: 43%;
+  }
+}
