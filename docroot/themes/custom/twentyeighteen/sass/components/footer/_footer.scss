@@ -1,0 +1,61 @@
+//
+// Footer
+//
+// Markup: footer.twig
+//
+// Style Guide: components.footer
+
+.footer {
+  width: 100%;
+  background-color: rgba(54, 114, 122, 1);
+}
+
+.footer-text-block {
+  width: 95%;
+  padding: 2%;
+  text-align: center;
+
+  @include breakpoint($small-max) {
+    @include span(4 of 12);
+
+    padding: 1% 0 0 1%;
+    text-align: initial;
+  }
+}
+
+.footer-text {
+  font-family: $body_font;
+  color: $lighter-gray;
+  font-size: 0.8em;
+  line-height: 170%;
+}
+
+.footer-links-block {
+  width: 100%;
+  text-align: center;
+
+  @include breakpoint($small-max) {
+    @include span(last 3 of 12);
+
+    padding: 2% 1% 0 0;
+  }
+}
+
+.footer-social_links {
+  text-align: center;
+
+  @include breakpoint($small-max) {
+    /* float: right; */
+    text-align: right;
+  }
+}
+
+.footer-image-block {
+  width: 100%;
+  text-align: center;
+  clear: both;
+
+  @include breakpoint($small-max) {
+    padding-top: 3%;
+  }
+}
