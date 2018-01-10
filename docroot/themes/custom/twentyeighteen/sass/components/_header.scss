@@ -11,7 +11,7 @@
   margin: 0;
 }
 
-.region-header {
+.menu--main {
   background: $teal;
 }
 
@@ -30,7 +30,7 @@ input.toggle:focus + label.toggle::before {
 label.toggle::before {
   content: "\00a0";
   height: 40px;
-  right: -1px;
+  right: 19px;
   background-color: transparent;
   width: 29px;
   position: absolute;
@@ -42,11 +42,15 @@ label.toggle::before {
 
 .toggle {
   position: absolute;
-  right: 20px;
+  right: 0;
+  width: 100%;
+  height: 55px;
+  background-color: $teal;
 
-  //@include breakpoint($small-max) {
-  //  display: none;
-  //}
+  @include breakpoint($small-max) {
+    height: 0;
+    width: 0;
+  }
 
   ~ .menu-main {
     display: none;
@@ -64,7 +68,7 @@ label.toggle::before {
     height: 40px;
     width: 27px;
     position: absolute;
-    right: 0;
+    right: 20px;
     cursor: pointer;
 
     @include breakpoint($small-max) {
@@ -123,7 +127,7 @@ label.toggle::before {
   flex-direction: column;
   width: 100%;
   margin: 0 auto;
-  padding-top: 3em;
+  padding: 3em 0 0;
 
   @include breakpoint($small-max) {
     flex-direction: row;
@@ -133,9 +137,12 @@ label.toggle::before {
 
   &__item {
     position: relative;
-    margin: 0.5em;
+    margin: 0;
 
     @include breakpoint($small-max) {
+      margin: 0;
+      padding: 0.5em;
+
       &:hover .menu-submenu {
         z-index: 10;
         height: auto;
@@ -151,9 +158,11 @@ label.toggle::before {
 
   a,
   a:hover {
+    display: block;
     color: $med-gray;
     font-size: 1em;
     font-weight: 700;
+    padding: 1em 1.5em;
   }
 }
 
@@ -170,12 +179,16 @@ label.toggle::before {
 
   &__item {
     margin: 0;
-    padding: 0.875em 0 0.875em 0.5em;
-    width: 14em;
+    width: 100%;
 
-    &:first-child {
-      margin-top: 0.5em;
-      padding-top: 0.375em;
+    @include breakpoint($small-max) {
+      width: 14em;
+      padding: 0.875em 0 0.875em 0.5em;
+
+      &:first-child {
+        margin-top: 0.5em;
+        padding-top: 0.375em;
+      }
     }
 
     &:hover {
@@ -184,7 +197,7 @@ label.toggle::before {
   }
 
   a {
-    //padding: 1em 0.5em;
+    padding: 1em 1.5em;
     font-size: 0.875em;
 
     &:hover {
