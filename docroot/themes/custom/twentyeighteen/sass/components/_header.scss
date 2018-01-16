@@ -138,7 +138,8 @@ label.toggle::before {
     @include breakpoint($small-max) {
       margin: 0;
 
-      &:hover .menu-submenu {
+      &:hover .menu-submenu,
+      &.focus .menu-submenu {
         z-index: 10;
         height: auto;
         background: rgba($teal, 0.95);

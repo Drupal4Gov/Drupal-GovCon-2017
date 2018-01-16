@@ -78,7 +78,8 @@ var plugins = require('gulp-load-plugins')({
     'gulp-stylelint': 'stylelint',
     'gulp-eslint': 'gulpEslint',
     'gulp-babel': 'babel',
-    'gulp-util': 'gutil'
+    'gulp-util': 'gutil',
+    'gulp-webpack': 'gulpWebpack'
   }
 });
 
@@ -202,6 +203,15 @@ var options = {
       warnings: 10,
       notices: 20
     }
+  },
+
+
+  // ----- Library Assets for Webpack ----- //
+  webpack: {
+    source: [
+      'js/modules'
+    ],
+    destination: 'js/dist'
   }
 
 };
@@ -223,6 +233,7 @@ require('./gulp-tasks/serve')(gulp, plugins, options);
 require('./gulp-tasks/test-css')(gulp, plugins, options);
 require('./gulp-tasks/watch')(gulp, plugins, options);
 require('./gulp-tasks/pa11y')(gulp, plugins, options);
+require('./gulp-tasks/webpack')(gulp, plugins, options);
 
 // Credits:
 //

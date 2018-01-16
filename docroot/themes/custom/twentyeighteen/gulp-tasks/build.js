@@ -10,6 +10,8 @@ module.exports = function (gulp, plugins, options) {
 
   gulp.task('build', [
     'compile:sass',
+    'compile:js',
+    'webpack:js',
     'minify:css',
     'compile:styleguide',
     'lint:js-gulp',
@@ -19,6 +21,8 @@ module.exports = function (gulp, plugins, options) {
 
   gulp.task('build:dev', [
     'compile:sass',
+    'compile:js',
+    'webpack:js',
     'minify:css',
     'compile:styleguide',
     'lint:js-gulp',
