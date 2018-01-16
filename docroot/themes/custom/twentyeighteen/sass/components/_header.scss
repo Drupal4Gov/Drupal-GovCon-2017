@@ -152,8 +152,7 @@ label.toggle::before {
     }
   }
 
-  a,
-  a:hover {
+  a {
     display: block;
     color: $med-gray;
     font-size: 1em;
@@ -163,6 +162,11 @@ label.toggle::before {
     @include breakpoint($small-max) {
       padding: 0.5em;
     }
+  }
+
+  a:hover {
+    color: $med-gray;
+    text-decoration: none;
   }
 }
 

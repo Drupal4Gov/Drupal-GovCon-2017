@@ -93,8 +93,8 @@ var paths = {
     destination: 'css/'
   },
   scripts: {
-    source: 'js/src',
-    destination: 'js/dist'
+    source: 'js/src/',
+    destination: 'js/dist/'
   },
   images: 'img/',
   styleGuide: 'styleguide'
@@ -170,7 +170,9 @@ var options = {
       path.relative(paths.styleGuide, paths.styles.destination + 'styles.css'),
       path.relative(paths.styleGuide, paths.styles.destination + 'style-guide-only/kss-only.css')
     ],
-    js: [],
+    js: [
+      path.relative(paths.styleGuide, paths.scripts.destination + 'navigation.js'),
+    ],
     homepage: 'style-guide-only/homepage.md',
     title: 'Living Style Guide'
   },

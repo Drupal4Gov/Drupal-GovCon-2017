@@ -1,39 +1,27 @@
+const topMenuLinks = document.querySelectorAll('.menu-main__item > a');
+
 /**
- * Drupal Behavior.
- *
- * The original module export has been replaced with the following Drupal
- * behavior, which takes advantage of the context object when initializing the
- * carousel.
+ * Adds a focus class to top level list items
+ * @return {void}
  */
-
-((Drupal, drupalSettings) => {
-  'use strict';
-
-  Drupal.behaviors.navgiation = {
-    attach: (context, settings) => {
-
-      const topMenuLinks = context.querySelectorAll('.menu-main__item > a');
-
-      // console.log(topMenuLinks);
-
-      for (let i = 0; i < topMenuLinks.length; i++) {
-        topMenuLinks[i].onfocus = () => {
-          topMenuLinks[i].parentElement.classList.add('focus');
-        }
-      }
-
-      const subMenu = context.querySelectorAll('.menu-submenu');
-
-      for (let i = 0; i < subMenu.length; i++) {
-        const subMenuLinks = subMenu[i].querySelectorAll('a');
-
-        // console.log(subMenuLinks[subMenuLinks.length - 1].parentElement.parentElement.parentElement);
-        subMenuLinks[subMenuLinks.length - 1].onblur = () => {
-          subMenuLinks[subMenuLinks.length - 1].parentElement.parentElement.parentElement.classList.remove('focus');
-        }
-      }
-    }
+for (let i = 0; i < topMenuLinks.length; i++) {
+  topMenuLinks[i].onfocus = () => {
+    topMenuLinks[i].parentElement.classList.add('focus');
   }
+}
+
+const subMenu = document.querySelectorAll('.menu-submenu');
+
+/**
+ * Removes focus class to top level list item when blur off last submenu item
+ * @return {void}
+ */
+for (let i = 0; i < subMenu.length; i++) {
+  const subMenuLinks = subMenu[i].querySelectorAll('a');
+
+  subMenuLinks[subMenuLinks.length - 1].onblur = () => {
+    subMenuLinks[subMenuLinks.length - 1].parentElement.parentElement.parentElement.classList.remove('focus');
+  }
+}
 
 
-})(Drupal, drupalSettings);

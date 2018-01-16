@@ -70,51 +70,41 @@
 "use strict";
 
 
+var topMenuLinks = document.querySelectorAll('.menu-main__item > a');
+
 /**
- * Drupal Behavior.
- *
- * The original module export has been replaced with the following Drupal
- * behavior, which takes advantage of the context object when initializing the
- * carousel.
+ * Adds a focus class to top level list items
+ * @return {void}
  */
 
-(function (Drupal, drupalSettings) {
-  'use strict';
-
-  Drupal.behaviors.navgiation = {
-    attach: function attach(context, settings) {
-
-      var topMenuLinks = context.querySelectorAll('.menu-main__item > a');
-
-      // console.log(topMenuLinks);
-
-      var _loop = function _loop(i) {
-        topMenuLinks[i].onfocus = function () {
-          topMenuLinks[i].parentElement.classList.add('focus');
-        };
-      };
-
-      for (var i = 0; i < topMenuLinks.length; i++) {
-        _loop(i);
-      }
-
-      var subMenu = context.querySelectorAll('.menu-submenu');
-
-      var _loop2 = function _loop2(i) {
-        var subMenuLinks = subMenu[i].querySelectorAll('a');
-
-        // console.log(subMenuLinks[subMenuLinks.length - 1].parentElement.parentElement.parentElement);
-        subMenuLinks[subMenuLinks.length - 1].onblur = function () {
-          subMenuLinks[subMenuLinks.length - 1].parentElement.parentElement.parentElement.classList.remove('focus');
-        };
-      };
-
-      for (var i = 0; i < subMenu.length; i++) {
-        _loop2(i);
-      }
-    }
+var _loop = function _loop(i) {
+  topMenuLinks[i].onfocus = function () {
+    topMenuLinks[i].parentElement.classList.add('focus');
   };
-})(Drupal, drupalSettings);
+};
+
+for (var i = 0; i < topMenuLinks.length; i++) {
+  _loop(i);
+}
+
+var subMenu = document.querySelectorAll('.menu-submenu');
+
+/**
+ * Removes focus class to top level list item when blur off last submenu item
+ * @return {void}
+ */
+
+var _loop2 = function _loop2(i) {
+  var subMenuLinks = subMenu[i].querySelectorAll('a');
+
+  subMenuLinks[subMenuLinks.length - 1].onblur = function () {
+    subMenuLinks[subMenuLinks.length - 1].parentElement.parentElement.parentElement.classList.remove('focus');
+  };
+};
+
+for (var i = 0; i < subMenu.length; i++) {
+  _loop2(i);
+}
 
 /***/ })
 /******/ ]);
