@@ -35,11 +35,11 @@ modules:
     uninstall: [devel, views_ui]
 target-hooks:
   frontend-setup:
-    dir: '${docroot}/themes/custom/twentyseventeen'
-    command: 'npm run install-tools'
+    dir: "${repo.root}"
+    command: "./blt/scripts/frontend-setup.sh"
   frontend-build:
-    dir: '${docroot}/themes/custom/twentyseventeen'
-    command: 'npm install && npm run build'
+    dir: "${repo.root}"
+    command: "./blt/scripts/frontend-build.sh"
   pre-config-import:
     dir: '${docroot}'
     command: 'echo ''No pre-config-import configured.'''
