@@ -1,0 +1,26 @@
+uuid: 9674b699-5cef-4251-9bee-2230f57fdae6
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+name: 2018_theme
+label: '2018 Theme'
+group: null
+description: ''
+requireAllConditions: false
+disabled: false
+conditions:
+  request_path:
+    id: request_path
+    pages: "/2018/*\r\n<front>"
+    negate: 0
+    uuid: 877605b9-48da-4b9a-b73e-cf1495955116
+    context_mapping: {  }
+reactions:
+  theme:
+    id: theme
+    theme: twentyeighteen
+    saved: false
+    uuid: 8fd86962-dbe0-4281-804c-39e84ce5199f
+weight: 0
