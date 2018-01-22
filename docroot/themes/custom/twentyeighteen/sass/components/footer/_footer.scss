@@ -7,7 +7,7 @@
 
 .footer {
   width: 100%;
-  background-color: rgba(54, 114, 122, 1);
+  background: rgba(54, 114, 122, 1);
 }
 
 .footer-text-block {
@@ -41,11 +41,10 @@
   }
 }
 
-.footer-social_links {
+.footer-links-element {
   text-align: center;
 
   @include breakpoint($small-max) {
-    /* float: right; */
     text-align: right;
   }
 }
