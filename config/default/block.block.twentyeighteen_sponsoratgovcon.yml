@@ -1,0 +1,25 @@
+uuid: 2a833ade-0380-48e6-8e27-77c7d22f6400
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:678ed1a5-3577-44b3-8db7-059127aa8ac3'
+  module:
+    - block_content
+  theme:
+    - twentyeighteen
+id: twentyeighteen_sponsoratgovcon
+theme: twentyeighteen
+region: branding
+weight: -5
+provider: null
+plugin: 'block_content:678ed1a5-3577-44b3-8db7-059127aa8ac3'
+settings:
+  id: 'block_content:678ed1a5-3577-44b3-8db7-059127aa8ac3'
+  label: 'Sponsor at GovCon'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

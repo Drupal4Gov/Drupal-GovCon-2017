@@ -78,7 +78,8 @@ var plugins = require('gulp-load-plugins')({
     'gulp-stylelint': 'stylelint',
     'gulp-eslint': 'gulpEslint',
     'gulp-babel': 'babel',
-    'gulp-util': 'gutil'
+    'gulp-util': 'gutil',
+    'gulp-webpack': 'gulpWebpack'
   }
 });
 
@@ -92,8 +93,8 @@ var paths = {
     destination: 'css/'
   },
   scripts: {
-    source: 'js/src',
-    destination: 'js/dist'
+    source: 'js/src/',
+    destination: 'js/dist/'
   },
   images: 'img/',
   styleGuide: 'styleguide'
@@ -169,7 +170,9 @@ var options = {
       path.relative(paths.styleGuide, paths.styles.destination + 'styles.css'),
       path.relative(paths.styleGuide, paths.styles.destination + 'style-guide-only/kss-only.css')
     ],
-    js: [],
+    js: [
+      path.relative(paths.styleGuide, paths.scripts.destination + 'navigation.js'),
+    ],
     homepage: 'style-guide-only/homepage.md',
     title: 'Living Style Guide'
   },
@@ -202,6 +205,15 @@ var options = {
       warnings: 10,
       notices: 20
     }
+  },
+
+
+  // ----- Library Assets for Webpack ----- //
+  webpack: {
+    source: [
+      'js/modules'
+    ],
+    destination: 'js/dist'
   }
 
 };
@@ -223,6 +235,7 @@ require('./gulp-tasks/serve')(gulp, plugins, options);
 require('./gulp-tasks/test-css')(gulp, plugins, options);
 require('./gulp-tasks/watch')(gulp, plugins, options);
 require('./gulp-tasks/pa11y')(gulp, plugins, options);
+require('./gulp-tasks/webpack')(gulp, plugins, options);
 
 // Credits:
 //

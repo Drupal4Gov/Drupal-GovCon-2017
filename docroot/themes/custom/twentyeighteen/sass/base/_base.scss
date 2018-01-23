@@ -9,7 +9,13 @@ body {
 body {
   font-family: $body_font;
   font-size: 1em;
-  line-height: 165%;
+  color: $dark-gray;
+  text-rendering: optimizeLegibility;
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+  background-color: rgba($teal, 0.5);
 }
 // Base Headings
 //

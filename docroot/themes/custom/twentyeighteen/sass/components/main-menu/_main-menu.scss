@@ -1,0 +1,201 @@
+// Main Menu
+//
+// Main Menu Styling
+//
+// Markup: main-menu.twig
+//
+// Style guide: components.main-menu
+
+.menu--main {
+  background: $teal;
+}
+
+input.toggle {
+  opacity: 0;
+}
+
+input.toggle:focus + label.toggle::before {
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+label.toggle::before {
+  content: "\00a0";
+  height: 40px;
+  right: 19px;
+  background-color: transparent;
+  width: 29px;
+  position: absolute;
+
+  @include breakpoint($small-max) {
+    content: '';
+  }
+}
+
+.toggle {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 55px;
+  background-color: $teal;
+
+  @include breakpoint($small-max) {
+    height: 0;
+    width: 0;
+  }
+
+  ~ .menu-main {
+    display: none;
+
+    @include breakpoint($small-max) {
+      display: flex;
+    }
+  }
+
+  &:checked ~ .menu-main {
+    display: flex;
+  }
+
+  &__icon {
+    height: 40px;
+    width: 27px;
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+
+    @include breakpoint($small-max) {
+      display: none;
+    }
+  }
+
+  &__icon-line {
+    position: absolute;
+    display: block;
+    background: $med-gray;
+    width: 27px;
+    height: 0.2rem;
+    border-radius: 0.2rem;
+    right: 0;
+    text-indent: 0;
+    transition: all 0.6s cubic-bezier(0.5, 0.1, 0, 1.2);
+    z-index: 2000;
+
+    &:first-child {
+      top: 16px;
+    }
+
+    &:nth-child(2) {
+      top: 24px;
+    }
+
+    &:last-child {
+      top: 32px;
+    }
+  }
+
+  &:checked ~ label .toggle__icon-line {
+    &:first-child {
+      top: 12px;
+      width: 27px;
+      transform: translateX(-8px) rotate(-45deg) translateY(12px);
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
+    }
+
+    &:last-child {
+      top: 26px;
+      width: 27px;
+      transform: translateX(-5px) rotate(45deg) translateY(-8px);
+    }
+  }
+}
+
+.menu-main {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  padding: 3em 0 0;
+
+  @include breakpoint($small-max) {
+    flex-direction: row;
+    width: 50%;
+    padding-top: 0;
+  }
+
+  &__item {
+    position: relative;
+    margin: 0;
+
+    @include breakpoint($small-max) {
+      margin: 0;
+
+      &:hover .menu-submenu,
+      &.focus .menu-submenu {
+        z-index: 10;
+        height: auto;
+        background: rgba($teal, 0.95);
+        border-radius: 0 0 0.5em 0.5em;
+      }
+    }
+
+    > a {
+      text-transform: uppercase;
+    }
+  }
+
+  a {
+    display: block;
+    color: $med-gray;
+    font-size: 1em;
+    font-weight: 700;
+    padding: 1em 1.5em;
+
+    @include breakpoint($small-max) {
+      padding: 0.5em;
+    }
+  }
+
+  a:hover {
+    color: $med-gray;
+    text-decoration: none;
+  }
+}
+
+.menu-submenu {
+  position: relative;
+  padding: 0;
+  list-style: none;
+
+  @include breakpoint($small-max) {
+    position: absolute;
+    height: 0;
+    overflow: hidden;
+  }
+
+  &__item {
+    margin: 0;
+    width: 100%;
+
+    @include breakpoint($small-max) {
+      width: 10em;
+    }
+
+    &:hover {
+      background-color: rgba(94, 142, 149, 0.95);
+    }
+  }
+
+  a {
+    padding: 0.5em;
+    font-size: 0.875em;
+
+    &:hover {
+      color: $white;
+      font-size: 0.875em;
+    }
+  }
+}
