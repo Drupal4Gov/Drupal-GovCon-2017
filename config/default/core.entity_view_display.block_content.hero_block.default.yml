@@ -1,0 +1,36 @@
+uuid: 32d0d4bb-adc3-44f4-898e-c2167afc44aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_block
+    - field.field.block_content.hero_block.field_background_image
+    - field.field.block_content.hero_block.field_logo
+    - field.field.block_content.hero_block.field_url
+  module:
+    - image
+id: block_content.hero_block.default
+targetEntityType: block_content
+bundle: hero_block
+mode: default
+content:
+  field_background_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_logo:
+    type: image
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+hidden:
+  field_url: true

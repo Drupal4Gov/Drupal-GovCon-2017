@@ -1,0 +1,69 @@
+uuid: 8e3ad8d4-0b3e-4e74-91f9-7cc3dfc61820
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_block
+    - field.field.block_content.hero_block.field_background_image
+    - field.field.block_content.hero_block.field_logo
+    - field.field.block_content.hero_block.field_url
+    - image.style.thumbnail
+  module:
+    - field_group
+    - image
+    - link
+    - workbench_moderation
+third_party_settings:
+  field_group:
+    group_logo:
+      children:
+        - field_logo
+        - field_url
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      format_settings:
+        label: Logo/URL
+        description: ''
+        required_fields: true
+        id: ''
+        classes: ''
+      label: Logo/URL
+id: block_content.hero_block.default
+targetEntityType: block_content
+bundle: hero_block
+mode: default
+content:
+  field_background_image:
+    type: image_image
+    weight: 1
+    settings:
+      preview_image_style: thumbnail
+      progress_indicator: throbber
+    region: content
+    third_party_settings: {  }
+  field_logo:
+    type: image_image
+    weight: 5
+    settings:
+      preview_image_style: thumbnail
+      progress_indicator: throbber
+    region: content
+    third_party_settings: {  }
+  field_url:
+    weight: 6
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

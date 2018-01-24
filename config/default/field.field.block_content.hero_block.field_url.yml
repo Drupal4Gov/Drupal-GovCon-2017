@@ -1,0 +1,29 @@
+uuid: ef06bbb2-a2fc-41c2-ba35-12ee641c6e76
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero_block
+    - field.storage.block_content.field_url
+  module:
+    - link
+id: block_content.hero_block.field_url
+field_name: field_url
+entity_type: block_content
+bundle: hero_block
+label: URL
+description: 'URL will be used to link logo image. '
+required: false
+translatable: false
+default_value:
+  -
+    attributes: {  }
+    uri: 'internal:/'
+    title: ''
+    options: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+  title_predefined: ''
+field_type: link
