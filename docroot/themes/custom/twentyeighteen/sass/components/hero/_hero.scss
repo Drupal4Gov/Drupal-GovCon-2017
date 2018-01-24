@@ -6,21 +6,52 @@
 //
 // Style guide: components.hero
 
-.hero-block {
+.hero {
   width: 100%;
-}
 
-.hero-background-img {
-  position: relative;
-}
+  &__background-img {
+    position: relative;
+  }
 
-.hero-logo {
-  display: none;
-
-  @include breakpoint($small-max) {
+  &__logo {
     display: block;
     position: absolute;
-    top: 40%;
-    left: 43%;
+    top: 20%;
+    left: 30%;
+
+    @include breakpoint($small-max) {
+      top: 30%;
+      left: 43%;
+    }
+  }
+
+  &__callout-button {
+    @include span(3 of 12);
+
+    position: absolute;
+    top: 73%;
+    left: 38%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 1);
+    border-radius: 0.25em;
+    height: 1.5em;
+
+    &:hover {
+      background-color: rgba(142, 47, 15, 1);
+      border: 2px solid rgb(254, 236, 127);
+    }
+  }
+
+  &__callout-text {
+    text-align: center;
+    font-family: $body-font;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    margin: 0 0.1em 0.5em 0.2em;
+
+    &:hover {
+      color: rgb(254, 236, 127);
+    }
   }
 }
