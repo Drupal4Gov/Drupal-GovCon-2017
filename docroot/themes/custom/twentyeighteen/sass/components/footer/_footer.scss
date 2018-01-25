@@ -5,9 +5,18 @@
 //
 // Style Guide: components.footer
 
+.mq-footer {
+  margin: 0;
+  width: 100%;
+  max-width: none;
+}
+
 .footer {
   width: 100%;
   background: rgba(54, 114, 122, 1);
+  overflow: auto;
+  border-top: none;
+  padding-top: 0;
 
   &__text {
     width: 95%;
