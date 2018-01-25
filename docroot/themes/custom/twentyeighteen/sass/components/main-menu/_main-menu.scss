@@ -8,6 +8,11 @@
 
 .menu--_018-main-navigation {
   background: $teal;
+  margin-top: -4px;
+
+  @include breakpoint($small-max) {
+    margin-top: 0;
+  }
 }
 
 input.toggle {
