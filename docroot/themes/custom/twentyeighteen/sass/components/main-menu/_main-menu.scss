@@ -195,12 +195,16 @@ label.toggle::before {
   }
 
   a {
-    padding: 0.5em;
+    padding: 0.5em 2.75em;
     font-size: 0.875em;
 
     &:hover {
       color: $white;
       font-size: 0.875em;
+    }
+
+    @include breakpoint($small-max) {
+      padding: 0.5em;
     }
   }
 }
