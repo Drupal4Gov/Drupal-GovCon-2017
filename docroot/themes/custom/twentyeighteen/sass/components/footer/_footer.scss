@@ -57,6 +57,10 @@
     }
   }
 
+  &__links-icons a {
+    padding-right: 1%;
+  }
+
   &__logo {
     width: 100%;
     text-align: center;
@@ -66,4 +70,8 @@
       padding-top: 3%;
     }
   }
+}
+
+.footer span.ext {
+  display: none;
 }
