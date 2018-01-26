@@ -1,0 +1,60 @@
+uuid: ef84bab6-4a19-435b-bc42-9aeae15d2173
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.call_to_action_block
+    - field.field.block_content.call_to_action_block.field_background_image
+    - field.field.block_content.call_to_action_block.field_description
+    - field.field.block_content.call_to_action_block.field_title
+    - field.field.block_content.call_to_action_block.field_url
+  module:
+    - image
+    - smart_trim
+id: block_content.call_to_action_block.default
+targetEntityType: block_content
+bundle: call_to_action_block
+mode: default
+content:
+  field_background_image:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_description:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 65
+      trim_type: chars
+      trim_suffix: ''
+      more_link: 0
+      more_class: more-link
+      more_text: More
+      summary_handler: full
+      trim_options: {  }
+    third_party_settings: {  }
+    type: smart_trim
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      trim_length: '40'
+      trim_type: chars
+      trim_suffix: ''
+      more_link: '0'
+      more_text: More
+      trim_options:
+        text: 0
+      more_class: more-link
+      summary_handler: full
+    third_party_settings: {  }
+    type: smart_trim
+    region: content
+hidden:
+  field_url: true

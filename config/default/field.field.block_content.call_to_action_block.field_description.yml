@@ -1,0 +1,21 @@
+uuid: aed0021b-d659-4cfc-9e01-a00419a16a07
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.call_to_action_block
+    - field.storage.block_content.field_description
+  module:
+    - text
+id: block_content.call_to_action_block.field_description
+field_name: field_description
+entity_type: block_content
+bundle: call_to_action_block
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
