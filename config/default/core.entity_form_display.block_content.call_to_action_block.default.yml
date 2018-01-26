@@ -1,0 +1,62 @@
+uuid: 2a329b4d-8ac5-4b81-8b02-8622c29c11b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.call_to_action_block
+    - field.field.block_content.call_to_action_block.field_background_image
+    - field.field.block_content.call_to_action_block.field_description
+    - field.field.block_content.call_to_action_block.field_title
+    - field.field.block_content.call_to_action_block.field_url
+    - image.style.thumbnail
+  module:
+    - image
+    - link
+    - text
+    - workbench_moderation
+id: block_content.call_to_action_block.default
+targetEntityType: block_content
+bundle: call_to_action_block
+mode: default
+content:
+  field_background_image:
+    type: image_image
+    weight: 3
+    settings:
+      preview_image_style: thumbnail
+      progress_indicator: throbber
+    region: content
+    third_party_settings: {  }
+  field_description:
+    weight: 2
+    settings:
+      rows: 4
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_url:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }
