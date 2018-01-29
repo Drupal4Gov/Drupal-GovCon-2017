@@ -16,25 +16,23 @@
   &__logo {
     display: block;
     position: absolute;
-    top: 20%;
-    left: 30%;
-
-    @include breakpoint($small-max) {
-      top: 30%;
-      left: 43%;
-    }
+    top: 25%;
+    left: 43.5%;
+    height: 120px;
+    width: 138px;
   }
 
   &__callout-button {
     @include span(3 of 12);
 
     position: absolute;
-    top: 73%;
-    left: 38%;
     background-color: rgba(0, 0, 0, 0.5);
     border: 2px solid rgba(255, 255, 255, 1);
     border-radius: 0.25em;
-    height: 1.5em;
+    width: auto;
+    top: 73%;
+    left: 39%;
+    height: 2em;
 
     &:hover {
       background-color: rgba(142, 47, 15, 1);
@@ -46,9 +44,9 @@
     text-align: center;
     font-family: $body-font;
     color: white;
-    font-size: 16px;
     text-decoration: none;
     margin: 0 0.1em 0.5em 0.2em;
+    font-size: 1.5em;
 
     &:hover {
       color: rgb(254, 236, 127);
