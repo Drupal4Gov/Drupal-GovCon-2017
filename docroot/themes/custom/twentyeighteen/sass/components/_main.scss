@@ -1,7 +1,3 @@
-#main {
-  margin-bottom: -25px;
-}
-
 .mq-main {
   max-width: none;
   margin-top: 0;
@@ -15,9 +11,4 @@
 
 .region-content {
   position: relative;
-  top: 70px;
-
-  @include breakpoint($small-max) {
-    top: 0;
-  }
 }
