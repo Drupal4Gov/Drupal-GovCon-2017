@@ -7,6 +7,7 @@ body {
 }
 
 body {
+  position: relative;
   font-family: $body_font;
   font-size: 1em;
   color: $dark-gray;
@@ -16,13 +17,33 @@ body {
   margin: 0;
   padding: 0;
   background-color: rgba($teal, 0.5);
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -20;
+    opacity: 0.03;
+    background-image: url(../images/GC18_motif_pattern_01-K.svg);
+    background-repeat: repeat;
+    background-size: 72px 72px;
+  }
 }
 // Base Headings
 //
 // Markup: headlines.twig
 //
 // Style guide: base.headlines
-h1,
+h1 {
+  color: $sienna;
+  font-weight: 500;
+  font-family: $heading_font;
+}
+
 h2,
 h3,
 h4,
@@ -78,7 +99,7 @@ a:visited {
   cursor: inherit;
 
   &:hover {
-    color: $dark-gray;
+    color: $sienna;
     text-decoration: underline;
   }
 }
