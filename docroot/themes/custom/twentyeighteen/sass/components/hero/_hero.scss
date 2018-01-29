@@ -1,0 +1,55 @@
+// Hero
+//
+// Hero Styling
+//
+// Markup: hero.twig
+//
+// Style guide: components.hero
+
+.hero {
+  width: 100%;
+
+  &__background-img {
+    position: relative;
+  }
+
+  &__logo {
+    display: block;
+    position: absolute;
+    top: 25%;
+    left: 43.5%;
+    height: 120px;
+    width: 138px;
+  }
+
+  &__callout-button {
+    @include span(3 of 12);
+
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 1);
+    border-radius: 0.25em;
+    width: auto;
+    top: 73%;
+    left: 39%;
+    height: 2em;
+
+    &:hover {
+      background-color: rgba(142, 47, 15, 1);
+      border: 2px solid rgb(254, 236, 127);
+    }
+  }
+
+  &__callout-text {
+    text-align: center;
+    font-family: $body-font;
+    color: white;
+    text-decoration: none;
+    margin: 0 0.1em 0.5em 0.2em;
+    font-size: 1.5em;
+
+    &:hover {
+      color: rgb(254, 236, 127);
+    }
+  }
+}
