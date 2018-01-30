@@ -1,0 +1,10 @@
+{% extends '@cog/block/block.html.twig' %}
+
+{% block content %}
+  {{ content.field_background_image }}
+  <div class="hero__details">
+    <a href="{{ content.field_url.0['#title'] }}">
+      {{ content.field_logo }}
+    </a>
+  </div>
+{% endblock %}
