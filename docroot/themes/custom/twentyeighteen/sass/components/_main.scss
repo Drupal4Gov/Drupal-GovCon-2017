@@ -1,0 +1,14 @@
+.mq-main {
+  max-width: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: $pale-yellow;
+
+  @include breakpoint($medium-max) {
+    width: 1200px;
+  }
+}
+
+.region-content {
+  position: relative;
+}
