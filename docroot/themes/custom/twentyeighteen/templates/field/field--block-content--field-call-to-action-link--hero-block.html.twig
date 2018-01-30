@@ -1,0 +1,9 @@
+{% extends '@twentyeighteen/field/field.html.twig' %}
+{% block field %}
+  {% set classes = classes|merge(['hero__details-callout']) %}
+  {% for item in items %}
+    <div{{ attributes.addClass(classes, 'field__item') }}>
+      <a class="hero__details-button" href="{{ url(item.content['#url'].getRouteName()) }}">{{ item.content['#title'] }}</a>
+    </div>
+  {% endfor %}
+{% endblock %}
