@@ -24,4 +24,41 @@ for (let i = 0; i < subMenu.length; i++) {
   }
 }
 
+const mainMenu = document.querySelector('.menu-main');
 
+const lastTopMenuLink = topMenuLinks[topMenuLinks.length - 1];
+
+/**
+ * Closes the mobile menu when you exit the last link
+ * @return {void}
+ */
+if (mainMenu.lastElementChild.querySelector('.menu-submenu') === null ) {
+  // If the last menu item does not have a submenu
+  lastTopMenuLink.onblur = () => {
+    document.getElementById('show-menu').checked = false;
+  }
+} else {
+  // If the last menu item does have a submenu
+  const lastSubMenuLink = mainMenu.lastElementChild.querySelector('.menu-submenu');
+
+  lastSubMenuLink.lastElementChild.lastElementChild.onblur = () => {
+    document.getElementById('show-menu').checked = false;
+  }
+}
+
+const toggleButton = document.getElementById('show-menu');
+
+/**
+ * Overrides "checkmark" behavior so that you can use the enter key to toggle the mobile menu.
+ * @return {void}
+ */
+toggleButton.addEventListener("keyup", (event) => {
+  event.preventDefault();
+  if (event.keyCode === 13 || event.keyCode === 32) {
+    if(toggleButton.checked === false) {
+      toggleButton.checked = true;
+    } else {
+      toggleButton.checked = false;
+    }
+  }
+});
