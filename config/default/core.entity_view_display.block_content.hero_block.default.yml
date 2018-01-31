@@ -5,10 +5,12 @@ dependencies:
   config:
     - block_content.type.hero_block
     - field.field.block_content.hero_block.field_background_image
+    - field.field.block_content.hero_block.field_call_to_action_link
     - field.field.block_content.hero_block.field_logo
     - field.field.block_content.hero_block.field_url
   module:
     - image
+    - link
 id: block_content.hero_block.default
 targetEntityType: block_content
 bundle: hero_block
@@ -23,14 +25,37 @@ content:
     third_party_settings: {  }
     type: image
     region: content
+  field_call_to_action_link:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
   field_logo:
     type: image
-    weight: 2
+    weight: 1
     region: content
     label: hidden
     settings:
       image_style: ''
       image_link: ''
     third_party_settings: {  }
-hidden:
-  field_url: true
+  field_url:
+    type: link
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+hidden: {  }
