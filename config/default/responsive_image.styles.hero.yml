@@ -1,0 +1,30 @@
+uuid: 290b01c7-585b-4eca-8f54-2754409f16ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.hero_large
+    - image.style.hero_medium
+    - image.style.hero_small
+  theme:
+    - twentyeighteen
+id: hero
+label: Hero
+image_style_mappings:
+  -
+    breakpoint_id: twentyeighteen.wide
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: hero_large
+  -
+    breakpoint_id: twentyeighteen.desktop
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: hero_medium
+  -
+    breakpoint_id: twentyeighteen.mobile
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: hero_small
+breakpoint_group: twentyeighteen
+fallback_image_style: hero_large

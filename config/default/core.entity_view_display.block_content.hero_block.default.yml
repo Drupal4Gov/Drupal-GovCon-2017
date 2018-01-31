@@ -8,9 +8,11 @@ dependencies:
     - field.field.block_content.hero_block.field_call_to_action_link
     - field.field.block_content.hero_block.field_logo
     - field.field.block_content.hero_block.field_url
+    - responsive_image.styles.hero
   module:
-    - image
     - link
+    - responsive_image
+    - svg_image
 id: block_content.hero_block.default
 targetEntityType: block_content
 bundle: hero_block
@@ -20,10 +22,10 @@ content:
     weight: 0
     label: hidden
     settings:
-      image_style: ''
+      responsive_image_style: hero
       image_link: ''
     third_party_settings: {  }
-    type: image
+    type: responsive_image
     region: content
   field_call_to_action_link:
     weight: 3
@@ -45,6 +47,10 @@ content:
     settings:
       image_style: ''
       image_link: ''
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
     third_party_settings: {  }
   field_url:
     type: link

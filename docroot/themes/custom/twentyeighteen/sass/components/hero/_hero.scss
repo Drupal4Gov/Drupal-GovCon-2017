@@ -11,6 +11,15 @@
 
   &__background-img {
     position: absolute;
+
+    img,
+    picture {
+      min-height: 360px;
+
+      @include breakpoint($medium) {
+        min-height: 440px;
+      }
+    }
   }
 
   &__details {
