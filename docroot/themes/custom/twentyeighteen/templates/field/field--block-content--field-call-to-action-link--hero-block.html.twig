@@ -3,7 +3,15 @@
   {% set classes = classes|merge(['hero__details-callout']) %}
   {% for item in items %}
     <div{{ attributes.addClass(classes, 'field__item') }}>
-      <a class="hero__details-button" href="{{ url(item.content['#url'].getRouteName()) }}">{{ item.content['#title'] }}</a>
+      {% set url = item.content['#url'] %}
+      {% if url.isExternal == true %}
+        {% set url_link = url.getUri() %}
+      {% elseif url.getRouteName() == '<front>' %}
+        {% set url_link = url(url.getRouteName()) %}
+      {% else %}
+        {% set url_link = path(url.getRouteName() , {'node' : url.getRouteParameters().node}) %}
+      {% endif %}
+      <a class="hero__details-button" href="{{ url_link }}">{{ item.content['#title'] }}</a>
     </div>
   {% endfor %}
 {% endblock %}
