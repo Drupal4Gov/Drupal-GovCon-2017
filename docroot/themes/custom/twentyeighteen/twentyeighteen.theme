@@ -132,6 +132,10 @@ function twentyeighteen_form_node_form_alter(&$form, FormStateInterface $form_st
   $form['revision_information']['#group'] = 'meta';
 }
 
+
+/**
+ * Implements hook_theme_suggestions_block_alter().
+ */
 function twentyeighteen_theme_suggestions_block_alter(array &$suggestions, array $variables) {
   // Block suggestions for custom block bundles.
   if (isset($variables['elements']['content']['#block_content'])) {
