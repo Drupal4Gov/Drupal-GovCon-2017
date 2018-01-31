@@ -22,7 +22,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 6
+    weight: 9
     settings:
       rows: 9
       summary_rows: 3
@@ -36,13 +36,13 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_conference_year:
-    weight: 7
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_critical_announcement_text:
-    weight: 9
+    weight: 11
     settings:
       size: 60
       placeholder: ''
@@ -50,20 +50,20 @@ content:
     type: text_textfield
     region: content
   field_important_date:
-    weight: 26
+    weight: 8
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
   field_is_critical_:
-    weight: 8
+    weight: 10
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
     region: content
   field_sort_order:
-    weight: 10
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -85,7 +85,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 11
+    weight: 12
     third_party_settings: {  }
     region: content
   sticky:
