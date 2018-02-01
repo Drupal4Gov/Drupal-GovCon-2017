@@ -122,3 +122,20 @@ body {
   width: 1px;
   word-wrap: normal;
 }
+
+// CKEditor Styles - Ideally to be used more globally.
+a.button {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  border-radius: 0.25em;
+  margin: 2em 0;
+  color: $white !important;
+  background-color: $teal;
+
+  &:hover {
+    background-color: $sienna;
+  }
+}
