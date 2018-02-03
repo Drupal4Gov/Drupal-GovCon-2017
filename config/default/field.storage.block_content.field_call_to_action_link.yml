@@ -1,0 +1,23 @@
+uuid: 15d7b1ad-84e0-46c0-9a71-98122e1044a2
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - field_permissions
+    - link
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: block_content.field_call_to_action_link
+field_name: field_call_to_action_link
+entity_type: block_content
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

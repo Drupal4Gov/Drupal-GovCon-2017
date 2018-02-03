@@ -5,6 +5,7 @@ dependencies:
   config:
     - block_content.type.hero_block
     - field.field.block_content.hero_block.field_background_image
+    - field.field.block_content.hero_block.field_call_to_action_link
     - field.field.block_content.hero_block.field_logo
     - field.field.block_content.hero_block.field_url
     - image.style.thumbnail
@@ -42,6 +43,14 @@ content:
       progress_indicator: throbber
     region: content
     third_party_settings: {  }
+  field_call_to_action_link:
+    weight: 26
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
   field_logo:
     type: image_image
     weight: 5

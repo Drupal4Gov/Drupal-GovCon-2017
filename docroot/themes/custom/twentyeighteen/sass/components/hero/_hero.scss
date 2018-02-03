@@ -11,6 +11,15 @@
 
   &__background-img {
     position: absolute;
+
+    img,
+    picture {
+      min-height: 360px;
+
+      @include breakpoint($medium) {
+        min-height: 440px;
+      }
+    }
   }
 
   &__details {
@@ -21,7 +30,7 @@
 
   &__details-logo {
     margin: 0 auto;
-    padding: 0.5em 0 2em;
+    padding: 5em 0 2em;
     width: 12em;
 
     &:hover {
@@ -42,16 +51,23 @@
     border: 2px solid rgba(255, 255, 255, 1);
     border-radius: 0.25em;
     font-family: $body-font;
-    color: $white;
     text-decoration: none;
     font-size: 1.5em;
     filter: drop-shadow(0 0 1em rgba(0, 0, 0, 0.5));
+  }
+}
 
-    &:hover {
-      background-color: rgba(142, 47, 15, 1);
-      border: 2px solid rgb(254, 236, 127);
-      color: rgb(254, 236, 127);
-      text-decoration: none;
-    }
+a.hero__details-button {
+  color: $white;
+
+  &:hover {
+    background-color: rgba(142, 47, 15, 1);
+    border: 2px solid rgb(254, 236, 127);
+    color: rgb(254, 236, 127);
+    text-decoration: none;
+  }
+
+  .ext {
+    display: none;
   }
 }

@@ -1,0 +1,7 @@
+{% extends '@twentyeighteen/field/field.html.twig' %}
+{% block field %}
+  {% set classes = classes|merge(['hero__details-logo']) %}
+  {% for item in items %}
+    <div{{ attributes.addClass(classes, 'field__item') }}>{{ item.content }}</div>
+  {% endfor %}
+{% endblock %}
