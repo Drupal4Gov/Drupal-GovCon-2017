@@ -75,7 +75,8 @@
         "drupal/cog": "^1.10",
         "drupal/config_update": "1.5.0",
         "drupal/context": "^4.0@beta",
-        "drupal/svg_image": "^1.8"
+        "drupal/svg_image": "^1.8",
+        "drupal/redirect": "^1.0"
     },
     "require-dev": {
         "behat/behat": "3.2.0",
@@ -146,7 +147,11 @@
             },
             "drupal/page_manager": {
                 "Correcting installation issue": "https://www.drupal.org/files/issues/2876880-page-varient-cache-2.patch"
+            },
+            "drupal/redirect": {
+                "fixing broken entity errors": "https://www.drupal.org/files/issues/redirect-catch-route-does-not-exist-2932263-15.patch"
             }
+
         },
         "drupal-scaffold": {
             "initial": {
