@@ -6,10 +6,12 @@ dependencies:
     - field.field.node.special_announcement.body
     - field.field.node.special_announcement.field_conference_year
     - field.field.node.special_announcement.field_critical_announcement_text
+    - field.field.node.special_announcement.field_important_date
     - field.field.node.special_announcement.field_is_critical_
     - field.field.node.special_announcement.field_sort_order
     - node.type.special_announcement
   module:
+    - datetime
     - panelizer
     - text
     - user
@@ -30,6 +32,15 @@ content:
     weight: 1
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_important_date:
+    weight: 2
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
     region: content
   links:
     weight: 0

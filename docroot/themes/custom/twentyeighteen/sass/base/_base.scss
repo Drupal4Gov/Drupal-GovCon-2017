@@ -42,7 +42,7 @@ body {
 // Style guide: base.headlines
 h1 {
   color: $sienna;
-  font-weight: 500;
+  font-weight: 700;
   font-family: $heading_font;
 }
 
@@ -52,35 +52,35 @@ h4,
 h5,
 h6 {
   color: $heading;
-  font-weight: 500;
+  font-weight: 700;
   font-family: $heading_font;
   padding: 0 0 0.3em;
   margin: 0;
 }
 
 h1 {
-  font-size: 250%;
+  font-size: 2em;
   line-height: 165%;
 }
 
 h2 {
-  font-size: 210%;
+  font-size: 1.5em;
   line-height: 145%;
 }
 
 h3 {
-  font-size: 180%;
+  font-size: 1.25em;
   line-height: 145%;
 }
 
 h4 {
-  font-size: 170%;
+  font-size: 1.15em;
   line-height: 145%;
 }
 
 h5,
 h6 {
-  font-size: 140%;
+  font-size: 1.05em;
   line-height: 145%;
 }
 
@@ -108,7 +108,7 @@ a:visited {
 }
 
 body p {
-  margin: 3px 0 10px;
+  margin: 1em 0;
 }
 
 // Responsive Images

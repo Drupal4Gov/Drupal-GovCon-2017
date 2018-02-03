@@ -1,0 +1,21 @@
+uuid: ae6582e1-b0a8-453b-b2f7-aeaad58fb78c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_important_date
+    - node.type.special_announcement
+  module:
+    - datetime
+id: node.special_announcement.field_important_date
+field_name: field_important_date
+entity_type: node
+bundle: special_announcement
+label: 'Important Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

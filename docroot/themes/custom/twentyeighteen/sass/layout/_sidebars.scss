@@ -12,7 +12,7 @@
 .body-sidebars-first {
   @include breakpoint($up-sm) {
     aside.sidebar-first {
-      @include span(3 of 12);
+      @include span(4 of 12);
 
       > * {
         padding-left: 15px;
@@ -20,7 +20,7 @@
     }
 
     section#content {
-      @include span(9 of 12 last);
+      @include span(8 of 12 last);
 
       > * {
         padding-right: 25px;
@@ -34,7 +34,7 @@
 .body-sidebars-second {
   @include breakpoint($up-sm) {
     aside.sidebar-second {
-      @include span(3 of 12 last);
+      @include span(4 of 12 last);
 
       > * {
         padding-right: 15px;
@@ -42,7 +42,7 @@
     }
 
     section#content {
-      @include span(9 of 12);
+      @include span(8 of 12);
 
       > * {
         padding-left: 25px;

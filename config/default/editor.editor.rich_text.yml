@@ -50,11 +50,15 @@ settings:
           items:
             - ShowBlocks
             - Source
+        -
+          name: Styles
+          items:
+            - Styles
   plugins:
     language:
       language_list: un
     stylescombo:
-      styles: ''
+      styles: 'a.button|Call to Action Link'
 image_upload:
   status: true
   scheme: public

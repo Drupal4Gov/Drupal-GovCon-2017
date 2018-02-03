@@ -1,6 +1,6 @@
-uuid: 3f4a36c8-89f7-4e01-a2e1-64e61a43a596
+uuid: 58f15836-0de5-4c5a-9515-45c6e9c083c3
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - views.view.special_announcements_display
@@ -9,18 +9,18 @@ dependencies:
     - views
   theme:
     - twentyeighteen
-id: twentyeighteen_views_block__special_announcements_display_block_1
+id: views_block__special_announcements_display_block_3
 theme: twentyeighteen
 region: sidebar_second
-weight: -6
+weight: 0
 provider: null
-plugin: 'views_block:special_announcements_display-block_1'
+plugin: 'views_block:special_announcements_display-block_3'
 settings:
-  id: 'views_block:special_announcements_display-block_1'
-  label: ''
+  id: 'views_block:special_announcements_display-block_3'
+  label: Announcements
   provider: views
-  label_display: '0'
-  views_label: ''
+  label_display: visible
+  views_label: Announcements
   items_per_page: none
 visibility:
   request_path:
