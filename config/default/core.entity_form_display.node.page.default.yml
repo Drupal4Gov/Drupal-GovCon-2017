@@ -13,7 +13,6 @@ dependencies:
     - metatag
     - path
     - text
-    - workbench_moderation
 _core:
   default_config_hash: TxhuWU1Nx6xQDpdGqYIme3ATgLWVCY3CNGvlJqndorw
 id: node.page.default
@@ -98,6 +97,9 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
+  url_redirects:
+    weight: 50
     region: content
 hidden:
   panelizer: true

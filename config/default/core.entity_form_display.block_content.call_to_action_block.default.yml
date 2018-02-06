@@ -10,10 +10,9 @@ dependencies:
     - field.field.block_content.call_to_action_block.field_url
     - image.style.thumbnail
   module:
-    - image
     - link
+    - svg_image
     - text
-    - workbench_moderation
 id: block_content.call_to_action_block.default
 targetEntityType: block_content
 bundle: call_to_action_block

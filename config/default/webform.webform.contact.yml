@@ -1,3 +1,4 @@
+uuid: e02eba4c-6e83-4b4f-80d7-0d2614449f05
 langcode: en
 status: open
 dependencies: {  }
@@ -147,6 +148,7 @@ handlers:
       return_path: ''
       sender_mail: ''
       sender_name: ''
+      twig: false
   email_1:
     id: email
     label: Email
@@ -178,4 +180,4 @@ handlers:
       return_path: ''
       sender_mail: ''
       sender_name: ''
-uuid: e02eba4c-6e83-4b4f-80d7-0d2614449f05
+      twig: false
