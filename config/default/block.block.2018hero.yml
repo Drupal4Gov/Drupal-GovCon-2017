@@ -1,0 +1,31 @@
+uuid: 1b0290d8-ded4-4e20-96fe-fb1c5a59df31
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:hero_block:3f9f386e-c7ba-41b7-9e85-c8fd2f907139'
+  module:
+    - block_content
+    - system
+  theme:
+    - twentyeighteen
+id: 2018hero
+theme: twentyeighteen
+region: header
+weight: -12
+provider: null
+plugin: 'block_content:3f9f386e-c7ba-41b7-9e85-c8fd2f907139'
+settings:
+  id: 'block_content:3f9f386e-c7ba-41b7-9e85-c8fd2f907139'
+  label: '2018 Hero'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
