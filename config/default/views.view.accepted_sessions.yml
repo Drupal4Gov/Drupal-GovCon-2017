@@ -347,7 +347,7 @@ display:
           admin_label: ''
           operator: or
           value:
-            126: 126
+            122: 122
           group: 1
           exposed: false
           expose:
@@ -433,6 +433,67 @@ display:
         menu_name: main
         enabled: false
       display_description: ''
+      filters:
+        vid:
+          id: vid
+          table: taxonomy_term_field_data
+          field: vid
+          value:
+            session_track: session_track
+          entity_type: taxonomy_term
+          entity_field: vid
+          plugin_id: bundle
+        field_conference_year_target_id:
+          id: field_conference_year_target_id
+          table: node__field_conference_year
+          field: field_conference_year_target_id
+          relationship: reverse__node__field_session_track
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            126: 126
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: conference_year
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+      defaults:
+        filters: false
+        filter_groups: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:
@@ -456,9 +517,10 @@ display:
         description: ''
         expanded: false
         parent: ''
-        weight: 0
+        weight: -49
         context: '0'
         menu_name: 2018-main-navigation
+        enabled: false
       display_description: ''
       filters:
         vid:
