@@ -1,0 +1,8 @@
+local:
+  host: local.capitalcamp.com
+  options: {  }
+  root: /var/www/capitalcamp/docroot
+  uri: 'http://local.capitalcamp.com'
+  user: vagrant
+  ssh:
+    options: '-o PasswordAuthentication=no -i $HOME/.vagrant.d/insecure_private_key'
