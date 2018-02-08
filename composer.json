@@ -33,10 +33,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "drush/drush": "8.1.15",
-        "acquia/blt": "^8.9.10",
-        "composer/installers": "^1.0.20",
-        "cweagans/composer-patches": "^1.6.0",
+        "acquia/blt": "9.x-dev",
         "drupal/acsf": "^1.32.0",
         "drupal/memcache": "2.x-dev",
         "drupal/google_analytics": "*@stable",
@@ -79,18 +76,11 @@
         "drupal/redirect": "^1.0"
     },
     "require-dev": {
-        "behat/behat": "3.2.0",
-        "behat/mink": "~1.7",
-        "drupal/drupal-extension": "3.3.1",
-        "behat/mink-selenium2-driver": "^1.3.1",
-        "jarnaiz/behat-junit-formatter": "^1.3.2",
-        "squizlabs/php_codesniffer": "2.*",
         "geerlingguy/drupal-vm": "~4.3",
         "drupal/devel": "^1.0.0-alpha1",
         "drupal/console": "^1.0.0-rc13",
         "jakoch/phantomjs-installer": "^2.1.1-p07",
-        "drupal/coder": "~8.2",
-        "phing/phing": "~2"
+        "drupal/coder": "~8.2"
     },
     "scripts": {
         "post-install-cmd": [
@@ -135,6 +125,8 @@
             "docroot/libraries/{$name}": [
                 "type:drupal-library",
                 "type:bower-asset",
+                "type:npm-asset",
+                "type:bower-asset",
                 "type:npm-asset"
             ]
         },
@@ -151,7 +143,6 @@
             "drupal/redirect": {
                 "fixing broken entity errors": "https://www.drupal.org/files/issues/redirect-catch-route-does-not-exist-2932263-15.patch"
             }
-
         },
         "drupal-scaffold": {
             "initial": {
@@ -164,9 +155,8 @@
         },
         "enable-patching": true,
         "merge-plugin": {
-            "require": [],
-            "include": [
-                "blt/composer.overrides.json"
+            "require": [
+                "blt/composer.required.json"
             ],
             "merge-extra": true,
             "merge-extra-deep": true,
@@ -175,6 +165,8 @@
             "ignore-duplicates": true
         },
         "installer-types": [
+            "bower-asset",
+            "npm-asset",
             "bower-asset",
             "npm-asset"
         ]

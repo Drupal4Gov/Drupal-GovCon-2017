@@ -35,11 +35,11 @@ modules:
     uninstall: [devel, views_ui]
 target-hooks:
   frontend-setup:
-    dir: "${repo.root}"
-    command: "./blt/scripts/frontend-setup.sh"
+    dir: '${repo.root}'
+    command: ./blt/scripts/frontend-setup.sh
   frontend-build:
-    dir: "${repo.root}"
-    command: "./blt/scripts/frontend-build.sh"
+    dir: '${repo.root}'
+    command: ./blt/scripts/frontend-build.sh
   pre-config-import:
     dir: '${docroot}'
     command: 'echo ''No pre-config-import configured.'''
@@ -52,6 +52,7 @@ target-hooks:
 behat:
   paths:
     - '${repo.root}/tests/behat'
+  web-driver: selenium
 cm:
   allow-overrides: true
   strategy: features

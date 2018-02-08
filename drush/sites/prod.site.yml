@@ -1,0 +1,15 @@
+dev:
+  host: ded-2297.prod.hosting.acquia.com
+  options:
+    ac-env: prod
+    ac-realm: prod
+    ac-site: capitalcamp
+  paths:
+    drush-script: drush
+  root: /var/www/html/capitalcamp.prod/docroot
+  uri: capitalcamp.prod.acquia-sites.com
+  user: capitalcamp.prod
+livedev:
+  options:
+    parent: '@capitalcamp.prod'
+  root: /mnt/gfs/capitalcamp.prod/livedev/docroot

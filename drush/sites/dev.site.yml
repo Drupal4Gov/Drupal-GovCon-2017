@@ -1,0 +1,15 @@
+dev:
+  host: staging-7801.prod.hosting.acquia.com
+  options:
+    ac-env: dev
+    ac-realm: prod
+    ac-site: capitalcamp
+  paths:
+    drush-script: drush
+  root: /var/www/html/capitalcamp.dev/docroot
+  uri: capitalcampdev.prod.acquia-sites.com
+  user: capitalcamp.dev
+livedev:
+  options:
+    parent: '@capitalcamp.dev'
+  root: /mnt/gfs/capitalcamp.dev/livedev/docroot
