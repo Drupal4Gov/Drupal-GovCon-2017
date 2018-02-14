@@ -6,6 +6,38 @@
 //
 // Style guide: components.hero
 
+.block--bundle-hero-block {
+  min-height: 360px;
+
+  @include breakpoint(483px) {
+    min-height: 500px;
+  }
+
+  @include breakpoint(513px) {
+    min-height: 620px;
+  }
+
+  @include breakpoint(545px) {
+    min-height: 684px;
+  }
+
+  @include breakpoint(594px) {
+    min-height: 710px;
+  }
+
+  @include breakpoint($small-max) {
+    min-height: 550px;
+  }
+
+  @include breakpoint(821px) {
+    min-height: 600px;
+  }
+
+  @include breakpoint($medium-max) {
+    min-height: 300px;
+  }
+}
+
 .hero {
   width: 100%;
 

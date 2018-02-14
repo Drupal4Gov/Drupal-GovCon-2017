@@ -64,10 +64,8 @@ function twentyeighteen_preprocess_block(&$variables) {
   if (isset($variables['elements']['content']['#block_content'])) {
     $bundle = $variables['elements']['content']['#block_content']->bundle();
     $bundle_class = str_replace('_', '-', $bundle);
-    if (isset($variables['attributes']['class'])) {
-      $variables['attributes']['class'][] = Html::cleanCssIdentifier('block--bundle-' . $bundle_class);
-      $variables['attributes']['data-bundle-class'] = $bundle_class;
-    }
+    $variables['attributes']['class'][] = Html::cleanCssIdentifier('block--bundle-' . $bundle_class);
+    $variables['attributes']['data-bundle-class'] = $bundle_class;
   }
 }
 
