@@ -7,30 +7,15 @@
 // Style guide: components.hero
 
 .block--bundle-hero-block {
+  position: relative;
   min-height: 360px;
 
-  @include breakpoint(483px) {
-    min-height: 500px;
-  }
-
-  @include breakpoint(513px) {
-    min-height: 620px;
-  }
-
-  @include breakpoint(545px) {
-    min-height: 684px;
-  }
-
-  @include breakpoint(594px) {
-    min-height: 710px;
+  @include breakpoint($up-sm) {
+    min-height: 400px;
   }
 
   @include breakpoint($small-max) {
     min-height: 550px;
-  }
-
-  @include breakpoint(821px) {
-    min-height: 600px;
   }
 
   @include breakpoint($medium-max) {
@@ -43,13 +28,18 @@
 
   &__background-img {
     position: absolute;
+    display: block;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+    z-index: -1;
 
     img,
     picture {
-      min-height: 360px;
-
-      @include breakpoint($medium) {
-        min-height: 440px;
+      @include breakpoint($medium-max) {
+        height: 100%;
       }
     }
   }
@@ -64,6 +54,10 @@
     margin: 0 auto;
     padding: 5em 0 2em;
     width: 12em;
+
+    @include breakpoint($medium-max) {
+      padding-top: 2em;
+    }
 
     &:hover {
       opacity: 0.75;
