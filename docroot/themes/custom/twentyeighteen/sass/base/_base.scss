@@ -7,16 +7,18 @@ body {
 }
 
 body {
-  position: relative;
-  font-family: $body_font;
-  font-size: 1em;
   color: $dark-gray;
+  font-size: 1em;
+  font-family: $body_font;
   text-rendering: optimizeLegibility;
   font-weight: 400;
   line-height: 1.4;
   margin: 0;
   padding: 0;
   background-color: rgba($teal, 0.5);
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
 
   @include breakpoint($medium-max) {
     &::after {
@@ -35,80 +37,73 @@ body {
     }
   }
 }
+
+hr {
+  color: $teal;
+  border-width: 2pt;
+  border-style: solid;
+  margin: 2em 0;
+}
+
 // Base Headings
 //
 // Markup: headlines.twig
 //
 // Style guide: base.headlines
-h1 {
-  color: $sienna;
-  font-weight: 700;
-  font-family: $heading_font;
-}
-
+h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  color: $heading;
+  text-rendering: optimizeLegibility;
   font-weight: 700;
-  font-family: $heading_font;
-  padding: 0 0 0.3em;
-  margin: 0;
+  color: $teal;
 }
 
 h1 {
+  color: $sienna;
   font-size: 2em;
-  line-height: 165%;
 }
 
 h2 {
   font-size: 1.5em;
-  line-height: 145%;
 }
 
 h3 {
   font-size: 1.25em;
-  line-height: 145%;
 }
 
 h4 {
-  font-size: 1.15em;
-  line-height: 145%;
+  font-size: 1.125em;
 }
 
-h5,
+h5 {
+  font-size: 1em;
+}
+
 h6 {
-  font-size: 1.05em;
-  line-height: 145%;
+  font-size: 0.875em;
+  letter-spacing: 0.02em; /* Increases readibility at this smaller type size */
 }
 
-body .menu-item {
-  padding-top: 0;
-  margin: 0;
-}
 // Base Text
 //
 // Markup: text.twig
 //
 // Style guide: base.text
-a,
-a:link,
-a:visited {
-  text-decoration: none;
-  color: $link;
-  cursor: inherit;
 
-  &:hover {
-    color: $sienna;
-    text-decoration: underline;
-    cursor: pointer;
-  }
+a,
+a:visited {
+  color: $link;
+  text-decoration: none;
+  cursor: inherit;
 }
 
-body p {
-  margin: 1em 0;
+a:hover {
+  color: $sienna;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 // Responsive Images
@@ -152,42 +147,7 @@ pre {
 // Style guide: base.lists
 
 // OL items
-ol {
-  padding: 0 0 0 10px;
-  margin: 0 0 10px;
 
-  li {
-    margin: 4px 0;
-    padding: 0;
-  }
-}
-
-ol ol {
-  padding: 0 0 0 22.5px;
-}
-
-ol ol ol {
-  padding: 0 0 0 22.5px;
-}
-
-// UL items
-ul {
-  padding: 0 0 0 10px;
-  margin: 0 0 10px;
-
-  li {
-    margin: 4px 0;
-    padding: 0;
-  }
-}
-
-ul ul {
-  padding: 0 0 0 22.5px;
-}
-
-ul ul ul {
-  padding: 0 0 0 22.5px;
-}
 // Tables
 //
 // Markup: table.twig
