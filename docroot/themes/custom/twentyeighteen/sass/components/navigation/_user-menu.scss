@@ -16,9 +16,15 @@
 
   .menu {
     display: flex;
+    flex-direction: column;
     margin: 0;
     padding: 0 0 0.5em 1.5em;
     list-style: none;
+
+    @include breakpoint($small-max) {
+      flex-direction: row;
+      padding-bottom: 0;
+    }
   }
 
   @include breakpoint($small-max) {
