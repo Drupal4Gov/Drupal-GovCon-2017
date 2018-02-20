@@ -131,6 +131,10 @@ select {
   font-family: $montserrat;
   font-size: 1em;
   letter-spacing: 0.02em;
+
+  &:hover {
+    background-color: $sienna;
+  }
 }
 
 fieldset {
@@ -166,6 +170,34 @@ input[type="submit"] {
   &:hover,
   &:focus {
     background: $lighter-gray;
+  }
+}
+
+input[type="submit"] {
+  color: $white;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: $montserrat;
+  font-size: 1em;
+  letter-spacing: 0.02em;
+  background: $teal;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  border-radius: 0.25em;
+  margin: 1em 0;
+  outline: none;
+  border: none;
+
+  &:hover {
+    background-color: $sienna;
+  }
+
+  &:disabled {
+    background: rgba($teal, 0.5);
+
+    &:hover {
+      background-color: $sienna;
+    }
   }
 }
 // Error conditions ////////////////////////////
