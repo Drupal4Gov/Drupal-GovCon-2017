@@ -62,6 +62,63 @@ input[type="file"] {
   width: 100%;
 }
 
+input[type="radio"],
+input[type="checkbox"] {
+  position: relative;
+  z-index: 10;
+  opacity: 0;
+  margin-left: 0.5em;
+
+  + label {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    padding: 0 0.5em;
+    margin-right: 1em;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -20px;
+      z-index: -10px;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-right: 1em;
+      background-color: $teal;
+    }
+  }
+}
+
+input[type="radio"] + label::before {
+  border-radius: 10px;
+}
+
+input[type="checkbox"] + label::before {
+  border-radius: 3px;
+}
+
+input[type="radio"]:checked + label::before {
+  content: "\2022";
+  color: rgba($white, 0.75);
+  font-size: 1.4em;
+  text-align: center;
+  line-height: 1em;
+}
+
+input[type="checkbox"]:checked + label::before {
+  content: "\2713";
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  color: rgba($white, 0.75);
+  text-align: center;
+}
+
+input[type="radio"]:disabled + label::before,
+input[type="checkbox"]:disabled + label::before {
+  background-color: rgba($teal, 0.5);
+}
+
 fieldset {
   border: 1px solid $teal;
   border-radius: 0.2em;
