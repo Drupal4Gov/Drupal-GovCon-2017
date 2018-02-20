@@ -119,6 +119,20 @@ input[type="checkbox"]:disabled + label::before {
   background-color: rgba($teal, 0.5);
 }
 
+select {
+  -webkit-appearance: none;
+  padding: 0.5em 2.25em 0.5em 1em;
+  background: $teal url(../images/DownArrow-Rev.svg) 94% center no-repeat;
+  background-size: 1.25em;
+  text-indent: 0.01px;
+  color: $white;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: $montserrat;
+  font-size: 1em;
+  letter-spacing: 0.02em;
+}
+
 fieldset {
   border: 1px solid $teal;
   border-radius: 0.2em;
