@@ -1,5 +1,5 @@
 // Forms
-// 
+//
 // Base form elements.
 //
 // Markup: form_html.twig
@@ -11,9 +11,9 @@ form {
 
 label {
   display: inline-block;
-  color: $dark-gray;
+  color: $teal;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 400;
   margin: 0 0 0.1875em;
   padding-right: 4px;
   vertical-align: top;
@@ -23,16 +23,17 @@ input[type="text"],
 input[type="password"],
 input[type="date"],
 textarea {
-  background-color: white;
+  background-color: $textarea;
   font-family: inherit;
-  border: 1px solid $lighter-gray;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-  color: rgba(0, 0, 0, 0.75);
+  border: 1px solid $textarea-border;
+  border-radius: 0.25em;
+  box-shadow: inset 0.1em 0.1em 0.25em rgba(0, 0, 0, 0.125);
+  color: $teal;
   display: block;
-  font-size: 0.875em;
+  font-size: 1em;
   margin: 0 0 1em;
   padding: 0.5em;
-  width: auto;
+  width: 100%;
   box-sizing: border-box;
   transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
 }
@@ -41,10 +42,13 @@ input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="date"]:focus,
 textarea:focus {
-  box-shadow: 0 0 5px $light-gray;
-  border-color: $light-gray;
-  background: white;
-  outline: none;
+  box-shadow: 0 0 0.25em 0.25em $textarea-focus;
+}
+
+input[type="text"]:disabled,
+input[type="text"]:disabled:hover,
+textarea:disabled {
+  background-color: rgba(254, 218, 0, 0.1);
 }
 
 input[type="file"],
@@ -71,6 +75,7 @@ fieldset legend {
   margin: 0;
   margin-left: -0.1875em;
 }
+
 // buttons /////////////////////////
 button,
 html input[type="button"],
