@@ -154,33 +154,43 @@ pre {
 //
 // Style guide: base.table
 table {
-  width: 100%;
+  font-family: $body_font;
+  border: 1px solid $teal;
+  padding: 0.25em;
+
+  thead {
+    background-color: $teal;
+    color: $gray;
+    border-bottom: 0;
+  }
 
   th {
     font-weight: 600;
-    text-align: left;
-    background-color: $off-white;
-    padding: 4px 5px;
+    text-align: center;
+    padding: 0.25em;
+  }
+
+  tbody {
+    background-color: $textarea;
+    color: $teal;
+    text-align: center;
   }
 
   td {
     border: 0;
     outline: none;
-    padding: 4px 5px;
-  }
-
-  thead {
-    border: 1px solid $off-white;
-    border-bottom: 0;
-  }
-
-  tbody {
-    border: 1px solid $off-white;
+    padding: 0.25em;
   }
 
   tbody tr:nth-child(even) {
-    background-color: $off-white;
-    border-top: 1px solid $off-white;
-    border-bottom: 1px solid $off-white;
+    background-color: rgba(54, 114, 122, 0.1);
+  }
+
+  tfoot {
+    border-top: 1px solid $teal;
+    background-color: rgba(54, 114, 122, 0.2);
+    color: $teal;
+    font-size: 0.875em;
+    text-align: left;
   }
 }
