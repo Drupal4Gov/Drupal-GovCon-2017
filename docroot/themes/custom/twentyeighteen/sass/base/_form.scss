@@ -63,17 +63,19 @@ input[type="file"] {
 }
 
 fieldset {
-  border: solid 1px $light-gray;
-  padding: 1.25em;
-  margin: 1.125em 0;
+  border: 1px solid $teal;
+  border-radius: 0.2em;
+  margin: 1em 0 2em;
 }
 
 fieldset legend {
   font-weight: bold;
-  background: #fff;
-  padding: 0 0.1875em;
-  margin: 0;
-  margin-left: -0.1875em;
+  background: $teal;
+  color: $gray;
+  background-color: $legend;
+  padding: 0.25em 0.5em;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
 }
 
 // buttons /////////////////////////
