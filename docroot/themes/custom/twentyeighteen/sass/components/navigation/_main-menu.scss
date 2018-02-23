@@ -123,7 +123,7 @@ label.toggle::before {
   flex-direction: column;
   width: 100%;
   margin: 0 auto;
-  padding: 3em 0 0;
+  padding: 0;
 
   @include breakpoint($small-max) {
     flex-direction: row;
@@ -158,7 +158,7 @@ label.toggle::before {
     color: $med-gray;
     font-size: 1em;
     font-weight: 700;
-    padding: 1em 1.5em;
+    padding: 0.5em 1.5em;
 
     @include breakpoint($small-max) {
       padding: 0.5em;
