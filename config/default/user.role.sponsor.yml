@@ -1,0 +1,20 @@
+uuid: 935004ee-7f25-429f-883f-abcc1ee5a92b
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+third_party_settings:
+  lightning_core:
+    description: 'Conference sponsor'
+id: sponsor
+label: Sponsor
+weight: 8
+is_admin: null
+permissions:
+  - 'create sponsor content'
+  - 'delete own sponsor content'
+  - 'edit any sponsor content'
+  - 'edit own sponsor content'
+  - 'revert sponsor revisions'
+  - 'view sponsor revisions'
