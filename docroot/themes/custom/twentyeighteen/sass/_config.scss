@@ -144,3 +144,12 @@ a.button {
     background-color: $sienna;
   }
 }
+
+// Clearfix.
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}

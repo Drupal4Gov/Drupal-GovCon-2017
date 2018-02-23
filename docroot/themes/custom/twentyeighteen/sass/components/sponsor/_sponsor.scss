@@ -1,0 +1,24 @@
+.sponsor {
+  width: 75%;
+  padding: 0 10px;
+  margin: 0;
+  box-sizing: border-box;
+  display: inline-block;
+
+  @include breakpoint($small-max) {
+    width: 50%;
+  }
+
+  @include breakpoint($medium-max) {
+    width: 33%;
+  }
+
+  img {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  img:hover {
+    opacity: 0.5; // Hover effect for logos
+  }
+}
