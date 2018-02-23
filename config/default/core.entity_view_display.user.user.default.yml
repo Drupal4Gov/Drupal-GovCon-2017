@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.user.user.field_bio
-    - field.field.user.user.field_company
     - field.field.user.user.field_conference_role
     - field.field.user.user.field_drupal_org_username
     - field.field.user.user.field_email
@@ -16,9 +15,9 @@ dependencies:
     - field.field.user.user.field_website
     - image.style.user_profile_image
   module:
-    - image
     - linkicon
     - panelizer
+    - svg_image
     - text
     - user
 third_party_settings:
@@ -38,14 +37,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
-    region: content
-  field_company:
-    weight: 5
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
     region: content
   field_drupal_org_username:
     weight: 3

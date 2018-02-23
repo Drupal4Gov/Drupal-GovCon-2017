@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.user.user.field_bio
-    - field.field.user.user.field_company
     - field.field.user.user.field_conference_role
     - field.field.user.user.field_drupal_org_username
     - field.field.user.user.field_email
@@ -16,9 +15,9 @@ dependencies:
     - field.field.user.user.field_website
     - image.style.thumbnail
   module:
-    - image
     - link
     - path
+    - svg_image
     - text
     - user
 id: user.user.default
@@ -38,14 +37,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
-    region: content
-  field_company:
-    weight: 6
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
     region: content
   field_conference_role:
     weight: 1
