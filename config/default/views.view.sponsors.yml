@@ -5,8 +5,14 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - node.type.sponsor
+    - taxonomy.vocabulary.conference_year
+    - taxonomy.vocabulary.sponsorship_level
+  content:
+    - 'taxonomy_term:conference_year:0f6c31f2-ef62-41ce-b17c-3e05bfb9b76c'
+    - 'taxonomy_term:sponsorship_level:7d513731-0643-4b01-988b-32a31f02844e'
   module:
     - node
+    - taxonomy
     - user
 id: sponsors
 label: Sponsors
@@ -216,6 +222,176 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  homepage_core_sponsors:
+    display_plugin: block
+    id: homepage_core_sponsors
+    display_title: 'Homepage Core Sponsors'
+    position: 2
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      pager:
+        type: some
+        options:
+          items_per_page: 3
+          offset: 0
+      defaults:
+        pager: false
+        footer: false
+        arguments: false
+        filters: false
+        filter_groups: false
+        title: false
+        style: false
+        row: false
+      footer:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          tokenize: false
+          content:
+            value: '<a href="2018/sponsors">See all our sponsors here</a>'
+            format: simple_text
+          plugin_id: text
+      arguments: {  }
+      filters:
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            sponsor: sponsor
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          group: 1
+        field_conference_year_target_id:
+          id: field_conference_year_target_id
+          table: node__field_conference_year
+          field: field_conference_year_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            131: 131
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: conference_year
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_sponsor_sponsorship_level_target_id:
+          id: field_sponsor_sponsorship_level_target_id
+          table: node__field_sponsor_sponsorship_level
+          field: field_sponsor_sponsorship_level_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            1: 1
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: sponsorship_level
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      block_description: 'Homepage Core Sponsors'
+      title: 'Homepage Core Sponsors'
+      style:
+        type: default
+        options: {  }
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: teaser
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
