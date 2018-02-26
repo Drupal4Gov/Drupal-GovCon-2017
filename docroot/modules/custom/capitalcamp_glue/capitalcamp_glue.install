@@ -182,3 +182,10 @@ function capitalcamp_glue_update_8008() {
     }
   }
 }
+
+/**
+ * Uninstalling scheduled_updates.
+ */
+function capitalcamp_glue_update_8009() {
+  \Drupal::service('module_installer')->uninstall(['scheduled_updates']);
+}
