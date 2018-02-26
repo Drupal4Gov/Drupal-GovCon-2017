@@ -10,7 +10,6 @@ dependencies:
     - metatag
     - panelizer
     - path
-    - workbench_moderation
 _core:
   default_config_hash: VmtwZehGc73SkubyCyaa-lTzILFmC4aCGaG2LtGXCqE
 id: node.landing_page.default
@@ -65,6 +64,9 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
+  url_redirects:
+    weight: 50
     region: content
 hidden:
   promote: true
