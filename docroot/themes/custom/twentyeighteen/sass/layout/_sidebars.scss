@@ -45,7 +45,11 @@
       @include span(8 of 12);
 
       > * {
-        padding-left: 7em;
+        padding-left: 1.25em;
+
+        @include breakpoint($medium-max) {
+          padding-left: 7em;
+        }
       }
     }
   }
@@ -88,8 +92,13 @@
     @include span(12 of 12);
 
     > * {
-      padding-left: 7em;
-      padding-right: 7em;
+      padding-left: 1.25em;
+      padding-right: 1.25em;
+
+      @include breakpoint($medium-max) {
+        padding-left: 7em;
+        padding-right: 7em;
+      }
     }
   }
 }

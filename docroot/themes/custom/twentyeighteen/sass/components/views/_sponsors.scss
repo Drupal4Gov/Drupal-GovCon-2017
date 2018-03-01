@@ -35,12 +35,18 @@
 }
 
 .sponsor {
-  width: 21%;
+  width: 50%;
   vertical-align: middle;
-  padding: 0 10px;
-  margin: 0;
+  padding: 30px 10px;
+  margin: 0 auto;
   box-sizing: border-box;
   display: inline-block;
+
+  @include breakpoint($small-max) {
+    width: 25%;
+    padding: 0 10px;
+    margin: 0;
+  }
 
   img {
     width: 100% !important;
@@ -49,5 +55,32 @@
 
   img:hover {
     opacity: 0.5; // Hover effect for logos
+  }
+}
+
+.block-views-blocksponsors-homepage-core-sponsors {
+  padding: 1em;
+  background: $white;
+
+  h2 {
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .view-content {
+    padding: 1.5em 0;
+    margin: 0;
+    text-align: center;
+    display: block;
+  }
+
+  p {
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .view-footer a {
+    font-style: italic;
+    color: $sienna;
   }
 }

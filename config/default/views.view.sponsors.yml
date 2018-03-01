@@ -385,7 +385,10 @@ display:
       title: 'Homepage Core Sponsors'
       style:
         type: default
-        options: {  }
+        options:
+          grouping: {  }
+          row_class: sponsor
+          default_row_class: true
       row:
         type: fields
         options:
