@@ -1,13 +1,25 @@
 .view-sponsors-page {
-  border-radius: 0.5em;
-  padding: 1em;
-  background: $white;
+  margin-bottom: 8em;
+
+  .view-content {
+    border-radius: 0.5em;
+    padding: 1em;
+    background: $white;
+  }
+
+  h3 {
+    margin: 0;
+    border-bottom: 0.125em solid rgba($sienna, 0.5);
+    padding-bottom: 0.125em;
+    font-size: 1.5em;
+    text-align: center;
+  }
 }
 
 .view-group--sponsors-page {
   @include clearfix;
 
-  padding: 0;
+  padding: 1.5em 0;
   margin: 0;
   text-align: center;
   display: block;
@@ -23,19 +35,12 @@
 }
 
 .sponsor {
-  width: 75%;
+  width: 21%;
+  vertical-align: middle;
   padding: 0 10px;
   margin: 0;
   box-sizing: border-box;
   display: inline-block;
-
-  @include breakpoint($small-max) {
-    width: 50%;
-  }
-
-  @include breakpoint($medium-max) {
-    width: 33%;
-  }
 
   img {
     width: 100% !important;

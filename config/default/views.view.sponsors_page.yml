@@ -434,7 +434,12 @@ display:
           expose:
             label: ''
       title: Sponsors
-      header: {  }
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          plugin_id: text
       footer: {  }
       empty: {  }
       relationships:
@@ -569,6 +574,7 @@ display:
         filters: false
         filter_groups: false
         fields: false
+        header: false
       filter_groups:
         operator: AND
         groups:
@@ -837,6 +843,20 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+      header:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: "<p>Thanks to our sponsors who make Drupal GovCon possible. Interested in supporting GovCon? \n<em>See our<a href=\"https://www.eventbrite.com/e/2018-drupal-govcon-sponsorships-registration-43407774823\">sponsorship options</a>.</em></p>"
+            format: rich_text
+          plugin_id: text
     cache_metadata:
       max-age: -1
       contexts:
