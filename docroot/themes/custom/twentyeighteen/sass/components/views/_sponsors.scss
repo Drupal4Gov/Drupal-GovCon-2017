@@ -1,3 +1,27 @@
+.view-sponsors-page {
+  border-radius: 0.5em;
+  padding: 1em;
+  background: $white;
+}
+
+.view-group--sponsors-page {
+  @include clearfix;
+
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  display: block;
+
+  h2 {
+    margin-top: 40px;
+  }
+
+  p {
+    font-size: 0.75em;
+    font-style: italic;
+  }
+}
+
 .sponsor {
   width: 75%;
   padding: 0 10px;
