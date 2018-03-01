@@ -23,11 +23,12 @@ input.toggle:focus + label.toggle::before {
   outline: -webkit-focus-ring-color auto 5px;
 }
 
-label.toggle::before {
+input[type="checkbox"] + label.toggle::before {
   content: "\00a0";
   position: absolute;
-  right: 19px;
-  top: 0;
+  right: 13px;
+  left: auto;
+  top: -20px;
   width: 29px;
   height: 40px;
   background-color: transparent;
@@ -63,8 +64,8 @@ label.toggle::before {
     height: 40px;
     width: 27px;
     position: absolute;
-    right: 20px;
-    top: 0;
+    right: 30px;
+    top: -30px;
     cursor: pointer;
 
     @include breakpoint($small-max) {
