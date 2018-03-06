@@ -24,30 +24,42 @@ for (let i = 0; i < subMenu.length; i++) {
   }
 }
 
-const mainMenu = document.querySelector('.menu-main');
-
-const lastTopMenuLink = topMenuLinks[topMenuLinks.length - 1];
-
+// const mainMenu = document.querySelector('.menu-main');
+//
+// const lastTopMenuLink = topMenuLinks[topMenuLinks.length - 1];
+//
 /**
  * Closes the mobile menu when you exit the last link
  * @return {void}
  */
-if (mainMenu.lastElementChild.querySelector('.menu-submenu') === null ) {
-  // If the last menu item does not have a submenu
-  lastTopMenuLink.onblur = () => {
-    document.getElementById('show-menu').checked = false;
-  }
-} else {
-  // If the last menu item does have a submenu
-  const lastSubMenuLink = mainMenu.lastElementChild.querySelector('.menu-submenu');
-
-  lastSubMenuLink.lastElementChild.lastElementChild.onblur = () => {
-    document.getElementById('show-menu').checked = false;
-  }
-}
+// if (mainMenu.lastElementChild.querySelector('.menu-submenu') === null ) {
+//   // If the last menu item does not have a submenu
+//   lastTopMenuLink.onblur = () => {
+//     document.getElementById('show-menu').checked = false;
+//   }
+// } else {
+//   // If the last menu item does have a submenu
+//   const lastSubMenuLink = mainMenu.lastElementChild.querySelector('.menu-submenu');
+//
+//   lastSubMenuLink.lastElementChild.lastElementChild.onblur = () => {
+//     document.getElementById('show-menu').checked = false;
+//   }
+// }
 
 const toggleButton = document.getElementById('show-menu');
 const userMenu = document.querySelector('.menu--account');
+const userMenuLinks = userMenu.getElementsByTagName('a');
+
+/**
+ * Closes the mobile menu when you exit the user menu
+ * @return {void}
+ */
+userMenuLinks[userMenuLinks.length - 1].onblur = () => {
+  toggleButton.checked = false;
+  userMenu.classList.remove('menu--account--show');g
+}
+
+console.log(userMenu.getElementsByTagName('a')[userMenu.getElementsByTagName('a').length - 1 ]);
 
 /**
  * Overrides "checkmark" behavior so that you can use the enter key to toggle the mobile menu.
