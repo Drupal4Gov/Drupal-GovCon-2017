@@ -17,13 +17,13 @@
 #}
 {% if title %}
   <h3>{{ title }}</h3>
-  <div class="view-group--{{ view.id|clean_class }} sponsor-listing">
+  <div class="view-group--{{ view.id|clean_class }}">
 {% endif %}
 {% for row in rows %}
   {%
     set row_classes = [
-      default_row_class ? 'sponsor',
-      loop.last ? 'views-row-last sponsor'
+      default_row_class ? 'views-row',
+      loop.last ? 'views-row-last'
     ]
   %}
   <div{{ row.attributes.addClass(row_classes) }}>
