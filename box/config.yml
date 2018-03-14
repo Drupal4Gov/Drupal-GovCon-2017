@@ -5,8 +5,9 @@ vagrant_machine_name: capitalcamp
 # Set the IP address so it doesn't conflict with other Drupal VM instances.
 vagrant_ip: 192.168.63.51
 
-# Use Ubuntu 14.04 LTS to more closely match Acquia Cloud environment.
+# Use Ubuntu 16.04 LTS to match Acquia Cloud environments.
 vagrant_box: geerlingguy/ubuntu1604
+workspace: /root
 
 # Set drupal_site_name to the project's human-readable name.
 drupal_site_name: "Drupal GovCon"
@@ -28,9 +29,31 @@ drupal_composer_install_dir: "/var/www/capitalcamp"
 drupal_core_path: "/var/www/capitalcamp/docroot"
 ssh_home: /var/www/capitalcamp
 
-drupal_db_user: drupal
-drupal_db_password: drupal
-drupal_db_name: drupal
+# Multisite installations should configure additional domains here.
+apache_vhosts:
+  # Drupal VM's default domain, evaluating to whatever `vagrant_hostname` is set to (drupalvm.dev by default).
+  - servername: "{{ drupal_domain }}"
+    serveralias: "www.{{ drupal_domain }}"
+    documentroot: "{{ drupal_core_path }}"
+    extra_parameters: "{{ apache_vhost_php_fpm_parameters }}"
+#  - servername: "local.second-drupal-site.com"
+#    documentroot: "{{ drupal_core_path }}"
+#    extra_parameters: "{{ apache_vhost_php_fpm_parameters }}"
+
+# Multisite installations should configure additional databases here.
+mysql_databases:
+  - name: drupal
+    encoding: utf8
+    collation: utf8_general_ci
+#  - name: drupal_two
+#    encoding: utf8
+#    collation: utf8_general_ci
+
+mysql_users:
+  - name: drupal
+    host: "%"
+    password: drupal
+    priv: "drupal.*:ALL"
 
 # Set this to 'false' if you don't need to install drupal (using the drupal_*
 # settings below), but instead copy down a database (e.g. using drush sql-sync).
@@ -48,16 +71,10 @@ nodejs_npm_global_packages:
   - name: yarn
 nodejs_install_npm_user: "{{ drupalvm_user }}"
 npm_config_prefix: "/home/{{ drupalvm_user }}/.npm-global"
-installed_extras:
-  - adminer
-  - drush
-  - mailhog
-  - nodejs
-  - selenium
-  - xdebug
+installed_extras: [adminer, selenium, drush, mailhog, memcached, nodejs, solr, xdebug]
 
-# Use PHP 5.6.
-php_version: "5.6"
+# PHP 7
+php_version: "7.1"
 php_packages_extra:
   - "php{{ php_version }}-bz2"
   - "php{{ php_version }}-imagick"
@@ -67,15 +84,18 @@ php_packages_extra:
 # Change this value to 1 in order to enable xdebug by default.
 php_xdebug_default_enable: 0
 php_xdebug_coverage_enable: 0
-# Change this value to 1 in order to enable xdebug on the cli.
-php_xdebug_cli_enable: 0
+php_xdebug_cli_disable: yes
 php_xdebug_remote_enable: 1
 php_xdebug_remote_connect_back: 1
 # Use PHPSTORM for PHPStorm, sublime.xdebug for Sublime Text.
 php_xdebug_idekey: PHPSTORM
 php_xdebug_max_nesting_level: 256
 php_xdebug_remote_port: "9000"
-php_memory_limit: "1024M"
+php_memory_limit: "512M"
+
+# Acquia Search defaults to 4.5.1.
+solr_version: "4.5.1"
 
 post_provision_scripts:
-  - "../../../acquia/blt/scripts/drupal-vm/post-provision.sh"
+  - "../../../acquia/blt/scripts/drupal-vm/configure-solr.sh"
+  - "../../../acquia/blt/scripts/drupal-vm/post-provision.php"
