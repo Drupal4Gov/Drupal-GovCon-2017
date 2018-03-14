@@ -43,14 +43,14 @@ content:
     type: smart_trim
     weight: 5
     settings:
-      trim_length: '80'
+      trim_length: 80
       trim_type: words
       trim_suffix: ...
-      more_link: '0'
+      more_link: false
       more_text: 'Read more'
       summary_handler: trim
       trim_options:
-        text: 0
+        text: false
       more_class: more-link
     third_party_settings: {  }
     region: content
@@ -114,3 +114,4 @@ hidden:
   field_slides_link: true
   field_status: true
   field_video: true
+  scheduled_publication: true

@@ -14,7 +14,6 @@ dependencies:
     - entity_browser
     - link
     - path
-    - workbench_moderation
 _core:
   default_config_hash: bD1HGmo0P8QiOV5pAoJlmVnAvH6ymTNcj38_qHDjXpU
 id: node.sponsor.default
@@ -70,6 +69,12 @@ content:
     third_party_settings: {  }
     type: link_default
     region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
   path:
     type: path
     weight: 9
@@ -83,6 +88,12 @@ content:
     weight: 7
     third_party_settings: {  }
     region: content
+  scheduled_publication:
+    type: datetime_default
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:

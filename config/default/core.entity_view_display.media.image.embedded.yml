@@ -8,7 +8,7 @@ dependencies:
     - field.field.media.image.image
     - media.type.image
   module:
-    - image
+    - svg_image
 _core:
   default_config_hash: Iue5dWz40odYIvQZXHxNgusvUZVuCXr8InfPe5atT6A
 id: media.image.embedded
@@ -29,5 +29,6 @@ hidden:
   created: true
   field_media_in_library: true
   name: true
+  scheduled_publication: true
   thumbnail: true
   uid: true

@@ -14,7 +14,6 @@ dependencies:
     - datetime
     - path
     - text
-    - workbench_moderation
 id: node.special_announcement.default
 targetEntityType: node
 bundle: special_announcement
@@ -68,6 +67,12 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
   path:
     type: path
     weight: 5
@@ -80,6 +85,12 @@ content:
       display_label: true
     weight: 3
     region: content
+    third_party_settings: {  }
+  scheduled_publication:
+    type: datetime_default
+    weight: 20
+    region: content
+    settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox

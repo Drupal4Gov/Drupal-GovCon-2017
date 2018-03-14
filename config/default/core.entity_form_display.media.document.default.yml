@@ -11,7 +11,6 @@ dependencies:
   module:
     - file
     - path
-    - workbench_moderation
 _core:
   default_config_hash: cJuFx19N5_sxWYHHlmO3RQGGsc47AjZ5a1HfNN2fOzc
 id: media.document.default
@@ -33,6 +32,12 @@ content:
     weight: 3
     third_party_settings: {  }
     region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
   name:
     type: string_textfield
     weight: 2
@@ -44,6 +49,12 @@ content:
   path:
     type: path
     weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduled_publication:
+    type: datetime_default
+    weight: 20
     region: content
     settings: {  }
     third_party_settings: {  }

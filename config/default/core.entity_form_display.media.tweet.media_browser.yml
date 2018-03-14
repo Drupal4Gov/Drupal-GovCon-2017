@@ -9,7 +9,6 @@ dependencies:
     - media.type.tweet
   module:
     - path
-    - workbench_moderation
 _core:
   default_config_hash: iAP5EaBYx55L560b3u9Uyz2RF2GbwtLgzgy0Z33kBck
 id: media.tweet.media_browser
@@ -24,6 +23,12 @@ content:
       display_label: true
     third_party_settings: {  }
     region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
   name:
     type: string_textfield
     weight: 0
@@ -43,6 +48,12 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  scheduled_publication:
+    type: datetime_default
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:

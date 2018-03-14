@@ -10,10 +10,9 @@ dependencies:
     - field.field.block_content.call_to_action_block.field_url
     - image.style.thumbnail
   module:
-    - image
     - link
+    - svg_image
     - text
-    - workbench_moderation
 id: block_content.call_to_action_block.default
 targetEntityType: block_content
 bundle: call_to_action_block
@@ -58,5 +57,17 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  scheduled_publication:
+    type: datetime_default
+    weight: 20
+    region: content
+    settings: {  }
     third_party_settings: {  }
 hidden: {  }

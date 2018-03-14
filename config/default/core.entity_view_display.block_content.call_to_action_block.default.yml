@@ -32,7 +32,7 @@ content:
       trim_length: 65
       trim_type: chars
       trim_suffix: ''
-      more_link: 0
+      more_link: false
       more_class: more-link
       more_text: More
       summary_handler: full
@@ -44,13 +44,13 @@ content:
     weight: 0
     label: hidden
     settings:
-      trim_length: '40'
+      trim_length: 40
       trim_type: chars
       trim_suffix: ''
-      more_link: '0'
+      more_link: false
       more_text: More
       trim_options:
-        text: 0
+        text: false
       more_class: more-link
       summary_handler: full
     third_party_settings: {  }
@@ -58,3 +58,4 @@ content:
     region: content
 hidden:
   field_url: true
+  scheduled_publication: true
