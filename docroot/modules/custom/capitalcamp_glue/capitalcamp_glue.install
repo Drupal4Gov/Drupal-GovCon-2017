@@ -222,3 +222,10 @@ function capitalcamp_glue_update_8010() {
   echo "Uninstalling workbench moderation.";
   \Drupal::service('module_installer')->uninstall(['workbench_moderation']);
 }
+
+/**
+ * Removing unneeded modules.
+ */
+function capitalcamp_glue_update_8011() {
+  \Drupal::service('module_installer')->uninstall(['features']);
+}
