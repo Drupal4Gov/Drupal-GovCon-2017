@@ -1,0 +1,36 @@
+.view-new-proposed-sessions {
+  &__group {
+    position: relative;
+    border: 1px solid #36727a;
+    border-radius: 0.2em;
+    margin: 2em 0 3em;
+    padding: 1em;
+
+    &-item {
+      .views-field-title {
+        margin: 0.5em 0;
+      }
+    }
+  }
+
+  .views-field-name {
+    position: absolute;
+    top: -16px;
+    margin: 0;
+    font-weight: bold;
+    background: $teal;
+    color: $white;
+    padding: 0.25em 0.5em;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    font-size: 1rem;
+  }
+
+  .content__button {
+    margin: 1rem 0 0.5rem;
+
+    a {
+      @extend .btn;
+    }
+  }
+}
