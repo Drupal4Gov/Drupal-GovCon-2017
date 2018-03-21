@@ -1,0 +1,16 @@
+.pager__item {
+  list-style: none;
+  display: inline;
+
+  &.is-active {
+    padding-bottom: 5px;
+    border-bottom: 3px solid $gray;
+  }
+}
+
+.pager__items {
+  padding: 0;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
