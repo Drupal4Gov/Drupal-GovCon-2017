@@ -335,3 +335,17 @@ form input {
     transition: auto;
   }
 }
+
+.field--label-inline .field__label,
+.field--label-inline .field__item {
+  display: inline-block;
+}
+
+.field--label-inline .field__label {
+  color: $teal;
+  font-weight: bold;
+
+  &::after {
+    content: ':';
+  }
+}

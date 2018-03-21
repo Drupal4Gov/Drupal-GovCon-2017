@@ -18,9 +18,9 @@ dependencies:
     - field.field.node.session.field_session_track
     - field.field.node.session.field_slides_link
     - field.field.node.session.field_status
+    - field.field.node.session.field_video
     - node.type.session
   module:
-    - datetime
     - options
     - panelizer
     - smart_trim
@@ -43,54 +43,48 @@ content:
     type: smart_trim
     weight: 5
     settings:
-      trim_length: 80
-      trim_type: words
+      trim_length: 200
+      trim_type: chars
       trim_suffix: ...
-      more_link: false
+      wrap_class: trimmed
       more_text: 'Read more'
+      more_class: more-link
       summary_handler: trim
+      wrap_output: false
+      more_link: false
       trim_options:
         text: false
-      more_class: more-link
+        trim_zero: false
     third_party_settings: {  }
     region: content
+  field_conference_year:
+    type: entity_reference_label
+    weight: 1
+    region: content
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
   field_experience_level:
     type: list_default
     weight: 4
     region: content
-    label: hidden
+    label: inline
     settings: {  }
     third_party_settings: {  }
   field_session_co_presenter_s_:
     type: entity_reference_label
-    weight: 1
-    region: content
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-  field_session_date_time:
-    type: datetime_default
     weight: 2
     region: content
-    label: hidden
+    label: inline
     settings:
-      timezone_override: America/New_York
-      format_type: day
-    third_party_settings: {  }
-  field_session_room:
-    type: string
-    weight: 6
-    region: content
-    label: hidden
-    settings:
-      link_to_entity: false
+      link: true
     third_party_settings: {  }
   field_session_track:
     type: entity_reference_label
     weight: 3
     region: content
-    label: hidden
+    label: inline
     settings:
       link: false
     third_party_settings: {  }
@@ -105,12 +99,13 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_conference_year: true
   field_female_attendees: true
   field_files: true
   field_image: true
   field_male_attendees: true
   field_room_monitor: true
+  field_session_date_time: true
+  field_session_room: true
   field_slides_link: true
   field_status: true
   field_video: true
