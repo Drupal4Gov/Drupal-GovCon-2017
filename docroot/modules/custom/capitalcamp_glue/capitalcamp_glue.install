@@ -229,3 +229,10 @@ function capitalcamp_glue_update_8010() {
 function capitalcamp_glue_update_8011() {
   \Drupal::service('module_installer')->uninstall(['features']);
 }
+
+/**
+ * Removing unneeded modules.
+ */
+function capitalcamp_glue_update_8012() {
+  \Drupal::service('module_installer')->uninstall(['page_manager']);
+}
