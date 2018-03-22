@@ -710,7 +710,7 @@ display:
           hide_alter_empty: true
           view: proposed_sessions
           display: block_3
-          arguments: '{{ fields.tid }}'
+          arguments: '{{ raw_fields.tid }}'
           plugin_id: view
         tid_1:
           id: tid_1
