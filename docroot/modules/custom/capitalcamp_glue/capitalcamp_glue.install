@@ -237,3 +237,12 @@ function capitalcamp_glue_update_8012() {
   \Drupal::service('module_installer')->uninstall(['page_manager']);
   \Drupal::service('module_installer')->uninstall(['contribute']);
 }
+
+/**
+ * Removing unneeded modules.
+ */
+function capitalcamp_glue_update_8013() {
+  \Drupal::service('module_installer')->uninstall(['sponsors']);
+  \Drupal::service('module_installer')->uninstall(['session']);
+  \Drupal::service('module_installer')->uninstall(['contribute']);
+}
