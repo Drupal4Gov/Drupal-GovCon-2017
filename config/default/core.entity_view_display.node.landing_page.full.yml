@@ -67,6 +67,9 @@ targetEntityType: node
 bundle: landing_page
 mode: full
 content:
+  content_moderation_control:
+    weight: -20
+    region: content
   field_meta_tags:
     weight: 101
     label: above
