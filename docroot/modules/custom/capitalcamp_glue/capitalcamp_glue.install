@@ -246,3 +246,11 @@ function capitalcamp_glue_update_8013() {
   \Drupal::service('module_installer')->uninstall(['session']);
   \Drupal::service('module_installer')->uninstall(['contribute']);
 }
+
+/**
+ * Removing unneeded modules.
+ */
+function capitalcamp_glue_update_8014() {
+  \Drupal::service('module_installer')->uninstall(['features']);
+  \Drupal::service('module_installer')->uninstall(['entity']);
+}
