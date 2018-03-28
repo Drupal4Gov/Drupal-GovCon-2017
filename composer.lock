@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "20e70e4815b5f7d90eb5185749473d41",
+    "content-hash": "c1da93c2e4b7ebaf986f88cb791c5d50",
     "packages": [
         {
             "name": "acquia/blt",
@@ -1879,7 +1879,7 @@
                 "reference": "master"
             },
             "type": "drupal-module",
-            "time": "2018-02-04T18:44:31+00:00"
+            "time": "2017-08-04T14:59:31+00:00"
         },
         {
             "name": "drupal-composer/drupal-scaffold",
@@ -2021,7 +2021,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
@@ -2113,7 +2113,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
@@ -2555,24 +2555,12 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
-                    "name": "jkopel",
-                    "homepage": "https://www.drupal.org/user/66207"
-                },
-                {
                     "name": "mikeker",
                     "homepage": "https://www.drupal.org/user/192273"
-                },
-                {
-                    "name": "mortona2k",
-                    "homepage": "https://www.drupal.org/user/1029484"
-                },
-                {
-                    "name": "rlhawk",
-                    "homepage": "https://www.drupal.org/user/352283"
                 }
             ],
             "description": "Provides advanced options (such as links, checkboxes, or jQueryUI widgets) for exposed Views elements.",
@@ -2717,7 +2705,7 @@
                 "behat/behat": "^3.0",
                 "composer/installers": "^1.0.20",
                 "drupal-composer/drupal-scaffold": "^2.0.0",
-                "drupal/coder": "8.*",
+                "drupal/coder": "*",
                 "drupal/core": "8.*",
                 "drupal/ctools": "*",
                 "drupal/drupal-extension": "^3.1",
@@ -2817,6 +2805,12 @@
                 "type": "git",
                 "url": "https://git.drupal.org/project/coder.git",
                 "reference": "984c54a7b1e8f27ff1c32348df69712afd86b17f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/klausi/coder/zipball/984c54a7b1e8f27ff1c32348df69712afd86b17f",
+                "reference": "984c54a7b1e8f27ff1c32348df69712afd86b17f",
+                "shasum": ""
             },
             "require": {
                 "ext-mbstring": "*",
@@ -2945,7 +2939,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
@@ -2996,7 +2990,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
@@ -3351,7 +3345,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
@@ -3548,16 +3542,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "8.5.0",
+            "version": "8.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "0b9070370e272da441b4be52561c559c05f4553d"
+                "reference": "2aeca7dfa2661296602ac16bf9fd6085f0a121be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/0b9070370e272da441b4be52561c559c05f4553d",
-                "reference": "0b9070370e272da441b4be52561c559c05f4553d",
+                "url": "https://api.github.com/repos/drupal/core/zipball/2aeca7dfa2661296602ac16bf9fd6085f0a121be",
+                "reference": "2aeca7dfa2661296602ac16bf9fd6085f0a121be",
                 "shasum": ""
             },
             "require": {
@@ -3789,7 +3783,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2018-03-07T21:10:20+00:00"
+            "time": "2018-03-27T09:58:42+00:00"
         },
         {
             "name": "drupal/crop",
@@ -3909,10 +3903,6 @@
                     "role": "Maintainer"
                 },
                 {
-                    "name": "joelpittet",
-                    "homepage": "https://www.drupal.org/user/160302"
-                },
-                {
                     "name": "merlinofchaos",
                     "homepage": "https://www.drupal.org/user/26979"
                 },
@@ -3963,7 +3953,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
@@ -3985,10 +3975,6 @@
                 {
                     "name": "japerry",
                     "homepage": "https://www.drupal.org/user/45640"
-                },
-                {
-                    "name": "joelpittet",
-                    "homepage": "https://www.drupal.org/user/160302"
                 },
                 {
                     "name": "merlinofchaos",
@@ -4620,7 +4606,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
@@ -4794,8 +4780,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.0-beta4+1-dev",
-                    "datestamp": "1508779143",
+                    "version": "8.x-1.0-beta3+1-dev",
+                    "datestamp": "1505322243",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -4868,7 +4854,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
@@ -6026,7 +6012,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
@@ -6090,7 +6076,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
@@ -6133,8 +6119,8 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.0-alpha4+4-dev",
-                    "datestamp": "1506325747",
+                    "version": "8.x-2.0-alpha4+3-dev",
+                    "datestamp": "1504535117",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -6284,10 +6270,6 @@
                 {
                     "name": "mrjmd",
                     "homepage": "https://www.drupal.org/user/1800446"
-                },
-                {
-                    "name": "richgerdes",
-                    "homepage": "https://www.drupal.org/user/3437973"
                 },
                 {
                     "name": "rogierbom",
@@ -6676,7 +6658,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
@@ -6816,7 +6798,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
@@ -6861,7 +6843,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
@@ -6906,7 +6888,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
@@ -6951,7 +6933,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
@@ -6996,7 +6978,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
@@ -7045,7 +7027,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
@@ -7240,7 +7222,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
@@ -7281,13 +7263,13 @@
                     "datestamp": "1498495443",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Alpha releases are not covered by Drupal security advisories."
+                        "message": "Project has not opted into security advisory coverage!"
                     }
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
@@ -7342,13 +7324,13 @@
                     "datestamp": "1498495443",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Alpha releases are not covered by Drupal security advisories."
+                        "message": "Project has not opted into security advisory coverage!"
                     }
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
@@ -7720,7 +7702,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
@@ -7829,7 +7811,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
@@ -7938,7 +7920,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
@@ -8001,7 +7983,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
@@ -8305,7 +8287,7 @@
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
             "license": [
-                "GPL-2.0-or-later"
+                "GPL-2.0+"
             ],
             "authors": [
                 {
@@ -8817,16 +8799,16 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "6.3.0",
+            "version": "6.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "f4db5a78a5ea468d4831de7f0bf9d9415e348699"
+                "reference": "68d0ea14d5a3f42a20e87632a5f84931e2709c90"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/f4db5a78a5ea468d4831de7f0bf9d9415e348699",
-                "reference": "f4db5a78a5ea468d4831de7f0bf9d9415e348699",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/68d0ea14d5a3f42a20e87632a5f84931e2709c90",
+                "reference": "68d0ea14d5a3f42a20e87632a5f84931e2709c90",
                 "shasum": ""
             },
             "require": {
@@ -8836,7 +8818,7 @@
             },
             "require-dev": {
                 "ext-curl": "*",
-                "phpunit/phpunit": "^4.0 || ^5.0",
+                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.4",
                 "psr/log": "^1.0"
             },
             "suggest": {
@@ -8845,7 +8827,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "6.2-dev"
+                    "dev-master": "6.3-dev"
                 }
             },
             "autoload": {
@@ -8878,7 +8860,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2017-06-22T18:50:49+00:00"
+            "time": "2018-03-26T16:33:04+00:00"
         },
         {
             "name": "guzzlehttp/promises",
