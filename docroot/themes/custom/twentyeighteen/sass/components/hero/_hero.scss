@@ -74,7 +74,7 @@
   &__details-button {
     padding: 0.25em 0.5em;
     background-color: rgba(0, 0, 0, 0.5);
-    border: 2px solid rgba(255, 255, 255, 1);
+    border: 2px solid $white;
     border-radius: 0.25em;
     font-family: $body-font;
     text-decoration: none;
@@ -87,7 +87,7 @@ a.hero__details-button {
   color: $white;
 
   &:hover {
-    background-color: rgba(142, 47, 15, 1);
+    background-color: $sienna;
     border: 2px solid rgb(254, 236, 127);
     color: rgb(254, 236, 127);
     text-decoration: none;
