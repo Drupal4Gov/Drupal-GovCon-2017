@@ -6,7 +6,6 @@ dependencies:
     - field.field.user.user.field_bio
     - field.field.user.user.field_conference_role
     - field.field.user.user.field_drupal_org_username
-    - field.field.user.user.field_email
     - field.field.user.user.field_first_name
     - field.field.user.user.field_job_title
     - field.field.user.user.field_last_name
@@ -46,14 +45,6 @@ content:
     region: content
   field_drupal_org_username:
     weight: 5
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_email:
-    weight: 13
     settings:
       size: 60
       placeholder: ''
