@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.storage.node.field_session_track
     - node.type.session
-    - taxonomy.vocabulary.session_track
 id: node.session.field_session_track
 field_name: field_session_track
 entity_type: node
@@ -17,12 +16,10 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  handler: 'default:taxonomy_term'
+  handler: views
   handler_settings:
-    target_bundles:
-      session_track: session_track
-    sort:
-      field: _none
-    auto_create: false
-    auto_create_bundle: ''
+    view:
+      view_name: session_track_filter
+      display_name: entity_reference_1
+      arguments: {  }
 field_type: entity_reference
