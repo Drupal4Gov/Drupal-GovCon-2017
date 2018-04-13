@@ -6,15 +6,14 @@ dependencies:
     - menu_ui
 third_party_settings:
   menu_ui:
-    available_menus:
-      - main
-    parent: 'main:'
+    available_menus: {  }
+    parent: ''
 _core:
   default_config_hash: fDz0nQOLtgyxZepsX_6rUkhu_x_G3aBGwSDdjghelig
 name: Session
 type: session
 description: 'Use this content type to propose sessions at the event. Users can vote on proposed sessions and add sessions to their individual session agendas.'
 help: ''
-new_revision: true
+new_revision: false
 preview_mode: 1
-display_submitted: true
+display_submitted: false
