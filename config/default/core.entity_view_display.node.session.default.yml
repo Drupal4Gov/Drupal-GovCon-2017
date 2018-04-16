@@ -83,7 +83,8 @@ content:
   field_files:
     weight: 5
     label: above
-    settings: {  }
+    settings:
+      use_description_as_link_text: true
     third_party_settings: {  }
     type: file_default
     region: content
@@ -108,7 +109,7 @@ content:
     weight: 4
     label: inline
     settings:
-      link: false
+      link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content

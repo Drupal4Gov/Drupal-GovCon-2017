@@ -1,22 +1,22 @@
-uuid: a7ed208a-9246-4ea8-b2f8-62381fc29d72
+uuid: 019418fb-68cd-46c6-90ed-a2ea4b5b7d38
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.user_sessions
+    - views.view.session_tracks
   module:
     - system
     - views
   theme:
     - twentyeighteen
-id: twentyeighteen_views_block__user_sessions_user_sessions_block
+id: views_block__session_tracks_block_1
 theme: twentyeighteen
 region: content
-weight: -3
+weight: 0
 provider: null
-plugin: 'views_block:user_sessions-user_sessions_block'
+plugin: 'views_block:session_tracks-block_1'
 settings:
-  id: 'views_block:user_sessions-user_sessions_block'
+  id: 'views_block:session_tracks-block_1'
   label: ''
   provider: views
   label_display: visible
@@ -25,6 +25,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/user/*\r\n!/user/*/edit"
+    pages: "/session-tracks\r\n/node/136\r\n"
     negate: false
     context_mapping: {  }
