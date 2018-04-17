@@ -1,8 +1,10 @@
-# Note that the example .travis.yml file for child projects lives in /install.
-sudo: false
+sudo: true
 language: php
 dist: trusty
 
+# Adjust the version of PHP to match your production environment.
+# Making this version number greater than the production environment can unintended consequences including a
+# non-functional prod environment.
 php:
   - 5.6
 
