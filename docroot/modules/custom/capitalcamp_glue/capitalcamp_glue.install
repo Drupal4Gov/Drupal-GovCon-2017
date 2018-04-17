@@ -254,3 +254,11 @@ function capitalcamp_glue_update_8014() {
   \Drupal::service('module_installer')->uninstall(['features']);
   \Drupal::service('module_installer')->uninstall(['entity']);
 }
+
+/**
+ * Deleting old views.
+ */
+function capitalcamp_glue_update_8015() {
+  \Drupal::configFactory()->getEditable('views.view.accepted_sessions')->delete();
+  \Drupal::configFactory()->getEditable('views.view.new_proposed_sessions')->delete();
+}
