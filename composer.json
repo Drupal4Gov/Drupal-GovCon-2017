@@ -10,25 +10,13 @@
         "asset-packagist": {
             "type": "composer",
             "url": "https://asset-packagist.org"
-        },
-        "drupal-cod": {
-            "type": "package",
-            "package": {
-                "name": "drupal-cod/program",
-                "type": "drupal-module",
-                "version": "master",
-                "source": {
-                    "url": "https://github.com/drupal-cod/program.git",
-                    "type": "git",
-                    "reference": "master"
-                }
-            }
         }
     },
     "config": {
         "platform": {
             "php": "5.6"
-        }
+        },
+        "sort-packages": true
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
@@ -50,7 +38,6 @@
         "drupal/purge": "^3.0.0-beta6",
         "drupal/extlink": "^1.0",
         "drupal/twig_xdebug": "1.x-dev",
-        "drupal/console": "~1",
         "drupal-composer/drupal-security-advisories": "8.x-dev",
         "roave/security-advisories": "dev-master",
         "drupal/honeypot": "^1.20",
@@ -58,7 +45,6 @@
         "drupal/recaptcha": "dev-2.x",
         "drupal/webform": "^5.0@beta",
         "drupal/webform_views": "5.x-dev",
-        "drupal-cod/program": "master",
         "drupal/field_group": "1.0",
         "drupal/r4032login": "dev-1.x",
         "drupal/block_exclude_pages": "^1.2",
@@ -70,19 +56,12 @@
         "drupal/linkicon": "^1.4",
         "drupal/core": "^8.5.1",
         "acquia/lightning": "3.1.0",
-        "drupal/page_manager": "4.x-dev",
         "drupal/shield": "^1.1",
         "drupal/cog": "^1.10",
         "drupal/config_update": "1.5.0",
         "drupal/context": "^4.0@beta",
         "drupal/svg_image": "^1.8",
-        "drupal/redirect": "^1.0",
-        "drupal/features": "^3.7",
-        "drupal/scheduled_updates": "^1.0@alpha",
-        "drupal/media_entity": "^1.7",
-        "drupal/workbench_moderation": "^1.3",
-        "drupal/contribute": "^5.0@beta",
-        "drupal/lightning_api": "^2.1"
+        "drupal/redirect": "^1.0"
     },
     "require-dev": {
         "behat/behat": "3.2.0",
