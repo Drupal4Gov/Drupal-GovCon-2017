@@ -1,30 +1,29 @@
-uuid: 9170adeb-9888-4006-ada1-03446f373438
+uuid: a4ddc81d-a3e9-41b8-9ed4-240d6f7199c9
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.user_registrations
+    - views.view.sessions_schedule
   module:
     - system
     - views
   theme:
     - twentyeighteen
-id: twentyeighteen_user_registrations
+id: exposedformsessions_schedulepage_2
 theme: twentyeighteen
 region: content
-weight: -5
+weight: -9
 provider: null
-plugin: 'views_block:user_registrations-block_1'
+plugin: 'views_exposed_filter_block:sessions_schedule-page_2'
 settings:
-  id: 'views_block:user_registrations-block_1'
+  id: 'views_exposed_filter_block:sessions_schedule-page_2'
   label: ''
   provider: views
   label_display: visible
   views_label: ''
-  items_per_page: none
 visibility:
   request_path:
     id: request_path
-    pages: "/user/*\r\n!/user/*/edit"
+    pages: '/2018/schedule/*'
     negate: false
     context_mapping: {  }

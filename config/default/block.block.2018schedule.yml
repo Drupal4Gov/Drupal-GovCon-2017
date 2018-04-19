@@ -1,22 +1,22 @@
-uuid: a3ec454e-b88f-45f6-bdb8-e09cef0185c4
+uuid: 08bdea86-5ef9-458a-a09d-56a10504dab2
 langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.schedule
+    - system.menu.2018-schedule
   module:
     - system
   theme:
     - twentyeighteen
-id: twentyeighteen_schedule
+id: 2018schedule
 theme: twentyeighteen
 region: content
-weight: -10
+weight: -8
 provider: null
-plugin: 'system_menu_block:schedule'
+plugin: 'system_menu_block:2018-schedule'
 settings:
-  id: 'system_menu_block:schedule'
-  label: Schedule
+  id: 'system_menu_block:2018-schedule'
+  label: '2018 Schedule'
   provider: system
   label_display: '0'
   level: 1
@@ -24,6 +24,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: '/schedule*'
+    pages: '/2018/schedule/*'
     negate: false
     context_mapping: {  }

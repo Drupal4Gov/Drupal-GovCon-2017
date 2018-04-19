@@ -35,7 +35,7 @@ input[type="date"],
 textarea {
   background-color: $textarea;
   font-family: inherit;
-  border: 1px solid $textarea-border;
+  border: 1px solid $pale-blue;
   border-radius: 0.25em;
   box-shadow: inset 0.1em 0.1em 0.25em rgba(0, 0, 0, 0.125);
   color: $teal;
@@ -58,7 +58,7 @@ textarea:focus {
 input[type="text"]:disabled,
 input[type="text"]:disabled:hover,
 textarea:disabled {
-  background-color: rgba(254, 218, 0, 0.1);
+  background-color: rgba($gold, 0.1);
 }
 
 input[type="file"],
