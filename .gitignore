@@ -1,13 +1,13 @@
 # Ignore configuration files that may contain sensitive information.
 local.settings.php
 local.drushrc.php
+local.drush.yml
 local.aliases.drushrc.php
 local.services.yml
 tests/behat/local.yml
 box/local.config.yml
 *.local
-project.local.yml
-salt.txt
+local.blt.yml
 
 # Ignore drupal core.
 docroot/core
@@ -27,11 +27,10 @@ drush/contrib
 # Ignore custom theme build artifacts
 docroot/themes/custom/*/node_modules
 docroot/themes/custom/*/css
-docroot/themes/custom/*/js/build
-docroot/themes/custom/*/js/dist
 docroot/themes/custom/*/styleguide
 
 # Ignore build artifacts
+deployment_identifier
 /deploy
 bin/*
 tmp
@@ -128,12 +127,15 @@ nbproject/*
 # PHPStorm
 atlassian-ide-plugin.xml
 
-# Drupal console
-console
+#NPM
+npm-debug.log
 
-# Ignore cloudflare CMI export file because it includes API keys.
-config/default/cloudflare.settings.yml
+# Drush 9 Checksums
+drush/sites/.checksums
 
 # GovCon 2018 Navigation Asset(s)
 docroot/themes/custom/twentyeighteen/js/dist/navigation.js
 docroot/themes/custom/twentyeighteen/npm-debug.log
+
+# Deprecation detector rules
+.rules

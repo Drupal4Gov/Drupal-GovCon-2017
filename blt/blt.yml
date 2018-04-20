@@ -14,13 +14,13 @@ git:
 drush:
   aliases:
     remote: '${project.machine_name}.test'
-    local: capitalcamp.local
+    local: self
     ci: self
   default_alias: '${drush.aliases.local}'
 modules:
   local:
     enable: [dblog, devel, seckit, views_ui]
-    uninstall: [acsf, acquia_connector, shield]
+    uninstall: [acquia_connector, shield]
   ci:
     enable: {  }
     uninstall: [acquia_connector, shield]
@@ -54,7 +54,3 @@ behat:
     - '${repo.root}/tests/behat'
 cm:
   allow-overrides: true
-  strategy: features
-disable-targets:
-  tests:
-    behat: true
