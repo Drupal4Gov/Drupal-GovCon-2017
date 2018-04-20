@@ -6,7 +6,6 @@ use Drupal\views\Plugin\views\field\FieldPluginBase;
 use Drupal\views\ResultRow;
 use Drupal\Core\Link;
 
-
 /**
  * Field handler to flag the node type.
  *
@@ -43,7 +42,7 @@ class AttendeeName extends FieldPluginBase {
       /** @var \Drupal\user\Entity\User $user */
       $user = user_load_by_mail($email);
       if ($user) {
-        $link =  Link::createFromRoute($name, 'entity.user.canonical', ['user' => $user->id()]);
+        $link = Link::createFromRoute($name, 'entity.user.canonical', ['user' => $user->id()]);
         return $link->toRenderable();
       }
     }

@@ -7,7 +7,6 @@ use Drupal\views\ResultRow;
 use Drupal\file\Entity\File;
 use Drupal\user\Entity\User;
 
-
 /**
  * Field handler to flag the node type.
  *
