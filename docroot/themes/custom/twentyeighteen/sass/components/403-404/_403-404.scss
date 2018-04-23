@@ -6,15 +6,15 @@
 //
 // Style guide: components.403-404
 
-.forbidden-container {
+.error-container {
   position: relative;
 }
 
-.body-sidebars-none .forbidden-container section#content .error-notice {
+.body-sidebars-none .error-container section#content .error-notice {
   padding: 0;
 }
 
-.forbidden-container {
+.error-container {
   padding-bottom: 10em;
   background-color: rgba(221, 198, 102, 1);
 
@@ -23,7 +23,11 @@
   }
 }
 
-.forbidden-container #content-area {
+.notfound-backing {
+  background-color: rgba(52, 109, 117, 1);
+}
+
+.error-container #content-area {
   position: absolute;
   left: 0;
   right: 0;
@@ -40,8 +44,7 @@
   }
 }
 
-.forbidden-backing img,
-img.error-filler {
+.error-backing img {
   display: block;
   vertical-align: bottom;
   margin-bottom: -0.5em;

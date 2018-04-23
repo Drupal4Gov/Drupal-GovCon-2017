@@ -38,7 +38,7 @@
   <!-- ______________________ MAIN _______________________ -->
 
   <div class="clearfix" id="main">
-    <div class="cog--mq mq-main forbidden-container">
+    <div class="cog--mq mq-main error-container notfound-backing">
 
       {% if page.sidebar_first %}
         <aside class="sidebar-first sidebars" id="sidebar-first">
@@ -81,7 +81,9 @@
         {% endif %}
 
         <div id="content-area" class="error-notice">
-          {{ page.content }}
+          <h1>404-Not Found</h1>
+          <p>Can't find what you‘re looking for?</p>
+          <p>Try again, log in <a href="/user/login">here</a>, or contact the&nbsp;<a href="mailto:drupal4gov@gmail.com">site administrator</a>.</p>
         </div>
 
         {{ feed_icons }}
@@ -95,8 +97,8 @@
         </aside>
       {% endif %}
       <!-- /sidebar-first -->
-          <div class="forbiddden-backing">
-            <img src="themes/custom/twentyeighteen/images/GC18-403_Image.png" class="error-filler">
+          <div class="error-backing">
+            <img src="themes/custom/twentyeighteen/images/GC18-404_Image.png" class="error-filler">
           </div>
     </div>
     <!-- /cog--mq -->
