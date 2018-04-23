@@ -142,10 +142,10 @@ function twentyeighteen_theme_suggestions_block_alter(array &$suggestions, array
 }
 
 /**
- * Implements hook_theme_suggestions_page() to set 40x template suggestions.
+ * Implements hook_theme_suggestions_page() for 40x pages.
  */
 function twentyeighteen_theme_suggestions_page_alter(array &$suggestions, array $variables) {
-  $path_args = explode('/', trim(\Drupal::service('path.current')->getPath(), '/'));
+  // $path_args = explode('/', trim(\Drupal::service('path.current')->getPath(), '/'));
 
   $http_error_suggestions = [
     'system.401' => 'page__401',
