@@ -21,6 +21,7 @@ dependencies:
     - field.field.node.session.field_video
     - node.type.session
   module:
+    - content_moderation
     - datetime
     - entity_browser
     - field_group
@@ -250,5 +251,7 @@ content:
   url_redirects:
     weight: 50
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   field_image: true
