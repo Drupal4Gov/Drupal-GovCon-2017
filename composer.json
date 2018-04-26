@@ -145,7 +145,8 @@
                 "sites/default/default.settings.php": "sites/default/settings.php"
             },
             "excludes": [
-                "sites/development.services.yml"
+                "sites/development.services.yml",
+                ".htaccess"
             ]
         },
         "enable-patching": true,
