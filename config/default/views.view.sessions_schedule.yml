@@ -537,7 +537,7 @@ display:
           empty: true
           tokenize: false
           content:
-            value: 'No sessions matched your search criteria'
+            value: '<div aria-live="polite">No sessions matched your search criteria</div>'
             format: simple_text
           plugin_id: text
       relationships:
@@ -938,6 +938,8 @@ display:
         fields: false
         use_ajax: false
         group_by: false
+        header: false
+        empty: false
       filter_groups:
         operator: AND
         groups:
@@ -1112,7 +1114,7 @@ display:
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: ''
+          element_wrapper_type: h4
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
@@ -1454,6 +1456,32 @@ display:
           plugin_id: field
       use_ajax: true
       group_by: false
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: true
+          content: '<h2>{{ field_session_date_time_1 }}</h2> '
+          plugin_id: text_custom
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: 'No sessions matched your search criteria'
+            format: simple_text
+          plugin_id: text
     cache_metadata:
       max-age: -1
       contexts:
