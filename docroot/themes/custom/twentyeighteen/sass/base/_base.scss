@@ -164,8 +164,55 @@ table {
 
   thead {
     background-color: $teal;
-    color: $gray;
+    color: $white;
     border-bottom: 0;
+
+    a,
+    a:visited {
+      color: rgba($white, 0.5);
+    }
+
+    a:hover {
+      color: $white;
+
+      .tablesort--desc::after {
+        border-top-color: $white;
+      }
+
+      .tablesort--asc::after {
+        border-bottom-color: $white;
+      }
+    }
+  }
+
+  .tablesort--desc {
+    background-image: none;
+
+    &::after {
+      content: '';
+      display: block;
+      margin-top: 5px;
+      width: 0;
+      height: 0;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-top: 10px solid rgba($white, 0.5);
+    }
+  }
+
+  .tablesort--asc {
+    background-image: none;
+
+    &::after {
+      content: '';
+      display: block;
+      margin-top: 5px;
+      width: 0;
+      height: 0;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-bottom: 10px solid rgba($white, 0.5);
+    }
   }
 
   th {
@@ -196,4 +243,8 @@ table {
     font-size: 0.875em;
     text-align: left;
   }
+}
+
+.filter-wrapper {
+  border: none;
 }
