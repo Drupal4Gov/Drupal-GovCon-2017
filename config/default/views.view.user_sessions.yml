@@ -66,17 +66,10 @@ display:
           description: ''
           columns:
             title: title
-            edit_node: edit_node
             field_conference_year: field_conference_year
+            edit_node: edit_node
           info:
             title:
-              sortable: true
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            edit_node:
               sortable: false
               default_sort_order: asc
               align: ''
@@ -84,8 +77,15 @@ display:
               empty_column: false
               responsive: ''
             field_conference_year:
-              sortable: true
+              sortable: false
               default_sort_order: desc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            edit_node:
+              sortable: false
+              default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
@@ -384,7 +384,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -404,7 +403,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags:
