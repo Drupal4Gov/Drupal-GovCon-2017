@@ -1,0 +1,9 @@
+.profile {
+  .form-type-item h4 {
+    display: inline-block;
+
+    &::after {
+      content: ':';
+    }
+  }
+}
