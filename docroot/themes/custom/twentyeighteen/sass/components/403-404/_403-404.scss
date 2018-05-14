@@ -6,46 +6,33 @@
 //
 // Style guide: components.403-404
 
-.error-container {
-  position: relative;
-}
-
-.body-sidebars-none .error-container section#content .error-notice {
-  padding: 0;
-}
-
-.error-container {
-  padding-bottom: 10em;
-  background-color: rgba(221, 198, 102, 1);
-
-  @include breakpoint($small-max) {
-    padding-bottom: 0;
-  }
-}
-
 .notfound-backing {
   background-color: rgba(52, 109, 117, 1);
 }
 
-.error-container #content-area {
+.error-notice {
   position: absolute;
   left: 0;
   right: 0;
   top: 35%;
   margin: auto;
   width: 80%;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba($white, 0.95);
   text-align: center;
   padding: 2em 1em;
-  box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 1em rgba($blk, 0.5);
 
   @include breakpoint($small-max) {
     top: 45%;
   }
 }
 
+.error-backing {
+  min-height: 30em; // Avoids cutoff of notice at mobile breakpoint.
+}
+
 .error-backing img {
   display: block;
-  vertical-align: bottom;
+  vertical-align: top;
   margin-bottom: -0.5em;
 }
