@@ -142,10 +142,11 @@ function twentyeighteen_theme_suggestions_block_alter(array &$suggestions, array
 }
 
 /**
- * Implements hook_theme_suggestions_page() for 40x pages.
+ * Implements hook_theme_suggestions_block_alter().
  */
 function twentyeighteen_theme_suggestions_page_alter(array &$suggestions, array $variables) {
 
+  // Implements hook_theme_suggestions_page() for 40x pages.
   $http_error_suggestions = [
     'system.401' => 'page__401',
     'system.403' => 'page__403',
