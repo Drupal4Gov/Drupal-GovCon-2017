@@ -1,0 +1,6 @@
+<div class="field--label-inline"> <!-- ending div in last name template -->
+  {% set label = 'Name' %}
+  <div class="field__label">{{ label }}</div>
+  {% for item in items %}
+    <span{{ attributes.addClass(classes, 'field__item') }}>{{ item.content }}</span>
+  {% endfor %}
