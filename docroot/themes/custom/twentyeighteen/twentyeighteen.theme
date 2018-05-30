@@ -140,3 +140,21 @@ function twentyeighteen_theme_suggestions_block_alter(array &$suggestions, array
     $suggestions[] = 'block__bundle__' . $bundle;
   }
 }
+
+/**
+ * Implements hook_theme_suggestions_page() for 40x pages.
+ */
+function twentyeighteen_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+
+  $http_error_suggestions = [
+    'system.401' => 'page__401',
+    'system.403' => 'page__403',
+    'system.404' => 'page__404',
+  ];
+  $route_name = \Drupal::routeMatch()->getRouteName();
+  if (isset($http_error_suggestions[$route_name])) {
+    $suggestions[] = $http_error_suggestions[$route_name];
+  }
+
+  return $suggestions;
+}
