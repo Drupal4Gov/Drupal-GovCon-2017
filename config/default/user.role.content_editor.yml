@@ -1,0 +1,48 @@
+uuid: 03e25de6-5b9d-4f60-a0bd-998bc0ae3a2b
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+third_party_settings:
+  lightning_core:
+    description: 'Conference content editor'
+id: content_editor
+label: 'Content Editor'
+weight: 9
+is_admin: null
+permissions:
+  - 'access content'
+  - 'access content overview'
+  - 'access media overview'
+  - 'access media_browser entity browser pages'
+  - 'access toolbar'
+  - 'create page content'
+  - 'create special_announcement content'
+  - 'delete own page content'
+  - 'delete own special_announcement content'
+  - 'edit any page content'
+  - 'edit any special_announcement content'
+  - 'edit body'
+  - 'edit own page content'
+  - 'edit own special_announcement content'
+  - 'revert page revisions'
+  - 'revert special_announcement revisions'
+  - 'use 00c7e3ae transition archived_published'
+  - 'use 00c7e3ae transition draft_draft'
+  - 'use 00c7e3ae transition draft_needs_review'
+  - 'use 00c7e3ae transition draft_published'
+  - 'use 00c7e3ae transition needs_review_draft'
+  - 'use 00c7e3ae transition needs_review_needs_review'
+  - 'use 00c7e3ae transition needs_review_published'
+  - 'use 00c7e3ae transition published_archived'
+  - 'use 00c7e3ae transition published_draft'
+  - 'use 00c7e3ae transition published_published'
+  - 'use text format rich_text'
+  - 'view all revisions'
+  - 'view any unpublished content'
+  - 'view latest version'
+  - 'view own unpublished content'
+  - 'view page revisions'
+  - 'view special_announcement revisions'
+  - 'view the administration theme'
