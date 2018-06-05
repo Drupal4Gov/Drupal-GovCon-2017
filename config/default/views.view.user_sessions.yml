@@ -317,20 +317,7 @@ display:
             label: ''
           granularity: second
       title: 'Submitted Sessions'
-      header:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: 'Submit another session'
-          empty: false
-          tokenize: false
-          content:
-            value: '<a href="/node/add/session">Submit another session</a>'
-            format: simple_text
-          plugin_id: text
+      header: {  }
       footer: {  }
       empty: {  }
       relationships: {  }
