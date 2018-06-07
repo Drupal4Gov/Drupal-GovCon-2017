@@ -38,61 +38,61 @@ type_settings:
       from:
         - archived
       to: published
-      weight: 1
+      weight: -1
     draft_draft:
       label: 'Create New Draft'
       from:
         - draft
       to: draft
-      weight: 2
+      weight: -10
     draft_needs_review:
       label: 'Request Review'
       from:
         - draft
       to: needs_review
-      weight: 3
+      weight: -9
     draft_published:
       label: Publish
       from:
         - draft
       to: published
-      weight: 4
+      weight: -8
     needs_review_draft:
       label: 'Send Back to Draft'
       from:
         - needs_review
       to: draft
-      weight: 5
+      weight: -6
     needs_review_needs_review:
       label: 'Keep in Review'
       from:
         - needs_review
       to: needs_review
-      weight: 6
+      weight: -7
     needs_review_published:
       label: Publish
       from:
         - needs_review
       to: published
-      weight: 7
+      weight: -5
     published_archived:
       label: Archive
       from:
         - published
       to: archived
-      weight: 8
+      weight: -2
     published_draft:
       label: 'Create New Draft'
       from:
         - published
       to: draft
-      weight: 9
+      weight: -3
     published_published:
       label: Publish
       from:
         - published
       to: published
-      weight: 10
+      weight: -4
   entity_types:
     node:
       - landing_page

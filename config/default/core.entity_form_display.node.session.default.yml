@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - entity_browser.browser.media_browser
     - field.field.node.session.body
     - field.field.node.session.field_conference_year
     - field.field.node.session.field_experience_level
@@ -23,7 +22,6 @@ dependencies:
   module:
     - content_moderation
     - datetime
-    - entity_browser
     - field_group
     - file
     - link
@@ -63,7 +61,7 @@ third_party_settings:
         - field_male_attendees
         - field_female_attendees
       parent_name: ''
-      weight: 16
+      weight: 15
       format_type: fieldset
       format_settings:
         id: ''
@@ -178,23 +176,9 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
-  field_video:
-    type: entity_browser_entity_reference
-    weight: 15
-    settings:
-      entity_browser: media_browser
-      field_widget_display: rendered_entity
-      field_widget_edit: true
-      field_widget_remove: true
-      selection_mode: selection_append
-      field_widget_display_settings:
-        view_mode: thumbnail
-      open: false
-    region: content
-    third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 100
+    weight: 18
     settings: {  }
     region: content
     third_party_settings: {  }
@@ -213,7 +197,7 @@ content:
     region: content
   scheduled_publication:
     type: datetime_default
-    weight: 20
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -249,9 +233,10 @@ content:
     third_party_settings: {  }
     region: content
   url_redirects:
-    weight: 50
+    weight: 17
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
   field_image: true
+  field_video: true

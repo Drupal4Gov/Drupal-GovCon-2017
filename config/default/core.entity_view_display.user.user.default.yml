@@ -31,23 +31,23 @@ bundle: user
 mode: default
 content:
   field_bio:
-    weight: 4
+    weight: 5
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_drupal_org_username:
-    weight: 3
-    label: hidden
+    weight: 4
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
   field_first_name:
-    weight: 1
-    label: hidden
+    weight: 2
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
@@ -55,14 +55,14 @@ content:
     region: content
   field_job_title:
     weight: 6
-    label: hidden
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
   field_last_name:
-    weight: 2
+    weight: 3
     label: hidden
     settings:
       link_to_entity: false
@@ -71,24 +71,28 @@ content:
     region: content
   field_picture:
     type: image
-    weight: 10
+    weight: 1
     region: content
     label: hidden
     settings:
       image_style: user_profile_image
       image_link: ''
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
     third_party_settings: {  }
   field_twitter_account:
     type: string
     weight: 7
     region: content
-    label: hidden
+    label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
   field_website:
-    weight: 9
-    label: hidden
+    weight: 8
+    label: inline
     settings:
       target: _blank
       linkicon_prefix: icon-website

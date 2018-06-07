@@ -1,0 +1,27 @@
+.view-updated-accepted-sessions {
+  h3 {
+    display: inline;
+    margin: 0 0 0 1em;
+    font-weight: bold;
+    background: #36727a;
+    padding: 0.25em 0.5em;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    font-size: 1rem;
+
+    a {
+      color: $white;
+    }
+  }
+
+  .view-group--updated-accepted-sessions {
+    margin: -0.7em 0 3em 0;
+    border: 1px solid #36727a;
+    border-radius: 0.2em;
+    padding: 1em;
+
+    .views-field {
+      margin: 1rem 0;
+    }
+  }
+}
