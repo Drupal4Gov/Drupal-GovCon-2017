@@ -7,7 +7,7 @@
 // Style guide: components.main-menu
 
 .menu--_018-main-navigation {
-  background: $teal;
+  background: $dark-teal;
   margin-top: -4px;
 
   @include breakpoint($small-max) {
@@ -144,7 +144,7 @@ input[type="checkbox"] + label.toggle::before {
       &.focus .menu-submenu {
         z-index: 10;
         height: auto;
-        background: rgba($teal, 0.95);
+        background: rgba($dark-teal, 0.95);
         border-radius: 0 0 0.5em 0.5em;
       }
     }
