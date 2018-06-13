@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.session.field_files
     - field.field.node.session.field_image
     - field.field.node.session.field_male_attendees
+    - field.field.node.session.field_room
     - field.field.node.session.field_room_monitor
     - field.field.node.session.field_session_co_presenter_s_
     - field.field.node.session.field_session_date_time
@@ -46,6 +47,7 @@ third_party_settings:
       children:
         - field_session_date_time
         - field_session_room
+        - field_room
       parent_name: ''
       weight: 2
       format_type: fieldset
@@ -87,6 +89,14 @@ content:
       use_description_as_link_text: true
     third_party_settings: {  }
     type: file_default
+    region: content
+  field_room:
+    weight: 2
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   field_session_date_time:
     type: datetime_default
