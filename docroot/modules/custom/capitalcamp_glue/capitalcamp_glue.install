@@ -262,3 +262,31 @@ function capitalcamp_glue_update_8015() {
   \Drupal::configFactory()->getEditable('views.view.accepted_sessions')->delete();
   \Drupal::configFactory()->getEditable('views.view.new_proposed_sessions')->delete();
 }
+
+/**
+ * DCG-167: Add terms to rooms vocabulary.
+ */
+function capitalcamp_glue_update_8016() {
+  $sponsorshipLevelTerms = [
+    'Auditorium',
+    'Balcony A',
+    'Balcony B',
+    'Balcony C',
+    'Room A',
+    'Room B',
+    'Room C1/C2',
+    'Room D',
+    'Room E',
+    'Room E1/E2',
+    'Room F1/F2',
+    'Room G1/G2',
+    'Room H',
+    'Room J',
+  ];
+  foreach ($sponsorshipLevelTerms as $sponsorshipLevelTerm) {
+    Term::create([
+      'name' => $sponsorshipLevelTerm,
+      'vid' => 'rooms',
+    ])->save();
+  }
+}
