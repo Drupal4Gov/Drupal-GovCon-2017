@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.session.field_files
     - field.field.node.session.field_image
     - field.field.node.session.field_male_attendees
+    - field.field.node.session.field_room
     - field.field.node.session.field_room_monitor
     - field.field.node.session.field_session_co_presenter_s_
     - field.field.node.session.field_session_date_time
@@ -45,7 +46,7 @@ third_party_settings:
     group_scheduling_details:
       children:
         - field_session_date_time
-        - field_session_room
+        - field_room
       parent_name: ''
       weight: 11
       format_type: fieldset
@@ -124,6 +125,12 @@ content:
     third_party_settings: {  }
     type: number
     region: content
+  field_room:
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_room_monitor:
     weight: 15
     settings:
@@ -147,14 +154,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
-    region: content
-  field_session_room:
-    weight: 12
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
     region: content
   field_session_track:
     weight: 1
@@ -239,4 +238,5 @@ content:
     third_party_settings: {  }
 hidden:
   field_image: true
+  field_session_room: true
   field_video: true
