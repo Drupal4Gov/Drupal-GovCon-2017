@@ -17,7 +17,7 @@ settings:
   ajax: false
   ajax_scroll_top: form
   page: true
-  page_submit_path: ''
+  page_submit_path: 2018-volunteer-form
   page_confirm_path: ''
   form_submit_once: false
   form_exception_message: ''
@@ -73,11 +73,11 @@ settings:
   draft_saved_message: ''
   draft_loaded_message: ''
   confirmation_type: page
-  confirmation_title: ''
-  confirmation_message: ''
+  confirmation_title: Confirmation
+  confirmation_message: 'Thank you for supporting Drupal GovCon. Our volunteer coordinator will be in touch closer to the event with specific information on how you can help.'
   confirmation_url: ''
   confirmation_attributes: {  }
-  confirmation_back: true
+  confirmation_back: false
   confirmation_back_label: ''
   confirmation_back_attributes: {  }
   confirmation_exclude_query: false
