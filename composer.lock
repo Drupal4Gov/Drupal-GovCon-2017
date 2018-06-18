@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5dea22232b50c54d6eaf9621681e1af5",
+    "content-hash": "d5e317df101dc4c10f780dcbc38fcdab",
     "packages": [
         {
             "name": "acquia/blt",
@@ -4284,6 +4284,57 @@
             }
         },
         {
+            "name": "drupal/focal_point",
+            "version": "1.0.0-beta6",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/focal_point",
+                "reference": "8.x-1.0-beta6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/focal_point-8.x-1.0-beta6.zip",
+                "reference": "8.x-1.0-beta6",
+                "shasum": "b06d3540ee49113e266191b2dba3af5d82990f38"
+            },
+            "require": {
+                "drupal/core": "*",
+                "drupal/crop": "*"
+            },
+            "require-dev": {
+                "drupal/crop": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-beta6",
+                    "datestamp": "1519932484",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "bleen",
+                    "homepage": "https://www.drupal.org/user/77375"
+                }
+            ],
+            "description": "Allows users to specify the focal point of an image for use during cropping.",
+            "homepage": "https://www.drupal.org/project/focal_point",
+            "support": {
+                "source": "http://cgit.drupalcode.org/focal_point"
+            }
+        },
+        {
             "name": "drupal/google_analytics",
             "version": "2.2.0",
             "source": {
@@ -6744,7 +6795,7 @@
                 },
                 "drupal": {
                     "version": "8.x-3.5",
-                    "datestamp": "1524208682",
+                    "datestamp": "1517905684",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -6790,7 +6841,7 @@
                 },
                 "drupal": {
                     "version": "8.x-3.5",
-                    "datestamp": "1524208682",
+                    "datestamp": "1517905684",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -13851,20 +13902,21 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "drupal/memcache": 20,
-        "drupal/google_analytics": 0,
-        "drupal/components": 0,
-        "drupal/twig_xdebug": 20,
         "drupal-composer/drupal-security-advisories": 20,
-        "roave/security-advisories": 20,
+        "drupal/better_exposed_filters": 15,
         "drupal/captcha": 20,
+        "drupal/components": 0,
+        "drupal/context": 10,
+        "drupal/field_permissions": 20,
+        "drupal/focal_point": 10,
+        "drupal/google_analytics": 0,
+        "drupal/memcache": 20,
+        "drupal/r4032login": 20,
         "drupal/recaptcha": 20,
+        "drupal/twig_xdebug": 20,
         "drupal/webform": 10,
         "drupal/webform_views": 20,
-        "drupal/r4032login": 20,
-        "drupal/field_permissions": 20,
-        "drupal/better_exposed_filters": 15,
-        "drupal/context": 10
+        "roave/security-advisories": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
