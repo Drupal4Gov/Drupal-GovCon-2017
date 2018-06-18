@@ -1,6 +1,6 @@
 .menu--account {
   display: none;
-  background: $teal;
+  background: $dark-teal;
 
   &.menu--account--show {
     display: block;
@@ -40,10 +40,10 @@
   a {
     padding: 0.6em 0;
     font-size: 0.875em;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba($white, 0.75);
 
     &:hover {
-      color: rgba(255, 255, 255, 0.5);
+      color: $white;
       text-decoration: none;
     }
   }

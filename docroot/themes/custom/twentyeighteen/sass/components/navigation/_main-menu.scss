@@ -7,7 +7,7 @@
 // Style guide: components.main-menu
 
 .menu--_018-main-navigation {
-  background: $teal;
+  background: $dark-teal;
   margin-top: -4px;
 
   @include breakpoint($small-max) {
@@ -144,7 +144,7 @@ input[type="checkbox"] + label.toggle::before {
       &.focus .menu-submenu {
         z-index: 10;
         height: auto;
-        background: rgba($teal, 0.95);
+        background: rgba($dark-teal, 0.95);
         border-radius: 0 0 0.5em 0.5em;
       }
     }
@@ -156,8 +156,9 @@ input[type="checkbox"] + label.toggle::before {
 
   a {
     display: block;
-    color: $med-gray;
+    color: rgba($white, 0.75);
     font-size: 1em;
+    letter-spacing: 0.05em;
     font-weight: 700;
     padding: 0.5em 1.5em;
 
@@ -167,7 +168,14 @@ input[type="checkbox"] + label.toggle::before {
   }
 
   a:hover {
-    color: $med-gray;
+    color: rgba(254, 236, 137, 0.875);
+    text-shadow: 0 0 0.25em rgba($blk, 0.75);
+    text-decoration: none;
+  }
+
+  a.is-active {
+    color: rgba($white, 1);
+    text-shadow: 0 0 0.25em rgba($blk, 0.75);
     text-decoration: none;
   }
 }
