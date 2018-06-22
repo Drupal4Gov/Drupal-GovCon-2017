@@ -8,8 +8,6 @@
 
 .block--bundle-hero-block {
   position: relative;
-  border: 1px solid #f00;
-  //min-height: 360px;
 
   @include breakpoint($up-sm) {
     //min-height: 400px;
@@ -47,7 +45,6 @@
   }
 
   &__details {
-    border: 1px solid orange;
     display: block;
     //position: relative;
     position: absolute;
