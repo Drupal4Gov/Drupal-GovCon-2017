@@ -34,7 +34,7 @@
     top: 0;
     width: 100%;
     z-index: -1;
-    margin-bottom: -0.3em; // Removes spacer from responsive image
+    margin-bottom: -0.4em; // Removes spacer from responsive image
 
     img,
     picture {
@@ -57,6 +57,8 @@
   &__details-logo {
     margin: 0 auto;
     padding: 5em 0 2em;
+    filter: drop-shadow(0 0 0.375em rgba($white, 0.8));
+    -webkit-filter: drop-shadow(0 0 0.375em rgba($white, 0.8));
     width: 12em;
 
     @include breakpoint($medium-max) {
