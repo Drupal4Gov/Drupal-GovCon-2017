@@ -12,4 +12,11 @@
 .region-content {
   position: relative;
   padding-bottom: 2rem;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  @include breakpoint($medium) {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
