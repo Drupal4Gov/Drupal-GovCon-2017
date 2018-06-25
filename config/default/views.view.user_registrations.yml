@@ -439,7 +439,21 @@ display:
           entity_type: webform_submission
           entity_field: webform_id
           plugin_id: bundle
-      sorts: {  }
+      sorts:
+        sid:
+          id: sid
+          table: webform_submission
+          field: sid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          entity_type: webform_submission
+          entity_field: sid
+          plugin_id: standard
       header:
         area:
           id: area
