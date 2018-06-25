@@ -1,0 +1,66 @@
+@media print {
+  body {
+    background: transparent !important;
+
+    &::after {
+      background-image: none !important;
+    }
+  }
+
+  .alias--badges---submissions .block-page-title-block {
+    display: none;
+  }
+
+  header#branding {
+    display: none;
+  }
+
+  header#header {
+    display: none;
+  }
+
+  .mq-main {
+    background: transparent !important;
+  }
+
+  .views-row {
+    display: inline-block;
+    border: 2px solid black;
+    padding-top: 1rem;
+    box-sizing: border-box;
+    width: 3.75in;
+    height: 2.0625in;
+    text-align: center;
+    color: black;
+  }
+
+  .views-field-webform-submission {
+    &-value-2,
+    &-value-3 {
+      display: inline-block;
+      font-weight: bold;
+    }
+
+    &-value-2 {
+      margin-right: 0.25rem;
+    }
+
+    &-value-1::before {
+      content: '\f1a9';
+      font-family: fontawesome;
+    }
+
+    &-value-4::before {
+      content: '\f099';
+      font-family: fontawesome;
+    }
+
+    &-value-5 {
+      font-style: italic;
+    }
+
+    &-value-6 {
+      font-weight: bold;
+    }
+  }
+}
