@@ -1,7 +1,14 @@
 .body-sidebars-second aside.sidebar-second > .region-sidebar-second {
   .block-views-blockspecial-announcements-display-block-3 {
-    margin-right: -15px;
     box-shadow: none;
+  }
+
+  @include breakpoint($medium) {
+    margin-right: -15px;
+  }
+
+  @include breakpoint($large) {
+    margin-right: -15px;
   }
 }
 
@@ -13,6 +20,7 @@ aside .block-views-blockspecial-announcements-display-block-3 {
   box-sizing: border-box;
   background: linear-gradient(rgba($blk, 0.2) 0%, rgba($dark-gray, 1) 25%), rgba($dark-gray, 1);
   letter-spacing: 0.02em;
+  margin-bottom: 0;
 
   &::after {
     content: ' ';
