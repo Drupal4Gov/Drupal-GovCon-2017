@@ -1,6 +1,6 @@
 uuid: 3ca89283-40f1-45bc-a0f0-35632dbaea46
 langcode: en
-status: open
+status: closed
 dependencies: {  }
 open: null
 close: null
@@ -75,6 +75,30 @@ settings:
   results_disabled: false
   results_disabled_ignore: false
   token_update: false
+  ajax_scroll_top: form
+  form_reset: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_submit_back: false
+  form_login: false
+  form_login_message: ''
+  submission_login: false
+  submission_login_message: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_track: ''
+  preview_exclude_empty: true
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  limit_total_interval: null
+  limit_user_interval: null
+  entity_limit_total_interval: null
+  entity_limit_user_interval: null
 access:
   create:
     roles:
