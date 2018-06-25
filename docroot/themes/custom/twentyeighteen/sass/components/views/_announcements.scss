@@ -1,7 +1,14 @@
 .body-sidebars-second aside.sidebar-second > .region-sidebar-second {
   .block-views-blockspecial-announcements-display-block-3 {
-    margin-right: -15px;
     box-shadow: none;
+  }
+
+  @include breakpoint($medium) {
+    margin-right: -15px;
+  }
+
+  @include breakpoint($large) {
+    margin-right: -15px;
   }
 }
 
