@@ -24,25 +24,43 @@
   }
 
   .views-row {
-    border: 2px solid red;
-    display:inline-block;
-    width:49%;
+    display: inline-block;
+    border: 2px solid black;
+    padding-top: 1rem;
+    box-sizing: border-box;
+    width: 3.75in;
+    height: 2.0625in;
+    text-align: center;
+    color: black;
   }
 
-	.views-field-webform-submission {
-		&-value-2,
-		&-value-3 {
-			display: inline-block;
-		}
+  .views-field-webform-submission {
+    &-value-2,
+    &-value-3 {
+      display: inline-block;
+      font-weight: bold;
+    }
 
-		&-value-1::before {
-			content: '\f1a9';
-			font-family: fontawesome;
-		}
+    &-value-2 {
+      margin-right: 0.25rem;
+    }
 
-		&-value-4::before {
-			content: '\f099';
-			font-family:  fontawesome;
-		}
-	}
+    &-value-1::before {
+      content: '\f1a9';
+      font-family: fontawesome;
+    }
+
+    &-value-4::before {
+      content: '\f099';
+      font-family: fontawesome;
+    }
+
+    &-value-5 {
+      font-style: italic;
+    }
+
+    &-value-6 {
+      font-weight: bold;
+    }
+  }
 }
