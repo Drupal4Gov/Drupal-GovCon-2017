@@ -3,8 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
+    - user.role.administrator
+    - user.role.volunteer
     - webform.webform.2018_registration
   module:
+    - user
     - webform
     - webform_views
 id: badges_submissions
@@ -23,8 +26,11 @@ display:
     position: 0
     display_options:
       access:
-        type: none
-        options: {  }
+        type: role
+        options:
+          role:
+            administrator: administrator
+            volunteer: volunteer
       cache:
         type: tag
         options: {  }
@@ -443,6 +449,7 @@ display:
       contexts:
         - 'languages:language_interface'
         - user
+        - user.roles
       tags: {  }
   page_1:
     display_plugin: page
@@ -457,4 +464,5 @@ display:
       contexts:
         - 'languages:language_interface'
         - user
+        - user.roles
       tags: {  }
