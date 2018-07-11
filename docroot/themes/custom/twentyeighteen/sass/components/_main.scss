@@ -19,4 +19,8 @@
     padding-right: 0;
     padding-left: 0;
   }
+
+    @include breakpoint($small-max) {
+    padding: 1em 20px 2rem;
+  }
 }
