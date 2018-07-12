@@ -5,9 +5,9 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.storage.node.field_experience_level
+    - field.storage.node.field_room
     - field.storage.node.field_session_co_presenter_s_
     - field.storage.node.field_session_date_time
-    - field.storage.node.field_session_room
     - field.storage.node.field_session_track
     - flag.flag.session_schedule
     - node.type.event
@@ -1406,10 +1406,10 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_session_room:
-          id: field_session_room
-          table: node__field_session_room
-          field: field_session_room
+        field_room:
+          id: field_room
+          table: node__field_room
+          field: field_room
           relationship: none
           group_type: group
           admin_label: ''
@@ -1448,17 +1448,17 @@ display:
           element_label_class: ''
           element_label_colon: false
           element_wrapper_type: ''
-          element_wrapper_class: ''
+          element_wrapper_class: views-field-field-session-room
           element_default_classes: true
           empty: ''
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: string
+          click_sort_column: target_id
+          type: entity_reference_label
           settings:
-            link_to_entity: false
-          group_column: value
+            link: false
+          group_column: target_id
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -1508,9 +1508,9 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_experience_level'
+        - 'config:field.storage.node.field_room'
         - 'config:field.storage.node.field_session_co_presenter_s_'
         - 'config:field.storage.node.field_session_date_time'
-        - 'config:field.storage.node.field_session_room'
         - 'config:field.storage.node.field_session_track'
   page_3:
     display_plugin: page
@@ -2229,10 +2229,10 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_session_room:
-          id: field_session_room
-          table: node__field_session_room
-          field: field_session_room
+        field_room:
+          id: field_room
+          table: node__field_room
+          field: field_room
           relationship: none
           group_type: group
           admin_label: ''
@@ -2271,17 +2271,17 @@ display:
           element_label_class: ''
           element_label_colon: false
           element_wrapper_type: ''
-          element_wrapper_class: ''
+          element_wrapper_class: views-field-field-session-room
           element_default_classes: true
           empty: ''
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: string
+          click_sort_column: target_id
+          type: entity_reference_label
           settings:
-            link_to_entity: false
-          group_column: value
+            link: false
+          group_column: target_id
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -2421,7 +2421,7 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_experience_level'
+        - 'config:field.storage.node.field_room'
         - 'config:field.storage.node.field_session_co_presenter_s_'
         - 'config:field.storage.node.field_session_date_time'
-        - 'config:field.storage.node.field_session_room'
         - 'config:field.storage.node.field_session_track'
