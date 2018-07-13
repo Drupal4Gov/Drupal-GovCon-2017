@@ -8,17 +8,18 @@
 
 .block--bundle-hero-block {
   position: relative;
+  min-height: 360px;
 
   @include breakpoint($up-sm) {
-    //min-height: 400px;
+    min-height: 400px;
   }
 
   @include breakpoint($small-max) {
-    //min-height: 550px;
+    min-height: 550px;
   }
 
   @include breakpoint($medium-max) {
-    //min-height: 300px;
+    min-height: 300px;
   }
 }
 
@@ -26,39 +27,32 @@
   width: 100%;
 
   &__background-img {
-    //position: absolute;
+    position: absolute;
     display: block;
-    //height: 100%;
+    height: 100%;
     left: 0;
-    //overflow: hidden;
+    overflow: hidden;
     top: 0;
     width: 100%;
     z-index: -1;
-    margin-bottom: -0.4em; // Removes spacer from responsive image
 
     img,
     picture {
       @include breakpoint($medium-max) {
-        //height: 100%;
+        height: 100%;
       }
     }
   }
 
   &__details {
     display: block;
-    //position: relative;
-    position: absolute;
-    width: 100%;
-    margin: 0 auto;
-    //top: 25%;
-    bottom: 2em;
+    position: relative;
+    top: 25%;
   }
 
   &__details-logo {
     margin: 0 auto;
     padding: 5em 0 2em;
-    filter: drop-shadow(0 0 0.375em rgba($white, 0.8));
-    -webkit-filter: drop-shadow(0 0 0.375em rgba($white, 0.8));
     width: 12em;
 
     @include breakpoint($medium-max) {

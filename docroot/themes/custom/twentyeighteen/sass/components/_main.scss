@@ -11,10 +11,5 @@
 
 .region-content {
   position: relative;
-  padding-top: 1em;
   padding-bottom: 2rem;
-
-  @include breakpoint($small-max) {
-    padding: 1em 20px 2rem;
-  }
 }
