@@ -12,7 +12,11 @@
   a {
     color: $darker-teal;
     padding: 0.5em 0.75em;
+<<<<<<< HEAD
     background-color: rgba($light-teal, 0.35);
+=======
+    background-color: $light-teal;
+>>>>>>> DGC-321: Contrast issues resolved, also default select styling in Firefox removed.
     text-transform: uppercase;
     text-decoration: none;
     border-radius: 0.25em 0.25em 0 0;
@@ -21,7 +25,11 @@
 
     &.is-active {
       background-color: $teal;
+<<<<<<< HEAD
       color: $white;
+=======
+      font-weight: 600;
+>>>>>>> DGC-321: Contrast issues resolved, also default select styling in Firefox removed.
       letter-spacing: 0.04em;
     }
   }
