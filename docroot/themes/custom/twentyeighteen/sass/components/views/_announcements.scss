@@ -13,16 +13,16 @@ aside .block-views-blockspecial-announcements-display-block-3 {
   box-sizing: border-box;
   background: linear-gradient(rgba($blk, 0.2) 0%, rgba($dark-gray, 1) 25%), rgba($dark-gray, 1);
   letter-spacing: 0.02em;
+  z-index: 1;
 
-  &::after {
-    content: ' ';
-    display: block;
+  &::before {
+    content: '';
     position: absolute;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: -1;
     opacity: 0.05;
     background-image: url(../images/GC18_motif_pattern_01-K.svg);
     background-size: 72px 72px;
@@ -51,5 +51,10 @@ aside .block-views-blockspecial-announcements-display-block-3 {
     color: rgba(254, 236, 127, 1);
     font-weight: 700;
     font-size: 1.17em;
+  }
+
+  a {
+    color: $white;
+    text-decoration: underline;
   }
 }
