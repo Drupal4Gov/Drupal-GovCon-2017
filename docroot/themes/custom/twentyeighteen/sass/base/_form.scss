@@ -136,7 +136,7 @@ input[type="checkbox"]:disabled + label::before {
 
 select {
   -webkit-appearance: none;
-  -moz-appearance: none;
+  -moz-appearance: none; // Removes Firefox default styling
   padding: 0.5em 2.25em 0.5em 1em;
   border: none;
   border-radius: 0.25em;
