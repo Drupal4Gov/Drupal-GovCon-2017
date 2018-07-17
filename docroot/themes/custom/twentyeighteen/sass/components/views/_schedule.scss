@@ -10,18 +10,18 @@
   }
 
   a {
-    color: $white;
+    color: $darker-teal;
     padding: 0.5em 0.75em;
-    background-color: $light-teal;
+    background-color: rgba($light-teal, 0.35);
     text-transform: uppercase;
     text-decoration: none;
     border-radius: 0.25em 0.25em 0 0;
     font-size: 0.875em;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.04em;
 
     &.is-active {
       background-color: $teal;
-      font-weight: 600;
+      color: $white;
       letter-spacing: 0.04em;
     }
   }
