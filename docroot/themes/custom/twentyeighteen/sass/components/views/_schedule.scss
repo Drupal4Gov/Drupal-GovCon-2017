@@ -12,7 +12,7 @@
   a {
     color: $white;
     padding: 0.5em 0.75em;
-    background-color: $pale-blue;
+    background-color: $light-teal;
     text-transform: uppercase;
     text-decoration: none;
     border-radius: 0.25em 0.25em 0 0;
@@ -21,6 +21,8 @@
 
     &.is-active {
       background-color: $teal;
+      font-weight: 600;
+      letter-spacing: 0.04em;
     }
   }
 }
@@ -33,9 +35,9 @@
     padding: 0.25em 0.5em;
     text-transform: uppercase;
     background-color: $teal;
-    color: rgb(215, 227, 228);
+    color: rgba($white, 0.9);
     font-size: 1em;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.03em;
     font-weight: 700;
   }
 
@@ -60,7 +62,7 @@
     border-bottom: 1px solid $gold;
 
     &:nth-child(odd) {
-      background: rgba($gold, 0.1);
+      //background: rgba($gold, 0.1);
       background: rgba(255, 255, 230, 0.8);
     }
   }

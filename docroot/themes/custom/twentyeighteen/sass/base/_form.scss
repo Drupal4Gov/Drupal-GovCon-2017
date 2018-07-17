@@ -136,7 +136,10 @@ input[type="checkbox"]:disabled + label::before {
 
 select {
   -webkit-appearance: none;
+  -moz-appearance: none;
   padding: 0.5em 2.25em 0.5em 1em;
+  border: none;
+  border-radius: 0.25em;
   box-sizing: border-box;
   width: 100%;
   background: $teal url(../images/DownArrow-Rev.svg) 94% center no-repeat;
