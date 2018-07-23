@@ -3,15 +3,24 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.storage.node.field_room
     - field.storage.node.field_session_date_time
-    - field.storage.node.field_session_room
     - field.storage.node.field_session_track
     - flag.flag.session_schedule
     - node.type.session
     - taxonomy.vocabulary.conference_year
+    - taxonomy.vocabulary.session_track
     - user.role.administrator
   content:
-    - 'taxonomy_term:conference_year:a6e4a780-b1d8-4e2d-8b92-af8c74895bb3'
+    - 'taxonomy_term:conference_year:0f6c31f2-ef62-41ce-b17c-3e05bfb9b76c'
+    - 'taxonomy_term:session_track:0a204882-2395-405d-bc08-3d2e402400da'
+    - 'taxonomy_term:session_track:18795e61-ba7c-451c-912e-6ef6835cf562'
+    - 'taxonomy_term:session_track:3a322e64-7752-4b8c-920a-8333ec5cdfa5'
+    - 'taxonomy_term:session_track:823a0160-1ea6-4f10-90f4-06b2af4eb31c'
+    - 'taxonomy_term:session_track:ac4813be-e88a-4bc5-b4d7-230924fa4d7e'
+    - 'taxonomy_term:session_track:d69a8325-bc1a-4577-8991-65f240455bb8'
+    - 'taxonomy_term:session_track:d7334075-7a5b-4ddd-a933-3621a8d0ece2'
+    - 'taxonomy_term:session_track:e02c5e10-cb18-49a2-bcf8-1cc4c4edd3c5'
   module:
     - datetime
     - flag
@@ -80,9 +89,10 @@ display:
             title: title
             field_session_track: field_session_track
             changed: changed
-            count: count
             field_session_date_time: field_session_date_time
             field_session_room: field_session_room
+            count: count
+            edit_node: edit_node
           info:
             title:
               sortable: true
@@ -105,13 +115,6 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
-            count:
-              sortable: true
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
             field_session_date_time:
               sortable: true
               default_sort_order: asc
@@ -126,7 +129,21 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
-          default: changed
+            count:
+              sortable: true
+              default_sort_order: desc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            edit_node:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          default: count
           empty_table: false
       row:
         type: fields
@@ -395,10 +412,10 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        field_session_room:
-          id: field_session_room
-          table: node__field_session_room
-          field: field_session_room
+        field_room:
+          id: field_room
+          table: node__field_room
+          field: field_room
           relationship: none
           group_type: group
           admin_label: ''
@@ -443,11 +460,11 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: string
+          click_sort_column: target_id
+          type: entity_reference_label
           settings:
-            link_to_entity: false
-          group_column: value
+            link: true
+          group_column: target_id
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -587,6 +604,7 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          group: 1
         field_status_value:
           id: field_status_value
           table: node__field_status
@@ -635,7 +653,7 @@ display:
           admin_label: ''
           operator: or
           value:
-            122: 122
+            131: 131
           group: 1
           exposed: false
           expose:
@@ -670,22 +688,107 @@ display:
           hierarchy: false
           error_message: true
           plugin_id: taxonomy_index_tid
-      sorts:
-        created:
-          id: created
+        title:
+          id: title
           table: node_field_data
-          field: created
-          order: DESC
-          entity_type: node
-          entity_field: created
-          plugin_id: date
+          field: title
           relationship: none
           group_type: group
           admin_label: ''
-          exposed: false
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
           expose:
+            operator_id: title_op
+            label: 'Session Title'
+            description: ''
+            use_operator: false
+            operator: title_op
+            identifier: title
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              volunteer: '0'
+              sponsor: '0'
+              content_editor: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
             label: ''
-          granularity: second
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: title
+          plugin_id: string
+        field_session_track_target_id:
+          id: field_session_track_target_id
+          table: node__field_session_track
+          field: field_session_track_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            176: 176
+            166: 166
+            181: 181
+            156: 156
+            171: 171
+            96: 96
+            161: 161
+            86: 86
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_session_track_target_id_op
+            label: 'Session Track'
+            description: ''
+            use_operator: false
+            operator: field_session_track_target_id_op
+            identifier: field_session_track_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              volunteer: '0'
+              sponsor: '0'
+              content_editor: '0'
+            reduce: true
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: session_track
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+      sorts: {  }
       title: 'Admin Session Flags'
       header: {  }
       footer: {  }
@@ -706,18 +809,23 @@ display:
       arguments: {  }
       display_extenders: {  }
       group_by: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
         - user
         - 'user.node_grants:view'
         - user.roles
       tags:
+        - 'config:field.storage.node.field_room'
         - 'config:field.storage.node.field_session_date_time'
-        - 'config:field.storage.node.field_session_room'
         - 'config:field.storage.node.field_session_track'
   page_1:
     display_plugin: page
@@ -726,17 +834,18 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: admin/2017/sessions
+      path: admin/2018/sessions
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
         - user
         - 'user.node_grants:view'
         - user.roles
       tags:
+        - 'config:field.storage.node.field_room'
         - 'config:field.storage.node.field_session_date_time'
-        - 'config:field.storage.node.field_session_room'
         - 'config:field.storage.node.field_session_track'
