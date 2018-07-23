@@ -7,6 +7,13 @@
     }
   }
 
+  body.path--badges---submissions {
+    @page {
+      size: 4in 2.31in;
+      //size: landscape;
+    }
+  }
+
   .alias--badges---submissions .block-page-title-block {
     display: none;
   }
@@ -23,14 +30,17 @@
     background: transparent !important;
   }
 
+  .block-page-title-block {
+    display: none;
+  }
+
   .view-badges-submissions {
     .views-row {
       display: inline-block;
-      border: 2px solid black;
       padding-top: 1rem;
       box-sizing: border-box;
-      width: 3.75in;
-      height: 2.0625in;
+      width: 4in;
+      height: 2.31in;
       text-align: center;
       color: black;
     }
@@ -64,5 +74,9 @@
         font-weight: bold;
       }
     }
+  }
+
+  footer {
+    display: none;
   }
 }
