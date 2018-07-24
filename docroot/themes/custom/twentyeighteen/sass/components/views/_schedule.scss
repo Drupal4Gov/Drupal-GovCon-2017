@@ -105,18 +105,18 @@
 
   .flag-session_schedule {
     margin: 0.5em 0;
-  }
 
-  .flag-session_schedule a {
-    background-color: $teal;
-    border-radius: 0.25em;
-    padding: 0.5em;
-    color: white;
-    font-size: 0.8rem;
+    a {
+      background-color: $teal;
+      border-radius: 0.25em;
+      padding: 0.5em;
+      color: white;
+      font-size: 0.8rem;
 
-    &:hover {
-      background: $sienna;
-      text-decoration: none;
+      &:hover {
+        background: $sienna;
+        text-decoration: none;
+      }
     }
   }
 
