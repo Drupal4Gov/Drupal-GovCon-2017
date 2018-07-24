@@ -102,6 +102,35 @@
     line-height: 1.5rem;
     font-size: 0.875rem;
   }
+
+  .flag-session_schedule {
+    margin: 0.5em 0;
+
+    a {
+      background-color: $teal;
+      border-radius: 0.25em;
+      padding: 0.5em;
+      color: white;
+      font-size: 0.8rem;
+
+      &:hover {
+        background: $sienna;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .action-flag a::before {
+    content: '\f067 ';
+    font-family: 'fontawesome';
+    padding-right: 0.5em;
+  }
+
+  .action-unflag a::before {
+    content: '\f068 ';
+    font-family: 'fontawesome';
+    padding-right: 0.5em;
+  }
 }
 
 .program-my-schedule .view-content .view-grouping:first-of-type .view-header h2:first-of-type {
