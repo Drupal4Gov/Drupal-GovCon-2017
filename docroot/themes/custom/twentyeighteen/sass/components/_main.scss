@@ -3,7 +3,6 @@
   margin-top: 0;
   margin-bottom: 0;
   background-color: $pale-yellow;
-  padding-top: 1em;
 
   @include breakpoint($medium-max) {
     width: 1200px;
@@ -12,12 +11,11 @@
 
 .region-content {
   position: relative;
-  padding-bottom: 2rem;
-  padding-right: 20px;
-  padding-left: 20px;
+  padding: 1em 20px 2rem;
 
   @include breakpoint($medium) {
     padding-right: 0;
     padding-left: 0;
+    padding-top: 0;
   }
 }
