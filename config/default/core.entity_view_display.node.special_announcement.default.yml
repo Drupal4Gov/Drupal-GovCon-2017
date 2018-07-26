@@ -35,10 +35,10 @@ content:
     region: content
   field_important_date:
     weight: 2
-    label: above
+    label: inline
     settings:
-      format_type: medium
       timezone_override: ''
+      format_type: month_day_year
     third_party_settings: {  }
     type: datetime_default
     region: content
@@ -52,4 +52,3 @@ hidden:
   field_critical_announcement_text: true
   field_is_critical_: true
   field_sort_order: true
-  scheduled_publication: true
