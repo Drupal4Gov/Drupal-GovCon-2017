@@ -1,0 +1,37 @@
+// 403 and 404 Page Styling
+//
+// Styling 403 and 404 pages
+//
+//
+// Style guide: components.403-404
+
+.notfound-backing {
+  background-color: rgba(52, 109, 117, 1);
+}
+
+.error-notice {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 35%;
+  margin: auto;
+  width: 80%;
+  background: rgba($white, 0.95);
+  text-align: center;
+  padding: 2em 1em;
+  box-shadow: 0 0 1em rgba($blk, 0.5);
+
+  @include breakpoint($small-max) {
+    top: 45%;
+  }
+}
+
+.error-backing {
+  min-height: 30em; // Avoids cutoff of notice at mobile breakpoint.
+}
+
+.error-backing img {
+  display: block;
+  vertical-align: top;
+  margin-bottom: -0.5em;
+}
