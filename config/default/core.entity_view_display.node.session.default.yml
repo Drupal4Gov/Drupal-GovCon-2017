@@ -24,7 +24,6 @@ dependencies:
     - datetime
     - field_group
     - file
-    - link
     - options
     - panelizer
     - text
@@ -123,18 +122,6 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  field_slides_link:
-    weight: 6
-    label: inline
-    settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-    type: link
-    region: content
   field_status:
     weight: 3
     label: inline
@@ -143,7 +130,7 @@ content:
     type: list_default
     region: content
   field_video:
-    weight: 7
+    weight: 6
     label: hidden
     settings:
       view_mode: embedded
@@ -163,5 +150,5 @@ hidden:
   field_male_attendees: true
   field_room_monitor: true
   field_session_co_presenter_s_: true
+  field_slides_link: true
   links: true
-  scheduled_publication: true
