@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5dea22232b50c54d6eaf9621681e1af5",
+    "content-hash": "254c08962d573cc4c023efb56c3b98b0",
     "packages": [
         {
             "name": "acquia/blt",
@@ -1988,7 +1988,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.46",
-                    "datestamp": "1526468584",
+                    "datestamp": "1523273884",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2055,7 +2055,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.46",
-                    "datestamp": "1526468584",
+                    "datestamp": "1523273884",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2117,7 +2117,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.46",
-                    "datestamp": "1526468584",
+                    "datestamp": "1523273884",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2178,7 +2178,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.46",
-                    "datestamp": "1526468584",
+                    "datestamp": "1523273884",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2379,7 +2379,7 @@
                 },
                 "drupal": {
                     "version": "8.x-3.0-alpha3",
-                    "datestamp": "1525044484",
+                    "datestamp": "1501274342",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Alpha releases are not covered by Drupal security advisories."
@@ -4298,6 +4298,57 @@
             }
         },
         {
+            "name": "drupal/focal_point",
+            "version": "1.0.0-beta6",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/focal_point",
+                "reference": "8.x-1.0-beta6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/focal_point-8.x-1.0-beta6.zip",
+                "reference": "8.x-1.0-beta6",
+                "shasum": "b06d3540ee49113e266191b2dba3af5d82990f38"
+            },
+            "require": {
+                "drupal/core": "*",
+                "drupal/crop": "*"
+            },
+            "require-dev": {
+                "drupal/crop": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0-beta6",
+                    "datestamp": "1519932484",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "bleen",
+                    "homepage": "https://www.drupal.org/user/77375"
+                }
+            ],
+            "description": "Allows users to specify the focal point of an image for use during cropping.",
+            "homepage": "https://www.drupal.org/project/focal_point",
+            "support": {
+                "source": "http://cgit.drupalcode.org/focal_point"
+            }
+        },
+        {
             "name": "drupal/google_analytics",
             "version": "2.2.0",
             "source": {
@@ -4580,7 +4631,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.16",
-                    "datestamp": "1525889880",
+                    "datestamp": "1524679677",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5553,7 +5604,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.0-alpha1",
-                    "datestamp": "1528645980",
+                    "datestamp": "1498657743",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -5607,7 +5658,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.0-alpha1",
-                    "datestamp": "1528645980",
+                    "datestamp": "1498657743",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
@@ -6396,7 +6447,7 @@
                 },
                 "drupal": {
                     "version": "8.x-1.1",
-                    "datestamp": "1525419785",
+                    "datestamp": "1520897880",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -7248,7 +7299,7 @@
                 },
                 "drupal": {
                     "version": "8.x-5.0-rc12",
-                    "datestamp": "1528137480",
+                    "datestamp": "1524706684",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "RC releases are not covered by Drupal security advisories."
@@ -7431,10 +7482,6 @@
                 {
                     "name": "paulmckibben",
                     "homepage": "https://www.drupal.org/user/279003"
-                },
-                {
-                    "name": "pifagor",
-                    "homepage": "https://www.drupal.org/user/2375692"
                 },
                 {
                     "name": "tadityar",
@@ -8281,7 +8328,7 @@
                 {
                     "name": "Luís Otávio Cobucci Oblonczyk",
                     "email": "lcobucci@gmail.com",
-                    "role": "Developer"
+                    "role": "developer"
                 }
             ],
             "description": "A simple library to work with JSON Web Token and JSON Web Signature",
@@ -13921,20 +13968,21 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "drupal/memcache": 20,
-        "drupal/google_analytics": 0,
-        "drupal/components": 0,
-        "drupal/twig_xdebug": 20,
         "drupal-composer/drupal-security-advisories": 20,
-        "roave/security-advisories": 20,
+        "drupal/better_exposed_filters": 15,
         "drupal/captcha": 20,
+        "drupal/components": 0,
+        "drupal/context": 10,
+        "drupal/field_permissions": 20,
+        "drupal/focal_point": 10,
+        "drupal/google_analytics": 0,
+        "drupal/memcache": 20,
+        "drupal/r4032login": 20,
         "drupal/recaptcha": 20,
+        "drupal/twig_xdebug": 20,
         "drupal/webform": 10,
         "drupal/webform_views": 20,
-        "drupal/r4032login": 20,
-        "drupal/field_permissions": 20,
-        "drupal/better_exposed_filters": 15,
-        "drupal/context": 10
+        "roave/security-advisories": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
