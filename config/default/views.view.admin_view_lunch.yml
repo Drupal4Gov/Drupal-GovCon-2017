@@ -1,40 +1,20 @@
-uuid: 899d5cf0-a6f4-42ba-87f9-164e84cb4676
+uuid: 0727eb2e-cef2-44cb-87f8-9068362b751a
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_room
-    - field.storage.node.field_session_date_time
-    - field.storage.node.field_session_track
-    - flag.flag.session_schedule
-    - node.type.session
-    - taxonomy.vocabulary.conference_year
-    - taxonomy.vocabulary.session_track
-    - user.role.administrator
-  content:
-    - 'taxonomy_term:conference_year:0f6c31f2-ef62-41ce-b17c-3e05bfb9b76c'
-    - 'taxonomy_term:session_track:0a204882-2395-405d-bc08-3d2e402400da'
-    - 'taxonomy_term:session_track:18795e61-ba7c-451c-912e-6ef6835cf562'
-    - 'taxonomy_term:session_track:3a322e64-7752-4b8c-920a-8333ec5cdfa5'
-    - 'taxonomy_term:session_track:823a0160-1ea6-4f10-90f4-06b2af4eb31c'
-    - 'taxonomy_term:session_track:ac4813be-e88a-4bc5-b4d7-230924fa4d7e'
-    - 'taxonomy_term:session_track:d69a8325-bc1a-4577-8991-65f240455bb8'
-    - 'taxonomy_term:session_track:d7334075-7a5b-4ddd-a933-3621a8d0ece2'
-    - 'taxonomy_term:session_track:e02c5e10-cb18-49a2-bcf8-1cc4c4edd3c5'
+    - webform.webform.2018_registration
   module:
-    - datetime
-    - flag
-    - node
-    - options
-    - taxonomy
     - user
-id: admin_session_flags
-label: 'Admin Session Flags'
+    - webform
+    - webform_views
+id: admin_view_lunch
+label: 'Admin View: Lunch'
 module: views
 description: ''
 tag: ''
-base_table: node_field_data
-base_field: nid
+base_table: webform_submission
+base_field: sid
 core: 8.x
 display:
   default:
@@ -44,10 +24,9 @@ display:
     position: 0
     display_options:
       access:
-        type: role
+        type: perm
         options:
-          role:
-            administrator: administrator
+          perm: 'view any webform submission'
       cache:
         type: tag
         options: {  }
@@ -70,14 +49,31 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       pager:
-        type: none
+        type: mini
         options:
-          items_per_page: 0
+          items_per_page: 50
           offset: 0
+          id: 0
+          total_pages: null
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          tags:
+            previous: ‹‹
+            next: ››
       style:
         type: table
         options:
-          grouping: {  }
+          grouping:
+            -
+              field: webform_submission_value_3
+              rendered: false
+              rendered_strip: false
           row_class: ''
           default_row_class: true
           override: true
@@ -86,209 +82,36 @@ display:
           summary: ''
           description: ''
           columns:
-            title: title
-            field_session_track: field_session_track
-            changed: changed
-            field_session_date_time: field_session_date_time
-            field_session_room: field_session_room
-            count: count
-            edit_node: edit_node
+            sid: sid
+            webform_submission_value_3: webform_submission_value_3
           info:
-            title:
-              sortable: true
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            field_session_track:
-              sortable: true
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            changed:
-              sortable: true
-              default_sort_order: desc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            field_session_date_time:
-              sortable: true
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            field_session_room:
-              sortable: true
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            count:
-              sortable: true
-              default_sort_order: desc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            edit_node:
+            sid:
               sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-          default: count
+            webform_submission_value_3:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          default: '-1'
           empty_table: false
       row:
         type: fields
-        options:
-          default_field_elements: true
-          inline: {  }
-          separator: ''
-          hide_empty: false
       fields:
-        title:
-          id: title
-          table: node_field_data
-          field: title
+        sid:
+          id: sid
+          table: webform_submission
+          field: sid
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Session Name'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: false
-            ellipsis: false
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: true
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          entity_type: node
-          entity_field: title
-          plugin_id: field
-        field_session_track:
-          id: field_session_track
-          table: node__field_session_track
-          field: field_session_track
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Session Track'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: false
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        changed:
-          id: changed
-          table: node_field_data
-          field: changed
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Last Updated'
+          label: 'Submission ID'
           exclude: false
           alter:
             alter_text: false
@@ -330,11 +153,10 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: timestamp
+          type: number_integer
           settings:
-            date_format: custom
-            custom_date_format: m/d/Y
-            timezone: ''
+            thousand_separator: ''
+            prefix_suffix: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -345,17 +167,17 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: changed
+          entity_type: webform_submission
+          entity_field: sid
           plugin_id: field
-        field_session_date_time:
-          id: field_session_date_time
-          table: node__field_session_date_time
-          field: field_session_date_time
+        view_webform_submission:
+          id: view_webform_submission
+          table: webform_submission
+          field: view_webform_submission
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Date / Time'
+          label: Link
           exclude: false
           alter:
             alter_text: false
@@ -396,30 +218,19 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: datetime_default
-          settings:
-            timezone_override: ''
-            format_type: medium
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        field_room:
-          id: field_room
-          table: node__field_room
-          field: field_room
+          text: view
+          output_url_as_text: false
+          absolute: false
+          entity_type: webform_submission
+          plugin_id: entity_link
+        webform_submission_value:
+          id: webform_submission_value
+          table: webform_submission_field_2018_registration_email
+          field: webform_submission_value
           relationship: none
           group_type: group
           admin_label: ''
-          label: Room
+          label: 'Attendee Email'
           exclude: false
           alter:
             alter_text: false
@@ -460,29 +271,18 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: true
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
-        count:
-          id: count
-          table: flag_counts
-          field: count
-          relationship: flag_relationship
+          webform_element_format: link
+          webform_multiple_value: true
+          webform_multiple_delta: 0
+          plugin_id: webform_submission_field
+        webform_submission_value_1:
+          id: webform_submission_value_1
+          table: webform_submission_field_2018_registration_drupal_org_user_name
+          field: webform_submission_value
+          relationship: none
           group_type: group
           admin_label: ''
-          label: 'Number of Attendees'
+          label: 'Drupal.org User Name'
           exclude: false
           alter:
             alter_text: false
@@ -523,23 +323,18 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          set_precision: false
-          precision: 0
-          decimal: .
-          separator: ','
-          format_plural: false
-          format_plural_string: !!binary MQNAY291bnQ=
-          prefix: ''
-          suffix: ''
-          plugin_id: numeric
-        edit_node:
-          id: edit_node
-          table: node
-          field: edit_node
+          webform_element_format: value
+          webform_multiple_value: true
+          webform_multiple_delta: 0
+          plugin_id: webform_submission_field
+        webform_submission_value_2:
+          id: webform_submission_value_2
+          table: webform_submission_field_2018_registration_first_name
+          field: webform_submission_value
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: 'First Name'
           exclude: false
           alter:
             alter_text: false
@@ -572,7 +367,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -580,118 +375,180 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          text: edit
-          entity_type: node
-          plugin_id: entity_link_edit
+          webform_element_format: value
+          webform_multiple_value: true
+          webform_multiple_delta: 0
+          plugin_id: webform_submission_field
+        webform_submission_value_4:
+          id: webform_submission_value_4
+          table: webform_submission_field_2018_registration_last_name
+          field: webform_submission_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Last Name'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          webform_element_format: value
+          webform_multiple_value: true
+          webform_multiple_delta: 0
+          plugin_id: webform_submission_field
+        webform_submission_value_3:
+          id: webform_submission_value_3
+          table: webform_submission_field_2018_registration_food
+          field: webform_submission_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Food Preferences'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          webform_element_format: value
+          webform_multiple_value: true
+          webform_multiple_delta: 0
+          plugin_id: webform_submission_field
+        webform_submission_value_5:
+          id: webform_submission_value_5
+          table: webform_submission_field_2018_registration_please_indicate_the_days_when_you_ll_need_lunch_this_will_help_u
+          field: webform_submission_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Days
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          webform_element_format: value
+          webform_multiple_value: true
+          webform_multiple_delta: 0
+          plugin_id: webform_submission_field
       filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
+        webform_id:
+          id: webform_id
+          table: webform_submission
+          field: webform_id
           value:
-            session: session
-          entity_type: node
-          entity_field: type
+            2018_registration: 2018_registration
+          entity_type: webform_submission
+          entity_field: webform_id
           plugin_id: bundle
-          group: 1
-        field_status_value:
-          id: field_status_value
-          table: node__field_status
-          field: field_status_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value:
-            accepted: accepted
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          plugin_id: list_field
-        field_conference_year_target_id:
-          id: field_conference_year_target_id
-          table: node__field_conference_year
-          field: field_conference_year_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value:
-            131: 131
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: select
-          limit: true
-          vid: conference_year
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
-        title:
-          id: title
-          table: node_field_data
-          field: title
+        webform_submission_value:
+          id: webform_submission_value
+          table: webform_submission_field_2018_registration_please_indicate_the_days_when_you_ll_need_lunch_this_will_help_u
+          field: webform_submission_value
           relationship: none
           group_type: group
           admin_label: ''
@@ -700,12 +557,12 @@ display:
           group: 1
           exposed: true
           expose:
-            operator_id: title_op
-            label: 'Session Title'
+            operator_id: webform_submission_value_op
+            label: 'Days when lunch is needed'
             description: ''
             use_operator: false
-            operator: title_op
-            identifier: title
+            operator: webform_submission_value_op
+            identifier: webform_submission_value
             required: false
             remember: false
             multiple: false
@@ -729,35 +586,25 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: node
-          entity_field: title
-          plugin_id: string
-        field_session_track_target_id:
-          id: field_session_track_target_id
-          table: node__field_session_track
-          field: field_session_track_target_id
+          plugin_id: webform_submission_field_filter
+        webform_submission_value_1:
+          id: webform_submission_value_1
+          table: webform_submission_field_2018_registration_food
+          field: webform_submission_value
           relationship: none
           group_type: group
           admin_label: ''
-          operator: or
-          value:
-            176: 176
-            166: 166
-            181: 181
-            156: 156
-            171: 171
-            96: 96
-            161: 161
-            86: 86
+          operator: contains
+          value: ''
           group: 1
           exposed: true
           expose:
-            operator_id: field_session_track_target_id_op
-            label: 'Session Track'
+            operator_id: webform_submission_value_1_op
+            label: 'Food Preferences'
             description: ''
             use_operator: false
-            operator: field_session_track_target_id_op
-            identifier: field_session_track_target_id
+            operator: webform_submission_value_1_op
+            identifier: webform_submission_value_1
             required: false
             remember: false
             multiple: false
@@ -768,7 +615,7 @@ display:
               volunteer: '0'
               sponsor: '0'
               content_editor: '0'
-            reduce: true
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -781,38 +628,40 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          reduce_duplicates: false
-          type: select
-          limit: true
-          vid: session_track
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
-      sorts: {  }
-      title: 'Admin Session Flags'
-      header: {  }
-      footer: {  }
-      empty: {  }
-      relationships:
-        flag_relationship:
-          id: flag_relationship
-          table: node_field_data
-          field: flag_relationship
+          plugin_id: webform_submission_field_filter
+      sorts:
+        sid:
+          id: sid
+          table: webform_submission
+          field: sid
           relationship: none
           group_type: group
-          admin_label: Flags
-          required: true
-          flag: session_schedule
-          user_scope: any
-          entity_type: node
-          plugin_id: flag_relationship
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          entity_type: webform_submission
+          entity_field: sid
+          plugin_id: standard
+      title: 'Admin View: Lunch'
+      header:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: false
+          content: 'Displaying @start - @end of @total'
+          plugin_id: result
+      footer: {  }
+      empty: {  }
+      relationships: {  }
       arguments: {  }
       display_extenders: {  }
-      group_by: true
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
+      group_by: false
     cache_metadata:
       max-age: -1
       contexts:
@@ -821,12 +670,8 @@ display:
         - url
         - url.query_args
         - user
-        - 'user.node_grants:view'
-        - user.roles
-      tags:
-        - 'config:field.storage.node.field_room'
-        - 'config:field.storage.node.field_session_date_time'
-        - 'config:field.storage.node.field_session_track'
+        - user.permissions
+      tags: {  }
   page_1:
     display_plugin: page
     id: page_1
@@ -834,7 +679,7 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: admin/2018/sessions
+      path: admin/lunch
     cache_metadata:
       max-age: -1
       contexts:
@@ -843,9 +688,5 @@ display:
         - url
         - url.query_args
         - user
-        - 'user.node_grants:view'
-        - user.roles
-      tags:
-        - 'config:field.storage.node.field_room'
-        - 'config:field.storage.node.field_session_date_time'
-        - 'config:field.storage.node.field_session_track'
+        - user.permissions
+      tags: {  }
