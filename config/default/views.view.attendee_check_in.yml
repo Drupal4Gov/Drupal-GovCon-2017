@@ -57,24 +57,24 @@ display:
           expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
+          input_required: false
+          text_input_required: 'Select any filter and click on Apply to see results'
           bef:
             general:
               allow_secondary: false
               secondary_label: 'Advanced options'
               autosubmit: true
               autosubmit_hide: true
-            webform_submission_value:
+            webform_submission_value_2:
               bef_format: default
               more_options:
                 is_secondary: false
-                rewrite:
-                  filter_rewrite_values: ''
-            webform_submission_value_1:
+                placeholder_text: ''
+            webform_submission_value_3:
               bef_format: default
               more_options:
                 is_secondary: false
-                rewrite:
-                  filter_rewrite_values: ''
+                placeholder_text: ''
             flagged:
               bef_format: default
               more_options:
@@ -82,7 +82,8 @@ display:
                 bef_collapsible: false
                 is_secondary: false
                 rewrite:
-                  filter_rewrite_values: ''
+                  filter_rewrite_values: "True|Yes\nFalse|No"
+          text_input_required_format: simple_text
       pager:
         type: infinite_scroll
         options:
@@ -1260,6 +1261,8 @@ display:
         filters: false
         filter_groups: false
         sorts: false
+        title: false
+        use_ajax: false
       filters:
         webform_id:
           id: webform_id
@@ -1450,6 +1453,8 @@ display:
           expose:
             label: ''
           plugin_id: webform_submission_field_sort
+      title: 'Attendee Check-in'
+      use_ajax: false
     cache_metadata:
       max-age: -1
       contexts:
