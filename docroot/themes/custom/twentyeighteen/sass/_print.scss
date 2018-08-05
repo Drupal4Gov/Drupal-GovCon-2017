@@ -1,6 +1,16 @@
 @media print {
+
+  html, body {
+    margin: 0;
+    overflow: visible;
+  }
+
   body {
     background: transparent !important;
+    padding-bottom: 0;
+    overflow: visible;
+    margin: 0;
+    font-size: 0.875em;
 
     &::after {
       background-image: none !important;
@@ -10,7 +20,8 @@
   body.path--badges---submissions {
     @page {
       size: 4in 2.31in;
-      //size: landscape;
+      margin: 0;
+      padding: 0;
     }
   }
 
@@ -39,13 +50,32 @@
     display: none;
   }
 
+  .contextual .trigger {
+    display: none;
+  }
+
+  button.trigger.focusable.visually-hidden {
+    display: none;
+  }
+
+  .trigger {
+    display: none;
+  }
+
   .view-badges-submissions {
+    .view-content {
+      display: flex;
+      align-items: center;
+      padding-bottom: 0;
+      height: 1.39in;
+      text-align: center;
+    }
+
     .views-row {
       display: inline-block;
-      padding-top: 1rem;
+      margin: 0 auto;
+      padding-top: 0;
       box-sizing: border-box;
-      width: 4in;
-      height: 2.31in;
       text-align: center;
       color: black;
     }
@@ -55,6 +85,7 @@
       &-value-3 {
         display: inline-block;
         font-weight: bold;
+        font-size: 1.25em;
       }
 
       &-value-2 {
@@ -63,11 +94,13 @@
 
       &-value-1::before {
         content: '\f1a9';
+        margin-right: 0.5em;
         font-family: fontawesome;
       }
 
       &-value-4::before {
         content: '\f099';
+        margin-right: 0.5em;
         font-family: fontawesome;
       }
 
@@ -77,6 +110,8 @@
 
       &-value-6 {
         font-weight: bold;
+        padding-top: 0.125em;
+        font-size: 1em;
       }
     }
   }
