@@ -1333,7 +1333,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '<a href="/badges---submissions/{{ sid }}">Print Badge</a>'
+            text: '<a href="/badges---submissions/id/{{ sid }}">Print Badge</a>'
             make_link: false
             path: ''
             absolute: false
