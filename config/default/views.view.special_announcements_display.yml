@@ -63,6 +63,10 @@ display:
           offset: 0
       style:
         type: default
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
       row:
         type: fields
       fields:
@@ -1002,6 +1006,7 @@ display:
         filter_groups: false
         fields: false
         pager: false
+        sorts: false
       path: special-announcements
       filters:
         status:
@@ -1073,10 +1078,10 @@ display:
         groups:
           1: AND
       fields:
-        created:
-          id: created
-          table: node_field_data
-          field: created
+        field_important_date:
+          id: field_important_date
+          table: node__field_important_date
+          field: field_important_date
           relationship: none
           group_type: group
           admin_label: ''
@@ -1109,24 +1114,23 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: h3
+          element_type: h2
           element_class: ''
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: true
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: timestamp
+          type: datetime_default
           settings:
-            date_format: month_date
-            custom_date_format: ''
-            timezone: ''
+            timezone_override: ''
+            format_type: month_date
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -1137,8 +1141,6 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: created
           plugin_id: field
         title:
           id: title
@@ -1215,8 +1217,8 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: '{{ body }}'
             make_link: false
             path: ''
             absolute: false
@@ -1241,20 +1243,20 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: ''
+          element_type: '0'
           element_class: ''
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: ''
+          element_wrapper_type: '0'
           element_wrapper_class: ''
-          element_default_classes: true
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: text_trimmed
+          type: text_summary_or_trimmed
           settings:
             trim_length: 200
           group_column: value
@@ -1272,6 +1274,20 @@ display:
         type: none
         options:
           offset: 0
+      sorts:
+        field_important_date_value:
+          id: field_important_date_value
+          table: node__field_important_date
+          field: field_important_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+          plugin_id: datetime
     cache_metadata:
       max-age: -1
       contexts:
@@ -1282,3 +1298,4 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_important_date'

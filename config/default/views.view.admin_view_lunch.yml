@@ -78,14 +78,47 @@ display:
           default_row_class: true
           override: true
           sticky: false
-          caption: ''
+          caption: ' '
           summary: ''
           description: ''
           columns:
+            view_webform_submission: view_webform_submission
             sid: sid
+            webform_submission_value: webform_submission_value
+            webform_submission_value_2: webform_submission_value_2
+            webform_submission_value_4: webform_submission_value_4
             webform_submission_value_3: webform_submission_value_3
+            webform_submission_value_5: webform_submission_value_5
           info:
+            view_webform_submission:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
             sid:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            webform_submission_value:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            webform_submission_value_2:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            webform_submission_value_4:
               sortable: false
               default_sort_order: asc
               align: ''
@@ -99,11 +132,69 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
+            webform_submission_value_5:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
           default: '-1'
           empty_table: false
       row:
         type: fields
       fields:
+        view_webform_submission:
+          id: view_webform_submission
+          table: webform_submission
+          field: view_webform_submission
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: true
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          text: view
+          output_url_as_text: true
+          absolute: true
+          entity_type: webform_submission
+          plugin_id: entity_link
         sid:
           id: sid
           table: webform_submission
@@ -116,8 +207,8 @@ display:
           alter:
             alter_text: false
             text: ''
-            make_link: false
-            path: ''
+            make_link: true
+            path: '{{ view_webform_submission }}'
             absolute: false
             external: false
             replace_spaces: false
@@ -170,59 +261,6 @@ display:
           entity_type: webform_submission
           entity_field: sid
           plugin_id: field
-        view_webform_submission:
-          id: view_webform_submission
-          table: webform_submission
-          field: view_webform_submission
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: Link
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          text: view
-          output_url_as_text: false
-          absolute: false
-          entity_type: webform_submission
-          plugin_id: entity_link
         webform_submission_value:
           id: webform_submission_value
           table: webform_submission_field_2018_registration_email
@@ -272,58 +310,6 @@ display:
           empty_zero: false
           hide_alter_empty: true
           webform_element_format: link
-          webform_multiple_value: true
-          webform_multiple_delta: 0
-          plugin_id: webform_submission_field
-        webform_submission_value_1:
-          id: webform_submission_value_1
-          table: webform_submission_field_2018_registration_drupal_org_user_name
-          field: webform_submission_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Drupal.org User Name'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          webform_element_format: value
           webform_multiple_value: true
           webform_multiple_delta: 0
           plugin_id: webform_submission_field
