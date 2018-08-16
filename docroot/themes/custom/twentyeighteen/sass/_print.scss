@@ -7,10 +7,12 @@
 
   body {
     background: transparent !important;
-    padding-bottom: 0;
+    padding: 0;
+    line-height: 1.125;
     overflow: visible;
     margin: 0;
-    font-size: 0.875em;
+    margin-bottom: -0.25in;
+    font-size: 1.25em;
 
     &::after {
       background-image: none !important;
@@ -23,6 +25,11 @@
       margin: 0;
       padding: 0;
     }
+  }
+
+  .region-content {
+    width: 100%;
+    padding: 0 !important;
   }
 
   .alias--badges---submissions .block-page-title-block {
@@ -66,13 +73,17 @@
     .view-content {
       display: flex;
       align-items: center;
+      margin: 0;
+      width: 5.125in;
+      height: 2.125in;
       padding-bottom: 0;
-      height: 1.39in;
       text-align: center;
+      font-size: 1.25em;
     }
 
     .views-row {
       display: inline-block;
+      width: 100%;
       margin: 0 auto;
       padding-top: 0;
       box-sizing: border-box;
@@ -80,12 +91,17 @@
       color: black;
     }
 
+    div.views-row.views-row-last {
+      padding-top: 0;
+      margin: 0 auto;
+    }
+
     .views-field-webform-submission {
       &-value-2,
       &-value-3 {
         display: inline-block;
         font-weight: bold;
-        font-size: 1.25em;
+        font-size: 1.875em;
       }
 
       &-value-2 {
