@@ -12,11 +12,10 @@ dependencies:
     - better_exposed_filters
     - flag
     - user
-    - views_infinite_scroll
     - webform
     - webform_views
 id: attendee_check_in
-label: 'Attendee Check-In'
+label: 'Attendee Check-In (2017)'
 module: views
 description: 'A restricted view for admins/volunteers to check in conference attendees'
 tag: ''
@@ -63,7 +62,7 @@ display:
             general:
               allow_secondary: false
               secondary_label: 'Advanced options'
-              autosubmit: true
+              autosubmit: false
               autosubmit_hide: true
             webform_submission_value_2:
               bef_format: default
@@ -85,7 +84,7 @@ display:
                   filter_rewrite_values: "True|Yes\nFalse|No"
           text_input_required_format: simple_text
       pager:
-        type: infinite_scroll
+        type: full
         options:
           items_per_page: 50
           offset: 0
@@ -94,6 +93,8 @@ display:
           tags:
             previous: ‹‹
             next: ››
+            first: '« First'
+            last: 'Last »'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -102,9 +103,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          views_infinite_scroll:
-            button_text: 'Load More'
-            automatically_load_content: false
+          quantity: 9
       style:
         type: table
         options:
@@ -753,7 +752,7 @@ display:
           table: webform_submission_field_2018_registration_last_name
           field: webform_submission_value
           plugin_id: webform_submission_field_sort
-      title: 'Attendee Check-In'
+      title: 'Attendee Check-In (2017)'
       header: {  }
       footer: {  }
       empty: {  }
@@ -954,6 +953,58 @@ display:
           group_type: group
           admin_label: ''
           label: 'Days Attending'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          webform_element_format: value
+          webform_multiple_value: true
+          webform_multiple_delta: 0
+          plugin_id: webform_submission_field
+        webform_submission_value_1:
+          id: webform_submission_value_1
+          table: webform_submission_field_2018_registration_please_indicate_the_days_when_you_ll_need_lunch_this_will_help_u
+          field: webform_submission_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Days Needing Lunch'
           exclude: false
           alter:
             alter_text: false
@@ -1427,7 +1478,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          operator: '='
+          operator: contains
           value: ''
           group: 1
           exposed: true
@@ -1469,7 +1520,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          operator: '='
+          operator: contains
           value: ''
           group: 1
           exposed: true
