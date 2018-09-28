@@ -27,3 +27,6 @@ command-hooks:
 behat:
   paths:
     - '${repo.root}/tests/behat'
+cm:
+  strategy: config-split
+  allow-overrides: true

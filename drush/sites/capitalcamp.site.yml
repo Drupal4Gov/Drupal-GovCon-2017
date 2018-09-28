@@ -1,0 +1,41 @@
+local:
+  host: local.capitalcamp.com
+  options: {  }
+  root: /var/www/capitalcamp/docroot
+  uri: 'http://local.capitalcamp.com'
+  user: vagrant
+  ssh:
+    options: '-o PasswordAuthentication=no -i $HOME/.vagrant.d/insecure_private_key'
+prod:
+  host: ded-2297.prod.hosting.acquia.com
+  options:
+    ac-env: prod
+    ac-realm: prod
+    ac-site: capitalcamp
+  paths:
+    drush-script: drush
+  root: /var/www/html/capitalcamp.prod/docroot
+  uri: capitalcamp.prod.acquia-sites.com
+  user: capitalcamp.prod
+test:
+  host: staging-7892.prod.hosting.acquia.com
+  options:
+    ac-env: test
+    ac-realm: prod
+    ac-site: capitalcamp
+  paths:
+    drush-script: drush
+  root: /var/www/html/capitalcamp.test/docroot
+  uri: capitalcampstg.prod.acquia-sites.com
+  user: capitalcamp.test
+dev:
+  host: staging-7801.prod.hosting.acquia.com
+  options:
+    ac-env: dev
+    ac-realm: prod
+    ac-site: capitalcamp
+  paths:
+    drush-script: drush
+  root: /var/www/html/capitalcamp.dev/docroot
+  uri: capitalcampdev.prod.acquia-sites.com
+  user: capitalcamp.dev
