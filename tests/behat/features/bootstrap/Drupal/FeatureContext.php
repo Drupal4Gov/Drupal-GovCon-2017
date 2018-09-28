@@ -4,7 +4,7 @@ namespace Drupal;
 
 use Drupal\DrupalExtension\Context\RawDrupalContext;
 use Behat\Behat\Context\SnippetAcceptingContext;
-use PHPUnit_Framework_Assert;
+use PHPUnit\Framework\Assert;
 use Behat\Gherkin\Node\TableNode;
 use Drupal\user\Entity\Role;
 use Drupal\node\Entity\NodeType;
@@ -55,7 +55,7 @@ class FeatureContext extends RawDrupalContext implements SnippetAcceptingContext
     $bundle_fields = \Drupal::getContainer()->get('entity_field.manager')->getFieldDefinitions('user', 'user');
     $field_definition = $bundle_fields[$field_name];
     $setting = $field_definition->isRequired();
-    PHPUnit_Framework_Assert::assertNotEmpty($setting, 'Field ' . $field_name . ' is not required.');
+    Assert::assertNotEmpty($setting, 'Field ' . $field_name . ' is not required.');
   }
 
   /**
@@ -101,7 +101,7 @@ class FeatureContext extends RawDrupalContext implements SnippetAcceptingContext
   public function isField($field_name, $bundle, $entity_type) {
     $bundle_fields = \Drupal::getContainer()->get('entity_field.manager')->getFieldDefinitions($bundle, $entity_type);
     if (empty($bundle_fields[$field_name])) {
-      \PHPUnit_Framework_Assert::assertEmpty($bundle_fields, $field_name . ' is not present on the ' . $entity_type . " " . $bundle);
+      Assert::assertEmpty($bundle_fields, $field_name . ' is not present on the ' . $entity_type . " " . $bundle);
     }
   }
 
@@ -186,7 +186,7 @@ class FeatureContext extends RawDrupalContext implements SnippetAcceptingContext
       $field_definition = $bundle_fields[$field_name];
       $settings = $field_definition->getSettings();
       $target_bundles = $settings['handler_settings']['target_bundles'];
-      PHPUnit_Framework_Assert::assertContains(trim($reference_bundle), $target_bundles, $field_name . ' does not allow references to ' . trim($reference_bundle) . ' content');
+      Assert::assertContains(trim($reference_bundle), $target_bundles, $field_name . ' does not allow references to ' . trim($reference_bundle) . ' content');
     }
   }
 
@@ -199,7 +199,7 @@ class FeatureContext extends RawDrupalContext implements SnippetAcceptingContext
       $field_definition = $bundle_fields[$field_name];
       $settings = $field_definition->getSettings();
       $target_bundles = $settings['handler_settings']['target_bundles'];
-      PHPUnit_Framework_Assert::assertContains(trim($reference_bundle), $target_bundles, $field_name . ' does not allow references to ' . trim($reference_bundle) . ' blocks');
+      Assert::assertContains(trim($reference_bundle), $target_bundles, $field_name . ' does not allow references to ' . trim($reference_bundle) . ' blocks');
     }
   }
 
@@ -212,7 +212,7 @@ class FeatureContext extends RawDrupalContext implements SnippetAcceptingContext
       $field_definition = $bundle_fields[$field_name];
       $settings = $field_definition->getSettings();
       $target_bundles = $settings['handler_settings']['target_bundles'];
-      PHPUnit_Framework_Assert::assertContains(trim($reference_bundle), $target_bundles, $field_name . ' does not allow references to ' . trim($reference_bundle));
+      Assert::assertContains(trim($reference_bundle), $target_bundles, $field_name . ' does not allow references to ' . trim($reference_bundle));
     }
   }
 
@@ -243,7 +243,7 @@ class FeatureContext extends RawDrupalContext implements SnippetAcceptingContext
    */
   public function roleHasPermission($role, $permission) {
     $roleObj = Role::load($role);
-    PHPUnit_Framework_Assert::assertNotEmpty($roleObj->hasPermission($permission), $role . ' role does not have permission to ' . $permission);
+    Assert::assertNotEmpty($roleObj->hasPermission($permission), $role . ' role does not have permission to ' . $permission);
   }
 
   /**
@@ -251,7 +251,7 @@ class FeatureContext extends RawDrupalContext implements SnippetAcceptingContext
    */
   public function roleDoesNotHavePermission($role, $permission) {
     $roleObj = Role::load($role);
-    PHPUnit_Framework_Assert::assertEmpty($roleObj->hasPermission($permission), $role . ' role has permission to ' . $permission . ', but should not.');
+    Assert::assertEmpty($roleObj->hasPermission($permission), $role . ' role has permission to ' . $permission . ', but should not.');
   }
 
   /**
@@ -261,7 +261,7 @@ class FeatureContext extends RawDrupalContext implements SnippetAcceptingContext
     $storage = \Drupal::entityTypeManager()->getStorage('entity_view_display');
     $view_display = $storage->load("node.$node_type.$display");
     $component = $view_display->getComponent($field_name);
-    PHPUnit_Framework_Assert::assertContains('content', $component['region']);
+    Assert::assertContains('content', $component['region']);
   }
 
   /**
@@ -271,7 +271,7 @@ class FeatureContext extends RawDrupalContext implements SnippetAcceptingContext
     $storage = \Drupal::entityTypeManager()->getStorage('entity_view_display');
     $view_display = $storage->load("node.$node_type.$display");
     $component = $view_display->get('hidden');
-    PHPUnit_Framework_Assert::assertEquals(true, $component[$field_name]);
+    Assert::assertEquals(true, $component[$field_name]);
   }
 
   /**
@@ -281,7 +281,7 @@ class FeatureContext extends RawDrupalContext implements SnippetAcceptingContext
     $bundle_fields = \Drupal::getContainer()->get('entity_field.manager')->getFieldDefinitions('node', $node_type);
     $field_definition = $bundle_fields[$field_name];
     $settings = $field_definition->getSettings();
-    PHPUnit_Framework_Assert::assertEquals($length, $settings['max_length']);
+    Assert::assertEquals($length, $settings['max_length']);
   }
 
   /**
@@ -326,7 +326,7 @@ class FeatureContext extends RawDrupalContext implements SnippetAcceptingContext
     $bundle_fields = \Drupal::getContainer()->get('entity_field.manager')->getFieldDefinitions($bundle, $node_type);
     $field_definition = $bundle_fields[$field_name];
     $setting = $field_definition->isRequired();
-    PHPUnit_Framework_Assert::assertNotEmpty($setting, 'Field ' . $field_name . ' is not required.');
+    Assert::assertNotEmpty($setting, 'Field ' . $field_name . ' is not required.');
   }
 
   /**
