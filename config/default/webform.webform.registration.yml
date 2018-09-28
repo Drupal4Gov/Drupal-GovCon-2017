@@ -6,8 +6,10 @@ _core:
   default_config_hash: BrydyK5Ue5wkMQCaHP7_hNFrpGumd2e1j3U_RnPzP7g
 open: null
 close: null
+weight: 0
 uid: null
 template: false
+archive: false
 id: registration
 title: '2017 Registration'
 description: ''
@@ -155,7 +157,7 @@ handlers:
       bcc_options: {  }
       from_mail: drupal4gov@gmail.com
       from_options: {  }
-      from_name: default
+      from_name: _default
       subject: 'Thank you for registering for Drupal GovCon 2017'
       body: "<p>You&#39;ve been registered for Drupal GovCon 2017 and have secured a ticket to the event.</p>\n\n<p>Next steps: Tell your friends about Drupal GovCon!</p>\n\n<p>username:&nbsp;[webform-authenticated-user:account-name]<br />\npassword: your password</p>\n\n<p>Change your mind about getting email alerts? Subscribe to our e-mail list:<br />\n<a href=\"http://eepurl.com/bbJASn\">http://eepurl.com/bbJASn</a></p>\nFollow us on social media:<br />\n<a href=\"https://twitter.com/drupalgovcon\">https://twitter.com/drupalgovcon</a><br />\n<a href=\"https://www.facebook.com/DrupalGovCon\">https://www.facebook.com/DrupalGovCon</a><br />\n<br />\n-- Drupal&nbsp;GovCon&nbsp;team"
       excluded_elements:
@@ -192,3 +194,5 @@ handlers:
       sender_mail: ''
       sender_name: ''
       twig: false
+      exclude_empty_checkbox: false
+      theme: ''

@@ -1,14 +1,15 @@
-uuid: b471a085-a36c-427a-8ff3-83aecce0004c
+uuid: f41088b6-fefb-45bd-b629-3dcd60abd4a8
 langcode: en
 status: true
 dependencies:
   module:
+    - content_moderation
     - node
     - user
 _core:
-  default_config_hash: d03N61VvjcepAHShR0iamZKdlL7Bbp5ZoE3xcIFS2Mc
+  default_config_hash: Sw8ZpM9Duu1oaXw6FJGSCrHGlJF7C0WVxMSu3BaGXmg
 id: moderation_history
-label: 'Moderation History'
+label: 'Moderation history'
 module: views
 description: ''
 tag: ''
@@ -70,7 +71,7 @@ display:
           field: uid
           relationship: none
           group_type: group
-          admin_label: ''
+          admin_label: 'Authored by'
           label: ''
           exclude: true
           alter:
@@ -135,7 +136,7 @@ display:
           field: created
           relationship: none
           group_type: group
-          admin_label: ''
+          admin_label: 'Authored on'
           label: ''
           exclude: true
           alter:
@@ -351,6 +352,15 @@ display:
     display_options:
       display_extenders: {  }
       path: node/%node/moderation-history
+      menu:
+        type: tab
+        title: History
+        description: ''
+        expanded: false
+        parent: ''
+        weight: 10
+        context: '0'
+        menu_name: main
     cache_metadata:
       max-age: -1
       contexts:

@@ -1,4 +1,4 @@
-uuid: 83b66227-b0d2-49d4-8699-f058305a746d
+uuid: 6060e10f-b376-4a09-975a-90c542d58936
 langcode: en
 status: true
 dependencies:
@@ -8,9 +8,10 @@ dependencies:
     - field.field.media.video.field_media_video_embed_field
     - media.type.video
   module:
+    - content_moderation
     - path
 _core:
-  default_config_hash: ggUvzzCujjyCEfAyWiJyvfcbQdARZ9_0vH9wGeGHbqo
+  default_config_hash: Wft8ifOMAlgFjAvTyWmpKS_RnTcBkckjM2u90vzd7cM
 id: media.video.media_browser
 targetEntityType: media
 bundle: video
@@ -48,12 +49,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  scheduled_publication:
-    type: datetime_default
-    weight: 20
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:

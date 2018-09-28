@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.page.panelizer
     - node.type.page
   module:
+    - content_moderation
     - metatag
     - path
     - text
@@ -58,12 +59,6 @@ content:
     weight: 3
     third_party_settings: {  }
     region: content
-  scheduled_publication:
-    type: datetime_default
-    weight: 20
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
@@ -98,5 +93,7 @@ content:
   url_redirects:
     weight: 50
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   panelizer: true

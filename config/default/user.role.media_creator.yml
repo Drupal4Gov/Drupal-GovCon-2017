@@ -1,0 +1,17 @@
+uuid: abf1d35c-339a-4051-b01b-4e88a00d7c47
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: sOivTdNRBzCVaqhc-dgc2Hemc3wgEMiQ3k4W1wI2BTY
+id: media_creator
+label: 'Media creator'
+weight: 5
+is_admin: false
+permissions:
+  - 'access media overview'
+  - 'access media_browser entity browser pages'
+  - 'create media'
+  - 'delete media'
+  - 'dropzone upload files'
+  - 'update media'

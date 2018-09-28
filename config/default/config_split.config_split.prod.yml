@@ -1,0 +1,24 @@
+uuid: 37a368d8-afea-41d8-aa7a-163e830abf5e
+langcode: en
+status: true
+dependencies: {  }
+id: prod
+label: Prod
+description: ''
+folder: ../config/envs/prod
+module:
+  acquia_connector: 0
+  acquia_purge: 0
+  acquia_search: 0
+  newell_landing_pages: 0
+  shield: 0
+  simplesamlphp_auth: 0
+theme: {  }
+blacklist: {  }
+graylist:
+  - acquia_connector.settings
+  - acquia_search.settings
+  - environment_indicator.settings
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

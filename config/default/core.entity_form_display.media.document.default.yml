@@ -1,18 +1,17 @@
-uuid: 1c4c2dab-5b6a-43c6-98cf-2049e38f2b6a
+uuid: a6f908f5-b930-4752-9549-7f3416cf3934
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.media.document.field_document
-    - field.field.media.document.field_document_size
     - field.field.media.document.field_media_in_library
-    - field.field.media.document.field_mime_type
     - media.type.document
   module:
+    - content_moderation
     - file
     - path
 _core:
-  default_config_hash: cJuFx19N5_sxWYHHlmO3RQGGsc47AjZ5a1HfNN2fOzc
+  default_config_hash: xFJUl0MccoGPEv1eb_I_XnxzjqvZ8M5HA1G3PBtv9IE
 id: media.document.default
 targetEntityType: media
 bundle: document
@@ -49,12 +48,6 @@ content:
   path:
     type: path
     weight: 30
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  scheduled_publication:
-    type: datetime_default
-    weight: 20
     region: content
     settings: {  }
     third_party_settings: {  }

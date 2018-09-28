@@ -1,4 +1,4 @@
-uuid: fdadb85e-0922-4161-aab3-6f1099cb03d7
+uuid: 99c7a369-cf58-4a60-8a1a-20c79d226e21
 langcode: en
 status: true
 dependencies:
@@ -8,10 +8,11 @@ dependencies:
     - image.style.thumbnail
     - media.type.image
   module:
+    - content_moderation
+    - image_widget_crop
     - path
-    - svg_image
 _core:
-  default_config_hash: 3sayyMrnuL8vsG48ckrv-6c4o1uDeQLY15D3l7rtslY
+  default_config_hash: kyoAHlZTGIuGTaQuBblGBk8EhfnVKOl19_0j5WbpQqM
 id: media.image.default
 targetEntityType: media
 bundle: image
@@ -25,11 +26,18 @@ content:
     third_party_settings: {  }
     region: content
   image:
-    type: image_image
+    type: image_widget_crop
     weight: 0
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
+      crop_list:
+        - freeform
+      show_crop_area: true
+      crop_preview_image_style: crop_thumbnail
+      crop_types_required: {  }
+      show_default_crop: true
+      warn_multiple_usages: false
     third_party_settings: {  }
     region: content
   moderation_state:
@@ -49,12 +57,6 @@ content:
   path:
     type: path
     weight: 30
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  scheduled_publication:
-    type: datetime_default
-    weight: 20
     region: content
     settings: {  }
     third_party_settings: {  }
