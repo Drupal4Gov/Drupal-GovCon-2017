@@ -5,7 +5,7 @@ Welcome to the repo for the Drupal GovCon event website.
 
 This project is based on BLT, an open-source project template and tool that enables building, testing, and deploying Drupal installations following Acquia Professional Services best practices.
 
-* Ensure that your computer meets the minimum installation requirements (and then install the required applications). See the [System Requirements](http://blt.readthedocs.io/en/8.x/INSTALL/).
+* Ensure that your computer meets the minimum installation requirements (and then install the required applications). See the [System Requirements](https://blt.readthedocs.io/en/latest/INSTALL/).
 * Fork the parent repository in GitHub
 * Request access to the Drupal4Gov organization in GitHub 
 * Request access to the Acquia Cloud Environment for Drupal GovCon
