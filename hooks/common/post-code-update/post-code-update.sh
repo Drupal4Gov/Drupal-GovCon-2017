@@ -13,6 +13,8 @@
 # post-code-update only runs if your site is using a Git repository. It does
 # not support SVN.
 
+set -ev
+
 site="$1"
 target_env="$2"
 source_branch="$3"
@@ -20,10 +22,11 @@ deployed_tag="$4"
 repo_url="$5"
 repo_type="$6"
 
-acsf_file="/mnt/files/$AH_SITE_GROUP.$AH_SITE_ENVIRONMENT/files-private/sites.json"
-if [ ! -f $acsf_file ]; then
-  . /var/www/html/$site.$target_env/vendor/acquia/blt/scripts/cloud-hooks/functions.sh
-  deploy_updates
-  . `dirname $0`/../slack.sh
-  exit $status
-fi
+# Prep for BLT commands.
+repo_root="/var/www/html/$site.$target_env"
+export PATH=$repo_root/vendor/bin:$PATH
+cd $repo_root
+
+blt artifact:ac-hooks:post-code-update $site $target_env $source_branch $deployed_tag $repo_url $repo_type --environment=$target_env -v --yes --no-interaction
+
+set +v
