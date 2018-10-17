@@ -13,7 +13,7 @@ git:
     - 'capitalcamp@svn-6971.prod.hosting.acquia.com:capitalcamp.git'
 drush:
   aliases:
-    remote: 'dgc.test'
+    remote: dgc.test
     local: self
     ci: self
   default_alias: '${drush.aliases.local}'
