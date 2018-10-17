@@ -1,0 +1,21 @@
+uuid: b31241e3-8fec-42c4-b153-ba66dc859b7f
+langcode: en
+status: false
+dependencies: {  }
+id: local
+label: Local
+description: ''
+folder: ../config/envs/local
+module:
+  dblog: 0
+  devel: 0
+theme: {  }
+blacklist:
+  - dblog.settings
+  - devel.settings
+  - devel.toolbar.settings
+graylist:
+  - system.performance
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

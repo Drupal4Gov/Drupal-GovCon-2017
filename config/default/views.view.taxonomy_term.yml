@@ -1,15 +1,11 @@
-uuid: 7bbf95d6-7214-47b2-98bf-f91238531a85
+uuid: 8fcdba4d-23a2-428f-998f-f675f511338e
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - taxonomy.vocabulary.conference_year
-  content:
-    - 'taxonomy_term:conference_year:0f6c31f2-ef62-41ce-b17c-3e05bfb9b76c'
   module:
     - node
-    - options
     - taxonomy
     - user
 _core:
@@ -217,93 +213,6 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           plugin_id: boolean
-        field_conference_year_target_id:
-          id: field_conference_year_target_id
-          table: node__field_conference_year
-          field: field_conference_year_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value:
-            - 131
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: textfield
-          limit: true
-          vid: conference_year
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
-        field_status_value:
-          id: field_status_value
-          table: node__field_status
-          field: field_status_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: not
-          value:
-            unprocessed: unprocessed
-            declined: declined
-            cancelled: cancelled
-            backup: backup
-            proposed: proposed
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          plugin_id: list_field
       style:
         type: default
         options:
@@ -336,13 +245,11 @@ display:
       display_extenders: {  }
       link_url: ''
       link_display: page_1
-      show_admin_links: true
     cache_metadata:
       contexts:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - user
         - 'user.node_grants:view'
         - user.permissions
       max-age: -1
@@ -381,7 +288,6 @@ display:
       contexts:
         - 'languages:language_interface'
         - url
-        - user
         - 'user.node_grants:view'
         - user.permissions
       max-age: -1
@@ -402,7 +308,6 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - user
         - 'user.node_grants:view'
         - user.permissions
       max-age: -1

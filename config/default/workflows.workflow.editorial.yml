@@ -1,11 +1,14 @@
-uuid: eb53aeae-5c9c-4a7f-898d-bde1f85d0ab0
+uuid: 7acc870c-27b6-42b0-b513-08c86cff6f14
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.landing_page
+    - node.type.page
   module:
     - content_moderation
 _core:
-  default_config_hash: T_JxNjYlfoRBi7Bj1zs5Xv9xv1btuBkKp5C1tNrjMhI
+  default_config_hash: 8FLw3dX-3yJxrgAtaiNul_N8e8yc70gQD4u9UehUHhs
 id: editorial
 label: Editorial
 type: content_moderation
@@ -26,6 +29,11 @@ type_settings:
       published: true
       default_revision: true
       weight: 0
+    review:
+      label: 'In review'
+      weight: -1
+      published: false
+      default_revision: false
   transitions:
     archive:
       label: Archive
@@ -33,14 +41,8 @@ type_settings:
         - published
       to: archived
       weight: 2
-    archived_draft:
-      label: 'Restore to Draft'
-      from:
-        - archived
-      to: draft
-      weight: 3
     archived_published:
-      label: Restore
+      label: 'Restore from archive'
       from:
         - archived
       to: published
@@ -50,8 +52,10 @@ type_settings:
       to: draft
       weight: 0
       from:
+        - archived
         - draft
         - published
+        - review
     publish:
       label: Publish
       to: published
@@ -59,4 +63,15 @@ type_settings:
       from:
         - draft
         - published
-  entity_types: {  }
+        - review
+    review:
+      label: 'Send to review'
+      to: review
+      weight: 0
+      from:
+        - draft
+        - review
+  entity_types:
+    node:
+      - landing_page
+      - page

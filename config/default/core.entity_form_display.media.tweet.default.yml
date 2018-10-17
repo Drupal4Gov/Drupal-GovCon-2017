@@ -1,4 +1,4 @@
-uuid: 01c2101d-6b01-42b3-9def-b98d46759b68
+uuid: 13c856ef-8604-4459-ab3b-32f6129bc321
 langcode: en
 status: true
 dependencies:
@@ -7,9 +7,10 @@ dependencies:
     - field.field.media.tweet.field_media_in_library
     - media.type.tweet
   module:
+    - content_moderation
     - path
 _core:
-  default_config_hash: ptBSQ5lrg7HxikqhFDXWCd-f7Pvz5s9HCpj_h4udD_o
+  default_config_hash: j91gO-2d6metCelrtxdsMs2gxv9soQTwAVTN20S31Z8
 id: media.tweet.default
 targetEntityType: media
 bundle: tweet
@@ -52,13 +53,9 @@ content:
     third_party_settings: {  }
   preview:
     weight: 0
-    region: content
-  scheduled_publication:
-    type: datetime_default
-    weight: 20
-    region: content
     settings: {  }
     third_party_settings: {  }
+    region: content
   status:
     type: boolean_checkbox
     settings:

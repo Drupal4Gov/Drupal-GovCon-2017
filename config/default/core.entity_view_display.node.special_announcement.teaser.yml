@@ -5,10 +5,22 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.special_announcement.body
+    - field.field.node.special_announcement.field_conference_year
+    - field.field.node.special_announcement.field_critical_announcement_text
+    - field.field.node.special_announcement.field_important_date
+    - field.field.node.special_announcement.field_is_critical_
+    - field.field.node.special_announcement.field_sort_order
     - node.type.special_announcement
   module:
+    - panelizer
     - text
     - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: node.special_announcement.teaser
 targetEntityType: node
 bundle: special_announcement
@@ -25,10 +37,11 @@ content:
   links:
     weight: 100
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   field_conference_year: true
   field_critical_announcement_text: true
   field_important_date: true
   field_is_critical_: true
   field_sort_order: true
-  scheduled_publication: true

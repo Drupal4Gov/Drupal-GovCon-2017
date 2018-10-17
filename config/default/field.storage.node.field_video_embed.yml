@@ -1,0 +1,23 @@
+uuid: 01401e26-d779-4479-bf05-6f1b128abcb4
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - video_embed_field
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_video_embed
+field_name: field_video_embed
+entity_type: node
+type: video_embed_field
+settings: {  }
+module: video_embed_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

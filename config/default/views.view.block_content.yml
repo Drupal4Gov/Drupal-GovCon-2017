@@ -1,4 +1,4 @@
-uuid: ca5bff22-d9aa-493b-b9a1-08014d8e2e34
+uuid: 764ac976-891a-4eb8-8d3f-b7544aa32e2d
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     - block_content
     - user
 _core:
-  default_config_hash: msYnighLW1IbiBfyQbwbQwb2cU-5LECiFryt60k0Nfk
+  default_config_hash: BmeDSOTSaTVy5QLgxgJ5ye_ZseG5t88JXRP1apFoBkk
 id: block_content
 label: 'Custom block library'
 module: views
@@ -434,6 +434,44 @@ display:
           entity_type: block_content
           entity_field: type
           plugin_id: bundle
+        reusable:
+          id: reusable
+          table: block_content_field_data
+          field: reusable
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: block_content
+          entity_field: reusable
+          plugin_id: boolean
       sorts: {  }
       title: 'Custom block library'
       header: {  }
@@ -448,7 +486,7 @@ display:
           admin_label: ''
           empty: true
           tokenize: false
-          content: 'There are no custom blocks available. '
+          content: 'There are no custom blocks available.'
           plugin_id: text_custom
         block_content_listing_empty:
           admin_label: ''
@@ -471,7 +509,7 @@ display:
         - url
         - url.query_args
         - user.permissions
-      max-age: 0
+      max-age: -1
       tags: {  }
   page_1:
     display_plugin: page
@@ -496,5 +534,5 @@ display:
         - url
         - url.query_args
         - user.permissions
-      max-age: 0
+      max-age: -1
       tags: {  }

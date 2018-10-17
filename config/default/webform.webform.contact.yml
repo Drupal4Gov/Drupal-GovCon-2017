@@ -4,8 +4,10 @@ status: open
 dependencies: {  }
 open: null
 close: null
+weight: 0
 uid: 1
 template: false
+archive: false
 id: contact
 title: Contact
 description: ''
@@ -127,7 +129,7 @@ handlers:
     settings:
       states:
         - completed
-      to_mail: default
+      to_mail: _default
       to_options: {  }
       cc_mail: ''
       cc_options: {  }
@@ -136,8 +138,8 @@ handlers:
       from_mail: '[webform_submission:values:email:raw]'
       from_options: {  }
       from_name: '[webform_submission:values:email:raw]'
-      subject: default
-      body: default
+      subject: _default
+      body: _default
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
@@ -149,6 +151,8 @@ handlers:
       sender_mail: ''
       sender_name: ''
       twig: false
+      exclude_empty_checkbox: false
+      theme: ''
   email_1:
     id: email
     label: Email
@@ -165,10 +169,10 @@ handlers:
       cc_options: {  }
       bcc_mail: ''
       bcc_options: {  }
-      from_mail: default
+      from_mail: _default
       from_options: {  }
-      from_name: default
-      subject: default
+      from_name: _default
+      subject: _default
       body: "<br />\nThank you for your message. Someone from the Drupal GovCon team will be in touch with you soon. Please add [DGC or D4G email address] to your email contacts to make sure our response reaches you.<br />\n<br />\n&lt;p&gt;Submitted on [webform_submission:created]&lt;/p&gt;<br />\n&lt;p&gt;Submitted by: [webform_submission:user]&lt;/p&gt;<br />\n&lt;p&gt;Submitted values are:&lt;/p&gt;<br />\n[webform_submission:values]"
       excluded_elements: {  }
       ignore_access: false
@@ -181,3 +185,5 @@ handlers:
       sender_mail: ''
       sender_name: ''
       twig: false
+      exclude_empty_checkbox: false
+      theme: ''

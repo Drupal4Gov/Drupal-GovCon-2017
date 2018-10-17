@@ -1,4 +1,4 @@
-uuid: null
+uuid: c4b5d519-9788-4d08-9bc1-30d9706f946d
 langcode: en
 status: true
 dependencies:
@@ -8,6 +8,8 @@ dependencies:
   module:
     - node
     - user
+_core:
+  default_config_hash: ezK5Dw8P_4bqJdDQIiecSAJak9p1Wf1yDwHzTutGFuQ
 id: frontpage
 label: Frontpage
 module: node
@@ -36,7 +38,7 @@ display:
           admin_label: ''
           empty: true
           tokenize: true
-          content: '<p>Welcome to [site:name]. No front page content has been created yet.</p><p>Would you like to <a href="profiles/contrib/lightning/README.md">view the README</a>?</p>'
+          content: '<p>Welcome to [site:name]. No front page content has been created yet.</p><p>Would you like to <a href="/profiles/contrib/lightning/README.md">view the README</a>?</p>'
           label: ''
           plugin_id: text_custom
         node_listing_empty:

@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.special_announcement.field_sort_order
     - node.type.special_announcement
   module:
+    - content_moderation
     - datetime
     - path
     - text
@@ -86,12 +87,6 @@ content:
     weight: 3
     region: content
     third_party_settings: {  }
-  scheduled_publication:
-    type: datetime_default
-    weight: 20
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
@@ -126,4 +121,6 @@ content:
   url_redirects:
     weight: 50
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden: {  }

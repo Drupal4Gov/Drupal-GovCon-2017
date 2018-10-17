@@ -28,9 +28,13 @@ $ composer install
 ```
 $ blt vm
 ```
+* Log into your VM
+```
+$ vagrant ssh
+```
 * Syncronize your local with the cloud
 ```
-$ blt sync:refresh
+$ blt sync
 ``` 
 * Access the site and do necessary work at http://local.capitalcamp.com
 
@@ -60,7 +64,7 @@ $ git checkout -b D4G-XXX upstream/master
 ```
 * Reset local environment to ensure all is inline with new branch. WARNING: this is destructive
 ```
-$ blt sync:refresh
+$ blt sync
 ```
 * Do whatever work is required for ticket
 * Create new commit(s) as needed. All commit messages should follow the pattern: D4G-XXX: commit messages go here. They must include the Ticket Number (with a dash AND a colon), a message, and a period.

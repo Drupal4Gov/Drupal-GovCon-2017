@@ -19,6 +19,7 @@ dependencies:
     - field.field.node.session.field_slides_link
     - field.field.node.session.field_status
     - field.field.node.session.field_video
+    - field.field.node.session.field_video_embed
     - node.type.session
   module:
     - datetime
@@ -28,13 +29,14 @@ dependencies:
     - panelizer
     - text
     - user
+    - video_embed_field
 third_party_settings:
   field_group:
     group_audience:
       children:
         - field_experience_level
       parent_name: ''
-      weight: 1
+      weight: 2
       format_type: fieldset
       format_settings:
         label: Audience
@@ -48,7 +50,7 @@ third_party_settings:
         - field_session_room
         - field_room
       parent_name: ''
-      weight: 2
+      weight: 3
       format_type: fieldset
       format_settings:
         id: ''
@@ -70,7 +72,7 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 0
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     region: content
@@ -82,7 +84,7 @@ content:
     type: list_default
     region: content
   field_files:
-    weight: 5
+    weight: 6
     label: above
     settings:
       use_description_as_link_text: true
@@ -115,7 +117,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
   field_session_track:
-    weight: 4
+    weight: 5
     label: inline
     settings:
       link: true
@@ -123,20 +125,22 @@ content:
     type: entity_reference_label
     region: content
   field_status:
-    weight: 3
+    weight: 4
     label: inline
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
-  field_video:
-    weight: 6
+  field_video_embed:
+    weight: 0
     label: hidden
     settings:
-      view_mode: embedded
-      link: false
+      responsive: true
+      width: 854
+      height: 480
+      autoplay: true
     third_party_settings: {  }
-    type: entity_reference_entity_view
+    type: video_embed_field_video
     region: content
   flag_session_schedule:
     weight: 10
@@ -151,4 +155,5 @@ hidden:
   field_room_monitor: true
   field_session_co_presenter_s_: true
   field_slides_link: true
+  field_video: true
   links: true
