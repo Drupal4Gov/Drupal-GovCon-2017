@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7f83975588c91849500f8d09e28b2bbf",
+    "content-hash": "09bd7ca9a2586af832b37ab95c25464e",
     "packages": [
         {
             "name": "acquia/blt",
@@ -6756,11 +6756,17 @@
         },
         {
             "name": "drupal/memcache",
-            "version": "dev-2.x",
+            "version": "2.0.0-alpha7",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/memcache",
-                "reference": "3a623de259a2482d4a23015051f5172c634c6abb"
+                "reference": "8.x-2.0-alpha7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/memcache-8.x-2.0-alpha7.zip",
+                "reference": "8.x-2.0-alpha7",
+                "shasum": "06a2db4cc3699c5c54a2845058da0869b08371bf"
             },
             "require": {
                 "drupal/core": "~8.0"
@@ -6771,11 +6777,11 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.0-beta2+4-dev",
-                    "datestamp": "1538000280",
+                    "version": "8.x-2.0-alpha7",
+                    "datestamp": "1536739683",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "message": "Alpha releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -6818,8 +6824,7 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/memcache",
                 "issues": "https://www.drupal.org/project/issues/memcache"
-            },
-            "time": "2018-09-26T22:19:32+00:00"
+            }
         },
         {
             "name": "drupal/metatag",
@@ -16257,7 +16262,6 @@
         "drupal/field_permissions": 20,
         "drupal/focal_point": 10,
         "drupal/google_analytics": 0,
-        "drupal/memcache": 20,
         "drupal/r4032login": 20,
         "drupal/recaptcha": 20,
         "drupal/twig_xdebug": 20,
