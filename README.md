@@ -5,7 +5,7 @@ Welcome to the repo for the Drupal GovCon event website.
 
 This project is based on BLT, an open-source project template and tool that enables building, testing, and deploying Drupal installations following Acquia Professional Services best practices.
 
-* Ensure that your computer meets the minimum installation requirements (and then install the required applications). See the [System Requirements](https://blt.readthedocs.io/en/latest/INSTALL/).
+* Ensure that your computer meets the minimum installation requirements (and then install the required applications). See the [BLT System Requirements](https://blt.readthedocs.io/en/latest/INSTALL/) and [Drupal VM System Requirements](https://blt.readthedocs.io/en/latest/local-development/#using-drupal-vm-for-blt-generated-projects).
 * Fork the parent repository in GitHub
 * Request access to the Drupal4Gov organization in GitHub 
 * Request access to the Acquia Cloud Environment for Drupal GovCon
@@ -24,6 +24,10 @@ $ git remote add upstream git@github.com:Drupal4Gov/Drupal-GovCon-2017.git
 ```
 $ composer install
 ```
+* Install BLT alias (if this is your first BLT project)
+```
+$ composer run-script blt-alias
+```
 * Setup Virtual Machine (warning: this can take some time based on internet speeds)
 ```
 $ blt vm
@@ -32,7 +36,11 @@ $ blt vm
 ```
 $ vagrant ssh
 ```
-* Syncronize your local with the cloud
+* Finalize BLT Setup / Install Drupal for the first time
+```
+$ blt setup
+``` 
+* If you wish to sync your local with the cloud
 ```
 $ blt sync
 ``` 
@@ -58,16 +66,16 @@ This is the common workflow for this project.
 ```
 $ git fetch upstream
 ```
-* Create a new branch off of upstream/master that is based on the ticket you are working (e.g. D4G-XXX)
+* Create a new branch off of upstream/master that is based on the ticket you are working (e.g. DGC-XXX)
 ```
-$ git checkout -b D4G-XXX upstream/master
+$ git checkout -b DGC-XXX upstream/master
 ```
 * Reset local environment to ensure all is inline with new branch. WARNING: this is destructive
 ```
 $ blt sync
 ```
 * Do whatever work is required for ticket
-* Create new commit(s) as needed. All commit messages should follow the pattern: D4G-XXX: commit messages go here. They must include the Ticket Number (with a dash AND a colon), a message, and a period.
+* Create new commit(s) as needed. All commit messages should follow the pattern: DGC-XXX: commit messages go here. They must include the Ticket Number (with a dash AND a colon), a message, and a period.
 * Run Tests / Validation Scripts
 ```
 $ blt validate
