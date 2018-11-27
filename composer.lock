@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1d64dd28afea4dd8fe46177052fed5eb",
+    "content-hash": "886b1f5fc2ebf7e78f779b1175e24a3f",
     "packages": [
         {
             "name": "acquia/blt",
@@ -3827,6 +3827,9 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "patches_applied": {
+                    "in_array warning fix": "https://www.drupal.org/files/issues/2018-07-12/fix-php-warnings-in-drush.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",

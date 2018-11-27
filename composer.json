@@ -115,6 +115,9 @@
         "patches": {
             "drupal/core": {
                 "Ignore front end vendor folders to improve directory search performance": "https://www.drupal.org/files/issues/ignore_front_end_vendor-2329453-116.patch"
+            },
+            "drupal/config_ignore": {
+                "in_array warning fix": "https://www.drupal.org/files/issues/2018-07-12/fix-php-warnings-in-drush.patch"
             }
         },
         "drupal-scaffold": {
