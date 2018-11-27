@@ -11,6 +11,8 @@ git:
   default_branch: master
   remotes:
     - 'capitalcamp@svn-6971.prod.hosting.acquia.com:capitalcamp.git'
+deploy:
+  tag_source: true
 drush:
   aliases:
     remote: dgc.test
