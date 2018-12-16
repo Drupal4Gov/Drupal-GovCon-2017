@@ -1,9 +1,6 @@
-uuid: 508d8dbc-5aab-4eb8-bec7-bdfb4125b13a
 langcode: en
 status: closed
 dependencies: {  }
-_core:
-  default_config_hash: BrydyK5Ue5wkMQCaHP7_hNFrpGumd2e1j3U_RnPzP7g
 open: null
 close: null
 weight: 0
@@ -23,6 +20,7 @@ settings:
   page: true
   page_submit_path: registration/2017
   page_confirm_path: ''
+  form_title: both
   form_submit_once: false
   form_exception_message: ''
   form_open_message: ''
@@ -38,17 +36,44 @@ settings:
   form_reset: false
   form_disable_autocomplete: false
   form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
   form_unsaved: true
   form_disable_back: false
+  form_submit_back: false
   form_autofocus: false
   form_details_toggle: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
   submission_label: ''
   submission_log: false
+  submission_views: {  }
+  submission_views_replace: {  }
   submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
   wizard_progress_bar: true
   wizard_progress_pages: false
   wizard_progress_percentage: false
+  wizard_progress_link: false
   wizard_start_label: ''
+  wizard_preview_link: false
   wizard_confirmation: true
   wizard_confirmation_label: ''
   wizard_track: ''
@@ -59,6 +84,7 @@ settings:
   preview_attributes: {  }
   preview_excluded_elements: {  }
   preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
   draft: none
   draft_multiple: false
   draft_auto_save: false
@@ -72,35 +98,31 @@ settings:
   confirmation_back: true
   confirmation_back_label: ''
   confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
   limit_total: 1400
+  limit_total_interval: null
   limit_total_message: "<p>Thank you for your interest in Drupal GovCon. Unfortunately, we have sold out! Please check back - we have folks cancel their tickets as we get closer to the event.</p>\r\n\r\n<p>As users cancel their tickets, new tickets will be available on a first come - first served basis.</p>"
+  limit_total_unique: false
   limit_user: null
+  limit_user_interval: null
   limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
   purge: none
   purge_days: null
-  entity_limit_total: null
-  entity_limit_user: null
   results_disabled: false
   results_disabled_ignore: false
   token_update: true
   wizard_comfirmation: true
   wizard_comfirmation_label: ''
-  form_disable_inline_errors: false
-  form_required: false
-  form_submit_back: false
   form_login: false
   form_login_message: ''
   submission_login: false
   submission_login_message: ''
-  submission_exception_message: ''
-  submission_locked_message: ''
-  autofill: false
-  autofill_message: ''
-  autofill_excluded_elements: {  }
-  limit_total_interval: null
-  limit_user_interval: null
-  entity_limit_total_interval: null
-  entity_limit_user_interval: null
 access:
   create:
     roles:
@@ -136,6 +158,18 @@ access:
   delete_own:
     roles:
       - authenticated
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
     users: {  }
     permissions: {  }
 handlers:
@@ -195,4 +229,7 @@ handlers:
       sender_name: ''
       twig: false
       exclude_empty_checkbox: false
-      theme: ''
+      theme_name: ''
+uuid: 508d8dbc-5aab-4eb8-bec7-bdfb4125b13a
+_core:
+  default_config_hash: BrydyK5Ue5wkMQCaHP7_hNFrpGumd2e1j3U_RnPzP7g
