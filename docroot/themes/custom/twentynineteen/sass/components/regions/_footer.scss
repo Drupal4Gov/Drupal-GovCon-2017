@@ -1,0 +1,106 @@
+//
+// Footer
+//
+// Markup: footer.twig
+//
+// Style Guide: components.footer
+
+footer {
+  position: relative;
+}
+
+.mq-footer {
+  margin: 0 auto;
+  width: 100%;
+  max-width: none;
+
+  @include breakpoint($medium-max) {
+    width: 1200px;
+  }
+}
+
+.footer {
+  background: $scarlet;
+  color: $white;
+  width: 100%;
+  overflow: auto;
+  margin-top: 0;
+  padding-top: 1em;
+
+  @include breakpoint($small-max) {
+    padding-top: 0;
+  }
+
+  &__text {
+    width: 95%;
+    padding: 2%;
+    text-align: center;
+
+    @include breakpoint($small-max) {
+      @include span(4 of 12);
+
+      padding: 1% 0 0 1%;
+      text-align: initial;
+    }
+  }
+
+  &__text-content {
+    font-family: $body_font;
+    color: $lighter-gray;
+    font-size: 0.8em;
+    line-height: 170%;
+  }
+
+  &__links {
+    width: 100%;
+    text-align: center;
+
+    @include breakpoint($small-max) {
+      @include span(last 3 of 12);
+
+      padding: 2% 1% 0 0;
+    }
+  }
+
+  &__links-icons {
+    text-align: center;
+
+    @include breakpoint($small-max) {
+      text-align: right;
+    }
+  }
+
+  &__links-icons a {
+    display: inline-block;
+    padding-right: 3%;
+    width: 1.75em;
+  }
+
+  &__links-icons a,
+  &__logo a {
+    @extend %link-opacity;
+  }
+
+  &__logo {
+    clear: both;
+    margin: 0 auto;
+    max-width: 3em;
+    text-align: center;
+    width: 100%;
+
+    @include breakpoint($small-max) {
+      padding-top: 3%;
+      padding-bottom: 0.75em;
+    }
+  }
+}
+
+.region-footer {
+  .block-menu ul.menu {
+    @extend %no-ul-list;
+  }
+}
+
+.footer span.ext {
+  display: none;
+}

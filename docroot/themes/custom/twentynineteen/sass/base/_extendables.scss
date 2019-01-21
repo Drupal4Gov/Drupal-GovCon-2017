@@ -1,0 +1,44 @@
+// Extendable classes
+%no-ul-list,
+.no-ul-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  > li {
+    display: inline-block;
+    list-style-type: none;
+    margin: 2px;
+  }
+}
+
+%tmp-shadow,
+.tmp-shadow {
+  box-shadow: 0 0 2px 0 rgba($med-gray, 1);
+}
+
+.blocked-style {
+  border: 1px solid $white;
+  padding: 12px;
+  border-radius: 5px;
+  background: $off-white;
+
+  @extend %tmp-shadow;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  word-wrap: normal;
+}
+
+%link-opacity {
+  opacity: 0.75;
+
+  &:hover {
+    opacity: 1;
+  }
+}

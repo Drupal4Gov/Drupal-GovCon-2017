@@ -1,0 +1,182 @@
+//
+// Schedule
+//
+// Markup: schedule.twig
+//
+// Style Guide: components.schedule
+
+.menu--_018-schedule,
+.menu--_019-schedule,
+.schedule_main {
+  .menu {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 3px;
+  }
+
+  li {
+    display: inline;
+  }
+
+  a {
+    color: $navy;
+    padding: 0.5em 0.75em;
+    background-color: rgb(142,221,218);
+    text-decoration: none;
+    border-radius: 0.25em 0.25em 0 0;
+    font-size: 0.875em;
+    letter-spacing: 0.02em;
+
+    &.is-active {
+      color: $white;
+      background-color: $teal;
+    }
+
+    &:hover,
+    &.is-active:hover {
+      background-color: rgba(255,157,1,1);
+      color: rgba(54,114,122,1);
+    }
+  }
+}
+
+.view-id-sessions_schedule {
+  margin-bottom: 3rem;
+
+  .view-header h2 {
+    margin-top: 0;
+    padding: 0.25em 0.5em;
+    text-transform: uppercase;
+    background-color: $teal;
+    color: $white;
+    font-size: 1em;
+    letter-spacing: 0.02em;
+    font-weight: 700;
+  }
+
+  .view-content h2,
+  .view-grouping-content > h3 {
+    margin: 1rem 0 0;
+  }
+
+  .view-content time {
+    display: block;
+    margin: 0;
+    border-bottom: 4px solid $teal;
+    padding-left: 0.5rem;
+    color: $orange;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  .views-row {
+    padding: 0.5em;
+    border-bottom: 1px solid $teal;
+
+    &:nth-child(odd) {
+      background: rgba(233,248,248,1);
+    }
+  }
+
+  .views-field-title {
+    color: $navy;
+    font-size: 1.25rem;
+    margin: 0.125rem 0;
+
+    a {
+      color: $navy;
+    }
+  }
+
+  .views-field-uid {
+    color: $mediumteal;
+    font-style: italic;
+    margin-bottom: 0.3em;
+
+    a {
+      color: $mediumteal;
+    }
+  }
+
+  .views-field-field-session-track,
+  .views-field-field-experience-level {
+    display: inline-block;
+    position: relative;
+    font-size: 0.875rem;
+    margin-bottom: 0.3em;
+  }
+
+  .views-field-field-session-track a {
+    color: $navy;
+  }
+
+  .views-field-field-experience-level {
+    color: $mediumteal;
+    margin-left: 0.75em;
+    font-style: italic;
+
+    a {
+      color: $mediumteal;
+    }
+
+    &::before {
+      color: $light-gray;
+      content: '|';
+      position: absolute;
+      top: 0;
+      left: -9px;
+      font-style: normal;
+    }
+  }
+
+  .views-field-field-session-room {
+    font-style: italic;
+    line-height: 1.5rem;
+  }
+
+  .flag-session_schedule {
+    margin: 0.5em 0;
+
+    a {
+      background-color: $teal;
+      border-radius: 0.25em;
+      padding: 0.5em;
+      color: white;
+      font-size: 0.8rem;
+
+      &:hover {
+        background: $scarlet;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .action-flag a::before {
+    content: '\f067 ';
+    font-family: 'fontawesome';
+    padding-right: 0.5em;
+  }
+
+  .action-unflag a::before {
+    content: '\f068 ';
+    font-family: 'fontawesome';
+    padding-right: 0.5em;
+  }
+}
+
+.program-my-schedule .view-content .view-grouping:first-of-type .view-header h2:first-of-type {
+  margin: 0;
+}
+
+.block-views-exposed-filter-blocksessions-schedule-page-2 {
+  .form-actions {
+    display: inline-block;
+    padding: 0.5em;
+
+    input[type="submit"] {
+      margin-top: 1.5rem;
+      padding: 0.7rem 1rem;
+    }
+  }
+}

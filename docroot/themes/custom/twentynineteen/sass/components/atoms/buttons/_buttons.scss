@@ -1,0 +1,33 @@
+// Buttons
+//
+// Markup: buttons.twig
+//
+// Style guide: atoms.buttons
+
+button,
+.btn,
+.button,
+a.button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  border-radius: 0.25em;
+  background-color: $mediumteal;
+  color: $white !important;
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin: 0.5em 0;
+  padding: 0.5em 1em 0.25em;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  border: none;
+
+  &:hover {
+    background-color: $orange;
+    text-decoration: none;
+  }
+}

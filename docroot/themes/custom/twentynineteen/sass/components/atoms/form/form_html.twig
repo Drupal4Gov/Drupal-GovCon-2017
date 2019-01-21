@@ -1,0 +1,155 @@
+<form>
+{#   <p><label for="email">Email:</label>
+    <input type="email" id="email">
+  </p>
+  <p><label for="url">URL:</label>
+    <input type="url" id="url">
+  </p>
+  <p><label for="tel">Telephone:</label>
+    <input type="tel" id="tel">
+  </p>
+  <p><label for="number">Number:</label>
+    <input type="number" id="number" min="0" max="10" step="1" value="5">
+  </p>
+  <p><label for="search">Search:</label>
+    <input type="search" id="search">
+  </p>
+  <p><label for="date">Date:</label>
+    <input type="date" id="date">
+  </p>
+  <p><label for="datetime">Datetime:</label>
+    <input type="datetime" id="datetime">
+  </p>
+  <p><label for="datetime-local">Datetime-local:</label>
+    <input type="datetime-local" id="datetime-local">
+  </p>
+  <p><label for="time">Time:</label>
+    <input type="time" id="time">
+  </p>
+  <p><label for="color">Color:</label>
+    <input type="color" id="color">
+  </p>
+  <p><label for="datalist">Datalist:</label>
+    <input list="browsers" name="browser" type="datalist" id="datalist">
+    <datalist id="browsers">
+      <option value="Internet Explorer">
+      </option>
+      <option value="Firefox">
+      </option>
+      <option value="Chrome">
+      </option>
+      <option value="Opera">
+      </option>
+      <option value="Safari">
+      </option>
+    </datalist>
+  </p>
+  <p><label for="range">Range:</label>
+    <input type="range" id="range" name="points" min="1" max="10">
+  </p>
+  <p><label for="output">Output:</label>
+    <output name="result" id="output">42</output>
+  </p>
+  <p><label for="progress">Progress:</label>
+    <progress id="progress" value="65" max="100"></progress>
+  </p>
+  <p><label for="meter">Meter:</label>
+    <meter id="meter" min="200" max="500" value="350">350 degrees</meter>
+  </p>
+  <p>
+    <button class="button">Button Element</button>
+  </p>
+  <p>
+    <input class="button" type="reset" value="Clear">
+  </p>
+  <p>
+    <input class="button" type="submit" value="Submit">
+  </p>
+  <p>
+    <input class="button" type="submit" value="Submit" disabled>
+  </p>
+  <p>
+    <div class="formelement">
+      <h4 class="formsubhead">Radio Select</h4>
+      <div class="radioselect">
+        <input type="radio" id="radioselect01" name="radioselect" value="selectOption01">
+        <label for="radioselect01">Radio Option 1</label>
+        <input type="radio" id="radioselect02" name="radioselect" value="selectOption02">
+        <label for="radioselect02">Radio Option 2</label>
+        <input type="radio" id="radioselect03" name="radioselect" value="selectOption03">
+        <label for="radioselect03">Radio Option 3</label>
+        <input type="radio" id="radioselect04" name="radioselect" value="selectOption04" disabled="">
+        <label for="radioselect04">Radio Option 4 (disabled)</label>
+      </div>
+    </div>
+  </p>
+  <p>
+    <div class="formelement">
+      <h4 class="formsubhead">Checkbox Select</h4>
+      <div class="checkselect">
+        <input type="checkbox" id="checkselect01" name="checkselect" value="checkselect01">
+        <label for="checkselect01">Check Option 1</label>
+        <input type="checkbox" id="checkselect02" name="checkselect" value="checkselect02">
+        <label for="checkselect02">Check Option 2</label>
+        <input type="checkbox" id="checkselect03" name="checkselect" value="checkselect03">
+        <label for="checkselect03">Check Option 3</label>
+        <input type="checkbox" id="checkselect04" name="checkselect" value="checkselect04" disabled="">
+        <label for="checkselect03">Check Option 4 (disabled)</label>
+      </div>
+    </div>
+  </p>
+</form> #}
+<form>
+  <h2 id="styelink_forms">Standard Form Elements</h2>
+  <p>Form elements, only using CSS to modify default HTML element display to boost accessibility. This includes hover states. <span class="form_required">*</span><em>Denotes a required item.</em></p>
+  <label for="textfield">Text Field</label>
+  <input type="text" placeholder="Enter Text" id="textfield">
+  <label for="textfield_disabled">Text Field Disabled</label>
+  <input type="text" placeholder="Enter Text" id="textfield_disabled" disabled="">
+  <label for="textarea">Text Area</label>
+  <textarea rows="4" id="textarea" placeholder="Enter long text here. For good UX practices, the text area should be sized to the amount of text a user is expected to submit there. For example, this area is set to be a fixed size, and is responsively set to display close to the proper visible area at all breakpoints. This block is 300 characters."></textarea>
+  <div class="formelement">
+    <h4 class="formsubhead">Radio Select</h4>
+    <div class="radioselect">
+      <input type="radio" id="radioselect01" name="radioselect" value="selectOption01">
+      <label for="radioselect01">Radio Option 1</label>
+      <input type="radio" id="radioselect02" name="radioselect" value="selectOption02">
+      <label for="radioselect02">Radio Option 2</label>
+      <input type="radio" id="radioselect03" name="radioselect" value="selectOption03">
+      <label for="radioselect03">Radio Option 3</label>
+      <input type="radio" id="radioselect04" name="radioselect" value="selectOption04" disabled="">
+      <label for="radioselect04">Radio Option 4 (disabled)</label>
+    </div>
+  </div> <!-- End Formelement Div -->
+  <div class="formelement">
+    <h4 class="formsubhead">Checkbox Select</h4>
+    <div class="checkselect">
+      <input type="checkbox" id="checkselect01" name="checkselect" value="checkselect01">
+      <label for="checkselect01">Check Option 1</label>
+      <input type="checkbox" id="checkselect02" name="checkselect" value="checkselect02">
+      <label for="checkselect02">Check Option 2</label>
+      <input type="checkbox" id="checkselect03" name="checkselect" value="checkselect03">
+      <label for="checkselect03">Check Option 3</label>
+      <input type="checkbox" id="checkselect04" name="checkselect" value="checkselect04" disabled="">
+      <label for="checkselect03">Check Option 4 (disabled)</label>
+    </div>
+  </div> <!-- End Formelement Div -->
+  <div class="formelement">
+    <h4 class="formsubhead">Dropdown Select</h4>
+    <select name="dropselect">
+      <option value="dropselect01">Select Option 1</option>
+      <option value="dropselect02">Select Option 2</option>
+      <option value="dropselect03">Select Option 3</option>
+      <option value="dropselect04">Select Option 4</option>
+      <option value="dropselect05">Select Option 5</option>
+      <option value="dropselect06">Select Option 6</option>
+      <option value="dropselect07">Select Option 7</option>
+      <option value="dropselect08">Select Option 8</option>
+      <option value="dropselect09">Select Option 9</option>
+      <option value="dropselect10">Select Option 10</option>
+      <option value="dropselect11">Select Option 11</option>
+    </select>
+  </div> <!-- End Formelement Div -->
+  <input type="submit" value="Submit Form">
+  <input type="submit" value="Disabled Submit" disabled="">
+</form>

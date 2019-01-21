@@ -1,0 +1,86 @@
+.view-sponsors-page {
+  margin-bottom: 8em;
+
+  .view-content {
+    border-radius: 0.5em;
+    padding: 1em;
+    background: $white;
+  }
+
+  h2 {
+    margin: 0;
+    border-bottom: 0.125em solid rgba($scarlet, 0.5);
+    padding-bottom: 0.125em;
+    font-size: 1.5em;
+    text-align: center;
+  }
+}
+
+.view-group--sponsors-page {
+  @include clearfix;
+
+  padding: 1.5em 0;
+  margin: 0;
+  text-align: center;
+  display: block;
+
+  h2 {
+    margin-top: 40px;
+  }
+
+  p {
+    font-size: 0.75em;
+    font-style: italic;
+  }
+}
+
+.sponsor {
+  width: 50%;
+  vertical-align: middle;
+  padding: 30px 10px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  display: inline-block;
+
+  @include breakpoint($small-max) {
+    width: 25%;
+    padding: 0 10px;
+    margin: 0;
+  }
+
+  img {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  img:hover {
+    opacity: 0.5; // Hover effect for logos
+  }
+}
+
+.block-views-blocksponsors-homepage-core-sponsors {
+  padding: 1em;
+  background: $white;
+
+  h2 {
+    margin-top: 0;
+    text-align: center;
+  }
+
+  .view-content {
+    padding: 1.5em 0;
+    margin: 0;
+    text-align: center;
+    display: block;
+  }
+
+  p {
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .view-footer a {
+    font-style: italic;
+    color: $scarlet;
+  }
+}

@@ -1,0 +1,32 @@
+// Example Mixins ///////////////
+@mixin opac-color($r, $g, $b, $pertc) {
+  background: rgb($r, $g, $b);
+  background: rgba($r, $g, $b, $pertc);
+}
+
+@mixin region-spacer($color, $direction: bottom) {
+  border-top: 1px dotted $color;
+
+  @if $direction == top {
+    padding-top: 25px;
+    margin-top: 25px;
+  }
+
+  @else {
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+  }
+}
+
+@mixin borderradius($px: 5px) {
+  border-radius: $px;
+}
+
+// Clearfix.
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}

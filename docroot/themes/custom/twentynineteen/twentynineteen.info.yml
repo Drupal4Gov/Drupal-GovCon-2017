@@ -1,0 +1,18 @@
+name: twentynineteen
+type: theme
+description: 'Druapl GovCon theme based on Cog'
+core: 8.x
+base theme: cog
+libraries:
+  - twentynineteen/fonts
+  - twentynineteen/fontawesome
+  - twentynineteen/global_styles
+regions:
+  branding: Branding
+  header: Header
+  pre_content: 'Pre content'
+  content: Content
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  post_content: 'Post content'
+  footer: Footer

@@ -1,0 +1,20 @@
+// Breakpoints & MQ's ///////////////
+$screen: "only screen" !default;
+$small-max: 767px !default;
+$medium-max: 1023px !default;
+$small: $screen max-width $small-max;
+$up-sm: $screen $small-max + 1;
+$medium: $screen $small-max + 1 $medium-max;
+$large: $screen $medium-max + 1;
+
+// EXAMPLE FOR MQ REFERENCES =>
+
+/*
+body {
+  background: green !important;
+  @include breakpoint($small)  { background: orange !important; }
+  @include breakpoint($medium) { background: teal !important; }
+  @include breakpoint($large)  { background: orchid !important; }
+  @include breakpoint($up-sm)  { background: aliceblue !important; }
+}
+*/
