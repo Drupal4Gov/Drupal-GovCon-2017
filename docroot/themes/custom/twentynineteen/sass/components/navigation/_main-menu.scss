@@ -1,0 +1,230 @@
+// Main Menu
+//
+// Main Menu Styling
+//
+// Markup: main-menu.twig
+//
+// Style guide: components.main-menu
+
+.menu--_018-main-navigation,
+.menu--_019-main-navigation,
+.menu--main-navigation {
+  background: $scarlet;
+  margin-top: -4px;
+  min-height: 45px;
+
+  @include breakpoint($small-max) {
+    margin-top: 0;
+    min-height: auto;
+  }
+}
+
+input.toggle {
+  opacity: 0;
+}
+
+input.toggle:focus + label.toggle::before {
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+input[type="checkbox"] + label.toggle::before {
+  content: "\00a0";
+  position: absolute;
+  right: 13px;
+  left: auto;
+  top: -20px;
+  width: 29px;
+  height: 40px;
+  background-color: transparent;
+
+  @include breakpoint($small-max) {
+    content: '';
+  }
+}
+
+#show-menu {
+  min-height: 45px;
+
+  @include breakpoint($small-max) {
+    min-height: auto;
+  }
+}
+
+.toggle {
+  width: 100%;
+  height: auto;
+  background-color: $teal;
+
+  @include breakpoint($small-max) {
+    height: 0;
+    width: 0;
+  }
+
+  ~ .menu-main {
+    display: none;
+
+    @include breakpoint($small-max) {
+      display: flex;
+    }
+  }
+
+  &:checked ~ .menu-main {
+    display: flex;
+  }
+
+  &__icon {
+    height: 40px;
+    width: 27px;
+    position: absolute;
+    right: 30px;
+    top: 0;
+    cursor: pointer;
+
+    @include breakpoint($small-max) {
+      display: none;
+    }
+  }
+
+  &__icon-line {
+    position: absolute;
+    display: block;
+    background: $med-gray;
+    width: 27px;
+    height: 0.2rem;
+    border-radius: 0.2rem;
+    right: 0;
+    text-indent: 0;
+    transition: all 0.6s cubic-bezier(0.5, 0.1, 0, 1.2);
+    z-index: 2000;
+
+    &:first-child {
+      top: 16px;
+    }
+
+    &:nth-child(2) {
+      top: 24px;
+    }
+
+    &:last-child {
+      top: 32px;
+    }
+  }
+
+  &:checked ~ label .toggle__icon-line {
+    &:first-child {
+      top: 12px;
+      width: 27px;
+      transform: translateX(-8px) rotate(-45deg) translateY(12px);
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
+    }
+
+    &:last-child {
+      top: 26px;
+      width: 27px;
+      transform: translateX(-5px) rotate(45deg) translateY(-8px);
+    }
+  }
+}
+
+.menu-main {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+
+  @include breakpoint($small-max) {
+    flex-direction: row;
+    width: 50%;
+    margin-top: -20px;
+    padding-top: 0;
+  }
+
+  &__item {
+    position: relative;
+    margin: 0;
+
+    @include breakpoint($small-max) {
+      margin: 0;
+
+      &:hover .menu-submenu,
+      &.focus .menu-submenu {
+        z-index: 10;
+        height: auto;
+        background: rgba($scarlet, 0.95);
+        border-radius: 0 0 0.5em 0.5em;
+      }
+    }
+
+    > a {
+      text-transform: uppercase;
+    }
+  }
+
+  a {
+    display: block;
+    color: rgba($white, 0.5);
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    padding: 0.5em 1.5em;
+
+    @include breakpoint($small-max) {
+      padding: 0.5em;
+    }
+  }
+
+  a:hover {
+    color: rgba($white, 1);
+    text-decoration: none;
+  }
+
+  a.is-active {
+    color: rgba($white, 1);
+    text-decoration: none;
+  }
+}
+
+.menu-submenu {
+  position: relative;
+  padding: 0;
+  list-style: none;
+
+  @include breakpoint($small-max) {
+    position: absolute;
+    height: 0;
+    overflow: hidden;
+  }
+
+  &__item {
+    margin: 0;
+    width: 100%;
+
+    @include breakpoint($small-max) {
+      width: 14em;
+    }
+
+    &:hover {
+      background-color: rgba($mediumteal, 1);
+    }
+  }
+
+  a {
+    padding: 0.5em 2.75em;
+    font-size: 0.875em;
+
+    &:hover {
+      color: $white;
+      font-size: 0.875em;
+    }
+
+    @include breakpoint($small-max) {
+      padding: 0.5em;
+    }
+  }
+}

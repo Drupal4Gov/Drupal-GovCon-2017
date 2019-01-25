@@ -1,0 +1,50 @@
+.menu--account {
+  display: none;
+  background: $scarlet;
+
+  &.menu--account--show {
+    display: block;
+  }
+
+  @include breakpoint($small-max) {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0.625em;
+    z-index: 15;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0 0 0.5em 1.5em;
+    list-style: none;
+
+    @include breakpoint($small-max) {
+      flex-direction: row;
+      padding-bottom: 0;
+    }
+  }
+
+  @include breakpoint($small-max) {
+    li {
+      margin: 0.6em 0.5em;
+
+      &:last-child {
+        margin: 0.6em 0;
+      }
+    }
+  }
+
+  a {
+    padding: 0.6em 0;
+    font-size: 0.875em;
+    color: rgba($white, 0.75);
+
+    &:hover {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+// Link
+//
+// Markup: a.twig
+//
+// Style guide: atoms.a
+a,
+a:visited {
+  color: $link;
+  text-decoration: none;
+  cursor: inherit;
+}
+
+a:hover {
+  color: $scarlet;
+  text-decoration: underline;
+  cursor: pointer;
+}

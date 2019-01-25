@@ -1,0 +1,56 @@
+// Base Typography
+//
+// Markup: typography.twig
+//
+// Style guide: atoms.typography
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-rendering: optimizeLegibility;
+  font-weight: 700;
+  color: $teal;
+}
+
+h1 {
+  color: $navy;
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.25em;
+}
+
+h4 {
+  font-size: 1.125em;
+}
+
+h5 {
+  font-size: 1em;
+}
+
+h6 {
+  font-size: 0.875em;
+  letter-spacing: 0.02em;
+
+  /* Increases readibility at this smaller type size */
+}
+
+pre {
+  white-space: pre-wrap;
+  overflow-x: auto;
+
+  code {
+    border: 1px dotted $dark-gray;
+    background: $off-white;
+    padding: 2px 9px;
+    display: block;
+    font-size: 85%;
+  }
+}

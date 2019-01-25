@@ -1,0 +1,69 @@
+.body-sidebars-second aside.sidebar-second > .region-sidebar-second {
+  .block-views-blockspecial-announcements-display-block-3 {
+    margin-right: -15px;
+    box-shadow: none;
+  }
+}
+
+aside .block-views-blockspecial-announcements-display-block-3 {
+  position: relative;
+  border: none;
+  border-radius: 0;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  background: linear-gradient(rgba($blk, 0.2) 0%, rgba($dark-gray, 1) 25%), rgba($dark-gray, 1);
+  letter-spacing: 0.02em;
+  z-index: 1;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.05;
+    background-image: url(../images/GC19_motif_pattern_01b-K.svg);
+    background-size: 144px 144px;
+  }
+
+  h2 {
+    padding: 0;
+    color: rgba(246, 148, 101, 1);
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+
+  h2 + div p {
+    margin-top: 0.5em;
+  }
+
+  .views-field-body h2 {
+    font-size: 1em;
+  }
+
+  p {
+    color: $white;
+  }
+
+  .views-row {
+    border-top: 1px solid rgba(246, 148, 101, 1);
+    margin-top: 1.5em;
+    padding-top: 0.75em;
+  }
+
+  h3 {
+    margin-bottom: 0.25em;
+    text-transform: uppercase;
+    color: rgba(254, 236, 127, 1);
+    font-weight: 700;
+    font-size: 1.17em;
+  }
+
+  a {
+    color: $white;
+    text-decoration: underline;
+  }
+}

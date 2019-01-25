@@ -1,0 +1,42 @@
+// Common Colors
+$white: #fff;
+$red: #ee696c;
+$yellow: #e8ed57;
+
+// b&w colors as placeholders
+$blk: #000;
+$gray: rgba(80, 80, 80, 1);
+$med-gray: rgba(255, 255, 255, 0.5);
+$light-gray: lighten($blk, 70%);
+$lighter-gray: lighten($blk, 90%);
+$off-white: lighten($blk, 97%);
+
+// gold colors
+$gold: rgb(254, 218, 0);
+$med-gold: rgba($gold, 0.5);
+$light-gold: rgba($gold, 0.4);
+$light-yellow: rgba($gold, 0.2);
+$pale-yellow: rgb(255, 248, 204);
+$pale-blue: rgb(154, 184, 188);
+
+// theme colors
+$teal: rgb(28, 187, 180);
+$mediumteal: rgb(22, 150, 144);
+$darkteal: rgb(18, 101, 113);
+$scarlet: rgb(158, 42, 19);
+$orange: rgb(242, 101, 34);
+$dark-gray: rgb(80, 80, 80);
+$navy: rgb(19, 73, 113);
+
+// Utility color variables ///////////////
+$heading: $teal;
+$link: $teal;
+$textarea: rgba(255, 253, 242, 1);
+$textarea-focus: rgba(128, 188, 250, 1);
+$legend: rgba(54, 114, 122, 0.75);
+
+// Susy config ///////////////
+$susy: (
+  columns: 12, // The number of columns in your grid
+  gutters: 1/4, // The size of a gutter in relation to a single column
+);

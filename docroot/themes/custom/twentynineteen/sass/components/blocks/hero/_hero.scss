@@ -1,0 +1,105 @@
+// Hero
+//
+// Hero Styling
+//
+// Markup: hero.twig
+//
+// Style guide: components.hero
+
+.herowrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero {
+  width: 100%;
+
+  &__background-img {
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+    margin-bottom: -0.4em;
+    max-height: 400px;
+    overflow: hidden;
+  }
+
+  &__details {
+    display: block;
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+    bottom: 2em;
+
+    @include breakpoint($up-sm) {
+      bottom: 1em;
+    }
+
+    @include breakpoint($small) {
+      bottom: 0;
+    }
+  }
+
+  &__details-logo {
+    margin: 0 auto;
+    padding: 5em 1em 2em;
+    filter: drop-shadow(0 0 1em rgba($blk, 0.5));
+    -webkit-filter: drop-shadow(0 0 1em rgba($blk, 0.5));
+    max-width: 20em;
+    width: auto;
+
+    .st6 {
+      transition: fill 0.4s ease;
+    }
+
+    @include breakpoint($small) {
+      max-width: 17em;
+    }
+
+    @include breakpoint($medium-max) {
+      padding-top: 2em;
+    }
+
+    &:hover {
+      filter: drop-shadow(0 0 2em rgba($blk, 1));
+
+      .st6 {
+        fill: rgba(254, 245, 155, 1);
+        transition: fill 0.4s ease;
+      }
+    }
+  }
+
+  &__details-callout {
+    max-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__details-button {
+    padding: 0.25em 0.5em;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid $white;
+    border-radius: 0.25em;
+    font-family: $body-font;
+    text-decoration: none;
+    font-size: 1.5em;
+    filter: drop-shadow(0 0 1em rgba(0, 0, 0, 0.5));
+  }
+}
+
+a.hero__details-button {
+  color: $white;
+
+  &:hover {
+    background-color: $scarlet;
+    border: 2px solid rgb(254, 236, 127);
+    color: rgb(254, 236, 127);
+    text-decoration: none;
+  }
+
+  .ext {
+    display: none;
+  }
+}

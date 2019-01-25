@@ -1,0 +1,93 @@
+// Tables
+//
+// Markup: table.twig
+//
+// Style guide: atoms.table
+
+table {
+  font-family: $body_font;
+  border: 1px solid $teal;
+  padding: 0.25em;
+
+  .label {
+    color: $white;
+  }
+
+  thead {
+    background-color: $mediumteal;
+    border-bottom: 0;
+    color: $white;
+    text-align: left;
+
+    a,
+    a:visited {
+      color: rgba($white, 0.5);
+    }
+
+    a:hover {
+      color: $white;
+
+      .tablesort--desc::after {
+        border-top-color: $white;
+      }
+
+      .tablesort--asc::after {
+        border-bottom-color: $white;
+      }
+    }
+  }
+
+  .tablesort--desc {
+    background-image: none;
+
+    &::after {
+      content: '';
+      display: block;
+      margin-top: 5px;
+      width: 0;
+      height: 0;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-top: 10px solid rgba($white, 0.5);
+    }
+  }
+
+  .tablesort--asc {
+    background-image: none;
+
+    &::after {
+      content: '';
+      display: block;
+      margin-top: 5px;
+      width: 0;
+      height: 0;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-bottom: 10px solid rgba($white, 0.5);
+    }
+  }
+
+  th {
+    font-weight: 500;
+    padding: 0.25em;
+  }
+
+  td {
+    border: 0;
+    outline: none;
+    padding: 0.25em;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: rgba(28, 187, 180, 0.1);
+  }
+
+  tfoot {
+    border-top: 1px solid $teal;
+    background-color: rgba(28, 187, 180, 0.2);
+    color: $mediumteal;
+    font-size: 0.875em;
+    font-weight: 700;
+    text-align: left;
+  }
+}
