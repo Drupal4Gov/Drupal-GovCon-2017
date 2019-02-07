@@ -21,7 +21,7 @@
   a {
     color: $navy;
     padding: 0.5em 0.75em;
-    background-color: rgb(142,221,218);
+    background-color: rgb(142, 221, 218);
     text-decoration: none;
     border-radius: 0.25em 0.25em 0 0;
     font-size: 0.875em;
@@ -34,8 +34,8 @@
 
     &:hover,
     &.is-active:hover {
-      background-color: rgba(255,157,1,1);
-      color: rgba(54,114,122,1);
+      background-color: rgba(255, 157, 1, 1);
+      color: rgba(54, 114, 122, 1);
     }
   }
 }
@@ -75,7 +75,7 @@
     border-bottom: 1px solid $teal;
 
     &:nth-child(odd) {
-      background: rgba(233,248,248,1);
+      background: rgba(233, 248, 248, 1);
     }
   }
 

@@ -5,3 +5,6 @@ echo "running frontend build for twentyseventeen"
 
 echo "running frontend build for twentyeighteen"
 (cd docroot/themes/custom/twentyeighteen;npm run build)
+
+echo "running frontend build for twentynineteen"
+(cd docroot/themes/custom/twentynineteen;npm run build)
