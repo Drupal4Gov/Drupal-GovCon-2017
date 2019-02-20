@@ -4287,16 +4287,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "8.6.9",
+            "version": "8.6.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "cac12e0ec19d5c6fa53778522b3ff4c542f86c8d"
+                "reference": "59568ac02948cf075ee8543e6c6d4386ad8daec1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/cac12e0ec19d5c6fa53778522b3ff4c542f86c8d",
-                "reference": "cac12e0ec19d5c6fa53778522b3ff4c542f86c8d",
+                "url": "https://api.github.com/repos/drupal/core/zipball/59568ac02948cf075ee8543e6c6d4386ad8daec1",
+                "reference": "59568ac02948cf075ee8543e6c6d4386ad8daec1",
                 "shasum": ""
             },
             "require": {
@@ -4530,7 +4530,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2019-02-08T12:21:40+00:00"
+            "time": "2019-02-20T18:35:01+00:00"
         },
         {
             "name": "drupal/crop",
@@ -6123,20 +6123,20 @@
         },
         {
             "name": "drupal/jsonapi",
-            "version": "2.2.0",
+            "version": "2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/jsonapi",
-                "reference": "8.x-2.2"
+                "reference": "8.x-2.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/jsonapi-8.x-2.2.zip",
-                "reference": "8.x-2.2",
-                "shasum": "58eb3b480a43d19bc1c7987a4183d4465ac37861"
+                "url": "https://ftp.drupal.org/files/projects/jsonapi-8.x-2.3.zip",
+                "reference": "8.x-2.3",
+                "shasum": "b5a6e263eb1c238de869b28483e411b1167a8432"
             },
             "require": {
-                "drupal/core": "^8.5.4"
+                "drupal/core": "^8.5.11"
             },
             "require-dev": {
                 "drupal/schemata": "1.x-dev#8325d172e1d6880aa24073f8f751ef089282cf9a",
@@ -6149,8 +6149,8 @@
                     "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-2.2",
-                    "datestamp": "1550482086",
+                    "version": "8.x-2.3",
+                    "datestamp": "1550692492",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -7134,17 +7134,17 @@
         },
         {
             "name": "drupal/metatag",
-            "version": "1.7.0",
+            "version": "1.8.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupal.org/project/metatag",
-                "reference": "8.x-1.7"
+                "reference": "8.x-1.8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/metatag-8.x-1.7.zip",
-                "reference": "8.x-1.7",
-                "shasum": "93decaefd053c524918ceae5b5ef05dd77de0857"
+                "url": "https://ftp.drupal.org/files/projects/metatag-8.x-1.8.zip",
+                "reference": "8.x-1.8",
+                "shasum": "fb5d31aa08c8c2e175f096f9917e9741db152ea8"
             },
             "require": {
                 "drupal/core": "*",
@@ -7166,8 +7166,8 @@
                     "dev-1.x": "1.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.7",
-                    "datestamp": "1535726393",
+                    "version": "8.x-1.8",
+                    "datestamp": "1550692511",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -13023,16 +13023,16 @@
         },
         {
             "name": "swagger-api/swagger-ui",
-            "version": "v3.20.7",
+            "version": "v3.20.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swagger-api/swagger-ui.git",
-                "reference": "67c1e00d96b915737da66efdbb0ea559b2d465f9"
+                "reference": "85d82fc0a82cb0325ace31780ae5f174cb8bcdf3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swagger-api/swagger-ui/zipball/67c1e00d96b915737da66efdbb0ea559b2d465f9",
-                "reference": "67c1e00d96b915737da66efdbb0ea559b2d465f9",
+                "url": "https://api.github.com/repos/swagger-api/swagger-ui/zipball/85d82fc0a82cb0325ace31780ae5f174cb8bcdf3",
+                "reference": "85d82fc0a82cb0325ace31780ae5f174cb8bcdf3",
                 "shasum": ""
             },
             "type": "library",
@@ -13076,7 +13076,7 @@
                 "swagger",
                 "ui"
             ],
-            "time": "2019-02-08T23:27:33+00:00"
+            "time": "2019-02-16T02:50:26+00:00"
         },
         {
             "name": "symfony-cmf/routing",
@@ -17006,13 +17006,13 @@
         },
         {
             "name": "webflo/drupal-core-require-dev",
-            "version": "8.6.9",
+            "version": "8.6.10",
             "require": {
                 "behat/mink": "1.7.x-dev",
                 "behat/mink-goutte-driver": "^1.2",
                 "behat/mink-selenium2-driver": "1.3.x-dev",
                 "drupal/coder": "^8.2.12",
-                "drupal/core": "8.6.9",
+                "drupal/core": "8.6.10",
                 "jcalderonzumba/gastonjs": "^1.0.2",
                 "jcalderonzumba/mink-phantomjs-driver": "^0.3.1",
                 "mikey179/vfsstream": "^1.2",
@@ -17028,7 +17028,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "require-dev dependencies from drupal/core",
-            "time": "2019-02-08T12:31:37+00:00"
+            "time": "2019-02-20T20:01:42+00:00"
         }
     ],
     "aliases": [],
