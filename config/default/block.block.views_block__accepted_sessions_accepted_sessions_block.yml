@@ -1,0 +1,31 @@
+uuid: 61bc799b-c463-4001-a9bf-a458ff32b009
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.accepted_sessions
+  module:
+    - system
+    - views
+  theme:
+    - twentyeighteen
+id: views_block__accepted_sessions_accepted_sessions_block
+theme: twentyeighteen
+region: content
+weight: -4
+provider: null
+plugin: 'views_block:accepted_sessions-accepted_sessions_block'
+settings:
+  id: 'views_block:accepted_sessions-accepted_sessions_block'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/user/*'
+    negate: false
+    context_mapping: {  }
