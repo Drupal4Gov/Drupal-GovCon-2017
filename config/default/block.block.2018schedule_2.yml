@@ -1,0 +1,29 @@
+uuid: d678ce9f-7d1d-4a7c-a8a9-03fda2871783
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.2018-schedule
+  module:
+    - system
+  theme:
+    - twentynineteen
+id: 2018schedule_2
+theme: twentynineteen
+region: content
+weight: -2
+provider: null
+plugin: 'system_menu_block:2018-schedule'
+settings:
+  id: 'system_menu_block:2018-schedule'
+  label: '2018 Schedule'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility:
+  request_path:
+    id: request_path
+    pages: '/2018/schedule/*'
+    negate: false
+    context_mapping: {  }

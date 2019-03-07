@@ -1,0 +1,30 @@
+uuid: 79d6dd81-ac40-485d-9f21-e7371a1956bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.special_announcements_display
+  module:
+    - system
+    - views
+  theme:
+    - twentynineteen
+id: views_block__special_announcements_display_block_3_2
+theme: twentynineteen
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'views_block:special_announcements_display-block_3'
+settings:
+  id: 'views_block:special_announcements_display-block_3'
+  label: Announcements
+  provider: views
+  label_display: visible
+  views_label: Announcements
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,29 @@
+uuid: 0ccf2bb3-a354-4386-a3bd-85278dcab97e
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.schedule
+  module:
+    - system
+  theme:
+    - twentynineteen
+id: schedule_2
+theme: twentynineteen
+region: content
+weight: -4
+provider: null
+plugin: 'system_menu_block:schedule'
+settings:
+  id: 'system_menu_block:schedule'
+  label: Schedule
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility:
+  request_path:
+    id: request_path
+    pages: '/schedule*'
+    negate: false
+    context_mapping: {  }
