@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - webform.webform.2018_registration
+    - webform.webform.2019_registration
     - webform.webform.registration
   module:
     - user
@@ -408,6 +409,7 @@ display:
           value:
             registration: registration
             2018_registration: 2018_registration
+            2019_registration: 2019_registration
           group: 1
           exposed: false
           expose:
