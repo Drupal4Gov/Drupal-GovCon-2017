@@ -1,0 +1,31 @@
+uuid: d7fa0238-b3bd-462e-8dd0-a026df631689
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.user_registrations
+  module:
+    - system
+    - views
+  theme:
+    - twentynineteen
+id: views_block__user_registrations_block_1
+theme: twentynineteen
+region: content
+weight: 1
+provider: null
+plugin: 'views_block:user_registrations-block_1'
+settings:
+  id: 'views_block:user_registrations-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: "/user/*\r\n!/user/*/edit"
+    negate: false
+    context_mapping: {  }

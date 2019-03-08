@@ -1,0 +1,20 @@
+uuid: 6fb4cd96-28f8-4809-90d7-59d666c030b2
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - twentynineteen
+id: help
+theme: twentynineteen
+region: content
+weight: -9
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }
