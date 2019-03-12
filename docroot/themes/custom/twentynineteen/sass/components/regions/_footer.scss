@@ -99,6 +99,9 @@ footer {
   .block-menu ul.menu {
     @extend %no-ul-list;
   }
+  #block-footertagline-2 {
+    @extend .footer__text;
+  }
 }
 
 .footer span.ext {
