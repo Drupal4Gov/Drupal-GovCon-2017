@@ -9,9 +9,8 @@
 
   h2 {
     margin: 0;
-    border-bottom: 0.125em solid rgba($scarlet, 0.5);
+    border-bottom: 0.125em solid rgba($scarlet, 1);
     padding-bottom: 0.125em;
-    font-size: 1.5em;
     text-align: center;
   }
 }
@@ -19,7 +18,7 @@
 .view-group--sponsors-page {
   @include clearfix;
 
-  padding: 1.5em 0;
+  padding: 1.5em 0 2em;
   margin: 0;
   text-align: center;
   display: block;
@@ -81,6 +80,5 @@
 
   .view-footer a {
     font-style: italic;
-    color: $scarlet;
   }
 }
