@@ -1,0 +1,24 @@
+uuid: 642ab908-e460-4b75-b935-ac097fbc13b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.2018-main-navigation
+  module:
+    - system
+  theme:
+    - twentynineteen
+id: 2018mainnavigation_2
+theme: twentynineteen
+region: header
+weight: 0
+provider: null
+plugin: 'system_menu_block:2018-main-navigation'
+settings:
+  id: 'system_menu_block:2018-main-navigation'
+  label: '2018 Main Navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

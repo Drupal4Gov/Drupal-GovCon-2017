@@ -1,27 +1,28 @@
-uuid: a7ed208a-9246-4ea8-b2f8-62381fc29d72
+uuid: d7fa0238-b3bd-462e-8dd0-a026df631689
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.user_sessions
+    - views.view.user_registrations
   module:
     - system
     - views
   theme:
-    - twentyeighteen
-id: twentyeighteen_views_block__user_sessions_user_sessions_block
-theme: twentyeighteen
+    - twentynineteen
+id: views_block__user_registrations_block_1
+theme: twentynineteen
 region: content
-weight: -4
+weight: 1
 provider: null
-plugin: 'views_block:user_sessions-user_sessions_block'
+plugin: 'views_block:user_registrations-block_1'
 settings:
-  id: 'views_block:user_sessions-user_sessions_block'
+  id: 'views_block:user_registrations-block_1'
   label: ''
   provider: views
   label_display: visible
   views_label: ''
   items_per_page: none
+  context_mapping: {  }
 visibility:
   request_path:
     id: request_path

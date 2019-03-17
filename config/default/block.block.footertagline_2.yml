@@ -1,0 +1,25 @@
+uuid: bca9ad39-ced1-4973-a9f7-276e923bc129
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:73641198-78a8-4f5f-9439-c91c5b3f1a08'
+  module:
+    - block_content
+  theme:
+    - twentynineteen
+id: footertagline_2
+theme: twentynineteen
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:73641198-78a8-4f5f-9439-c91c5b3f1a08'
+settings:
+  id: 'block_content:73641198-78a8-4f5f-9439-c91c5b3f1a08'
+  label: 'Footer tagline'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
