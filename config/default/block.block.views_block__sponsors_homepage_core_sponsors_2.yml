@@ -1,0 +1,30 @@
+uuid: df3ac84a-9ccf-4a44-9da0-8ba21a7419c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.sponsors
+  module:
+    - system
+    - views
+  theme:
+    - twentynineteen
+id: views_block__sponsors_homepage_core_sponsors_2
+theme: twentynineteen
+region: post_content
+weight: 0
+provider: null
+plugin: 'views_block:sponsors-homepage_core_sponsors'
+settings:
+  id: 'views_block:sponsors-homepage_core_sponsors'
+  label: 'Thank you to our Core Sponsors'
+  provider: views
+  label_display: visible
+  views_label: 'Thank you to our Core Sponsors'
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

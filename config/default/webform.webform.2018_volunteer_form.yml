@@ -1,5 +1,6 @@
+uuid: f3f371b2-8be9-4f14-8e12-713c00460461
 langcode: en
-status: open
+status: closed
 dependencies: {  }
 open: null
 close: null
@@ -11,7 +12,7 @@ id: 2018_volunteer_form
 title: '2018 Volunteer Form'
 description: ''
 category: ''
-elements: "first_name:\n  '#type': textfield\n  '#title': 'First Name'\n  '#required': true\n  '#required_error': 'First Name is a required field.'\nlast_name:\n  '#type': textfield\n  '#title': 'Last Name'\n  '#required': true\n  '#required_error': 'Last Name is a required field.'\nemail:\n  '#type': email\n  '#title': Email\n  '#required': true\n  '#required_error': 'Email is a required field.'\nmobile_phone:\n  '#type': tel\n  '#title': 'Mobile Phone'\n  '#description': 'Number&nbsp;will only be used to coordinate specific volunteer positions and will not be shared.'\nhave_you_volunteered_for_drupal_govcon_in_the_past_:\n  '#type': radios\n  '#title': 'Have you volunteered for Drupal GovCon in the past?'\n  '#options':\n    'Yes': 'Yes'\n    'No': 'No'\n  '#required': true\n  '#required_error': 'Answered is required.'\ncomments:\n  '#type': textarea\n  '#title': Comments\n"
+elements: "first_name:\n  '#type': textfield\n  '#title': 'First Name'\n  '#required': true\n  '#required_error': 'First Name is a required field.'\nlast_name:\n  '#type': textfield\n  '#title': 'Last Name'\n  '#required': true\n  '#required_error': 'Last Name is a required field.'\nemail:\n  '#type': email\n  '#title': Email\n  '#required': true\n  '#required_error': 'Email is a required field.'\nmobile_phone:\n  '#type': tel\n  '#title': 'Mobile Phone'\n  '#description': 'Number&nbsp;will only be used to coordinate specific volunteer positions and will not be shared.'\nhave_you_volunteered_for_drupal_govcon_in_the_past_:\n  '#type': radios\n  '#title': 'Have you volunteered for Drupal GovCon in the past?'\n  '#options':\n    'Yes': 'Yes'\n    'No': 'No'\n  '#required': true\n  '#required_error': 'Answered is required.'\ncomments:\n  '#type': textarea\n  '#title': Comments"
 css: ''
 javascript: ''
 settings:
@@ -20,7 +21,7 @@ settings:
   page: true
   page_submit_path: 2018-volunteer-form
   page_confirm_path: ''
-  form_title: both
+  form_title: source_entity_webform
   form_submit_once: false
   form_exception_message: ''
   form_open_message: ''
@@ -170,4 +171,3 @@ access:
     users: {  }
     permissions: {  }
 handlers: {  }
-uuid: f3f371b2-8be9-4f14-8e12-713c00460461
