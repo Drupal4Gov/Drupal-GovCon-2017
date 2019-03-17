@@ -1,0 +1,33 @@
+uuid: 220e58fe-8c95-44b5-b563-0cf392b49181
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.session_flag_link
+  module:
+    - node
+    - views
+  theme:
+    - twentynineteen
+id: views_block__session_flag_link_block_1_2
+theme: twentynineteen
+region: content
+weight: 3
+provider: null
+plugin: 'views_block:session_flag_link-block_1'
+settings:
+  id: 'views_block:session_flag_link-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      session: session
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

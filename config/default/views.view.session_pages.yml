@@ -1,22 +1,19 @@
-uuid: 0f37707e-92c1-42c2-a46d-57851d9013a7
+uuid: 8075767c-3ba2-4571-b5ed-8696520ee0eb
 langcode: en
 status: true
 dependencies:
   config:
-    - taxonomy.vocabulary.conference_year
-    - taxonomy.vocabulary.session_track
-  content:
-    - 'taxonomy_term:conference_year:951cf954-787d-4057-8cc0-b170bd6dda96'
+    - node.type.session
   module:
-    - taxonomy
+    - node
     - user
-id: session_track_filter
-label: 'Session Track FIlter'
+id: session_pages
+label: 'Session Pages'
 module: views
 description: ''
 tag: ''
-base_table: taxonomy_term_field_data
-base_field: tid
+base_table: node_field_data
+base_field: nid
 core: 8.x
 display:
   default:
@@ -83,12 +80,12 @@ display:
           hide_empty: false
           default_field_elements: true
       fields:
-        name:
-          id: name
-          table: taxonomy_term_field_data
-          field: name
-          entity_type: taxonomy_term
-          entity_field: name
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          entity_type: node
+          entity_field: title
           label: ''
           alter:
             alter_text: false
@@ -101,10 +98,9 @@ display:
             html: false
           hide_empty: false
           empty_zero: false
-          type: string
           settings:
             link_to_entity: true
-          plugin_id: term_name
+          plugin_id: field
           relationship: none
           group_type: group
           admin_label: ''
@@ -120,6 +116,7 @@ display:
           empty: ''
           hide_alter_empty: true
           click_sort_column: value
+          type: string
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -130,108 +127,54 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          convert_spaces: false
       filters:
-        vid:
-          id: vid
-          table: taxonomy_term_field_data
-          field: vid
-          value:
-            session_track: session_track
-          entity_type: taxonomy_term
-          entity_field: vid
-          plugin_id: bundle
-        field_conference_year_target_id:
-          id: field_conference_year_target_id
-          table: taxonomy_term__field_conference_year
-          field: field_conference_year_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value:
-            - 266
-          group: 1
-          exposed: false
+        status:
+          value: '1'
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: node
+          entity_field: status
+          id: status
           expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
             operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: textfield
-          limit: true
-          vid: conference_year
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
+          group: 1
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            session: session
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
       sorts:
-        name:
-          id: name
-          table: taxonomy_term_field_data
-          field: name
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          order: DESC
+          entity_type: node
+          entity_field: created
+          plugin_id: date
           relationship: none
           group_type: group
           admin_label: ''
-          order: ASC
           exposed: false
           expose:
             label: ''
-          entity_type: taxonomy_term
-          entity_field: name
-          plugin_id: standard
+          granularity: second
       header: {  }
       footer: {  }
       empty: {  }
       relationships: {  }
       arguments: {  }
-      display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
-        - user
-        - user.permissions
-      tags: {  }
-  entity_reference_1:
-    display_plugin: entity_reference
-    id: entity_reference_1
-    display_title: 'Entity Reference'
-    position: 1
-    display_options:
-      display_extenders: {  }
-      style:
-        type: entity_reference
-        options:
-          search_fields:
-            name: name
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - user
+        - 'user.node_grants:view'
         - user.permissions
       tags: {  }
