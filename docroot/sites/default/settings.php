@@ -727,4 +727,9 @@ require DRUPAL_ROOT . "/sites/default/settings/environment.settings.php";
 /**
  * Trusted Host settings.
  */
-require DRUPAL_ROOT . "/sites/default/settings/trusted_host.settings.php";
+require DRUPAL_ROOT . "/sites/default/settings/trusted_host.settings.php";#
+# IMPORTANT
+# Do not include additional settings here. Instead, add them to settings included
+# by `blt.settings.php`. See [BLT's documentation](http://blt.readthedocs.io)
+# for more detail.
+#

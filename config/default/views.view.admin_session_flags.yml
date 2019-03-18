@@ -10,11 +10,12 @@ dependencies:
     - flag.flag.session_schedule
     - image.style.thumbnail
     - node.type.session
+    - system.menu.admin
     - taxonomy.vocabulary.conference_year
     - taxonomy.vocabulary.session_track
     - user.role.administrator
   content:
-    - 'taxonomy_term:conference_year:0f6c31f2-ef62-41ce-b17c-3e05bfb9b76c'
+    - 'taxonomy_term:conference_year:951cf954-787d-4057-8cc0-b170bd6dda96'
     - 'taxonomy_term:session_track:0a204882-2395-405d-bc08-3d2e402400da'
     - 'taxonomy_term:session_track:18795e61-ba7c-451c-912e-6ef6835cf562'
     - 'taxonomy_term:session_track:3a322e64-7752-4b8c-920a-8333ec5cdfa5'
@@ -720,7 +721,7 @@ display:
           admin_label: ''
           operator: or
           value:
-            131: 131
+            266: 266
           group: 1
           exposed: false
           expose:
@@ -902,7 +903,16 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: admin/2018/sessions
+      path: admin/2019/sessions
+      menu:
+        type: normal
+        title: 'Session Report'
+        description: ''
+        expanded: false
+        parent: system.admin
+        weight: 0
+        context: '0'
+        menu_name: admin
     cache_metadata:
       max-age: -1
       contexts:
