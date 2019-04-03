@@ -18,7 +18,7 @@ input[type="submit"] {
   font-weight: 700;
   letter-spacing: 0.02em;
   margin: 0.5em 0;
-  padding: 0.25em 1em;
+  padding: 0.5em 1em;
   text-decoration: none;
   text-transform: uppercase;
   -webkit-appearance: none;
@@ -26,8 +26,17 @@ input[type="submit"] {
   outline: none;
   border: none;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $orange;
     text-decoration: none;
+  }
+
+  &:disabled {
+    background: rgba($teal, 0.5);
+
+    &:hover {
+      background-color: $scarlet;
+    }
   }
 }
