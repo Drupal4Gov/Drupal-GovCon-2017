@@ -5,80 +5,153 @@
 // Markup: form_html.twig
 //
 // Style guide: atoms.form
+form {
+  margin: 0 0 1em;
+}
 
-form label {
-  color: rgba(22, 150, 144, 1);
-  font-size: 0.875em;
+form .form-item {
+  padding: 0.5em;
+}
+
+form button.link-edit-summary {
+  color: $gray !important;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 1em;
+  letter-spacing: inherit;
+  background: transparent;
+  padding: 0;
+  text-decoration: none;
+  border-radius: 0;
+  margin: 1em 0;
+  outline: none;
+  border: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+label {
+  display: block;
+  color: $teal;
+  cursor: pointer;
   font-weight: 400;
-  margin-top: 0.5em;
+  margin: 0 0 0.1875em;
+  padding-right: 4px;
+  vertical-align: top;
 }
 
-form span.form_required {
-  color: rgb(158, 42, 19);
+.form-required::after {
+  content: '*';
+  margin-left: 0.2rem;
+  color: $scarlet;
 }
 
-form .radioselect input[type=checkbox]:disabled label,
-form label:disabled {
-  color: red;
-}
-
-form .formelement {
-  width: 100%;
-}
-
-form h4.formsubhead {
-  margin-bottom: 0;
-}
-
-form input[type=text],
-form textarea {
-  background: rgba(255, 255, 255, 1);
-  border: 1px solid rgba(28, 187, 180, 1);
+input[type="text"],
+input[type="password"],
+input[type="date"],
+textarea {
+  font-family: inherit;
+  border: 1px solid $teal;
+  border-radius: 0.25em;
   box-shadow: inset 0.1em 0.1em 0.25em rgba(0, 0, 0, 0.125);
   color: $blk;
+  display: block;
   font-size: 1em;
-  border-radius: 0.25em;
-  padding: 0.25em;
+  margin: 0 0 1em;
+  padding: 0.5em;
+  width: 100%;
+  box-sizing: border-box;
+  transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+textarea:focus {
+  box-shadow: 0 0 0.25em 0.25em rgba(242, 101, 34, 1);
+}
+
+input[type="text"]:disabled,
+input[type="text"]:disabled:hover,
+textarea:disabled {
+  background-color: rgba($teal, 0.1);
+}
+
+input[type="file"],
+input[type="checkbox"],
+input[type="radio"],
+select {
+  margin: 0 0 1em;
+}
+
+input[type="file"] {
   width: 100%;
 }
 
-form textarea {
-  resize: none;
-  height: 16vh;
-  height: 14em;
+input[type="radio"],
+input[type="checkbox"] {
+  position: relative;
+  z-index: 10;
+  opacity: 0;
+  margin-left: 0.5em;
+
+  + label {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    padding: 0 0.5em;
+    margin-right: 1em;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -20px;
+      z-index: -10px;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-right: 1em;
+      background-color: $teal;
+    }
+  }
 }
 
-/* Prevents Text & Text Areas from breaking out of containers */
-form input[type=text],
-form textarea {
-  box-sizing: border-box;
+input[type="radio"]:focus + label::before,
+input[type="checkbox"]:focus + label::before {
+  -webkit-box-shadow: 0 0 0.25em 0.25em rgba(128, 188, 250, 1);
 }
 
-/* Tabbing Focus */
-form input[type=text]:focus,
-form input[type=textarea]:focus,
-form input[type=checkbox]:focus,
-form input[type=radio]:focus,
-form input[type=submit]:focus,
-form textarea:focus,
-form select:focus,
-select:focus {
-  box-shadow: 0 0 0.25em 0.25em rgba(242, 101, 34, 1);
-  -webkit-box-shadow: 0 0 0.25em 0.25em rgba(242, 101, 34, 1);
-  -moz-box-shadow: 0 0 0.25em 0.25em rgba(242, 101, 34, 1);
+input[type="radio"] + label::before {
+  border-radius: 10px;
 }
 
-form input[type=radio]:focus + label::before,
-form input[type=checkbox]:focus + label::before {
-  box-shadow: 0 0 0.25em 0.25em rgba(242, 101, 34, 1);
-  -webkit-box-shadow: 0 0 0.25em 0.25em rgba(242, 101, 34, 1);
-  -moz-box-shadow: 0 0 0.25em 0.25em rgba(242, 101, 34, 1);
+input[type="checkbox"] + label::before {
+  border-radius: 3px;
 }
 
-/* End Tabbing Focus */
+input[type="radio"]:checked + label::before {
+  content: "\2022";
+  color: rgba($white, 0.75);
+  font-size: 1.4em;
+  text-align: center;
+  line-height: 1em;
+}
 
-form input[type=submit],
-form select,
+input[type="checkbox"]:checked + label::before {
+  content: "\2713";
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  color: rgba($white, 0.75);
+  text-align: center;
+}
+
+input[type="radio"]:disabled + label::before,
+input[type="checkbox"]:disabled + label::before {
+  background-color: rgba($teal, 0.5);
+}
+
 select {
   color: rgba(255, 255, 255, 1);
   text-transform: uppercase;
@@ -86,17 +159,13 @@ select {
   font-size: 1em;
   letter-spacing: 0.02em;
   background: rgba(28, 187, 180, 1);
-  padding: 0.75em 1em 0.5em;
   text-decoration: none;
   border-radius: 0.25em;
   margin: 1em 0;
   outline: none;
   border: none;
-  width: auto;
-}
-
-form select,
-select {
+  width: 100%;
+  max-width: 500px;
   -webkit-appearance: none;
   -moz-appearance: none;
   padding: 0.75em 2.25em 0.5em 1em;
@@ -115,115 +184,232 @@ select {
   background-repeat: no-repeat;
   text-indent: 0.01px;
   text-overflow: '';
+
+  &:hover {
+    background: rgba(242, 101, 34, 1);
+    background-image:
+      linear-gradient(45deg, transparent 50%, white 50%),
+      linear-gradient(135deg, white 50%, transparent 50%),
+      linear-gradient(to right, #ccc, #ccc);
+    background-position:
+      calc(100% - 1.5em) calc(0.875em + 0.125em),
+      calc(100% - 1em) calc(0.875em + 0.125em),
+      calc(100% - 2.5em) 0.5em;
+    background-size:
+      0.5em 0.5em,
+      0.5em 0.5em,
+      0 0;
+    background-repeat: no-repeat;
+  }
 }
 
-form select:hover,
-form input[type=submit]:hover,
-select:hover {
-  background: rgba(242, 101, 34, 1);
+fieldset {
+  border: 1px solid $teal;
+  border-radius: 0.2em;
+  margin: 1em 0 2em;
+
+  .fieldset-wrapper fieldset {
+    margin-bottom: 0;
+    padding: 0 !important;
+  }
 }
 
-form select:hover,
-select:hover {
-  background-image:
-    linear-gradient(45deg, transparent 50%, white 50%),
-    linear-gradient(135deg, white 50%, transparent 50%),
-    linear-gradient(to right, #ccc, #ccc);
-  background-position:
-    calc(100% - 1.5em) calc(0.875em + 0.125em),
-    calc(100% - 1em) calc(0.875em + 0.125em),
-    calc(100% - 2.5em) 0.5em;
-  background-size:
-    0.5em 0.5em,
-    0.5em 0.5em,
-    0 0;
-  background-repeat: no-repeat;
+legend + .fieldset-wrapper .form-checkboxes {
+  margin-top: 1em;
 }
 
-/* Checkbox and Radio Select Styling */
-form input[type=radio],
-form input[type=checkbox] {
-  opacity: 0;
-  position: absolute;
+fieldset legend {
+  font-weight: bold;
+  background: $teal;
+  color: $white;
+  background-color: $legend;
+  padding: 0.25em 0.5em;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
 }
 
-input[type=radio] {
+// buttons /////////////////////////
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  @include borderradius();
+
+  border: 1px solid $white;
+  padding: 5px 11px;
+  background: $off-white;
+  color: $med-gray;
+
+  @extend .tmp-shadow;
+
+  &:hover,
+  &:focus {
+    background: $lighter-gray;
+  }
+}
+
+button,
+input[type="submit"] {
+  color: $white;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: $libre;
+  font-size: 1em;
+  letter-spacing: 0.02em;
+  background: $teal;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  border-radius: 0.25em;
+  margin: 1em 0;
+  outline: none;
+  border: none;
+
+  &:hover {
+    color: $white;
+    background-color: $scarlet;
+  }
+
+  &:disabled {
+    background: rgba($teal, 0.5);
+
+    &:hover {
+      background-color: $scarlet;
+    }
+  }
+}
+// Error conditions ////////////////////////////
+.error,
+.error textarea,
+.error select {
+  border-color: $red;
+  background-color: rgba(198, 15, 19, 0.1);
+  margin-bottom: 0;
+}
+
+.error input:focus,
+.error textarea:focus,
+.error select:focus {
+  background: $off-white;
+  border-color: $light-gray;
+}
+
+.error label,
+.error label.error {
+  color: $red;
+}
+
+.error > small,
+.error small.error {
   display: block;
-  width: 100%;
-}
-
-.radioselect label,
-.checkselect label {
-  display: inline-block;
-  cursor: pointer;
-  position: relative;
-  padding-left: 2em;
-  padding-right: 1em;
-  padding-top: 0.25em;
-  margin-right: 1em;
-}
-
-.radioselect input[type=radio] + label::before,
-.checkselect input[type=checkbox] + label::before {
-  content: "";
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  margin-right: 1em;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background-color: rgba(28, 187, 180, 1);
-  box-shadow: inset 0 0.2em 0.25em 0 rgba(0, 0, 0, 0.3), 0 0.2em 0 0 rgba(255, 255, 255, 0.8);
-  box-shadow: inset 0 6px 6px 0 rgba(0, 0, 0, 0.3), 0 0 0 0 rgba(255, 255, 255, 0.8);
-}
-
-.checkselect input[type=checkbox] + label::before {
-  left: -1em;
-  left: 0;
-}
-
-.radioselect label::before {
-  border-radius: 12px;
-}
-
-.checkselect label::before {
-  border-radius: 3px;
-}
-
-.radioselect input[type=radio]:checked + label::before {
-  content: "\2022";
-  color: rgba(255, 255, 255, 0.75);
-  font-size: 5em;
-  text-align: center;
-  line-height: 0.52em;
-}
-
-.checkselect input[type=checkbox]:checked + label::before {
-  content: "\2713";
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-  font-size: 21px;
-  color: rgba(255, 255, 255, 0.75);
-  text-align: center;
-  line-height: 1.25em;
-}
-
-input[type=checkbox]:disabled + label::before,
-input[type=radio]:disabled + label::before,
-input[type=submit]:disabled {
-  background-color: rgba(28, 187, 180, 0.5);
-}
-
-input[type=text]:disabled {
-  background-color: rgba(243, 252, 251, 1);
-  border: 1px solid rgb(142, 221, 218);
-}
-
-form input[type=text] {
+  padding: 0.375em 0.25em;
+  margin-top: 0;
   margin-bottom: 1em;
+  font-size: 0.75em;
+  font-weight: bold;
+  background: $red;
+  color: #fff;
 }
 
-form input[type=radio] + label,
-form input[type=checkbox] + label {
-  margin-bottom: 0.5em;
+.error span.error-message {
+  display: block;
+}
+
+input.error,
+textarea.error {
+  border-color: $red;
+  background-color: rgba(198, 15, 19, 0.1);
+  margin-bottom: 0;
+}
+
+input.error:focus,
+textarea.error:focus {
+  background: $off-white;
+  border-color: $light-gray;
+}
+
+.error select {
+  border-color: $red;
+  background-color: rgba(198, 15, 19, 0.1);
+}
+
+.error select:focus {
+  background: $off-white;
+  border-color: $light-gray;
+}
+
+label.error {
+  color: $red;
+}
+
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"] {
+  background-color: white;
+  font-family: inherit;
+  border: 1px solid $lighter-gray;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.75);
+  display: block;
+  font-size: 0.875em;
+  margin: 0 0 1em;
+  padding: 0.5em;
+  height: 2.3125em;
+  width: auto;
+  box-sizing: border-box;
+  transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
+}
+
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="time"]:focus,
+input[type="url"]:focus {
+  box-shadow: 0 0 5px $light-gray;
+  border-color: $light-gray;
+  outline: none;
+}
+
+form input[disabled],
+form button[disabled] {
+  background-color: $light-gray;
+  box-shadow: none;
+
+  &:hover {
+    background-color: $light-gray;
+  }
+}
+// simple transitions ////////////////////
+form button,
+form input {
+  transition: all 0.3s ease;
+
+  &[disabled] {
+    transition: auto;
+  }
+}
+
+.field--label-inline .field__label,
+.field--label-inline .field__item {
+  display: inline-block;
+}
+
+.field--label-inline .field__label {
+  color: $teal;
+  font-weight: bold;
+
+  &::after {
+    content: ':';
+  }
 }
