@@ -9,7 +9,7 @@ dependencies:
     - node.type.special_announcement
     - taxonomy.vocabulary.conference_year
   content:
-    - 'taxonomy_term:conference_year:0f6c31f2-ef62-41ce-b17c-3e05bfb9b76c'
+    - 'taxonomy_term:conference_year:951cf954-787d-4057-8cc0-b170bd6dda96'
   module:
     - datetime
     - node
@@ -262,7 +262,7 @@ display:
     display_plugin: block
     id: block_1
     display_title: '2017 Home - Special Announcements'
-    position: 1
+    position: 3
     display_options:
       display_extenders: {  }
       display_description: ''
@@ -401,7 +401,7 @@ display:
     display_plugin: block
     id: block_2
     display_title: 'Critical Announcement Display'
-    position: 2
+    position: 4
     display_options:
       display_extenders: {  }
       display_description: ''
@@ -590,8 +590,8 @@ display:
   block_3:
     display_plugin: block
     id: block_3
-    display_title: '2018 Home - Special Announcements'
-    position: 1
+    display_title: 'Announcements Block'
+    position: 2
     display_options:
       display_extenders: {  }
       display_description: ''
@@ -639,7 +639,7 @@ display:
           admin_label: ''
           operator: or
           value:
-            131: 131
+            266: 266
           group: 1
           exposed: false
           expose:
@@ -994,8 +994,8 @@ display:
   page_1:
     display_plugin: page
     id: page_1
-    display_title: '2018 Special Announcements Page'
-    position: 4
+    display_title: 'Announcements Page'
+    position: 1
     display_options:
       display_extenders: {  }
       display_description: ''
@@ -1038,7 +1038,7 @@ display:
           admin_label: ''
           operator: or
           value:
-            131: 131
+            266: 266
           group: 1
           exposed: false
           expose:
