@@ -21,7 +21,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "acquia/blt": "^9.2",
+        "acquia/blt": "9.2.4",
         "acquia/lightning": "^3.2.0",
         "drupal/acquia_purge": "1.0-beta3",
         "drupal/acsf": "^1.32.0",
@@ -58,7 +58,8 @@
         "drupal/views_field_view": "^1.0",
         "drupal/webform": "^5.0@beta",
         "drupal/webform_views": "5.x-dev",
-        "drupal/xmlsitemap": "^1.0.0-alpha2"
+        "drupal/xmlsitemap": "^1.0.0-alpha2",
+        "drush/drush": "9.5.2"
     },
     "require-dev": {
         "geerlingguy/drupal-vm": "~4.9",
