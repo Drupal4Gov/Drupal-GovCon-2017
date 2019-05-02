@@ -1,9 +1,9 @@
-uuid: b21d514d-858a-4863-8893-4c43be9d10c8
+uuid: af9e1c16-e9cc-42d7-babc-cac40c059a62
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.media.thumbnail
+    - core.entity_view_mode.media.media_library
     - field.field.media.document.field_document
     - field.field.media.document.field_document_size
     - field.field.media.document.field_media_in_library
@@ -12,18 +12,22 @@ dependencies:
     - media.type.document
   module:
     - svg_image
-id: media.document.thumbnail
+id: media.document.media_library
 targetEntityType: media
 bundle: document
-mode: thumbnail
+mode: media_library
 content:
   thumbnail:
     type: image
-    weight: 0
     label: hidden
     settings:
       image_style: medium
       image_link: ''
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
+    weight: 0
     third_party_settings: {  }
     region: content
 hidden:
