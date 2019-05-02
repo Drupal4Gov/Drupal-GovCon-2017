@@ -19,6 +19,7 @@ events:
               - composer install --ansi
               - source ${BLT_DIR}/scripts/pipelines/setup_env
               - nvm install v8.9.1
+              - npm install -g npm
               - npm install --global yarn
         - validate:
             type: script

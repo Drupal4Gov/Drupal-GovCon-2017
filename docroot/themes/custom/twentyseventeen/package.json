@@ -5,14 +5,14 @@
   "repository": {},
   "devDependencies": {
     "breakpoint-sass": "2.7.0",
-    "browser-sync": "2.11.x",
+    "browser-sync": "^2.26.5",
     "del": "2.2.x",
     "gulp": "3.9.x",
     "gulp-autoprefixer": "3.1.x",
     "gulp-clean-css": "2.0.9",
     "gulp-eslint": "2.0.x",
     "gulp-if": "^2.0.2",
-    "gulp-load-plugins": "1.2.x",
+    "gulp-load-plugins": "^1.5.0",
     "gulp-parker": "0.1.1",
     "gulp-plumber": "0.6.6",
     "gulp-rename": "1.2.x",
@@ -32,12 +32,12 @@
     "typey": "1.0.x"
   },
   "engines": {
-    "node": "6.9.x"
+    "node": "8.9.x"
   },
   "private": true,
   "//": "The postinstall script is needed to work-around this Drupal core bug: https://www.drupal.org/node/2329453",
   "scripts": {
-    "install-tools": "npm install; npm rebuild node-sass",
+    "install-tools": "npm ci; npm rebuild node-sass",
     "postinstall": "find node_modules/ -name '*.info' -type f -delete",
     "uninstall-tools": "rm -r node_modules;",
     "build": "gulp",
@@ -45,6 +45,6 @@
     "watch": "gulp watch"
   },
   "dependencies": {
-    "node-sass": "^4.7.2"
+    "node-sass": "^4.12.0"
   }
 }
