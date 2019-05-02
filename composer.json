@@ -55,10 +55,12 @@
         "drupal/svg_image": "^1.8",
         "drupal/twig_xdebug": "1.x-dev",
         "drupal/views_field_view": "^1.0",
-        "drupal/webform": "^5.0@beta",
+        "drupal/webform": "^5.2",
         "drupal/webform_views": "5.x-dev",
         "drupal/xmlsitemap": "^1.0.0-alpha2",
-        "drush/drush": "9.5.2"
+        "drush/drush": "9.5.2",
+        "webflo/drupal-core-require-dev": "8.7.0-rc1",
+        "acquia/lightning": "3.3.0-beta1"
     },
     "require-dev": {
         "geerlingguy/drupal-vm": "~4.9",
@@ -118,6 +120,9 @@
             },
             "drupal/config_ignore": {
                 "in_array warning fix": "https://www.drupal.org/files/issues/2018-07-12/fix-php-warnings-in-drush.patch"
+            },
+            "drupal/webform_views": {
+                "8.7 upgrade blocker": "https://www.drupal.org/files/issues/2019-05-02/core-8.7-update-webform_views-3052056-15.patch"
             }
         },
         "drupal-scaffold": {
@@ -127,7 +132,8 @@
             },
             "excludes": [
                 "sites/development.services.yml",
-                ".htaccess"
+                ".htaccess",
+                "robots.txt"
             ]
         },
         "enable-patching": true,
