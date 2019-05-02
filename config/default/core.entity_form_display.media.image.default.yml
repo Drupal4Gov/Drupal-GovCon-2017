@@ -8,7 +8,6 @@ dependencies:
     - image.style.thumbnail
     - media.type.image
   module:
-    - content_moderation
     - image_widget_crop
     - path
 _core:
@@ -40,12 +39,6 @@ content:
       warn_multiple_usages: false
     third_party_settings: {  }
     region: content
-  moderation_state:
-    type: moderation_state_default
-    weight: 100
-    settings: {  }
-    region: content
-    third_party_settings: {  }
   name:
     type: string_textfield
     weight: 3
