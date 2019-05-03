@@ -23,6 +23,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
+        "php": ">=7.1",
         "acquia/blt": "10.x-dev",
         "acquia/drupal-spec-tool": "^2.0.0",
         "acquia/lightning": "^3.1.0",
@@ -65,12 +66,12 @@
         "drupal/smart_trim": "^1.0",
         "drupal/svg_image": "^1.8",
         "drupal/twig_xdebug": "1.x-dev",
+        "drupal/upgrade_status": "^1.0@alpha",
         "drupal/views_field_view": "^1.0",
         "drupal/webform": "^5.2",
         "drupal/webform_views": "5.x-dev",
         "drupal/xmlsitemap": "^1.0.0-alpha2",
-        "drush/drush": "9.5.2",
-        "php": ">=7.1"
+        "drush/drush": "9.5.2"
     },
     "require-dev": {
         "acquia/blt-require-dev": "^10.0.0-alpha1",
