@@ -2,7 +2,7 @@ version: 1.1.0
 services:
   - mysql
   - php:
-      version: 7.1
+      version: 7.2
 
 variables:
   global:
@@ -18,13 +18,18 @@ events:
               - composer validate --no-check-all --ansi
               - composer install --ansi
               - source ${BLT_DIR}/scripts/pipelines/setup_env
-              - nvm install v8.9.1
-              - npm install -g npm
-              - npm install --global yarn
+               - nvm install v8.9.1
+               - npm install -g npm
+               - npm install --global yarn
         - validate:
             type: script
             script:
               - source ${BLT_DIR}/scripts/pipelines/validate
+        # Uncomment these lines to test database updates using live content.
+        # - test-updates:
+        #     type: script
+        #     script:
+        #       - blt drupal:sync:default:site
         - setup-app:
             type: script
             script:

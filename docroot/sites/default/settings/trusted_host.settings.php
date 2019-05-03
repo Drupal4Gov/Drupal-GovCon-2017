@@ -1,6 +1,14 @@
 <?php
-if ($is_ah_env) {
-  if ($is_ah_prod_env) {
+
+/**
+ * @file
+ * Trusted hosts configuration.
+ */
+
+use Acquia\Blt\Robo\Common\EnvironmentDetector;
+
+if (EnvironmentDetector::isAhEnv()) {
+  if (EnvironmentDetector::isProdEnv()) {
     $settings['trusted_host_patterns'] = array(
       '^drupalgovcon\.org$',
       '^capitalcamp\.org$',
@@ -9,12 +17,12 @@ if ($is_ah_env) {
 
     );
   }
-  elseif ($is_ah_stage_env) {
+  elseif (EnvironmentDetector::isStageEnv()) {
     $settings['trusted_host_patterns'] = array(
       '^capitalcampstg\.prod\.acquia-sites\.com$',
     );
   }
-  elseif ($is_ah_dev_env) {
+  elseif (EnvironmentDetector::isDevEnv()) {
     $settings['trusted_host_patterns'] = array(
       '^capitalcampdev\.prod\.acquia-sites\.com$',
     );

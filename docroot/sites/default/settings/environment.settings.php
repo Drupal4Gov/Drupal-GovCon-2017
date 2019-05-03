@@ -5,6 +5,8 @@
  * Local development override configuration feature.
  */
 
+ use Acquia\Blt\Robo\Common\EnvironmentDetector;
+
 
 // Environment specific settings that don't belong anywhere else.
 
@@ -12,23 +14,23 @@
 $config['environment_indicator_overwrite'] = TRUE;
 $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
 
-if ($is_ah_env) {
+if (EnvironmentDetector::isAhEnv()) {
   $config['environment_indicator.indicator']['name'] = ucfirst($_ENV['AH_SITE_ENVIRONMENT']);
 }
 
-if ($is_local_env) {
+if (EnvironmentDetector::isLocalEnv()) {
   $config['environment_indicator.indicator']['name'] = 'Local';
   $config['environment_indicator.indicator']['bg_color'] = '#3363aa';
 }
 
-if ($is_ah_dev_env){
+if (EnvironmentDetector::isDevEnv()){
   $config['environment_indicator.indicator']['bg_color'] = '#33aa3c';
 }
 
-if($is_ah_stage_env) {
+if(EnvironmentDetector::isStageEnv()) {
   $config['environment_indicator.indicator']['bg_color'] = '#ffBB00';
 }
 
-if ($is_ah_prod_env) {
+if (EnvironmentDetector::isProdEnv()) {
   $config['environment_indicator.indicator']['bg_color'] = '#aa3333';
 }
