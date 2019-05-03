@@ -9,8 +9,8 @@ dependencies:
     - field.field.block_content.call_to_action_block.field_title
     - field.field.block_content.call_to_action_block.field_url
   module:
-    - image
     - smart_trim
+    - svg_image
 id: block_content.call_to_action_block.default
 targetEntityType: block_content
 bundle: call_to_action_block
