@@ -24,7 +24,7 @@
     "prefer-stable": true,
     "require": {
         "php": ">=7.1",
-        "acquia/blt": "10.x-dev",
+        "acquia/blt": "^10.0",
         "acquia/drupal-spec-tool": "^2.0.0",
         "acquia/lightning": "^3.1.0",
         "drupal/acquia_connector": "^1.5.0",
@@ -41,12 +41,10 @@
         "drupal/config_split": "^1.0.0",
         "drupal/config_update": "1.5.0",
         "drupal/context": "^4.0@beta",
-        "drupal/core": "^8.6.0",
         "drupal/crop": "2.0.0-rc1",
         "drupal/devel": "^2.0.0",
         "drupal/environment_indicator": "^3.0.0-beta1",
         "drupal/extlink": "^1.0",
-        "drupal/features": "^3.8.0",
         "drupal/field_group": "1.0",
         "drupal/field_permissions": "1.x-dev",
         "drupal/flag": "^4.0.0-alpha2",
@@ -69,7 +67,7 @@
         "drupal/upgrade_status": "^1.0@alpha",
         "drupal/views_field_view": "^1.0",
         "drupal/webform": "^5.2",
-        "drupal/webform_views": "5.x-dev",
+        "drupal/webform_views": "^5.0-alpha7",
         "drupal/xmlsitemap": "^1.0.0-alpha2",
         "drush/drush": "9.5.2"
     },
@@ -141,9 +139,6 @@
             },
             "drupal/config_ignore": {
                 "in_array warning fix": "https://www.drupal.org/files/issues/2018-07-12/fix-php-warnings-in-drush.patch"
-            },
-            "drupal/webform_views": {
-                "8.7 upgrade blocker": "https://www.drupal.org/files/issues/2019-05-02/core-8.7-update-webform_views-3052056-15.patch"
             }
         },
         "drupal-scaffold": {
