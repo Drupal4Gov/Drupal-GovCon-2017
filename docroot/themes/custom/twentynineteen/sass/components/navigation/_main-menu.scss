@@ -11,11 +11,19 @@
 .menu--main-navigation {
   background: $scarlet;
   margin-top: -4px;
-  min-height: 45px;
+  min-height: 60px;
 
   @include breakpoint($small-max) {
     margin-top: 0;
     min-height: auto;
+  }
+}
+
+label.toggle {
+  position: relative !important;
+
+  &::before {
+    display: none !important;
   }
 }
 
@@ -43,7 +51,7 @@ input[type="checkbox"] + label.toggle::before {
 }
 
 #show-menu {
-  min-height: 45px;
+  min-height: 0;
 
   @include breakpoint($small-max) {
     min-height: auto;
@@ -77,7 +85,7 @@ input[type="checkbox"] + label.toggle::before {
     width: 27px;
     position: absolute;
     right: 30px;
-    top: 0;
+    top: -27px;
     cursor: pointer;
 
     @include breakpoint($small-max) {
