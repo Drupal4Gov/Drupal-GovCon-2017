@@ -60,6 +60,7 @@
 .block-views-blocksponsors-homepage-core-sponsors {
   padding: 1em;
   background: $white;
+  padding-top: 2rem;
 
   h2 {
     margin-top: 0;
@@ -80,5 +81,9 @@
 
   .view-footer a {
     font-style: italic;
+  }
+
+  @include breakpoint($small-max) {
+    padding-top: 0;
   }
 }
