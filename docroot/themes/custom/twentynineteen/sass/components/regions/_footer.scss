@@ -15,13 +15,15 @@ footer {
   max-width: none;
 
   @include breakpoint($medium-max) {
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
   }
 }
 
 .footer {
   background: $scarlet;
-  color: $white;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1em;
   width: 100%;
   overflow: auto;
   margin-top: 0;
