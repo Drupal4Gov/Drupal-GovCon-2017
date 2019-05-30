@@ -46,7 +46,7 @@ $ blt sync
 ``` 
 * Access the site and do necessary work at http://local.capitalcamp.com
 
-Additional [BLT documentation](http://blt.readthedocs.io) may be useful. You may also access a list of BLT commands by running:
+Additional [BLT documentation](https://docs.acquia.com/blt/) may be useful. You may also access a list of BLT commands by running:
 ```
 $ blt
 ``` 
