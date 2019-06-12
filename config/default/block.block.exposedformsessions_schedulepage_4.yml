@@ -1,6 +1,6 @@
-uuid: 25ff9517-9e2a-4357-a34d-1e542f366f53
+uuid: bcc4d964-0f67-4cbf-b560-76e2e2906b60
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - views.view.sessions_schedule
@@ -9,14 +9,14 @@ dependencies:
     - views
   theme:
     - twentynineteen
-id: exposedformsessions_schedulepage_1_2
+id: exposedformsessions_schedulepage_4
 theme: twentynineteen
 region: content
-weight: 4
+weight: -2
 provider: null
-plugin: 'views_exposed_filter_block:sessions_schedule-page_1'
+plugin: 'views_exposed_filter_block:sessions_schedule-page_4'
 settings:
-  id: 'views_exposed_filter_block:sessions_schedule-page_1'
+  id: 'views_exposed_filter_block:sessions_schedule-page_4'
   label: ''
   provider: views
   label_display: visible
@@ -24,6 +24,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: '/schedule/*'
+    pages: "/schedule/*\r\n/2019/schedule/*"
     negate: false
     context_mapping: {  }
