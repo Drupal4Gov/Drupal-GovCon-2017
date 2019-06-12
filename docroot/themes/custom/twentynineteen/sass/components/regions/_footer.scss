@@ -7,6 +7,10 @@
 
 footer {
   position: relative;
+
+  svg {
+    max-height: 50px;
+  }
 }
 
 .mq-footer {
@@ -33,7 +37,12 @@ footer {
     padding-top: 0;
   }
 
+  a {
+    color: rgba(255, 255, 255, 0.75);
+  }
+
   &__text {
+    font-size: 0.875em;
     width: 95%;
     padding: 2%;
     text-align: center;

@@ -149,7 +149,7 @@ input[type="checkbox"] + label.toggle::before {
   @include breakpoint($small-max) {
     flex-direction: row;
     width: 50%;
-    margin-top: -20px;
+    margin-top: -30px;
     padding-top: 0;
   }
 
@@ -218,7 +218,7 @@ input[type="checkbox"] + label.toggle::before {
     }
 
     &:hover {
-      background-color: rgba($mediumteal, 1);
+      background-color: rgba($tomato, 1);
     }
   }
 

@@ -12,7 +12,7 @@ dependencies:
 id: exposedformsessions_schedulepage_2_2
 theme: twentynineteen
 region: content
-weight: -3
+weight: -5
 provider: null
 plugin: 'views_exposed_filter_block:sessions_schedule-page_2'
 settings:
@@ -24,6 +24,6 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: "/2018/schedule/*\r\n/2019/schedule/*"
+    pages: '/2018/schedule/*'
     negate: false
     context_mapping: {  }
