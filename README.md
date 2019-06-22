@@ -94,7 +94,11 @@ $  git push --set-upstream origin DGC-XXX
 * Ensure the build passes
 
 ## Configuration Changes
-When making configuration changes to the production site, if these changes are not checked in, they will be overwritten on the next deploy!
+When making configuration changes to the production site—and this includes menu, block, and view updates, **if these are not checked in, they will be overwritten on the next deploy!**
+
+If in doubt whether you have made configuration changes, go to [Synchronize](https://www.drupalgovcon.org/admin/config/development/configuration), where any configurations you have updated will be listed.
+
+If you have, you will want to check this list carefully, to be sure it only covers the changes you want to add.
 
 ## Resources
 
