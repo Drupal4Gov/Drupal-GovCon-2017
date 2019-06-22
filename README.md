@@ -98,7 +98,12 @@ When making configuration changes to the production site—and this includes men
 
 If in doubt whether you have made configuration changes, go to [Synchronize](https://www.drupalgovcon.org/admin/config/development/configuration), where any configurations you have updated will be listed.
 
-If you have, you will want to check this list carefully, to be sure it only covers the changes you want to add.
+If you have, you will want to check this list carefully, to be sure it only covers the changes you want to add. When you have checked these over, there are two ways you can add these changes:
+
+### GUI (Non-Code) Method
+When at [Synchronize](https://www.drupalgovcon.org/admin/config/development/configuration), go to the Export tab, where you can export all changes using **Full archive**. Tapping the **Export** button will download an archive of these changes to your computer.
+
+
 
 ## Resources
 
