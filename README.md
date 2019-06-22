@@ -93,6 +93,9 @@ $  git push --set-upstream origin DGC-XXX
 * Create a new Pull Request that mentions the original ticket in the body (#DGC-XXX)
 * Ensure the build passes
 
+## Configuration Changes
+When making configuration changes to the production site, if these changes are not checked in, they will be overwritten on the next deploy!
+
 ## Resources
 
 * JIRA - https://drupal4gov.atlassian.net
