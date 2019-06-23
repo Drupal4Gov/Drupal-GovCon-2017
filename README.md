@@ -101,8 +101,17 @@ If in doubt whether you have made configuration changes, go to [Synchronize](htt
 If you have, you will want to check this list carefully, to be sure it only covers the changes you want to add. When you have checked these over, there are two ways you can add these changes:
 
 ### GUI (Non-Code) Method
-When at [Synchronize](https://www.drupalgovcon.org/admin/config/development/configuration), go to the Export tab, where you can export all changes using **Full archive**. Tapping the **Export** button will download an archive of these changes to your computer.
+* When at [Synchronize](https://www.drupalgovcon.org/admin/config/development/configuration), go to the Export tab, where you can export all changes using **Full archive**. Tapping the **Export** button will download an archive of these changes to your computer.
+* Create a new issue on the project repository above (Issues > New Issue), describe the changes, and attach the archive.
+* Notify the #website team on Slack.
 
+### CLI (Code) Method
+* Open a new issue ticket, create an issue branch
+* Export your configuration changes using `drush cex`, check the listed changes. If they are correct, approve them.
+* Add, commit, and push your changes, then open a pull request.
+* Notify the #website team on Slack.
+
+If in doubt, please reach out to a member of the Web team!
 
 
 ## Resources
