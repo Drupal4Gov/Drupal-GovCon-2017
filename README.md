@@ -106,7 +106,7 @@ If you have, you will want to check this list carefully, to be sure it only cove
 * Notify the #website team on Slack.
 
 ### CLI (Code) Method
-* Open a new issue ticket, create an issue branch
+* Open a new issue ticket, create an issue branch (following the instructions under Getting Started above).
 * Export your configuration changes using `drush cex`, check the listed changes. If they are correct, approve them.
 * Add, commit, and push your changes, then open a pull request.
 * Notify the #website team on Slack.
