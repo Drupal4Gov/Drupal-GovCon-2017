@@ -5,8 +5,8 @@ dependencies:
   config:
     - views.view.presenters
   module:
+    - ctools
     - node
-    - system
     - views
   theme:
     - twentynineteen
@@ -32,8 +32,10 @@ visibility:
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'
-  request_path:
-    id: request_path
-    pages: '/node/*/edit'
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      session: session
     negate: false
-    context_mapping: {  }
+    context_mapping:
+      node: '@node.node_route_context:node'

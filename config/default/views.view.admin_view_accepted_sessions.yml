@@ -8,6 +8,7 @@ dependencies:
     - field.storage.node.field_session_date_time
     - field.storage.node.field_session_track
     - node.type.session
+    - system.menu.admin
     - taxonomy.vocabulary.conference_year
     - taxonomy.vocabulary.rooms
     - taxonomy.vocabulary.session_track
@@ -1029,6 +1030,15 @@ display:
     display_options:
       display_extenders: {  }
       path: admin/accepted-sessions
+      menu:
+        type: normal
+        title: 'Session Report (Admin)'
+        description: ''
+        expanded: false
+        parent: capitalcamp_glue.event
+        weight: 0
+        context: '0'
+        menu_name: admin
     cache_metadata:
       max-age: -1
       contexts:

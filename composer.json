@@ -21,7 +21,10 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "acquia/blt": "^9.2",
+        "acquia/blt": "^10.0",
+        "acquia/drupal-spec-tool": ">=2.0.0",
+        "acquia/lightning": "^3.1.0",
+        "drupal/acquia_connector": "^1.5.0",
         "drupal/acquia_purge": "1.0-beta3",
         "drupal/acsf": "^1.32.0",
         "drupal/adminimal_admin_toolbar": "^1.0",
@@ -32,12 +35,16 @@
         "drupal/cog": "^1.10",
         "drupal/components": "*@stable",
         "drupal/config_ignore": "^2.1",
+        "drupal/config_split": "^1.0.0",
         "drupal/config_update": "1.5.0",
         "drupal/context": "^4.0@beta",
+        "drupal/core": "~8.6.0",
         "drupal/crop": "2.0.0-rc1",
+        "drupal/devel": "^2.0.0",
         "drupal/environment_indicator": "^3.0.0-beta1",
         "drupal/extlink": "^1.0",
-        "drupal/field_group": "1.0",
+        "drupal/features": "^3.8.0",
+        "drupal/field_group": "^3.0",
         "drupal/field_permissions": "1.x-dev",
         "drupal/flag": "^4.0.0-alpha2",
         "drupal/focal_point": "^1.0@beta",
@@ -47,9 +54,11 @@
         "drupal/memcache": "2.0-alpha7",
         "drupal/pathauto": "^1.0.0-alpha2",
         "drupal/purge": "^3.0.0-beta6",
+        "drupal/qa_accounts": "^1.0.0-alpha1",
         "drupal/r4032login": "dev-1.x",
-        "drupal/recaptcha": "dev-2.x",
+        "drupal/recaptcha": "^2.4",
         "drupal/redirect": "^1.0",
+        "drupal/seckit": "^1.0.0-alpha2",
         "drupal/shield": "^1.1",
         "drupal/smart_trim": "^1.0",
         "drupal/svg_image": "^1.8",
@@ -58,11 +67,13 @@
         "drupal/webform": "^5.0@beta",
         "drupal/webform_views": "5.x-dev",
         "drupal/xmlsitemap": "^1.0.0-alpha2",
-        "drush/drush": "9.5.2"
+        "drush/drush": "9.5.2",
+        "php": ">=7.1"
     },
     "require-dev": {
-        "geerlingguy/drupal-vm": "~4.9",
-        "drupal/console": "^1.0.0-rc13"
+        "acquia/blt-require-dev": "^10.0.0-alpha1",
+        "drupal/console": "^1.0.0-rc13",
+        "geerlingguy/drupal-vm": "~4.9"
     },
     "scripts": {
         "post-install-cmd": [
@@ -70,6 +81,15 @@
         ],
         "post-update-cmd": [
             "PhantomInstaller\\Installer::installPhantomJS"
+        ],
+        "post-create-project-cmd": [
+            "blt internal:create-project:init-repo"
+        ],
+        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+        "nuke": [
+            "rm -rf vendor composer.lock docroot/core docroot/modules/contrib docroot/profiles/contrib docroot/themes/contrib",
+            "@composer clearcache --ansi",
+            "@composer install --ansi"
         ]
     },
     "extra": {
@@ -127,27 +147,28 @@
             },
             "excludes": [
                 "sites/development.services.yml",
-                ".htaccess"
+                ".htaccess",
+                "robots.txt"
             ]
         },
         "enable-patching": true,
-        "merge-plugin": {
-            "require": [
-                "blt/composer.required.json",
-                "blt/composer.suggested.json"
-            ],
-            "include": [
-                "blt/composer.overrides.json"
-            ],
-            "merge-extra": true,
-            "merge-extra-deep": true,
-            "merge-scripts": true,
-            "replace": false,
-            "ignore-duplicates": true
-        },
         "installer-types": [
             "bower-asset",
             "npm-asset"
-        ]
+        ],
+        "composer-exit-on-patch-failure": true,
+        "patchLevel": {
+            "drupal/core": "-p2"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Example\\": "blt/src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Drupal\\Tests\\PHPUnit\\": "tests/phpunit/src/"
+        }
     }
 }

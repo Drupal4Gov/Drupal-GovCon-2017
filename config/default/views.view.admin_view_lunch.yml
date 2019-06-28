@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - system.menu.admin
     - webform.webform.2018_registration
     - webform.webform.2019_registration
   module:
@@ -1223,6 +1224,15 @@ display:
           webform_multiple_value: true
           webform_multiple_delta: 0
           plugin_id: webform_submission_field
+      menu:
+        type: normal
+        title: Lunch
+        description: ''
+        expanded: false
+        parent: capitalcamp_glue.event
+        weight: 0
+        context: '0'
+        menu_name: admin
     cache_metadata:
       max-age: -1
       contexts:
