@@ -5,7 +5,7 @@ dependencies:
   config:
     - user.role.administrator
     - user.role.volunteer
-    - webform.webform.2018_registration
+    - webform.webform.2019_registration
   module:
     - user
     - webform
@@ -64,7 +64,7 @@ display:
       fields:
         webform_submission_value_2:
           id: webform_submission_value_2
-          table: webform_submission_field_2018_registration_first_name
+          table: webform_submission_field_2019_registration_first_name
           field: webform_submission_value
           relationship: none
           group_type: group
@@ -116,7 +116,7 @@ display:
           plugin_id: webform_submission_field
         webform_submission_value_3:
           id: webform_submission_value_3
-          table: webform_submission_field_2018_registration_last_name
+          table: webform_submission_field_2019_registration_last_name
           field: webform_submission_value
           relationship: none
           group_type: group
@@ -168,7 +168,7 @@ display:
           plugin_id: webform_submission_field
         webform_submission_value_1:
           id: webform_submission_value_1
-          table: webform_submission_field_2018_registration_drupal_org_user_name
+          table: webform_submission_field_2019_registration_drupal_org_user_name
           field: webform_submission_value
           relationship: none
           group_type: group
@@ -220,7 +220,7 @@ display:
           plugin_id: webform_submission_field
         webform_submission_value:
           id: webform_submission_value
-          table: webform_submission_field_2018_registration_company_name
+          table: webform_submission_field_2019_registration_company_name
           field: webform_submission_value
           relationship: none
           group_type: group
@@ -272,7 +272,7 @@ display:
           plugin_id: webform_submission_field
         webform_submission_value_5:
           id: webform_submission_value_5
-          table: webform_submission_field_2018_registration_what_is_your_role_at_your_organization_
+          table: webform_submission_field_2019_registration_what_is_your_role_at_your_organization_
           field: webform_submission_value
           relationship: none
           group_type: group
@@ -324,7 +324,7 @@ display:
           plugin_id: webform_submission_field
         webform_submission_value_4:
           id: webform_submission_value_4
-          table: webform_submission_field_2018_registration_twitter_handle
+          table: webform_submission_field_2019_registration_twitter_handle
           field: webform_submission_value
           relationship: none
           group_type: group
@@ -376,7 +376,7 @@ display:
           plugin_id: webform_submission_field
         webform_submission_value_6:
           id: webform_submission_value_6
-          table: webform_submission_field_2018_registration_which_days_do_you_plan_to_attend_drupal_govcon_
+          table: webform_submission_field_2019_registration_which_days_do_you_plan_to_attend_drupal_govcon_
           field: webform_submission_value
           relationship: none
           group_type: group
@@ -428,7 +428,7 @@ display:
           plugin_id: webform_submission_field
         webform_submission_value_7:
           id: webform_submission_value_7
-          table: webform_submission_field_2018_registration_please_indicate_the_days_when_you_ll_need_lunch_this_will_help_u
+          table: webform_submission_field_2019_registration_please_indicate_the_days_when_you_ll_need_lunch_this_will_help_u
           field: webform_submission_value
           relationship: none
           group_type: group
@@ -483,8 +483,40 @@ display:
           id: webform_id
           table: webform_submission
           field: webform_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
           value:
-            2018_registration: 2018_registration
+            2019_registration: 2019_registration
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+            argument: null
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
           entity_type: webform_submission
           entity_field: webform_id
           plugin_id: bundle
@@ -497,7 +529,7 @@ display:
       arguments:
         webform_submission_value:
           id: webform_submission_value
-          table: webform_submission_field_2018_registration_last_name
+          table: webform_submission_field_2019_registration_last_name
           field: webform_submission_value
           relationship: none
           group_type: group
@@ -598,7 +630,7 @@ display:
       arguments:
         webform_submission_value:
           id: webform_submission_value
-          table: webform_submission_field_2018_registration_last_name
+          table: webform_submission_field_2019_registration_last_name
           field: webform_submission_value
           relationship: none
           group_type: group
@@ -682,7 +714,7 @@ display:
             fail: 'not found'
           validate_options:
             bundles:
-              2018_registration: 2018_registration
+              2019_registration: 2019_registration
             operation: view
             multiple: 0
             access: false
