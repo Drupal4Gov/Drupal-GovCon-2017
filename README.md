@@ -98,17 +98,17 @@ When making configuration changes to the production site—and this includes men
 
 If in doubt whether you have made configuration changes, go to [Synchronize](https://www.drupalgovcon.org/admin/config/development/configuration), where any configurations you have updated will be listed.
 
-If you have, you will want to check this list carefully, to be sure it only covers the changes you want to add. When you have checked these over, there are two ways you can add these changes:
+If you have, you will want to check this list carefully, to be sure it only covers the changes you want to add. When you have checked these over, here's how you can add these changes:
 
-### GUI (Non-Code) Method
+### Exporting Your Changes
 * When at [Synchronize](https://www.drupalgovcon.org/admin/config/development/configuration), go to the Export tab, where you can export all changes using **Full archive**. Tapping the **Export** button will download an archive of these changes to your computer.
-* Create a new issue on the project repository above (Issues > New Issue), describe the changes, and attach the archive.
-* Notify the #website team on Slack.
 
-### CLI (Code) Method
-* Open a new issue ticket, create an issue branch (following the instructions under Getting Started above).
-* Export your configuration changes using `drush cex`, check the listed changes. If they are correct, approve them.
-* Add, commit, and push your changes, then open a pull request.
+
+### Creating an Issue
+* Create a new issue on the project repository above (Issues > New Issue), create an issue branch on your local site (following the instructions under Getting Started above).
+* Unzip the configuration exports you made, and place these files in the config/default folder.
+* Carefully review changes to the .yml files by using `git diff`.
+* Add, commit, and push your changes to the production configuration, then open a pull request.
 * Notify the #website team on Slack.
 
 If in doubt, please reach out to a member of the Web team!
