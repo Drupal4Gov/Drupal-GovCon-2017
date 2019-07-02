@@ -50,3 +50,14 @@ function _capitalcamp_glue_user_register_form_submit($form, FormStateInterface $
   $url = Url::fromUri('internal:/form/registration');
   $form_state->setRedirectUrl($url);
 }
+
+/**
+ * Implements hook_preprocess_menu().
+ */
+function capitalcamp_glue_preprocess_menu(array &$variables) {
+  if (\Drupal::currentUser()->isAnonymous() &&
+      $variables['menu_name'] == '2018-schedule') {
+    // Hide the menu item.
+    unset($variables['items']['menu_link_content:c3ba78a6-61a5-4d5a-9f4e-32f83af5767a']);
+  }
+}
