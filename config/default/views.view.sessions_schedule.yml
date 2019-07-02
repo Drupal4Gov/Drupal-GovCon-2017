@@ -3400,7 +3400,7 @@ display:
   page_5:
     display_plugin: page
     id: page_5
-    display_title: '2018 My Schedule'
+    display_title: '2019 My Schedule'
     position: 1
     display_options:
       display_extenders: {  }
@@ -4290,7 +4290,7 @@ display:
           empty: true
           tokenize: false
           content:
-            value: 'No sessions matched your search criteria'
+            value: 'No sessions were found in your schedule. Please confirm that you’re logged in, and <a href=''/user/login?destination=/2019/schedule/my-schedule''>log in</a> to view your schedule if not.'
             format: simple_text
           plugin_id: text
       relationships:
