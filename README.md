@@ -93,7 +93,7 @@ $  git push --set-upstream origin DGC-XXX
 * Create a new Pull Request that mentions the original ticket in the body (#DGC-XXX)
 * Ensure the build passes
 
-## Configuration Changes
+## Configuration Changes-Use Only in Dire Situations
 When making configuration changes to the production site—and this includes menu, block, and view updates, **if these are not checked in, they will be overwritten on the next deploy!**
 
 If in doubt whether you have made configuration changes, go to [Synchronize](https://www.drupalgovcon.org/admin/config/development/configuration), where any configurations you have updated will be listed.
@@ -102,9 +102,18 @@ If you have, you will want to check this list carefully, to be sure it only cove
 
 ### Exporting Your Changes
 * When at [Synchronize](https://www.drupalgovcon.org/admin/config/development/configuration), go to the Export tab, where you can export all changes using **Full archive**. Tapping the **Export** button will download an archive of these changes to your computer.
+* Follow either following method to add your changes:
+
+### GUI Method - No Local Codebase Rqquired
+* Create a new issue on the project repository above (Issues > New Issue)
+* Unzip the configuration exports you made, and drag these files into the config/default folder on your new issue's page.
+* Carefully review your changes to the .yml files by using the Compare tab.
+* Commit the .yml files that represent the changes you made to configuration on the production site.
+* Create a pull request (When you commit your changes, you should see this button on the main project repository page).
+* Notify the #website team on Slack.
 
 
-### Creating an Issue
+### CLI Method – Using Your Local
 * Create a new issue on the project repository above (Issues > New Issue), create an issue branch on your local site (following the instructions under Getting Started above).
 * Unzip the configuration exports you made, and place these files in the config/default folder.
 * Carefully review changes to the .yml files by using `git diff`.
