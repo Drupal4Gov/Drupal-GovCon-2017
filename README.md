@@ -116,7 +116,7 @@ If you have, you will want to check this list carefully, to be sure it only cove
 
 ### CLI Method – Using Your Local
 * **First, make sure your local fork is up-to-date** following the instructions under **Working with BLT** above.
-* Create a new issue on the project [Jira board](https://drupal4gov.atlassian.net/secure/RapidBoard.jspa?projectKey=DGC&rapidView=3).
+* Create a new issue on the project [Jira board](https://drupal4gov.atlassian.net).
 * Create a new issue on the project repository above (Issues > New Issue), create an issue branch on your local site (following the instructions under Getting Started above).
 * Unzip the configuration exports you made, and place these files in the config/default folder.
 * Carefully review changes to the .yml files by using `git diff`.
