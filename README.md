@@ -104,8 +104,9 @@ If you have, you will want to check this list carefully, to be sure it only cove
 * When at [Synchronize](https://www.drupalgovcon.org/admin/config/development/configuration), go to the Export tab, where you can export all changes using **Full archive**. Tapping the **Export** button will download an archive of these changes to your computer.
 * Follow either following method to add your changes:
 
-### GUI Method - No Local Codebase Rqquired
-* Create a new issue on the project repository above (Issues > New Issue)
+### GUI Method - No Local Codebase Required
+* Create a new issue on the project [Jira board](https://drupal4gov.atlassian.net/secure/RapidBoard.jspa?projectKey=DGC&rapidView=3).
+* Open a corresponding ticket on GitHub repository above (Issues > New Issue), create an issue branch on your local site (following the instructions under Getting Started above).
 * Unzip the configuration exports you made, and drag these files into the config/default folder on your new issue's page.
 * Carefully review your changes to the .yml files by using the Compare tab.
 * Commit the .yml files that represent the changes you made to configuration on the production site.
@@ -114,6 +115,8 @@ If you have, you will want to check this list carefully, to be sure it only cove
 
 
 ### CLI Method – Using Your Local
+* **First, make sure your local fork is up-to-date** following the instructions under **Working with BLT** above.
+* Create a new issue on the project [Jira board](https://drupal4gov.atlassian.net/secure/RapidBoard.jspa?projectKey=DGC&rapidView=3).
 * Create a new issue on the project repository above (Issues > New Issue), create an issue branch on your local site (following the instructions under Getting Started above).
 * Unzip the configuration exports you made, and place these files in the config/default folder.
 * Carefully review changes to the .yml files by using `git diff`.
