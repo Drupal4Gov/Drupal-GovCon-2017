@@ -109,7 +109,7 @@ If you have, you will want to check this list carefully, to be sure it only cove
 * Open a corresponding ticket on GitHub repository above (Issues > New Issue), create an issue branch on your local site (following the instructions under Getting Started above).
 * Unzip the configuration exports you made, and drag these files into the config/default folder on your new issue's page.
 * Carefully review your changes to the .yml files by using the Compare tab.
-* Commit the .yml files that represent the changes you made to configuration on the production site.
+* Add, commit, and push your changes to the production configuration, then open a pull request. **This step assumes that you already have a [fork](https://help.github.com/en/articles/fork-a-repo) of the codebase locally**.
 * Create a pull request (When you commit your changes, you should see this button on the main project repository page).
 * Notify the #website team on Slack.
 
