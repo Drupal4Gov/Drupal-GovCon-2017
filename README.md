@@ -106,6 +106,7 @@ If you have, you will want to check this list carefully, to be sure it only cove
 
 ### GUI Method - No Local Codebase Required
 * Create a new issue on the project [Jira board](https://drupal4gov.atlassian.net/secure/RapidBoard.jspa?projectKey=DGC&rapidView=3).
+* Pull the latest updates from the upstream master.
 * Open a corresponding ticket on GitHub repository above (Issues > New Issue), create an issue branch on your local site (following the instructions under Getting Started above).
 * Unzip the configuration exports you made, and drag these files into the config/default folder on your new issue's page.
 * Carefully review your changes to the .yml files by using the Compare tab.
