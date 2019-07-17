@@ -14,7 +14,7 @@ dependencies:
     - field.field.user.user.field_website
     - image.style.user_profile_image
   module:
-    - linkicon
+    - link
     - panelizer
     - svg_image
     - text
@@ -31,7 +31,7 @@ bundle: user
 mode: default
 content:
   field_bio:
-    weight: 5
+    weight: 6
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -54,7 +54,7 @@ content:
     type: string
     region: content
   field_job_title:
-    weight: 6
+    weight: 5
     label: inline
     settings:
       link_to_entity: false
@@ -95,26 +95,12 @@ content:
     label: inline
     settings:
       target: _blank
-      linkicon_prefix: icon-website
-      linkicon_wrapper_class: ''
-      linkicon_link: true
-      linkicon_style: ''
-      linkicon_color: ''
-      linkicon_maxlength: 60
-      linkicon_global_title: ''
-      linkicon_position: ''
-      linkicon_size: ''
       url_only: false
       url_plain: false
       rel: '0'
-      linkicon_load: false
-      linkicon_vertical: false
-      linkicon_tooltip: false
-      linkicon_no_text: false
-      linkicon_bundle: ''
       trim_length: 80
     third_party_settings: {  }
-    type: linkicon
+    type: link
     region: content
   member_for:
     weight: 0
