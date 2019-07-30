@@ -409,7 +409,7 @@ display:
       display_extenders: {  }
       use_ajax: true
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -425,7 +425,7 @@ display:
     display_options:
       display_extenders: {  }
     cache_metadata:
-      max-age: 0
+      max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'

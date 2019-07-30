@@ -11,7 +11,7 @@ dependencies:
     - media.type.document
   module:
     - file
-    - image
+    - svg_image
     - user
 _core:
   default_config_hash: RB_e7jnyg4lW5G9VkkpsZn1zR6EwiEPtd5OM3_5FqQk
@@ -80,4 +80,3 @@ content:
     region: content
 hidden:
   field_media_in_library: true
-  scheduled_publication: true

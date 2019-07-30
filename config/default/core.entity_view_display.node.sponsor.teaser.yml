@@ -4,15 +4,16 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.sponsor.field_conference_year
     - field.field.node.sponsor.field_sponsor_logo
     - field.field.node.sponsor.field_sponsor_related_attendees
     - field.field.node.sponsor.field_sponsor_sponsorship_level
     - field.field.node.sponsor.field_sponsor_url
     - node.type.sponsor
   module:
-    - image
     - link
     - panelizer
+    - svg_image
     - user
 third_party_settings:
   panelizer:
@@ -53,4 +54,3 @@ hidden:
   field_sponsor_related_attendees: true
   field_sponsor_sponsorship_level: true
   links: true
-  scheduled_publication: true

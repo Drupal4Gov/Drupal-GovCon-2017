@@ -1,32 +1,30 @@
-uuid: d4a355fd-873f-40a9-9042-fd51f6acaf7d
+uuid: 1edf9b06-0e81-4877-8027-b150a207f327
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.media.thumbnail
+    - core.entity_form_mode.media.media_library
     - field.field.media.tweet.embed_code
     - field.field.media.tweet.field_media_in_library
-    - image.style.medium
     - media.type.tweet
-  module:
-    - svg_image
-id: media.tweet.thumbnail
+id: media.tweet.media_library
 targetEntityType: media
 bundle: tweet
-mode: thumbnail
+mode: media_library
 content:
-  thumbnail:
-    type: image
-    weight: 0
-    label: hidden
+  name:
+    type: string_textfield
     settings:
-      image_style: medium
-      image_link: ''
+      size: 60
+      placeholder: ''
+    weight: 0
     third_party_settings: {  }
     region: content
 hidden:
   created: true
   embed_code: true
   field_media_in_library: true
-  name: true
+  path: true
+  preview: true
+  status: true
   uid: true

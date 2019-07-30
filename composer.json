@@ -13,9 +13,6 @@
         }
     },
     "config": {
-        "platform": {
-            "php": "7.1"
-        },
         "sort-packages": true
     },
     "minimum-stability": "dev",
@@ -23,7 +20,7 @@
     "require": {
         "acquia/blt": "^10.0",
         "acquia/drupal-spec-tool": ">=2.0.0",
-        "acquia/lightning": "^3.1.0",
+        "acquia/lightning": "^3.3.0",
         "drupal/acquia_connector": "^1.5.0",
         "drupal/acquia_purge": "^1.0",
         "drupal/acsf": "^1.32.0",
@@ -38,12 +35,10 @@
         "drupal/config_split": "^1.0.0",
         "drupal/config_update": "1.5.0",
         "drupal/context": "^4.0@beta",
-        "drupal/core": "~8.6.0",
-        "drupal/crop": "2.0.0-rc1",
+        "drupal/core": "^8.7.0",
         "drupal/devel": "^2.0.0",
         "drupal/environment_indicator": "^3.0.0-beta1",
         "drupal/extlink": "^1.0",
-        "drupal/features": "^3.8.0",
         "drupal/field_group": "^3.0",
         "drupal/field_permissions": "1.x-dev",
         "drupal/flag": "^4.0.0-alpha2",
@@ -52,7 +47,6 @@
         "drupal/honeypot": "^1.20",
         "drupal/linkicon": "^1.4",
         "drupal/memcache": "2.0-alpha7",
-        "drupal/pathauto": "^1.0.0-alpha2",
         "drupal/purge": "^3.0.0-beta6",
         "drupal/qa_accounts": "^1.0.0-alpha1",
         "drupal/r4032login": "dev-1.x",
@@ -68,12 +62,12 @@
         "drupal/webform_views": "5.x-dev",
         "drupal/xmlsitemap": "^1.0.0-alpha2",
         "drush/drush": "9.5.2",
-        "php": ">=7.1"
+        "php": ">=7.2"
     },
     "require-dev": {
         "acquia/blt-require-dev": "^10.0.0-alpha1",
         "drupal/console": "^1.0.0-rc13",
-        "geerlingguy/drupal-vm": "~4.9"
+        "geerlingguy/drupal-vm": "~5.0"
     },
     "scripts": {
         "post-install-cmd": [
