@@ -21,6 +21,7 @@ events:
               - nvm install v8.9.1
               - npm install -g npm
               - npm install --global yarn
+              - npm install -g backstopjs
         - validate:
             type: script
             script:
@@ -33,6 +34,7 @@ events:
             type: script
             script:
               - source ${BLT_DIR}/scripts/pipelines/tests
+              - backstop test
         - build-artifact:
             type: script
             script:
