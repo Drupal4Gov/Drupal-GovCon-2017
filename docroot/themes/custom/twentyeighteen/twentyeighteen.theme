@@ -89,7 +89,7 @@ function twentyeighteen_form_node_form_alter(&$form, FormStateInterface $form_st
   $node = $form_state->getFormObject()->getEntity();
   $form['#theme'] = ['node_edit_form'];
   $form['advanced']['#type'] = 'container';
-  $is_new = !$node->isNew() ? format_date($node->getChangedTime(), 'short') : t('Not saved yet');
+  $is_new = !$node->isNew() ? \Drupal::service('date.formatter')->format($node->getChangedTime(), 'short') : t('Not saved yet');
   $form['meta'] = [
     '#attributes' => ['class' => ['entity-meta__header']],
     '#type'       => 'container',
