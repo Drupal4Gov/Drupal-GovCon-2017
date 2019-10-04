@@ -191,39 +191,6 @@ function capitalcamp_glue_update_8009() {
 }
 
 /**
- * Workflow update.
- */
-function capitalcamp_glue_update_8010() {
-  drupal_flush_all_caches();
-  \Drupal::service('module_installer')->install(['wbm_to_cm']);
-  \Drupal::service('module_installer')->install(['workflows']);
-  \Drupal::service('module_installer')->install(['content_moderation']);
-  drush_invoke_process("@self", "cc drush");
-  // Display starting data.
-  echo "Node data before migration.";
-  drush_invoke_process("@self", "wtc-dq node_field_revision node");
-
-  // Migrate node data.
-  echo "Migrating nodes";
-  drush_invoke_process("@self", "wtc-nr message");
-
-  echo "Migration complete...";
-  // Display starting data.
-  echo "Node data before migration.";
-  drush_invoke_process("@self", "wtc-dq node_field_revision node");
-
-  // Display data after migration.
-  echo "Node data after migration.";
-  drush_invoke_process("@self", "wtc-dq content_moderation_state_field_revision node");
-
-  // Clear all old workbench moderation values.
-  drush_invoke_process("@self", "wtc-c");
-  // Uninstall workbench moderation.
-  echo "Uninstalling workbench moderation.";
-  \Drupal::service('module_installer')->uninstall(['workbench_moderation']);
-}
-
-/**
  * Removing unneeded modules.
  */
 function capitalcamp_glue_update_8011() {

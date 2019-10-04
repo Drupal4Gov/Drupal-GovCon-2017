@@ -32,4 +32,7 @@ behat:
 cm:
   strategy: config-split
   allow-overrides: true
-disable-targets.tests.security.check.updates: true
+validate:
+  deprecation:
+    modules: true
+    themes: true
