@@ -1,0 +1,27 @@
+name: drupalgovcon
+recipe: drupal8
+config:
+  php: '7.2'
+  webroot: docroot
+  xdebug: false
+services:
+  appserver:
+    overrides: {image: 'acquia/ads-local:lando-php'}
+    cap_add:
+      - SYS_ADMIN
+  memcached:
+    type: 'memcached:1.5.3-r1'
+tooling:
+  blt:
+    service: appserver
+    cmd: /app/vendor/bin/blt
+  xdebug-on:
+    service: appserver
+    description: Enable xdebug for apache.
+    cmd: "docker-php-ext-enable xdebug && /etc/init.d/apache2 reload"
+    user: root
+  xdebug-off:
+    service: appserver
+    description: Disable xdebug for apache.
+    cmd: "rm /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini && /etc/init.d/apache2 reload"
+    user: root
