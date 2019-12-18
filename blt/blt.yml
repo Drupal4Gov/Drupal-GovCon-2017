@@ -36,3 +36,8 @@ validate:
   deprecation:
     modules: true
     themes: true
+disable-targets:
+  tests:
+    security:
+      check:
+        updates: true

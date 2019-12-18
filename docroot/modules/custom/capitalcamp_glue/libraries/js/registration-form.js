@@ -1,3 +1,8 @@
+/**
+ * @file
+ * Contains helper and installation functions.
+ */
+
 (function ($, Drupal) {
     'use strict';
     Drupal.behaviors.registration_form = {
