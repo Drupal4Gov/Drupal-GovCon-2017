@@ -18,10 +18,11 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "acquia/blt": "^10.0",
+        "acquia/blt": "^11.0",
         "acquia/drupal-spec-tool": ">=2.0.0",
         "acquia/lightning": "^3.3.0",
         "acquia/memcache-settings": "*",
+        "drupal-composer/drupal-scaffold": "^2.5.4",
         "drupal/acquia_connector": "^1.5.0",
         "drupal/acquia_purge": "^1.0",
         "drupal/acsf": "^1.32.0",
@@ -36,7 +37,7 @@
         "drupal/config_split": "^1.0.0",
         "drupal/config_update": "1.5.0",
         "drupal/context": "^4.0@beta",
-        "drupal/core": "^8.7.0",
+        "drupal/core": "~8.7.0",
         "drupal/devel": "^2.0.0",
         "drupal/environment_indicator": "^3.0.0-beta1",
         "drupal/extlink": "^1.0",
@@ -65,7 +66,7 @@
         "php": ">=7.2"
     },
     "require-dev": {
-        "acquia/blt-require-dev": "^10.0.0-alpha1",
+        "acquia/blt-require-dev": "11.x-dev",
         "drupal/console": "^1.0.0-rc13",
         "geerlingguy/drupal-vm": "~5.0"
     },
