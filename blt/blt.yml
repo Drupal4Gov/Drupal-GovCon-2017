@@ -5,7 +5,7 @@ project:
   profile:
     name: lightning
   local:
-    protocol: http
+    protocol: https
     hostname: 'drupalgovcon.lndo.site'
 git:
   default_branch: master
@@ -15,7 +15,7 @@ deploy:
   tag_source: true
 drush:
   aliases:
-    remote: dgc.test
+    remote: dgc.dev
     local: self
     ci: self
   default_alias: '${drush.aliases.local}'
@@ -36,8 +36,3 @@ validate:
   deprecation:
     modules: true
     themes: true
-disable-targets:
-  tests:
-    security:
-      check:
-        updates: true

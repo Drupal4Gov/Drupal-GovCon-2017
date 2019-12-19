@@ -1,10 +1,3 @@
-local:
-    host: local.capitalcamp.com
-    options: {  }
-    root: /var/www/capitalcamp/docroot
-    uri: 'http://local.capitalcamp.com'
-    user: vagrant
-    ssh: { options: '-o StrictHostKeyChecking=no -o PasswordAuthentication=no -i $HOME/.vagrant.d/insecure_private_key' }
 prod:
     host: ded-2297.prod.hosting.acquia.com
     options: { ac-env: prod, ac-realm: prod, ac-site: capitalcamp }
