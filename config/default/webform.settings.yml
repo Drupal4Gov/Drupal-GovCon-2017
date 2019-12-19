@@ -153,7 +153,7 @@ mail:
   default_return_path: ''
   default_sender_mail: ''
   default_sender_name: ''
-  default_subject: 'Webform submission from: [webform_submission:source-entity]'
+  default_subject: 'Webform submission from: [webform_submission:source-title]'
   default_body_text: "Submitted on [webform_submission:created]\nSubmitted by: [webform_submission:user]\n\nSubmitted values are:\n[webform_submission:values]\n"
   default_body_html: "<p>Submitted on [webform_submission:created]</p>\n<p>Submitted by: [webform_submission:user]</p>\n<p>Submitted values are:</p>\n[webform_submission:values]\n"
   roles: {  }

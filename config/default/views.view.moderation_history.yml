@@ -15,7 +15,6 @@ description: ''
 tag: ''
 base_table: node_field_revision
 base_field: vid
-core: 8.x
 display:
   default:
     display_plugin: default
@@ -260,7 +259,7 @@ display:
           field_api_classes: false
           entity_type: content_moderation_state
           entity_field: moderation_state
-          plugin_id: field
+          plugin_id: moderation_state_field
       filters: {  }
       sorts:
         changed:
