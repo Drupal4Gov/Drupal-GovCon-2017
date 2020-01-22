@@ -15,7 +15,6 @@ description: ''
 tag: ''
 base_table: webform_submission
 base_field: sid
-core: 8.x
 display:
   default:
     display_plugin: default
@@ -268,6 +267,9 @@ display:
           entity_type: webform_submission
           entity_field: webform_id
           plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
         webform_submission_value:
           id: webform_submission_value
           table: webform_submission_field_registration_show_on_attendee_listing_page
@@ -291,6 +293,8 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''

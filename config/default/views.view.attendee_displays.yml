@@ -31,7 +31,6 @@ description: 'Used to display conference attendees, broken down by type.'
 tag: ''
 base_table: webform_submission
 base_field: sid
-core: 8.x
 display:
   default:
     display_plugin: default
@@ -544,6 +543,8 @@ display:
               authenticated: authenticated
             reduce: false
             argument: null
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -582,6 +583,8 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -628,6 +631,8 @@ display:
               media_creator: '0'
               media_manager: '0'
               volunteer: '0'
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -674,6 +679,8 @@ display:
               media_creator: '0'
               media_manager: '0'
               volunteer: '0'
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -720,6 +727,8 @@ display:
               media_creator: '0'
               media_manager: '0'
               volunteer: '0'
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -1892,6 +1901,8 @@ display:
               authenticated: authenticated
             reduce: false
             argument: null
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -1930,6 +1941,8 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -1975,6 +1988,8 @@ display:
               landing_page_reviewer: '0'
               media_creator: '0'
               media_manager: '0'
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -2020,6 +2035,8 @@ display:
               landing_page_reviewer: '0'
               media_creator: '0'
               media_manager: '0'
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -2065,6 +2082,8 @@ display:
               landing_page_reviewer: '0'
               media_creator: '0'
               media_manager: '0'
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -2103,6 +2122,8 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -2833,6 +2854,8 @@ display:
               authenticated: authenticated
             reduce: false
             argument: null
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -2871,6 +2894,8 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -2916,6 +2941,8 @@ display:
               landing_page_reviewer: '0'
               media_creator: '0'
               media_manager: '0'
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -2961,6 +2988,8 @@ display:
               landing_page_reviewer: '0'
               media_creator: '0'
               media_manager: '0'
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -3006,6 +3035,8 @@ display:
               landing_page_reviewer: '0'
               media_creator: '0'
               media_manager: '0'
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -3045,6 +3076,8 @@ display:
               authenticated: authenticated
             reduce: false
             argument: null
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -3083,6 +3116,8 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -3300,6 +3335,8 @@ display:
               authenticated: authenticated
             reduce: false
             argument: null
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -3338,6 +3375,8 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -3383,6 +3422,8 @@ display:
               landing_page_reviewer: '0'
               media_creator: '0'
               media_manager: '0'
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -3428,6 +3469,8 @@ display:
               landing_page_reviewer: '0'
               media_creator: '0'
               media_manager: '0'
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -3473,6 +3516,8 @@ display:
               landing_page_reviewer: '0'
               media_creator: '0'
               media_manager: '0'
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -3511,6 +3556,8 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''

@@ -44,6 +44,7 @@ third_party_settings:
         id: ''
         required_fields: true
       label: Slides
+      region: content
     group_scheduling_details:
       children:
         - field_session_date_time
@@ -57,6 +58,7 @@ third_party_settings:
         description: ''
         required_fields: true
       label: 'Scheduling Details'
+      region: content
     group_room:
       children:
         - field_room_monitor
@@ -71,6 +73,7 @@ third_party_settings:
         description: ''
         required_fields: true
       label: 'Room Monitor'
+      region: content
 _core:
   default_config_hash: DV8OLbi-qcGglfofiDQUJ4P1qPscvwMsPVe80-OoIBo
 id: node.session.default
@@ -85,6 +88,7 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
+      show_summary: false
     third_party_settings: {  }
     region: content
   created:
@@ -138,6 +142,7 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
@@ -147,6 +152,7 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
@@ -222,6 +228,7 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     third_party_settings: {  }
     region: content
   url_redirects:

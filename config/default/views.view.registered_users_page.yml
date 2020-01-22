@@ -16,7 +16,6 @@ description: ''
 tag: ''
 base_table: webform_submission
 base_field: sid
-core: 8.x
 display:
   default:
     display_plugin: default
@@ -338,6 +337,9 @@ display:
           entity_type: webform_submission
           entity_field: webform_id
           plugin_id: bundle
+          expose:
+            operator_limit_selection: false
+            operator_list: {  }
         webform_submission_value:
           id: webform_submission_value
           table: webform_submission_field_2018_registration_display_me_on_the_attendees_page
@@ -361,6 +363,8 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -402,6 +406,8 @@ display:
               volunteer: '0'
               sponsor: '0'
             placeholder: ''
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -443,6 +449,8 @@ display:
               volunteer: '0'
               sponsor: '0'
             placeholder: ''
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -537,6 +545,8 @@ display:
               authenticated: authenticated
             reduce: false
             argument: null
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -575,6 +585,8 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -624,6 +636,8 @@ display:
               sponsor: '0'
               content_editor: '0'
             placeholder: ''
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -673,6 +687,8 @@ display:
               sponsor: '0'
               content_editor: '0'
             placeholder: ''
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''

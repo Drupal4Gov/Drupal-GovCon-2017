@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.landing_page.field_meta_tags
     - field.field.node.landing_page.panelizer
     - node.type.landing_page
-    - workflows.workflow.editorial
   module:
     - content_moderation
     - metatag
@@ -72,6 +71,7 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     third_party_settings: {  }
     region: content
   url_redirects:

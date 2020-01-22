@@ -1,4 +1,3 @@
-uuid: b6f086de-1bba-436d-a4f2-75b7fb1ba6b0
 langcode: en
 status: open
 dependencies: {  }
@@ -18,9 +17,13 @@ javascript: ''
 settings:
   ajax: false
   ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
   page: true
   page_submit_path: ''
   page_confirm_path: ''
+  page_admin_theme: false
   form_title: source_entity_webform
   form_submit_once: false
   form_exception_message: ''
@@ -76,6 +79,7 @@ settings:
   wizard_progress_pages: false
   wizard_progress_percentage: false
   wizard_progress_link: false
+  wizard_progress_states: false
   wizard_start_label: ''
   wizard_preview_link: false
   wizard_confirmation: true
@@ -94,6 +98,8 @@ settings:
   draft_auto_save: false
   draft_saved_message: ''
   draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
   confirmation_type: url_message
   confirmation_title: ''
   confirmation_message: "Thank you for registering for Drupal GovCon! Now that you&#39;ve grabbed your ticket to the event, consider <a href=\"/node/add/session\">submitting a session</a>!<br />\r\n<br />\r\nThanks to our awesome sponsors, we are able to provide complimentary lunch. Attendees who registered by July 12th will be given preference in line at lunch. Once all confirmed attendees have received a lunch, other attendees will be able to enjoy any remaining lunches we may have available.<br />\r\n<br />\r\nDon&rsquo;t fear though, the <a href=\"https://www.ors.od.nih.gov/pes/dats/food/Pages/index.aspx\">NIH campus</a> and nearby <a href=\"https://www.yelp.com/search?cflt=restaurants&amp;find_near=medical-center-metro-station-bethesda-2\">Bethesda area</a> have many dining options to choose from.<br />\r\n<br />\r\nIf you have questions, please contact us at <a href=\"mailto:drupal4gov@gmail.com\">drupal4gov@gmail.com</a>."
@@ -104,6 +110,7 @@ settings:
   confirmation_back_attributes: {  }
   confirmation_exclude_query: false
   confirmation_exclude_token: false
+  confirmation_update: false
   limit_total: 1600
   limit_total_interval: null
   limit_total_message: ''
@@ -120,6 +127,7 @@ settings:
   purge_days: null
   results_disabled: false
   results_disabled_ignore: false
+  token_view: false
   token_update: false
   form_login: false
   form_login_message: ''
@@ -199,13 +207,15 @@ handlers:
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
+      exclude_empty_checkbox: false
       html: true
       attachments: false
+      twig: false
       debug: false
       reply_to: ''
       return_path: ''
       sender_mail: ''
       sender_name: ''
-      twig: false
-      exclude_empty_checkbox: false
       theme_name: ''
+      parameters: {  }
+uuid: b6f086de-1bba-436d-a4f2-75b7fb1ba6b0
