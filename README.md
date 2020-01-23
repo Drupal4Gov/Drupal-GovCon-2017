@@ -20,6 +20,41 @@ After creating a fork of the repository in Github 9and installing all dependenci
 * `lando start` (provision the vm)
 * `lando blt setup` (install Drupal)
 
+## Updating from DrupalVM
+
+If you have been a part of our team in the past and have a local DrupalVM, here are a few steps to take to "update" to Lando.
+
+* `blt vm:nuke` to destroy the old vm
+* open the blt/local.blt.yml file and look for a "vm" key. If present, remove the vm (and enable:true) keys from the file
+* open the docroot/sites/default/settings/local.settings.php file and replace the database configuration with:
+
+```php
+/**
+ * Database configuration.
+ */
+$databases = array(
+  'default' =>
+  array(
+    'default' =>
+    array(
+      'database' => 'drupal8',
+      'username' => 'drupal8',
+      'password' => 'drupal8',
+      'host' => 'database',
+      'port' => '3306',
+      'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+      'driver' => 'mysql',
+      'prefix' => '',
+    ),
+  ),
+);
+```
+
+* run `lando start`
+* run `lando blt setup`
+
+Note that the new local project url is http://drupalgovcon.lndo.site:8080
+
 ## Working with Lando and BLT
 
 Our team utilizes a standard [Git flow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) for our development workflow. You can read more about our recommended workflow in the [BLT docs](https://docs.acquia.com/blt/developer/dev-workflow/#workflow-example-local-development).

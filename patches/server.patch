@@ -1,0 +1,12 @@
+diff --git a/src/Robo/Common/Executor.php b/src/Robo/Common/Executor.php
+index 5283664..e64822b 100644
+--- a/src/Robo/Common/Executor.php
++++ b/src/Robo/Common/Executor.php
+@@ -219,6 +219,7 @@ class Executor implements ConfigAwareInterface, IOAwareInterface, LoggerAwareInt
+         'timeout' => 2,
+         'exceptions' => FALSE,
+       ]);
++      $this->say("Response Code: " . $res->getStatusCode());
+       if ($res->getStatusCode() && substr($res->getStatusCode(), 0, 1) != '5') {
+         return TRUE;
+       }
