@@ -1,12 +1,13 @@
 project:
-  machine_name: drupalgovcon
+  machine_name: capitalcamp
   prefix: DGC
   human_name: 'Drupal GovCon'
   profile:
     name: lightning
   local:
-    protocol: https
-    hostname: 'drupalgovcon.lndo.site'
+    protocol: http
+    #hostname: 'drupalgovcon.lndo.site'
+    hostname: 'local.capitalcamp.com'
 git:
   default_branch: master
   remotes:
@@ -26,13 +27,6 @@ command-hooks:
   frontend-assets:
     dir: '${repo.root}'
     command: ./blt/scripts/frontend-build.sh
-behat:
-  paths:
-    - '${repo.root}/tests/behat'
 cm:
   strategy: config-split
   allow-overrides: true
-validate:
-  deprecation:
-    modules: true
-    themes: true

@@ -62,12 +62,13 @@
         "drupal/webform": "^5.0@beta",
         "drupal/webform_views": "5.x-dev",
         "drupal/xmlsitemap": "^1.0.0-alpha2",
-        "php": ">=7.2"
+        "php": ">=7.2",
+        "drush/drush": "^9.7.1",
+        "mglaman/drupal-check": "1.0.14"
     },
     "require-dev": {
         "acquia/blt-require-dev": "11.x-dev",
-        "drupal/console": "^1.0.0-rc13",
-        "geerlingguy/drupal-vm": "~5.0"
+        "drupal/console": "^1.0.0-rc13"
     },
     "scripts": {
         "post-install-cmd": [
