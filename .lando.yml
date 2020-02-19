@@ -1,17 +1,17 @@
 name: drupalgovcon
 recipe: drupal8
 config:
-  php: '7.3'
   webroot: docroot
   xdebug: false
 services:
   appserver:
-    overrides: {image: 'acquia/ads-local:lando-php'}
-    build_as_root: ['apt-get update -qqy && apt-get install gnupg -qqy && curl https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - && echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list && apt-get update -qqy && apt-get -qqy install google-chrome-stable && rm /etc/apt/sources.list.d/google-chrome.list && rm -rf /var/lib/apt/lists/* /var/cache/apt/*', 'curl -sL https://deb.nodesource.com/setup_10.x | bash - && apt-get install -y nodejs']
-    cap_add:
-      - SYS_ADMIN
-  memcached:
-    type: 'memcached:1.5.3-r1'
+    xdebug: false
+    build_as_root:
+      - echo "Run additional build commands here. Run lando rebuild after updating this file."
+    overrides:
+      image: 'acquia/ads-local:lando-php-7.3-nodejs-10'
+      cap_add:
+        - SYS_ADMIN
 tooling:
   blt:
     service: appserver
