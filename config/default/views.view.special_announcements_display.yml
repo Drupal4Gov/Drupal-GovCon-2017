@@ -9,7 +9,7 @@ dependencies:
     - node.type.special_announcement
     - taxonomy.vocabulary.conference_year
   content:
-    - 'taxonomy_term:conference_year:951cf954-787d-4057-8cc0-b170bd6dda96'
+    - 'taxonomy_term:conference_year:b841e242-eb84-4bf9-b245-4c809e3737bd'
   module:
     - datetime
     - node
@@ -666,7 +666,7 @@ display:
           admin_label: ''
           operator: or
           value:
-            266: 266
+            296: 296
           group: 1
           exposed: false
           expose:
@@ -675,6 +675,8 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -682,8 +684,6 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -1072,7 +1072,7 @@ display:
           admin_label: ''
           operator: or
           value:
-            266: 266
+            296: 296
           group: 1
           exposed: false
           expose:
@@ -1081,6 +1081,8 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -1088,8 +1090,6 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''

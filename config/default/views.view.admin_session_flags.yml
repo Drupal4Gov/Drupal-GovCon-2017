@@ -18,6 +18,7 @@ dependencies:
     - 'taxonomy_term:conference_year:0f6c31f2-ef62-41ce-b17c-3e05bfb9b76c'
     - 'taxonomy_term:conference_year:951cf954-787d-4057-8cc0-b170bd6dda96'
     - 'taxonomy_term:conference_year:a3b3e4e7-5b6a-4d61-b99a-674262910622'
+    - 'taxonomy_term:conference_year:b841e242-eb84-4bf9-b245-4c809e3737bd'
     - 'taxonomy_term:session_track:0a204882-2395-405d-bc08-3d2e402400da'
     - 'taxonomy_term:session_track:18795e61-ba7c-451c-912e-6ef6835cf562'
     - 'taxonomy_term:session_track:3a322e64-7752-4b8c-920a-8333ec5cdfa5'
@@ -748,6 +749,7 @@ display:
             126: 126
             131: 131
             266: 266
+            296: 296
           group: 1
           exposed: false
           expose:
@@ -756,6 +758,8 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -763,8 +767,6 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''

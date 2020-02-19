@@ -7,7 +7,7 @@ dependencies:
     - node.type.event
     - taxonomy.vocabulary.conference_year
   content:
-    - 'taxonomy_term:conference_year:951cf954-787d-4057-8cc0-b170bd6dda96'
+    - 'taxonomy_term:conference_year:b841e242-eb84-4bf9-b245-4c809e3737bd'
 id: node.event.field_conference_year
 field_name: field_conference_year
 entity_type: node
@@ -18,7 +18,7 @@ required: true
 translatable: false
 default_value:
   -
-    target_uuid: 951cf954-787d-4057-8cc0-b170bd6dda96
+    target_uuid: b841e242-eb84-4bf9-b245-4c809e3737bd
 default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'

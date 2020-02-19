@@ -7,7 +7,7 @@ dependencies:
     - system.menu.admin
     - user.role.administrator
     - user.role.volunteer
-    - webform.webform.2019_registration
+    - webform.webform.2020_registration
     - webform.webform.registration
   module:
     - better_exposed_filters
@@ -747,7 +747,7 @@ display:
       sorts:
         webform_submission_value_1:
           id: webform_submission_value_1
-          table: webform_submission_field_2019_registration_last_name
+          table: webform_submission_field_2020_registration_last_name
           field: webform_submission_value
           plugin_id: webform_submission_field_sort
       title: 'Attendee Check-In'
@@ -851,7 +851,7 @@ display:
           plugin_id: entity_link_edit
         webform_submission_value_6:
           id: webform_submission_value_6
-          table: webform_submission_field_2019_registration_last_name
+          table: webform_submission_field_2020_registration_last_name
           field: webform_submission_value
           relationship: none
           group_type: group
@@ -903,7 +903,7 @@ display:
           plugin_id: webform_submission_field
         webform_submission_value_7:
           id: webform_submission_value_7
-          table: webform_submission_field_2019_registration_first_name
+          table: webform_submission_field_2020_registration_first_name
           field: webform_submission_value
           relationship: none
           group_type: group
@@ -955,7 +955,7 @@ display:
           plugin_id: webform_submission_field
         webform_submission_value_8:
           id: webform_submission_value_8
-          table: webform_submission_field_2019_registration_which_days_do_you_plan_to_attend_drupal_govcon_
+          table: webform_submission_field_2020_registration_which_days_do_you_plan_to_attend_drupal_govcon_
           field: webform_submission_value
           relationship: none
           group_type: group
@@ -1007,7 +1007,7 @@ display:
           plugin_id: webform_submission_field
         webform_submission_value_1:
           id: webform_submission_value_1
-          table: webform_submission_field_2019_registration_please_indicate_the_days_when_you_ll_need_lunch_this_will_help_u
+          table: webform_submission_field_2020_registration_please_indicate_the_days_when_you_ll_need_lunch_this_will_help_u
           field: webform_submission_value
           relationship: none
           group_type: group
@@ -1059,7 +1059,7 @@ display:
           plugin_id: webform_submission_field
         webform_submission_value_9:
           id: webform_submission_value_9
-          table: webform_submission_field_2019_registration_food
+          table: webform_submission_field_2020_registration_food
           field: webform_submission_value
           relationship: none
           group_type: group
@@ -1111,7 +1111,7 @@ display:
           plugin_id: webform_submission_field
         webform_submission_value_10:
           id: webform_submission_value_10
-          table: webform_submission_field_2019_registration_t_shirt_size
+          table: webform_submission_field_2020_registration_t_shirt_size
           field: webform_submission_value
           relationship: none
           group_type: group
@@ -1163,7 +1163,7 @@ display:
           plugin_id: webform_submission_field
         webform_submission_value_11:
           id: webform_submission_value_11
-          table: webform_submission_field_2019_registration_company_name
+          table: webform_submission_field_2020_registration_company_name
           field: webform_submission_value
           relationship: none
           group_type: group
@@ -1215,7 +1215,7 @@ display:
           plugin_id: webform_submission_field
         webform_submission_value:
           id: webform_submission_value
-          table: webform_submission_field_2019_registration_wait_list_checkbox
+          table: webform_submission_field_2020_registration_wait_list_checkbox
           field: webform_submission_value
           relationship: none
           group_type: group
@@ -1440,7 +1440,7 @@ display:
       filters:
         webform_submission_value:
           id: webform_submission_value
-          table: webform_submission_field_2019_registration_first_name
+          table: webform_submission_field_2020_registration_first_name
           field: webform_submission_value
           relationship: none
           group_type: group
@@ -1491,7 +1491,7 @@ display:
           plugin_id: webform_submission_field_filter
         webform_submission_value_1:
           id: webform_submission_value_1
-          table: webform_submission_field_2019_registration_last_name
+          table: webform_submission_field_2020_registration_last_name
           field: webform_submission_value
           relationship: none
           group_type: group
@@ -1549,7 +1549,7 @@ display:
           admin_label: ''
           operator: in
           value:
-            2019_registration: 2019_registration
+            2020_registration: 2020_registration
           group: 1
           exposed: false
           expose:
@@ -1639,7 +1639,7 @@ display:
       sorts:
         webform_submission_value:
           id: webform_submission_value
-          table: webform_submission_field_2019_registration_last_name
+          table: webform_submission_field_2020_registration_last_name
           field: webform_submission_value
           relationship: none
           group_type: group
@@ -1689,7 +1689,7 @@ display:
           admin_label: ''
           operator: in
           value:
-            2019_registration: 2019_registration
+            2020_registration: 2020_registration
           group: 1
           exposed: false
           expose:
@@ -1825,7 +1825,7 @@ display:
           plugin_id: counter
         webform_submission_value_1:
           id: webform_submission_value_1
-          table: webform_submission_field_2019_registration_last_name
+          table: webform_submission_field_2020_registration_last_name
           field: webform_submission_value
           relationship: none
           group_type: group
@@ -1877,7 +1877,7 @@ display:
           plugin_id: webform_submission_field
         webform_submission_value_2:
           id: webform_submission_value_2
-          table: webform_submission_field_2019_registration_first_name
+          table: webform_submission_field_2020_registration_first_name
           field: webform_submission_value
           relationship: none
           group_type: group
@@ -1929,7 +1929,7 @@ display:
           plugin_id: webform_submission_field
         webform_submission_value:
           id: webform_submission_value
-          table: webform_submission_field_2019_registration_email
+          table: webform_submission_field_2020_registration_email
           field: webform_submission_value
           relationship: none
           group_type: group

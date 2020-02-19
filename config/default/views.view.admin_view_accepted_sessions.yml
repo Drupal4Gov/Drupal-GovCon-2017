@@ -14,7 +14,7 @@ dependencies:
     - taxonomy.vocabulary.session_track
     - user.role.administrator
   content:
-    - 'taxonomy_term:conference_year:951cf954-787d-4057-8cc0-b170bd6dda96'
+    - 'taxonomy_term:conference_year:b841e242-eb84-4bf9-b245-4c809e3737bd'
     - 'taxonomy_term:rooms:0455db5b-93e9-41f6-b260-8de3d40462d1'
     - 'taxonomy_term:rooms:0dcc0b4c-fb92-4bd9-8c9c-2c105730c2e1'
     - 'taxonomy_term:rooms:1d1143b4-6860-4f75-987c-c695328c2077'
@@ -642,7 +642,7 @@ display:
           admin_label: ''
           operator: or
           value:
-            266: 266
+            296: 296
           group: 1
           exposed: false
           expose:
@@ -651,6 +651,8 @@ display:
             description: ''
             use_operator: false
             operator: field_conference_year_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: field_conference_year_target_id
             required: false
             remember: false
@@ -670,8 +672,6 @@ display:
               sponsor: '0'
               content_editor: '0'
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
