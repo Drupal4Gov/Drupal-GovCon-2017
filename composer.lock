@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2d5f150a61e2406cda3bc6f2a7f44ae8",
+    "content-hash": "332e9a05364e942f2bd223206752d28b",
     "packages": [
         {
             "name": "acquia/blt",
@@ -84,7 +84,10 @@
                         "type:drupal-core"
                     ]
                 },
-                "phpcodesniffer-search-depth": 4
+                "phpcodesniffer-search-depth": 4,
+                "patches_applied": {
+                    "debugging": "patches/debugging.patch"
+                }
             },
             "autoload": {
                 "psr-4": {
