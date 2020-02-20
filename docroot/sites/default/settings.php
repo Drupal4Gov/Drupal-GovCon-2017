@@ -719,15 +719,6 @@ $settings['container_yamls'][] = __DIR__ . '/services.yml';
 # }
 require DRUPAL_ROOT . "/../vendor/acquia/blt/settings/blt.settings.php";
 
-/**
- * Environment Specific Customizations based on the Environment Indicator.
- */
-require DRUPAL_ROOT . "/sites/default/settings/environment.settings.php";
-
-/**
- * Trusted Host settings.
- */
-require DRUPAL_ROOT . "/sites/default/settings/trusted_host.settings.php";#
 # IMPORTANT
 # Do not include additional settings here. Instead, add them to settings included
 # by `blt.settings.php`. See [BLT's documentation](http://blt.readthedocs.io)

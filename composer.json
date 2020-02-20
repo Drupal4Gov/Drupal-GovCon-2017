@@ -63,7 +63,6 @@
         "drupal/webform_views": "5.x-dev",
         "drupal/xmlsitemap": "^1.0.0-alpha2",
         "php": ">=7.3",
-        "drush/drush": "^9.7.1",
         "mglaman/drupal-check": "1.0.14"
     },
     "require-dev": {
@@ -130,6 +129,9 @@
         "patches": {
             "drupal/core": {
                 "Ignore front end vendor folders to improve directory search performance": "https://www.drupal.org/files/issues/ignore_front_end_vendor-2329453-116.patch"
+            },
+            "acquia/blt": {
+                "debugging": "patches/debugging.patch"
             }
         },
         "drupal-scaffold": {

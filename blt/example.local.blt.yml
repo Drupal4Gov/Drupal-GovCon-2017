@@ -9,4 +9,9 @@
 #drush:
 #  aliases:
 #    local: local.mysite.dev
-example: value
+drupal:
+  db:
+    database: drupal8
+    username: drupal8
+    password: drupal8
+    host: database

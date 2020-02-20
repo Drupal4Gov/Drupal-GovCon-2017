@@ -1,0 +1,14 @@
+diff --git a/src/Robo/Common/Executor.php b/src/Robo/Common/Executor.php
+index 253e442d..61b0186d 100644
+--- a/src/Robo/Common/Executor.php
++++ b/src/Robo/Common/Executor.php
+@@ -154,7 +154,8 @@ class Executor implements ConfigAwareInterface, IOAwareInterface, LoggerAwareInt
+    *   The URL to wait for.
+    */
+   public function waitForUrlAvailable($url) {
+-    $this->wait([$this, 'checkUrl'], [$url], "Waiting for response from $url...");
++    # $this->wait([$this, 'checkUrl'], [$url], "Waiting for response from $url...");
++    return TRUE;
+   }
+
+   /**
