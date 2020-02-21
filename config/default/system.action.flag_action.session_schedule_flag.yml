@@ -2,12 +2,14 @@ uuid: 2648bed8-0a4b-4d57-b1cb-1fe5087c4d5e
 langcode: en
 status: true
 dependencies:
+  config:
+    - flag.flag.session_schedule
   module:
     - flag
-id: flag_action.session_schedule.flag
+id: flag_action.session_schedule_flag
 label: 'Add to my schedule'
 type: node
-plugin: 'flag_action:session_schedule.flag'
+plugin: 'flag_action:session_schedule_flag'
 configuration:
   flag_id: session_schedule
   flag_action: flag
