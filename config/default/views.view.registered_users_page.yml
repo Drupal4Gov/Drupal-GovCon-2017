@@ -3,11 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
+    - system.menu.admin
+    - user.role.administrator
     - webform.webform.2018_registration
     - webform.webform.2019_registration
     - webform.webform.2020_registration
   module:
     - capitalcamp_glue
+    - user
     - webform
     - webform_views
 id: registered_users_page
@@ -25,8 +28,9 @@ display:
     position: 0
     display_options:
       access:
-        type: none
-        options: {  }
+        type: perm
+        options:
+          perm: 'access content'
       cache:
         type: tag
         options: {  }
@@ -333,14 +337,42 @@ display:
           id: webform_id
           table: webform_submission
           field: webform_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
           value:
             2018_registration: 2018_registration
+          group: 1
+          exposed: true
+          expose:
+            use_operator: false
+            operator: webform_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: webform_id
+            label: Webform
+            description: null
+            remember: false
+            multiple: false
+            required: false
+            reduce: false
+            argument: null
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
           entity_type: webform_submission
           entity_field: webform_id
           plugin_id: bundle
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
         webform_submission_value:
           id: webform_submission_value
           table: webform_submission_field_2018_registration_display_me_on_the_attendees_page
@@ -492,6 +524,7 @@ display:
         - url
         - url.query_args
         - user
+        - user.permissions
       tags: {  }
   page_1:
     display_plugin: page
@@ -509,6 +542,7 @@ display:
         - url
         - url.query_args
         - user
+        - user.permissions
       tags: {  }
   page_2:
     display_plugin: page
@@ -989,6 +1023,7 @@ display:
         - url
         - url.query_args
         - user
+        - user.permissions
       tags: {  }
   page_3:
     display_plugin: page
@@ -1469,4 +1504,196 @@ display:
         - url
         - url.query_args
         - user
+        - user.permissions
+      tags: {  }
+  page_4:
+    display_plugin: page
+    id: page_4
+    display_title: 'Admin: Registered Emails'
+    position: 4
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      access:
+        type: role
+        options:
+          role:
+            administrator: administrator
+      defaults:
+        access: false
+        filters: false
+        filter_groups: false
+        fields: false
+        sorts: false
+      path: admin/userlist
+      menu:
+        type: normal
+        title: 'Attendee Email List'
+        description: ''
+        expanded: false
+        parent: capitalcamp_glue.event
+        weight: 0
+        context: '0'
+        menu_name: admin
+      filters:
+        webform_id:
+          id: webform_id
+          table: webform_submission
+          field: webform_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            2020_registration: 2020_registration
+          group: 1
+          exposed: false
+          expose:
+            operator_id: webform_id_op
+            label: Webform
+            description: ''
+            use_operator: false
+            operator: webform_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: webform_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              page_creator: '0'
+              layout_manager: '0'
+              page_reviewer: '0'
+              landing_page_creator: '0'
+              landing_page_reviewer: '0'
+              media_creator: '0'
+              media_manager: '0'
+              volunteer: '0'
+              sponsor: '0'
+              content_editor: '0'
+            reduce: true
+            argument: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: webform_submission
+          entity_field: webform_id
+          plugin_id: bundle
+        webform_submission_value_1:
+          id: webform_submission_value_1
+          table: webform_submission_field_2020_registration_wait_list_checkbox
+          field: webform_submission_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: 'not in'
+          value:
+            1: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: webform_submission_select_filter
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      fields:
+        webform_submission_value_2:
+          id: webform_submission_value_2
+          table: webform_submission_field_2020_registration_email
+          field: webform_submission_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '{{ webform_submission_value_2 }}, '
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          webform_element_format: raw
+          webform_multiple_value: true
+          webform_multiple_delta: 0
+          plugin_id: webform_submission_field
+      sorts: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - url.query_args
+        - user
+        - user.roles
       tags: {  }
