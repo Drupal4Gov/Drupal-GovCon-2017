@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.field.node.page.body
     - field.field.node.page.field_meta_tags
-    - field.field.node.page.panelizer
+    - field.field.node.page.layout_selection
     - node.type.page
   module:
     - metatag
@@ -46,4 +46,4 @@ content:
     weight: -20
     region: content
 hidden:
-  panelizer: true
+  layout_selection: true

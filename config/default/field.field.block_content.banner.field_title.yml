@@ -1,0 +1,21 @@
+uuid: 13035b8c-17e4-460c-a7d7-afae45272585
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.banner
+    - field.storage.block_content.field_title
+_core:
+  default_config_hash: HfQxyB0Sz4PuJPUGy6Fd34iTCpZI58410fuLtO_E2pU
+id: block_content.banner.field_title
+field_name: field_title
+entity_type: block_content
+bundle: banner
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
