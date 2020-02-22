@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7e6eb82b7fa5df3ec06344c19de2df0d",
+    "content-hash": "36d8f5741d06d2bd10f9ff70bcf039c0",
     "packages": [
         {
             "name": "acquia/blt",
@@ -6234,6 +6234,10 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "patches_applied": {
+                    "fix php warnings": "https://www.drupal.org/files/issues/2020-01-31/3110330-2.patch",
+                    "fix other warnings": "https://www.drupal.org/files/issues/2020-01-30/3110139-3.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",

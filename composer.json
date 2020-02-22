@@ -132,6 +132,10 @@
             },
             "acquia/blt": {
                 "debugging": "patches/debugging.patch"
+            },
+            "drupal/extlink": {
+                "fix php warnings": "https://www.drupal.org/files/issues/2020-01-31/3110330-2.patch",
+                "fix other warnings": "https://www.drupal.org/files/issues/2020-01-30/3110139-3.patch"
             }
         },
         "drupal-scaffold": {
