@@ -1,11 +1,14 @@
-uuid: f5257438-ed44-4a2e-9646-5084bd880c47
+uuid: dc0b2b8c-3c0a-43db-a947-3a9c4f319bd5
 langcode: en
 status: true
 dependencies:
+  config:
+    - workflows.workflow.editorial
   enforced:
     module:
       - moderation_dashboard
   module:
+    - content_moderation
     - node
     - user
 _core:
