@@ -12,13 +12,19 @@ dependencies:
     - field.field.user.user.field_picture
     - field.field.user.user.field_twitter_account
     - field.field.user.user.field_website
-    - field.field.user.user.user_picture
     - image.style.user_profile_image
   module:
     - link
+    - panelizer
     - svg_image
     - text
     - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: user.user.default
 targetEntityType: user
 bundle: user
@@ -104,4 +110,3 @@ content:
 hidden:
   field_conference_role: true
   name: true
-  user_picture: true

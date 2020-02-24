@@ -12,8 +12,15 @@ dependencies:
     - node.type.special_announcement
   module:
     - datetime
+    - panelizer
     - text
     - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: node.special_announcement.default
 targetEntityType: node
 bundle: special_announcement

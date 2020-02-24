@@ -1,0 +1,13 @@
+uuid: 2393e91b-d5df-4dd4-9a2c-2dca17380820
+langcode: en
+status: true
+dependencies:
+  module:
+    - flag
+id: flag_action.check_in_status.unflag
+label: Checked-in
+type: webform_submission
+plugin: 'flag_action:check_in_status.unflag'
+configuration:
+  flag_id: check_in_status
+  flag_action: unflag

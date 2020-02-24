@@ -11,8 +11,15 @@ dependencies:
     - node.type.sponsor
   module:
     - link
+    - panelizer
     - svg_image
     - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 _core:
   default_config_hash: XbU27S_xwxlquvEYcXzk33gMPlpiYAwc4pOInO3wRI4
 id: node.sponsor.default
