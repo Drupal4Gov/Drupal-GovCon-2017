@@ -1,0 +1,34 @@
+uuid: 0f84d239-1228-45cf-a3dd-4a3c625dfc66
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.text
+    - field.field.block_content.text.body
+  module:
+    - text
+_core:
+  default_config_hash: BNCuXJPvIp5LwqJERsg3FhYYAY6rDoTwx6Sdu-RC0sg
+id: block_content.text.default
+targetEntityType: block_content
+bundle: text
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 0
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

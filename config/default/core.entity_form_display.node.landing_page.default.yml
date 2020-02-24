@@ -31,6 +31,12 @@ content:
     third_party_settings: {  }
     type: metatag_firehose
     region: content
+  layout_selection:
+    type: options_select
+    region: content
+    weight: 122
+    settings: {  }
+    third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
     weight: 100
