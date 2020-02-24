@@ -24,8 +24,15 @@ dependencies:
     - node.type.session
   module:
     - options
+    - panelizer
     - smart_trim
     - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 _core:
   default_config_hash: 161cNdkP3GSnJ3USq2Vku5UVMJUigX5hoC3tjL4Bk8s
 id: node.session.teaser

@@ -257,23 +257,3 @@ function capitalcamp_glue_update_8016() {
     ])->save();
   }
 }
-
-/**
- * Fix Flag Config re: D.O 3099003.
- */
-function capitalcamp_glue_update_8020() {
-  $config_factory = \Drupal::configFactory();
-  $flags = [
-    'system.action.flag_action.check_in_status.flag',
-    'system.action.flag_action.check_in_status.unflag',
-    'system.action.flag_action.session_schedule.flag',
-    'system.action.flag_action.session_schedule.unflag'
-  ];
-
-  foreach ($flags as $flag) {
-    $names = explode('.', $flag);
-    $config = $config_factory->getEditable($flag);
-    $config->set('plugin', "flag_action:" . $names[3] . "_flag");
-    $config->save(TRUE);
-  }
-}

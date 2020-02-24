@@ -12,8 +12,15 @@ dependencies:
     - field.field.node.special_announcement.field_sort_order
     - node.type.special_announcement
   module:
+    - panelizer
     - text
     - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: node.special_announcement.teaser
 targetEntityType: node
 bundle: special_announcement

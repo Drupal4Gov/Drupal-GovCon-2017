@@ -11,7 +11,14 @@ dependencies:
     - node.type.event
   module:
     - datetime
+    - panelizer
     - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
 id: node.event.teaser
 targetEntityType: node
 bundle: event
