@@ -2,12 +2,14 @@ uuid: 4798e8ae-a48f-46dc-848a-b4be86762c27
 langcode: en
 status: true
 dependencies:
+  config:
+    - flag.flag.check_in_status
   module:
     - flag
-id: flag_action.check_in_status.flag
+id: flag_action.check_in_status_flag
 label: Registered
 type: webform_submission
-plugin: 'flag_action:check_in_status.flag'
+plugin: 'flag_action:check_in_status_flag'
 configuration:
   flag_id: check_in_status
   flag_action: flag

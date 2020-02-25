@@ -5,12 +5,78 @@ dependencies:
   config:
     - field.field.node.page.body
     - field.field.node.page.field_meta_tags
+    - field.field.node.page.layout_selection
     - field.field.node.page.panelizer
     - node.type.page
   module:
+    - layout_builder
+    - layout_discovery
+    - layout_library
     - metatag
     - text
     - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          831451cf-c04b-467b-b731-c8cb4ffbd4d3:
+            uuid: 831451cf-c04b-467b-b731-c8cb4ffbd4d3
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:page:content_moderation_control'
+            additional: {  }
+            weight: 0
+          60badbd3-791c-4785-8486-15f41c48368d:
+            uuid: 60badbd3-791c-4785-8486-15f41c48368d
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:page:body'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+          863cb0c0-2bf9-4604-892b-d45c8295f392:
+            uuid: 863cb0c0-2bf9-4604-892b-d45c8295f392
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:page:links'
+            additional: {  }
+            weight: 2
+          ae81f8b9-d73c-4d54-83be-ab5381973032:
+            uuid: ae81f8b9-d73c-4d54-83be-ab5381973032
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:page:field_meta_tags'
+              formatter:
+                type: metatag_empty_formatter
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 3
+        third_party_settings: {  }
+  layout_library:
+    enable: true
 _core:
   default_config_hash: wQOp0Gtvf-nibo11pyMBzr9dcDrKIc6BA96c3lyY_bM
 id: node.page.default
@@ -45,5 +111,8 @@ content:
   workbench_moderation_control:
     weight: -20
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
+  layout_selection: true
   panelizer: true

@@ -20,7 +20,7 @@
     "require": {
         "acquia/blt": "^11.0",
         "acquia/drupal-spec-tool": ">=2.0.0",
-        "acquia/lightning": "^3.3.0",
+        "acquia/lightning": "^4",
         "acquia/memcache-settings": "*",
         "drupal-composer/drupal-scaffold": "^2.5.4",
         "drupal/acquia_connector": "^1.5.0",
@@ -43,11 +43,12 @@
         "drupal/extlink": "^1.0",
         "drupal/field_group": "^3.0",
         "drupal/field_permissions": "1.x-dev",
-        "drupal/flag": "4.0.0-alpha3",
+        "drupal/flag": "^4.0-beta1",
         "drupal/focal_point": "^1.0@beta",
         "drupal/google_analytics": "*@stable",
         "drupal/honeypot": "^1.20",
         "drupal/linkicon": "^1.4",
+        "drupal/panelizer": "^5",
         "drupal/purge": "^3.0.0-beta6",
         "drupal/qa_accounts": "^1.0.0-alpha1",
         "drupal/r4032login": "dev-1.x",
@@ -132,6 +133,10 @@
             },
             "acquia/blt": {
                 "debugging": "patches/debugging.patch"
+            },
+            "drupal/extlink": {
+                "fix php warnings": "https://www.drupal.org/files/issues/2020-01-31/3110330-2.patch",
+                "fix other warnings": "https://www.drupal.org/files/issues/2020-01-30/3110139-3.patch"
             }
         },
         "drupal-scaffold": {
