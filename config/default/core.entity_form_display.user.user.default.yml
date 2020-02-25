@@ -5,12 +5,10 @@ dependencies:
   config:
     - field.field.user.user.field_bio
     - field.field.user.user.field_conference_role
-    - field.field.user.user.field_drupal_org_username
     - field.field.user.user.field_first_name
     - field.field.user.user.field_job_title
     - field.field.user.user.field_last_name
     - field.field.user.user.field_picture
-    - field.field.user.user.field_twitter_account
     - field.field.user.user.field_website
     - image.style.thumbnail
   module:
@@ -43,14 +41,6 @@ content:
     third_party_settings: {  }
     type: options_select
     region: content
-  field_drupal_org_username:
-    weight: 5
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_first_name:
     weight: 2
     settings:
@@ -82,14 +72,6 @@ content:
       preview_image_style: thumbnail
       progress_indicator: throbber
     third_party_settings: {  }
-    region: content
-  field_twitter_account:
-    weight: 12
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
     region: content
   field_website:
     weight: 14
