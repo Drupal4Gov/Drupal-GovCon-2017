@@ -5,12 +5,10 @@ dependencies:
   config:
     - field.field.user.user.field_bio
     - field.field.user.user.field_conference_role
-    - field.field.user.user.field_drupal_org_username
     - field.field.user.user.field_first_name
     - field.field.user.user.field_job_title
     - field.field.user.user.field_last_name
     - field.field.user.user.field_picture
-    - field.field.user.user.field_twitter_account
     - field.field.user.user.field_website
     - image.style.user_profile_image
   module:
@@ -36,14 +34,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
-    region: content
-  field_drupal_org_username:
-    weight: 4
-    label: inline
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
     region: content
   field_first_name:
     weight: 2
@@ -81,14 +71,6 @@ content:
         width: ''
         height: ''
       svg_render_as_image: true
-    third_party_settings: {  }
-  field_twitter_account:
-    type: string
-    weight: 7
-    region: content
-    label: inline
-    settings:
-      link_to_entity: false
     third_party_settings: {  }
   field_website:
     weight: 8

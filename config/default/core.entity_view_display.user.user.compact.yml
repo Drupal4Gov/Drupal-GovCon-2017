@@ -4,10 +4,14 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.user.compact
-    - field.field.user.user.user_picture
-    - image.style.thumbnail
+    - field.field.user.user.field_bio
+    - field.field.user.user.field_conference_role
+    - field.field.user.user.field_first_name
+    - field.field.user.user.field_job_title
+    - field.field.user.user.field_last_name
+    - field.field.user.user.field_picture
+    - field.field.user.user.field_website
   module:
-    - image
     - user
 _core:
   default_config_hash: LFiVW93xRjd2WXEzCIHJNunpVtNZu6aOeNPX4le0lTI
@@ -24,15 +28,15 @@ content:
       link_to_entity: true
     third_party_settings: {  }
     label: hidden
-  user_picture:
-    type: image
-    weight: 0
-    region: content
-    settings:
-      image_style: thumbnail
-      image_link: content
-    third_party_settings: {  }
-    label: hidden
 hidden:
+  field_bio: true
+  field_conference_role: true
+  field_drupal_org_username: true
+  field_first_name: true
+  field_job_title: true
+  field_last_name: true
+  field_picture: true
+  field_twitter_account: true
+  field_website: true
   member_for: true
   search_api_excerpt: true
