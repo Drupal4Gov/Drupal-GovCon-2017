@@ -1,0 +1,59 @@
+diff --git a/src/EventSubscriber/SectionComponentRenderArray.php b/src/EventSubscriber/SectionComponentRenderArray.php
+index 3e5136d..1c7f907 100644
+--- a/src/EventSubscriber/SectionComponentRenderArray.php
++++ b/src/EventSubscriber/SectionComponentRenderArray.php
+@@ -71,9 +71,16 @@ final class SectionComponentRenderArray implements EventSubscriberInterface {
+       return;
+     }
+ 
++    // @todo Remove once https://www.drupal.org/project/drupal/issues/3018782
++    // is done.
++    $contexts = $event->getContexts();
++    if (isset($contexts['layout_builder.entity']) && empty($contexts['entity'])) {
++      $contexts['entity'] = &$contexts['layout_builder.entity'];
++    }
++
+     // The event is unaware of the section storage, so we need to use the
+     // available contexts to find the correct section storage.
+-    $section_storage = $this->sectionStorageManager->findByContext($event->getContexts(), $event->getCacheableMetadata());
++    $section_storage = $this->sectionStorageManager->findByContext($contexts, $event->getCacheableMetadata());
+ 
+     // If the section storage is overriding another one, the contexts provided
+     // by the override should be overlaid on top of the ones provided by the
+diff --git a/tests/src/Functional/LayoutBuilderIntegrationTest.php b/tests/src/Functional/LayoutBuilderIntegrationTest.php
+index c1987c8..0732610 100644
+--- a/tests/src/Functional/LayoutBuilderIntegrationTest.php
++++ b/tests/src/Functional/LayoutBuilderIntegrationTest.php
+@@ -32,6 +32,7 @@ class LayoutBuilderIntegrationTest extends BrowserTestBase {
+     parent::setUp();
+ 
+     $this->drupalCreateContentType(['type' => 'page']);
++    $this->drupalPlaceBlock('local_tasks_block');
+ 
+     $storage = FieldStorageConfig::create([
+       'entity_type' => 'node',
+@@ -247,6 +248,24 @@ class LayoutBuilderIntegrationTest extends BrowserTestBase {
+     $assert_session = $this->assertSession();
+     $assert_session->statusCodeEquals(200);
+     $assert_session->pageTextContains('The context value is 512, brought to you by the letter Charlie.');
++
++    // If the entity can have its own layout, ensure we can actually visit the
++    // Layout tab without trouble.
++    if ($display->isOverridable()) {
++      $account = $this->drupalCreateUser([
++        'configure editable page node layout overrides',
++        'edit any page content',
++      ]);
++      $this->drupalLogin($account);
++      $this->drupalGet($node->toUrl());
++
++      $this->getSession()->getPage()->clickLink('Layout');
++      // $assert_session->statusCodeEquals(200);
++      if ($this->getSession()->getStatusCode() === 500) {
++        print_r($this->getRawContent());
++        $this->fail();
++      }
++    }
+   }
+ 
+ }

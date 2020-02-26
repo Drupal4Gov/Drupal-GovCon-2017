@@ -6,8 +6,6 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.page.body
     - field.field.node.page.field_meta_tags
-    - field.field.node.page.layout_selection
-    - field.field.node.page.panelizer
     - node.type.page
   module:
     - text
@@ -43,4 +41,3 @@ content:
 hidden:
   field_meta_tags: true
   layout_selection: true
-  panelizer: true

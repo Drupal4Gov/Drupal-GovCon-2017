@@ -1,14 +1,14 @@
-uuid: 328892d6-b858-4582-b6a5-9737f42cc558
+uuid: 5e6518bc-773d-4b77-ae4b-3f6d5bae9f12
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.layout_selection
-    - node.type.page
-id: node.page.layout_selection
+    - node.type.landing_page
+id: node.landing_page.layout_selection
 field_name: layout_selection
 entity_type: node
-bundle: page
+bundle: landing_page
 label: Layout
 description: ''
 required: false

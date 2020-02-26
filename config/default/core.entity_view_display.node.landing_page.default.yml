@@ -1,4 +1,4 @@
-uuid: d24b9265-3143-4348-a2a8-414faf6d223f
+uuid: ce00ad30-689e-4aed-85a1-07f8c97fa1aa
 langcode: en
 status: true
 dependencies:
@@ -6,142 +6,53 @@ dependencies:
     - field.field.node.landing_page.body
     - field.field.node.landing_page.field_meta_tags
     - field.field.node.landing_page.layout_builder__layout
-    - field.field.node.landing_page.panelizer
+    - field.field.node.landing_page.layout_selection
     - node.type.landing_page
   module:
     - layout_builder
+    - layout_builder_restrictions
     - layout_discovery
     - layout_library
     - metatag
-    - panelizer
     - user
 third_party_settings:
-  panelizer:
-    enable: false
-    custom: false
-    displays:
-      default:
-        blocks: {  }
-        id: panels_variant
-        uuid: 1a312aa0-75a2-4467-8421-33670a7bd039
-        label: 'Single Column'
-        weight: 0
-        layout: layout_onecol
-        layout_settings: {  }
-        page_title: '[node:title]'
-        storage_type: panelizer_default
-        storage_id: 'node:landing_page:default:default'
-        pattern: panelizer
-        builder: ipe
-        static_context: {  }
-      two_column:
-        blocks: {  }
-        id: panels_variant
-        uuid: 91b9d430-7b91-4a22-ac4d-2e5e0376c6a2
-        label: 'Two Column'
-        weight: 0
-        layout: layout_twocol
-        layout_settings: {  }
-        page_title: '[node:title]'
-        storage_type: panelizer_default
-        storage_id: 'node:landing_page:default:two_column'
-        pattern: panelizer
-        builder: ipe
-        static_context: {  }
-      three_column:
-        blocks: {  }
-        id: panels_variant
-        uuid: 5af47416-fa98-4dfb-9761-fc497a47a76f
-        label: 'Three Column'
-        weight: 0
-        layout: layout_threecol_25_50_25
-        layout_settings: {  }
-        page_title: '[node:title]'
-        storage_type: panelizer_default
-        storage_id: 'node:landing_page:default:three_column'
-        pattern: panelizer
-        builder: ipe
-        static_context: {  }
-    allow: false
-    default: default
   layout_builder:
+    allow_custom: false
     enabled: true
-    allow_custom: true
     sections:
       -
         layout_id: layout_onecol
         layout_settings:
           label: ''
-        components:
-          6e765ab3-0733-44a1-a1d8-23b0a3a4c917:
-            uuid: 6e765ab3-0733-44a1-a1d8-23b0a3a4c917
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'extra_field_block:node:landing_page:content_moderation_control'
-            additional: {  }
-            weight: 0
-          96b74f42-3f68-4a1c-9617-ec105329ad25:
-            uuid: 96b74f42-3f68-4a1c-9617-ec105329ad25
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'extra_field_block:node:landing_page:links'
-            additional: {  }
-            weight: 1
-          77b08daf-2226-40dd-947b-f3e3070137c3:
-            uuid: 77b08daf-2226-40dd-947b-f3e3070137c3
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:landing_page:field_meta_tags'
-              formatter:
-                label: above
-                settings: {  }
-                third_party_settings: {  }
-                type: metatag_empty_formatter
-            additional: {  }
-            weight: 2
+        components: {  }
         third_party_settings: {  }
   layout_library:
-    enable: false
+    enable: true
+  layout_builder_restrictions:
+    entity_view_mode_restriction:
+      allowed_blocks: {  }
+      allowed_layouts:
+        - layout_onecol
+        - layout_twocol_section
+        - layout_threecol_section
+        - layout_fourcol_section
 _core:
-  default_config_hash: bDWtHHGb2vFEchz7IRJEpvFvIgD2_4VLFq3SLyOZG6Y
+  default_config_hash: KNrs28OA6IqyPYfOOuVB_TtvU9cW6teRktxiPQAnjjg
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page
 mode: default
 content:
-  content_moderation_control:
-    weight: -20
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_meta_tags:
-    weight: 101
-    label: above
-    settings: {  }
-    third_party_settings: {  }
     type: metatag_empty_formatter
     region: content
-  links:
-    weight: 100
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  workbench_moderation_control:
-    weight: -20
-    region: content
+    label: hidden
+    weight: 0
     settings: {  }
     third_party_settings: {  }
 hidden:
   body: true
+  content_moderation_control: true
   layout_builder__layout: true
   layout_selection: true
-  panelizer: true
+  links: true
