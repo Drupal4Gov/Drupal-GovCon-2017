@@ -25,4 +25,12 @@ function capitalcamp_glue_views_data_alter(array &$data) {
       'id' => 'attendee_photo',
     ],
   ];
+  $data['node']['speakers'] = [
+    'title' => t('All Speakers'),
+    'field' => [
+      'title' => t('All Speakers'),
+      'help' => t('Displays a combination of primary and co-speakers in a single field..'),
+      'id' => 'speakers',
+    ],
+  ];
 }
