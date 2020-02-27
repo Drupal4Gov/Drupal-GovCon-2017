@@ -15,9 +15,6 @@ dependencies:
     - taxonomy.vocabulary.session_track
     - user.role.administrator
   content:
-    - 'taxonomy_term:conference_year:0f6c31f2-ef62-41ce-b17c-3e05bfb9b76c'
-    - 'taxonomy_term:conference_year:951cf954-787d-4057-8cc0-b170bd6dda96'
-    - 'taxonomy_term:conference_year:a3b3e4e7-5b6a-4d61-b99a-674262910622'
     - 'taxonomy_term:conference_year:b841e242-eb84-4bf9-b245-4c809e3737bd'
     - 'taxonomy_term:rooms:0455db5b-93e9-41f6-b260-8de3d40462d1'
     - 'taxonomy_term:rooms:0dcc0b4c-fb92-4bd9-8c9c-2c105730c2e1'
@@ -121,12 +118,13 @@ display:
             field_session_track: field_session_track
             title: title
             field_session_date_time: field_session_date_time
+            speakers: speakers
             field_room: field_room
-            uid: uid
-            field_session_co_presenter_s_: uid
             field_status: field_status
             count: count
             edit_node: edit_node
+            name: name
+            name_1: name_1
           info:
             field_session_track:
               sortable: true
@@ -149,21 +147,16 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
-            field_room:
+            speakers:
               sortable: true
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-            uid:
+            field_room:
               sortable: true
               default_sort_order: asc
-              align: ''
-              separator: ', '
-              empty_column: false
-              responsive: ''
-            field_session_co_presenter_s_:
               align: ''
               separator: ''
               empty_column: false
@@ -183,6 +176,20 @@ display:
               empty_column: false
               responsive: ''
             edit_node:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            name:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            name_1:
               sortable: false
               default_sort_order: asc
               align: ''
@@ -836,12 +843,9 @@ display:
           admin_label: ''
           operator: or
           value:
-            126: 126
-            131: 131
-            266: 266
             296: 296
           group: 1
-          exposed: false
+          exposed: true
           expose:
             operator_id: field_conference_year_target_id_op
             label: 'Conference Year'
@@ -902,7 +906,7 @@ display:
           exposed: true
           expose:
             operator_id: field_status_value_op
-            label: 'Status (field_status)'
+            label: Status
             description: ''
             use_operator: false
             operator: field_status_value_op
@@ -1012,7 +1016,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          operator: word
+          operator: contains
           value: ''
           group: 1
           exposed: true
@@ -1022,6 +1026,8 @@ display:
             description: ''
             use_operator: false
             operator: title_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: title
             required: false
             remember: false
@@ -1041,8 +1047,6 @@ display:
               sponsor: '0'
               content_editor: '0'
             placeholder: ''
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
