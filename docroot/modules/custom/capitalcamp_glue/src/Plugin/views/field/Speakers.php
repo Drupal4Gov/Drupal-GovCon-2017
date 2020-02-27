@@ -5,6 +5,7 @@ namespace Drupal\capitalcamp_glue\Plugin\views\field;
 use Drupal\views\Plugin\views\field\FieldPluginBase;
 use Drupal\views\ResultRow;
 use Drupal\user\Entity\User;
+use Drupal\Core\Link;
 
 /**
  * Field handler to flag the node type.
@@ -30,19 +31,27 @@ class Speakers extends FieldPluginBase {
   public function render(ResultRow $values) {
     $presenters = [];
     $names = NULL;
+    $options = [
+      'absolute' => TRUE,
+      'attributes' => [
+        'class' => "views-field-uid",
+      ],
+    ];
     /** @var \Drupal\node\Entity\Node $node */
     $node = $values->_entity;
 
     // Primary Speaker (is node Author).
     $uid = $node->get("uid")->getString();
     $user = User::load($uid);
-    $presenters[] = $user->name->value;
+    $presenters[] = Link::createFromRoute($user->name->value, 'entity.user.canonical', ['user' => $uid], $options)->toString();
 
     // Co-speakers.
-    $co = $node->get('field_session_co_presenter_s_')->referencedEntities();
-    if ($co) {
-      foreach ($co as $speaker) {
-        $presenters[] = $speaker->name->value;
+    if ($node->hasField("field_session_co_presenter_s_")) {
+      $co = $node->get('field_session_co_presenter_s_')->referencedEntities();
+      if ($co) {
+        foreach ($co as $speaker) {
+          $presenters[] = Link::createFromRoute($speaker->name->value, 'entity.user.canonical', ['user' => $speaker->uid->value], $options)->toString();
+        }
       }
     }
 
@@ -50,7 +59,10 @@ class Speakers extends FieldPluginBase {
       $names .= $presenters[$i] . ", ";
     }
     $names .= $presenters[count($presenters) - 1];
-    return $names;
+
+    return [
+      '#markup' => $names,
+    ];
   }
 
 }
