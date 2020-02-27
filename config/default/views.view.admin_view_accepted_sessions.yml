@@ -4,9 +4,10 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_room
-    - field.storage.node.field_session_co_presenter_s_
     - field.storage.node.field_session_date_time
     - field.storage.node.field_session_track
+    - field.storage.node.field_status
+    - flag.flag.session_schedule
     - node.type.session
     - system.menu.admin
     - taxonomy.vocabulary.conference_year
@@ -14,6 +15,9 @@ dependencies:
     - taxonomy.vocabulary.session_track
     - user.role.administrator
   content:
+    - 'taxonomy_term:conference_year:0f6c31f2-ef62-41ce-b17c-3e05bfb9b76c'
+    - 'taxonomy_term:conference_year:951cf954-787d-4057-8cc0-b170bd6dda96'
+    - 'taxonomy_term:conference_year:a3b3e4e7-5b6a-4d61-b99a-674262910622'
     - 'taxonomy_term:conference_year:b841e242-eb84-4bf9-b245-4c809e3737bd'
     - 'taxonomy_term:rooms:0455db5b-93e9-41f6-b260-8de3d40462d1'
     - 'taxonomy_term:rooms:0dcc0b4c-fb92-4bd9-8c9c-2c105730c2e1'
@@ -37,13 +41,15 @@ dependencies:
     - 'taxonomy_term:session_track:d7334075-7a5b-4ddd-a933-3621a8d0ece2'
     - 'taxonomy_term:session_track:e02c5e10-cb18-49a2-bcf8-1cc4c4edd3c5'
   module:
+    - capitalcamp_glue
     - datetime
+    - flag
     - node
     - options
     - taxonomy
     - user
 id: admin_view_accepted_sessions
-label: 'Admin View: Accepted Sessions'
+label: 'Admin View: Session Report'
 module: views
 description: ''
 tag: ''
@@ -119,6 +125,8 @@ display:
             uid: uid
             field_session_co_presenter_s_: uid
             field_status: field_status
+            count: count
+            edit_node: edit_node
           info:
             field_session_track:
               sortable: true
@@ -162,6 +170,20 @@ display:
               responsive: ''
             field_status:
               sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            count:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            edit_node:
+              sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
@@ -288,7 +310,8 @@ display:
           settings:
             link_to_entity: true
           group_column: value
-          group_columns: {  }
+          group_columns:
+            value: value
           group_rows: true
           delta_limit: 0
           delta_offset: 0
@@ -362,6 +385,56 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
+        speakers:
+          id: speakers
+          table: node
+          field: speakers
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'All Speakers'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          entity_type: node
+          plugin_id: speakers
         field_room:
           id: field_room
           table: node__field_room
@@ -425,14 +498,14 @@ display:
           separator: ', '
           field_api_classes: false
           plugin_id: field
-        uid:
-          id: uid
-          table: node_field_data
-          field: uid
+        field_status:
+          id: field_status
+          table: node__field_status
+          field: field_status
           relationship: none
           group_type: group
           admin_label: ''
-          label: Speaker
+          label: Status
           exclude: false
           alter:
             alter_text: false
@@ -473,11 +546,10 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: true
-          group_column: target_id
+          click_sort_column: value
+          type: list_default
+          settings: {  }
+          group_column: value
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -487,17 +559,15 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: node
-          entity_field: uid
           plugin_id: field
-        field_session_co_presenter_s_:
-          id: field_session_co_presenter_s_
-          table: node__field_session_co_presenter_s_
-          field: field_session_co_presenter_s_
-          relationship: none
+        count:
+          id: count
+          table: flag_counts
+          field: count
+          relationship: flag_relationship
           group_type: group
           admin_label: ''
-          label: Co-Presenter(s)
+          label: Flags
           exclude: false
           alter:
             alter_text: false
@@ -538,21 +608,15 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: true
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
+          set_precision: false
+          precision: 0
+          decimal: .
+          separator: ','
+          format_plural: false
+          format_plural_string: !!binary MQNAY291bnQ=
+          prefix: ''
+          suffix: ''
+          plugin_id: numeric
         edit_node:
           id: edit_node
           table: node
@@ -606,6 +670,136 @@ display:
           absolute: false
           entity_type: node
           plugin_id: entity_link_edit
+        name:
+          id: name
+          table: users_field_data
+          field: name
+          relationship: uid
+          group_type: group
+          admin_label: ''
+          label: Name
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: user_name
+          settings:
+            link_to_entity: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: user
+          entity_field: name
+          plugin_id: field
+        name_1:
+          id: name_1
+          table: users_field_data
+          field: name
+          relationship: field_session_co_presenter_s_
+          group_type: group
+          admin_label: ''
+          label: Name
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: user_name
+          settings:
+            link_to_entity: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: user
+          entity_field: name
+          plugin_id: field
       filters:
         status:
           value: '1'
@@ -642,6 +836,9 @@ display:
           admin_label: ''
           operator: or
           value:
+            126: 126
+            131: 131
+            266: 266
             296: 296
           group: 1
           exposed: false
@@ -702,13 +899,15 @@ display:
           value:
             accepted: accepted
           group: 1
-          exposed: false
+          exposed: true
           expose:
             operator_id: field_status_value_op
-            label: Status
+            label: 'Status (field_status)'
             description: ''
             use_operator: false
             operator: field_status_value_op
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: field_status_value
             required: false
             remember: false
@@ -728,8 +927,6 @@ display:
               sponsor: '0'
               content_editor: '0'
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -932,24 +1129,26 @@ display:
           hierarchy: false
           error_message: true
           plugin_id: taxonomy_index_tid
-        uid:
-          id: uid
-          table: node_field_data
-          field: uid
+        combine:
+          id: combine
+          table: views
+          field: combine
           relationship: none
           group_type: group
           admin_label: ''
-          operator: in
-          value: {  }
+          operator: contains
+          value: ''
           group: 1
           exposed: true
           expose:
-            operator_id: uid_op
-            label: Speaker
+            operator_id: combine_op
+            label: Speakers
             description: ''
             use_operator: false
-            operator: uid_op
-            identifier: uid
+            operator: combine_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: combine
             required: false
             remember: false
             multiple: false
@@ -967,9 +1166,7 @@ display:
               volunteer: '0'
               sponsor: '0'
               content_editor: '0'
-            reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
+            placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -982,9 +1179,10 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          entity_type: node
-          entity_field: uid
-          plugin_id: user_name
+          fields:
+            name: name
+            name_1: name_1
+          plugin_id: combine
       sorts:
         field_session_date_time_value:
           id: field_session_date_time_value
@@ -999,7 +1197,7 @@ display:
             label: 'Date / Time (field_session_date_time)'
           granularity: second
           plugin_id: datetime
-      title: 'Admin View: Accepted Sessions'
+      title: 'Admin View: Sessions Report'
       header: {  }
       footer: {  }
       empty:
@@ -1016,13 +1214,46 @@ display:
             value: 'No sessions match your search criteria. '
             format: simple_text
           plugin_id: text
-      relationships: {  }
+      relationships:
+        flag_relationship:
+          id: flag_relationship
+          table: node_field_data
+          field: flag_relationship
+          relationship: none
+          group_type: group
+          admin_label: Flags
+          required: true
+          flag: session_schedule
+          user_scope: any
+          entity_type: node
+          plugin_id: flag_relationship
+        uid:
+          id: uid
+          table: node_field_data
+          field: uid
+          relationship: none
+          group_type: group
+          admin_label: author
+          required: false
+          entity_type: node
+          entity_field: uid
+          plugin_id: standard
+        field_session_co_presenter_s_:
+          id: field_session_co_presenter_s_
+          table: node__field_session_co_presenter_s_
+          field: field_session_co_presenter_s_
+          relationship: none
+          group_type: group
+          admin_label: 'field_session_co_presenter_s_: User'
+          required: false
+          plugin_id: standard
       arguments: {  }
       display_extenders: {  }
       filter_groups:
         operator: AND
         groups:
           1: AND
+      group_by: true
     cache_metadata:
       max-age: -1
       contexts:
@@ -1035,9 +1266,9 @@ display:
         - user.roles
       tags:
         - 'config:field.storage.node.field_room'
-        - 'config:field.storage.node.field_session_co_presenter_s_'
         - 'config:field.storage.node.field_session_date_time'
         - 'config:field.storage.node.field_session_track'
+        - 'config:field.storage.node.field_status'
   page_1:
     display_plugin: page
     id: page_1
@@ -1045,10 +1276,10 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
-      path: admin/accepted-sessions
+      path: admin/sessions
       menu:
         type: normal
-        title: 'Session Report (Admin)'
+        title: 'Session Report'
         description: ''
         expanded: false
         parent: capitalcamp_glue.event
@@ -1067,6 +1298,6 @@ display:
         - user.roles
       tags:
         - 'config:field.storage.node.field_room'
-        - 'config:field.storage.node.field_session_co_presenter_s_'
         - 'config:field.storage.node.field_session_date_time'
         - 'config:field.storage.node.field_session_track'
+        - 'config:field.storage.node.field_status'
