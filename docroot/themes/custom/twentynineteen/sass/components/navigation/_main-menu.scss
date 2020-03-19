@@ -9,7 +9,7 @@
 .menu--_018-main-navigation,
 .menu--_019-main-navigation,
 .menu--main-navigation {
-  background: $scarlet;
+  background: $primary-darkest;
   margin-top: -4px;
   min-height: 60px;
 
@@ -61,7 +61,7 @@ input[type="checkbox"] + label.toggle::before {
 .toggle {
   width: 100%;
   height: auto;
-  background-color: $teal;
+  background-color: $color-primary;
 
   @include breakpoint($small-max) {
     height: 0;
@@ -158,13 +158,13 @@ input[type="checkbox"] + label.toggle::before {
     margin: 0;
 
     @include breakpoint($small-max) {
-      margin: 0;
+      margin: 0 15px 0 0;
 
       &:hover .menu-submenu,
       &.focus .menu-submenu {
         z-index: 10;
         height: auto;
-        background: rgba($scarlet, 0.95);
+        background: rgba($primary-darkest, 0.95);
         border-radius: 0 0 0.5em 0.5em;
       }
     }
@@ -175,12 +175,13 @@ input[type="checkbox"] + label.toggle::before {
   }
 
   a {
+    color: $white;
     display: block;
-    color: rgba($white, 0.5);
     font-size: 1em;
-    letter-spacing: 0.05em;
     font-weight: 700;
+    letter-spacing: 0.05em;
     padding: 0.5em 1.5em;
+    text-decoration: none;
 
     @include breakpoint($small-max) {
       padding: 0.5em;
@@ -188,12 +189,6 @@ input[type="checkbox"] + label.toggle::before {
   }
 
   a:hover {
-    color: rgba($white, 1);
-    text-decoration: none;
-  }
-
-  a.is-active {
-    color: rgba($white, 1);
     text-decoration: none;
   }
 }
@@ -218,7 +213,7 @@ input[type="checkbox"] + label.toggle::before {
     }
 
     &:hover {
-      background-color: rgba($tomato, 1);
+      background-color: rgba($color-primary, 1);
     }
   }
 

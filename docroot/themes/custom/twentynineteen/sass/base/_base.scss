@@ -7,7 +7,8 @@ body {
 }
 
 body {
-  color: $dark-gray;
+  background-color: $white;
+  color: $gray;
   font-size: 1em;
   font-family: $body_font;
   text-rendering: optimizeLegibility;
@@ -15,27 +16,9 @@ body {
   line-height: 1.4;
   margin: 0;
   padding: 0;
-  background-color: rgba($teal, 0.75);
   width: 100%;
   overflow-x: hidden;
   position: relative;
-
-  @include breakpoint($medium-max) {
-    &::after {
-      content: '';
-      display: block;
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -20;
-      opacity: 0.03;
-      background-image: url(../images/GC19_motif_pattern_01b-K.svg);
-      background-repeat: repeat;
-      background-size: 144px 144px;
-    }
-  }
 }
 
 // Responsive Images
@@ -43,6 +26,10 @@ img,
 svg {
   max-width: 100%;
   height: auto;
+}
+
+svg.ext {
+  margin-left: 0.2em;
 }
 
 .filter-wrapper {

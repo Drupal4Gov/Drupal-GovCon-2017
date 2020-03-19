@@ -11,19 +11,21 @@ h5,
 h6 {
   text-rendering: optimizeLegibility;
   font-weight: 700;
-  color: $teal;
+  color: $color-primary;
 }
 
 h1 {
-  color: $navy;
-  font-size: 2em;
+  color: $color-primary;
+  font-size: 2.5em;
 }
 
 h2 {
-  font-size: 1.5em;
+  color: $primary-darkest;
+  font-size: 1.875em;
 }
 
 h3 {
+  color: $gray;
   font-size: 1.25em;
 }
 
@@ -47,7 +49,7 @@ pre {
   overflow-x: auto;
 
   code {
-    border: 1px dotted $dark-gray;
+    border: 1px dotted $gray;
     background: $off-white;
     padding: 2px 9px;
     display: block;
