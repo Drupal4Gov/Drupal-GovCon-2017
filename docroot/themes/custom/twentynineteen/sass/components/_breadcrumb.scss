@@ -2,7 +2,7 @@ nav.breadcrumb {
   @extend .blocked-style;
 
   margin-bottom: 5px;
-  color: $dark-gray;
+  color: $gray;
 
   ol {
     @extend %no-ul-list;
@@ -10,7 +10,7 @@ nav.breadcrumb {
     li::before {
       content: '/';
       padding: 0 3px 0 0.5px;
-      color: $dark-gray;
+      color: $gray;
     }
 
     li:first-child::before {

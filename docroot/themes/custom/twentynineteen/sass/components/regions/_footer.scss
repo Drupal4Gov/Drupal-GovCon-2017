@@ -14,24 +14,20 @@ footer {
 }
 
 .mq-footer {
+  background: $primary-darkest;
   margin: 0 auto;
   width: 100%;
   max-width: none;
-
-  @include breakpoint($medium-max) {
-    max-width: 1200px;
-    width: 100%;
-  }
 }
 
 .footer {
-  background: $scarlet;
   color: rgba(255, 255, 255, 0.75);
   font-size: 1em;
-  width: 100%;
   overflow: auto;
-  margin-top: 0;
+  margin: 0 auto;
   padding-top: 1em;
+  max-width: 1200px;
+  width: 100%;
 
   @include breakpoint($small-max) {
     padding-top: 0;

@@ -6,12 +6,10 @@
 //
 // Style guide: components.block
 aside .block {
-  @extend .blocked-style;
-
   margin-bottom: 25px;
 
   h2 {
     font-size: 175%;
-    color: $dark-gray;
+    color: $gray;
   }
 }

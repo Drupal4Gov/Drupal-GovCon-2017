@@ -3,15 +3,21 @@
 // Markup: a.twig
 //
 // Style guide: atoms.a
-a,
-a:visited {
+a {
   color: $link;
-  text-decoration: none;
   cursor: inherit;
 }
 
+a:visited {
+  color: $link-visited;
+}
+
 a:hover {
-  color: $scarlet;
+  color: $primary-darkest;
   text-decoration: underline;
   cursor: pointer;
+}
+
+a:focus {
+  color: $link-focus;
 }

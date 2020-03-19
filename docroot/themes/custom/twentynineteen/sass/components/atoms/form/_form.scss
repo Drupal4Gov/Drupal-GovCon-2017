@@ -34,7 +34,7 @@ form button.link-edit-summary {
 
 label {
   display: block;
-  color: $teal;
+  color: $color-primary;
   cursor: pointer;
   font-weight: 400;
   margin: 0 0 0.1875em;
@@ -45,7 +45,7 @@ label {
 .form-required::after {
   content: '*';
   margin-left: 0.2rem;
-  color: $scarlet;
+  color: $primary-darkest;
 }
 
 input[type="text"],
@@ -53,7 +53,7 @@ input[type="password"],
 input[type="date"],
 textarea {
   font-family: inherit;
-  border: 1px solid $teal;
+  border: 1px solid $color-primary;
   border-radius: 0.25em;
   box-shadow: inset 0.1em 0.1em 0.25em rgba(0, 0, 0, 0.125);
   color: $blk;
@@ -76,7 +76,7 @@ textarea:focus {
 input[type="text"]:disabled,
 input[type="text"]:disabled:hover,
 textarea:disabled {
-  background-color: rgba($teal, 0.1);
+  background-color: rgba($color-primary, 0.1);
 }
 
 input[type="file"],
@@ -114,7 +114,7 @@ input[type="checkbox"] {
       width: 20px;
       height: 20px;
       margin-right: 1em;
-      background-color: $teal;
+      background-color: $color-primary;
     }
   }
 }
@@ -149,7 +149,7 @@ input[type="checkbox"]:checked + label::before {
 
 input[type="radio"]:disabled + label::before,
 input[type="checkbox"]:disabled + label::before {
-  background-color: rgba($teal, 0.5);
+  background-color: rgba($color-primary, 0.5);
 }
 
 select {
@@ -158,7 +158,7 @@ select {
   font-weight: 700;
   font-size: 1em;
   letter-spacing: 0.02em;
-  background: $teal;
+  background: $color-primary;
   text-decoration: none;
   border-radius: 0.25em;
   margin: 1em 0;
@@ -204,7 +204,7 @@ select {
 }
 
 fieldset {
-  border: 1px solid $teal;
+  border: 1px solid $color-primary;
   border-radius: 0.2em;
   margin: 1em 0 2em;
 
@@ -220,7 +220,7 @@ legend + .fieldset-wrapper .form-checkboxes {
 
 fieldset legend {
   font-weight: bold;
-  background: $teal;
+  background: $color-primary;
   color: $white;
   background-color: $legend;
   padding: 0.25em 0.5em;
@@ -357,7 +357,7 @@ form input {
 }
 
 .field--label-inline .field__label {
-  color: $teal;
+  color: $color-primary;
   font-weight: bold;
 
   &::after {

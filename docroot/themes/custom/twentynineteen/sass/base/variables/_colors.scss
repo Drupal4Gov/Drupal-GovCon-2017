@@ -5,33 +5,31 @@ $yellow: #e8ed57;
 
 // b&w colors as placeholders
 $blk: #000;
-$gray: rgba(80, 80, 80, 1);
-$med-gray: rgba(255, 255, 255, 0.5);
-$light-gray: lighten($blk, 70%);
-$lighter-gray: lighten($blk, 90%);
+$gray: #323a45;
+$med-gray: #a9aeb1;
+$light-gray: #d6d7d9;
+$lighter-gray: #f8f8f8;
 $off-white: lighten($blk, 97%);
 
 // gold colors
-$gold: rgb(254, 218, 0);
+$gold: #fe9e01;
 $med-gold: rgba($gold, 0.5);
-$light-gold: rgba($gold, 0.4);
+$light-gold: #fff1d2;
 $light-yellow: rgba($gold, 0.2);
 $pale-yellow: rgb(255, 248, 204);
 $pale-blue: rgb(154, 184, 188);
 
 // theme colors
-$teal: rgb(31, 120, 128);
+$color-primary: #0071bc;
 $mediumteal: rgb(22, 150, 144);
-$darkteal: rgb(18, 101, 113);
-$scarlet: rgb(158, 42, 19);
-$tomato: rgb(168, 64, 43);
+$primary-darkest: #213c75;
 $orange: rgb(242, 101, 34);
-$dark-gray: rgb(80, 80, 80);
-$navy: rgb(19, 73, 113);
 
 // Utility color variables ///////////////
-$heading: $teal;
-$link: $teal;
+$heading: $color-primary;
+$link: #004795;
+$link-visited: #4c2c92;
+$link-focus: #3e94cf;
 $textarea: rgba(255, 253, 242, 1);
 $textarea-focus: rgba(128, 188, 250, 1);
 $legend: rgba(19, 73, 113, 0.9);
