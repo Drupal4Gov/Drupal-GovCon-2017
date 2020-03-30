@@ -1,15 +1,17 @@
-uuid: 49440537-4019-4b46-a572-ad0fd4b1c460
+uuid: 1a993cb9-7ccf-47c6-8a32-9449eb5de46c
 langcode: en
-status: true
+status: false
 dependencies: {  }
 id: stage
 label: Stage
 description: ''
 folder: ../config/envs/stage
-module: {  }
+module:
+  acquia_connector: 0
+  syslog: 0
 theme: {  }
 blacklist: {  }
 graylist: {  }
 graylist_dependents: true
 graylist_skip_equal: true
-weight: 0
+weight: 1
