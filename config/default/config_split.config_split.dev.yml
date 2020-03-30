@@ -1,15 +1,18 @@
-uuid: cb2692e3-97c6-4fa2-9e39-ae0e41c01379
+uuid: 3d44683a-3c37-4ad3-ad68-3b2e8edbad70
 langcode: en
-status: true
+status: false
 dependencies: {  }
 id: dev
 label: Dev
 description: ''
 folder: ../config/envs/dev
-module: {  }
+module:
+  acquia_connector: 0
+  qa_accounts: 0
+  syslog: 0
 theme: {  }
 blacklist: {  }
 graylist: {  }
 graylist_dependents: true
 graylist_skip_equal: true
-weight: 0
+weight: 1

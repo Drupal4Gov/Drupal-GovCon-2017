@@ -18,6 +18,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
+        "php": ">=7.3",
         "acquia/blt": "^11.0",
         "acquia/drupal-spec-tool": ">=2.0.0",
         "acquia/lightning": "^4",
@@ -37,7 +38,7 @@
         "drupal/config_split": "^1.0.0",
         "drupal/config_update": "1.5.0",
         "drupal/context": "^4.0@beta",
-        "drupal/core": "^8.7.0",
+        "drupal/core": "^8.8",
         "drupal/devel": "^2.0.0",
         "drupal/environment_indicator": "^3.0.0-beta1",
         "drupal/extlink": "^1.0",
@@ -50,20 +51,19 @@
         "drupal/linkicon": "^1.4",
         "drupal/panelizer": "^5",
         "drupal/purge": "^3.0.0-beta6",
-        "drupal/qa_accounts": "^1.0.0-alpha1",
+        "drupal/qa_accounts": "^1.0@alpha",
         "drupal/r4032login": "dev-1.x",
         "drupal/recaptcha": "^2.4",
         "drupal/redirect": "^1.0",
-        "drupal/seckit": "^1.0.0-alpha2",
+        "drupal/seckit": "^1.2",
         "drupal/shield": "^1.1",
         "drupal/smart_trim": "^1.0",
         "drupal/svg_image": "^1.8",
         "drupal/twig_xdebug": "1.x-dev",
         "drupal/views_field_view": "^1.0",
-        "drupal/webform": "^5.0@beta",
+        "drupal/webform": "^5.8",
         "drupal/webform_views": "5.x-dev",
-        "drupal/xmlsitemap": "^1.0.0-alpha2",
-        "php": ">=7.3",
+        "drupal/xmlsitemap": "^1.0",
         "mglaman/drupal-check": "1.0.14"
     },
     "require-dev": {
@@ -132,7 +132,8 @@
                 "Ignore front end vendor folders to improve directory search performance": "https://www.drupal.org/files/issues/ignore_front_end_vendor-2329453-116.patch"
             },
             "acquia/blt": {
-                "debugging": "patches/debugging.patch"
+                "debugging": "patches/debugging.patch",
+                "fix config import errors": "https://github.com/acquia/blt/pull/4068.patch"
             },
             "drupal/extlink": {
                 "fix php warnings": "https://www.drupal.org/files/issues/2020-01-31/3110330-2.patch",

@@ -58,6 +58,7 @@ settings:
       - entity.node.webform.results_submissions
       - entity.node.webform.user.drafts
       - entity.node.webform.user.submissions
+  default_results_customize: false
   default_previous_submission_message: 'You have already submitted this webform. <a href="#">View your previous submission</a>.'
   default_previous_submissions_message: 'You have already submitted this webform. <a href="#">View your previous submissions</a>.'
   default_autofill_message: 'This submission has been autofilled with your previous submission.'
@@ -106,6 +107,7 @@ export:
   signature_format: status
   delimiter: ','
   excel: false
+  archive_type: tar
   excluded_exporters: {  }
   file_name: 'submission-[webform_submission:serial]'
 batch:

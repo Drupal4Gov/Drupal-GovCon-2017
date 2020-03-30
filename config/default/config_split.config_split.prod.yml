@@ -1,15 +1,17 @@
-uuid: 37a368d8-afea-41d8-aa7a-163e830abf5e
+uuid: 1291f1b8-f015-401a-b50b-d4c918da3d2f
 langcode: en
-status: true
+status: false
 dependencies: {  }
 id: prod
 label: Prod
 description: ''
 folder: ../config/envs/prod
-module: {  }
+module:
+  acquia_connector: 0
+  syslog: 0
 theme: {  }
 blacklist: {  }
 graylist: {  }
 graylist_dependents: true
 graylist_skip_equal: true
-weight: 0
+weight: 1
