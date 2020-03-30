@@ -1,4 +1,3 @@
-uuid: e02eba4c-6e83-4b4f-80d7-0d2614449f05
 langcode: en
 status: open
 dependencies: {  }
@@ -12,7 +11,7 @@ id: contact
 title: Contact
 description: ''
 category: ''
-elements: "email:\n  '#type': email\n  '#title': Email\n  '#default_value': '[current-user:mail]'\n  '#title_display': before\n  '#description_display': after\n  '#required': true\n  '#required_error': 'Email is required'\nmessage:\n  '#type': textarea\n  '#title': Message\n  '#title_display': before\n  '#description_display': invisible\n  '#rows': '400'\n  '#required': true\n  '#required_error': 'Message is required'\ncontact:\n  '#type': captcha\n  '#captcha_type': recaptcha/reCAPTCHA\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#preview_next__label': 'Preview message'\n"
+elements: "email:\n  '#type': email\n  '#title': Email\n  '#default_value': '[current-user:mail]'\n  '#title_display': before\n  '#description_display': after\n  '#required': true\n  '#required_error': 'Email is required'\nmessage:\n  '#type': textarea\n  '#title': Message\n  '#title_display': before\n  '#description_display': invisible\n  '#rows': 400\n  '#required': true\n  '#required_error': 'Message is required'\ncontact:\n  '#type': captcha\n  '#captcha_type': recaptcha/reCAPTCHA\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#preview_next__label': 'Preview message'\n"
 css: "#edit-message {\r\nheight: 200px;\r\n}"
 javascript: ''
 settings:
@@ -126,6 +125,7 @@ settings:
   purge_days: null
   results_disabled: false
   results_disabled_ignore: false
+  results_customize: false
   token_view: false
   token_update: false
   wizard_comfirmation: true
@@ -251,3 +251,4 @@ handlers:
       theme_name: ''
       parameters: {  }
 variants: {  }
+uuid: e02eba4c-6e83-4b4f-80d7-0d2614449f05
