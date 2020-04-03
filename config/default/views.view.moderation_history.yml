@@ -198,16 +198,16 @@ display:
           plugin_id: field
         moderation_state:
           id: moderation_state
-          table: content_moderation_state_field_revision
+          table: node_field_revision
           field: moderation_state
-          relationship: moderation_state
+          relationship: none
           group_type: group
-          admin_label: 'Moderation state'
+          admin_label: ''
           label: ''
           exclude: false
           alter:
-            alter_text: true
-            text: 'Set to <strong>{{ moderation_state }}</strong> on {{ created }} by {{ uid }}'
+            alter_text: false
+            text: ''
             make_link: false
             path: ''
             absolute: false
@@ -257,8 +257,7 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-          entity_type: content_moderation_state
-          entity_field: moderation_state
+          entity_type: node
           plugin_id: moderation_state_field
       filters: {  }
       sorts:
@@ -281,17 +280,7 @@ display:
       header: {  }
       footer: {  }
       empty: {  }
-      relationships:
-        moderation_state:
-          id: moderation_state
-          table: node_field_revision
-          field: moderation_state
-          relationship: none
-          group_type: group
-          admin_label: 'Moderation state'
-          required: true
-          entity_type: node
-          plugin_id: standard
+      relationships: {  }
       arguments:
         nid:
           id: nid
