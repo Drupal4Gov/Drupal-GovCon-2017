@@ -12,7 +12,7 @@
 .body-sidebars-first {
   @include breakpoint($up-sm) {
     aside.sidebar-first {
-      @include span(4 of 12);
+      width: calc(40% - 15px);
 
       > * {
         padding-left: 15px;
@@ -20,7 +20,7 @@
     }
 
     section#content {
-      @include span(8 of 12 last);
+      width: calc(80% - 25px);
 
       > * {
         padding-right: 25px;
@@ -35,7 +35,8 @@
 .body-sidebars-second {
   @include breakpoint($up-sm) {
     aside.sidebar-second {
-      @include span(4 of 12 last);
+      display: inline-block;
+      width: calc(40% - 15px);
 
       > * {
         padding-right: 15px;
@@ -43,7 +44,8 @@
     }
 
     section#content {
-      @include span(8 of 12);
+      display: inline-block;
+      width: calc(80% - 1.25em);
 
       > * {
         padding-left: 1.25em;
@@ -62,7 +64,7 @@
 .body-sidebars-both {
   @include breakpoint($up-sm) {
     aside.sidebar-first {
-      @include span(2 of 12);
+      width: calc(20% - 15px);
 
       > * {
         padding-left: 15px;
@@ -70,7 +72,7 @@
     }
 
     section#content {
-      @include span(8 of 12);
+      width: calc(80% - 25px);
 
       > * {
         padding-right: 25px;
@@ -78,7 +80,7 @@
     }
 
     aside.sidebar-second {
-      @include span(2 of 12 last);
+      width: calc(42% - 15px);
 
       > * {
         padding-right: 15px;
@@ -92,7 +94,7 @@
 //////////////////////////////////
 .body-sidebars-none {
   section#content {
-    @include span(12 of 12);
+    width: 100%;
 
     > * {
       padding-left: 1.25em;

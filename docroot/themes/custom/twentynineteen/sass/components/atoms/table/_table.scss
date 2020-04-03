@@ -6,7 +6,7 @@
 
 table {
   font-family: $body_font;
-  border: 1px solid $color-primary;
+  border: 1px solid $dark-gray;
   padding: 0.25em;
   width: 100%;
 
@@ -15,7 +15,7 @@ table {
   }
 
   thead {
-    background-color: $light-gray;
+    background-color: $white-gray;
     text-align: left;
 
     a,
@@ -67,18 +67,15 @@ table {
   }
 
   th {
+    border: 1px solid $dark-gray;
     font-weight: 700;
     padding: 0.5em;
   }
 
   td {
-    border: 0;
+    border: 1px solid $dark-gray;
     outline: none;
     padding: 0.5em;
-  }
-
-  tbody tr:nth-child(even) {
-    background-color: $lighter-gray;
   }
 
   tfoot {

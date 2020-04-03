@@ -23,11 +23,13 @@ footer {
 .footer {
   color: rgba(255, 255, 255, 0.75);
   font-size: 1em;
-  overflow: auto;
   margin: 0 auto;
   padding-top: 1em;
   max-width: 1200px;
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 
   @include breakpoint($small-max) {
     padding-top: 0;
@@ -44,8 +46,6 @@ footer {
     text-align: center;
 
     @include breakpoint($small-max) {
-      @include span(4 of 12);
-
       padding: 1% 0 0 1%;
       text-align: initial;
     }
@@ -59,20 +59,12 @@ footer {
   }
 
   &__links {
-    width: 100%;
+    flex: 1 1 200px;
     text-align: center;
+    padding: 0 0 25px;
 
     @include breakpoint($small-max) {
-      @include span(last 3 of 12);
-
       padding: 2% 1% 0 0;
-    }
-  }
-
-  &__links-icons {
-    text-align: center;
-
-    @include breakpoint($small-max) {
       text-align: right;
     }
   }
@@ -91,9 +83,9 @@ footer {
   &__logo {
     clear: both;
     margin: 0 auto;
-    max-width: 3em;
     text-align: center;
-    width: 100%;
+    flex: 1 1 100%;
+    max-width: 100%;
 
     @include breakpoint($small-max) {
       padding-top: 3%;
@@ -109,6 +101,14 @@ footer {
 
   #block-footertagline-2 {
     @extend .footer__text;
+
+    flex: 1 1 100%;
+    max-width: 100%;
+
+    @include breakpoint($small-max) {
+      flex: 1 1 375px;
+      max-width: 375px;
+    }
   }
 }
 

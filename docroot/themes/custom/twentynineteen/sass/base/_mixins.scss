@@ -30,3 +30,9 @@
     clear: both;
   }
 }
+
+@mixin container($value) {
+  max-width: $value;
+  display: block;
+  margin: 0 auto;
+}

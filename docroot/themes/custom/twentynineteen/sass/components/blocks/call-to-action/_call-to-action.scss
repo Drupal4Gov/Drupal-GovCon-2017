@@ -7,13 +7,7 @@
 // Style guide: components.call_to_action
 
 .call-to-action {
-  @include span(4 of 4);
-
   position: relative;
-
-  @include breakpoint($medium-max) {
-    @include span(4 of 12);
-  }
 
   &__text {
     position: absolute;

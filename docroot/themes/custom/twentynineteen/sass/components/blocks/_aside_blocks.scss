@@ -5,11 +5,32 @@
 // Markup: block.twig
 //
 // Style guide: components.block
-aside .block {
-  margin-bottom: 25px;
+aside {
+  position: relative;
 
-  h2 {
-    font-size: 175%;
-    color: $gray;
+  &.sidebar-second::before {
+    background: rgba($color-primary, 0.5);
+    box-shadow: 0 5px 10px rgba($color-primary, 0.5);
+    content: '';
+    display: inline-block;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    height: 2px;
+
+    @include breakpoint($medium-max) {
+      height: 80vh;
+      top: 3%;
+      width: 2px;
+    }
+  }
+
+  .block {
+    margin-bottom: 25px;
+
+    h2 {
+      font-size: 175%;
+      color: $gray;
+    }
   }
 }
