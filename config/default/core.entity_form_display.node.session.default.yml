@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.session.field_experience_level
     - field.field.node.session.field_female_attendees
     - field.field.node.session.field_files
+    - field.field.node.session.field_i_can_deliver_this_session
     - field.field.node.session.field_image
     - field.field.node.session.field_male_attendees
     - field.field.node.session.field_room
@@ -36,7 +37,7 @@ third_party_settings:
         - field_files
         - field_video_embed
       parent_name: ''
-      weight: 9
+      weight: 10
       format_type: fieldset
       format_settings:
         description: ''
@@ -50,7 +51,7 @@ third_party_settings:
         - field_session_date_time
         - field_room
       parent_name: ''
-      weight: 11
+      weight: 12
       format_type: fieldset
       format_settings:
         id: ''
@@ -65,7 +66,7 @@ third_party_settings:
         - field_male_attendees
         - field_female_attendees
       parent_name: ''
-      weight: 15
+      weight: 16
       format_type: fieldset
       format_settings:
         id: ''
@@ -74,6 +75,19 @@ third_party_settings:
         required_fields: true
       label: 'Room Monitor'
       region: content
+    group_virtual_options:
+      children:
+        - field_i_can_deliver_this_session
+      parent_name: ''
+      weight: 1
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: 'With COVID-19, the Drupal GovCon team is making plans for a virtual or hybrid in-person/virtual Con.  Please help us understand your availability both in-person as well as virtual.'
+        required_fields: true
+      label: 'Virtual Options'
 _core:
   default_config_hash: DV8OLbi-qcGglfofiDQUJ4P1qPscvwMsPVe80-OoIBo
 id: node.session.default
@@ -83,7 +97,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 8
+    weight: 9
     settings:
       rows: 9
       summary_rows: 3
@@ -93,18 +107,18 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 4
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     region: content
   field_conference_year:
-    weight: 14
+    weight: 15
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_experience_level:
-    weight: 2
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -122,6 +136,12 @@ content:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
+    region: content
+  field_i_can_deliver_this_session:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   field_male_attendees:
     weight: 16
@@ -147,7 +167,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_session_co_presenter_s_:
-    weight: 12
+    weight: 13
     settings:
       match_operator: CONTAINS
       size: 60
@@ -163,13 +183,13 @@ content:
     type: datetime_default
     region: content
   field_session_track:
-    weight: 1
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_status:
-    weight: 10
+    weight: 11
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -182,13 +202,13 @@ content:
     region: content
   moderation_state:
     type: moderation_state_default
-    weight: 17
+    weight: 18
     settings: {  }
     region: content
     third_party_settings: {  }
   path:
     type: path
-    weight: 7
+    weight: 8
     settings: {  }
     third_party_settings: {  }
     region: content
@@ -196,21 +216,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 5
+    weight: 6
     third_party_settings: {  }
     region: content
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 13
+    weight: 14
     third_party_settings: {  }
     region: content
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 6
+    weight: 7
     third_party_settings: {  }
     region: content
   title:
@@ -223,7 +243,7 @@ content:
     region: content
   uid:
     type: entity_reference_autocomplete
-    weight: 3
+    weight: 4
     settings:
       match_operator: CONTAINS
       size: 60
@@ -232,7 +252,7 @@ content:
     third_party_settings: {  }
     region: content
   url_redirects:
-    weight: 16
+    weight: 17
     region: content
     settings: {  }
     third_party_settings: {  }
