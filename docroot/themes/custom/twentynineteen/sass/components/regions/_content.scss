@@ -1,10 +1,12 @@
 .mq-main {
   background-color: $white;
+  display: flex;
+  flex-direction: column;
   max-width: none;
-  margin-top: 0;
   margin-bottom: 0;
 
   @include breakpoint($medium-max) {
+    flex-direction: row;
     max-width: 1200px;
     width: 100%;
   }

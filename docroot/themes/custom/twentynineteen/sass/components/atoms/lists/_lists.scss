@@ -3,3 +3,12 @@
 // Markup: lists.twig
 //
 // Style guide: atoms.lists
+
+#main ul {
+  list-style-type: square;
+
+  li {
+    padding-left: 1.25rem;
+    padding-bottom: 0.45rem;
+  }
+}

@@ -11,7 +11,7 @@ a.button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  border-radius: 0.25em;
+  border-radius: 0.35em;
   background-color: $color-primary;
   box-shadow: 0 3px 3px #00000029;
   color: $white !important;
@@ -19,7 +19,7 @@ input[type="submit"] {
   font-weight: 700;
   letter-spacing: 0.02em;
   margin: 0.5em 0;
-  padding: 0.5em 1em;
+  padding: 0.5em 1.5em;
   text-decoration: none;
   text-transform: uppercase;
   -webkit-appearance: none;
@@ -27,10 +27,18 @@ input[type="submit"] {
   outline: none;
   border: none;
 
-  &:hover,
+  &:active {
+    background-color: $button-active;
+  }
+
+  &:hover {
+    background-color: $button-visited;
+    text-decoration: none;
+  }
+
   &:focus {
     background-color: $color-primary;
-    text-decoration: none;
+    outline: 2px solid $color-primary;
   }
 
   &:disabled {
@@ -39,5 +47,13 @@ input[type="submit"] {
     &:hover {
       background-color: $primary-darkest;
     }
+  }
+
+  svg.ext {
+    fill: $white;
+  }
+
+  svg.ext path {
+    stroke: $white;
   }
 }
