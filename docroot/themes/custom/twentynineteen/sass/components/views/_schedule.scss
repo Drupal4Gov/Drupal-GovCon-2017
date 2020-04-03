@@ -12,35 +12,38 @@
     list-style: none;
     padding-left: 0;
     margin-bottom: 3px;
-    border-bottom: 1px solid $color-primary;
+    border-bottom: 2px solid $light-gray;
   }
 
   li {
     display: inline-flex;
+    padding-bottom: 0 !important;
+    padding-left: 1rem !important;
+
+    &:first-child {
+      padding-left: 0 !important;
+    }
   }
 
   a {
     color: $color-primary;
     padding: 0.5em;
-    background-color: rgb(142, 221, 218);
     text-decoration: none;
-    border-radius: 0.25em 0.25em 0 0;
     font-size: 0.875em;
     letter-spacing: 0.02em;
 
     @include breakpoint($up-sm) {
-      padding: 0.5em 0.75em;
+      padding: 0.5em 0.25em;
     }
 
     &.is-active {
-      color: $white;
-      background-color: $color-primary;
+      font-weight: 700;
+      border-bottom: 3px solid $color-primary;
     }
 
     &:hover,
     &.is-active:hover {
-      background-color: rgba(255, 157, 1, 1);
-      color: rgba(54, 114, 122, 1);
+      border-bottom: 3px solid $color-primary;
     }
   }
 }
@@ -50,12 +53,11 @@
 
   .view-header h2 {
     margin-top: 0;
-    padding: 0.5em 0.5em 0.25em;
+    padding: 0.25em 0.5em;
     text-transform: uppercase;
-    background-color: $color-primary;
-    color: $white;
-    font-size: 1em;
-    letter-spacing: 0.02em;
+    background-color: $gold;
+    color: $blk;
+    font-size: 30px;
     font-weight: 700;
   }
 
@@ -67,77 +69,38 @@
   .view-content time {
     display: block;
     margin: 0;
-    border-bottom: 4px solid $color-primary;
+    border-bottom: 4px solid $light-gray;
     padding: 0 0 0.25rem 0.5rem;
-    color: $orange;
-    font-size: 0.875rem;
+    color: $blk;
+    font-size: 30px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 700;
+    text-transform: uppercase;
   }
 
   .views-row {
-    padding: 0.5em;
-    border-bottom: 1px solid $color-primary;
+    padding: 25px 0.5em;
+    border-bottom: 1px solid $med-gray;
 
-    &:nth-child(odd) {
-      background: rgba(233, 248, 248, 1);
+    &:last-of-type {
+      border-bottom: 0;
     }
   }
 
   .views-field-title {
     color: $color-primary;
-    font-size: 1.25rem;
+    font-size: 27px;
     font-weight: 700;
+    line-height: 50px;
     margin: 0.125rem 0;
-
-    a {
-      color: $color-primary;
-    }
   }
 
-  .views-field-uid {
-    color: $mediumteal;
-    font-style: italic;
-    margin-bottom: 0.3em;
-
-    a {
-      color: $mediumteal;
-    }
-  }
-
-  .views-field-field-session-track,
-  .views-field-field-experience-level {
-    display: inline-block;
-    position: relative;
-    font-size: 0.875rem;
-    margin-bottom: 0.3em;
-  }
-
-  .views-field-field-session-track a {
+  .views-field-field-session-track a,
+  .views-field-speakers a {
     color: $color-primary;
   }
 
-  .views-field-field-experience-level {
-    color: $mediumteal;
-    margin-left: 1em;
-    font-style: italic;
-
-    a {
-      color: $mediumteal;
-    }
-
-    &::before {
-      color: $light-gray;
-      content: '|';
-      position: absolute;
-      top: 0;
-      left: -9px;
-      font-style: normal;
-    }
-  }
-
   .views-field-field-session-room {
-    font-style: italic;
     line-height: 1.5rem;
   }
 
@@ -146,16 +109,16 @@
 
     a {
       background: $color-primary;
+      border-radius: 0.25em;
       color: $white;
       font-size: 0.75em;
       padding: 0.25em 0.5em;
-      border-radius: 0.25em;
       text-decoration: none;
 
       &:hover,
       &:focus,
       &:active {
-        background: $orange;
+        background: $primary-darkest;
       }
     }
   }
@@ -166,9 +129,9 @@
     a {
       background-color: $color-primary;
       border-radius: 0.25em;
-      padding: 0.5em;
-      color: white;
+      color: $white;
       font-size: 0.8rem;
+      padding: 0.5em;
 
       &:hover {
         background: $primary-darkest;
@@ -196,6 +159,10 @@
 
 .block-views-exposed-filter-blocksessions-schedule-page-4,
 .block-views-exposed-filter-blocksessions-schedule-page-2 {
+  h2 {
+    @extend .visually-hidden;
+  }
+
   .form--inline {
     margin-top: 1em;
   }
@@ -206,12 +173,6 @@
     @include breakpoint($medium-max) {
       display: inline-block;
     }
-  }
-
-  label {
-    @extend h4;
-
-    display: block;
   }
 
   select {

@@ -34,7 +34,7 @@ form button.link-edit-summary {
 
 label {
   display: block;
-  color: $color-primary;
+  color: $blk;
   cursor: pointer;
   font-weight: 400;
   margin: 0 0 0.1875em;
@@ -54,7 +54,7 @@ input[type="date"],
 textarea {
   font-family: inherit;
   border: 1px solid $color-primary;
-  border-radius: 0.25em;
+  border-radius: 0;
   box-shadow: inset 0.1em 0.1em 0.25em rgba(0, 0, 0, 0.125);
   color: $blk;
   display: block;
@@ -64,13 +64,10 @@ textarea {
   width: 100%;
   box-sizing: border-box;
   transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
-}
 
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="date"]:focus,
-textarea:focus {
-  box-shadow: 0 0 0.25em 0.25em rgba(242, 101, 34, 1);
+  &:focus {
+    box-shadow: 0 0 0.2em 0.1em rgba($color-primary, 0.5);
+  }
 }
 
 input[type="text"]:disabled,
@@ -153,25 +150,25 @@ input[type="checkbox"]:disabled + label::before {
 }
 
 select {
-  color: rgba(255, 255, 255, 1);
+  background: $white;
+  border: 1px solid $blk;
+  border-radius: 0;
+  color: $blk;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 1em;
   letter-spacing: 0.02em;
-  background: $color-primary;
   text-decoration: none;
-  border-radius: 0.25em;
   margin: 1em 0;
   outline: none;
-  border: none;
   width: 100%;
   max-width: 500px;
   -webkit-appearance: none;
   -moz-appearance: none;
   padding: 0.75em 2.25em 0.5em 1em;
   background-image:
-    linear-gradient(45deg, transparent 50%, white 50%),
-    linear-gradient(135deg, white 50%, transparent 50%),
+    linear-gradient(45deg, transparent 50%, $blk 50%),
+    linear-gradient(135deg, $blk 50%, transparent 50%),
     linear-gradient(to right, #ccc, #ccc);
   background-position:
     calc(100% - 1.5em) calc(0.875em + 0.125em),
@@ -184,23 +181,6 @@ select {
   background-repeat: no-repeat;
   text-indent: 0.01px;
   text-overflow: '';
-
-  &:hover {
-    background: $orange;
-    background-image:
-      linear-gradient(45deg, transparent 50%, white 50%),
-      linear-gradient(135deg, white 50%, transparent 50%),
-      linear-gradient(to right, #ccc, #ccc);
-    background-position:
-      calc(100% - 1.5em) calc(0.875em + 0.125em),
-      calc(100% - 1em) calc(0.875em + 0.125em),
-      calc(100% - 2.5em) 0.5em;
-    background-size:
-      0.5em 0.5em,
-      0.5em 0.5em,
-      0 0;
-    background-repeat: no-repeat;
-  }
 }
 
 fieldset {
