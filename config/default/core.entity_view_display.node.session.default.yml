@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.session.field_experience_level
     - field.field.node.session.field_female_attendees
     - field.field.node.session.field_files
+    - field.field.node.session.field_i_can_deliver_this_session
     - field.field.node.session.field_image
     - field.field.node.session.field_male_attendees
     - field.field.node.session.field_room
@@ -39,7 +40,6 @@ third_party_settings:
       weight: 2
       format_type: fieldset
       format_settings:
-        label: Audience
         description: ''
         id: ''
         classes: ''
@@ -152,6 +152,7 @@ content:
 hidden:
   field_conference_year: true
   field_female_attendees: true
+  field_i_can_deliver_this_session: true
   field_image: true
   field_male_attendees: true
   field_room_monitor: true
