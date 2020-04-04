@@ -34,7 +34,7 @@ form button.link-edit-summary {
 
 label {
   display: block;
-  color: $blk;
+  color: $gray;
   cursor: pointer;
   font-weight: 400;
   margin: 0 0 0.1875em;
@@ -45,7 +45,7 @@ label {
 .form-required::after {
   content: '*';
   margin-left: 0.2rem;
-  color: $primary-darkest;
+  color: $red;
 }
 
 input[type="text"],
@@ -53,10 +53,9 @@ input[type="password"],
 input[type="date"],
 textarea {
   font-family: inherit;
-  border: 1px solid $color-primary;
+  border: 1px solid $dark-gray;
   border-radius: 0;
-  box-shadow: inset 0.1em 0.1em 0.25em rgba(0, 0, 0, 0.125);
-  color: $blk;
+  color: $dark-gray;
   display: block;
   font-size: 1em;
   margin: 0 0 1em;
@@ -85,6 +84,14 @@ select {
 
 input[type="file"] {
   width: 100%;
+}
+
+.form-type-radio {
+  position: relative;
+
+  // .option {
+  //   margin-left: 2rem;
+  // }
 }
 
 input[type="radio"],
@@ -116,31 +123,31 @@ input[type="checkbox"] {
   }
 }
 
-input[type="radio"]:focus + label::before,
-input[type="checkbox"]:focus + label::before {
-  -webkit-box-shadow: 0 0 0.25em 0.25em rgba(128, 188, 250, 1);
-}
+// input[type="radio"]:focus + label::before,
+// input[type="checkbox"]:focus + label::before {
+//   -webkit-box-shadow: 0 0 0.25em 0.25em rgba(128, 188, 250, 1);
+// }
 
 input[type="radio"] + label::before {
-  border-radius: 10px;
+  border-radius: 50%;
 }
 
 input[type="checkbox"] + label::before {
-  border-radius: 3px;
+  border-radius: 2px;
 }
 
 input[type="radio"]:checked + label::before {
   content: "\2022";
-  color: rgba($white, 0.75);
-  font-size: 1.4em;
+  color: $white;
+  font-size: 4em;
   text-align: center;
-  line-height: 1em;
+  line-height: 0.335;
 }
 
 input[type="checkbox"]:checked + label::before {
   content: "\2713";
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-  color: rgba($white, 0.75);
+  color: $white;
   text-align: center;
 }
 
@@ -151,41 +158,31 @@ input[type="checkbox"]:disabled + label::before {
 
 select {
   background: $white;
-  border: 1px solid $blk;
+  border: 1px solid $dark-gray;
   border-radius: 0;
-  color: $blk;
+  color: $dark-gray;
   text-transform: uppercase;
-  font-weight: 700;
   font-size: 1em;
   letter-spacing: 0.02em;
   text-decoration: none;
-  margin: 1em 0;
+  margin: 0 0 1em;
   outline: none;
   width: 100%;
   max-width: 500px;
   -webkit-appearance: none;
   -moz-appearance: none;
-  padding: 0.75em 2.25em 0.5em 1em;
-  background-image:
-    linear-gradient(45deg, transparent 50%, $blk 50%),
-    linear-gradient(135deg, $blk 50%, transparent 50%),
-    linear-gradient(to right, #ccc, #ccc);
-  background-position:
-    calc(100% - 1.5em) calc(0.875em + 0.125em),
-    calc(100% - 1em) calc(0.875em + 0.125em),
-    calc(100% - 2.5em) 0.5em;
-  background-size:
-    0.5em 0.5em,
-    0.5em 0.5em,
-    0 0;
+  padding: 0.5em;
+  background-image: linear-gradient(45deg, transparent 50%, $dark-gray 50%), linear-gradient(135deg, $dark-gray 50%, transparent 50%), linear-gradient(to right, #ccc, #ccc);
+  background-position: calc(100% - 1.5em) calc(0.875em + 0.125em), calc(100% - 1em) calc(0.875em + 0.125em), calc(100% - 2.5em) 0.5em;
+  background-size: 0.5em 0.5em, 0.5em 0.5em, 0 0;
   background-repeat: no-repeat;
   text-indent: 0.01px;
   text-overflow: '';
 }
 
 fieldset {
-  border: 1px solid $color-primary;
-  border-radius: 0.2em;
+  border: 1px solid $med-gray;
+  border-radius: 0;
   margin: 1em 0 2em;
 
   .fieldset-wrapper fieldset {
@@ -194,15 +191,27 @@ fieldset {
   }
 }
 
-legend + .fieldset-wrapper .form-checkboxes {
-  margin-top: 1em;
+// Target the legend that occurs within
+.fieldset-wrapper fieldset legend .fieldset-legend {
+  border-bottom: 2px solid $gold;
+  background: transparent;
+  color: $dark-gray;
+  text-transform: capitalize;
+  margin-left: 0.5rem;
+  padding-left: 0.25rem;
+  margin-bottom: 1rem;
 }
 
-fieldset legend {
-  font-weight: bold;
+// legend + .fieldset-wrapper .form-checkboxes {
+//   margin-top: 1em;
+// }
+
+fieldset .fieldset-legend {
   background: $color-primary;
-  color: $white;
   background-color: $legend;
+  color: $white;
+  display: block;
+  font-weight: bold;
   padding: 0.25em 0.5em;
   text-transform: uppercase;
   letter-spacing: 0.02em;
@@ -284,9 +293,8 @@ input[type="time"],
 input[type="url"] {
   background-color: white;
   font-family: inherit;
-  border: 1px solid $lighter-gray;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-  color: rgba(0, 0, 0, 0.75);
+  border: 1px solid $dark-gray;
+  color: $dark-gray;
   display: block;
   font-size: 0.875em;
   margin: 0 0 1em;
@@ -294,22 +302,11 @@ input[type="url"] {
   height: 2.3125em;
   width: auto;
   box-sizing: border-box;
-  transition: box-shadow 0.45s, border-color 0.45s ease-in-out;
-}
+  transition: box-shadow 0.45s;
 
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="month"]:focus,
-input[type="week"]:focus,
-input[type="email"]:focus,
-input[type="number"]:focus,
-input[type="search"]:focus,
-input[type="tel"]:focus,
-input[type="time"]:focus,
-input[type="url"]:focus {
-  box-shadow: 0 0 5px $light-gray;
-  border-color: $light-gray;
-  outline: none;
+  &:focus {
+    box-shadow: 0 0 0.2em 0.1em rgba($color-primary, 0.5);
+  }
 }
 
 form input[disabled],
@@ -321,6 +318,7 @@ form button[disabled] {
     background-color: $light-gray;
   }
 }
+
 // simple transitions ////////////////////
 form button,
 form input {
