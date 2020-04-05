@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.storage.node.body
     - field.storage.node.field_experience_level
     - field.storage.node.field_room
     - field.storage.node.field_session_date_time
@@ -16,25 +17,15 @@ dependencies:
   content:
     - 'taxonomy_term:conference_year:0f6c31f2-ef62-41ce-b17c-3e05bfb9b76c'
     - 'taxonomy_term:conference_year:951cf954-787d-4057-8cc0-b170bd6dda96'
-    - 'taxonomy_term:conference_year:a3b3e4e7-5b6a-4d61-b99a-674262910622'
     - 'taxonomy_term:conference_year:b841e242-eb84-4bf9-b245-4c809e3737bd'
     - 'taxonomy_term:session_track:0a204882-2395-405d-bc08-3d2e402400da'
     - 'taxonomy_term:session_track:18795e61-ba7c-451c-912e-6ef6835cf562'
-    - 'taxonomy_term:session_track:1f57fc72-75f5-4e51-9e41-6a7087a76abc'
-    - 'taxonomy_term:session_track:349b1121-a24e-408b-a3eb-a30bfe6a814f'
     - 'taxonomy_term:session_track:3a322e64-7752-4b8c-920a-8333ec5cdfa5'
-    - 'taxonomy_term:session_track:541ef0e7-61da-46fc-9715-eb0ef15074c3'
-    - 'taxonomy_term:session_track:6bbdda02-feb2-490b-8bb8-e5804de4ebc0'
     - 'taxonomy_term:session_track:823a0160-1ea6-4f10-90f4-06b2af4eb31c'
-    - 'taxonomy_term:session_track:899c44f8-ae58-4a68-85f0-0584eabb3d5c'
-    - 'taxonomy_term:session_track:8cc2a86a-9349-4251-a850-2c0d0189416e'
-    - 'taxonomy_term:session_track:a2348afa-3314-4685-8edb-d7f62a884dc1'
     - 'taxonomy_term:session_track:ac4813be-e88a-4bc5-b4d7-230924fa4d7e'
-    - 'taxonomy_term:session_track:d35ab41e-68ab-4987-8c7f-b1c8a1c3e94d'
     - 'taxonomy_term:session_track:d69a8325-bc1a-4577-8991-65f240455bb8'
     - 'taxonomy_term:session_track:d7334075-7a5b-4ddd-a933-3621a8d0ece2'
     - 'taxonomy_term:session_track:e02c5e10-cb18-49a2-bcf8-1cc4c4edd3c5'
-    - 'taxonomy_term:session_track:e0bf6bd7-9be0-4760-b92f-a5e701bf8a0a'
   module:
     - better_exposed_filters
     - capitalcamp_glue
@@ -43,6 +34,7 @@ dependencies:
     - node
     - options
     - taxonomy
+    - text
     - user
 id: sessions_schedule
 label: 'Sessions Schedule'
@@ -127,7 +119,11 @@ display:
         type: fields
         options:
           default_field_elements: true
-          inline: {  }
+          inline:
+            speakers: speakers
+            field_session_track: field_session_track
+            field_experience_level: field_experience_level
+            field_room: field_room
           separator: ''
           hide_empty: false
       fields:
@@ -2886,6 +2882,69 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: field
+        body:
+          id: body
+          table: node__body
+          field: body
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Description
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 250
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: true
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_summary_or_trimmed
+          settings:
+            trim_length: 250
+          group_column: summary
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         speakers:
           id: speakers
           table: node
@@ -2893,7 +2952,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: Presenter(s)
           exclude: false
           alter:
             alter_text: false
@@ -2926,7 +2985,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -2943,7 +3002,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: 'Session Track'
           exclude: false
           alter:
             alter_text: false
@@ -2976,12 +3035,12 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: false
+          hide_empty: true
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
@@ -3006,7 +3065,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: 'Technical Level'
           exclude: false
           alter:
             alter_text: false
@@ -3039,12 +3098,12 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: false
+          hide_empty: true
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
@@ -3068,7 +3127,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: Location
           exclude: false
           alter:
             alter_text: false
@@ -3101,12 +3160,12 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: views-field-field-session-room
           element_default_classes: true
           empty: ''
-          hide_empty: false
+          hide_empty: true
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
@@ -3212,6 +3271,7 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.node.body'
         - 'config:field.storage.node.field_experience_level'
         - 'config:field.storage.node.field_room'
         - 'config:field.storage.node.field_session_date_time'
@@ -5480,6 +5540,70 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: field
+        body:
+          id: body
+          table: node__body
+          field: body
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Description
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 250
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: true
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: true
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_summary_or_trimmed
+          settings:
+            trim_length: 250
+          group_column: value
+          group_columns:
+            summary: summary
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         speakers:
           id: speakers
           table: node
@@ -5487,7 +5611,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: Presenter(s)
           exclude: false
           alter:
             alter_text: false
@@ -5520,7 +5644,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -5537,7 +5661,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: 'Session Track'
           exclude: false
           alter:
             alter_text: false
@@ -5570,12 +5694,12 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: false
+          hide_empty: true
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
@@ -5600,7 +5724,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: 'Technical Level'
           exclude: false
           alter:
             alter_text: false
@@ -5633,12 +5757,12 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: false
+          hide_empty: true
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
@@ -5662,7 +5786,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: Location
           exclude: false
           alter:
             alter_text: false
@@ -5695,12 +5819,12 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: views-field-field-session-room
           element_default_classes: true
           empty: ''
-          hide_empty: false
+          hide_empty: true
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: target_id
@@ -5806,6 +5930,7 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.node.body'
         - 'config:field.storage.node.field_experience_level'
         - 'config:field.storage.node.field_room'
         - 'config:field.storage.node.field_session_date_time'
