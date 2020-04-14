@@ -8,11 +8,19 @@ dependencies:
     - node.type.session
     - system.menu.2018-main-navigation
     - taxonomy.vocabulary.conference_year
+    - taxonomy.vocabulary.session_track
   content:
     - 'taxonomy_term:conference_year:0f6c31f2-ef62-41ce-b17c-3e05bfb9b76c'
     - 'taxonomy_term:conference_year:951cf954-787d-4057-8cc0-b170bd6dda96'
     - 'taxonomy_term:conference_year:a3b3e4e7-5b6a-4d61-b99a-674262910622'
     - 'taxonomy_term:conference_year:b841e242-eb84-4bf9-b245-4c809e3737bd'
+    - 'taxonomy_term:session_track:0a204882-2395-405d-bc08-3d2e402400da'
+    - 'taxonomy_term:session_track:18795e61-ba7c-451c-912e-6ef6835cf562'
+    - 'taxonomy_term:session_track:823a0160-1ea6-4f10-90f4-06b2af4eb31c'
+    - 'taxonomy_term:session_track:899c44f8-ae58-4a68-85f0-0584eabb3d5c'
+    - 'taxonomy_term:session_track:d35ab41e-68ab-4987-8c7f-b1c8a1c3e94d'
+    - 'taxonomy_term:session_track:d69a8325-bc1a-4577-8991-65f240455bb8'
+    - 'taxonomy_term:session_track:d7334075-7a5b-4ddd-a933-3621a8d0ece2'
   module:
     - node
     - options
@@ -781,6 +789,123 @@ display:
             group_items: {  }
           reduce_duplicates: false
           plugin_id: list_field
+        field_session_track_target_id:
+          id: field_session_track_target_id
+          table: node__field_session_track
+          field: field_session_track_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value:
+            166: 166
+            311: 311
+            306: 306
+            156: 156
+            171: 171
+            161: 161
+            86: 86
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_session_track_target_id_op
+            label: 'Session Track'
+            description: ''
+            use_operator: false
+            operator: field_session_track_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_session_track_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              page_creator: '0'
+              layout_manager: '0'
+              page_reviewer: '0'
+              landing_page_creator: '0'
+              landing_page_reviewer: '0'
+              media_creator: '0'
+              media_manager: '0'
+              volunteer: '0'
+              sponsor: '0'
+              content_editor: '0'
+            reduce: true
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: session_track
+          hierarchy: false
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        uid:
+          id: uid
+          table: node_field_data
+          field: uid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: uid_op
+            label: 'Submitted By'
+            description: ''
+            use_operator: false
+            operator: uid_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: uid
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              page_creator: '0'
+              layout_manager: '0'
+              page_reviewer: '0'
+              landing_page_creator: '0'
+              landing_page_reviewer: '0'
+              media_creator: '0'
+              media_manager: '0'
+              volunteer: '0'
+              sponsor: '0'
+              content_editor: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: uid
+          plugin_id: user_name
       defaults:
         filters: false
         filter_groups: false
@@ -793,6 +918,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - user
         - 'user.node_grants:view'
         - user.permissions
