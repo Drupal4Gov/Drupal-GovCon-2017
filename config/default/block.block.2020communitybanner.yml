@@ -1,0 +1,31 @@
+uuid: d6c4918b-b9c3-41f8-b7ef-f28fb8ca9374
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:banner:36c1ff95-36aa-4831-98e6-00b97ad69117'
+  module:
+    - block_content
+    - system
+  theme:
+    - twentynineteen
+id: 2020communitybanner
+theme: twentynineteen
+region: pre_content
+weight: 0
+provider: null
+plugin: 'block_content:36c1ff95-36aa-4831-98e6-00b97ad69117'
+settings:
+  id: 'block_content:36c1ff95-36aa-4831-98e6-00b97ad69117'
+  label: '2020 Community Banner'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /get-involved
+    negate: false
+    context_mapping: {  }

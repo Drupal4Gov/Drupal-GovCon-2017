@@ -1,0 +1,31 @@
+uuid: 48391378-d2b8-448e-871e-8049eb243cea
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:banner:72e5244a-afe9-45b7-abb3-d0056d186e87'
+  module:
+    - block_content
+    - system
+  theme:
+    - twentynineteen
+id: 2020programbanner
+theme: twentynineteen
+region: pre_content
+weight: 0
+provider: null
+plugin: 'block_content:72e5244a-afe9-45b7-abb3-d0056d186e87'
+settings:
+  id: 'block_content:72e5244a-afe9-45b7-abb3-d0056d186e87'
+  label: '2020 Program Banner'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /program
+    negate: false
+    context_mapping: {  }
