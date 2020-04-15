@@ -1,0 +1,31 @@
+uuid: 2638da13-5d01-4d94-a795-0ec9349cb2de
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:banner:00306e39-ef94-4ddc-8856-b153c0a975aa'
+  module:
+    - block_content
+    - system
+  theme:
+    - twentynineteen
+id: 2020homebanner
+theme: twentynineteen
+region: pre_content
+weight: -10
+provider: null
+plugin: 'block_content:00306e39-ef94-4ddc-8856-b153c0a975aa'
+settings:
+  id: 'block_content:00306e39-ef94-4ddc-8856-b153c0a975aa'
+  label: '2020 Home Banner'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/2020/sponsors\r\n/travel"
+    negate: false
+    context_mapping: {  }
