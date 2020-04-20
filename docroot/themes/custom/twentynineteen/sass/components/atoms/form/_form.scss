@@ -57,7 +57,7 @@ textarea {
   border-radius: 0;
   color: $dark-gray;
   display: block;
-  font-size: 1em;
+  font-size: 1.1em;
   margin: 0 0 1em;
   padding: 0.5em;
   width: 100%;
@@ -88,10 +88,6 @@ input[type="file"] {
 
 .form-type-radio {
   position: relative;
-
-  // .option {
-  //   margin-left: 2rem;
-  // }
 }
 
 input[type="radio"],
@@ -122,11 +118,6 @@ input[type="checkbox"] {
     }
   }
 }
-
-// input[type="radio"]:focus + label::before,
-// input[type="checkbox"]:focus + label::before {
-//   -webkit-box-shadow: 0 0 0.25em 0.25em rgba(128, 188, 250, 1);
-// }
 
 input[type="radio"] + label::before {
   border-radius: 50%;
@@ -203,10 +194,6 @@ fieldset {
   padding-left: 0.25rem;
   margin-bottom: 1rem;
 }
-
-// legend + .fieldset-wrapper .form-checkboxes {
-//   margin-top: 1em;
-// }
 
 fieldset .fieldset-legend {
   background: $color-primary;
