@@ -8,6 +8,10 @@
   }
 }
 
-li.node-readmore a {
-  @extend a.button;
+li.node-readmore {
+  padding-left: 0 !important;
+
+  a {
+    @extend a.button;
+  }
 }

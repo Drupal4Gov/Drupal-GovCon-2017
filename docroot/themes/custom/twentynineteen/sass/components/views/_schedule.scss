@@ -100,8 +100,9 @@
   .views-label {
     background: $light-gold;
     font-weight: 700;
-    padding: 0.25rem 0.5rem;
+    line-height: 28px;
     margin: 0.25rem 0.5rem 0.25rem 0;
+    padding: 0.25rem 0.5rem;
   }
 
   .views-field-title {
@@ -181,7 +182,8 @@
 }
 
 .block-views-exposed-filter-blocksessions-schedule-page-4,
-.block-views-exposed-filter-blocksessions-schedule-page-2 {
+.block-views-exposed-filter-blocksessions-schedule-page-2,
+#views-exposed-form-updated-proposed-sessions-page-3 {
   h2 {
     @extend .visually-hidden;
   }
@@ -202,6 +204,12 @@
     padding: 0.65em 2.25em 0.45em 1em;
     margin: 0.35em 0 0.25em;
     max-width: 250px;
+  }
+
+  input[type="text"] {
+    padding: 0.65em 2.25em 0.45em 1em;
+    margin: 0.35em 0 0.25em;
+    max-width: 300px;
   }
 
   .form-actions {
