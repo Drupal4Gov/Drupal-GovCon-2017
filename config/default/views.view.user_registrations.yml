@@ -5,13 +5,14 @@ dependencies:
   config:
     - webform.webform.2018_registration
     - webform.webform.2019_registration
+    - webform.webform.2020_registration
     - webform.webform.registration
   module:
     - user
     - webform
     - webform_views
 id: user_registrations
-label: 'User Registrations'
+label: 'User Profile: Registration Table'
 module: views
 description: ''
 tag: ''
@@ -409,6 +410,7 @@ display:
             registration: registration
             2018_registration: 2018_registration
             2019_registration: 2019_registration
+            2020_registration: 2020_registration
           group: 1
           exposed: false
           expose:
@@ -417,6 +419,8 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -425,8 +429,6 @@ display:
               authenticated: authenticated
             reduce: false
             argument: null
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -468,7 +470,7 @@ display:
           empty: false
           tokenize: false
           content:
-            value: 'Welcome back! We hope to see you at GovCon in July 2019! If you don''t see a 2019 Registration in the table below, you will need to <a href="/form/registration">register for a ticket to the 2019 event</a>. You can also use this registration link to reserve another ticket for someone else.'
+            value: 'Welcome back! We hope to see you at GovCon this year! If you don''t see Registration for this year in the table below, you will need to <a href="/form/registration">register for a ticket</a> for this year''s event. You can also use this registration link to reserve another ticket for someone else.'
             format: simple_text
           plugin_id: text
       footer:
