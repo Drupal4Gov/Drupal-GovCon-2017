@@ -37,7 +37,7 @@ third_party_settings:
       children:
         - field_experience_level
       parent_name: ''
-      weight: 2
+      weight: 3
       format_type: fieldset
       format_settings:
         description: ''
@@ -51,7 +51,7 @@ third_party_settings:
         - field_session_room
         - field_room
       parent_name: ''
-      weight: 3
+      weight: 4
       format_type: fieldset
       format_settings:
         id: ''
@@ -74,19 +74,19 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 1
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     region: content
   field_experience_level:
-    weight: 3
-    label: above
+    weight: 0
+    label: inline
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_files:
-    weight: 6
+    weight: 7
     label: above
     settings:
       use_description_as_link_text: true
@@ -119,7 +119,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
   field_session_track:
-    weight: 5
+    weight: 6
     label: inline
     settings:
       link: true
@@ -127,14 +127,14 @@ content:
     type: entity_reference_label
     region: content
   field_status:
-    weight: 4
+    weight: 5
     label: inline
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_video_embed:
-    weight: 0
+    weight: 1
     label: hidden
     settings:
       responsive: true
