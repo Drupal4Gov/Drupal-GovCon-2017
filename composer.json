@@ -58,7 +58,7 @@
         "drupal/redirect": "^1.0",
         "drupal/seckit": "^1.2",
         "drupal/shield": "^1.1",
-        "drupal/simple_sitemap": "^3.6",
+        "drupal/simple_sitemap": "3.x-dev",
         "drupal/smart_trim": "^1.0",
         "drupal/svg_image": "^1.8",
         "drupal/twig_xdebug": "1.x-dev",
@@ -132,14 +132,6 @@
         "patches": {
             "drupal/core": {
                 "Ignore front end vendor folders to improve directory search performance": "https://www.drupal.org/files/issues/ignore_front_end_vendor-2329453-116.patch"
-            },
-            "acquia/blt": {
-                "debugging": "patches/debugging.patch",
-                "fix config import errors": "https://github.com/acquia/blt/pull/4068.patch"
-            },
-            "drupal/extlink": {
-                "fix php warnings": "https://www.drupal.org/files/issues/2020-01-31/3110330-2.patch",
-                "fix other warnings": "https://www.drupal.org/files/issues/2020-01-30/3110139-3.patch"
             }
         },
         "drupal-scaffold": {
