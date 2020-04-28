@@ -36,7 +36,5 @@ Feature: Session Tests
 
   Scenario: Admin Proposed Session View
     Given I am logged in as a user with the "administrator" role
-    And I am on "/admin/sessions/proposed?field_conference_year_target_id=296&field_status_value=All&field_session_track_target_id=All&title=&combine="
+    And I am on "/admin/sessions/proposed?field_conference_year_target_id=All&field_status_value=proposed&field_session_track_target_id=All&title=&combine="
     Then I should see "Proposed Session Node"
-    And I should see "Accepted Session Node"
-    And I should not see "Old Session Node"
