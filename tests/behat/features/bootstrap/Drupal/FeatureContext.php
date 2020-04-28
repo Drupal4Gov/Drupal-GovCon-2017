@@ -3,7 +3,6 @@
 namespace Drupal;
 
 use Drupal\DrupalExtension\Context\RawDrupalContext;
-use Behat\Behat\Context\SnippetAcceptingContext;
 use PHPUnit\Framework\Assert;
 use Drupal\user\Entity\Role;
 use Behat\Gherkin\Node\TableNode;
@@ -14,7 +13,7 @@ use Drupal\block_content\Entity\BlockContentType;
 /**
  * FeatureContext class defines custom step definitions for Behat.
  */
-class FeatureContext extends RawDrupalContext implements SnippetAcceptingContext {
+class FeatureContext extends RawDrupalContext {
 
   /**
    * Every scenario gets its own context instance.
@@ -416,6 +415,18 @@ class FeatureContext extends RawDrupalContext implements SnippetAcceptingContext
     $roles = user_roles();
     $roles = array_keys($roles);
     return $roles;
+  }
+
+  /**
+   * adds a breakpoints
+   * stops the execution until you hit enter in the console
+   * @Then /^breakpoint/
+   */
+  public function breakpoint() {
+    fwrite(STDOUT, "\033[s    \033[93m[Breakpoint] Press \033[1;93m[RETURN]\033[0;93m to continue...\033[0m");
+    while (fgets(STDIN, 1024) == '') {}
+    fwrite(STDOUT, "\033[u");
+    return;
   }
 
 }
