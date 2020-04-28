@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @file
+ * Contains install and update functions for CapitalCamp.
+ */
+
+use Drupal\taxonomy\Entity\Term;
+
+/**
+ * Implements hook_install().
+ */
+function capitalcamp_testing_install() {
+  $yearTerms = [
+    '2019',
+    '2020',
+  ];
+  foreach ($yearTerms as $year) {
+    Term::create([
+      'name' => $year,
+      'vid' => 'conference_year',
+    ])->save();
+  }
+
+  $sessionTerms = [
+    'Backend',
+    'Community',
+    'Content',
+    'Keynote',
+    'UX',
+  ];
+  foreach ($sessionTerms as $session) {
+    Term::create([
+      'name' => $session,
+      'vid' => 'session_track',
+    ])->save();
+  }
+}
