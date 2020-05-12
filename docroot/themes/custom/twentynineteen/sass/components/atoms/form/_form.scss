@@ -61,14 +61,6 @@ label {
   vertical-align: top;
 }
 
-// .label {
-//   background: $light-gold;
-//   font-weight: 700;
-//   line-height: 28px;
-//   margin: 0.25rem 0.5rem 0.25rem 0;
-//   padding: 0.25rem 0.5rem;
-// }
-
 .form-required::after {
   content: '*';
   margin-left: 0.2rem;
@@ -350,8 +342,12 @@ form input {
 }
 
 .field--label-inline .field__label {
-  color: $color-primary;
-  font-weight: bold;
+  background: $light-gold;
+  color: $blk;
+  font-weight: 700;
+  line-height: 28px;
+  margin: 0.25rem 0.5rem 0.25rem 0;
+  padding: 0.25rem 0.5rem;
 
   &::after {
     content: ':';
