@@ -14,14 +14,14 @@ footer {
 }
 
 .mq-footer {
-  background: $primary-darkest;
+  background: $dark-gray;
   margin: 0 auto;
   width: 100%;
   max-width: none;
 }
 
 .footer {
-  color: rgba(255, 255, 255, 0.75);
+  color: $blk;
   font-size: 1em;
   margin: 0 auto;
   padding-top: 1em;
@@ -53,7 +53,7 @@ footer {
 
   &__text-content {
     font-family: $body_font;
-    color: $lighter-gray;
+    color: $blk;
     font-size: 0.8em;
     line-height: 170%;
   }
@@ -62,6 +62,11 @@ footer {
     flex: 1 1 200px;
     text-align: center;
     padding: 0 0 25px;
+
+    svg path,
+    svg polygon {
+      fill: $blk;
+    }
 
     @include breakpoint($small-max) {
       padding: 2% 1% 0 0;
@@ -86,6 +91,10 @@ footer {
     text-align: center;
     flex: 1 1 100%;
     max-width: 100%;
+
+    svg path {
+      fill: $blk;
+    }
 
     @include breakpoint($small-max) {
       padding-top: 3%;
