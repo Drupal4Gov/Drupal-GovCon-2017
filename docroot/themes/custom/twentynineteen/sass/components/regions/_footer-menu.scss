@@ -1,0 +1,82 @@
+//
+// Footer Menu
+//
+
+.post-menu-footer {
+  background: $light-gray;
+}
+
+.mq-footer-menu {
+  margin: 2rem auto 0;
+}
+
+.region-footer-menu {
+  margin: 0 auto;
+
+  .toggle {
+    display: none;
+  }
+
+  .menu--_018-main-navigation {
+    background: $light-gray;
+    padding: 2.5rem 0 1.5rem;
+  }
+
+  .menu-main {
+    margin: 0;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint($small-max) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 0;
+    }
+
+    a {
+      color: $color-primary;
+    }
+
+    .menu-main__item {
+      margin-bottom: 1rem;
+
+      > a {
+        color: $blk;
+        font-size: 1em;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-decoration: none;
+        text-transform: uppercase;
+        margin-bottom: 0.25em;
+        display: inline-block;
+
+        @include breakpoint($small-max) {
+          margin-bottom: 0.75em;
+        }
+      }
+    }
+
+    .menu-submenu a {
+      font-size: 0.875em;
+      letter-spacing: 0.05em;
+      padding: 0.25em 0;
+      display: inline-block;
+
+      @include breakpoint($small-max) {
+        padding: 0.5em 0;
+      }
+    }
+
+    li {
+      max-width: 150px;
+      min-width: 100px;
+      list-style: none;
+    }
+
+    li ul {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

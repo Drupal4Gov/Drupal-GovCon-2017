@@ -29,10 +29,10 @@
 
   @include breakpoint($small-max) {
     li {
-      margin: 0.6em 0.5em;
+      margin: 0.6em 0.5em 0;
 
       &:last-child {
-        margin: 0.6em 0;
+        margin: 0.5em 0 0;
       }
     }
   }
