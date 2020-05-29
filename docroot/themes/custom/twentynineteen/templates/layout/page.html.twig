@@ -111,6 +111,14 @@
     </div>
   {% endif %}
 
+  {% if page.footer_menu %}
+    <div class="clearfix post-menu-footer" id="post-menu-footer">
+      <div class="cog--mq mq-footer-menu">
+        {{ page.footer_menu }}
+      </div>
+    </div>
+  {% endif %}
+
   <!-- ______________________ FOOTER _______________________ -->
 
   {% if page.footer %}
