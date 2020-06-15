@@ -1,0 +1,59 @@
+.view-attendees {
+  .view-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &::after {
+      content: '';
+      width: 100%;
+
+      @include breakpoint($xsmall-max) {
+        max-width: calc(100% / 1);
+      }
+
+      @include breakpoint($small-max) {
+        max-width: calc(90% / 2);
+      }
+
+      @include breakpoint($medium-max) {
+        max-width: calc(90% / 3);
+      }
+    }
+  }
+
+  .views-row {
+    width: 100%;
+    max-width: 100%;
+    margin: 1rem 0;
+    text-align: center;
+    flex: 1 0 100%;
+
+    @include breakpoint($xsmall-max) {
+      max-width: calc(100% / 1);
+    }
+
+    @include breakpoint($small-max) {
+      max-width: calc(90% / 2);
+    }
+
+    @include breakpoint($medium-max) {
+      max-width: calc(90% / 3);
+    }
+  }
+
+  // Name
+  .views-field-webform-submission-value-2 {
+    color: $primary-darkest;
+    font-weight: 800;
+    margin-top: 0.75rem;
+  }
+
+  // Image
+  .views-field.views-field-webform-submission-value-4 {
+    img {
+      width: auto;
+      min-height: 125px;
+    }
+  }
+}
