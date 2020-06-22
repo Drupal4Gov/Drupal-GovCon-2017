@@ -28,6 +28,8 @@ settings:
   default_wizard_next_button_label: 'Next Page >'
   default_wizard_start_label: Start
   default_wizard_confirmation_label: Complete
+  default_wizard_toggle_show_label: 'Show all'
+  default_wizard_toggle_hide_label: 'Hide all'
   default_preview_next_button_label: Preview
   default_preview_prev_button_label: '< Previous'
   default_preview_label: Preview
@@ -67,6 +69,9 @@ settings:
   confirmation_back_classes: "button\n"
   default_limit_total_message: 'No more submissions are permitted.'
   default_limit_user_message: 'No more submissions are permitted.'
+  default_share: false
+  default_share_node: false
+  default_share_theme_name: ''
   dialog: false
   dialog_options:
     narrow:
