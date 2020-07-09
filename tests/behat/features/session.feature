@@ -8,7 +8,7 @@ Feature: Session Tests
       | Old Session Node      | Content for a session   | 1      | published        | 2019                  | accepted     | Beginner               | Keynote             | Virtual Only                     |
 
   Scenario: Ensure Form Fields
-    Given I am logged in as a user with the "authenticated" role
+    Given I am logged in as a user with the "administrator" role
     And I am on "/node/add/session"
     Then I should see "Session Title"
     And I should see "I can deliver this session"
@@ -16,11 +16,16 @@ Feature: Session Tests
     And I should see "Experience Level"
     And I should see "Session Description"
     And I should see "Co-Presenter(s)"
-    And I should not see "Status"
-    And I should not see "Conference Year"
-    And I should not see "Room Monitor"
-    And I should not see "Male Attendees"
-    And I should not see "Female Attendees"
+    #And I should not see "Status"
+    #And I should not see "Conference Year"
+    #And I should not see "Room Monitor"
+    #And I should not see "Male Attendees"
+    #And I should not see "Female Attendees"
+
+  Scenario: Ensure Access to Sessions is Disabled
+    Given I am logged in as a user with the "authenticated" role
+    And I am on "/node/add/session"
+    Then I should see "Access denied"
 
   #Scenario: Proposed Session View
     #Given I am on "/2020/program/proposed-sessions"
