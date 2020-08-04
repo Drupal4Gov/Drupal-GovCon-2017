@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.session.body
+    - field.field.node.session.field_alternate_video_link
     - field.field.node.session.field_conference_year
     - field.field.node.session.field_experience_level
     - field.field.node.session.field_female_attendees
@@ -11,6 +12,7 @@ dependencies:
     - field.field.node.session.field_i_can_deliver_this_session
     - field.field.node.session.field_image
     - field.field.node.session.field_male_attendees
+    - field.field.node.session.field_primary_video_link
     - field.field.node.session.field_room
     - field.field.node.session.field_room_monitor
     - field.field.node.session.field_session_co_presenter_s_
@@ -27,6 +29,7 @@ dependencies:
     - datetime
     - field_group
     - file
+    - link
     - path
     - text
     - video_embed_field
@@ -88,6 +91,20 @@ third_party_settings:
         description: 'With COVID-19, the Drupal GovCon team is making plans for a virtual or hybrid in-person/virtual Con.  Please help us understand your availability both in-person as well as virtual.'
         required_fields: true
       label: 'Virtual Options'
+    group_video_links:
+      children:
+        - field_primary_video_link
+        - field_alternate_video_link
+      parent_name: ''
+      weight: 20
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Video Links'
 _core:
   default_config_hash: DV8OLbi-qcGglfofiDQUJ4P1qPscvwMsPVe80-OoIBo
 id: node.session.default
@@ -110,6 +127,14 @@ content:
     weight: 5
     settings: {  }
     third_party_settings: {  }
+    region: content
+  field_alternate_video_link:
+    weight: 20
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
     region: content
   field_conference_year:
     weight: 15
@@ -149,6 +174,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: number
+    region: content
+  field_primary_video_link:
+    weight: 19
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
     region: content
   field_room:
     weight: 13
