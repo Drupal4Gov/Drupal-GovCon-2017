@@ -1,0 +1,30 @@
+uuid: 0a4f189a-320a-4dbf-913a-630723504c30
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.2020-schedule
+  module:
+    - system
+  theme:
+    - twentynineteen
+id: 2020schedule
+theme: twentynineteen
+region: content
+weight: -5
+provider: null
+plugin: 'system_menu_block:2020-schedule'
+settings:
+  id: 'system_menu_block:2020-schedule'
+  label: '2020 Schedule'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    pages: '/2020/schedule/*'
+    negate: false
+    context_mapping: {  }
