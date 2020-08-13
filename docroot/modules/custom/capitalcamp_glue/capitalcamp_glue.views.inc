@@ -33,4 +33,20 @@ function capitalcamp_glue_views_data_alter(array &$data) {
       'id' => 'speakers',
     ],
   ];
+  $data['node']['session_primary_links'] = [
+    'title' => t('Session Primary Links'),
+    'field' => [
+      'title' => t('Session Primary Links'),
+      'help' => t('Displays the session primary links if a user has a valid ticket'),
+      'id' => 'session_primary_links',
+    ],
+  ];
+  $data['node']['session_alt_links'] = [
+    'title' => t('Session Alternate Links'),
+    'field' => [
+      'title' => t('Session Alternate Links'),
+      'help' => t('Displays the session alternate links if a user has a valid ticket'),
+      'id' => 'session_alt_links',
+    ],
+  ];
 }
