@@ -1,0 +1,77 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 293c1bf4-00b8-430b-be4a-e243084ae13b
+  bundle: session
+  default_langcode: en
+  depends:
+    946007b7-80d7-40eb-a9ae-67fdd6527a34: user
+    b841e242-eb84-4bf9-b245-4c809e3737bd: taxonomy_term
+    2edcc68c-6b30-4feb-9b00-a3cbd09ea442: taxonomy_term
+    0a204882-2395-405d-bc08-3d2e402400da: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      entity: 946007b7-80d7-40eb-a9ae-67fdd6527a34
+  title:
+    -
+      value: 'Automated Accessibility Testing: Using Pa11y and Continuous Integration'
+  created:
+    -
+      value: 1594325705
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /2020/program/sessions/automated-accessibility-testing-using-pa11y-and-continuous-integration
+      langcode: en
+      pathauto: 1
+  body:
+    -
+      value: "<p>Accessibility is a critical component of any modern website (and double so for government sites). This session is all about building a safety net for your site / platform to ensure that you do not regress the accessibility of your site as you continue to make improvements, fix bugs, develop new features, and apply updates.&nbsp;</p>\r\n\r\n<p><strong>Topics Covered:</strong></p>\r\n\r\n<ul>\r\n\t<li>How to integrate Pa11y into your Drupal project</li>\r\n\t<li>How to execute Pa11y tests during continuous integration</li>\r\n\t<li>How Drupal configuration and custom development impacts accessibility</li>\r\n\t<li>How to provide default content for accessibility testing</li>\r\n\t<li>What sorts of things&nbsp;<strong>cannot</strong> be automated</li>\r\n</ul>\r\n\r\n<p><strong>Audience:</strong></p>\r\n\r\n<p>This talk doesn't require deep technical knowledge, but we will be looking at YAML, Javascript, and other files filled with code. We'll also be talking about Drupal site building and continuous integration strategies that may be more technical. However, anyone is welcome as this is intended to be an introduction to the topic.</p>\r\n"
+      format: simple_text
+      summary: ''
+  field_alternate_video_link:
+    -
+      uri: 'http://bing.com'
+      title: Secondary
+      options: {  }
+  field_conference_year:
+    -
+      entity: b841e242-eb84-4bf9-b245-4c809e3737bd
+  field_experience_level:
+    -
+      value: beginner
+  field_i_can_deliver_this_session:
+    -
+      value: 'In-Person or Virtual'
+  field_primary_video_link:
+    -
+      uri: 'http://google.com'
+      title: Primary
+      options: {  }
+  field_room:
+    -
+      entity: 2edcc68c-6b30-4feb-9b00-a3cbd09ea442
+  field_session_date_time:
+    -
+      value: '2020-09-24T13:00:00'
+  field_session_track:
+    -
+      entity: 0a204882-2395-405d-bc08-3d2e402400da
+  field_status:
+    -
+      value: accepted

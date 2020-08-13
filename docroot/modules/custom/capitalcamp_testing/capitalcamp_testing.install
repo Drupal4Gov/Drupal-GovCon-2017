@@ -6,6 +6,8 @@
  */
 
 use Drupal\taxonomy\Entity\Term;
+use Drupal\webform\Entity\Webform;
+use Drupal\webform\Entity\WebformSubmission;
 
 /**
  * Implements hook_install().
@@ -35,4 +37,19 @@ function capitalcamp_testing_install() {
       'vid' => 'session_track',
     ])->save();
   }
+
+  $webform_id = '2020_registration';
+  $webform = Webform::load($webform_id);
+// Create webform submission.
+  $values = [
+    'webform_id' => $webform->id(),
+    'data' => [
+      'name' => 'Test User',
+      'email' => 'no-reply@acquia.com',
+    ],
+  ];
+
+  /** @var \Drupal\webform\WebformSubmissionInterface $webform_submission */
+  $webform_submission = WebformSubmission::create($values);
+  $webform_submission->save();
 }

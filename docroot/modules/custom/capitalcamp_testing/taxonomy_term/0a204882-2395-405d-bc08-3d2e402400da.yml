@@ -1,0 +1,42 @@
+_meta:
+  version: '1.0'
+  entity_type: taxonomy_term
+  uuid: 0a204882-2395-405d-bc08-3d2e402400da
+  bundle: session_track
+  default_langcode: en
+  depends:
+    0f6c31f2-ef62-41ce-b17c-3e05bfb9b76c: taxonomy_term
+    951cf954-787d-4057-8cc0-b170bd6dda96: taxonomy_term
+    b841e242-eb84-4bf9-b245-4c809e3737bd: taxonomy_term
+default:
+  status:
+    -
+      value: true
+  name:
+    -
+      value: 'Design, UX, and Accessibility'
+  description:
+    -
+      value: "<p>Design, Theming and User Experience (UX), and Accessibility form the foundation of all interactions on the web and require consideration beyond the web. These interactions include off-screen/non-web interactions that&nbsp; diverse users may have when they interact with your company, product, service, and/or environment.</p>\r\n"
+      format: simple_text
+  weight:
+    -
+      value: 0
+  parent:
+    -
+      target_id: 0
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_conference_year:
+    -
+      entity: 0f6c31f2-ef62-41ce-b17c-3e05bfb9b76c
+    -
+      entity: 951cf954-787d-4057-8cc0-b170bd6dda96
+    -
+      entity: b841e242-eb84-4bf9-b245-4c809e3737bd
