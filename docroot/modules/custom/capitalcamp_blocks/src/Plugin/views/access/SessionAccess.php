@@ -53,7 +53,28 @@ class SessionAccess extends AccessPluginBase {
    */
   public function access(AccountInterface $account) {
     $webformStorage = $this->entityTypeManager->getStorage("webform_submission");
+    return $this->determineAccess($account, $webformStorage);
+  }
 
+  /**
+   * {@inheritdoc}
+   */
+  public function alterRouteDefinition(Route $route) {
+    $route->setRequirement('_access', 'TRUE');
+  }
+
+  /**
+   * Function to determine if current user has a valid ticket.
+   *
+   * @param object $account
+   *   Account object.
+   * @param object $webformStorage
+   *   Webfpr, storage object.
+   *
+   * @return bool
+   *   Returns true / false based on ticket status.
+   */
+  public static function determineAccess(object $account, object $webformStorage) {
     if ($account->isAuthenticated()) {
       // Find this user's webform(s), if present.
       $wids = $webformStorage->getQuery()
@@ -80,13 +101,6 @@ class SessionAccess extends AccessPluginBase {
     }
     // Grant no access to the view if the user doesn't have a valid ticket.
     return FALSE;
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function alterRouteDefinition(Route $route) {
-    $route->setRequirement('_access', 'TRUE');
   }
 
 }
