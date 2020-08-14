@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.session.body
+    - field.field.node.session.field_alternate_video_link
     - field.field.node.session.field_conference_year
     - field.field.node.session.field_experience_level
     - field.field.node.session.field_female_attendees
@@ -12,6 +13,7 @@ dependencies:
     - field.field.node.session.field_i_can_deliver_this_session
     - field.field.node.session.field_image
     - field.field.node.session.field_male_attendees
+    - field.field.node.session.field_primary_video_link
     - field.field.node.session.field_room
     - field.field.node.session.field_room_monitor
     - field.field.node.session.field_session_co_presenter_s_
@@ -102,11 +104,13 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_alternate_video_link: true
   field_female_attendees: true
   field_files: true
   field_i_can_deliver_this_session: true
   field_image: true
   field_male_attendees: true
+  field_primary_video_link: true
   field_room: true
   field_room_monitor: true
   field_session_date_time: true

@@ -1,0 +1,33 @@
+uuid: 34042910-ca03-4ec8-9097-104a1e1270ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.session_links
+  module:
+    - ctools
+    - views
+  theme:
+    - twentynineteen
+id: views_block__session_links_block_1
+theme: twentynineteen
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:session_links-block_1'
+settings:
+  id: 'views_block:session_links-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      session: session
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

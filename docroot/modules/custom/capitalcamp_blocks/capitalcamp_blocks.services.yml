@@ -1,0 +1,4 @@
+services:
+  plugin.manager.capitalcamp_blocks.access:
+    class: Drupal\capitalcamp_blocks\Plugin\views\access\SessionAccess
+    parent: default_plugin_manager

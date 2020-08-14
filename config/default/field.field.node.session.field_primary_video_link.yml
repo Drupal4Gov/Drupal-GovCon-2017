@@ -1,0 +1,24 @@
+uuid: a186392f-fe70-4c9c-b965-f1dddf719d85
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_primary_video_link
+    - node.type.session
+  module:
+    - link
+id: node.session.field_primary_video_link
+field_name: field_primary_video_link
+entity_type: node
+bundle: session
+label: 'Primary Video Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+  title_predefined: ''
+field_type: link
