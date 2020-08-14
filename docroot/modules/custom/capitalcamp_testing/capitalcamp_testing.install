@@ -35,17 +35,19 @@ function capitalcamp_testing_install() {
     Term::create([
       'name' => $session,
       'vid' => 'session_track',
+      'field_conference_year' => 2020,
     ])->save();
   }
 
   $webform_id = '2020_registration';
   $webform = Webform::load($webform_id);
-// Create webform submission.
+  // Create webform submission.
   $values = [
     'webform_id' => $webform->id(),
     'data' => [
       'name' => 'Test User',
       'email' => 'no-reply@acquia.com',
+      'ticket_status' => 'Ticket',
     ],
   ];
 
