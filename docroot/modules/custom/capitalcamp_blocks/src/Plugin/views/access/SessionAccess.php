@@ -77,6 +77,10 @@ class SessionAccess extends AccessPluginBase {
    */
   public static function determineAccess(AccountInterface $account, WebformSubmissionStorage $webformStorage) {
     if ($account->isAuthenticated()) {
+      $roles = $account->getRoles();
+      if (in_array("administrator", $roles) || in_array("volunteer", $roles)) {
+        return TRUE;
+      }
       // Find this user's webform(s), if present.
       $wids = $webformStorage->getQuery()
         ->condition('webform_id', '2020_registration')
