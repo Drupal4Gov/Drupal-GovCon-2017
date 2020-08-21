@@ -4,6 +4,7 @@ namespace Drupal\capitalcamp_glue\Plugin\views\field;
 
 use Drupal\Core\Entity\EntityTypeManager;
 use Drupal\Core\Session\AccountProxy;
+use Drupal\taxonomy\Entity\Term;
 use Drupal\views\Plugin\views\field\FieldPluginBase;
 use Drupal\views\ResultRow;
 use Drupal\Core\Url;
@@ -57,11 +58,16 @@ class SessionPrimaryLinks extends FieldPluginBase {
    */
   public function render(ResultRow $values) {
     $webformStorage = $this->entityTypeManager->getStorage("webform_submission");
-    $node = $values->_entity;
     $access = SessionAccess::determineAccess($this->account, $webformStorage);
     if ($access == TRUE) {
-      return $this->convertUrl($node->get("field_primary_video_link")->getValue(), "Primary Link");
+      $node = $values->_entity;
+      $room = $node->get("field_room")->getValue();
+      if (isset($room[0]['target_id'])) {
+        $term = Term::load($room[0]['target_id']);
+        return $this->convertUrl($term->get("field_primary_video_link")->getValue());
+      }
     }
+
     return FALSE;
   }
 
@@ -70,16 +76,11 @@ class SessionPrimaryLinks extends FieldPluginBase {
    *
    * @param array $field
    *   The field from the node.
-   * @param string $priority
-   *   Primary / Alternate label for the field.
    *
    * @return object|bool
    *   Returns FALSE if no URI on the field or a renderable link.
    */
-  public static function convertUrl(array $field, $priority) {
-    if (!isset($field[0]['title'])) {
-      $field[0]['title'] = $priority;
-    }
+  public static function convertUrl(array $field) {
     if (!isset($field[0]['uri'])) {
       return FALSE;
     }
