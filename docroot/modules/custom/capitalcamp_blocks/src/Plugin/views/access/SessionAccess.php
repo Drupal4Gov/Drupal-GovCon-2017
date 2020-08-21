@@ -7,6 +7,7 @@ use Drupal\Core\Session\AccountInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Symfony\Component\Routing\Route;
 use Drupal\Core\Entity\EntityTypeManager;
+use Drupal\webform\WebformSubmissionStorage;
 
 /**
  * Class SessionAccess.
@@ -66,16 +67,20 @@ class SessionAccess extends AccessPluginBase {
   /**
    * Function to determine if current user has a valid ticket.
    *
-   * @param object $account
+   * @param \Drupal\Core\Session\AccountInterface $account
    *   Account object.
-   * @param object $webformStorage
+   * @param \Drupal\webform\WebformSubmissionStorage $webformStorage
    *   Webfpr, storage object.
    *
    * @return bool
    *   Returns true / false based on ticket status.
    */
-  public static function determineAccess(object $account, object $webformStorage) {
+  public static function determineAccess(AccountInterface $account, WebformSubmissionStorage $webformStorage) {
     if ($account->isAuthenticated()) {
+      $roles = $account->getRoles();
+      if (in_array("administrator", $roles) || in_array("volunteer", $roles)) {
+        return TRUE;
+      }
       // Find this user's webform(s), if present.
       $wids = $webformStorage->getQuery()
         ->condition('webform_id', '2020_registration')

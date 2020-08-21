@@ -5,6 +5,7 @@ namespace Drupal\capitalcamp_glue\Plugin\views\field;
 use Drupal\capitalcamp_blocks\Plugin\views\access\SessionAccess;
 use Drupal\Core\Entity\EntityTypeManager;
 use Drupal\Core\Session\AccountProxy;
+use Drupal\taxonomy\Entity\Term;
 use Drupal\views\Plugin\views\field\FieldPluginBase;
 use Drupal\views\ResultRow;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -55,11 +56,16 @@ class SessionAltLinks extends FieldPluginBase {
    */
   public function render(ResultRow $values) {
     $webformStorage = $this->entityTypeManager->getStorage("webform_submission");
-    $node = $values->_entity;
     $access = SessionAccess::determineAccess($this->account, $webformStorage);
     if ($access == TRUE) {
-      return SessionPrimaryLinks::convertUrl($node->get("field_alternate_video_link")->getValue(), "Alternate Link");
+      $node = $values->_entity;
+      $room = $node->get("field_room")->getValue();
+      if (isset($room[0]['target_id'])) {
+        $term = Term::load($room[0]['target_id']);
+        return SessionPrimaryLinks::convertUrl($term->get("field_alternate_video_link")->getValue());
+      }
     }
+
     return FALSE;
   }
 
