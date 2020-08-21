@@ -1,16 +1,16 @@
-uuid: a186392f-fe70-4c9c-b965-f1dddf719d85
+uuid: c2440b3e-ebe9-4b8e-938f-dc93960737ad
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_primary_video_link
-    - node.type.session
+    - field.storage.taxonomy_term.field_primary_video_link
+    - taxonomy.vocabulary.rooms
   module:
     - link
-id: node.session.field_primary_video_link
+id: taxonomy_term.rooms.field_primary_video_link
 field_name: field_primary_video_link
-entity_type: node
-bundle: session
+entity_type: taxonomy_term
+bundle: rooms
 label: 'Primary Video Link'
 description: ''
 required: false
@@ -19,6 +19,6 @@ default_value: {  }
 default_value_callback: ''
 settings:
   link_type: 17
-  title: 1
+  title: 2
   title_predefined: ''
 field_type: link

@@ -1,0 +1,48 @@
+uuid: c73d0d26-c587-4f2a-bc40-b0fe1de10024
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.rooms.field_alternate_video_link
+    - field.field.taxonomy_term.rooms.field_primary_video_link
+    - taxonomy.vocabulary.rooms
+  module:
+    - link
+    - text
+id: taxonomy_term.rooms.default
+targetEntityType: taxonomy_term
+bundle: rooms
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_alternate_video_link:
+    weight: 1
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_primary_video_link:
+    weight: 2
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden: {  }

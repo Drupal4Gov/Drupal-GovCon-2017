@@ -1,17 +1,17 @@
-uuid: 099301d4-6a4f-4ca0-a776-6a975a10b521
+uuid: c34f13cb-411a-44c7-910c-d69d54ea0d5d
 langcode: en
 status: true
 dependencies:
   module:
     - field_permissions
     - link
-    - node
+    - taxonomy
 third_party_settings:
   field_permissions:
     permission_type: custom
-id: node.field_primary_video_link
-field_name: field_primary_video_link
-entity_type: node
+id: taxonomy_term.field_alternate_video_link
+field_name: field_alternate_video_link
+entity_type: taxonomy_term
 type: link
 settings: {  }
 module: link

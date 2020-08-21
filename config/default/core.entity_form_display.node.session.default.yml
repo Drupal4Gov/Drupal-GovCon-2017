@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - field.field.node.session.body
-    - field.field.node.session.field_alternate_video_link
     - field.field.node.session.field_conference_year
     - field.field.node.session.field_experience_level
     - field.field.node.session.field_female_attendees
@@ -12,7 +11,6 @@ dependencies:
     - field.field.node.session.field_i_can_deliver_this_session
     - field.field.node.session.field_image
     - field.field.node.session.field_male_attendees
-    - field.field.node.session.field_primary_video_link
     - field.field.node.session.field_room
     - field.field.node.session.field_room_monitor
     - field.field.node.session.field_session_co_presenter_s_
@@ -29,7 +27,6 @@ dependencies:
     - datetime
     - field_group
     - file
-    - link
     - path
     - text
     - video_embed_field
@@ -128,14 +125,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_alternate_video_link:
-    weight: 20
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
-    region: content
   field_conference_year:
     weight: 15
     settings: {  }
@@ -174,14 +163,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: number
-    region: content
-  field_primary_video_link:
-    weight: 19
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
     region: content
   field_room:
     weight: 13
