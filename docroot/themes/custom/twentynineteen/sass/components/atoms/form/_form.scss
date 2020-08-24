@@ -172,7 +172,7 @@ select {
   background: $white;
   border: 1px solid $dark-gray;
   border-radius: 0;
-  color: $dark-gray;
+  color: $darker-gray;
   text-transform: uppercase;
   font-size: 1em;
   letter-spacing: 0.02em;
@@ -184,7 +184,7 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   padding: 0.5em;
-  background-image: linear-gradient(45deg, transparent 50%, $dark-gray 50%), linear-gradient(135deg, $dark-gray 50%, transparent 50%), linear-gradient(to right, #ccc, #ccc);
+  background-image: linear-gradient(45deg, transparent 50%, $darker-gray 50%), linear-gradient(135deg, $darker-gray 50%, transparent 50%), linear-gradient(to right, #ccc, #ccc);
   background-position: calc(100% - 1.5em) calc(0.875em + 0.125em), calc(100% - 1em) calc(0.875em + 0.125em), calc(100% - 2.5em) 0.5em;
   background-size: 0.5em 0.5em, 0.5em 0.5em, 0 0;
   background-repeat: no-repeat;
