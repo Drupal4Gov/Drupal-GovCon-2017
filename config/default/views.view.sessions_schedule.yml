@@ -5853,8 +5853,8 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: false
-          empty_zero: false
+          hide_empty: true
+          empty_zero: true
           hide_alter_empty: true
           entity_type: node
           plugin_id: session_primary_links
@@ -5903,8 +5903,8 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: false
-          empty_zero: false
+          hide_empty: true
+          empty_zero: true
           hide_alter_empty: true
           entity_type: node
           plugin_id: session_alt_links
@@ -6073,7 +6073,7 @@ display:
           click_sort_column: target_id
           type: entity_reference_label
           settings:
-            link: true
+            link: false
           group_column: target_id
           group_columns: {  }
           group_rows: true
