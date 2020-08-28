@@ -115,9 +115,9 @@ display:
         type: default
         options:
           grouping:
-            1:
+            -
               field: field_session_date_time
-              rendered: false
+              rendered: true
               rendered_strip: false
           row_class: ''
           default_row_class: true
@@ -4505,6 +4505,8 @@ display:
         arguments: false
         title: false
         css_class: false
+        style: false
+        row: false
       filter_groups:
         operator: AND
         groups:
@@ -4626,7 +4628,7 @@ display:
           type: datetime_default
           settings:
             timezone_override: ''
-            format_type: long
+            format_type: date_date
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -4710,7 +4712,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: Presenter(s)
           exclude: false
           alter:
             alter_text: false
@@ -4743,7 +4745,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -4761,7 +4763,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -4804,7 +4806,7 @@ display:
           click_sort_column: target_id
           type: entity_reference_label
           settings:
-            link: true
+            link: false
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -4824,7 +4826,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -4885,7 +4887,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: ''
+          label: Location
           exclude: false
           alter:
             alter_text: false
@@ -4918,7 +4920,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: views-field-field-session-room
           element_default_classes: true
@@ -4986,8 +4988,8 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: false
-          empty_zero: false
+          hide_empty: true
+          empty_zero: true
           hide_alter_empty: true
           entity_type: node
           plugin_id: session_primary_links
@@ -5036,11 +5038,74 @@ display:
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: false
-          empty_zero: false
+          hide_empty: true
+          empty_zero: true
           hide_alter_empty: true
           entity_type: node
           plugin_id: session_alt_links
+        body:
+          id: body
+          table: node__body
+          field: body
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_summary_or_trimmed
+          settings:
+            trim_length: 250
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          plugin_id: field
         link_flag:
           id: link_flag
           table: flagging
@@ -5099,10 +5164,10 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: true
-            text: '<div class="view-header"><h2>{{ field_session_date_time_1 }}</h2></div>'
+            text: '<div class="session"><span class="views-label">Session Track:</span> {{ field_session_track }}</div><div class="experience"><span class="views-label">Technical Level:</span> {{ field_experience_level }}</div>'
             make_link: false
             path: ''
             absolute: false
@@ -5123,9 +5188,9 @@ display:
             more_link: false
             more_link_text: ''
             more_link_path: ''
-            strip_tags: true
+            strip_tags: false
             trim: false
-            preserve_tags: '<div> <h2> <br>'
+            preserve_tags: ''
             html: false
           element_type: ''
           element_class: ''
@@ -5134,7 +5199,7 @@ display:
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: false
+          element_default_classes: true
           empty: ''
           hide_empty: false
           empty_zero: false
@@ -5209,6 +5274,31 @@ display:
           plugin_id: numeric
       title: 'My Schedule'
       css_class: 'program-schedule program-my-schedule'
+      style:
+        type: default
+        options:
+          grouping:
+            -
+              field: field_session_date_time_1
+              rendered: true
+              rendered_strip: false
+            -
+              field: field_session_date_time
+              rendered: false
+              rendered_strip: false
+          row_class: ''
+          default_row_class: true
+      row:
+        type: fields
+        options:
+          default_field_elements: true
+          inline:
+            speakers: speakers
+            field_session_track: field_session_track
+            field_experience_level: field_experience_level
+            field_room: field_room
+          separator: ''
+          hide_empty: false
     cache_metadata:
       max-age: -1
       contexts:
@@ -5219,6 +5309,7 @@ display:
         - 'user.node_grants:view'
         - user.permissions
       tags:
+        - 'config:field.storage.node.body'
         - 'config:field.storage.node.field_experience_level'
         - 'config:field.storage.node.field_room'
         - 'config:field.storage.node.field_session_date_time'
@@ -5618,7 +5709,7 @@ display:
           type: datetime_default
           settings:
             timezone_override: ''
-            format_type: long
+            format_type: date_date
           group_column: value
           group_columns: {  }
           group_rows: true
