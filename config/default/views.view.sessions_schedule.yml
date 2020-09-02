@@ -12,6 +12,7 @@ dependencies:
     - flag.flag.session_schedule
     - node.type.event
     - node.type.session
+    - system.menu.2018-main-navigation
     - taxonomy.vocabulary.conference_year
     - taxonomy.vocabulary.session_track
   content:
@@ -5322,7 +5323,7 @@ display:
     display_options:
       display_extenders: {  }
       exposed_block: true
-      path: 2020/schedule
+      path: 2020/schedule/09/24
       display_description: ''
       filters:
         status:
@@ -6315,6 +6316,15 @@ display:
             value: 'No sessions matched your search criteria'
             format: simple_text
           plugin_id: text
+      menu:
+        type: normal
+        title: Schedule
+        description: ''
+        expanded: false
+        parent: 'menu_link_content:cfde32b4-ff81-4a70-a608-5faf124c12ee'
+        weight: 0
+        context: '0'
+        menu_name: 2018-main-navigation
     cache_metadata:
       max-age: -1
       contexts:
