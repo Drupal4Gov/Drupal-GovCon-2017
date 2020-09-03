@@ -7,10 +7,10 @@ use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Entity\EntityTypeManager;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Session\AccountInterface;
-use Drupal\Core\Block\BlockPluginInterface;
 use Drupal\capitalcamp_blocks\Plugin\views\access\SessionAccess;
 use Drupal\Core\Session\AccountProxy;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 
 /**
  * Provides a Configurable Code.
@@ -20,7 +20,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  *   admin_label = @Translation("DGC Registration Code")
  * )
  */
-class DgcCode extends BlockBase implements BlockPluginInterface {
+class DgcCode extends BlockBase implements ContainerFactoryPluginInterface {
 
   /**
    * {@inheritdoc}
