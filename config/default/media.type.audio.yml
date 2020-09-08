@@ -1,0 +1,15 @@
+uuid: 1deb3b1f-ba3c-4bba-8de3-522f27920ae5
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: N6dnkIpyS3UmGsO5R5PYrwiOcfz7zKXSz_U91xEt-pQ
+id: audio
+label: 'Audio file'
+description: 'A locally hosted audio file, such as an MP3.'
+source: audio_file
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_audio_file
+field_map: {  }
