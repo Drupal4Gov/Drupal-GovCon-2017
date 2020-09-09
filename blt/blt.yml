@@ -26,6 +26,9 @@ command-hooks:
   frontend-assets:
     dir: '${repo.root}'
     command: ./blt/scripts/frontend-build.sh
+  frontend-test:
+    dir: ${repo.root}/docroot/themes/custom/twentynineteen
+    command: npm run tests
 cm:
   strategy: config-split
   allow-overrides: true
