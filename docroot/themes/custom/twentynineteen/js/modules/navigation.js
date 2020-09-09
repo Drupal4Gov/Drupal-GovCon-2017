@@ -46,7 +46,7 @@ for (let i = 0; i < subMenu.length; i++) {
 //   }
 // }
 
-const toggleButton = document.getElementById('show-menu');
+const toggleButton = document.getElementsByClassName('show-menu');
 const userMenu = document.querySelector('.menu--account');
 const userMenuLinks = userMenu.getElementsByTagName('a');
 

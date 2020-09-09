@@ -128,7 +128,7 @@ for (var i = 0; i < subMenu.length; i++) {
 //   }
 // }
 
-var toggleButton = document.getElementById('show-menu');
+var toggleButton = document.getElementsByClassName('show-menu');
 var userMenu = document.querySelector('.menu--account');
 var userMenuLinks = userMenu.getElementsByTagName('a');
 
