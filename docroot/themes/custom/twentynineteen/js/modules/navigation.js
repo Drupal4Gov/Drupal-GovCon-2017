@@ -57,10 +57,8 @@ const userMenuLinks = userMenu.getElementsByTagName('a');
  */
 userMenuLinks[userMenuLinks.length - 1].onblur = () => {
   toggleButton.checked = false;
-  userMenu.classList.remove('menu--account--show');g
+  userMenu.classList.remove('menu--account--show');
 }
-
-console.log(userMenu.getElementsByTagName('a')[userMenu.getElementsByTagName('a').length - 1 ]);
 
 /**
  * Overrides "checkmark" behavior so that you can use the enter key to toggle the mobile menu.
