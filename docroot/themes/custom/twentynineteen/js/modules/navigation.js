@@ -46,7 +46,8 @@ for (let i = 0; i < subMenu.length; i++) {
 //   }
 // }
 
-const toggleButton = document.getElementsByClassName('show-menu');
+const toggleContainer = document.getElementById("header").getElementsByClassName('show-menu');
+const toggleButton = toggleContainer[0];
 const userMenu = document.querySelector('.menu--account');
 const userMenuLinks = userMenu.getElementsByTagName('a');
 
@@ -56,10 +57,8 @@ const userMenuLinks = userMenu.getElementsByTagName('a');
  */
 userMenuLinks[userMenuLinks.length - 1].onblur = () => {
   toggleButton.checked = false;
-  userMenu.classList.remove('menu--account--show');g
+  userMenu.classList.remove('menu--account--show');
 }
-
-console.log(userMenu.getElementsByTagName('a')[userMenu.getElementsByTagName('a').length - 1 ]);
 
 /**
  * Overrides "checkmark" behavior so that you can use the enter key to toggle the mobile menu.
