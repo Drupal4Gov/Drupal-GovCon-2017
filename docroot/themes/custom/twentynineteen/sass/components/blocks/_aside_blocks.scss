@@ -19,8 +19,8 @@ aside {
     height: 2px;
 
     @include breakpoint($medium-max) {
-      height: 80vh;
-      top: 3%;
+      height: calc(100% - 7rem);
+      top: 2rem;
       width: 2px;
     }
   }
