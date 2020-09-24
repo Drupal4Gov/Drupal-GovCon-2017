@@ -29,7 +29,7 @@
 // }
 
 // Remove weird gap on left of menu.
-.mm-listitem:after {
+.mm-listitem::after {
   left: 0;
 }
 
@@ -66,7 +66,6 @@ header {
       padding-top: 0;
     }
 
-
     li a {
       background: $primary-darkest;
     }
@@ -92,7 +91,6 @@ header {
           border-radius: 0;
         }
       }
-
 
       > a {
         text-transform: uppercase;
