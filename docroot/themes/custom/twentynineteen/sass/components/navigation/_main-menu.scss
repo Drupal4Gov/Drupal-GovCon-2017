@@ -7,9 +7,11 @@
 // Style guide: components.main-menu
 
 header {
-  .menu--_018-main-navigation,
-  .menu--_019-main-navigation,
-  .menu--main-navigation {
+  .responsive-menu-block-wrapper {
+    background: $primary-darkest;
+  }
+  
+  .horizontal-menu {
     background: $primary-darkest;
     margin-top: -4px;
     min-height: 60px;
@@ -72,7 +74,7 @@ header {
       width: 0;
     }
 
-    ~ .menu-main {
+    ~ .horizontal-menu {
       display: none;
 
       @include breakpoint($small-max) {
@@ -80,7 +82,7 @@ header {
       }
     }
 
-    &:checked ~ .menu-main {
+    &:checked ~ .horizontal-menu {
       display: flex;
     }
 
@@ -141,7 +143,7 @@ header {
     }
   }
 
-  .menu-main {
+  .horizontal-menu {
     list-style: none;
     display: flex;
     justify-content: space-evenly;
@@ -153,7 +155,6 @@ header {
     @include breakpoint($small-max) {
       flex-direction: row;
       width: 50%;
-      margin-top: -30px;
       padding-top: 0;
     }
 
