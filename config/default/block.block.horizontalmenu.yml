@@ -1,0 +1,20 @@
+uuid: 5d42bc8f-3fd9-4875-993f-61c73a271510
+langcode: en
+status: true
+dependencies:
+  module:
+    - responsive_menu
+  theme:
+    - twentynineteen
+id: horizontalmenu
+theme: twentynineteen
+region: header
+weight: 0
+provider: null
+plugin: responsive_menu_horizontal_menu
+settings:
+  id: responsive_menu_horizontal_menu
+  label: 'Horizontal menu'
+  provider: responsive_menu
+  label_display: '0'
+visibility: {  }
