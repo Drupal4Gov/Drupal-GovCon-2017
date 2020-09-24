@@ -1,3 +1,4 @@
+uuid: d5a3b641-42e8-43cb-b5bb-21b4f03ec84a
 langcode: en
 status: closed
 dependencies: {  }
@@ -21,7 +22,7 @@ settings:
   ajax_effect: ''
   ajax_speed: null
   page: true
-  page_submit_path: registration/2018
+  page_submit_path: /registration/2018
   page_confirm_path: ''
   page_theme_name: ''
   form_title: both
@@ -32,7 +33,7 @@ settings:
   form_previous_submissions: true
   form_confidential: false
   form_confidential_message: ''
-  form_remote_addr: true
+  form_disable_remote_addr: false
   form_convert_anonymous: false
   form_prepopulate: false
   form_prepopulate_source_entity: false
@@ -84,6 +85,8 @@ settings:
   wizard_progress_link: false
   wizard_progress_states: false
   wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
   wizard_start_label: ''
   wizard_preview_link: false
   wizard_confirmation: true
@@ -112,7 +115,7 @@ settings:
   confirmation_type: url_message
   confirmation_title: ''
   confirmation_message: "Thank you for registering for Drupal GovCon! Thanks to our awesome sponsors, we are able to provide complimentary lunch. Attendees who registered by August 12th will be given preference in line at lunch. Once all confirmed attendees have received a lunch, other attendees will be able to enjoy any remaining lunches we may have available.<br />\r\n<br />\r\nDon&rsquo;t fear though, the <a href=\"https://www.ors.od.nih.gov/pes/dats/food/Pages/index.aspx\">NIH campus</a> and nearby <a href=\"https://www.yelp.com/search?cflt=restaurants&amp;find_near=medical-center-metro-station-bethesda-2\">Bethesda area</a> have many dining options to choose from.<br />\r\n<br />\r\nIf you have questions, please contact us at <a href=\"mailto:drupal4gov@gmail.com\">drupal4gov@gmail.com</a>."
-  confirmation_url: /user
+  confirmation_url: user
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -139,6 +142,7 @@ settings:
   results_customize: false
   token_view: false
   token_update: false
+  serial_disabled: false
   form_login: false
   form_login_message: ''
   submission_login: false
@@ -230,4 +234,3 @@ handlers:
       theme_name: ''
       parameters: {  }
 variants: {  }
-uuid: d5a3b641-42e8-43cb-b5bb-21b4f03ec84a

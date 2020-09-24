@@ -1,3 +1,4 @@
+uuid: 508d8dbc-5aab-4eb8-bec7-bdfb4125b13a
 langcode: en
 status: closed
 dependencies: {  }
@@ -21,7 +22,7 @@ settings:
   ajax_effect: ''
   ajax_speed: null
   page: true
-  page_submit_path: registration/2017
+  page_submit_path: /registration/2017
   page_confirm_path: ''
   page_theme_name: ''
   form_title: both
@@ -32,7 +33,7 @@ settings:
   form_previous_submissions: true
   form_confidential: false
   form_confidential_message: ''
-  form_remote_addr: true
+  form_disable_remote_addr: false
   form_convert_anonymous: false
   form_prepopulate: false
   form_prepopulate_source_entity: false
@@ -84,6 +85,8 @@ settings:
   wizard_progress_link: false
   wizard_progress_states: false
   wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
   wizard_start_label: ''
   wizard_preview_link: false
   wizard_confirmation: true
@@ -112,7 +115,7 @@ settings:
   confirmation_type: url_message
   confirmation_title: ''
   confirmation_message: 'Thank you for registering, an email is being sent to&nbsp;[webform_submission:values:attendee_e_mail_address].'
-  confirmation_url: /user
+  confirmation_url: user
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -139,6 +142,7 @@ settings:
   results_customize: false
   token_view: false
   token_update: true
+  serial_disabled: false
   wizard_comfirmation: true
   wizard_comfirmation_label: ''
   form_login: false
@@ -255,6 +259,5 @@ handlers:
       theme_name: ''
       parameters: {  }
 variants: {  }
-uuid: 508d8dbc-5aab-4eb8-bec7-bdfb4125b13a
 _core:
   default_config_hash: BrydyK5Ue5wkMQCaHP7_hNFrpGumd2e1j3U_RnPzP7g

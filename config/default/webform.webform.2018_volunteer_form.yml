@@ -1,3 +1,4 @@
+uuid: f3f371b2-8be9-4f14-8e12-713c00460461
 langcode: en
 status: closed
 dependencies: {  }
@@ -21,7 +22,7 @@ settings:
   ajax_effect: ''
   ajax_speed: null
   page: true
-  page_submit_path: 2018-volunteer-form
+  page_submit_path: /2018-volunteer-form
   page_confirm_path: ''
   page_theme_name: ''
   form_title: source_entity_webform
@@ -32,7 +33,7 @@ settings:
   form_previous_submissions: true
   form_confidential: false
   form_confidential_message: ''
-  form_remote_addr: true
+  form_disable_remote_addr: false
   form_convert_anonymous: false
   form_prepopulate: false
   form_prepopulate_source_entity: false
@@ -84,6 +85,8 @@ settings:
   wizard_progress_link: false
   wizard_progress_states: false
   wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
   wizard_start_label: ''
   wizard_preview_link: false
   wizard_confirmation: true
@@ -139,6 +142,7 @@ settings:
   results_customize: false
   token_view: false
   token_update: false
+  serial_disabled: false
   form_login: false
   form_login_message: ''
   submission_login: false
@@ -192,4 +196,3 @@ access:
     permissions: {  }
 handlers: {  }
 variants: {  }
-uuid: f3f371b2-8be9-4f14-8e12-713c00460461
