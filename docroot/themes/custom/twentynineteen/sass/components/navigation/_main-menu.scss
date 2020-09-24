@@ -7,10 +7,22 @@
 // Style guide: components.main-menu
 
 header {
+  .responsive-menu-toggle {
+    display: block;
+  }
+
+  .responsive-menu-toggle span.label {
+    top: 5px;
+  }
+
   .responsive-menu-block-wrapper {
     background: $primary-darkest;
   }
-  
+
+  .horizontal-menu li a {
+    background: $primary-darkest;
+  }
+
   .horizontal-menu {
     background: $primary-darkest;
     margin-top: -4px;
@@ -158,19 +170,23 @@ header {
       padding-top: 0;
     }
 
-    &__item {
+    .menu-item {
       position: relative;
       margin: 0;
 
       @include breakpoint($small-max) {
         margin: 0 15px 0 0;
 
-        &:hover .menu-submenu,
-        &.focus .menu-submenu {
+        .sub-nav .menu-item:hover,
+        .sub-nav .menu-item:focus {
           z-index: 10;
           height: auto;
-          background: rgba($primary-darkest, 0.95);
+          background: rgba($mediumteal, 0.95);
           border-radius: 0;
+        }
+
+        .sub-nav a {
+          text-transform: none;
         }
       }
 
