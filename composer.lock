@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b3e4f0d230c16c171fd770a159571756",
+    "content-hash": "2ee9b6d5c9ab343cd3bf4a885d8cd93a",
     "packages": [
         {
             "name": "acquia/blt",
@@ -407,7 +407,7 @@
             "version": "v2.3.4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/fengyuanchen/cropper.git",
+                "url": "git@github.com:fengyuanchen/cropper.git",
                 "reference": "30c58b29ee21010e17e58ebab165fbd84285c685"
             },
             "dist": {
@@ -816,20 +816,6 @@
                 "semver",
                 "validation",
                 "versioning"
-            ],
-            "funding": [
-                {
-                    "url": "https://packagist.com",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/composer",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
-                    "type": "tidelift"
-                }
             ],
             "time": "2020-09-09T09:34:06+00:00"
         },
@@ -2734,6 +2720,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Composer Plugin for updating the Drupal scaffold files when using drupal/core",
+            "abandoned": "drupal/core-composer-scaffold",
             "time": "2019-03-30T10:41:38+00:00"
         },
         {
@@ -8708,6 +8695,52 @@
             }
         },
         {
+            "name": "drupal/responsive_menu",
+            "version": "4.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/responsive_menu.git",
+                "reference": "4.4.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/responsive_menu-4.4.0.zip",
+                "reference": "4.4.0",
+                "shasum": "daa26a3f5fc3f4b5b05a56a07c93be8f158fe905"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "4.4.0",
+                    "datestamp": "1598685336",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Tancredi D'Onofrio (tanc)",
+                    "homepage": "https://www.drupal.org/u/tanc",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Provides a javascript based off-canvas responsive menu with depth. At wider browser widths it provides a horizontal menu capable of drop downs and flyouts",
+            "homepage": "https://drupal.org/project/responsive_menu",
+            "support": {
+                "source": "https://cgit.drupalcode.org/responsive_menu",
+                "issues": "https://drupal.org/project/issues/responsive_menu"
+            }
+        },
+        {
             "name": "drupal/schemata",
             "version": "1.0.0-beta2",
             "source": {
@@ -11279,12 +11312,6 @@
                 "laminas",
                 "zf"
             ],
-            "funding": [
-                {
-                    "url": "https://funding.communitybridge.org/projects/laminas-project",
-                    "type": "community_bridge"
-                }
-            ],
             "time": "2020-09-14T14:23:00+00:00"
         },
         {
@@ -11817,6 +11844,21 @@
                 "html"
             ],
             "time": "2016-07-25T17:07:32+00:00"
+        },
+        {
+            "name": "mmenu/mmenu",
+            "version": "8.5.17",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FrDH/mmenu-js/zipball"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "drupal-library",
+            "extra": {
+                "installer-name": "mmenu"
+            }
         },
         {
             "name": "nette/finder",
@@ -13065,6 +13107,21 @@
                 "stack"
             ],
             "time": "2020-01-30T12:17:27+00:00"
+        },
+        {
+            "name": "superfish/superfish",
+            "version": "1.7.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/joeldbirch/superfish/zipball"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "drupal-library",
+            "extra": {
+                "installer-name": "superfish"
+            }
         },
         {
             "name": "swagger-api/swagger-ui",
