@@ -1,6 +1,6 @@
 uuid: 35ad7f0f-39f0-462b-ae43-324c8ca1daee
 langcode: en
-status: open
+status: closed
 dependencies: {  }
 open: null
 close: null
@@ -29,7 +29,7 @@ settings:
   form_submit_once: false
   form_exception_message: ''
   form_open_message: ''
-  form_close_message: ''
+  form_close_message: 'This form is currently closed.&nbsp;Please visit the <a href="/volunteer">volunteer</a> page where you will find the <a href="https://docs.google.com/spreadsheets/d/1T9yKB8T_hQhKZd6sbPuh1iPsE_echorR5O076rfyU8s/edit?usp=sharing">volunteer schedule spreadsheet</a> to sign up for volunteer timeslots during the conference.'
   form_previous_submissions: true
   form_confidential: false
   form_confidential_message: ''
@@ -92,7 +92,7 @@ settings:
   wizard_track: ''
   wizard_prev_button_label: ''
   wizard_next_button_label: ''
-  wizard_toggle: false
+  wizard_toggle: true
   wizard_toggle_show_label: ''
   wizard_toggle_hide_label: ''
   preview: 0

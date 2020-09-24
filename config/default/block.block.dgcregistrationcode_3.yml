@@ -1,4 +1,4 @@
-uuid: b02212b4-0880-43e7-b07f-16f461c4b209
+uuid: 8af26c9a-3b5f-404d-ae7a-deb7cc8bacf2
 langcode: en
 status: true
 dependencies:
@@ -7,21 +7,21 @@ dependencies:
     - system
   theme:
     - twentynineteen
-id: dgcregistrationcode
+id: dgcregistrationcode_3
 theme: twentynineteen
 region: content
-weight: -1
+weight: -11
 provider: null
 plugin: dgc_code_block
 settings:
   id: dgc_code_block
-  label: 'DGC Registration Code'
+  label: 'UMD Project Management Contribution Room Link'
   provider: capitalcamp_blocks
   label_display: visible
   dgc_registration_code: ''
 visibility:
   request_path:
     id: request_path
-    pages: /full-and-half-day-training
+    pages: /contributing
     negate: false
     context_mapping: {  }
