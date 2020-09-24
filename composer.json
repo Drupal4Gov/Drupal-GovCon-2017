@@ -10,6 +10,42 @@
         "asset-packagist": {
             "type": "composer",
             "url": "https://asset-packagist.org"
+        },
+        "superfish": {
+            "type": "package",
+            "package": {
+                "name": "superfish/superfish",
+                "version": "1.7.0",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "superfish"
+                },
+                "dist": {
+                    "url": "https://api.github.com/repos/joeldbirch/superfish/zipball",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        },
+        "mmenu": {
+            "type": "package",
+            "package": {
+                "name": "mmenu/mmenu",
+                "version": "8.5.17",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "mmenu"
+                },
+                "dist": {
+                    "url": "https://api.github.com/repos/FrDH/mmenu-js/zipball",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
         }
     },
     "config": {
@@ -55,6 +91,7 @@
         "drupal/r4032login": "dev-1.x",
         "drupal/recaptcha": "^2.4",
         "drupal/redirect": "^1.0",
+        "drupal/responsive_menu": "^4.4",
         "drupal/seckit": "^1.2",
         "drupal/shield": "^1.1",
         "drupal/simple_sitemap": "^3.7",
@@ -63,7 +100,9 @@
         "drupal/twig_xdebug": "1.x-dev",
         "drupal/upgrade_status": "^2.9",
         "drupal/webform": "^5.8",
-        "drupal/webform_views": "5.x-dev"
+        "drupal/webform_views": "5.x-dev",
+        "mmenu/mmenu": "^8.5",
+        "superfish/superfish": "^1.7"
     },
     "require-dev": {
         "acquia/blt-require-dev": "11.x-dev",
@@ -112,9 +151,6 @@
             "docroot/themes/custom/{$name}": [
                 "type:drupal-custom-theme"
             ],
-            "docroot/libraries": [
-                "type:drupal-library"
-            ],
             "docroot/libraries/{$name}": [
                 "type:drupal-library",
                 "type:bower-asset",
@@ -129,6 +165,9 @@
         "patches": {
             "drupal/core": {
                 "Ignore front end vendor folders to improve directory search performance": "https://www.drupal.org/files/issues/ignore_front_end_vendor-2329453-116.patch"
+            },
+            "drupal/responsive_menu": {
+                "fixes php warning": "https://www.drupal.org/files/issues/2020-09-10/test_with_fix-3168579-23.patch"
             }
         },
         "drupal-scaffold": {

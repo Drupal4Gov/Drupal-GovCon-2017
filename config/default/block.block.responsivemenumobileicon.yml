@@ -1,0 +1,20 @@
+uuid: df0eff15-0a4c-4f3e-a1a5-62c8bfc86dcf
+langcode: en
+status: true
+dependencies:
+  module:
+    - responsive_menu
+  theme:
+    - twentynineteen
+id: responsivemenumobileicon
+theme: twentynineteen
+region: header
+weight: -14
+provider: null
+plugin: responsive_menu_toggle
+settings:
+  id: responsive_menu_toggle
+  label: 'Responsive menu mobile icon'
+  provider: responsive_menu
+  label_display: '0'
+visibility: {  }

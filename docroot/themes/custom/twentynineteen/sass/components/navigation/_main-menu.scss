@@ -7,9 +7,23 @@
 // Style guide: components.main-menu
 
 header {
-  .menu--_018-main-navigation,
-  .menu--_019-main-navigation,
-  .menu--main-navigation {
+  .responsive-menu-toggle {
+    display: block;
+  }
+
+  .responsive-menu-toggle span.label {
+    top: 5px;
+  }
+
+  .responsive-menu-block-wrapper {
+    background: $primary-darkest;
+  }
+
+  .horizontal-menu li a {
+    background: $primary-darkest;
+  }
+
+  .horizontal-menu {
     background: $primary-darkest;
     margin-top: -4px;
     min-height: 60px;
@@ -72,7 +86,7 @@ header {
       width: 0;
     }
 
-    ~ .menu-main {
+    ~ .horizontal-menu {
       display: none;
 
       @include breakpoint($small-max) {
@@ -80,7 +94,7 @@ header {
       }
     }
 
-    &:checked ~ .menu-main {
+    &:checked ~ .horizontal-menu {
       display: flex;
     }
 
@@ -141,7 +155,7 @@ header {
     }
   }
 
-  .menu-main {
+  .horizontal-menu {
     list-style: none;
     display: flex;
     justify-content: space-evenly;
@@ -153,23 +167,26 @@ header {
     @include breakpoint($small-max) {
       flex-direction: row;
       width: 50%;
-      margin-top: -30px;
       padding-top: 0;
     }
 
-    &__item {
+    .menu-item {
       position: relative;
       margin: 0;
 
       @include breakpoint($small-max) {
         margin: 0 15px 0 0;
 
-        &:hover .menu-submenu,
-        &.focus .menu-submenu {
+        .sub-nav .menu-item:hover,
+        .sub-nav .menu-item:focus {
           z-index: 10;
           height: auto;
-          background: rgba($primary-darkest, 0.95);
+          background: rgba($mediumteal, 0.95);
           border-radius: 0;
+        }
+
+        .sub-nav a {
+          text-transform: none;
         }
       }
 
