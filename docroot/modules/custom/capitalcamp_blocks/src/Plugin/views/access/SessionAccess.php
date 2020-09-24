@@ -10,7 +10,7 @@ use Drupal\Core\Entity\EntityTypeManager;
 use Drupal\webform\WebformSubmissionStorage;
 
 /**
- * Class SessionAccess.
+ * Class SessionAccess provides an access check to 2020 sessions.
  *
  * @ingroup views_access_plugins
  *
