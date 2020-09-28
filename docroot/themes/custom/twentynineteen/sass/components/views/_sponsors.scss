@@ -1,4 +1,5 @@
-.view-sponsors-page {
+.view-sponsors-page,
+.sponsor-listing {
   margin-bottom: 8em;
 
   .view-content {
@@ -15,7 +16,8 @@
   }
 }
 
-.view-group--sponsors-page {
+.view-group--sponsors-page,
+.sponsor-listing .view-content {
   @include clearfix;
 
   padding: 1.5em 0 2em;
