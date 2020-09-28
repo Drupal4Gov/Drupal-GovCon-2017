@@ -1,0 +1,11 @@
+{% if sponsor_listing['#view'].result|length > 0 %}
+  {% set classes = [
+    'sponsor-listing',
+    'sponsor-listing--' ~ content.sponsor_level,
+  ]%}
+  <div {{ attributes.addClass(classes) }}>
+    <h2>Thanks to our {{ conference_year }} {{ sponsor_level }} Sponsors</h2>
+    {{ sponsor_listing }}
+  </div>
+{% endif %}
+

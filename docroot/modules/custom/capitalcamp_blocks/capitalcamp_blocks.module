@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * @file
+ * Contains block module functions.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function capitalcamp_blocks_theme($existing, $type, $theme, $path) {
+  return [
+    'dgc_sponsors_by_level' => [
+      'template' => 'dgc-sponsors-by-level',
+      'variables' => [
+        'sponsor_listing' => NULL,
+        'sponsor_level' => NULL,
+        'conference_year' => NULL,
+      ],
+    ],
+  ];
+}
