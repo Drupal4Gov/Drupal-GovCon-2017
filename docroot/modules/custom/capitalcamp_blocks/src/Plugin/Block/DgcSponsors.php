@@ -59,6 +59,14 @@ class DgcSponsors extends BlockBase implements ContainerFactoryPluginInterface {
     foreach ($sponsorshipLevelTerms as $sponsorshipLevelTerm) {
       $this->sponsorshipLevelTermOptions[$sponsorshipLevelTerm->tid] = $sponsorshipLevelTerm->name;
     }
+
+    // Conference Year Settings.
+    $conferenceYearVocabularyId = 'conference_year';
+    $conferenceYearTerms = $this->termStorage->loadTree($conferenceYearVocabularyId);
+    $this->conferenceYearTermsOptions = [];
+    foreach ($conferenceYearTerms as $conferenceYearTerm) {
+      $this->conferenceYearTermsOptions[$conferenceYearTerm->tid] = $conferenceYearTerm->name;
+    }
   }
 
   /**
@@ -81,6 +89,7 @@ class DgcSponsors extends BlockBase implements ContainerFactoryPluginInterface {
   public function defaultConfiguration() {
     return [
       'sponsorship_level_term' => '1',
+      'sponsorship_year_term' => '1',
     ];
   }
 
@@ -102,6 +111,13 @@ class DgcSponsors extends BlockBase implements ContainerFactoryPluginInterface {
       '#options' => $this->sponsorshipLevelTermOptions,
       '#description' => $this->t('Select the sponsorship level you would like to display.'),
     ];
+    $form['sponsors_block_sponsorship_year_term'] = [
+      '#type' => 'select',
+      '#title' => $this->t("Conference Year"),
+      '#default_value' => $this->configuration['sponsorship_year_term'],
+      '#options' => $this->conferenceYearTermsOptions,
+      '#description' => $this->t('Select the conference year you would like to display.'),
+    ];
     return $form;
   }
 
@@ -110,6 +126,7 @@ class DgcSponsors extends BlockBase implements ContainerFactoryPluginInterface {
    */
   public function blockSubmit($form, FormStateInterface $form_state) {
     $this->configuration['sponsorship_level_term'] = $form_state->getValue('sponsors_block_sponsorship_level_term');
+    $this->configuration['sponsorship_year_term'] = $form_state->getValue('sponsors_block_sponsorship_year_term');
   }
 
   /**
@@ -117,21 +134,32 @@ class DgcSponsors extends BlockBase implements ContainerFactoryPluginInterface {
    */
   public function build() {
     $content = [];
-    $termId = $this->configuration['sponsorship_level_term'];
-    $args = [$termId];
     $view = $this->viewEntityStorage->load('sponsors');
     $viewExecutable = $this->viewExecutableFactory->get($view);
     $viewDisplayId = 'block';
     if ($viewExecutable) {
-      $viewExecutable->setArguments($args);
+      $viewExecutable->setArguments([
+        'field_sponsor_sponsorship_level' => $this->configuration['sponsorship_level_term'],
+        'field_conference_year' => $this->configuration['sponsorship_year_term'],
+      ]);
       $viewExecutable->setDisplay($viewDisplayId);
       $viewExecutable->preExecute();
       $viewExecutable->execute();
-      $content['sponsor_listing'] = $viewExecutable->buildRenderable($viewDisplayId, $args, FALSE);
+      $content['sponsor_listing'] = $viewExecutable->buildRenderable(
+        $viewDisplayId,
+        [
+          'field_sponsor_sponsorship_level' => $this->configuration['sponsorship_level_term'],
+          'field_conference_year' => $this->configuration['sponsorship_year_term'],
+        ],
+        FALSE);
     }
 
-    $content['sponsor_level'] = $this->sponsorshipLevelTermOptions[$termId];
-    return $content;
+    return [
+      "#theme" => 'dgc_sponsors_by_level',
+      '#sponsor_listing' => $content['sponsor_listing'],
+      '#sponsor_level' => $this->termStorage->load($this->configuration['sponsorship_level_term'])->label(),
+      '#conference_year' => $this->termStorage->load($this->configuration['sponsorship_year_term'])->label(),
+    ];
   }
 
 }
