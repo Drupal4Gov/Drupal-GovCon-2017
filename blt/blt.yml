@@ -30,5 +30,6 @@ command-hooks:
     dir: ${repo.root}/docroot/themes/custom/twentynineteen
     command: npm run tests
 cm:
-  strategy: config-split
   allow-overrides: true
+  core:
+    install_from_config: true
