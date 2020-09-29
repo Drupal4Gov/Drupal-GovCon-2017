@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d2873c4b15f3c45d52d70e25fc4531a9",
+    "content-hash": "14532c113d39d638bde9f6c4f929eaa5",
     "packages": [
         {
             "name": "acquia/blt",
@@ -8075,17 +8075,11 @@
         },
         {
             "name": "drupal/lightning_workflow",
-            "version": "3.15.0",
+            "version": "dev-3.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/lightning_workflow.git",
-                "reference": "8.x-3.15"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/lightning_workflow-8.x-3.15.zip",
-                "reference": "8.x-3.15",
-                "shasum": "7405fafbe4f5130cbb8ef9cb0cbe903d6d0f73f7"
+                "reference": "1ace4d56ef79d8ccd14d906f401a34872ea72b0d"
             },
             "require": {
                 "cweagans/composer-patches": "^1.6",
@@ -8108,16 +8102,17 @@
             },
             "type": "drupal-module",
             "extra": {
-                "drupal": {
-                    "version": "8.x-3.15",
-                    "datestamp": "1589573835",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                },
                 "branch-alias": {
+                    "dev-3.x": "3.x-dev",
                     "dev-8.x-3.x": "3.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-3.15+2-dev",
+                    "datestamp": "1595595248",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
                 },
                 "drupal-scaffold": {
                     "locations": {
@@ -8165,6 +8160,9 @@
                     "drupal/autosave_form": {
                         "3109317 - Run tests against Drupal 9": "https://www.drupal.org/files/issues/2020-05-15/autosave_form-1.1-core-version-requirement.patch"
                     }
+                },
+                "patches_applied": {
+                    "d9": "https://www.drupal.org/files/issues/2020-09-28/Scheduler-Deprecated-Behat-3173735-2.patch"
                 }
             },
             "autoload": {
@@ -8227,7 +8225,8 @@
             "homepage": "https://www.drupal.org/project/lightning_workflow",
             "support": {
                 "source": "https://git.drupalcode.org/project/lightning_workflow"
-            }
+            },
+            "time": "2020-07-24T12:53:10+00:00"
         },
         {
             "name": "drupal/linkicon",
@@ -17745,6 +17744,7 @@
         "acquia/blt-behat": 20,
         "acquia/blt-phpcs": 20,
         "drupal/config_ignore": 20,
+        "drupal/lightning_workflow": 20,
         "drupal/linkicon": 20,
         "drupal/mysql56": 10,
         "drupal/qa_accounts": 20,

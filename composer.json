@@ -108,6 +108,7 @@
         "drupal/focal_point": "^1.5",
         "drupal/google_analytics": "^3",
         "drupal/honeypot": "^2",
+        "drupal/lightning_workflow": "3.x-dev",
         "drupal/linkicon": "1.x-dev",
         "drupal/mysql56": "^1.0@beta",
         "drupal/panelizer": "^5",
@@ -192,6 +193,9 @@
             },
             "drupal/responsive_menu": {
                 "fixes php warning": "https://www.drupal.org/files/issues/2020-09-10/test_with_fix-3168579-23.patch"
+            },
+            "drupal/lightning_workflow": {
+                "d9": "https://www.drupal.org/files/issues/2020-09-28/Scheduler-Deprecated-Behat-3173735-2.patch"
             }
         },
         "drupal-scaffold": {
