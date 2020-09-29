@@ -13,7 +13,7 @@ use Drupal\Core\Form\FormStateInterface;
  */
 function twentynineteen_preprocess_html(&$variables) {
   $path = \Drupal::service('path.current')->getPath();
-  $alias = trim(\Drupal::service('path.alias_manager')
+  $alias = trim(\Drupal::service('path_alias.manager')
     ->getAliasByPath($path), '/');
   // Body classes for sidebars.
   if (isset($variables['page']['sidebar_first']) && isset($variables['page']['sidebar_second'])) {
