@@ -1,5 +1,3 @@
-let navigation = require('./navigation');
-
 /**
  * Drupal Behavior.
  *
