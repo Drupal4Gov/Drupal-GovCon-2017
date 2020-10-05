@@ -4,7 +4,6 @@
   Normal reset
 */
 @import "reset";
-@import "print";
 
 // Base
 //
@@ -29,6 +28,7 @@
 // Atoms are granular site elements that cannot be broken down into smaller components (eg. a, blockquote, list, typography).
 //
 // Style guide: atoms
+@import "components/_example/example_button";
 @import "components/atoms/a/a";
 @import "components/atoms/blockquote/blockquote";
 @import "components/atoms/buttons/buttons";
