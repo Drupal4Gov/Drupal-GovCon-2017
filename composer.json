@@ -11,6 +11,28 @@
             "type": "composer",
             "url": "https://asset-packagist.org"
         },
+        "r4032login": {
+            "type": "vcs",
+            "url": "git@github.com:grasmash/drupal-r4032login.git"
+        },
+        "jquery-ui-touch-punch": {
+            "type": "package",
+            "package": {
+                "name": "jquery-ui/jquery-ui-touch-punch",
+                "version": "dev-master",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "jquery-ui-touch-punch"
+                },
+                "dist": {
+                    "url": "https://api.github.com/repos/furf/jquery-ui-touch-punch/zipball",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        },
         "superfish": {
             "type": "package",
             "package": {
@@ -55,10 +77,14 @@
     "prefer-stable": true,
     "require": {
         "php": ">=7.3",
-        "acquia/blt": "^11.0",
-        "acquia/lightning": "^4",
+        "acquia/blt": "^12.0",
+        "acquia/blt-behat": "dev-master",
+        "acquia/blt-phpcs": "dev-master",
+        "acquia/lightning": "^5",
         "acquia/memcache-settings": "^1",
         "bower-asset/blazy": "^1.8",
+        "composer/installers": "^1.9",
+        "cweagans/composer-patches": "^1.6",
         "drupal/acquia_connector": "^2",
         "drupal/acquia_purge": "^1.0",
         "drupal/adminimal_admin_toolbar": "^1.0",
@@ -68,11 +94,12 @@
         "drupal/cloudflare": "^1.0.0-alpha7",
         "drupal/cog": "^1.10",
         "drupal/components": "^2.0-beta3",
-        "drupal/config_ignore": "^2.1",
+        "drupal/config_ignore": "2.x-dev",
         "drupal/config_split": "^1.0.0",
-        "drupal/core": "~8.9.0",
+        "drupal/core": "^9.0",
         "drupal/default_content": "^2",
         "drupal/devel": "^4.0.0",
+        "drupal/entity_embed": "^1.1",
         "drupal/environment_indicator": "^4",
         "drupal/extlink": "^1.0",
         "drupal/field_group": "^3.0",
@@ -81,11 +108,13 @@
         "drupal/focal_point": "^1.5",
         "drupal/google_analytics": "^3",
         "drupal/honeypot": "^2",
+        "drupal/lightning_workflow": "3.x-dev",
         "drupal/linkicon": "1.x-dev",
+        "drupal/mysql56": "^1.0@beta",
         "drupal/panelizer": "^5",
         "drupal/purge": "^3.0.0-beta6",
         "drupal/qa_accounts": "1.x-dev",
-        "drupal/r4032login": "dev-1.x",
+        "drupal/r4032login": "8.x-1.x-dev",
         "drupal/recaptcha": "^3",
         "drupal/redirect": "^1.0",
         "drupal/responsive_menu": "^4.4",
@@ -96,15 +125,14 @@
         "drupal/svg_image": "^1.8",
         "drupal/twig_xdebug": "^1.2",
         "drupal/upgrade_status": "^2.9",
+        "drupal/views_infinite_scroll": "^1.7",
         "drupal/webform": "^6",
         "drupal/webform_views": "^5.0-alpha8",
+        "jquery-ui/jquery-ui-touch-punch": "dev-master",
         "mmenu/mmenu": "^8.5",
         "superfish/superfish": "^1.7"
     },
-    "require-dev": {
-        "acquia/blt-require-dev": "11.x-dev",
-        "drupal/console": "^1.0.0-rc13"
-    },
+    "require-dev": {},
     "scripts": {
         "post-install-cmd": [
             "PhantomInstaller\\Installer::installPhantomJS"
@@ -166,8 +194,11 @@
             "drupal/responsive_menu": {
                 "fixes php warning": "https://www.drupal.org/files/issues/2020-09-10/test_with_fix-3168579-23.patch"
             },
-            "drupal/r4032login": {
-                "d9 compatibility": "https://www.drupal.org/files/issues/2020-06-04/3042799-22_0.patch"
+            "drupal/lightning_workflow": {
+                "d9": "https://www.drupal.org/files/issues/2020-09-28/Scheduler-Deprecated-Behat-3173735-2.patch"
+            },
+            "acquia/blt": {
+                "test deploy fix": "patches/blt-deploy.patch"
             }
         },
         "drupal-scaffold": {

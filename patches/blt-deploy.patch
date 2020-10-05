@@ -1,0 +1,13 @@
+diff --git a/src/Robo/BltTasks.php b/src/Robo/BltTasks.php
+index 95b5d805..d11c1dac 100644
+--- a/src/Robo/BltTasks.php
++++ b/src/Robo/BltTasks.php
+@@ -178,7 +178,7 @@ class BltTasks implements ConfigAwareInterface, InspectorAwareInterface, LoggerA
+       $result = $this->taskExecStack()
+         ->exec($this->getConfigValue("command-hooks.$hook.command"))
+         ->dir($this->getConfigValue("command-hooks.$hook.dir"))
+-        ->interactive($this->input()->isInteractive())
++        ->interactive(FALSE)
+         ->printOutput(TRUE)
+         ->printMetadata(TRUE)
+         ->stopOnFail()
