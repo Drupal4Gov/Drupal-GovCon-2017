@@ -1,0 +1,9 @@
+{% if proposed_sessions['#view'].result|length > 0 %}
+  {% set classes = [
+    'view-updated-proposed-sessions',
+  ]%}
+  <div {{ attributes.addClass(classes) }}>
+    <h2> {{ conference_year }} Proposed Sessions</h2>
+    {{ proposed_sessions }}
+  </div>
+{% endif %}

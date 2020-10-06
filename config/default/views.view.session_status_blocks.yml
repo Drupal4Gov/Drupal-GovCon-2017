@@ -1,4 +1,4 @@
-uuid: ae1ff6fe-84ef-4d28-a8fe-1c1253175b0e
+uuid: bad828cd-cea2-457d-a6a0-f87918d925d9
 langcode: en
 status: true
 dependencies:
@@ -6,28 +6,14 @@ dependencies:
     - field.storage.node.body
     - field.storage.node.field_session_track
     - node.type.session
-    - system.menu.2018-main-navigation
-    - taxonomy.vocabulary.conference_year
-    - taxonomy.vocabulary.session_track
-  content:
-    - 'taxonomy_term:conference_year:0f6c31f2-ef62-41ce-b17c-3e05bfb9b76c'
-    - 'taxonomy_term:conference_year:951cf954-787d-4057-8cc0-b170bd6dda96'
-    - 'taxonomy_term:conference_year:a3b3e4e7-5b6a-4d61-b99a-674262910622'
-    - 'taxonomy_term:conference_year:b841e242-eb84-4bf9-b245-4c809e3737bd'
-    - 'taxonomy_term:session_track:0a204882-2395-405d-bc08-3d2e402400da'
-    - 'taxonomy_term:session_track:18795e61-ba7c-451c-912e-6ef6835cf562'
-    - 'taxonomy_term:session_track:823a0160-1ea6-4f10-90f4-06b2af4eb31c'
-    - 'taxonomy_term:session_track:899c44f8-ae58-4a68-85f0-0584eabb3d5c'
-    - 'taxonomy_term:session_track:d35ab41e-68ab-4987-8c7f-b1c8a1c3e94d'
-    - 'taxonomy_term:session_track:d69a8325-bc1a-4577-8991-65f240455bb8'
-    - 'taxonomy_term:session_track:d7334075-7a5b-4ddd-a933-3621a8d0ece2'
   module:
+    - capitalcamp_glue
     - node
-    - taxonomy
+    - options
     - text
     - user
-id: updated_proposed_sessions
-label: 'Updated Proposed Sessions'
+id: session_status_blocks
+label: 'Session Status Blocks'
 module: views
 description: ''
 tag: ''
@@ -68,7 +54,6 @@ display:
       pager:
         type: none
         options:
-          items_per_page: 0
           offset: 0
       style:
         type: default
@@ -119,7 +104,7 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: strong
+          element_type: h4
           element_class: ''
           element_label_type: ''
           element_label_class: ''
@@ -148,10 +133,60 @@ display:
           entity_type: node
           entity_field: title
           plugin_id: field
-        uid:
-          id: uid
-          table: node_field_data
-          field: uid
+        speakers:
+          id: speakers
+          table: node
+          field: speakers
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: Speakers
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          entity_type: node
+          plugin_id: speakers
+        body:
+          id: body
+          table: node__body
+          field: body
           relationship: none
           group_type: group
           admin_label: ''
@@ -196,74 +231,10 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: target_id
-          type: entity_reference_label
-          settings:
-            link: true
-          group_column: target_id
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          entity_type: node
-          entity_field: uid
-          plugin_id: field
-        body:
-          id: body
-          table: node__body
-          field: body
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 300
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: true
-            trim: true
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
           click_sort_column: value
-          type: text_default
-          settings: {  }
+          type: text_summary_or_trimmed
+          settings:
+            trim_length: 250
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -311,8 +282,8 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: h2
-          element_class: view-new-proposed-sessions__group
+          element_type: ''
+          element_class: ''
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
@@ -326,7 +297,7 @@ display:
           click_sort_column: target_id
           type: entity_reference_label
           settings:
-            link: true
+            link: false
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -364,16 +335,17 @@ display:
           expose:
             operator_limit_selection: false
             operator_list: {  }
-        field_conference_year_target_id:
-          id: field_conference_year_target_id
-          table: node__field_conference_year
-          field: field_conference_year_target_id
+        field_status_value:
+          id: field_status_value
+          table: node__field_status
+          field: field_status_value
           relationship: none
           group_type: group
           admin_label: ''
-          operator: or
+          operator: not
           value:
-            - 131
+            accepted: accepted
+            featured: featured
           group: 1
           exposed: false
           expose:
@@ -382,6 +354,8 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -389,8 +363,6 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -404,12 +376,7 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          type: textfield
-          limit: true
-          vid: conference_year
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
+          plugin_id: list_field
       sorts:
         title:
           id: title
@@ -430,82 +397,7 @@ display:
       footer: {  }
       empty: {  }
       relationships: {  }
-      arguments: {  }
-      display_extenders: {  }
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - user
-        - 'user.node_grants:view'
-        - user.permissions
-      tags:
-        - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_session_track'
-  page_1:
-    display_plugin: page
-    id: page_1
-    display_title: '2018'
-    position: 2
-    display_options:
-      display_extenders: {  }
-      path: 2018/program/proposed-sessions
-      display_description: ''
-      menu:
-        type: none
-        title: 'Proposed Sessions'
-        description: ''
-        expanded: false
-        parent: ''
-        weight: 0
-        context: '0'
-        menu_name: 2018-main-navigation
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - user
-        - 'user.node_grants:view'
-        - user.permissions
-      tags:
-        - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_session_track'
-  page_2:
-    display_plugin: page
-    id: page_2
-    display_title: '2017'
-    position: 3
-    display_options:
-      display_extenders: {  }
-      display_description: ''
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            session: session
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
+      arguments:
         field_conference_year_target_id:
           id: field_conference_year_target_id
           table: node__field_conference_year
@@ -513,311 +405,78 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          operator: or
-          value:
-            - 126
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: textfield
-          limit: true
-          vid: conference_year
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
-      defaults:
-        filters: false
-        filter_groups: false
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
-      path: 2017/program/proposed-sessions
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - user
-        - 'user.node_grants:view'
-        - user.permissions
-      tags:
-        - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_session_track'
-  page_3:
-    display_plugin: page
-    id: page_3
-    display_title: '2020'
-    position: 1
-    display_options:
+          default_action: ignore
+          exception:
+            value: all
+            title_enable: false
+            title: All
+          title_enable: false
+          title: ''
+          default_argument_type: fixed
+          default_argument_options:
+            argument: ''
+          default_argument_skip_url: false
+          summary_options:
+            base_path: ''
+            count: true
+            items_per_page: 25
+            override: false
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: false
+          validate:
+            type: none
+            fail: 'not found'
+          validate_options: {  }
+          break_phrase: false
+          not: false
+          plugin_id: numeric
       display_extenders: {  }
-      path: 2020/program/proposed-sessions
-      display_description: ''
-      menu:
-        type: normal
-        title: 'Proposed Sessions'
-        description: ''
-        expanded: false
-        parent: 'menu_link_content:cfde32b4-ff81-4a70-a608-5faf124c12ee'
-        weight: 0
-        context: '0'
-        menu_name: 2018-main-navigation
-        enabled: false
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            session: session
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          expose:
-            operator_limit_selection: false
-            operator_list: {  }
-        field_conference_year_target_id:
-          id: field_conference_year_target_id
-          table: node__field_conference_year
-          field: field_conference_year_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value:
-            - 296
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: textfield
-          limit: true
-          vid: conference_year
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
-        field_session_track_target_id:
-          id: field_session_track_target_id
-          table: node__field_session_track
-          field: field_session_track_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value:
-            166: 166
-            311: 311
-            306: 306
-            156: 156
-            171: 171
-            161: 161
-            86: 86
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_session_track_target_id_op
-            label: 'Session Track'
-            description: ''
-            use_operator: false
-            operator: field_session_track_target_id_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_session_track_target_id
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              page_creator: '0'
-              layout_manager: '0'
-              page_reviewer: '0'
-              landing_page_creator: '0'
-              landing_page_reviewer: '0'
-              media_creator: '0'
-              media_manager: '0'
-              volunteer: '0'
-              sponsor: '0'
-              content_editor: '0'
-            reduce: true
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          type: select
-          limit: true
-          vid: session_track
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
-        uid:
-          id: uid
-          table: node_field_data
-          field: uid
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: in
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: uid_op
-            label: 'Submitted By'
-            description: ''
-            use_operator: false
-            operator: uid_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: uid
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              page_creator: '0'
-              layout_manager: '0'
-              page_reviewer: '0'
-              landing_page_creator: '0'
-              landing_page_reviewer: '0'
-              media_creator: '0'
-              media_manager: '0'
-              volunteer: '0'
-              sponsor: '0'
-              content_editor: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: node
-          entity_field: uid
-          plugin_id: user_name
-      defaults:
-        filters: false
-        filter_groups: false
-        relationships: false
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
-      relationships: {  }
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
         - 'config:field.storage.node.body'
         - 'config:field.storage.node.field_session_track'
-  page_4:
-    display_plugin: page
-    id: page_4
-    display_title: '2019'
+  block_1:
+    display_plugin: block
+    id: block_1
+    display_title: 'Proposed Sessions'
     position: 1
     display_options:
       display_extenders: {  }
-      path: 2019/program/proposed-sessions
       display_description: ''
-      menu:
-        type: none
-        title: 'Proposed Sessions'
-        description: ''
-        expanded: false
-        parent: ''
-        weight: 0
-        context: '0'
-        menu_name: 2018-main-navigation
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_session_track'
+  block_2:
+    display_plugin: block
+    id: block_2
+    display_title: 'Accepted Sessions'
+    position: 1
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      title: 'Accepted Sessions'
+      defaults:
+        title: false
+        filters: false
+        filter_groups: false
       filters:
         status:
           value: '1'
@@ -844,16 +503,17 @@ display:
           expose:
             operator_limit_selection: false
             operator_list: {  }
-        field_conference_year_target_id:
-          id: field_conference_year_target_id
-          table: node__field_conference_year
-          field: field_conference_year_target_id
+        field_status_value:
+          id: field_status_value
+          table: node__field_status
+          field: field_status_value
           relationship: none
           group_type: group
           admin_label: ''
           operator: or
           value:
-            - 266
+            accepted: accepted
+            featured: featured
           group: 1
           exposed: false
           expose:
@@ -862,6 +522,8 @@ display:
             description: ''
             use_operator: false
             operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
             identifier: ''
             required: false
             remember: false
@@ -869,8 +531,6 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -884,15 +544,7 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
-          type: textfield
-          limit: true
-          vid: conference_year
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
-      defaults:
-        filters: false
-        filter_groups: false
+          plugin_id: list_field
       filter_groups:
         operator: AND
         groups:
@@ -902,7 +554,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - user
+        - url
         - 'user.node_grants:view'
         - user.permissions
       tags:
