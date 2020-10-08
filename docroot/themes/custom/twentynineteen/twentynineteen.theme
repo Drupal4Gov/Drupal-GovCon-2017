@@ -123,7 +123,7 @@ function twentynineteen_form_node_form_alter(&$form, FormStateInterface $form_st
         ],
       ],
       '#markup'             => '<h4 class="label inline">' . t('Author') . '</h4> ' . $node->getOwner()
-        ->getUsername(),
+        ->getDisplayName(),
     ],
   ];
   $form['revision_information']['#type'] = 'container';
