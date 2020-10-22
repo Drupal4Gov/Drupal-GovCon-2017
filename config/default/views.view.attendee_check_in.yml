@@ -13,7 +13,6 @@ dependencies:
     - better_exposed_filters
     - flag
     - user
-    - views_infinite_scroll
     - webform
     - webform_views
 id: attendee_check_in
@@ -85,7 +84,7 @@ display:
                   filter_rewrite_values: "True|Yes\nFalse|No"
           text_input_required_format: simple_text
       pager:
-        type: infinite_scroll
+        type: full
         options:
           items_per_page: 50
           offset: 0
@@ -94,6 +93,8 @@ display:
           tags:
             previous: ‹‹
             next: ››
+            first: '« First'
+            last: 'Last »'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -102,9 +103,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          views_infinite_scroll:
-            button_text: 'Load More'
-            automatically_load_content: false
+          quantity: 9
       style:
         type: table
         options:
