@@ -30,7 +30,6 @@ dependencies:
     - panelizer
     - text
     - user
-    - video_embed_field
 third_party_settings:
   field_group:
     group_audience:
@@ -142,17 +141,15 @@ content:
     third_party_settings: {  }
     type: list_default
     region: content
-  field_video_embed:
+  field_video:
+    type: entity_reference_entity_view
     weight: 0
-    label: hidden
-    settings:
-      responsive: true
-      width: 854
-      height: 480
-      autoplay: true
-    third_party_settings: {  }
-    type: video_embed_field_video
     region: content
+    label: visually_hidden
+    settings:
+      view_mode: embedded
+      link: false
+    third_party_settings: {  }
   flag_session_schedule:
     weight: 10
     region: content
@@ -166,5 +163,5 @@ hidden:
   field_room_monitor: true
   field_session_co_presenter_s_: true
   field_slides_link: true
-  field_video: true
+  field_video_embed: true
   links: true

@@ -6,10 +6,11 @@ dependencies:
     - core.entity_view_mode.media.media_library
     - field.field.media.remote_video.field_media_in_library
     - field.field.media.remote_video.field_media_oembed_video
+    - field.field.media.remote_video.field_video_type
     - image.style.thumbnail
     - media.type.remote_video
   module:
-    - image
+    - svg_image
 _core:
   default_config_hash: e65xhZZmLk4zYV8wys5_oOV0Cylm1apPypAPHAc_Kh4
 id: media.remote_video.media_library
@@ -31,6 +32,7 @@ hidden:
   field_media_in_library: true
   field_media_oembed_video: true
   field_media_video_embed_field: true
+  field_video_type: true
   name: true
   search_api_excerpt: true
   uid: true

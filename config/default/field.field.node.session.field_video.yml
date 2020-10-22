@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_video
-    - media.type.video
+    - media.type.remote_video
     - node.type.session
 id: node.session.field_video
 field_name: field_video
@@ -20,7 +20,7 @@ settings:
   handler: 'default:media'
   handler_settings:
     target_bundles:
-      video: video
+      remote_video: remote_video
     sort:
       field: _none
     auto_create: false
