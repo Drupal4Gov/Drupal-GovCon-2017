@@ -186,12 +186,6 @@
         "patches": {
             "drupal/core": {
                 "Ignore front end vendor folders to improve directory search performance": "https://www.drupal.org/files/issues/ignore_front_end_vendor-2329453-116.patch"
-            },
-            "drupal/responsive_menu": {
-                "fixes php warning": "https://www.drupal.org/files/issues/2020-09-10/test_with_fix-3168579-23.patch"
-            },
-            "acquia/blt": {
-                "test deploy fix": "patches/blt-deploy.patch"
             }
         },
         "drupal-scaffold": {
