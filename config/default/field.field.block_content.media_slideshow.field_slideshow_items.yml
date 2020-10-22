@@ -1,19 +1,12 @@
-uuid: 8d87e5b0-5481-434d-8746-d5fa7b59f18e
+uuid: b8083a15-e534-4f84-ab29-df8531b859f9
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.media_slideshow
     - field.storage.block_content.field_slideshow_items
-    - media.type.audio_file
-    - media.type.document
-    - media.type.image
-    - media.type.instagram
-    - media.type.tweet
-    - media.type.video
-    - media.type.video_file
 _core:
-  default_config_hash: PHlMEKa3j0BnPe03007CexqVYd5yP3YvojlDSyNaFw0
+  default_config_hash: 97XqIKV-aQ8N_zmYEYo7zzHRok4Oz7fJTh6kSsG7PYE
 id: block_content.media_slideshow.field_slideshow_items
 field_name: field_slideshow_items
 entity_type: block_content
@@ -27,14 +20,7 @@ default_value_callback: ''
 settings:
   handler: 'default:media'
   handler_settings:
-    target_bundles:
-      video: video
-      video_file: video_file
-      tweet: tweet
-      audio_file: audio_file
-      document: document
-      image: image
-      instagram: instagram
+    target_bundles: null
     sort:
       field: _none
     auto_create: false

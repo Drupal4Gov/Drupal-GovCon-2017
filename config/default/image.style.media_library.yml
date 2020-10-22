@@ -1,12 +1,17 @@
-uuid: 15737138-33c5-4467-8ec7-f295ddebed46
+uuid: 96e7fa6b-3d74-46b0-8003-18921f7f93c8
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  enforced:
+    module:
+      - media_library
+_core:
+  default_config_hash: 7qJqToD1OQLAyeswpmg7M0LRxQlw1URQkJDWUJCnmR8
 name: media_library
-label: 'Media Library (220x220)'
+label: 'Media Library thumbnail (220×220)'
 effects:
-  1df99b45-e945-4526-8db2-464987cf8f0a:
-    uuid: 1df99b45-e945-4526-8db2-464987cf8f0a
+  75b076a8-1234-4b42-85db-bf377c4d8d5f:
+    uuid: 75b076a8-1234-4b42-85db-bf377c4d8d5f
     id: image_scale
     weight: 0
     data:

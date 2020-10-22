@@ -1,48 +1,41 @@
-uuid: c51c3cce-987a-45f2-8715-0ffe31d7e362
+uuid: b20c81fb-0042-4769-844d-bc80410ccbf6
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_form_mode.media.media_browser
+    - field.field.media.image.field_media_image
     - field.field.media.image.field_media_in_library
-    - field.field.media.image.image
     - image.style.medium
     - media.type.image
   module:
-    - image_widget_crop
+    - image
     - lightning_media
     - path
 _core:
-  default_config_hash: iVmRBD7y3Gmddt29sSx9DwwH6Q4UaROqMu7FLyy_bvQ
+  default_config_hash: 1U5XavhCARUa63Cs1qKuE5u_UOMDj8jqZoJ2jVWdfw0
 id: media.image.media_browser
 targetEntityType: media
 bundle: image
 mode: media_browser
 content:
+  field_media_image:
+    type: image_image
+    weight: 0
+    settings:
+      preview_image_style: medium
+      progress_indicator: throbber
+    third_party_settings:
+      lightning_media:
+        file_links: false
+        remove_button: false
+    region: content
   field_media_in_library:
     type: boolean_checkbox
     weight: 4
     settings:
       display_label: true
     third_party_settings: {  }
-    region: content
-  image:
-    type: image_widget_crop
-    weight: 0
-    settings:
-      preview_image_style: medium
-      progress_indicator: throbber
-      crop_list:
-        - freeform
-      show_crop_area: true
-      crop_preview_image_style: crop_thumbnail
-      crop_types_required: {  }
-      show_default_crop: true
-      warn_multiple_usages: false
-    third_party_settings:
-      lightning_media:
-        file_links: false
-        remove_button: false
     region: content
   name:
     type: string_textfield
@@ -67,5 +60,4 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  field_media_image: true
   uid: true

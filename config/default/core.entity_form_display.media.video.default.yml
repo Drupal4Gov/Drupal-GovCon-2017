@@ -1,16 +1,16 @@
-uuid: 9efa4599-fd18-43e1-b4c4-38b5c753644f
+uuid: 2a713a11-d42d-454e-a5a6-924390d87a23
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.media.video.field_media_in_library
-    - field.field.media.video.field_media_video_embed_field
+    - field.field.media.video.field_media_video_file
     - media.type.video
   module:
+    - file
     - path
-    - video_embed_field
 _core:
-  default_config_hash: OUea_b_jf81XjPvIY9J8KrRUckqz2APuLv4bkxYfdT4
+  default_config_hash: fh-wyzDmwjWHzDosRHClU3opddjaQoTV_UGcclDJcv4
 id: media.video.default
 targetEntityType: media
 bundle: video
@@ -18,44 +18,39 @@ mode: default
 content:
   field_media_in_library:
     type: boolean_checkbox
-    weight: 1
     settings:
       display_label: true
+    weight: 2
     third_party_settings: {  }
     region: content
-  field_media_video_embed_field:
-    type: video_embed_field_textfield
+  field_media_video_file:
     weight: 1
-    settings: {  }
+    settings:
+      progress_indicator: throbber
     third_party_settings: {  }
+    type: file_generic
     region: content
   name:
     type: string_textfield
     weight: 0
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    region: content
   path:
     type: path
     weight: 30
     region: content
     settings: {  }
     third_party_settings: {  }
-  preview:
-    weight: 0
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 100
+    weight: 3
     region: content
     third_party_settings: {  }
 hidden:
   created: true
-  field_media_video_file: true
   uid: true
