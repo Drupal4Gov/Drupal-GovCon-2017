@@ -27,6 +27,7 @@ dependencies:
     - datetime
     - field_group
     - file
+    - media_library
     - path
     - text
     - video_embed_field
@@ -36,6 +37,7 @@ third_party_settings:
       children:
         - field_files
         - field_video_embed
+        - field_video
       parent_name: ''
       weight: 10
       format_type: fieldset
@@ -51,7 +53,7 @@ third_party_settings:
         - field_session_date_time
         - field_room
       parent_name: ''
-      weight: 12
+      weight: 13
       format_type: fieldset
       format_settings:
         id: ''
@@ -66,7 +68,7 @@ third_party_settings:
         - field_male_attendees
         - field_female_attendees
       parent_name: ''
-      weight: 16
+      weight: 17
       format_type: fieldset
       format_settings:
         id: ''
@@ -89,9 +91,7 @@ third_party_settings:
         required_fields: true
       label: 'Virtual Options'
     group_video_links:
-      children:
-        - field_primary_video_link
-        - field_alternate_video_link
+      children: {  }
       parent_name: ''
       weight: 20
       format_type: fieldset
@@ -126,7 +126,7 @@ content:
     third_party_settings: {  }
     region: content
   field_conference_year:
-    weight: 15
+    weight: 16
     settings: {  }
     third_party_settings: {  }
     type: options_select
@@ -181,7 +181,7 @@ content:
     type: entity_reference_autocomplete
     region: content
   field_session_co_presenter_s_:
-    weight: 13
+    weight: 14
     settings:
       match_operator: CONTAINS
       size: 60
@@ -203,20 +203,27 @@ content:
     type: options_select
     region: content
   field_status:
-    weight: 11
+    weight: 12
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
-  field_video_embed:
+  field_video:
+    type: media_library_widget
     weight: 12
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_video_embed:
+    weight: 11
     settings: {  }
     third_party_settings: {  }
     type: video_embed_field_textfield
     region: content
   moderation_state:
     type: moderation_state_default
-    weight: 18
+    weight: 19
     settings: {  }
     region: content
     third_party_settings: {  }
@@ -237,7 +244,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 14
+    weight: 15
     third_party_settings: {  }
     region: content
   sticky:
@@ -266,7 +273,7 @@ content:
     third_party_settings: {  }
     region: content
   url_redirects:
-    weight: 17
+    weight: 18
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -274,4 +281,3 @@ hidden:
   field_image: true
   field_session_room: true
   field_slides_link: true
-  field_video: true

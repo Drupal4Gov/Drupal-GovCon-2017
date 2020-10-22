@@ -1,4 +1,4 @@
-uuid: 4dd72e7f-3547-4886-8db3-f99cb10783a1
+uuid: 07396986-61e1-4639-b0b6-1a95018e3619
 langcode: en
 status: true
 dependencies:
@@ -6,12 +6,12 @@ dependencies:
     - field.storage.media.field_media_in_library
     - media.type.image
 _core:
-  default_config_hash: RFhBYmK1iCpMbg5n57Wi_bwHb5e-3gEJpbUtyqQsw0k
+  default_config_hash: QqUWHOMao_EIpcQnrHnXiLJLlCh79IzJeLVENPa5UBE
 id: media.image.field_media_in_library
 field_name: field_media_in_library
 entity_type: media
 bundle: image
-label: 'Save to my media library'
+label: 'Show in media library'
 description: ''
 required: false
 translatable: false
@@ -20,6 +20,6 @@ default_value:
     value: 1
 default_value_callback: ''
 settings:
-  on_label: 'Saved to my media library'
-  off_label: 'Not in my media library'
+  on_label: 'Shown in media library'
+  off_label: 'Hidden in media library'
 field_type: boolean

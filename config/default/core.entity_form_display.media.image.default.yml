@@ -1,42 +1,35 @@
-uuid: 99c7a369-cf58-4a60-8a1a-20c79d226e21
+uuid: bcae464c-aa4e-42fc-9248-c27270eed311
 langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.image.field_media_image
     - field.field.media.image.field_media_in_library
-    - field.field.media.image.image
     - image.style.thumbnail
     - media.type.image
   module:
-    - image_widget_crop
+    - image
     - path
 _core:
-  default_config_hash: kyoAHlZTGIuGTaQuBblGBk8EhfnVKOl19_0j5WbpQqM
+  default_config_hash: MhGC-0dK5T_kLyHSPIctI9OztGTG1uCBBRjO8t1gcd0
 id: media.image.default
 targetEntityType: media
 bundle: image
 mode: default
 content:
+  field_media_image:
+    type: image_image
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    region: content
   field_media_in_library:
     type: boolean_checkbox
     weight: 4
     settings:
       display_label: true
-    third_party_settings: {  }
-    region: content
-  image:
-    type: image_widget_crop
-    weight: 0
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-      crop_list:
-        - freeform
-      show_crop_area: true
-      crop_preview_image_style: crop_thumbnail
-      crop_types_required: {  }
-      show_default_crop: true
-      warn_multiple_usages: false
     third_party_settings: {  }
     region: content
   name:
@@ -62,5 +55,4 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  field_media_image: true
   uid: true

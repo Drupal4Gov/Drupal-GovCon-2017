@@ -1,0 +1,24 @@
+uuid: d3c0fb37-1433-4736-9b12-1673e110eb6a
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - media
+    - taxonomy
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: media.field_video_type
+field_name: field_video_type
+entity_type: media
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

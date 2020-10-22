@@ -1,40 +1,37 @@
-uuid: 3413940a-29a1-43e0-8263-e9081d22a77d
+uuid: ad74727d-2724-421d-9398-39ac5dab07a9
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_form_mode.media.media_library
+    - field.field.media.image.field_media_image
     - field.field.media.image.field_media_in_library
-    - field.field.media.image.image
-    - image.style.thumbnail
     - media.type.image
-  module:
-    - svg_image
+_core:
+  default_config_hash: plL0dh9f8gNZfBlrfL2rbvChR0z9T-JMEIdw7A1Qks8
 id: media.image.media_library
 targetEntityType: media
 bundle: image
 mode: media_library
 content:
-  image:
-    weight: 5
+  field_media_in_library:
+    type: boolean_checkbox
+    weight: 1
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
+      display_label: true
     third_party_settings: {  }
-    type: image_image
     region: content
   name:
     type: string_textfield
+    weight: 0
     settings:
       size: 60
       placeholder: ''
-    weight: 0
     third_party_settings: {  }
     region: content
 hidden:
   created: true
   field_media_image: true
-  field_media_in_library: true
   path: true
   status: true
   uid: true

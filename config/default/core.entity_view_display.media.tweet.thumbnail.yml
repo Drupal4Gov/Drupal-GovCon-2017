@@ -1,4 +1,4 @@
-uuid: d4a355fd-873f-40a9-9042-fd51f6acaf7d
+uuid: 459de04f-2bfa-4be7-aad3-1492d37ab447
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,9 @@ dependencies:
     - image.style.medium
     - media.type.tweet
   module:
-    - svg_image
+    - image
+_core:
+  default_config_hash: 7POQWMMGHaAd5G2_zxlo9bWG9g3LLLyKp0jUb6hvnHU
 id: media.tweet.thumbnail
 targetEntityType: media
 bundle: tweet
@@ -29,4 +31,5 @@ hidden:
   embed_code: true
   field_media_in_library: true
   name: true
+  search_api_excerpt: true
   uid: true

@@ -1,15 +1,17 @@
-uuid: e470c4b2-1229-4787-bd92-a00daa3876c4
+uuid: 16f9bec2-777c-468c-9207-e07d1acd4597
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.media.media_library
+    - field.field.media.image.field_media_image
     - field.field.media.image.field_media_in_library
-    - field.field.media.image.image
-    - image.style.medium
+    - image.style.thumbnail
     - media.type.image
   module:
-    - svg_image
+    - image
+_core:
+  default_config_hash: P0pAS88cxQsaXFeoXIHGcT2CPv6mbvqZcPwu8_4Zf5o
 id: media.image.media_library
 targetEntityType: media
 bundle: image
@@ -17,21 +19,18 @@ mode: media_library
 content:
   thumbnail:
     type: image
+    weight: 0
+    region: content
     label: hidden
     settings:
-      image_style: medium
+      image_style: thumbnail
       image_link: ''
-      svg_attributes:
-        width: null
-        height: null
-      svg_render_as_image: true
-    weight: 0
     third_party_settings: {  }
-    region: content
 hidden:
   created: true
   field_media_image: true
   field_media_in_library: true
   image: true
   name: true
+  search_api_excerpt: true
   uid: true

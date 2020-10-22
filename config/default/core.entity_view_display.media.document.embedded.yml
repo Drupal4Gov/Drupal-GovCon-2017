@@ -1,24 +1,22 @@
-uuid: 3ca0bc64-96b2-432c-9ce5-f10845ac37df
+uuid: d99df86f-a1cc-43be-80f4-41474a87afe5
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.media.embedded
-    - field.field.media.document.field_document
-    - field.field.media.document.field_document_size
+    - field.field.media.document.field_media_document
     - field.field.media.document.field_media_in_library
-    - field.field.media.document.field_mime_type
     - media.type.document
   module:
     - file
 _core:
-  default_config_hash: S16Ej4gAaFhYLC-LDSYnmrnrxjjvWRTD4AFdvwqpOC0
+  default_config_hash: UYzsDXsg0QjMLjsn09bDUJe4J6rvZOv2FlLT0t5oZHM
 id: media.document.embedded
 targetEntityType: media
 bundle: document
 mode: embedded
 content:
-  field_document:
+  field_media_document:
     weight: 0
     label: hidden
     settings: {  }
@@ -27,11 +25,8 @@ content:
     region: content
 hidden:
   created: true
-  field_document_size: true
-  field_media_document: true
   field_media_in_library: true
-  field_mime_type: true
   name: true
-  scheduled_publication: true
+  search_api_excerpt: true
   thumbnail: true
   uid: true

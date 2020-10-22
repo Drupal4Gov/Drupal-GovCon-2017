@@ -1,0 +1,29 @@
+uuid: 39d24f6b-4722-4d92-862f-ae5c901ce092
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_video_type
+    - media.type.remote_video
+    - taxonomy.vocabulary.video_type
+id: media.remote_video.field_video_type
+field_name: field_video_type
+entity_type: media
+bundle: remote_video
+label: 'Video Type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      video_type: video_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

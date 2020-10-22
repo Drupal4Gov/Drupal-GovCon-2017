@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.media.remote_video.field_media_in_library
     - field.field.media.remote_video.field_media_oembed_video
+    - field.field.media.remote_video.field_video_type
     - media.type.remote_video
   module:
     - media
@@ -25,11 +26,17 @@ content:
     region: content
   field_media_oembed_video:
     type: oembed_textfield
-    weight: 1
+    weight: 3
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+    region: content
+  field_video_type:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   name:
     type: string_textfield
@@ -41,7 +48,7 @@ content:
     region: content
   path:
     type: path
-    weight: 30
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -49,7 +56,7 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 100
+    weight: 5
     region: content
     third_party_settings: {  }
 hidden:

@@ -1,4 +1,4 @@
-uuid: 290cc19b-36c6-4b12-b92f-2db3167643e5
+uuid: 7324eb5a-433b-43ea-9efe-240557335b6c
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ dependencies:
   module:
     - media_entity_instagram
 _core:
-  default_config_hash: pU0B_8piELcmOp8ABEQwxn2ZFfCLWwsj6_ta83JSs8I
+  default_config_hash: FGDcC__SDFv-9J0bOZYpGLVXKr2uIoXpNJOg8yLD7mU
 id: media.instagram.default
 targetEntityType: media
 bundle: instagram
@@ -21,13 +21,12 @@ content:
     label: visually_hidden
     settings:
       width: 480
-      height: 640
     third_party_settings: {  }
     region: content
 hidden:
   created: true
   field_media_in_library: true
   name: true
-  scheduled_publication: true
+  search_api_excerpt: true
   thumbnail: true
   uid: true
