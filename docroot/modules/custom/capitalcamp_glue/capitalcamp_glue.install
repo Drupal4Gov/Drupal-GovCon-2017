@@ -9,6 +9,9 @@ use Drupal\block\Entity\Block;
 use Drupal\taxonomy\Entity\Term;
 use Drupal\menu_link_content\Entity\MenuLinkContent;
 use Drupal\user\Entity\Role;
+use Drupal\node\Entity\Node;
+use Drupal\media\Entity\Media;
+use Drupal\Core\Entity\EntityInterface;
 
 /**
  * DCG-107: Add terms to sponsorship level vocabulary.
@@ -276,4 +279,95 @@ function capitalcamp_glue_update_8020() {
     $config->set('plugin', "flag_action:" . $names[3] . "_flag");
     $config->save(TRUE);
   }
+}
+
+/**
+ * DCG-107: Add terms to video type vocabulary.
+ */
+function capitalcamp_glue_update_9000() {
+  $videoTerms = [
+    'Session Recording',
+    'DGC Site Video',
+  ];
+  foreach ($videoTerms as $videoTerm) {
+    Term::create([
+      'name' => $videoTerm,
+      'vid' => 'video_type',
+    ])->save();
+  }
+}
+
+/**
+ * Migrates Session Videos into Media Remote Video.
+ */
+function capitalcamp_glue_update_9005() {
+  $term = \Drupal::service('entity_type.manager')->getStorage('taxonomy_term');
+  $tid = $term->getQuery()
+    ->condition('vid', 'video_type')
+    ->condition('name', 'Session Recording')
+    ->accessCheck(FALSE)
+    ->execute();
+  $tid = key($tid);
+  $node = \Drupal::service('entity_type.manager')->getStorage('node');
+  $node_results = $node->getQuery()
+    ->condition('type', 'session')
+    ->condition('field_video_embed', NULL, "IS NOT NULL")
+    ->accessCheck(FALSE)
+    ->execute();
+  if (!empty($node_results)) {
+    foreach ($node_results as $node_result) {
+      /** @var \Drupal\Core\Entity\EntityBase|Drupal\Core\Entity\EntityInterface $session */
+      $session = Node::load($node_result);
+      $url = $session->field_video_embed->value;
+      $media_results = _find_video($url);
+      if ($media_results) {
+        _update_session($session, $media_results);
+      }
+      else {
+        /** @var Drupal\media\Entity\Media $video */
+        Media::create([
+          'field_video_type' => $tid,
+          'uid' => '1',
+          'field_media_oembed_video' => $url,
+          'title' => $session->label(),
+          'bundle' => 'remote_video',
+        ])->save();
+        $media_results = _find_video($url);
+        _update_session($session, $media_results);
+      }
+    }
+  }
+}
+
+/**
+ * A helper function for finding remove video media.
+ *
+ * @param string $url
+ *   The Remote Video URL.
+ *
+ * @return array
+ *   The resulting media entity(ies).
+ */
+function _find_video($url) {
+  $media = \Drupal::service('entity_type.manager')->getStorage('media');
+  return $media->getQuery()
+    ->condition('bundle', 'remote_video')
+    ->condition('field_media_oembed_video', $url)
+    ->accessCheck(FALSE)
+    ->execute();
+}
+
+/**
+ * A helper function for updating session nodes.
+ *
+ * @param \Drupal\Core\Entity\EntityBase|Drupal\Core\Entity\EntityInterface $session
+ *   The session node entity.
+ * @param array $video_results
+ *   The remote videos that have been found.
+ */
+function _update_session(EntityInterface $session, array $video_results) {
+  /** @var \Drupal\Core\Entity\EntityBase|Drupal\Core\Entity\EntityInterface $session */
+  $session->set('field_video', $video_results[key($video_results)]);
+  $session->set('field_video_embed', NULL);
+  $session->save();
 }
