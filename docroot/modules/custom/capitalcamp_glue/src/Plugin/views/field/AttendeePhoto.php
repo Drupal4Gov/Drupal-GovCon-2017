@@ -5,7 +5,6 @@ namespace Drupal\capitalcamp_glue\Plugin\views\field;
 use Drupal\views\Plugin\views\field\FieldPluginBase;
 use Drupal\views\ResultRow;
 use Drupal\file\Entity\File;
-use Drupal\user\Entity\User;
 
 /**
  * Field handler to flag the node type.
@@ -29,6 +28,10 @@ class AttendeePhoto extends FieldPluginBase {
    * @{inheritdoc}
    */
   public function render(ResultRow $values) {
+    $render = [
+      '#markup' => "<img alt='Drupal GovCon Avatar' src='https://" . \Drupal::request()->getHost() . "/modules/custom/capitalcamp_glue/images/govcon.jpg' />",
+    ];
+
     /** @var \Drupal\webform\Entity\WebformSubmission $webform */
     $webform = $values->_entity;
     $email = $webform->getElementData('email');
@@ -37,7 +40,7 @@ class AttendeePhoto extends FieldPluginBase {
       $user = user_load_by_mail($email);
       if ($user) {
         $image = $user->get('field_picture')->getValue();
-        if ($image[0]['target_id']) {
+        if (isset($image[0]['target_id'])) {
           $fid = $image[0]['target_id'];
           $file = File::load($fid);
           $render = [
@@ -45,23 +48,10 @@ class AttendeePhoto extends FieldPluginBase {
             '#style_name' => 'thumbnail',
             '#uri' => $file->getFileUri(),
           ];
-          return render($render);
-
-        }
-        else {
-          $user = User::load(1);
-          $image = $user->get('field_picture')->getValue();
-          $fid = $image[0]['target_id'];
-          $file = File::load($fid);
-          $render = [
-            '#theme' => 'image_style',
-            '#style_name' => 'thumbnail',
-            '#uri' => $file->getFileUri(),
-          ];
-          return render($render);
         }
       }
     }
+    return render($render);
   }
 
 }
