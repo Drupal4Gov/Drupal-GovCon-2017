@@ -20,7 +20,6 @@ dependencies:
     - field.field.node.session.field_slides_link
     - field.field.node.session.field_status
     - field.field.node.session.field_video
-    - field.field.node.session.field_video_embed
     - node.type.session
   module:
     - content_moderation
@@ -30,7 +29,6 @@ dependencies:
     - media_library
     - path
     - text
-    - video_embed_field
 third_party_settings:
   field_group:
     group_slides:
@@ -215,12 +213,6 @@ content:
     settings:
       media_types: {  }
     third_party_settings: {  }
-  field_video_embed:
-    weight: 11
-    settings: {  }
-    third_party_settings: {  }
-    type: video_embed_field_textfield
-    region: content
   moderation_state:
     type: moderation_state_default
     weight: 19

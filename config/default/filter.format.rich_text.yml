@@ -11,7 +11,7 @@ _core:
   default_config_hash: xNqrUFmyyyy8JFxTT_Zd1CLPZ3fyIR8wqQkEfPrYj9o
 name: 'Rich Text'
 format: rich_text
-weight: 1
+weight: -10
 filters:
   filter_align:
     id: filter_align
@@ -78,6 +78,6 @@ filters:
     weight: 100
     settings:
       default_view_mode: default
+      allowed_media_types: {  }
       allowed_view_modes:
         embedded: embedded
-      allowed_media_types: {  }
