@@ -8,7 +8,10 @@ const baseURL = isCI ? 'http://127.0.0.1:8888' : 'http://drupalgovcon.lndo.site:
 
 // Add urls for a11y testing here.
 const urls = [
-    '/',
+  '/',
+  '/session/archive',
+  '/2020/program/sessions/automated-accessibility-testing-using-pa11y-and-continuous-integration'
+
 ];
 
 module.exports = {
