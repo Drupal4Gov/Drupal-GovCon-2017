@@ -1,5 +1,5 @@
 # Drupal GovCon
-Welcome to the repo for the Drupal GovCon event website. This is an open source project and we proudly make all of our source code available (not only to those that want to contribute to the project, but for those that are interested in seeing a working Drupal 8 site!).
+Welcome to the repo for the Drupal GovCon event website. This is an open source project and we proudly make all of our source code available (not only to those that want to contribute to the project, but for those that are interested in seeing a working Drupal 9 site!).
 
 ## Getting Started
 
@@ -7,7 +7,7 @@ This project built with BLT, an open-source project template and tool that enabl
 
 * Ensure that your computer meets the minimum installation requirements (and then install the required applications). See the [BLT System Requirements](https://docs.acquia.com/blt/install/) and [Lando System Requirements](https://docs.lando.dev/basics/installation.html).
 * Fork the parent repository in GitHub
-* Request access to the Drupal4Gov organization in GitHub 
+* Request access to the Drupal4Gov organization in GitHub
 * Request access to the Acquia Cloud Environment for Drupal GovCon
 * Setup a SSH key that can be used for GitHub and the Acquia Cloud (you CAN use the same key)
     * [Setup GitHub SSH Keys](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
@@ -20,52 +20,17 @@ After creating a fork of the repository in Github 9and installing all dependenci
 * `lando start` (provision the vm)
 * `lando blt setup` (install Drupal)
 
-## Updating from DrupalVM
-
-If you have been a part of our team in the past and have a local DrupalVM, here are a few steps to take to "update" to Lando.
-
-* `blt vm:nuke` to destroy the old vm
-* open the blt/local.blt.yml file and look for a "vm" key. If present, remove the vm (and enable:true) keys from the file
-* open the docroot/sites/default/settings/local.settings.php file and replace the database configuration with:
-
-```php
-/**
- * Database configuration.
- */
-$databases = array(
-  'default' =>
-  array(
-    'default' =>
-    array(
-      'database' => 'drupal8',
-      'username' => 'drupal8',
-      'password' => 'drupal8',
-      'host' => 'database',
-      'port' => '3306',
-      'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-      'driver' => 'mysql',
-      'prefix' => '',
-    ),
-  ),
-);
-```
-
-* run `lando start`
-* run `lando blt setup`
-
-Note that the new local project url is http://drupalgovcon.lndo.site:8080
-
 ## Working with Lando and BLT
 
 Our team utilizes a standard [Git flow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) for our development workflow. You can read more about our recommended workflow in the [BLT docs](https://docs.acquia.com/blt/developer/dev-workflow/#workflow-example-local-development).
 
-In general, "all" commands (drush, blt, etc.) should be run "inside" the Lando container. You can do this by first running the `lando` command. 
+In general, "all" commands (drush, blt, etc.) should be run "inside" the Lando container. You can do this by first running the `lando` command.
 
 For example:
 
 Cleanly Install Drupal:
 
-`lando blt setup` 
+`lando blt setup`
 
 Sync Drupal Database from Cloud:*
 
