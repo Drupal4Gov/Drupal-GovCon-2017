@@ -26,6 +26,7 @@ services:
           source: "${LANDO_SSH_AUTH_SOCK:-/run/host-services/ssh-auth.sock}"
           target: /run/host-services/ssh-auth.sock
       environment:
+        DRUSH_OPTIONS_URI: "https://drupalgovcon.lndo.site/"
         SSH_AUTH_SOCK: /run/host-services/ssh-auth.sock
       cap_add:
         - SYS_ADMIN
