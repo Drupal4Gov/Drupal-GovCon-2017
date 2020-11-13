@@ -4,7 +4,7 @@
  */
 
 const isCI = process.env.CI;
-const baseURL = isCI ? 'http://127.0.0.1:8888' : 'http://drupalgovcon.lndo.site:8080';
+const baseURL = isCI ? 'http://127.0.0.1:8888' : 'http://drupalgovcon.lndo.site:8000';
 
 // Add urls for a11y testing here.
 const urls = [
