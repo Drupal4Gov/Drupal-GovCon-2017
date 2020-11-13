@@ -3,11 +3,20 @@ recipe: drupal8
 config:
   webroot: docroot
   xdebug: false
+  php: '7.4'
 services:
   appserver:
     xdebug: false
     build_as_root:
+      - apt-get update
+      - apt-get install libxss1
       - echo "Run additional build commands here. Run lando rebuild after updating this file."
+      - curl -sL https://deb.nodesource.com/setup_15.x | bash -
+      - apt install -y nodejs
+      - composer self-update
+      - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+      - apt install -y ./google-chrome-stable_current_amd64.deb
+      - rm google-chrome-stable_current_amd64.deb
     overrides:
       # Pass SSH keys.
       volumes:
@@ -17,8 +26,8 @@ services:
           source: "${LANDO_SSH_AUTH_SOCK:-/run/host-services/ssh-auth.sock}"
           target: /run/host-services/ssh-auth.sock
       environment:
+        DRUSH_OPTIONS_URI: "https://drupalgovcon.lndo.site/"
         SSH_AUTH_SOCK: /run/host-services/ssh-auth.sock
-      image: 'acquia/ads-local:lando-php-7.3-nodejs-10'
       cap_add:
         - SYS_ADMIN
 tooling:

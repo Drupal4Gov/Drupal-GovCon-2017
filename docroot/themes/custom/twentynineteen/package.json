@@ -47,7 +47,7 @@
     "webpack": "^4.44.2"
   },
   "engines": {
-    "node": "14.x"
+    "node": "15.x"
   },
   "private": true,
   "//": "The postinstall script is needed to work-around this Drupal core bug: https://www.drupal.org/node/2329453",
@@ -61,5 +61,7 @@
     "tests": "pa11y-ci",
     "watch": "gulp watch"
   },
-  "dependencies": {}
+  "dependencies": {
+    "chromium": "^3.0.2"
+  }
 }
