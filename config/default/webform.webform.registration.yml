@@ -2,8 +2,6 @@ uuid: 508d8dbc-5aab-4eb8-bec7-bdfb4125b13a
 langcode: en
 status: closed
 dependencies: {  }
-_core:
-  default_config_hash: BrydyK5Ue5wkMQCaHP7_hNFrpGumd2e1j3U_RnPzP7g
 open: null
 close: null
 weight: 0
@@ -144,6 +142,7 @@ settings:
   results_customize: false
   token_view: false
   token_update: true
+  token_delete: false
   serial_disabled: false
   wizard_comfirmation: true
   wizard_comfirmation_label: ''
@@ -262,3 +261,5 @@ handlers:
       theme_name: ''
       parameters: {  }
 variants: {  }
+_core:
+  default_config_hash: BrydyK5Ue5wkMQCaHP7_hNFrpGumd2e1j3U_RnPzP7g
