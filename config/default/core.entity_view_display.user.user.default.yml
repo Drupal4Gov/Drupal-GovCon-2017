@@ -13,16 +13,9 @@ dependencies:
     - image.style.user_profile_image
   module:
     - link
-    - panelizer
     - svg_image
     - text
     - user
-third_party_settings:
-  panelizer:
-    enable: false
-    custom: false
-    allow: false
-    default: default
 id: user.user.default
 targetEntityType: user
 bundle: user
