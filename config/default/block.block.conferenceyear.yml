@@ -1,0 +1,23 @@
+uuid: 1cabfe0e-6b45-482f-9ba4-304dfe406941
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.conference_year
+  module:
+    - facets
+  theme:
+    - twentynineteen
+id: conferenceyear
+theme: twentynineteen
+region: sidebar_first
+weight: -15
+provider: null
+plugin: 'facet_block:conference_year'
+settings:
+  id: 'facet_block:conference_year'
+  label: 'Conference Year'
+  provider: facets
+  label_display: visible
+  block_id: conferenceyear
+visibility: {  }

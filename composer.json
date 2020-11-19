@@ -98,6 +98,7 @@
         "drupal/entity_embed": "^1.1",
         "drupal/environment_indicator": "^4",
         "drupal/extlink": "^1.0",
+        "drupal/facets": "^1.6",
         "drupal/field_group": "^3.0",
         "drupal/field_permissions": "^1.0",
         "drupal/flag": "^4.0-beta2",
@@ -113,6 +114,7 @@
         "drupal/recaptcha": "^3",
         "drupal/redirect": "^1.0",
         "drupal/responsive_menu": "^4.4",
+        "drupal/search_api_autocomplete": "^1.4",
         "drupal/seckit": "^2",
         "drupal/shield": "^1.1",
         "drupal/simple_sitemap": "^3.7",
@@ -127,7 +129,6 @@
         "mmenu/mmenu": "^8.5",
         "superfish/superfish": "^1.7"
     },
-    "require-dev": {},
     "scripts": {
         "post-install-cmd": [
             "PhantomInstaller\\Installer::installPhantomJS"

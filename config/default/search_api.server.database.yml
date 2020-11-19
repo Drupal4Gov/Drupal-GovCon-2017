@@ -1,0 +1,18 @@
+uuid: 75548562-e1e1-4455-82b1-4e5381326272
+langcode: en
+status: true
+dependencies:
+  module:
+    - search_api_db
+_core:
+  default_config_hash: _rtUWZ0RZXarXyLdLwim6tweeTM-1UHUgF7LVkgbFAQ
+id: database
+name: Database
+description: 'The Drupal database.'
+backend: search_api_db
+backend_config:
+  database: 'default:default'
+  min_chars: 3
+  autocomplete:
+    suggest_suffix: true
+    suggest_words: true
