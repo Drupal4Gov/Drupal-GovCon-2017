@@ -10,15 +10,8 @@ dependencies:
     - node.type.event
   module:
     - datetime
-    - panelizer
     - text
     - user
-third_party_settings:
-  panelizer:
-    enable: false
-    custom: false
-    allow: false
-    default: default
 id: node.event.default
 targetEntityType: node
 bundle: event

@@ -6,14 +6,7 @@ dependencies:
     - field.field.taxonomy_term.session_track.field_conference_year
     - taxonomy.vocabulary.session_track
   module:
-    - panelizer
     - text
-third_party_settings:
-  panelizer:
-    enable: false
-    custom: false
-    allow: false
-    default: default
 id: taxonomy_term.session_track.default
 targetEntityType: taxonomy_term
 bundle: session_track

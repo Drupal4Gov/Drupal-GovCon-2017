@@ -26,7 +26,6 @@ dependencies:
     - field_group
     - file
     - options
-    - panelizer
     - text
     - user
 third_party_settings:
@@ -58,11 +57,6 @@ third_party_settings:
         description: ''
       label: 'Schedule Info'
       region: content
-  panelizer:
-    enable: false
-    custom: false
-    allow: false
-    default: default
 _core:
   default_config_hash: Tda_mdGceswLB5IEtanDUN-eLoQxO-iNV-i_xC8zGx8
 id: node.session.default
