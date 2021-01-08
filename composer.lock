@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d5aef15164da2f3aaec5b1dc3b511531",
+    "content-hash": "26ac24eb504def9c4a1ff75bb011583d",
     "packages": [
         {
             "name": "acquia/blt",
@@ -105,16 +105,16 @@
         },
         {
             "name": "acquia/blt-behat",
-            "version": "dev-master",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acquia/blt-behat.git",
-                "reference": "14f6949ef73518de05db38660a402f849483bc9d"
+                "reference": "8d9f7cddb19f9ffb2c09d5692ede1582b871e0c7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/acquia/blt-behat/zipball/14f6949ef73518de05db38660a402f849483bc9d",
-                "reference": "14f6949ef73518de05db38660a402f849483bc9d",
+                "url": "https://api.github.com/repos/acquia/blt-behat/zipball/8d9f7cddb19f9ffb2c09d5692ede1582b871e0c7",
+                "reference": "8d9f7cddb19f9ffb2c09d5692ede1582b871e0c7",
                 "shasum": ""
             },
             "require": {
@@ -128,7 +128,6 @@
             "conflict": {
                 "acquia/blt": "<=12.5.1"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -149,13 +148,13 @@
             "description": "Behat integration for Acquia BLT",
             "support": {
                 "issues": "https://github.com/acquia/blt-behat/issues",
-                "source": "https://github.com/acquia/blt-behat/tree/master"
+                "source": "https://github.com/acquia/blt-behat/tree/v1.1.1"
             },
-            "time": "2020-12-18T17:58:40+00:00"
+            "time": "2021-01-07T23:57:03+00:00"
         },
         {
             "name": "acquia/blt-phpcs",
-            "version": "dev-master",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/acquia/blt-phpcs.git",
@@ -175,7 +174,6 @@
             "require-dev": {
                 "composer/composer": "^1.10"
             },
-            "default-branch": true,
             "type": "composer-plugin",
             "extra": {
                 "class": "Acquia\\BltPhpcs\\Composer\\BltPhpcsPlugin",
@@ -14854,16 +14852,16 @@
         },
         {
             "name": "swagger-api/swagger-ui",
-            "version": "v3.38.0",
+            "version": "v3.39.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swagger-api/swagger-ui.git",
-                "reference": "bf97e1f2439c26421fa36f187f675b6c81701368"
+                "reference": "aab0511e07cbb059e1f430aae02ed1f226366829"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swagger-api/swagger-ui/zipball/bf97e1f2439c26421fa36f187f675b6c81701368",
-                "reference": "bf97e1f2439c26421fa36f187f675b6c81701368",
+                "url": "https://api.github.com/repos/swagger-api/swagger-ui/zipball/aab0511e07cbb059e1f430aae02ed1f226366829",
+                "reference": "aab0511e07cbb059e1f430aae02ed1f226366829",
                 "shasum": ""
             },
             "type": "library",
@@ -14909,9 +14907,9 @@
             ],
             "support": {
                 "issues": "https://github.com/swagger-api/swagger-ui/issues",
-                "source": "https://github.com/swagger-api/swagger-ui/tree/v3.38.0"
+                "source": "https://github.com/swagger-api/swagger-ui/tree/v3.39.0"
             },
-            "time": "2020-12-10T20:44:28+00:00"
+            "time": "2021-01-07T21:16:03+00:00"
         },
         {
             "name": "symfony-cmf/routing",
@@ -18256,8 +18254,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "acquia/blt-behat": 20,
-        "acquia/blt-phpcs": 20,
         "drupal/config_ignore": 20,
         "drupal/linkicon": 20,
         "drupal/mysql56": 10,
