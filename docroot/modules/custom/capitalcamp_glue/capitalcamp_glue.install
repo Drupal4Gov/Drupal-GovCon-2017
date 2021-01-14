@@ -340,6 +340,50 @@ function capitalcamp_glue_update_9005() {
 }
 
 /**
+ * Migrates Session Tracks.
+ */
+function capitalcamp_glue_update_9006() {
+  $terms = [
+    0 => [
+      'parent' => 156,
+      'children' => [46, 66, 381],
+    ],
+    1 => [
+      'parent' => 311,
+      'children' => [51, 56, 176],
+    ],
+    2 => [
+      'parent' => 171,
+      'children' => [61],
+    ],
+    3 => [
+      'parent' => 161,
+      'children' => [81],
+    ],
+    4 => [
+      'parent' => 166,
+      'children' => [91, 386],
+    ],
+    5 => [
+      'parent' => 306,
+      'children' => [181],
+    ],
+  ];
+  foreach ($terms as $term) {
+    $nids = _get_content_by_term($term['children']);
+    $nodes = Node::loadMultiple($nids);
+    foreach ($nodes as $node) {
+      $node->set('field_session_track', $term['parent']);
+      $node->save();
+    }
+    foreach ($term['children'] as $child) {
+      $delete = Term::load($child);
+      $delete->delete();
+    }
+  }
+}
+
+/**
  * A helper function for finding remove video media.
  *
  * @param string $url
@@ -370,4 +414,29 @@ function _update_session(EntityInterface $session, array $video_results) {
   $session->set('field_video', $video_results[key($video_results)]);
   $session->set('field_video_embed', NULL);
   $session->save();
+}
+
+/**
+ * A helper function to load all nodes tagged with any of the provided tids.
+ *
+ * @param array $tids
+ *   An array of term ids.
+ *
+ * @return array
+ *   Returns an array of node ids.
+ */
+function _get_content_by_term(array $tids) {
+  $nids = [];
+  foreach ($tids as $tid) {
+    $node = \Drupal::service('entity_type.manager')->getStorage('node');
+    $node_results = $node->getQuery()
+      ->condition('type', 'session')
+      ->condition('field_session_track', $tid)
+      ->accessCheck(FALSE)
+      ->execute();
+    foreach ($node_results as $key => $value) {
+      $nids[$key] = $value;
+    }
+  }
+  return $nids;
 }
