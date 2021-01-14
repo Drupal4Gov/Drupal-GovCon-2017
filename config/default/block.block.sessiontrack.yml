@@ -1,0 +1,23 @@
+uuid: cb934e80-de7c-45d6-8500-13b5161a13dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.session_track
+  module:
+    - facets
+  theme:
+    - twentynineteen
+id: sessiontrack
+theme: twentynineteen
+region: sidebar_first
+weight: -14
+provider: null
+plugin: 'facet_block:session_track'
+settings:
+  id: 'facet_block:session_track'
+  label: 'Session Track'
+  provider: facets
+  label_display: visible
+  block_id: sessiontrack
+visibility: {  }

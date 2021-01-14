@@ -1,0 +1,23 @@
+uuid: 13f7c402-b72b-4ed1-8d19-0b14cd53a00f
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.content_type
+  module:
+    - facets
+  theme:
+    - twentynineteen
+id: contenttype
+theme: twentynineteen
+region: sidebar_first
+weight: -16
+provider: null
+plugin: 'facet_block:content_type'
+settings:
+  id: 'facet_block:content_type'
+  label: 'Content Type'
+  provider: facets
+  label_display: visible
+  block_id: contenttype
+visibility: {  }
