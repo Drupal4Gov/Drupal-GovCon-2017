@@ -49,6 +49,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  revision_log_message:
+    type: string_textarea
+    weight: 25
+    settings:
+      rows: 4
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
