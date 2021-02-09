@@ -1,0 +1,23 @@
+uuid: a3c5c67c-ca32-4f5b-8d84-8e38c4b30c35
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_male_attendees
+    - node.type.training
+id: node.training.field_male_attendees
+field_name: field_male_attendees
+entity_type: node
+bundle: training
+label: 'Male Attendees'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

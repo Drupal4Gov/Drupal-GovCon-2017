@@ -1,0 +1,29 @@
+uuid: 666e5b6b-d5db-4571-a0c6-c60f700c51a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_room_monitor
+    - node.type.training
+id: node.training.field_room_monitor
+field_name: field_room_monitor
+entity_type: node
+bundle: training
+label: 'Room Monitor'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings:
+    include_anonymous: true
+    filter:
+      type: _none
+    target_bundles: null
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+field_type: entity_reference

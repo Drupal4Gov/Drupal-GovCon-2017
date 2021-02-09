@@ -5,6 +5,7 @@ dependencies:
   config:
     - node.type.landing_page
     - node.type.page
+    - node.type.training
   module:
     - content_moderation
 _core:
@@ -75,4 +76,5 @@ type_settings:
     node:
       - landing_page
       - page
+      - training
   default_moderation_state: draft

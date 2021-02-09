@@ -1,0 +1,25 @@
+uuid: d901c24b-9f58-4016-8854-104cb2938575
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sponsoring_organization
+    - node.type.training
+id: node.training.field_sponsoring_organization
+field_name: field_sponsoring_organization
+entity_type: node
+bundle: training
+label: 'Sponsoring Organization(s)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: sponsor_reference
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference
