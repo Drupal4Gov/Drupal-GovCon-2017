@@ -1,21 +1,48 @@
-prod:
-    host: ded-2297.prod.hosting.acquia.com
-    options: { ac-env: prod, ac-realm: prod, ac-site: capitalcamp }
-    paths: { drush-script: drush }
-    root: /var/www/html/capitalcamp.prod/docroot
-    uri: capitalcamp.prod.acquia-sites.com
-    user: capitalcamp.prod
-test:
-    host: staging-7892.prod.hosting.acquia.com
-    options: { ac-env: test, ac-realm: prod, ac-site: capitalcamp }
-    paths: { drush-script: drush }
-    root: /var/www/html/capitalcamp.test/docroot
-    uri: capitalcampstg.prod.acquia-sites.com
-    user: capitalcamp.test
+# Application 'capitalcamp', environment 'dev'.
 dev:
-    host: staging-7801.prod.hosting.acquia.com
-    options: { ac-env: dev, ac-realm: prod, ac-site: capitalcamp }
-    paths: { drush-script: drush }
-    root: /var/www/html/capitalcamp.dev/docroot
-    uri: capitalcampdev.prod.acquia-sites.com
-    user: capitalcamp.dev
+  root: /var/www/html/capitalcamp.dev/docroot
+  ac-site: capitalcamp
+  ac-env: dev
+  ac-realm: prod
+  uri: capitalcampdev.prod.acquia-sites.com
+  dev.livedev:
+    parent: '@capitalcamp.dev'
+    root: /mnt/gfs/capitalcamp.dev/livedev/docroot
+  host: capitalcampdev.ssh.prod.acquia-sites.com
+  user: capitalcamp.dev
+  paths:
+    drush-script: drush9
+
+
+# Application 'capitalcamp', environment 'prod'.
+prod:
+  root: /var/www/html/capitalcamp.prod/docroot
+  ac-site: capitalcamp
+  ac-env: prod
+  ac-realm: prod
+  uri: capitalcamp.prod.acquia-sites.com
+  prod.livedev:
+    parent: '@capitalcamp.prod'
+    root: /mnt/gfs/capitalcamp.prod/livedev/docroot
+  host: capitalcamp.ssh.prod.acquia-sites.com
+  user: capitalcamp.prod
+  paths:
+    drush-script: drush9
+
+
+# Application 'capitalcamp', environment 'test'.
+test:
+  root: /var/www/html/capitalcamp.test/docroot
+  ac-site: capitalcamp
+  ac-env: test
+  ac-realm: prod
+  uri: capitalcampstg.prod.acquia-sites.com
+  test.livedev:
+    parent: '@capitalcamp.test'
+    root: /mnt/gfs/capitalcamp.test/livedev/docroot
+  host: capitalcampstg.ssh.prod.acquia-sites.com
+  user: capitalcamp.test
+  paths:
+    drush-script: drush9
+
+
