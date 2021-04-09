@@ -68,7 +68,6 @@ module:
   layout_builder_styles: 0
   layout_discovery: 0
   layout_library: 0
-  lightning: 0
   lightning_contact_form: 0
   lightning_core: 0
   lightning_landing_page: 0
@@ -102,7 +101,6 @@ module:
   panels_ipe: 0
   path: 0
   path_alias: 0
-  profile_switcher: 0
   purge: 0
   purge_drush: 0
   purge_processor_cron: 0
@@ -138,6 +136,7 @@ module:
   menu_link_content: 1
   pathauto: 1
   views: 10
+  minimal: 1000
 theme:
   stable: 0
   claro: 0
@@ -145,4 +144,4 @@ theme:
   twentynineteen: 0
 _core:
   default_config_hash: m2GVq11UAOVuNgj8x0t5fMOPujpvQQ_zxLoaly1BMEU
-profile: lightning
+profile: minimal
