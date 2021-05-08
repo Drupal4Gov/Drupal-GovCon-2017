@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "58c7f7867085fa543c75a670d66dcc9a",
+    "content-hash": "833253637b797d19d6296e8a8f211a7b",
     "packages": [
         {
             "name": "acquia/blt",
@@ -1258,7 +1258,7 @@
             "version": "v2.3.4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/fengyuanchen/cropper.git",
+                "url": "git@github.com:fengyuanchen/cropper.git",
                 "reference": "30c58b29ee21010e17e58ebab165fbd84285c685"
             },
             "dist": {
@@ -6633,7 +6633,7 @@
             "extra": {
                 "drupal": {
                     "version": "8.x-1.6",
-                    "datestamp": "1614961993",
+                    "datestamp": "1615218226",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -9903,6 +9903,60 @@
             }
         },
         {
+            "name": "drupal/purge_queuer_url",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/purge_queuer_url.git",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/purge_queuer_url-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "f0008bf6477f4ed119a709d114673396e16e7336"
+            },
+            "require": {
+                "drupal/core": "^8.8.6 || ^9",
+                "drupal/purge": "^3.0.0",
+                "php": ">=7.2"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1590746554",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                },
+                "branch-alias": {
+                    "dev-8.x-1.x": "1.x-dev"
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": "^10"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Niels van Mourik",
+                    "homepage": "http://www.nielsvm.org"
+                }
+            ],
+            "description": "Queues URLs or paths to your Purge queue utilizing a traffic database.",
+            "homepage": "https://www.drupal.org/project/purge_queuer_url",
+            "support": {
+                "source": "https://git.drupalcode.org/project/purge_queuer_url"
+            }
+        },
+        {
             "name": "drupal/qa_accounts",
             "version": "dev-1.x",
             "source": {
@@ -10707,7 +10761,7 @@
             "extra": {
                 "drupal": {
                     "version": "8.x-3.10",
-                    "datestamp": "1617833756",
+                    "datestamp": "1617840662",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -18741,9 +18795,9 @@
         "drupal/config_ignore": 20,
         "drupal/linkicon": 20,
         "drupal/mysql56": 10,
+        "drupal/pendo": 15,
         "drupal/qa_accounts": 20,
-        "jquery-ui/jquery-ui-touch-punch": 20,
-        "drupal/pendo": 15
+        "jquery-ui/jquery-ui-touch-punch": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
