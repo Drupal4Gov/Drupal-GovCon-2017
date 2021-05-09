@@ -1,0 +1,22 @@
+queue_paths: false
+host_override: false
+host: ''
+scheme_override: false
+scheme: http
+blacklist:
+  - /admin/
+  - '/user/login?destination='
+  - '/user/register?destination='
+  - /entity-browser
+  - txn=
+  - gclid=
+  - dclid=
+  - utm_source=
+  - utm_campaign=
+  - utm_content=
+  - utm_medium=
+  - /edit
+  - /delete
+  - translations
+_core:
+  default_config_hash: obwk8cp3Gjq7t5qs3lb8DPFDA_u2u-gkTfbpZKvaBfc
