@@ -12,7 +12,333 @@ id: 2019_registration
 title: '2019 Registration'
 description: ''
 category: ''
-elements: "markup_01:\n  '#type': webform_markup\n  '#markup': '<strong>We are at capacity. Your registration will be placed on a wait list and you will be contacted if a spot opens up. You are still encouraged to register - we are often able to accommodate our wait list.</strong>'\nemail:\n  '#type': email\n  '#title': 'Attendee Email'\n  '#required': true\n  '#required_error': 'Email is a required field.'\nplease_indicate_the_days_when_you_ll_need_lunch_this_will_help_u:\n  '#type': checkboxes\n  '#title': 'Please indicate the days when you''ll need lunch. This will help us order the right number of lunches for the conference.'\n  '#options':\n    'Wednesday, July 24': Wednesday\n    'Thursday, July 25': Thursday\n    'Friday, July 26': Friday\n    'I will not need lunch any of these days.': 'I will not need lunch any of these days.'\n  '#access_create_roles':\n    - administrator\n  '#access_update_roles':\n    - administrator\n  '#access_view_roles':\n    - authenticated\nmarkup:\n  '#type': webform_markup\n  '#markup': '<strong>NOTE:</strong>&nbsp;Late registrations (after July 12th) are not guaranteed lunch during the conference.'\npersonal_information:\n  '#type': fieldset\n  '#title': 'Personal Information'\n  first_name:\n    '#type': textfield\n    '#title': 'First Name'\n    '#required': true\n    '#required_error': 'First Name is a required field.'\n  last_name:\n    '#type': textfield\n    '#title': 'Last Name'\n    '#required': true\n    '#required_error': 'Last Name is a required field.'\n  gender:\n    '#type': select\n    '#title': Gender\n    '#options':\n      Male: Male\n      Female: Female\n      Trans: Trans\n      'Prefer Not To Disclose': 'Prefer Not To Disclose'\n    '#required_error': 'Gender is a required field.'\n    '#access_create_roles':\n      - administrator\n    '#access_update_roles':\n      - administrator\n    '#access_view_roles':\n      - administrator\n    '#access': false\n  drupal_org_user_name:\n    '#type': textfield\n    '#title': 'Drupal.org User Name'\n  twitter_handle:\n    '#type': textfield\n    '#title': 'Twitter Handle'\n  address:\n    '#type': webform_address\n    '#title': City/State/Country\n    '#address_2__access': false\n    '#postal_code__access': false\n    '#country__required': true\nlogistics:\n  '#type': fieldset\n  '#title': Logistics\n  t_shirt_size:\n    '#type': select\n    '#title': 'T-Shirt Size'\n    '#options':\n      XS: XS\n      S: S\n      M: M\n      L: L\n      XL: XL\n      2XL: 2XL\n      3XL: 3XL\n      'No Thanks, I don''t want a Shirt': 'No Thanks, I don''t want a Shirt'\n    '#required': true\n    '#required_error': 'T-Shirt is a required field.'\n  food:\n    '#type': webform_select_other\n    '#title': 'Food Preferences'\n    '#options':\n      'No Restrictions': 'No Restrictions'\n      Vegetarian: Vegetarian\n      Vegan: Vegan\n      'Gluten Free': 'Gluten Free'\n      Halal: Halal\n      Kosher: Kosher\n    '#other__option_label': 'Special Diet'\n    '#other__placeholder': 'Please Explain'\n    '#required': true\n    '#required_error': 'Food Preferences is a required field.'\n  which_days_do_you_plan_to_attend_drupal_govcon_:\n    '#type': checkboxes\n    '#title': 'Which days do you plan to attend Drupal GovCon?'\n    '#options':\n      Wednesday: Wednesday\n      Thursday: Thursday\n      Friday: Friday\n    '#required': true\n    '#required_error': 'Attending Days is a required field.'\n  is_this_your_first_time_attending_drupal_govcon_:\n    '#type': select\n    '#title': 'Is this your first time attending Drupal GovCon?'\n    '#options':\n      'This is my first Drupal GovCon!': 'This is my first Drupal GovCon!'\n      'I’ve attended once before': 'I’ve attended once before'\n      'I''ve attended 2-3 Drupal GovCons': 'I''ve attended 2-3 Drupal GovCons'\n      'I’ve attended 4 or more Drupal GovCon': 'I’ve attended 4 or more Drupal GovCon'\n    '#required': true\n    '#required_error': 'Number of Times Attending is a required field.'\n  are_you_attending_sprints_:\n    '#type': select\n    '#title': 'Are you attending Sprints?'\n    '#options':\n      'Yes, I''m going to sprint on Core or Contrib': 'Yes, I''m going to sprint on Core or Contrib'\n      'Yes, I want to be a sprint mentor': 'Yes, I want to be a sprint mentor'\n      'No, I am not attending sprints': 'No, I am not attending sprints'\n      'I haven''t decided yet': 'I haven''t decided yet'\n    '#required': true\n  how_did_you_hear_about_drupal_govcon_:\n    '#type': select\n    '#title': 'How did you hear about Drupal GovCon?'\n    '#options':\n      'My company sent me': 'My company sent me'\n      'A friend or colleague referred me': 'A friend or colleague referred me'\n      'drupalgovcon.org or drupal4gov.us': 'drupalgovcon.org or drupal4gov.us'\n      'A Drupal camp, meetup, or sprint': 'A Drupal camp, meetup, or sprint'\n      'Social media': 'Social media'\n      'Previous Attendee': 'Previous Attendee'\n    '#required': true\n    '#required_error': 'How did you hear about Drupal GovCon is a required field.'\n  sign_up_for_news_:\n    '#type': checkboxes\n    '#title': 'Sign up for news!'\n    '#options':\n      'Sign me up for Drupal GovCon news': 'Sign me up for Drupal GovCon news'\n      'Sign me up for Drupal4Gov infrequent educational / training news': 'Sign me up for Drupal4Gov infrequent educational / training news'\n      'Sign me up for infrequent sponsor news and promotions': 'Sign me up for infrequent sponsor news and promotions'\n      'No thanks, I''m subscribed already or get my Drupal news elsewhere': 'No thanks, I''m subscribed already or get my Drupal news elsewhere'\n    '#required': true\n    '#required_error': 'Sign up for news is a required field'\ncompany_information:\n  '#type': fieldset\n  '#title': 'Company Information'\n  company_name:\n    '#type': textfield\n    '#title': 'Company Name'\n    '#required': true\n    '#required_error': 'Company Name is a required field.'\n  how_would_you_describe_your_company_:\n    '#type': webform_select_other\n    '#title': 'How would you describe your company?'\n    '#options':\n      'Federal Agency': 'Federal Agency'\n      'State Agency': 'State Agency'\n      'Local/City Agency': 'Local/City Agency'\n      'Digital Agency': 'Digital Agency'\n      Non-Profit: Non-Profit\n      'Design or Development Shop': 'Design or Development Shop'\n      'Hosting Company': 'Hosting Company'\n      'Independent Software Vendor (ISV)': 'Independent Software Vendor (ISV)'\n      'Media Partner/PR Firm': 'Media Partner/PR Firm'\n      Recruiter/Staffing: Recruiter/Staffing\n      'Systems Integrator (SI)': 'Systems Integrator (SI)'\n      Training/Books: Training/Books\n    '#other__option_label': Other\n    '#other__placeholder': ''\n    '#required': true\n    '#required_error': 'How would you describe your company is a required field.'\n  please_select_your_organization_s_size:\n    '#type': select\n    '#title': 'Please select your organization''s size'\n    '#options':\n      1: '1'\n      2-10: 2-10\n      11-50: 11-50\n      51-100: 51-100\n      101-500: 101-500\n      '501-1,000': '501-1,000'\n      '1,001-10,000': '1,001-10,000'\n      '10,000+': '10,000+'\n      'Don’t know/Not sure': 'Don’t know/Not sure'\n    '#required': true\n    '#required_error': 'Please select your organization''s size is a required field.'\n  please_select_the_industries_that_you_work_in_select_all_that_ap:\n    '#type': webform_checkboxes_other\n    '#title': 'Please select the industries that you work in (select all that apply)'\n    '#options':\n      Advertising: Advertising\n      Agriculture: Agriculture\n      Biotech: Biotech\n      Construction: Construction\n      Education: Education\n      Finance: Finance\n      Fishing: Fishing\n      Forestry: Forestry\n      Government: Government\n      Hospitality: Hospitality\n      Insurance: Insurance\n      Manufacturing: Manufacturing\n      Marketing: Marketing\n      Media: Media\n      Medical: Medical\n      Nonprofit: Nonprofit\n      Pharma: Pharma\n      PR: PR\n      'Real Estate': 'Real Estate'\n      'Retail or Wholesale Trade': 'Retail or Wholesale Trade'\n      Services: Services\n      Travel: Travel\n    '#other__option_label': Other\n    '#other__placeholder': ''\n    '#required': true\nprofessional_experience:\n  '#type': fieldset\n  '#title': 'Professional Experience'\n  how_do_you_use_drupal_:\n    '#type': webform_checkboxes_other\n    '#title': 'How do you use Drupal?'\n    '#options':\n      'Back-End Developer': 'Back-End Developer'\n      'Front-End Developer': 'Front-End Developer'\n      'Site Builder': 'Site Builder'\n      DevOps: DevOps\n      Themer: Themer\n      Designer: Designer\n      'Project Manager': 'Project Manager'\n      'Account Manager': 'Account Manager'\n      Sales: Sales\n      'I am evaluating Drupal': 'I am evaluating Drupal'\n      'I provide Drupal hosting solutions': 'I provide Drupal hosting solutions'\n      'I provide tools/services that integrate with Drupal': 'I provide tools/services that integrate with Drupal'\n    '#other__option_label': Other\n    '#other__placeholder': ''\n    '#required': true\n  what_is_your_level_of_drupal_experience_:\n    '#type': select\n    '#title': 'What is your level of Drupal experience?'\n    '#options':\n      'I''m just exploring Drupal': 'I''m just exploring Drupal'\n      'I''m a Drupal beginner': 'I''m a Drupal beginner'\n      'I have some Drupal skills': 'I have some Drupal skills'\n      'I have strong Drupal expertise': 'I have strong Drupal expertise'\n      'I am a Drupal master': 'I am a Drupal master'\n    '#required': true\n  what_is_your_role_at_your_organization_:\n    '#type': webform_select_other\n    '#title': 'What is your role at your organization?'\n    '#options':\n      'Business (Marketing / Sales / Bus. Dev)': 'Business (Marketing / Sales / Bus. Dev)'\n      'C Level (CEO/CMO/CTO, Director, etc.)': 'C Level (CEO/CMO/CTO, Director, etc.)'\n      'Technical Manager': 'Technical Manager'\n      'Front end (Developer, Themer, UX, Designer)': 'Front end (Developer, Themer, UX, Designer)'\n      'Site administrator (User manager, Content manager)': 'Site administrator (User manager, Content manager)'\n      Devops: Devops\n      'Full Stack Developer': 'Full Stack Developer'\n      'Project Management': 'Project Management'\n      Trainer: Trainer\n      Architect: Architect\n    '#other__option_label': Other\n    '#other__placeholder': ''\n    '#required': true\n  in_my_organization_i_have_input_on_the_purchase_of_the_following:\n    '#type': webform_checkboxes_other\n    '#title': 'In my organization, I have input on the purchase of the following:'\n    '#options':\n      'Content Management Systems': 'Content Management Systems'\n      'Customer Relationship Management (CRM) Tools': 'Customer Relationship Management (CRM) Tools'\n      'Digital Asset or Document Management Tools': 'Digital Asset or Document Management Tools'\n      'Dev Ops Tools': 'Dev Ops Tools'\n      'E-Commerce Tools': 'E-Commerce Tools'\n      'Hosting; Marketing Software': 'Hosting; Marketing Software'\n      'Project Management Software': 'Project Management Software'\n    '#other__option_label': Other\n    '#other__placeholder': ''\n    '#required': true\nparticipation_release:\n  '#type': fieldset\n  '#title': 'Participation Release'\n  '#access_create_roles':\n    - administrator\n  '#access_update_roles':\n    - administrator\n  '#access_view_roles':\n    - administrator\n  display_me_on_the_attendees_page:\n    '#type': checkbox\n    '#title': 'Display Me on the Attendees Page'\n    '#default_value': true\n    '#access_create_roles':\n      - administrator\n    '#access_update_roles':\n      - administrator\n    '#access_view_roles':\n      - administrator\ncontact_me_closer_to_the_event_regarding_on_site_volunteer_oppor:\n  '#type': checkbox\n  '#title': 'Contact me closer to the event regarding on-site volunteer opportunities.'\nplease_contact_me_to_discuss_my_specific_on_site_accessibility_n:\n  '#type': checkbox\n  '#title': 'Please contact me to discuss my specific on-site accessibility needs.'\nyes_i_have_read_and_will_adhere_to_the_drupal_govcon_code_of_con:\n  '#type': checkbox\n  '#title': 'Yes, I have read and will adhere to the Drupal GovCon Code of Conduct and Media Policy'\n  '#description': 'Review the <a href=\"https://www.drupalgovcon.org/code-conduct\" target=\"_blank\">Code of Conduct</a> and <a href=\"https://www.drupalgovcon.org/media-policy\" target=\"_blank\">Media Policy</a> here.'\n  '#required': true\nwait_list_checkbox:\n  '#type': checkboxes\n  '#title': 'Wait List Checkbox'\n  '#options':\n    1: 'Wait List*'\n  '#states_clear': false\n  '#default_value':\n    - '1'\n  '#access_create_roles':\n    - administrator\n  '#access_update_roles':\n    - administrator\n  '#access_view_roles':\n    - authenticated"
+elements: |-
+  markup_01:
+    '#type': webform_markup
+    '#markup': '<strong>We are at capacity. Your registration will be placed on a wait list and you will be contacted if a spot opens up. You are still encouraged to register - we are often able to accommodate our wait list.</strong>'
+  email:
+    '#type': email
+    '#title': 'Attendee Email'
+    '#required': true
+    '#required_error': 'Email is a required field.'
+  please_indicate_the_days_when_you_ll_need_lunch_this_will_help_u:
+    '#type': checkboxes
+    '#title': 'Please indicate the days when you''ll need lunch. This will help us order the right number of lunches for the conference.'
+    '#options':
+      'Wednesday, July 24': Wednesday
+      'Thursday, July 25': Thursday
+      'Friday, July 26': Friday
+      'I will not need lunch any of these days.': 'I will not need lunch any of these days.'
+    '#access_create_roles':
+      - administrator
+    '#access_update_roles':
+      - administrator
+    '#access_view_roles':
+      - authenticated
+  markup:
+    '#type': webform_markup
+    '#markup': '<strong>NOTE:</strong>&nbsp;Late registrations (after July 12th) are not guaranteed lunch during the conference.'
+  personal_information:
+    '#type': fieldset
+    '#title': 'Personal Information'
+    first_name:
+      '#type': textfield
+      '#title': 'First Name'
+      '#required': true
+      '#required_error': 'First Name is a required field.'
+    last_name:
+      '#type': textfield
+      '#title': 'Last Name'
+      '#required': true
+      '#required_error': 'Last Name is a required field.'
+    gender:
+      '#type': select
+      '#title': Gender
+      '#options':
+        Male: Male
+        Female: Female
+        Trans: Trans
+        'Prefer Not To Disclose': 'Prefer Not To Disclose'
+      '#required_error': 'Gender is a required field.'
+      '#access_create_roles':
+        - administrator
+      '#access_update_roles':
+        - administrator
+      '#access_view_roles':
+        - administrator
+      '#access': false
+    drupal_org_user_name:
+      '#type': textfield
+      '#title': 'Drupal.org User Name'
+    twitter_handle:
+      '#type': textfield
+      '#title': 'Twitter Handle'
+    address:
+      '#type': webform_address
+      '#title': City/State/Country
+      '#address_2__access': false
+      '#postal_code__access': false
+      '#country__required': true
+  logistics:
+    '#type': fieldset
+    '#title': Logistics
+    t_shirt_size:
+      '#type': select
+      '#title': 'T-Shirt Size'
+      '#options':
+        XS: XS
+        S: S
+        M: M
+        L: L
+        XL: XL
+        2XL: 2XL
+        3XL: 3XL
+        'No Thanks, I don''t want a Shirt': 'No Thanks, I don''t want a Shirt'
+      '#required': true
+      '#required_error': 'T-Shirt is a required field.'
+    food:
+      '#type': webform_select_other
+      '#title': 'Food Preferences'
+      '#options':
+        'No Restrictions': 'No Restrictions'
+        Vegetarian: Vegetarian
+        Vegan: Vegan
+        'Gluten Free': 'Gluten Free'
+        Halal: Halal
+        Kosher: Kosher
+      '#other__option_label': 'Special Diet'
+      '#other__placeholder': 'Please Explain'
+      '#required': true
+      '#required_error': 'Food Preferences is a required field.'
+    which_days_do_you_plan_to_attend_drupal_govcon_:
+      '#type': checkboxes
+      '#title': 'Which days do you plan to attend Drupal GovCon?'
+      '#options':
+        Wednesday: Wednesday
+        Thursday: Thursday
+        Friday: Friday
+      '#required': true
+      '#required_error': 'Attending Days is a required field.'
+    is_this_your_first_time_attending_drupal_govcon_:
+      '#type': select
+      '#title': 'Is this your first time attending Drupal GovCon?'
+      '#options':
+        'This is my first Drupal GovCon!': 'This is my first Drupal GovCon!'
+        'I’ve attended once before': 'I’ve attended once before'
+        'I''ve attended 2-3 Drupal GovCons': 'I''ve attended 2-3 Drupal GovCons'
+        'I’ve attended 4 or more Drupal GovCon': 'I’ve attended 4 or more Drupal GovCon'
+      '#required': true
+      '#required_error': 'Number of Times Attending is a required field.'
+    are_you_attending_sprints_:
+      '#type': select
+      '#title': 'Are you attending Sprints?'
+      '#options':
+        'Yes, I''m going to sprint on Core or Contrib': 'Yes, I''m going to sprint on Core or Contrib'
+        'Yes, I want to be a sprint mentor': 'Yes, I want to be a sprint mentor'
+        'No, I am not attending sprints': 'No, I am not attending sprints'
+        'I haven''t decided yet': 'I haven''t decided yet'
+      '#required': true
+    how_did_you_hear_about_drupal_govcon_:
+      '#type': select
+      '#title': 'How did you hear about Drupal GovCon?'
+      '#options':
+        'My company sent me': 'My company sent me'
+        'A friend or colleague referred me': 'A friend or colleague referred me'
+        'drupalgovcon.org or drupal4gov.us': 'drupalgovcon.org or drupal4gov.us'
+        'A Drupal camp, meetup, or sprint': 'A Drupal camp, meetup, or sprint'
+        'Social media': 'Social media'
+        'Previous Attendee': 'Previous Attendee'
+      '#required': true
+      '#required_error': 'How did you hear about Drupal GovCon is a required field.'
+    sign_up_for_news_:
+      '#type': checkboxes
+      '#title': 'Sign up for news!'
+      '#options':
+        'Sign me up for Drupal GovCon news': 'Sign me up for Drupal GovCon news'
+        'Sign me up for Drupal4Gov infrequent educational / training news': 'Sign me up for Drupal4Gov infrequent educational / training news'
+        'Sign me up for infrequent sponsor news and promotions': 'Sign me up for infrequent sponsor news and promotions'
+        'No thanks, I''m subscribed already or get my Drupal news elsewhere': 'No thanks, I''m subscribed already or get my Drupal news elsewhere'
+      '#required': true
+      '#required_error': 'Sign up for news is a required field'
+  company_information:
+    '#type': fieldset
+    '#title': 'Company Information'
+    company_name:
+      '#type': textfield
+      '#title': 'Company Name'
+      '#required': true
+      '#required_error': 'Company Name is a required field.'
+    how_would_you_describe_your_company_:
+      '#type': webform_select_other
+      '#title': 'How would you describe your company?'
+      '#options':
+        'Federal Agency': 'Federal Agency'
+        'State Agency': 'State Agency'
+        'Local/City Agency': 'Local/City Agency'
+        'Digital Agency': 'Digital Agency'
+        Non-Profit: Non-Profit
+        'Design or Development Shop': 'Design or Development Shop'
+        'Hosting Company': 'Hosting Company'
+        'Independent Software Vendor (ISV)': 'Independent Software Vendor (ISV)'
+        'Media Partner/PR Firm': 'Media Partner/PR Firm'
+        Recruiter/Staffing: Recruiter/Staffing
+        'Systems Integrator (SI)': 'Systems Integrator (SI)'
+        Training/Books: Training/Books
+      '#other__option_label': Other
+      '#other__placeholder': ''
+      '#required': true
+      '#required_error': 'How would you describe your company is a required field.'
+    please_select_your_organization_s_size:
+      '#type': select
+      '#title': 'Please select your organization''s size'
+      '#options':
+        1: '1'
+        2-10: 2-10
+        11-50: 11-50
+        51-100: 51-100
+        101-500: 101-500
+        '501-1,000': '501-1,000'
+        '1,001-10,000': '1,001-10,000'
+        '10,000+': '10,000+'
+        'Don’t know/Not sure': 'Don’t know/Not sure'
+      '#required': true
+      '#required_error': 'Please select your organization''s size is a required field.'
+    please_select_the_industries_that_you_work_in_select_all_that_ap:
+      '#type': webform_checkboxes_other
+      '#title': 'Please select the industries that you work in (select all that apply)'
+      '#options':
+        Advertising: Advertising
+        Agriculture: Agriculture
+        Biotech: Biotech
+        Construction: Construction
+        Education: Education
+        Finance: Finance
+        Fishing: Fishing
+        Forestry: Forestry
+        Government: Government
+        Hospitality: Hospitality
+        Insurance: Insurance
+        Manufacturing: Manufacturing
+        Marketing: Marketing
+        Media: Media
+        Medical: Medical
+        Nonprofit: Nonprofit
+        Pharma: Pharma
+        PR: PR
+        'Real Estate': 'Real Estate'
+        'Retail or Wholesale Trade': 'Retail or Wholesale Trade'
+        Services: Services
+        Travel: Travel
+      '#other__option_label': Other
+      '#other__placeholder': ''
+      '#required': true
+  professional_experience:
+    '#type': fieldset
+    '#title': 'Professional Experience'
+    how_do_you_use_drupal_:
+      '#type': webform_checkboxes_other
+      '#title': 'How do you use Drupal?'
+      '#options':
+        'Back-End Developer': 'Back-End Developer'
+        'Front-End Developer': 'Front-End Developer'
+        'Site Builder': 'Site Builder'
+        DevOps: DevOps
+        Themer: Themer
+        Designer: Designer
+        'Project Manager': 'Project Manager'
+        'Account Manager': 'Account Manager'
+        Sales: Sales
+        'I am evaluating Drupal': 'I am evaluating Drupal'
+        'I provide Drupal hosting solutions': 'I provide Drupal hosting solutions'
+        'I provide tools/services that integrate with Drupal': 'I provide tools/services that integrate with Drupal'
+      '#other__option_label': Other
+      '#other__placeholder': ''
+      '#required': true
+    what_is_your_level_of_drupal_experience_:
+      '#type': select
+      '#title': 'What is your level of Drupal experience?'
+      '#options':
+        'I''m just exploring Drupal': 'I''m just exploring Drupal'
+        'I''m a Drupal beginner': 'I''m a Drupal beginner'
+        'I have some Drupal skills': 'I have some Drupal skills'
+        'I have strong Drupal expertise': 'I have strong Drupal expertise'
+        'I am a Drupal master': 'I am a Drupal master'
+      '#required': true
+    what_is_your_role_at_your_organization_:
+      '#type': webform_select_other
+      '#title': 'What is your role at your organization?'
+      '#options':
+        'Business (Marketing / Sales / Bus. Dev)': 'Business (Marketing / Sales / Bus. Dev)'
+        'C Level (CEO/CMO/CTO, Director, etc.)': 'C Level (CEO/CMO/CTO, Director, etc.)'
+        'Technical Manager': 'Technical Manager'
+        'Front end (Developer, Themer, UX, Designer)': 'Front end (Developer, Themer, UX, Designer)'
+        'Site administrator (User manager, Content manager)': 'Site administrator (User manager, Content manager)'
+        Devops: Devops
+        'Full Stack Developer': 'Full Stack Developer'
+        'Project Management': 'Project Management'
+        Trainer: Trainer
+        Architect: Architect
+      '#other__option_label': Other
+      '#other__placeholder': ''
+      '#required': true
+    in_my_organization_i_have_input_on_the_purchase_of_the_following:
+      '#type': webform_checkboxes_other
+      '#title': 'In my organization, I have input on the purchase of the following:'
+      '#options':
+        'Content Management Systems': 'Content Management Systems'
+        'Customer Relationship Management (CRM) Tools': 'Customer Relationship Management (CRM) Tools'
+        'Digital Asset or Document Management Tools': 'Digital Asset or Document Management Tools'
+        'Dev Ops Tools': 'Dev Ops Tools'
+        'E-Commerce Tools': 'E-Commerce Tools'
+        'Hosting; Marketing Software': 'Hosting; Marketing Software'
+        'Project Management Software': 'Project Management Software'
+      '#other__option_label': Other
+      '#other__placeholder': ''
+      '#required': true
+  participation_release:
+    '#type': fieldset
+    '#title': 'Participation Release'
+    '#access_create_roles':
+      - administrator
+    '#access_update_roles':
+      - administrator
+    '#access_view_roles':
+      - administrator
+    display_me_on_the_attendees_page:
+      '#type': checkbox
+      '#title': 'Display Me on the Attendees Page'
+      '#default_value': true
+      '#access_create_roles':
+        - administrator
+      '#access_update_roles':
+        - administrator
+      '#access_view_roles':
+        - administrator
+  contact_me_closer_to_the_event_regarding_on_site_volunteer_oppor:
+    '#type': checkbox
+    '#title': 'Contact me closer to the event regarding on-site volunteer opportunities.'
+  please_contact_me_to_discuss_my_specific_on_site_accessibility_n:
+    '#type': checkbox
+    '#title': 'Please contact me to discuss my specific on-site accessibility needs.'
+  yes_i_have_read_and_will_adhere_to_the_drupal_govcon_code_of_con:
+    '#type': checkbox
+    '#title': 'Yes, I have read and will adhere to the Drupal GovCon Code of Conduct and Media Policy'
+    '#description': 'Review the <a href="https://www.drupalgovcon.org/code-conduct" target="_blank">Code of Conduct</a> and <a href="https://www.drupalgovcon.org/media-policy" target="_blank">Media Policy</a> here.'
+    '#required': true
+  wait_list_checkbox:
+    '#type': checkboxes
+    '#title': 'Wait List Checkbox'
+    '#options':
+      1: 'Wait List*'
+    '#states_clear': false
+    '#default_value':
+      - '1'
+    '#access_create_roles':
+      - administrator
+    '#access_update_roles':
+      - administrator
+    '#access_view_roles':
+      - authenticated
 css: ''
 javascript: ''
 settings:

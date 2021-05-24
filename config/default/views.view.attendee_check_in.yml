@@ -81,7 +81,9 @@ display:
                 bef_collapsible: false
                 is_secondary: false
                 rewrite:
-                  filter_rewrite_values: "True|Yes\nFalse|No"
+                  filter_rewrite_values: |-
+                    True|Yes
+                    False|No
           text_input_required_format: simple_text
       pager:
         type: full

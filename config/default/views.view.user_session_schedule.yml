@@ -251,7 +251,9 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "{{ title }}\n{{ body }}"
+            text: |-
+              {{ title }}
+              {{ body }}
             make_link: false
             path: ''
             absolute: false

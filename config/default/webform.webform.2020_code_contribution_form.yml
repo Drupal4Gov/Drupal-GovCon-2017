@@ -12,7 +12,43 @@ id: 2020_code_contribution_form
 title: '2020 Code Contribution Form'
 description: "<p>Drupal thrives on community! Interested in contributing back to Drupal?</p>\r\n\r\n<p>Please fill out form to participate in Drupal GovCon&#39;s code contribution on September 23 - 25, 2020.</p>\r\n<br />\r\n&nbsp;"
 category: ''
-elements: "email_address:\n  '#type': email\n  '#title': 'Email address'\n  '#required': true\nfirst_name:\n  '#type': textfield\n  '#title': 'First Name'\n  '#required': true\n  '#required_error': 'Please enter your first name.'\nlast_name:\n  '#type': textfield\n  '#title': 'Last Name'\n  '#required': true\n  '#required_error': 'Please enter your last name.'\nform_day_job:\n  '#type': textarea\n  '#title': 'Please tell us in 2-3 sentences what you do in your day job?'\nexperience_level_with_drupal:\n  '#type': webform_rating\n  '#title': 'Rate your experience level with Drupal'\n  '#description': '1 Star equals None through 5 Stars equals Expert.'\nwhat_type_of_issue:\n  '#type': textarea\n  '#title': 'What type of issues do you want to work on?'\nissue_to_work_on_:\n  '#type': radios\n  '#title': 'Do you need help finding an issue to work on?'\n  '#options':\n    'yes': 'Yes'\n    'no': 'No'\nhave_you_previously_participated_in_a_code_contribution_:\n  '#type': radios\n  '#title': 'Have you previously participated in a code contribution?'\n  '#options':\n    'yes': 'Yes'\n    'no': 'No'"
+elements: |-
+  email_address:
+    '#type': email
+    '#title': 'Email address'
+    '#required': true
+  first_name:
+    '#type': textfield
+    '#title': 'First Name'
+    '#required': true
+    '#required_error': 'Please enter your first name.'
+  last_name:
+    '#type': textfield
+    '#title': 'Last Name'
+    '#required': true
+    '#required_error': 'Please enter your last name.'
+  form_day_job:
+    '#type': textarea
+    '#title': 'Please tell us in 2-3 sentences what you do in your day job?'
+  experience_level_with_drupal:
+    '#type': webform_rating
+    '#title': 'Rate your experience level with Drupal'
+    '#description': '1 Star equals None through 5 Stars equals Expert.'
+  what_type_of_issue:
+    '#type': textarea
+    '#title': 'What type of issues do you want to work on?'
+  issue_to_work_on_:
+    '#type': radios
+    '#title': 'Do you need help finding an issue to work on?'
+    '#options':
+      'yes': 'Yes'
+      'no': 'No'
+  have_you_previously_participated_in_a_code_contribution_:
+    '#type': radios
+    '#title': 'Have you previously participated in a code contribution?'
+    '#options':
+      'yes': 'Yes'
+      'no': 'No'
 css: ''
 javascript: ''
 settings:
