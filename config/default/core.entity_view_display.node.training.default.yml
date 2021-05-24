@@ -1,0 +1,138 @@
+uuid: ab2c5169-9182-4642-8f9a-f58e941372c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.training.body
+    - field.field.node.training.field_conference_year
+    - field.field.node.training.field_experience_level
+    - field.field.node.training.field_female_attendees
+    - field.field.node.training.field_male_attendees
+    - field.field.node.training.field_room
+    - field.field.node.training.field_room_monitor
+    - field.field.node.training.field_session_co_presenter_s_
+    - field.field.node.training.field_session_date_time
+    - field.field.node.training.field_session_track
+    - field.field.node.training.field_sponsoring_organization
+    - field.field.node.training.field_status
+    - field.field.node.training.field_training_length
+    - node.type.training
+  module:
+    - datetime
+    - field_group
+    - options
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_audience:
+      children:
+        - field_experience_level
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: Audience
+    group_schedule_info:
+      children:
+        - field_conference_year
+        - field_session_date_time
+        - field_room
+      parent_name: ''
+      weight: 3
+      format_type: fieldset
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+      label: 'Schedule Info'
+id: node.training.default
+targetEntityType: node
+bundle: training
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_conference_year:
+    weight: 6
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_experience_level:
+    weight: 8
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_room:
+    weight: 8
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_session_date_time:
+    weight: 7
+    label: inline
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_session_track:
+    weight: 10
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_sponsoring_organization:
+    weight: 7
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_status:
+    weight: 8
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_training_length:
+    weight: 9
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  content_moderation_control: true
+  field_female_attendees: true
+  field_male_attendees: true
+  field_room_monitor: true
+  field_session_co_presenter_s_: true

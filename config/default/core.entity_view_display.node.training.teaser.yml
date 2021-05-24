@@ -1,0 +1,55 @@
+uuid: 16e7840b-4320-4295-a76c-23f3b75647db
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.training.body
+    - field.field.node.training.field_conference_year
+    - field.field.node.training.field_experience_level
+    - field.field.node.training.field_female_attendees
+    - field.field.node.training.field_male_attendees
+    - field.field.node.training.field_room
+    - field.field.node.training.field_room_monitor
+    - field.field.node.training.field_session_co_presenter_s_
+    - field.field.node.training.field_session_date_time
+    - field.field.node.training.field_session_track
+    - field.field.node.training.field_sponsoring_organization
+    - field.field.node.training.field_status
+    - field.field.node.training.field_training_length
+    - node.type.training
+  module:
+    - text
+    - user
+id: node.training.teaser
+targetEntityType: node
+bundle: training
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  content_moderation_control: true
+  field_conference_year: true
+  field_experience_level: true
+  field_female_attendees: true
+  field_male_attendees: true
+  field_room: true
+  field_room_monitor: true
+  field_session_co_presenter_s_: true
+  field_session_date_time: true
+  field_session_track: true
+  field_sponsoring_organization: true
+  field_status: true
+  field_training_length: true

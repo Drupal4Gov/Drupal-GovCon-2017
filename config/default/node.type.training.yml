@@ -1,0 +1,20 @@
+uuid: 0ac183c7-32db-4854-a632-a129ed85f96b
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_workflow
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+  lightning_workflow:
+    workflow: editorial
+name: Training
+type: training
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

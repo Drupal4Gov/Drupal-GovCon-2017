@@ -1,0 +1,25 @@
+uuid: 8009a34d-4dfb-4e2d-b7b4-18501ca86e8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_session_track
+    - node.type.training
+id: node.training.field_session_track
+field_name: field_session_track
+entity_type: node
+bundle: training
+label: 'Session Track'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: session_track_filter
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

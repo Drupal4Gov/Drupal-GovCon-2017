@@ -1,0 +1,23 @@
+uuid: 618030ab-2b28-417e-95f2-2df495c69b33
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_female_attendees
+    - node.type.training
+id: node.training.field_female_attendees
+field_name: field_female_attendees
+entity_type: node
+bundle: training
+label: 'Female Attendees'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer
