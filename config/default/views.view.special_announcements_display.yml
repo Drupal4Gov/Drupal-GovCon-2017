@@ -9,6 +9,7 @@ dependencies:
     - node.type.special_announcement
     - taxonomy.vocabulary.conference_year
   content:
+    - 'taxonomy_term:conference_year:536e5ab2-4508-4b6d-9536-6c9d0c30c506'
     - 'taxonomy_term:conference_year:b841e242-eb84-4bf9-b245-4c809e3737bd'
   module:
     - datetime
@@ -666,7 +667,7 @@ display:
           admin_label: ''
           operator: or
           value:
-            296: 296
+            391: 391
           group: 1
           exposed: false
           expose:
