@@ -10,7 +10,7 @@ dependencies:
     - taxonomy.vocabulary.conference_year
     - taxonomy.vocabulary.sponsorship_level
   content:
-    - 'taxonomy_term:conference_year:b841e242-eb84-4bf9-b245-4c809e3737bd'
+    - 'taxonomy_term:conference_year:536e5ab2-4508-4b6d-9536-6c9d0c30c506'
     - 'taxonomy_term:sponsorship_level:7d513731-0643-4b01-988b-32a31f02844e'
   module:
     - link
@@ -306,7 +306,7 @@ display:
           empty: false
           tokenize: false
           content:
-            value: '<a href="2020/sponsors">See all our sponsors here</a>'
+            value: '<a href="sponsors">See all our sponsors here</a>'
             format: simple_text
           plugin_id: text
       arguments: {  }
@@ -346,7 +346,7 @@ display:
           admin_label: ''
           operator: or
           value:
-            296: 296
+            391: 391
           group: 1
           exposed: false
           expose:
