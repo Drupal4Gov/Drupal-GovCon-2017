@@ -12,7 +12,37 @@ id: 2018_volunteer_form
 title: '2018 Volunteer Form'
 description: ''
 category: ''
-elements: "first_name:\n  '#type': textfield\n  '#title': 'First Name'\n  '#required': true\n  '#required_error': 'First Name is a required field.'\nlast_name:\n  '#type': textfield\n  '#title': 'Last Name'\n  '#required': true\n  '#required_error': 'Last Name is a required field.'\nemail:\n  '#type': email\n  '#title': Email\n  '#required': true\n  '#required_error': 'Email is a required field.'\nmobile_phone:\n  '#type': tel\n  '#title': 'Mobile Phone'\n  '#description': 'Number&nbsp;will only be used to coordinate specific volunteer positions and will not be shared.'\nhave_you_volunteered_for_drupal_govcon_in_the_past_:\n  '#type': radios\n  '#title': 'Have you volunteered for Drupal GovCon in the past?'\n  '#options':\n    'Yes': 'Yes'\n    'No': 'No'\n  '#required': true\n  '#required_error': 'Answered is required.'\ncomments:\n  '#type': textarea\n  '#title': Comments"
+elements: |-
+  first_name:
+    '#type': textfield
+    '#title': 'First Name'
+    '#required': true
+    '#required_error': 'First Name is a required field.'
+  last_name:
+    '#type': textfield
+    '#title': 'Last Name'
+    '#required': true
+    '#required_error': 'Last Name is a required field.'
+  email:
+    '#type': email
+    '#title': Email
+    '#required': true
+    '#required_error': 'Email is a required field.'
+  mobile_phone:
+    '#type': tel
+    '#title': 'Mobile Phone'
+    '#description': 'Number&nbsp;will only be used to coordinate specific volunteer positions and will not be shared.'
+  have_you_volunteered_for_drupal_govcon_in_the_past_:
+    '#type': radios
+    '#title': 'Have you volunteered for Drupal GovCon in the past?'
+    '#options':
+      'Yes': 'Yes'
+      'No': 'No'
+    '#required': true
+    '#required_error': 'Answered is required.'
+  comments:
+    '#type': textarea
+    '#title': Comments
 css: ''
 javascript: ''
 settings:
