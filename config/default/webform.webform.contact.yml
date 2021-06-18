@@ -12,7 +12,30 @@ id: contact
 title: Contact
 description: ''
 category: ''
-elements: "email:\n  '#type': email\n  '#title': Email\n  '#default_value': '[current-user:mail]'\n  '#title_display': before\n  '#description_display': after\n  '#required': true\n  '#required_error': 'Email is required'\nmessage:\n  '#type': textarea\n  '#title': Message\n  '#title_display': before\n  '#description_display': invisible\n  '#rows': 400\n  '#required': true\n  '#required_error': 'Message is required'\ncontact:\n  '#type': captcha\n  '#captcha_type': recaptcha/reCAPTCHA\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#preview_next__label': 'Preview message'\n"
+elements: |
+  email:
+    '#type': email
+    '#title': Email
+    '#default_value': '[current-user:mail]'
+    '#title_display': before
+    '#description_display': after
+    '#required': true
+    '#required_error': 'Email is required'
+  message:
+    '#type': textarea
+    '#title': Message
+    '#title_display': before
+    '#description_display': invisible
+    '#rows': 400
+    '#required': true
+    '#required_error': 'Message is required'
+  contact:
+    '#type': captcha
+    '#captcha_type': recaptcha/reCAPTCHA
+  actions:
+    '#type': webform_actions
+    '#title': 'Submit button(s)'
+    '#preview_next__label': 'Preview message'
 css: "#edit-message {\r\nheight: 200px;\r\n}"
 javascript: ''
 settings:
@@ -252,7 +275,14 @@ handlers:
       from_options: {  }
       from_name: _default
       subject: _default
-      body: "<br />\nThank you for your message. Someone from the Drupal GovCon team will be in touch with you soon. Please add [DGC or D4G email address] to your email contacts to make sure our response reaches you.<br />\n<br />\n&lt;p&gt;Submitted on [webform_submission:created]&lt;/p&gt;<br />\n&lt;p&gt;Submitted by: [webform_submission:user]&lt;/p&gt;<br />\n&lt;p&gt;Submitted values are:&lt;/p&gt;<br />\n[webform_submission:values]"
+      body: |-
+        <br />
+        Thank you for your message. Someone from the Drupal GovCon team will be in touch with you soon. Please add [DGC or D4G email address] to your email contacts to make sure our response reaches you.<br />
+        <br />
+        &lt;p&gt;Submitted on [webform_submission:created]&lt;/p&gt;<br />
+        &lt;p&gt;Submitted by: [webform_submission:user]&lt;/p&gt;<br />
+        &lt;p&gt;Submitted values are:&lt;/p&gt;<br />
+        [webform_submission:values]
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
