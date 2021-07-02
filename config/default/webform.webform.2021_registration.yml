@@ -1,6 +1,6 @@
 uuid: d954bd9e-e4c7-4067-ad29-7d43f318c70b
 langcode: en
-status: closed
+status: open
 dependencies:
   module:
     - honeypot
@@ -309,14 +309,14 @@ settings:
   ajax_effect: ''
   ajax_speed: null
   page: true
-  page_submit_path: ''
+  page_submit_path: /register
   page_confirm_path: ''
   page_theme_name: ''
   form_title: source_entity_webform
   form_submit_once: false
   form_exception_message: ''
   form_open_message: ''
-  form_close_message: 'Thank you for your interest in Drupal GovCon.&nbsp; Our registration and wait list are full. We will contact you by COB Monday, 22 July if we are able to accomodate you.'
+  form_close_message: 'Thank you for your interest in Drupal GovCon.&nbsp; Our registration and wait list are full.'
   form_previous_submissions: true
   form_confidential: false
   form_confidential_message: ''
@@ -383,7 +383,7 @@ settings:
   wizard_track: ''
   wizard_prev_button_label: ''
   wizard_next_button_label: ''
-  wizard_toggle: false
+  wizard_toggle: true
   wizard_toggle_show_label: ''
   wizard_toggle_hide_label: ''
   preview: 0
@@ -403,7 +403,7 @@ settings:
   draft_pending_multiple_message: ''
   confirmation_type: url_message
   confirmation_title: ''
-  confirmation_message: "<p style=\"line-height:1.38\"><span style=\"font-size:11pt; font-variant:normal; white-space:pre-wrap\"><span style=\"font-family:Arial\"><span style=\"color:#000000\"><span style=\"font-weight:400\"><span style=\"font-style:normal\"><span style=\"text-decoration:none\">Thank you for registering for Drupal GovCon! </span></span></span></span></span></span><br />\r\n<br />\r\n<strong data-renderer-mark=\"true\">We&#39;re Virtual!</strong><br />\r\nWe are still working through all the details of our virtual event. Please be sure to follow us @drupalgovcon and keep an eye on your inbox for future information on how the event will be held this year.</p>\r\n\r\n<p style=\"line-height:1.38\"><span style=\"font-size:11pt; font-variant:normal; white-space:pre-wrap\"><span style=\"font-family:Arial\"><span style=\"color:#000000\"><span style=\"font-weight:400\"><span style=\"font-style:normal\"><span style=\"text-decoration:none\">If you have questions , please contact us at <a href=\"mailto:drupal4gov@gmail.com\">drupal4gov@gmail.com</a>. </span></span></span></span></span></span></p>"
+  confirmation_message: "<p style=\"line-height:1.38\"><span style=\"font-size:11pt; font-variant:normal; white-space:pre-wrap\"><span style=\"font-family:Arial\"><span style=\"color:#000000\"><span style=\"font-weight:400\"><span style=\"font-style:normal\"><span style=\"text-decoration:none\">Thank you for registering for Drupal GovCon! </span></span></span></span></span></span><br />\r\n<br />\r\n<strong data-renderer-mark=\"true\">We&#39;re Virtual!</strong><br />\r\nWe are still working through all the details of our virtual event. Please be sure to follow us @drupalgovcon and keep an eye on your inbox for future information on how the event will be held this year.</p>\r\n\r\n<p style=\"line-height:1.38\"><span style=\"font-size:11pt; font-variant:normal; white-space:pre-wrap\"><span style=\"font-family:Arial\"><span style=\"color:#000000\"><span style=\"font-weight:400\"><span style=\"font-style:normal\"><span style=\"text-decoration:none\">If you have questions, please contact us at <a href=\"mailto:drupal4gov@gmail.com\">drupal4gov@gmail.com</a>. </span></span></span></span></span></span></p>"
   confirmation_url: user
   confirmation_attributes: {  }
   confirmation_back: true
