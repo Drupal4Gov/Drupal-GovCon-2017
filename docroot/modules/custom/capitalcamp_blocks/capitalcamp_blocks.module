@@ -25,6 +25,9 @@ function capitalcamp_blocks_theme($existing, $type, $theme, $path) {
         'conference_year' => NULL,
       ],
     ],
+    'dgc_sessionize' => [
+      'template' => 'dgc-sessionize',
+    ],
     'dgc_accepted_sessions' => [
       'template' => 'dgc-accepted-sessions',
       'variables' => [
