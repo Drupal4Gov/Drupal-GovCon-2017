@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e3ef62db77584e7b011749184128a20b",
+    "content-hash": "7bebe18b26d2b26ce6e0893cc2bee6c1",
     "packages": [
         {
             "name": "acquia/blt",
@@ -13120,6 +13120,45 @@
             "time": "2021-05-12T20:49:49+00:00"
         },
         {
+            "name": "mikemadison13/blt-lando",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mikemadison13/blt-lando.git",
+                "reference": "4982c932ecb7fcf1ef1dbd2781b44ace404e97b9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mikemadison13/blt-lando/zipball/4982c932ecb7fcf1ef1dbd2781b44ace404e97b9",
+                "reference": "4982c932ecb7fcf1ef1dbd2781b44ace404e97b9",
+                "shasum": ""
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Acquia\\BltLando\\": "./src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Mike Madison",
+                    "homepage": "https://mikemadison.net",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Lando integration for Acquia BLT.",
+            "support": {
+                "issues": "https://github.com/mikemadison13/blt-lando/issues",
+                "source": "https://github.com/mikemadison13/blt-lando/tree/main"
+            },
+            "time": "2021-07-08T16:05:54+00:00"
+        },
+        {
             "name": "mkalkbrenner/php-htmldiff-advanced",
             "version": "0.0.8",
             "source": {
@@ -18238,7 +18277,8 @@
         "drupal/linkicon": 20,
         "drupal/pendo": 15,
         "drupal/qa_accounts": 20,
-        "jquery-ui/jquery-ui-touch-punch": 20
+        "jquery-ui/jquery-ui-touch-punch": 20,
+        "mikemadison13/blt-lando": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
