@@ -27,6 +27,10 @@ function capitalcamp_blocks_theme($existing, $type, $theme, $path) {
     ],
     'dgc_sessionize' => [
       'template' => 'dgc-sessionize',
+      'variables' => [
+        'path' => NULL,
+        'base_url' => NULL,
+      ],
     ],
     'dgc_accepted_sessions' => [
       'template' => 'dgc-accepted-sessions',
