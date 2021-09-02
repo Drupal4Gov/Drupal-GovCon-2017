@@ -508,13 +508,13 @@ handlers:
       from_options: {  }
       from_name: _default
       subject: 'Thank you for registering for Drupal GovCon 2020'
-      body: "<p style=\"line-height:1.38\"><span style=\"font-size:11pt; font-variant:normal; white-space:pre-wrap\"><span style=\"font-family:Arial\"><span style=\"color:#000000\"><span style=\"font-weight:400\"><span style=\"font-style:normal\"><span style=\"text-decoration:none\">Thank you for registering for Drupal GovCon! </span></span></span></span></span></span><br />\r\n<br />\r\n<strong data-renderer-mark=\"true\">We&#39;re Virtual!</strong><br />\r\nWe are still working through all the details of our virtual event. Please be sure to follow us @drupalgovcon and keep an eye on your inbox for future information on how the event will be held this year.</p>\r\n\r\n<p style=\"line-height:1.38\"><span style=\"font-size:11pt; font-variant:normal; white-space:pre-wrap\"><span style=\"font-family:Arial\"><span style=\"color:#000000\"><span style=\"font-weight:400\"><span style=\"font-style:normal\"><span style=\"text-decoration:none\">If you have questions, please contact us at drupal4gov@gmail.com. </span></span></span></span></span></span></p>\r\n\r\n<p>&nbsp;</p>"
+      body: "Thank you for registering for Drupal GovCon!\r\n\r\nWe're Virtual!\r\n\r\nWe are still working through all the details of our virtual event. Please be sure to follow us @drupalgovcon and keep an eye on your inbox for future information on how the event will be held this year.\r\n\r\nIf you have questions, please contact us at drupal4gov@gmail.com."
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
       exclude_empty_checkbox: false
       exclude_attachments: false
-      html: true
+      html: false
       attachments: false
       twig: false
       debug: false
