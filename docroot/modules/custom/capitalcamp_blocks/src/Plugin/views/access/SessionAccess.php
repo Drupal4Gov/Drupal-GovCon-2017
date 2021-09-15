@@ -83,7 +83,7 @@ class SessionAccess extends AccessPluginBase {
       }
       // Find this user's webform(s), if present.
       $wids = $webformStorage->getQuery()
-        ->condition('webform_id', '2020_registration')
+        ->condition('webform_id', '2021_registration')
         ->condition('uid', $account->id())
         ->execute();
       $webforms = $webformStorage->loadMultiple($wids);
