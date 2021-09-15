@@ -21,12 +21,10 @@ dependencies:
     - 'taxonomy_term:conference_year:b841e242-eb84-4bf9-b245-4c809e3737bd'
     - 'taxonomy_term:session_track:0a204882-2395-405d-bc08-3d2e402400da'
     - 'taxonomy_term:session_track:18795e61-ba7c-451c-912e-6ef6835cf562'
-    - 'taxonomy_term:session_track:3a322e64-7752-4b8c-920a-8333ec5cdfa5'
     - 'taxonomy_term:session_track:823a0160-1ea6-4f10-90f4-06b2af4eb31c'
     - 'taxonomy_term:session_track:ac4813be-e88a-4bc5-b4d7-230924fa4d7e'
     - 'taxonomy_term:session_track:d69a8325-bc1a-4577-8991-65f240455bb8'
     - 'taxonomy_term:session_track:d7334075-7a5b-4ddd-a933-3621a8d0ece2'
-    - 'taxonomy_term:session_track:e02c5e10-cb18-49a2-bcf8-1cc4c4edd3c5'
   module:
     - better_exposed_filters
     - capitalcamp_glue
@@ -1760,7 +1758,7 @@ display:
         description: ''
         expanded: false
         parent: 'menu_link_content:cfde32b4-ff81-4a70-a608-5faf124c12ee'
-        weight: 0
+        weight: -43
         context: '0'
         menu_name: 2018-main-navigation
       arguments: {  }
@@ -3937,7 +3935,7 @@ display:
         description: ''
         expanded: false
         parent: 'menu_link_content:cfde32b4-ff81-4a70-a608-5faf124c12ee'
-        weight: 0
+        weight: -33
         context: '0'
         menu_name: 2018-main-navigation
         enabled: false
