@@ -300,6 +300,9 @@ elements: |-
     '#default_value': Ticket
     '#access_create_roles':
       - administrator
+  captcha:
+    '#type': captcha
+    '#captcha_type': recaptcha/reCAPTCHA
 css: ''
 javascript: ''
 settings:
@@ -349,9 +352,7 @@ settings:
   submission_label: ''
   submission_log: false
   submission_views: {  }
-  submission_views_replace:
-    webform_routes: {  }
-    node_routes: {  }
+  submission_views_replace: {  }
   submission_user_columns: {  }
   submission_user_duplicate: false
   submission_access_denied: default
@@ -403,7 +404,7 @@ settings:
   draft_pending_multiple_message: ''
   confirmation_type: url_message
   confirmation_title: ''
-  confirmation_message: "<p style=\"line-height:1.38\"><span style=\"font-size:11pt; font-variant:normal; white-space:pre-wrap\"><span style=\"font-family:Arial\"><span style=\"color:#000000\"><span style=\"font-weight:400\"><span style=\"font-style:normal\"><span style=\"text-decoration:none\">Thank you for registering for Drupal GovCon! </span></span></span></span></span></span><br />\r\n<br />\r\n<strong data-renderer-mark=\"true\">We&#39;re Virtual!</strong><br />\r\nWe are still working through all the details of our virtual event. Please be sure to follow us @drupalgovcon and keep an eye on your inbox for future information on how the event will be held this year.</p>\r\n\r\n<p style=\"line-height:1.38\"><span style=\"font-size:11pt; font-variant:normal; white-space:pre-wrap\"><span style=\"font-family:Arial\"><span style=\"color:#000000\"><span style=\"font-weight:400\"><span style=\"font-style:normal\"><span style=\"text-decoration:none\">If you have questions, please contact us at <a href=\"mailto:drupal4gov@gmail.com\">drupal4gov@gmail.com</a>. </span></span></span></span></span></span></p>"
+  confirmation_message: "<p style=\"line-height:1.38\"><span style=\"font-size:11pt; font-variant:normal; white-space:pre-wrap\"><span style=\"font-family:Arial\"><span style=\"color:#000000\"><span style=\"font-weight:400\"><span style=\"font-style:normal\"><span style=\"text-decoration:none\">Thank you for registering for Drupal GovCon! </span></span></span></span></span></span><br />\r\n<br />\r\n<strong data-renderer-mark=\"true\">We&#39;re Virtual!</strong><br />\r\nNow that you have a ticket to the event on our website,&nbsp;go <a href=\"https://hopin.com/events/drupal-govcon-2021-66aa9629-a6b6-4f58-8b61-51875a68bf73?code=nmsCWgCyukwdSUxp3LVbBseTV\">claim your free Hopin ticket</a> with the same email.</p>\r\n\r\n<p style=\"line-height:1.38\"><span style=\"font-size:11pt; font-variant:normal; white-space:pre-wrap\"><span style=\"font-family:Arial\"><span style=\"color:#000000\"><span style=\"font-weight:400\"><span style=\"font-style:normal\"><span style=\"text-decoration:none\">If you have questions, please contact us at <a href=\"mailto:drupal4gov@gmail.com\">drupal4gov@gmail.com</a>. </span></span></span></span></span></span></p>"
   confirmation_url: user
   confirmation_attributes: {  }
   confirmation_back: true
@@ -412,7 +413,7 @@ settings:
   confirmation_exclude_query: false
   confirmation_exclude_token: false
   confirmation_update: false
-  limit_total: 1600
+  limit_total: 2000
   limit_total_interval: null
   limit_total_message: ''
   limit_total_unique: false
@@ -508,7 +509,7 @@ handlers:
       from_options: {  }
       from_name: _default
       subject: 'Thank you for registering for Drupal GovCon 2021'
-      body: "Thank you for registering for Drupal GovCon!\r\n\r\nWe're Virtual!\r\n\r\nWe are still working through all the details of our virtual event. Please be sure to follow us @drupalgovcon and keep an eye on your inbox for future information on how the event will be held this year.\r\n\r\nIf you have questions, please contact us at drupal4gov@gmail.com."
+      body: "Thank you for registering for Drupal GovCon!\r\n\r\nWe're Virtual!\r\n\r\nNow that you have a ticket to the event on our website,\_go claim your free Hopin ticket with the same email (hopin.com/events/drupal-govcon-2021-66aa9629-a6b6-4f58-8b61-51875a68bf73?code=nmsCWgCyukwdSUxp3LVbBseTV).\r\n\r\nPlease be sure to follow us @drupalgovcon and keep an eye on your inbox for more information.\r\n\r\nIf you have questions, please contact us at drupal4gov@gmail.com."
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
