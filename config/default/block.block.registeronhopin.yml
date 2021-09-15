@@ -1,0 +1,38 @@
+uuid: 5a436c3d-5b6a-48ca-a1b6-8c4a43a7bba5
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:20dd7f5f-74bb-4780-b36f-1c36e3d490eb'
+  module:
+    - block_content
+    - system
+    - user
+  theme:
+    - twentynineteen
+id: registeronhopin
+theme: twentynineteen
+region: content
+weight: -10
+provider: null
+plugin: 'block_content:20dd7f5f-74bb-4780-b36f-1c36e3d490eb'
+settings:
+  id: 'block_content:20dd7f5f-74bb-4780-b36f-1c36e3d490eb'
+  label: 'Register on Hopin'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "/user/*\r\n!/user/*/edit\r\n"
+    negate: false
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
