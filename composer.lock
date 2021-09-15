@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a9f7082b3bfc31551bc328b2484af26e",
+    "content-hash": "4b75afc552ee8b1b99d4e73568d9c1e9",
     "packages": [
         {
             "name": "acquia/blt",
@@ -8296,36 +8296,37 @@
         },
         {
             "name": "drupal/panelizer",
-            "version": "5.0.0-beta3",
+            "version": "4.4.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/panelizer.git",
-                "reference": "8.x-5.0-beta3"
+                "reference": "8.x-4.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/panelizer-8.x-5.0-beta3.zip",
-                "reference": "8.x-5.0-beta3",
-                "shasum": "bd4691b700a8b90696853847fdbbd4535ed9d3bc"
+                "url": "https://ftp.drupal.org/files/projects/panelizer-8.x-4.4.zip",
+                "reference": "8.x-4.4",
+                "shasum": "2d19f0be1ad05a0882a276befabf746041b1b5d8"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9",
-                "drupal/core_context": "^1.0",
-                "drupal/ctools": ">=3.0.0-beta1",
+                "drupal/ctools": ">=3.1.0",
                 "drupal/ctools_block": "*",
-                "drupal/layout_library": "^1.0-beta1",
-                "drupal/panels": ">=4.0.0-alpha1",
-                "drupal/panels_ipe": ">=4.0.0-alpha1"
+                "drupal/panels": ">=4.4.0",
+                "drupal/panels_ipe": "*"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-5.0-beta3",
-                    "datestamp": "1588020468",
+                    "version": "8.x-4.4",
+                    "datestamp": "1588097387",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "branch-alias": {
+                    "dev-8.x-4.x": "4.x-dev"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -8602,134 +8603,6 @@
                 "source": "https://cgit.drupalcode.org/pathauto",
                 "issues": "https://www.drupal.org/project/issues/pathauto",
                 "documentation": "https://www.drupal.org/docs/8/modules/pathauto"
-            }
-        },
-        {
-            "name": "drupal/pendo",
-            "version": "1.0.0-alpha4",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/pendo.git",
-                "reference": "8.x-1.0-alpha4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/pendo-8.x-1.0-alpha4.zip",
-                "reference": "8.x-1.0-alpha4",
-                "shasum": "4b45c8c621b90e0d43e4684e38f2b3045d84c5c8"
-            },
-            "require": {
-                "drupal/core": "^8.8 || ^9"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.0-alpha4",
-                    "datestamp": "1585570339",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "balsama",
-                    "homepage": "https://www.drupal.org/user/223087"
-                },
-                {
-                    "name": "grasmash",
-                    "homepage": "https://www.drupal.org/user/455714"
-                },
-                {
-                    "name": "japerry",
-                    "homepage": "https://www.drupal.org/user/45640"
-                },
-                {
-                    "name": "phenaproxima",
-                    "homepage": "https://www.drupal.org/user/205645"
-                }
-            ],
-            "description": "Provides integration with Pendo software.",
-            "homepage": "https://www.drupal.org/project/pendo",
-            "support": {
-                "source": "http://cgit.drupalcode.org/pendo",
-                "issues": "https://www.drupal.org/project/issues/pendo"
-            }
-        },
-        {
-            "name": "drupal/profile_switcher",
-            "version": "1.0.0-alpha5",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/profile_switcher.git",
-                "reference": "8.x-1.0-alpha5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/profile_switcher-8.x-1.0-alpha5.zip",
-                "reference": "8.x-1.0-alpha5",
-                "shasum": "50af21dd1ebcf59e298f647f7c864c8f523a099a"
-            },
-            "require": {
-                "drupal/core": "^8 || ^9",
-                "php": ">=5.6.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.0-alpha5",
-                    "datestamp": "1606246132",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Alpha releases are not covered by Drupal security advisories."
-                    }
-                },
-                "drush": {
-                    "services": {
-                        "drush.services.yml": "^9"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Author name",
-                    "homepage": "https://www.drupal.org/user/3299791",
-                    "email": "author@example.com"
-                },
-                {
-                    "name": "alexmoreno",
-                    "homepage": "https://www.drupal.org/user/145609"
-                },
-                {
-                    "name": "joachim",
-                    "homepage": "https://www.drupal.org/user/107701"
-                },
-                {
-                    "name": "kreynen",
-                    "homepage": "https://www.drupal.org/user/48877"
-                },
-                {
-                    "name": "owenpm3",
-                    "homepage": "https://www.drupal.org/user/1644952"
-                },
-                {
-                    "name": "phenaproxima",
-                    "homepage": "https://www.drupal.org/user/205645"
-                }
-            ],
-            "description": "Allows switching of installation profiles for a Drupal site.",
-            "homepage": "https://www.drupal.org/project/profile_switcher",
-            "support": {
-                "source": "https://git.drupalcode.org/project/profile_switcher"
             }
         },
         {
@@ -17098,8 +16971,8 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/config_ignore": 20,
+        "drupal/core_context": 10,
         "drupal/linkicon": 20,
-        "drupal/pendo": 15,
         "drupal/qa_accounts": 20,
         "jquery-ui/jquery-ui-touch-punch": 20,
         "mikemadison13/blt-lando": 20

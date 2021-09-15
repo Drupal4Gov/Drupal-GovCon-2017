@@ -77,10 +77,8 @@
         "acquia/blt": "^13.0",
         "acquia/blt-behat": "^1.1",
         "acquia/blt-phpcs": "^1",
-        "acquia/memcache-settings": "^1",
+        "acquia/memcache-settings": "^1.1",
         "bower-asset/blazy": "^1.8",
-        "composer/installers": "^1.9",
-        "cweagans/composer-patches": "^1.6",
         "drupal/acquia_connector": "^3",
         "drupal/acquia_purge": "^1.0",
         "drupal/adminimal_admin_toolbar": "^1.0",
@@ -94,6 +92,7 @@
         "drupal/config_split": "^1.0.0",
         "drupal/core": "^9.1",
         "drupal/core-composer-scaffold": "^9.1",
+        "drupal/core_context": "^1.0@beta",
         "drupal/default_content": "^2",
         "drupal/devel": "^4.0.0",
         "drupal/entity_embed": "^1.1",
@@ -111,10 +110,6 @@
         "drupal/lightning_media": "^4.6",
         "drupal/lightning_workflow": "^3.16",
         "drupal/linkicon": "1.x-dev",
-        "drupal/page_manager": "^4.0-beta6",
-        "drupal/panelizer": "^5",
-        "drupal/pendo": "^1@alpha",
-        "drupal/profile_switcher": "^1.0-alpha5",
         "drupal/purge": "^3.0.0-beta6",
         "drupal/purge_queuer_url": "^1.0",
         "drupal/qa_accounts": "1.x-dev",
@@ -130,7 +125,6 @@
         "drupal/svg_image": "^1.8",
         "drupal/twig_xdebug": "^1.2",
         "drupal/upgrade_status": "^2.9",
-        "drupal/views_infinite_scroll": "^1.7",
         "drupal/webform": "^6",
         "drupal/webform_views": "^5.0-alpha8",
         "jquery-ui/jquery-ui-touch-punch": "dev-master",
@@ -194,7 +188,6 @@
         },
         "patches": {
             "drupal/core": {
-                "Ignore front end vendor folders to improve directory search performance": "https://www.drupal.org/files/issues/ignore_front_end_vendor-2329453-116.patch",
                 "2869592 - Disabled update module shouldn't produce a status report warning": "https://www.drupal.org/files/issues/2020-02-07/2869592-remove-update-warning-34.patch"
             }
         },
