@@ -440,3 +440,62 @@ function _get_content_by_term(array $tids) {
   }
   return $nids;
 }
+
+/**
+ * Cleanout Spam Webform Subs with Non-US Country AND US State.
+ */
+function capitalcamp_glue_update_9203() {
+  $subs = [];
+  $states = [
+    'Alabama', 'Alaska', 'American Samoa', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'District of Columbia', 'Florida', 'Georgia', 'Guam', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Minor Outlying Islands', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Northern Mariana Islands', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Puerto Rico', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'U.S. Virgin Islands', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming',
+  ];
+  $webformSubmission = \Drupal::entityTypeManager()->getStorage('webform_submission');
+  $database = \Drupal::service('database');
+  $select = $database->select('webform_submission_data', 'wsd')
+    ->fields('wsd', ['sid'])
+    ->condition('wsd.webform_id', '2021_registration')
+    ->condition('wsd.property', 'country')
+    ->condition('wsd.value', "United States", "!=");
+  $executed = $select->execute();
+  $results = $executed->fetchAll(\PDO::FETCH_ASSOC);
+
+  foreach ($results as $result) {
+    $subs[] = $result['sid'];
+  }
+  $subs = array_unique($subs);
+
+  foreach ($subs as $sub) {
+    $select2 = $database->select('webform_submission_data', 'wsd')
+      ->fields('wsd', ['sid'])
+      ->condition('wsd.webform_id', '2021_registration')
+      ->condition('wsd.sid', "$sub")
+      ->condition('wsd.property', 'state_province')
+      ->condition('wsd.value', $states, "IN");
+    $executed2 = $select2->execute();
+    $results2 = $executed2->fetchAll(\PDO::FETCH_ASSOC);
+    if (count($results2) === 1) {
+      $webformSubmission->load($sub)->delete();
+    }
+  }
+}
+
+/**
+ * Cleanout Spam Webform Subs with Spam Countries.
+ */
+function capitalcamp_glue_update_9204() {
+  $countries = [
+    'Australia', 'Austria', 'Canada', 'India', 'New Zealand', 'Philippines', 'South Africa', 'United Arab Emirates', 'United Kingdom', 'United States',
+  ];
+  $webformSubmission = \Drupal::entityTypeManager()->getStorage('webform_submission');
+  $database = \Drupal::service('database');
+  $select = $database->select('webform_submission_data', 'wsd')
+    ->fields('wsd', ['sid'])
+    ->condition('wsd.webform_id', '2021_registration')
+    ->condition('wsd.property', 'country')
+    ->condition('wsd.value', $countries, "NOT IN");
+  $executed = $select->execute();
+  $results = $executed->fetchAll(\PDO::FETCH_ASSOC);
+  foreach ($results as $result) {
+    $webformSubmission->load($result['sid'])->delete();
+  }
+}
