@@ -10,8 +10,6 @@ dev:
     root: /mnt/gfs/capitalcamp.dev/livedev/docroot
   host: capitalcampdev.ssh.prod.acquia-sites.com
   user: capitalcamp.dev
-  paths:
-    drush-script: drush9
 
 
 # Application 'capitalcamp', environment 'prod'.
@@ -26,8 +24,6 @@ prod:
     root: /mnt/gfs/capitalcamp.prod/livedev/docroot
   host: capitalcamp.ssh.prod.acquia-sites.com
   user: capitalcamp.prod
-  paths:
-    drush-script: drush9
 
 
 # Application 'capitalcamp', environment 'test'.
@@ -42,7 +38,5 @@ test:
     root: /mnt/gfs/capitalcamp.test/livedev/docroot
   host: capitalcampstg.ssh.prod.acquia-sites.com
   user: capitalcamp.test
-  paths:
-    drush-script: drush9
 
 
