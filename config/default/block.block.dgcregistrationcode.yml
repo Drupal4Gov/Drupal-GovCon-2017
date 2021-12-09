@@ -16,12 +16,12 @@ plugin: dgc_code_block
 settings:
   id: dgc_code_block
   label: 'DGC Registration Code'
-  provider: capitalcamp_blocks
   label_display: visible
+  provider: capitalcamp_blocks
   dgc_registration_code: ''
 visibility:
   request_path:
     id: request_path
-    pages: /full-and-half-day-training
     negate: false
     context_mapping: {  }
+    pages: /full-and-half-day-training

@@ -20,26 +20,26 @@ bundle: special_announcement
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 1
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 1
     region: content
   field_important_date:
-    weight: 2
+    type: datetime_default
     label: inline
     settings:
       timezone_override: ''
       format_type: month_day_year
     third_party_settings: {  }
-    type: datetime_default
+    weight: 2
     region: content
   links:
-    weight: 0
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   field_conference_year: true
   field_critical_announcement_text: true

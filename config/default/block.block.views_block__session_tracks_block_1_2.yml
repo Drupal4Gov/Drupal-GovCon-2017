@@ -18,13 +18,13 @@ plugin: 'views_block:session_tracks-block_1'
 settings:
   id: 'views_block:session_tracks-block_1'
   label: ''
-  provider: views
   label_display: visible
+  provider: views
   views_label: ''
   items_per_page: none
 visibility:
   request_path:
     id: request_path
-    pages: "/session-tracks\r\n/node/136"
     negate: false
     context_mapping: {  }
+    pages: "/session-tracks\r\n/node/136"

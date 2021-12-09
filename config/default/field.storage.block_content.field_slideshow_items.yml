@@ -2,12 +2,12 @@ uuid: 55ee6a30-77d8-4977-8c3b-90105bb52272
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - lightning_media_slideshow
   module:
     - block_content
     - media
+  enforced:
+    module:
+      - lightning_media_slideshow
 _core:
   default_config_hash: qZVgwfLqVT51mtZs2OuqUWmhd-nFrp5FaYIRsWEzZwE
 id: block_content.field_slideshow_items

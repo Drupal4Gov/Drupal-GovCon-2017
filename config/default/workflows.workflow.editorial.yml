@@ -21,14 +21,14 @@ type_settings:
       default_revision: true
     draft:
       label: Draft
+      weight: -5
       published: false
       default_revision: false
-      weight: -5
     published:
       label: Published
+      weight: 0
       published: true
       default_revision: true
-      weight: 0
     review:
       label: 'In review'
       weight: -1
@@ -49,28 +49,28 @@ type_settings:
       weight: 4
     create_new_draft:
       label: 'Create New Draft'
-      to: draft
-      weight: 0
       from:
         - archived
         - draft
         - published
         - review
+      to: draft
+      weight: 0
     publish:
       label: Publish
-      to: published
-      weight: 1
       from:
         - draft
         - published
         - review
+      to: published
+      weight: 1
     review:
       label: 'Send to review'
-      to: review
-      weight: 0
       from:
         - draft
         - review
+      to: review
+      weight: 0
   entity_types:
     node:
       - landing_page

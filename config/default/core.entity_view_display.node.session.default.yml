@@ -33,30 +33,30 @@ third_party_settings:
     group_audience:
       children:
         - field_experience_level
+      label: Audience
       parent_name: ''
+      region: content
       weight: 2
       format_type: fieldset
       format_settings:
-        description: ''
-        id: ''
         classes: ''
-      label: Audience
-      region: content
+        id: ''
+        description: ''
     group_schedule_info:
       children:
         - field_conference_year
         - field_session_date_time
         - field_session_room
         - field_room
+      label: 'Schedule Info'
       parent_name: ''
+      region: content
       weight: 3
       format_type: fieldset
       format_settings:
-        id: ''
         classes: ''
+        id: ''
         description: ''
-      label: 'Schedule Info'
-      region: content
 _core:
   default_config_hash: Tda_mdGceswLB5IEtanDUN-eLoQxO-iNV-i_xC8zGx8
 id: node.session.default
@@ -65,89 +65,89 @@ bundle: session
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 1
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 1
     region: content
   field_conference_year:
     type: entity_reference_label
-    weight: 0
-    region: content
     label: inline
     settings:
       link: false
     third_party_settings: {  }
-  field_experience_level:
     weight: 0
+    region: content
+  field_experience_level:
+    type: list_default
     label: inline
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 0
     region: content
   field_files:
-    weight: 6
+    type: file_default
     label: inline
     settings:
       use_description_as_link_text: true
     third_party_settings: {  }
-    type: file_default
+    weight: 6
     region: content
   field_room:
-    weight: 3
+    type: entity_reference_label
     label: inline
     settings:
       link: false
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 3
     region: content
   field_session_date_time:
     type: datetime_default
-    weight: 1
-    region: content
     label: inline
     settings:
       timezone_override: America/New_York
       format_type: 12_hour_default
     third_party_settings: {  }
+    weight: 1
+    region: content
   field_session_room:
     type: string
-    weight: 2
-    region: content
     label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 2
+    region: content
   field_session_track:
-    weight: 5
+    type: entity_reference_label
     label: inline
     settings:
       link: false
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 5
     region: content
   field_status:
-    weight: 4
+    type: list_default
     label: inline
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 4
     region: content
   field_video:
     type: entity_reference_entity_view
-    weight: 0
-    region: content
     label: visually_hidden
     settings:
       view_mode: embedded
       link: false
     third_party_settings: {  }
-  flag_session_schedule:
-    weight: 10
+    weight: 0
     region: content
+  flag_session_schedule:
     settings: {  }
     third_party_settings: {  }
+    weight: 10
+    region: content
 hidden:
   field_female_attendees: true
   field_i_can_deliver_this_session: true

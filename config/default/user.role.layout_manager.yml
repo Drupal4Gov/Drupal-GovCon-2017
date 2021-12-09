@@ -1,7 +1,10 @@
 uuid: e4acfb8b-0c55-4abd-80d6-67d69bae6e39
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - field_ui
+    - node
 _core:
   default_config_hash: O15STNqaxZJp9WQvMNCRYzhPnpaMVU0W8eVoijQd3rw
 id: layout_manager
@@ -10,10 +13,3 @@ weight: 2
 is_admin: false
 permissions:
   - 'administer node display'
-  - 'administer panelizer'
-  - 'administer panelizer node event defaults'
-  - 'administer panelizer node landing_page defaults'
-  - 'administer panelizer node page defaults'
-  - 'administer panelizer node session defaults'
-  - 'administer panelizer node special_announcement defaults'
-  - 'administer panelizer node sponsor defaults'

@@ -20,10 +20,10 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
+  handler: 'default:file'
+  handler_settings: {  }
   file_directory: 'session/slides/[date:custom:Y]-[date:custom:m]'
   file_extensions: 'ppt pptx pdf mkey odp otp odg'
   max_filesize: '10 MB'
   description_field: true
-  handler: 'default:file'
-  handler_settings: {  }
 field_type: file

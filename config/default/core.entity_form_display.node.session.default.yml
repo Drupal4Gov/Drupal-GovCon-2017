@@ -36,70 +36,70 @@ third_party_settings:
         - field_files
         - field_video_embed
         - field_video
+      label: Slides
+      region: content
       parent_name: ''
       weight: 10
       format_type: fieldset
       format_settings:
-        description: ''
         classes: ''
         id: ''
+        description: ''
         required_fields: true
-      label: Slides
-      region: content
     group_scheduling_details:
       children:
         - field_session_date_time
         - field_room
+      label: 'Scheduling Details'
+      region: content
       parent_name: ''
       weight: 13
       format_type: fieldset
       format_settings:
-        id: ''
         classes: ''
+        id: ''
         description: ''
         required_fields: true
-      label: 'Scheduling Details'
-      region: content
     group_room:
       children:
         - field_room_monitor
         - field_male_attendees
         - field_female_attendees
+      label: 'Room Monitor'
+      region: content
       parent_name: ''
       weight: 17
       format_type: fieldset
       format_settings:
-        id: ''
         classes: ''
+        id: ''
         description: ''
         required_fields: true
-      label: 'Room Monitor'
-      region: content
     group_virtual_options:
       children:
         - field_i_can_deliver_this_session
+      label: 'Virtual Options'
+      region: content
       parent_name: ''
       weight: 1
       format_type: fieldset
-      region: content
       format_settings:
-        id: ''
         classes: ''
+        id: ''
         description: 'With COVID-19, the Drupal GovCon team is making plans for a virtual or hybrid in-person/virtual Con.  Please help us understand your availability both in-person as well as virtual.'
         required_fields: true
-      label: 'Virtual Options'
     group_video_links:
       children: {  }
+      label: 'Video Links'
+      region: content
       parent_name: ''
       weight: 20
       format_type: fieldset
-      region: content
       format_settings:
-        id: ''
         classes: ''
+        id: ''
         description: ''
         required_fields: true
-      label: 'Video Links'
 _core:
   default_config_hash: DV8OLbi-qcGglfofiDQUJ4P1qPscvwMsPVe80-OoIBo
 id: node.session.default
@@ -110,102 +110,102 @@ content:
   body:
     type: text_textarea_with_summary
     weight: 9
+    region: content
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
-    region: content
   created:
     type: datetime_timestamp
     weight: 5
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   field_conference_year:
+    type: options_select
     weight: 16
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_experience_level:
+    type: options_select
     weight: 3
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_female_attendees:
+    type: number
     weight: 17
+    region: content
     settings:
       placeholder: ''
     third_party_settings: {  }
-    type: number
-    region: content
   field_files:
+    type: file_generic
     weight: 10
+    region: content
     settings:
       progress_indicator: throbber
     third_party_settings: {  }
-    type: file_generic
-    region: content
   field_i_can_deliver_this_session:
+    type: options_select
     weight: 26
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_male_attendees:
-    weight: 16
-    settings:
-      placeholder: ''
-    third_party_settings: {  }
     type: number
+    weight: 16
     region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
   field_room:
+    type: options_select
     weight: 13
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_room_monitor:
+    type: entity_reference_autocomplete
     weight: 15
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
     third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   field_session_co_presenter_s_:
+    type: entity_reference_autocomplete
     weight: 14
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
     third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
   field_session_date_time:
-    weight: 11
-    settings: {  }
-    third_party_settings: {  }
     type: datetime_default
+    weight: 11
     region: content
+    settings: {  }
+    third_party_settings: {  }
   field_session_track:
+    type: options_select
     weight: 2
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_status:
+    type: options_select
     weight: 12
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   field_video:
     type: media_library_widget
     weight: 12
@@ -216,54 +216,54 @@ content:
   moderation_state:
     type: moderation_state_default
     weight: 19
-    settings: {  }
     region: content
+    settings: {  }
     third_party_settings: {  }
   path:
     type: path
     weight: 8
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   promote:
     type: boolean_checkbox
+    weight: 6
+    region: content
     settings:
       display_label: true
-    weight: 6
     third_party_settings: {  }
-    region: content
   status:
     type: boolean_checkbox
+    weight: 15
+    region: content
     settings:
       display_label: true
-    weight: 15
     third_party_settings: {  }
-    region: content
   sticky:
     type: boolean_checkbox
+    weight: 7
+    region: content
     settings:
       display_label: true
-    weight: 7
     third_party_settings: {  }
-    region: content
   title:
     type: string_textfield
     weight: 0
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    region: content
   uid:
     type: entity_reference_autocomplete
     weight: 4
+    region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
     third_party_settings: {  }
-    region: content
   url_redirects:
     weight: 18
     region: content

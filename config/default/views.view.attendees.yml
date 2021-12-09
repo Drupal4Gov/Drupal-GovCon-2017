@@ -16,62 +16,12 @@ base_table: webform_submission
 base_field: sid
 display:
   default:
-    display_plugin: default
     id: default
     display_title: Master
+    display_plugin: default
     position: 0
     display_options:
-      access:
-        type: none
-        options: {  }
-      cache:
-        type: tag
-        options: {  }
-      query:
-        type: views_query
-        options:
-          disable_sql_rewrite: false
-          distinct: false
-          replica: false
-          query_comment: ''
-          query_tags: {  }
-      exposed_form:
-        type: basic
-        options:
-          submit_button: Apply
-          reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
-          expose_sort_order: true
-          sort_asc_label: Asc
-          sort_desc_label: Desc
-      pager:
-        type: mini
-        options:
-          items_per_page: 50
-          offset: 0
-          id: 0
-          total_pages: null
-          expose:
-            items_per_page: false
-            items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
-            offset: false
-            offset_label: Offset
-          tags:
-            previous: ‹‹
-            next: ››
-      style:
-        type: default
-      row:
-        type: fields
-        options:
-          default_field_elements: true
-          inline: {  }
-          separator: ''
-          hide_empty: false
+      title: Attendees
       fields:
         webform_submission_value_4:
           id: webform_submission_value_4
@@ -80,6 +30,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: webform_submission_field
           label: ''
           exclude: false
           alter:
@@ -124,7 +75,6 @@ display:
           webform_element_format: 'thumbnail:image'
           webform_multiple_value: true
           webform_multiple_delta: 0
-          plugin_id: webform_submission_field
         webform_submission_value_1:
           id: webform_submission_value_1
           table: webform_submission_field_2020_registration_drupal_org_user_name
@@ -132,6 +82,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: webform_submission_field
           label: ''
           exclude: true
           alter:
@@ -176,7 +127,6 @@ display:
           webform_element_format: value
           webform_multiple_value: true
           webform_multiple_delta: 0
-          plugin_id: webform_submission_field
         webform_submission_value_3:
           id: webform_submission_value_3
           table: webform_submission_field_2020_registration_last_name
@@ -184,6 +134,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: webform_submission_field
           label: ''
           exclude: true
           alter:
@@ -228,7 +179,6 @@ display:
           webform_element_format: value
           webform_multiple_value: true
           webform_multiple_delta: 0
-          plugin_id: webform_submission_field
         webform_submission_value_2:
           id: webform_submission_value_2
           table: webform_submission_field_2020_registration_first_name
@@ -236,6 +186,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: webform_submission_field
           label: ''
           exclude: false
           alter:
@@ -280,7 +231,6 @@ display:
           webform_element_format: value
           webform_multiple_value: true
           webform_multiple_delta: 0
-          plugin_id: webform_submission_field
         webform_submission_value:
           id: webform_submission_value
           table: webform_submission_field_2020_registration_company_name
@@ -288,6 +238,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: webform_submission_field
           label: ''
           exclude: false
           alter:
@@ -332,21 +283,70 @@ display:
           webform_element_format: value
           webform_multiple_value: true
           webform_multiple_delta: 0
-          plugin_id: webform_submission_field
+      pager:
+        type: mini
+        options:
+          offset: 0
+          items_per_page: 50
+          total_pages: null
+          id: 0
+          tags:
+            next: ››
+            previous: ‹‹
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Apply
+          reset_button: false
+          reset_button_label: Reset
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      access:
+        type: none
+        options: {  }
+      cache:
+        type: tag
+        options: {  }
+      empty: {  }
+      sorts:
+        webform_submission_value:
+          id: webform_submission_value
+          table: webform_submission_field_2020_registration_last_name
+          field: webform_submission_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: webform_submission_field_sort
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: webform_submission_value
+          exposed: false
+      arguments: {  }
       filters:
         webform_id:
           id: webform_id
           table: webform_submission
           field: webform_id
-          value:
-            2020_registration: 2020_registration
           entity_type: webform_submission
           entity_field: webform_id
           plugin_id: bundle
+          value:
+            2020_registration: 2020_registration
+          group: 1
           expose:
             operator_limit_selection: false
             operator_list: {  }
-          group: 1
         webform_submission_value_1:
           id: webform_submission_value_1
           table: webform_submission_field_2020_registration_company_name
@@ -354,6 +354,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: webform_submission_field_filter
           operator: contains
           value: ''
           group: 1
@@ -397,7 +398,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: webform_submission_field_filter
         webform_submission_value_2:
           id: webform_submission_value_2
           table: webform_submission_field_2020_registration_drupal_org_user_name
@@ -405,6 +405,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: webform_submission_field_filter
           operator: contains
           value: ''
           group: 1
@@ -448,7 +449,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: webform_submission_field_filter
         webform_submission_value_3:
           id: webform_submission_value_3
           table: webform_submission_field_2020_registration_ticket_status
@@ -456,6 +456,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
+          plugin_id: webform_submission_select_filter
           operator: in
           value:
             Ticket: Ticket
@@ -488,31 +489,31 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: webform_submission_select_filter
-      sorts:
-        webform_submission_value:
-          id: webform_submission_value
-          table: webform_submission_field_2020_registration_last_name
-          field: webform_submission_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
-          plugin_id: webform_submission_field_sort
-      title: Attendees
-      header: {  }
-      footer: {  }
-      empty: {  }
-      relationships: {  }
-      arguments: {  }
-      display_extenders: {  }
       filter_groups:
         operator: AND
         groups:
           1: AND
+      style:
+        type: default
+      row:
+        type: fields
+        options:
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
+      query:
+        type: views_query
+        options:
+          query_comment: ''
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_tags: {  }
+      relationships: {  }
+      header: {  }
+      footer: {  }
+      display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:
@@ -522,14 +523,14 @@ display:
         - user
       tags: {  }
   page_1:
-    display_plugin: page
     id: page_1
     display_title: '2020 Attendees'
+    display_plugin: page
     position: 1
     display_options:
+      display_description: ''
       display_extenders: {  }
       path: 2020/attendees
-      display_description: ''
     cache_metadata:
       max-age: -1
       contexts:

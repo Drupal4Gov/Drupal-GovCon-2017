@@ -2,8 +2,13 @@ uuid: 935004ee-7f25-429f-883f-abcc1ee5a92b
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.sponsor
   module:
     - lightning_core
+    - node
+    - system
+    - toolbar
 third_party_settings:
   lightning_core:
     description: 'Conference sponsor'

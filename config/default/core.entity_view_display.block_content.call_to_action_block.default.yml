@@ -17,16 +17,16 @@ bundle: call_to_action_block
 mode: default
 content:
   field_background_image:
-    weight: 2
+    type: image
     label: hidden
     settings:
-      image_style: ''
       image_link: ''
+      image_style: ''
     third_party_settings: {  }
-    type: image
+    weight: 2
     region: content
   field_description:
-    weight: 1
+    type: smart_trim
     label: hidden
     settings:
       trim_length: 65
@@ -38,23 +38,23 @@ content:
       summary_handler: full
       trim_options: {  }
     third_party_settings: {  }
-    type: smart_trim
+    weight: 1
     region: content
   field_title:
-    weight: 0
+    type: smart_trim
     label: hidden
     settings:
       trim_length: 40
       trim_type: chars
       trim_suffix: ''
       more_link: false
+      more_class: more-link
       more_text: More
+      summary_handler: full
       trim_options:
         text: false
-      more_class: more-link
-      summary_handler: full
     third_party_settings: {  }
-    type: smart_trim
+    weight: 0
     region: content
 hidden:
   field_url: true

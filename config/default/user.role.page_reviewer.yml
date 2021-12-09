@@ -1,7 +1,15 @@
 uuid: b92cfe4c-f120-47b0-b799-bf6f880ac179
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - node.type.page
+    - workflows.workflow.editorial
+  module:
+    - content_moderation
+    - moderation_sidebar
+    - node
+    - toolbar
 id: page_reviewer
 label: 'Basic page reviewer'
 weight: 3

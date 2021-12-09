@@ -16,15 +16,14 @@ mode: default
 content:
   field_slideshow_items:
     type: slick_entityreference_vanilla
-    weight: 0
     label: visually_hidden
     settings:
       optionset: default
-      skin: default
       view_mode: default
       cache: 0
       current_view_mode: default
-      override: false
+      skin: default
+      style: ''
       overridables:
         arrows: '0'
         autoplay: '0'
@@ -34,10 +33,11 @@ content:
         mouseWheel: '0'
         randomize: '0'
         variableWidth: '0'
+      override: false
       skin_arrows: ''
       skin_dots: ''
-      style: ''
     third_party_settings: {  }
+    weight: 0
     region: content
 hidden:
   search_api_excerpt: true

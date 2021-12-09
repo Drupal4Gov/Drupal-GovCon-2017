@@ -21,35 +21,35 @@ content:
   field_background_image:
     type: image_image
     weight: 3
-    settings:
-      preview_image_style: thumbnail
-      progress_indicator: throbber
     region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings: {  }
   field_description:
+    type: text_textarea
     weight: 2
+    region: content
     settings:
       rows: 4
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
-    region: content
   field_title:
+    type: text_textfield
     weight: 1
+    region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: text_textfield
-    region: content
   field_url:
+    type: link_default
     weight: 4
+    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
-    type: link_default
-    region: content
   info:
     type: string_textfield
     weight: 0

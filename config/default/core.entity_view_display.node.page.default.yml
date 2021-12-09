@@ -22,8 +22,8 @@ third_party_settings:
     enable: false
   layout_builder_restrictions:
     entity_view_mode_restriction:
-      allowed_blocks: {  }
       allowed_layouts: {  }
+      allowed_blocks: {  }
 _core:
   default_config_hash: wQOp0Gtvf-nibo11pyMBzr9dcDrKIc6BA96c3lyY_bM
 id: node.page.default
@@ -32,33 +32,33 @@ bundle: page
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 0
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 0
     region: content
   content_moderation_control:
-    weight: -20
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: -20
+    region: content
   field_meta_tags:
     type: metatag_empty_formatter
-    weight: 2
     label: above
     settings: {  }
     third_party_settings: {  }
+    weight: 2
     region: content
   links:
-    weight: 1
     settings: {  }
     third_party_settings: {  }
+    weight: 1
     region: content
   workbench_moderation_control:
-    weight: -20
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: -20
+    region: content
 hidden:
   layout_selection: true

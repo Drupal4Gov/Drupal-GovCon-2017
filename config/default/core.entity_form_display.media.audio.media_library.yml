@@ -16,11 +16,11 @@ mode: media_library
 content:
   field_media_in_library:
     type: boolean_checkbox
+    weight: 1
+    region: content
     settings:
       display_label: true
-    weight: 1
     third_party_settings: {  }
-    region: content
   name:
     type: string_textfield
     weight: 0
@@ -32,10 +32,10 @@ content:
   revision_log_message:
     type: string_textarea
     weight: 25
+    region: content
     settings:
       rows: 4
       placeholder: ''
-    region: content
     third_party_settings: {  }
 hidden:
   created: true

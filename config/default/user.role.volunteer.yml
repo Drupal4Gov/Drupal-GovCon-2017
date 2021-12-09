@@ -2,8 +2,14 @@ uuid: e0f61e4a-09e3-4e98-afb2-573dd1a5b418
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.session
   module:
+    - field_permissions
+    - flag
     - lightning_core
+    - node
+    - webform
 third_party_settings:
   lightning_core:
     description: 'Conference volunteer'
@@ -35,13 +41,7 @@ permissions:
   - 'edit own field_video'
   - 'edit own session content'
   - 'flag check_in_status'
-  - 'flag checked_in'
-  - 'flag checked_in other items'
-  - 'flag checked_in own items'
   - 'unflag check_in_status'
-  - 'unflag checked_in'
-  - 'unflag checked_in other items'
-  - 'unflag checked_in own items'
   - 'view any webform submission'
   - 'view field_female_attendees'
   - 'view field_male_attendees'

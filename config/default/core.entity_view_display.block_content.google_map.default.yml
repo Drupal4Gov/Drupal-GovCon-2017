@@ -15,7 +15,7 @@ bundle: google_map
 mode: default
 content:
   field_map_location:
-    weight: 0
+    type: simple_gmap
     label: visually_hidden
     settings:
       include_map: true
@@ -31,7 +31,7 @@ content:
       langcode: en
       apikey: ''
     third_party_settings: {  }
-    type: simple_gmap
+    weight: 0
     region: content
 hidden:
   search_api_excerpt: true
