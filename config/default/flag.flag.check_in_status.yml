@@ -8,7 +8,6 @@ bundles:
   - 2019_registration
 entity_type: webform_submission
 global: true
-weight: 0
 flag_short: Registered
 flag_long: 'Click to check-in this attendee'
 flag_message: 'Attendee is checked-in'
@@ -16,6 +15,7 @@ unflag_short: Checked-in
 unflag_long: 'Click to reverse check-in'
 unflag_message: 'Attendee is NO LONGER checked-in'
 unflag_denied_text: ''
+weight: 0
 flag_type: 'entity:webform_submission'
 link_type: ajax_link
 flagTypeConfig:

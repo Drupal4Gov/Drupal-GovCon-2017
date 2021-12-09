@@ -8,7 +8,6 @@ bundles:
   - session
 entity_type: node
 global: false
-weight: 0
 flag_short: 'Add to my schedule'
 flag_long: 'Add this session to your personal session attendance.'
 flag_message: 'Session Added'
@@ -16,6 +15,7 @@ unflag_short: 'Remove from my schedule'
 unflag_long: 'Remove this session from your schedule.'
 unflag_message: 'Session Removed'
 unflag_denied_text: ''
+weight: 0
 flag_type: 'entity:node'
 link_type: ajax_link
 flagTypeConfig:

@@ -14,24 +14,24 @@ type_settings:
   states:
     archived:
       label: Archived
+      weight: 1
       published: false
       default_revision: true
-      weight: 1
     draft:
       label: Draft
+      weight: 2
       published: false
       default_revision: false
-      weight: 2
     needs_review:
       label: 'Needs Review'
+      weight: 3
       published: false
       default_revision: false
-      weight: 3
     published:
       label: Published
+      weight: 4
       published: true
       default_revision: true
-      weight: 4
   transitions:
     archived_published:
       label: Un-archive

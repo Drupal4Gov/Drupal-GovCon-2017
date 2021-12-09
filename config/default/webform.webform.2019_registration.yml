@@ -2,9 +2,9 @@ uuid: b6f086de-1bba-436d-a4f2-75b7fb1ba6b0
 langcode: en
 status: closed
 dependencies: {  }
+weight: 0
 open: null
 close: null
-weight: 0
 uid: 1
 template: false
 archive: false
@@ -353,9 +353,9 @@ settings:
   page_theme_name: ''
   form_title: source_entity_webform
   form_submit_once: false
-  form_exception_message: ''
   form_open_message: ''
   form_close_message: 'Thank you for your interest in Drupal GovCon.&nbsp; Our registration and wait list are full. We will contact you by COB Monday, 22 July if we are able to accomodate you.'
+  form_exception_message: ''
   form_previous_submissions: true
   form_confidential: false
   form_confidential_message: ''
@@ -365,31 +365,36 @@ settings:
   form_prepopulate_source_entity: false
   form_prepopulate_source_entity_required: false
   form_prepopulate_source_entity_type: ''
-  form_reset: false
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
   form_disable_autocomplete: false
   form_novalidate: false
   form_disable_inline_errors: false
   form_required: false
-  form_unsaved: false
-  form_disable_back: false
-  form_submit_back: false
   form_autofocus: false
   form_details_toggle: false
+  form_reset: false
   form_access_denied: default
   form_access_denied_title: ''
   form_access_denied_message: ''
   form_access_denied_attributes: {  }
   form_file_limit: ''
+  form_attributes: {  }
   form_method: ''
   form_action: ''
-  form_attributes: {  }
   share: false
   share_node: false
   share_theme_name: ''
   share_title: true
   share_page_body_attributes: {  }
   submission_label: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
   submission_log: false
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
   submission_views: {  }
   submission_views_replace:
     webform_routes: {  }
@@ -400,11 +405,6 @@ settings:
   submission_access_denied_title: ''
   submission_access_denied_message: ''
   submission_access_denied_attributes: {  }
-  submission_exception_message: ''
-  submission_locked_message: ''
-  submission_excluded_elements: {  }
-  submission_exclude_empty: false
-  submission_exclude_empty_checkbox: false
   previous_submission_message: ''
   previous_submissions_message: ''
   autofill: false
@@ -415,13 +415,13 @@ settings:
   wizard_progress_percentage: false
   wizard_progress_link: false
   wizard_progress_states: false
-  wizard_auto_forward: true
-  wizard_auto_forward_hide_next_button: false
-  wizard_keyboard: true
   wizard_start_label: ''
   wizard_preview_link: false
   wizard_confirmation: true
   wizard_confirmation_label: ''
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
   wizard_track: ''
   wizard_prev_button_label: ''
   wizard_next_button_label: ''
@@ -444,9 +444,9 @@ settings:
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
   confirmation_type: url_message
+  confirmation_url: user
   confirmation_title: ''
   confirmation_message: "Thank you for registering for Drupal GovCon! Now that you&#39;ve grabbed your ticket to the event, consider <a href=\"/node/add/session\">submitting a session</a>!<br />\r\n<br />\r\nThanks to our awesome sponsors, we are able to provide complimentary lunch. Attendees who registered by July 12th will be given preference in line at lunch. Once all confirmed attendees have received a lunch, other attendees will be able to enjoy any remaining lunches we may have available.<br />\r\n<br />\r\nDon&rsquo;t fear though, the <a href=\"https://www.ors.od.nih.gov/pes/dats/food/Pages/index.aspx\">NIH campus</a> and nearby <a href=\"https://www.yelp.com/search?cflt=restaurants&amp;find_near=medical-center-metro-station-bethesda-2\">Bethesda area</a> have many dining options to choose from.<br />\r\n<br />\r\nIf you have questions, please contact us at <a href=\"mailto:drupal4gov@gmail.com\">drupal4gov@gmail.com</a>."
-  confirmation_url: user
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -531,9 +531,9 @@ access:
 handlers:
   email:
     id: email
+    handler_id: email
     label: Email
     notes: ''
-    handler_id: email
     status: true
     conditions: {  }
     weight: 0
@@ -542,13 +542,17 @@ handlers:
         - completed
       to_mail: '[webform_submission:values:email:raw]'
       to_options: {  }
-      cc_mail: ''
-      cc_options: {  }
       bcc_mail: ''
       bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
       from_mail: drupal4gov@gmail.com
       from_options: {  }
       from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
       subject: 'Thank you for registering for Drupal GovCon 2019'
       body: "<p>Thank you for registering for Drupal GovCon 2019. Your registration has been placed on a wait list and you will be contacted if a spot opens up.&nbsp;<br />\r\n<br />\r\nThanks to our awesome sponsors, we are able to provide complimentary lunch. Attendees who registered by July 12th will be given preference in line at lunch. Once all confirmed attendees have received a lunch, other attendees will be able to enjoy any remaining lunches we may have available. Don&rsquo;t fear though, the <a href=\"https://www.ors.od.nih.gov/pes/dats/food/Pages/index.aspx\">NIH campus</a> and nearby <a href=\"https://www.yelp.com/search?cflt=restaurants&amp;find_near=medical-center-metro-station-bethesda-2\">Bethesda area</a> have many dining options to choose from.<br />\r\n<br />\r\nIf you have questions, please contact us at <a href=\"mailto:drupal4gov@gmail.com\">drupal4gov@gmail.com</a>.<br />\r\n<br />\r\nusername: [webform_submission:user:account-name]<br />\r\npassword: your password<br />\r\n<br />\r\nChange your mind about getting email alerts? Subscribe to our e-mail list:<br />\r\n<a href=\"http://eepurl.com/bbJASn\">http://eepurl.com/bbJASn</a><br />\r\n<br />\r\nFollow us on social media:<br />\r\n<a href=\"https://twitter.com/drupalgovcon\">https://twitter.com/drupalgovcon</a><br />\r\n<a href=\"https://www.facebook.com/DrupalGovCon\">https://www.facebook.com/DrupalGovCon</a><br />\r\n<br />\r\n&ndash; Drupal GovCon team</p>"
       excluded_elements: {  }
@@ -559,11 +563,7 @@ handlers:
       html: true
       attachments: false
       twig: false
-      debug: false
-      reply_to: ''
-      return_path: ''
-      sender_mail: ''
-      sender_name: ''
       theme_name: ''
       parameters: {  }
+      debug: false
 variants: {  }

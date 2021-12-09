@@ -18,14 +18,14 @@ plugin: 'block_content:36c1ff95-36aa-4831-98e6-00b97ad69117'
 settings:
   id: 'block_content:36c1ff95-36aa-4831-98e6-00b97ad69117'
   label: '2020 Community Banner'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full
 visibility:
   request_path:
     id: request_path
-    pages: /get-involved
     negate: false
     context_mapping: {  }
+    pages: /get-involved

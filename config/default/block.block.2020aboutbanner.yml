@@ -18,14 +18,14 @@ plugin: 'block_content:ca9a533c-bfdc-4e5c-a27c-7969102a0c81'
 settings:
   id: 'block_content:ca9a533c-bfdc-4e5c-a27c-7969102a0c81'
   label: '2020 About Banner'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full
 visibility:
   request_path:
     id: request_path
-    pages: /about
     negate: false
     context_mapping: {  }
+    pages: /about

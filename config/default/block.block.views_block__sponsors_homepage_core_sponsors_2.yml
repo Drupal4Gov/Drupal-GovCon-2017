@@ -18,13 +18,13 @@ plugin: 'views_block:sponsors-homepage_core_sponsors'
 settings:
   id: 'views_block:sponsors-homepage_core_sponsors'
   label: 'Thank you to our Core Sponsors'
-  provider: views
   label_display: visible
+  provider: views
   views_label: 'Thank you to our Core Sponsors'
   items_per_page: none
 visibility:
   request_path:
     id: request_path
-    pages: '<front>'
     negate: false
     context_mapping: {  }
+    pages: '<front>'

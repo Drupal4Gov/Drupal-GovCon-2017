@@ -5,6 +5,7 @@ dependencies: {  }
 id: stage
 label: Stage
 description: ''
+weight: 1
 folder: ../config/envs/stage
 module:
   acquia_connector: 0
@@ -16,4 +17,3 @@ blacklist: {  }
 graylist: {  }
 graylist_dependents: true
 graylist_skip_equal: true
-weight: 1

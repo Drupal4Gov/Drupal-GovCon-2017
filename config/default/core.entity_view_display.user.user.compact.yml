@@ -22,12 +22,12 @@ mode: compact
 content:
   name:
     type: string
-    weight: 1
-    region: content
+    label: hidden
     settings:
       link_to_entity: true
     third_party_settings: {  }
-    label: hidden
+    weight: 1
+    region: content
 hidden:
   field_bio: true
   field_conference_role: true

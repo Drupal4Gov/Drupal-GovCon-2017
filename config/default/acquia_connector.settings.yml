@@ -1,3 +1,5 @@
+_core:
+  default_config_hash: 6phbBhcYjncqxncwDHAImFHb0MAKamGB_HQy53AfN9s
 subscription_name: ''
 debug: false
 cron_interval: 30
@@ -11,8 +13,8 @@ spi:
   send_node_user: 1
   send_watchdog: 1
   use_cron: 1
-  dynamic_banner: 0
-  set_variables_override: 0
+  dynamic_banner: 1
+  set_variables_override: 1
   set_variables_automatic:
     - acquia_spi_set_variables_automatic
     - error_level

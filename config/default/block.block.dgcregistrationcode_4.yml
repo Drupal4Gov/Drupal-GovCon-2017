@@ -16,12 +16,12 @@ plugin: dgc_code_block
 settings:
   id: dgc_code_block
   label: 'Lullabot BoF Zoom Room Link'
-  provider: capitalcamp_blocks
   label_display: visible
+  provider: capitalcamp_blocks
   dgc_registration_code: ''
 visibility:
   request_path:
     id: request_path
-    pages: /birds-feather-sessions
     negate: false
     context_mapping: {  }
+    pages: /birds-feather-sessions

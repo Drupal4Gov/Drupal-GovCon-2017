@@ -11,12 +11,12 @@ pattern: '[node:field_conference_year:entity:name]/program/sessions/[node:title]
 selection_criteria:
   6ed4e452-7693-40eb-a4ee-201cb06fff12:
     id: node_type
-    bundles:
-      session: session
     negate: false
+    uuid: 6ed4e452-7693-40eb-a4ee-201cb06fff12
     context_mapping:
       node: node
-    uuid: 6ed4e452-7693-40eb-a4ee-201cb06fff12
+    bundles:
+      session: session
 selection_logic: and
 weight: -5
 relationships: {  }

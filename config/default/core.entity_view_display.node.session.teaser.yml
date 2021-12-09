@@ -34,65 +34,65 @@ bundle: session
 mode: teaser
 content:
   body:
-    label: visually_hidden
     type: smart_trim
-    weight: 5
+    label: visually_hidden
     settings:
       trim_length: 200
       trim_type: chars
       trim_suffix: ...
-      wrap_class: trimmed
-      more_text: 'Read more'
-      more_class: more-link
-      summary_handler: trim
       wrap_output: false
+      wrap_class: trimmed
       more_link: false
+      more_class: more-link
+      more_text: 'Read more'
+      summary_handler: trim
       trim_options:
         text: false
         trim_zero: false
     third_party_settings: {  }
+    weight: 5
     region: content
   field_conference_year:
     type: entity_reference_label
-    weight: 1
-    region: content
     label: inline
     settings:
       link: true
     third_party_settings: {  }
+    weight: 1
+    region: content
   field_experience_level:
     type: list_default
-    weight: 4
-    region: content
     label: inline
     settings: {  }
     third_party_settings: {  }
+    weight: 4
+    region: content
   field_session_co_presenter_s_:
     type: entity_reference_label
-    weight: 2
-    region: content
     label: inline
     settings:
       link: true
     third_party_settings: {  }
+    weight: 2
+    region: content
   field_session_track:
     type: entity_reference_label
-    weight: 3
-    region: content
     label: inline
     settings:
       link: false
     third_party_settings: {  }
+    weight: 3
+    region: content
   flag_session_schedule:
+    settings: {  }
+    third_party_settings: {  }
     weight: 7
     region: content
+  links:
     settings: {  }
     third_party_settings: {  }
-  links:
     weight: 0
     region: content
-    settings: {  }
-    third_party_settings: {  }
 hidden:
   field_female_attendees: true
   field_files: true

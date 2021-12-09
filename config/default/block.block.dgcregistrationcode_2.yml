@@ -16,12 +16,12 @@ plugin: dgc_code_block
 settings:
   id: dgc_code_block
   label: 'CTAC Networking Room Link'
-  provider: capitalcamp_blocks
   label_display: visible
+  provider: capitalcamp_blocks
   dgc_registration_code: ''
 visibility:
   request_path:
     id: request_path
-    pages: /ctac-networking-room
     negate: false
     context_mapping: {  }
+    pages: /ctac-networking-room

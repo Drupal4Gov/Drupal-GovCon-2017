@@ -19,26 +19,26 @@ mode: teaser
 content:
   field_session_date_time:
     type: datetime_default
-    weight: 1
-    region: content
     label: hidden
     settings:
       timezone_override: America/New_York
       format_type: day
     third_party_settings: {  }
+    weight: 1
+    region: content
   field_session_room:
     type: string
-    weight: 2
-    region: content
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-  links:
-    weight: 0
+    weight: 2
     region: content
+  links:
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   body: true
   field_conference_year: true

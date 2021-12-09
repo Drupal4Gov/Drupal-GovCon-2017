@@ -17,14 +17,14 @@ plugin: 'system_menu_block:2018-schedule'
 settings:
   id: 'system_menu_block:2018-schedule'
   label: '2018 Schedule'
-  provider: system
   label_display: '0'
+  provider: system
   level: 1
   depth: 0
   expand_all_items: false
 visibility:
   request_path:
     id: request_path
-    pages: '/2019/schedule/*'
     negate: false
     context_mapping: {  }
+    pages: '/2019/schedule/*'

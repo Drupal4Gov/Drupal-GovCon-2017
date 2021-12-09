@@ -18,14 +18,14 @@ plugin: 'block_content:72e5244a-afe9-45b7-abb3-d0056d186e87'
 settings:
   id: 'block_content:72e5244a-afe9-45b7-abb3-d0056d186e87'
   label: '2020 Program Banner'
-  provider: block_content
   label_display: '0'
+  provider: block_content
   status: true
   info: ''
   view_mode: full
 visibility:
   request_path:
     id: request_path
-    pages: /program
     negate: false
     context_mapping: {  }
+    pages: /program

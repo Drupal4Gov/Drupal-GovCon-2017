@@ -5,6 +5,7 @@ dependencies: {  }
 id: local
 label: Local
 description: ''
+weight: 1
 folder: ../config/envs/local
 module:
   dblog: 0
@@ -23,4 +24,3 @@ graylist:
   - system.performance
 graylist_dependents: true
 graylist_skip_equal: true
-weight: 1

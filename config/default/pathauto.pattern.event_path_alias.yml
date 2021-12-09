@@ -11,12 +11,12 @@ pattern: '[node:field_conference_year:entity:name]/events/[node:title]'
 selection_criteria:
   a102240c-9466-4e63-b215-362b3f0ad24d:
     id: node_type
-    bundles:
-      event: event
     negate: false
+    uuid: a102240c-9466-4e63-b215-362b3f0ad24d
     context_mapping:
       node: node
-    uuid: a102240c-9466-4e63-b215-362b3f0ad24d
+    bundles:
+      event: event
 selection_logic: and
 weight: -5
 relationships: {  }

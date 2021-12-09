@@ -21,65 +21,65 @@ layout:
         configuration:
           id: 'field_block:node:page:uid'
           label: 'Authored by'
-          provider: layout_builder
           label_display: '0'
+          provider: layout_builder
+          context_mapping:
+            entity: layout_builder.entity
           formatter:
-            label: visually_hidden
             type: entity_reference_entity_view
+            label: visually_hidden
             settings:
               view_mode: compact
             third_party_settings: {  }
-          context_mapping:
-            entity: layout_builder.entity
-        additional: {  }
         weight: 0
+        additional: {  }
       ca742119-c99c-465a-b9a4-b7a4bf17c2dd:
         uuid: ca742119-c99c-465a-b9a4-b7a4bf17c2dd
         region: first
         configuration:
           id: 'field_block:node:page:created'
           label: 'Authored on'
-          provider: layout_builder
           label_display: '0'
+          provider: layout_builder
+          context_mapping:
+            entity: layout_builder.entity
           formatter:
-            label: inline
             type: timestamp
+            label: inline
             settings:
               date_format: long_12h
               custom_date_format: ''
               timezone: ''
             third_party_settings: {  }
-          context_mapping:
-            entity: layout_builder.entity
-        additional: {  }
         weight: 0
+        additional: {  }
       04e37601-4eff-48cb-80b7-eb53f4794952:
         uuid: 04e37601-4eff-48cb-80b7-eb53f4794952
         region: first
         configuration:
           id: 'field_block:node:page:body'
           label: Body
-          provider: layout_builder
           label_display: '0'
-          formatter:
-            label: hidden
-            type: text_default
-            settings: {  }
-            third_party_settings: {  }
+          provider: layout_builder
           context_mapping:
             entity: layout_builder.entity
-        additional: {  }
+          formatter:
+            type: text_default
+            label: hidden
+            settings: {  }
+            third_party_settings: {  }
         weight: 1
+        additional: {  }
       7b586756-4ef7-4280-ab67-e2612b7b786c:
         uuid: 7b586756-4ef7-4280-ab67-e2612b7b786c
         region: first
         configuration:
           id: 'extra_field_block:node:page:links'
           label: Links
-          provider: layout_builder
           label_display: '0'
+          provider: layout_builder
           context_mapping:
             entity: layout_builder.entity
-        additional: {  }
         weight: 2
+        additional: {  }
     third_party_settings: {  }

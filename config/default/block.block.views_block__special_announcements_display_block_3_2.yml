@@ -18,13 +18,13 @@ plugin: 'views_block:special_announcements_display-block_3'
 settings:
   id: 'views_block:special_announcements_display-block_3'
   label: Announcements
-  provider: views
   label_display: visible
+  provider: views
   views_label: Announcements
   items_per_page: none
 visibility:
   request_path:
     id: request_path
-    pages: '<front>'
     negate: false
     context_mapping: {  }
+    pages: '<front>'

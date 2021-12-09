@@ -11,12 +11,12 @@ pattern: '[node:field_conference_year:entity:name]/sponsors/[node:title]'
 selection_criteria:
   b82ab470-74f1-4631-9f46-734b2a5c1ec1:
     id: node_type
-    bundles:
-      sponsor: sponsor
     negate: false
+    uuid: b82ab470-74f1-4631-9f46-734b2a5c1ec1
     context_mapping:
       node: node
-    uuid: b82ab470-74f1-4631-9f46-734b2a5c1ec1
+    bundles:
+      sponsor: sponsor
 selection_logic: and
 weight: -5
 relationships: {  }

@@ -18,15 +18,15 @@ content:
     weight: 0
     region: content
     settings:
-      placeholder: ''
       rows: 5
+      placeholder: ''
     third_party_settings: {  }
   field_conference_year:
+    type: options_select
     weight: 31
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   name:
     type: string_textfield
     weight: -5
@@ -43,9 +43,9 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 100
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
 hidden: {  }

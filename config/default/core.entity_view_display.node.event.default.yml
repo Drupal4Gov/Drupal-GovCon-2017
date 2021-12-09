@@ -18,33 +18,33 @@ bundle: event
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 1
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 1
     region: content
   field_session_date_time:
-    weight: 2
+    type: datetime_default
     label: above
     settings:
       timezone_override: America/New_York
       format_type: 12_hour_default
     third_party_settings: {  }
-    type: datetime_default
+    weight: 2
     region: content
   field_session_room:
-    weight: 3
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 3
     region: content
   links:
-    weight: 0
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   field_conference_year: true

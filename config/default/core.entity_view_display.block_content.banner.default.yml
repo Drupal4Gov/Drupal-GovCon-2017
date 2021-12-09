@@ -19,7 +19,7 @@ bundle: banner
 mode: default
 content:
   field_banner_image:
-    weight: 0
+    type: bg_image_formatter
     label: hidden
     settings:
       image_style: ''
@@ -32,16 +32,16 @@ content:
         bg_image_attachment: scroll
         bg_image_repeat: no-repeat
         bg_image_background_size: cover
-        bg_image_gradient: ''
         bg_image_media_query: all
         bg_image_important: 1
-        bg_image_path_format: absolute
         bg_image_background_size_ie8: 0
+        bg_image_path_format: absolute
+        bg_image_gradient: ''
     third_party_settings: {  }
-    type: bg_image_formatter
+    weight: 0
     region: content
   field_link:
-    weight: 3
+    type: link
     label: hidden
     settings:
       trim_length: 80
@@ -50,22 +50,22 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 3
     region: content
   field_summary:
-    weight: 2
+    type: basic_string
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    weight: 2
     region: content
   field_title:
-    weight: 1
+    type: string
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 1
     region: content
 hidden:
   search_api_excerpt: true

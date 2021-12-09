@@ -11,12 +11,12 @@ pattern: '[node:field_conference_year:entity:name]/announcements/[node:title]'
 selection_criteria:
   0b90a7cd-5ceb-413a-b476-bf2863b55215:
     id: node_type
-    bundles:
-      special_announcement: special_announcement
     negate: false
+    uuid: 0b90a7cd-5ceb-413a-b476-bf2863b55215
     context_mapping:
       node: node
-    uuid: 0b90a7cd-5ceb-413a-b476-bf2863b55215
+    bundles:
+      special_announcement: special_announcement
 selection_logic: and
 weight: -5
 relationships: {  }

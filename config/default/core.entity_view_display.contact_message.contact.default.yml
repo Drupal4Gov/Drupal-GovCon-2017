@@ -12,41 +12,41 @@ bundle: contact
 mode: default
 content:
   field_message:
-    weight: 4
+    type: basic_string
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    weight: 4
     region: content
   mail:
-    weight: 1
+    type: basic_string
     label: inline
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    weight: 1
     region: content
   message:
     type: basic_string
-    weight: 3
     label: above
     settings: {  }
     third_party_settings: {  }
+    weight: 3
     region: content
   name:
-    weight: 0
+    type: string
     label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 0
     region: content
   subject:
-    weight: 2
+    type: string
     label: inline
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 2
     region: content
 hidden:
   field_email: true

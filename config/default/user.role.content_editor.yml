@@ -2,8 +2,20 @@ uuid: 03e25de6-5b9d-4f60-a0bd-998bc0ae3a2b
 langcode: en
 status: true
 dependencies:
+  config:
+    - filter.format.rich_text
+    - node.type.page
+    - node.type.special_announcement
+    - workflows.workflow.00c7e3ae
   module:
+    - content_moderation
+    - field_permissions
+    - filter
     - lightning_core
+    - media
+    - node
+    - system
+    - toolbar
 third_party_settings:
   lightning_core:
     description: 'Conference content editor'
@@ -15,7 +27,6 @@ permissions:
   - 'access content'
   - 'access content overview'
   - 'access media overview'
-  - 'access media_browser entity browser pages'
   - 'access toolbar'
   - 'create page content'
   - 'create special_announcement content'
