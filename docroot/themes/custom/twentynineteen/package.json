@@ -57,10 +57,11 @@
     "build": "gulp",
     "build:dev": "gulp build:dev",
     "serve": "gulp serve",
-    "tests": "pa11y-ci",
+    "tests": "pa11y-ci; node_modules/.bin/backstop test",
     "watch": "gulp watch"
   },
   "dependencies": {
+    "backstopjs": "^6.0.4",
     "chromium": "^3.0.2",
     "highlight.js": "^11.2.0",
     "node-sass": "^6.0.1"
