@@ -8,4 +8,9 @@ credentials:
     pass: ''
 allow_cli: true
 print: 'Please provide credentials to access non-prod environment.'
-whitelist: ''
+allowlist: ''
+domains: ''
+method: 0
+path: ''
+unset_basic_auth_headers: true
+debug_header: false
