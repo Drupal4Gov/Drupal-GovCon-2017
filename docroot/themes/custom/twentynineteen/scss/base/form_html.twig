@@ -1,0 +1,88 @@
+<fieldset>
+  <legend>Legend</legend>
+  <p>
+    Wafer biscuit chupa chups donut. Cheesecake dragée macaroon. Bear claw candy
+    canes jelly cake tootsie roll chocolate caramels candy. Chocolate bar toffee
+    candy canes caramels cookie soufflé. Danish powder pie bonbon pastry carrot
+    cake candy. Candy fruitcake jelly-o sweet roll gingerbread toffee chupa
+    chups.
+  </p>
+</fieldset>
+
+<form>
+  <p><label for="text_field">Text Field:</label>
+    <input type="text" id="text_field">
+  </p>
+
+  <p><label for="text_field_disabled">Disabled Text Field:</label>
+    <input type="text" id="text_field_disabled" disabled="" value="I'm disabled">
+  </p>
+
+  <p><label for="text_field_readonly">Readonly Text Field:</label>
+    <input type="text" id="text_field_readonly" readonly="" value="I'm readonly">
+  </p>
+
+  <p><label for="text_area">Text Area:</label>
+    <textarea id="text_area" style="margin: 0px; width: 357px; height: 69px;"></textarea>
+  </p>
+
+  <p><label for="text_area_disabled">Disabled Text Area:</label>
+    <textarea id="text_area_disabled" disabled="">I'm disabled</textarea>
+  </p>
+
+  <p><label for="text_area">Readonly Text Area:</label>
+    <textarea id="text_area" readonly="">I'm readonly</textarea>
+  </p>
+
+  <p><label for="select_element">Select Element:</label>
+    <select id="select_element">
+      <optgroup label="Option Group 1">
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+      </optgroup>
+      <optgroup label="Option Group 2">
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3" disabled="">Disabled Option</option>
+      </optgroup>
+    </select>
+  </p>
+
+  <p><label for="select_element_disabled">Disabled Select Element:</label>
+    <select id="select_element_disabled" disabled="">
+      <option value="1">Unselectable Option</option>
+      <option value="2">This option should not even be seen</option>
+    </select>
+  </p>
+
+  <p>Radio Buttons:
+    <label><input type="radio" class="radio" name="radio_button" value="radio_1">
+      Radio 1</label>
+    <label><input type="radio" class="radio" name="radio_button" value="radio_2">
+      Radio 2</label>
+    <label><input type="radio" class="radio" name="radio_button" value="radio_3">
+      Radio 3</label>
+    <label><input type="radio" class="radio" name="radio_button" value="radio_4" disabled="">
+      Radio Disabled</label>
+  </p>
+
+  <p>Checkboxes:
+    <label><input type="checkbox" class="checkbox" name="checkboxes" value="check_1">
+      Checkbox 1</label>
+    <label><input type="checkbox" class="checkbox" name="checkboxes" value="check_2">
+      Checkbox 2</label>
+    <label><input type="checkbox" class="checkbox" name="checkboxes" value="check_3">
+      Checkbox 3</label>
+    <label><input type="checkbox" class="checkbox" name="checkboxes" value="check_4" disabled="">
+      Checkbox Disabled</label>
+  </p>
+
+  <p><label for="password">Password:</label>
+    <input type="password" class="password" id="password">
+  </p>
+
+  <p><label for="file">File Input:</label>
+    <input type="file" class="file" id="file">
+  </p>
+
+</form>

@@ -1,0 +1,54 @@
+{% set classes = [
+'node',
+'node--type-' ~ node.bundle|clean_class,
+view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+] %}
+
+<article {{ attributes.addClass(classes) }}>
+
+  {% if title_prefix or title_suffix or display_submitted or unpublished or page is empty and label %}
+  <header>
+    {{ title_prefix }}
+    {% if not page and label %}
+    <h2{{ title_attributes }}>
+      <a href="{{ url }}">{{ label }}</a>
+    </h2>
+    {% endif %}
+    {{ title_suffix }}
+
+    {% if display_submitted %}
+    <div class="submitted">
+      {{ author_picture }}
+      {{ submitted }}
+    </div>
+    {% endif %}
+
+    {% if unpublished %}
+    <p class="unpublished">{{ 'Unpublished'|t }}</p>
+    {% endif %}
+  </header>
+  {% endif %}
+
+  <div class="content">
+    {{ content|without('comment', 'links') }}
+  </div>
+
+<!-- /content -->
+
+  {% if content.links.terms %}
+  <div class="terms">
+    {{ content.links.terms }}
+  </div>
+<!-- /terms -->
+  {% endif %}
+
+  {% if content.links %}
+  <div class="links">
+    {{ content.links }}
+  </div>
+<!-- /links -->
+  {% endif %}
+
+  {{ content.comment }}
+</article>
+<!-- /article #node -->
