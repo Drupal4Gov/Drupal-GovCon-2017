@@ -1,0 +1,129 @@
+// Base Accessibility Elements
+
+// Accessible Forms
+//
+// Style guide: accessibility.forms
+
+// Checkboxes and Radio Buttons
+//
+// <ul>
+// <li>The <code>&lt;fieldset&gt;</code> surrounds the entire grouping of checkboxes or radio buttons.
+// The <code>&lt;legend&gt;</code> provides a description for the grouping.</li>
+// <li>Some assistive technology reads the legend text for each fieldset,
+// so it should be brief and descriptive. This helps someone using assistive technology to understand
+// the question they are answering with the group of radio buttons or checkboxes.</li>
+// <li>WAI-ARIA provides a grouping role that functions similarly to fieldset and legend.
+// In option #2 the div element has role=group to indicate that the contained elements are members of a group
+// and the aria-labelledby attribute references the id for text that will serve as the label for the group.
+// <strong>Note:</strong> This method is not supported by all browser/AT devices.</li>
+// </ul>
+//
+// Markup: accessible_checks_radios.twig
+//
+// Style guide: accessibility.forms.checkboxesradio
+
+// Text Inputs and Textareas
+//
+// <ul>
+// <li>Keep it simple - screen readers do not support multiple labels that are linked to the same form element.</li>
+// <li>Placeholder text does not count as a label.</li>
+// <li>Use labels for every input and make the for="" and id="" values match. IDs must be unique
+// on each page, only one label can be associated to each unique form element.</li>
+// <li>Make required fields obvious by using an indicator - border color change, asterisk, description text, etc.</li>
+// <li>Fields with error validation should have aria-describedby to insure that the associated field level error
+// message is read by assistive technology. If the error message has an id="my-error-message",
+// then the input should have aria-describedby="my-error-message".</li>
+//</ul>
+//
+// Markup: accessible_textinputs_textareas.twig
+//
+// Style guide: accessibility.forms.textinputsareas
+
+.required-field::after {
+  content: '*';
+  display: inline-block;
+  color: red;
+}
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+// Search
+//
+// <ul>
+// <li>Wrap search components in a parent element role="search" to increase their discoverability
+// to assistive technologies</li>
+// <li>Whenever possible, use the label element to explicitly associate text with form elements.
+// The for attribute of the label must exactly match the id of the form control.</li>
+// <li>Some form fields do not need explicit label elements, when next to a button with descriptive
+// text. Ex. search field next to a button labeled search. In these cases you should still have a
+// label in the markup, but you can hide it visually.</li>
+// <li>Note that placeholders are not recognized by all assistive technologies, and thus are not
+// adequate replacements for appropriate labeling. Additionally, assistive technologies that do
+// announce placeholders will read the placeholder first, then the input's label and then type
+// of input. So be sure not to repeat an input's label as its placeholder, otherwise it will
+// be announced multiple times.</li>
+// <li>In the below examples, option 1 is a normal label, option 2 is a visually hidden label, and option 3 uses aria-label.</li>
+// </ul>
+//
+// Markup: accessible_search.twig
+//
+// Style guide: accessibility.forms.search
+
+// General
+//
+// Style guide: accessibility.general
+
+// Buttons
+//
+// <ul>
+// <li>A <code>&lt;button&gt;</code> tag does not need anything special to work. Use <code>&lt;button&gt;</code>
+// when you can, but it is possible to use other elements as long as you add role="button" and add JavaScript
+// to replicate the button functionality. </li>
+// <li>Just like links, you can add class="visuallyhidden" with descriptive text to give more context to
+// the button's purpose.</li>
+// <li>If a button contains an <code>&lt;img&gt;</code> element, make sure to set its alt attribute. If it
+// contains an icon, use aria-label to describe the icon instead.</li>
+// You can use <code>&lt;input type="image"&gt;</code> to make a graphical button. It takes a src and
+// alt attribute just like traditional images.</li>
+// <li>Button states are important, not just button styling! If you are only toggling classes to visually
+// manage state of your components, you are likely not appropriately conveying that state to users of
+// assistive technologies.</li>
+//
+// Style guide: accessibility.general.buttons
+
+
+// Colors
+//
+//<ul>
+//<li>Avoid using color <em>only</em> to communicate information. In the case of links, use another identifier
+// such as bold or underline to indicate a link verses using color alone.</li>
+//<li>Some users have difficulty reading text if there is too little contrast between foreground and background.
+// To meet Level AA, text must have a contrast ratio of at least 4.5:1 (or 3:1 for large text). In order to meet
+// the guidelines at the stricter Level AAA, the contrast ratio must be at least 7:1 (or 4.5:1 for large text).</li>
+//</ul>
+//
+// Style guide: accessibility.general.colors
+
+// Link Focus
+//
+//<ul>
+//<li>Do not set your site's link focus to <code>outline: none</code>. Never. Ever.</li>
+//<li>If you have multiple form fields on your site or you see the dreaded <code>outline: none</code> in your base code, you can reset the browser defaults by adding the code:
+//<pre> a:focus {
+//   outline: auto 2px Highlight; // for non-webkit browsers
+//   outline: auto 5px -webkit-focus-ring-color; // for webkit browsers
+// }</pre></li>
+//<li>Of course you can create your own focus styles to match your theme or to make the default browser styles more prominent, just make sure they are visible by tabbing and obvious to your users.</li>
+//</ul>
+//
+// Style guide: accessibility.general.link_focus
