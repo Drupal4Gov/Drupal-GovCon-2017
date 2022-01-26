@@ -7,7 +7,6 @@ let gulp = require('gulp'),
   gulpStylelint = require('gulp-stylelint'),
   autoprefixer = require('autoprefixer'),
   babel = require('gulp-babel'),
-  styleguide = require('kss'),
   minify = require('gulp-minify');
 
 const paths = {
