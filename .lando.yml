@@ -1,9 +1,12 @@
 name: drupalgovcon
-recipe: drupal9
+recipe: acquia
 config:
   webroot: docroot
   xdebug: false
   php: '8.0'
+  acli_version: latest
+  ah_application_uuid: db2dea89-3758-ce04-edf6-e70c30252a87
+  ah_site_group: capitalcamp
 services:
   appserver:
     xdebug: false
