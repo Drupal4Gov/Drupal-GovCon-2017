@@ -51,7 +51,7 @@ class AttendeePhoto extends FieldPluginBase {
         }
       }
     }
-    return render($render);
+    return \Drupal::service('renderer')->render($render);
   }
 
 }
