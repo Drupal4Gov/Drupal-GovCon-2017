@@ -10,3 +10,15 @@ tests.drupal.sudo-run-tests: false
 # The local.hostname must be set to 127.0.0.1:8888 because we are using drush runserver to test the site.
 project.local.hostname: 127.0.0.1:8888
 drush.debug: false
+command-hooks:
+  frontend-reqs:
+    dir: '${repo.root}'
+    command: ./blt/scripts/ci-frontend-setup.sh
+  frontend-assets:
+    dir: '${repo.root}'
+    command: ./blt/scripts/ci-frontend-build.sh
+  frontend-test:
+    dir: ${repo.root}/docroot/themes/custom/twentynineteen
+    command: npm run tests
+lando:
+  enable: ''
