@@ -1,0 +1,13 @@
+diff --git a/src/Robo/Common/Executor.php b/src/Robo/Common/Executor.php
+index 529d2282..68685339 100644
+--- a/src/Robo/Common/Executor.php
++++ b/src/Robo/Common/Executor.php
+@@ -154,7 +154,7 @@ class Executor implements ConfigAwareInterface, IOAwareInterface, LoggerAwareInt
+    *   The URL to wait for.
+    */
+   public function waitForUrlAvailable($url) {
+-    $this->wait([$this, 'checkUrl'], [$url], "Waiting for non-50x response from $url...");
++    //$this->wait([$this, 'checkUrl'], [$url], "Waiting for non-50x response from $url...");
+   }
+ 
+   /**
