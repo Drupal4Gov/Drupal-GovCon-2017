@@ -8,17 +8,22 @@ config:
   ah_application_uuid: db2dea89-3758-ce04-edf6-e70c30252a87
   ah_site_group: capitalcamp
 services:
+  chromedriver:
+    type: compose
+    services:
+      image: isholgueras/chrome-headless:latest
+      # Lando always overrides the default entrypoint.
+      command: chromedriver --verbose --whitelisted-ips=
   appserver:
     xdebug: false
+    config:
+      php: .lando/php.ini
     build_as_root:
       - apt-get update
       - apt-get install libxss1
       - echo "Run additional build commands here. Run lando rebuild after updating this file."
       - curl -sL https://deb.nodesource.com/setup_14.x | bash -
       - apt install -y nodejs
-      - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-      - apt install -y ./google-chrome-stable_current_amd64.deb
-      - rm google-chrome-stable_current_amd64.deb
     overrides:
       # Pass SSH keys.
       volumes:
@@ -28,10 +33,9 @@ services:
           source: "${LANDO_SSH_AUTH_SOCK:-/run/host-services/ssh-auth.sock}"
           target: /run/host-services/ssh-auth.sock
       environment:
+        PHP_IDE_CONFIG: "serverName=appserver"
         DRUSH_OPTIONS_URI: "https://drupalgovcon.lndo.site/"
         SSH_AUTH_SOCK: /run/host-services/ssh-auth.sock
-      cap_add:
-        - SYS_ADMIN
 tooling:
   blt:
     service: appserver
@@ -52,5 +56,7 @@ tooling:
     cmd: "/bin/chgrp www-data /run/host-services/ssh-auth.sock && /bin/chmod g+w /run/host-services/ssh-auth.sock"
     user: root
 events:
+  pre-start:
+    - appserver: "rm /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini && /etc/init.d/apache2 reload"
   post-start:
     - appserver: test -e ~/.ssh/config || printf 'Host *\n  AddKeysToAgent yes\n' > ~/.ssh/config
