@@ -1,17 +1,18 @@
+_core:
+  default_config_hash: yHBuI_J_kdrugm0JRNsxHODZ0qQyPzejI6r1ZPacK5Q
 shield_enable: true
 credential_provider: shield
 credentials:
   shield:
     user: ''
     pass: ''
-print: 'Please provide credentials to access non-prod environment.'
 allow_cli: true
-_core:
-  default_config_hash: yHBuI_J_kdrugm0JRNsxHODZ0qQyPzejI6r1ZPacK5Q
-allowlist: ''
-domains: ''
-method: 0
-path: ''
-unset_basic_auth_headers: true
 debug_header: false
-
+unset_basic_auth_headers: true
+print: 'Please provide credentials to access non-prod environment.'
+method: 0
+paths: ''
+allowlist: ''
+http_method_allowlist: {  }
+domains: ''
+path: ''
