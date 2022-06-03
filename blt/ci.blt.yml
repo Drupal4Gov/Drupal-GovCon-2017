@@ -19,6 +19,6 @@ command-hooks:
     command: ./blt/scripts/ci-frontend-build.sh
   frontend-test:
     dir: ${repo.root}/docroot/themes/custom/twentynineteen
-    command: npm run tests
+ #   command: npm run tests
 lando:
   enable: ''
