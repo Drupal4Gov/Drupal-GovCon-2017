@@ -89,7 +89,7 @@
         "php": ">=8.0",
         "ext-dom": "*",
         "ext-pdo": "*",
-        "acquia/blt": "^13",
+        "acquia/blt": "dev-main",
         "acquia/blt-behat": "^1.1",
         "acquia/blt-phpcs": "^1",
         "acquia/memcache-settings": "^1.1",
@@ -210,9 +210,12 @@
             },
             "acquia/blt": {
                 "fixes zsh git hooks": "https://github.com/acquia/blt/pull/4497.patch",
-                "debugging": "patches/debug.patch"
+                "debugging": "patches/debug.patch",
+                "dev-main patch": "https://github.com/acquia/blt/pull/4545.patch"
+            },
+            "mikemadison13/blt-lando": {
+              "m1 chrome": "https://github.com/mikemadison13/blt-lando/pull/32.patch"
             }
-
         },
         "drupal-scaffold": {
             "initial": {
