@@ -32,7 +32,10 @@ events:
         - tests:
             type: script
             script:
-              - source ${BLT_DIR}/scripts/pipelines/tests
+              - set -ev
+              - export PATH=${COMPOSER_BIN}:${PATH}
+              - blt tests --define drush.alias='${drush.aliases.ci}' -D behat.web-driver=chrome --no-interaction --ansi -vvv
+              - set +v
         - build-artifact:
             type: script
             script:
