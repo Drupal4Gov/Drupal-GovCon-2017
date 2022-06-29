@@ -1,4 +1,4 @@
-# Drupal GovCon
+# Drupal GovCon Repo TWT
 Welcome to the repo for the Drupal GovCon event website. This is an open source project and we proudly make all of our source code available (not only to those that want to contribute to the project, but for those that are interested in seeing a working Drupal 9 site!).
 
 ## Getting Started
