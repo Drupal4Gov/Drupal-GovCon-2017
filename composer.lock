@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "eb7f39862faacddbb69fb203e4007e71",
+    "content-hash": "4562f831e6562df7f0c3f1593f845569",
     "packages": [
         {
             "name": "acquia/blt",
@@ -12360,55 +12360,6 @@
             "time": "2022-04-07T15:53:13+00:00"
         },
         {
-            "name": "mikemadison13/blt-lando",
-            "version": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mikemadison13/blt-lando.git",
-                "reference": "72821f01ac4e8d39ef0a3dfb8d17815a8e9fbb4a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mikemadison13/blt-lando/zipball/72821f01ac4e8d39ef0a3dfb8d17815a8e9fbb4a",
-                "reference": "72821f01ac4e8d39ef0a3dfb8d17815a8e9fbb4a",
-                "shasum": ""
-            },
-            "require": {
-                "acquia/blt-behat": "*"
-            },
-            "require-dev": {
-                "acquia/blt": "^13",
-                "php-coveralls/php-coveralls": "^2",
-                "phpunit/phpunit": "^9.5",
-                "squizlabs/php_codesniffer": "^3.0"
-            },
-            "default-branch": true,
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Acquia\\BltLando\\": "./src/",
-                    "MikeMadison13\\BltLando\\Tests\\": "./tests/src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Mike Madison",
-                    "homepage": "https://mikemadison.net",
-                    "role": "Maintainer"
-                }
-            ],
-            "description": "Lando integration for Acquia BLT.",
-            "support": {
-                "issues": "https://github.com/mikemadison13/blt-lando/issues",
-                "source": "https://github.com/mikemadison13/blt-lando/tree/main"
-            },
-            "time": "2022-05-20T15:30:32+00:00"
-        },
-        {
             "name": "mkalkbrenner/php-htmldiff-advanced",
             "version": "0.0.8",
             "source": {
@@ -17539,8 +17490,7 @@
         "drupal/linkicon": 20,
         "drupal/qa_accounts": 20,
         "jquery-ui/jquery-ui-touch-punch": 20,
-        "mikemadison13/blt-drupal-check": 20,
-        "mikemadison13/blt-lando": 20
+        "mikemadison13/blt-drupal-check": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
