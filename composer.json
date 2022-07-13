@@ -152,7 +152,8 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "PhantomInstaller\\Installer::installPhantomJS"
+            "PhantomInstaller\\Installer::installPhantomJS",
+            "rm -rf docroot/modules/contrib/lightning_core/tests"
         ],
         "post-update-cmd": [
             "PhantomInstaller\\Installer::installPhantomJS"
@@ -211,9 +212,8 @@
             "acquia/blt": {
                 "fixes zsh git hooks": "https://github.com/acquia/blt/pull/4497.patch",
                 "debugging": "patches/debug.patch",
-                "4541": "https://github.com/acquia/blt/pull/4545.patch"
+                "4541": "https://github.com/acquia/blt/pull/4557.patch"
             }
-
         },
         "drupal-scaffold": {
             "initial": {
