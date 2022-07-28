@@ -86,7 +86,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": ">=8.0",
+        "php": ">=8.1",
         "ext-dom": "*",
         "ext-pdo": "*",
         "acquia/blt": "^13",
@@ -211,8 +211,10 @@
             "acquia/blt": {
                 "fixes zsh git hooks": "https://github.com/acquia/blt/pull/4497.patch",
                 "debugging": "patches/debug.patch"
+            },
+            "drupal/purge": {
+                "PHP 8.1 Fixes": "https://www.drupal.org/files/issues/2022-02-24/3259320-10.patch"
             }
-
         },
         "drupal-scaffold": {
             "initial": {
