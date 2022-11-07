@@ -7,6 +7,7 @@
 
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Entity\EntityFormInterface;
 
 /**
  * Implements hook_preprocess_html().
@@ -86,48 +87,53 @@ function twentynineteen_preprocess_node(&$variables) {
  * Code borrowed from Seven theme.
  */
 function twentynineteen_form_node_form_alter(&$form, FormStateInterface $form_state) {
-  $node = $form_state->getFormObject()->getEntity();
-  $form['#theme'] = ['node_edit_form'];
-  $form['advanced']['#type'] = 'container';
-  $is_new = !$node->isNew() ? \Drupal::service('date.formatter')->format($node->getChangedTime(), 'short') : t('Not saved yet');
-  $form['meta'] = [
-    '#attributes' => ['class' => ['entity-meta__header']],
-    '#type'       => 'container',
-    '#group'      => 'advanced',
-    '#weight'     => -100,
-    'published'   => [
-      '#type'       => 'html_tag',
-      '#tag'        => 'h3',
-      '#value'      => $node->isPublished() ? t('Published') : t('Not published'),
-      '#access'     => !$node->isNew(),
-      '#attributes' => [
-        'class' => 'entity-meta__title',
-      ],
-    ],
-    'changed'     => [
-      '#type'               => 'item',
-      '#wrapper_attributes' => [
-        'class' => [
-          'entity-meta__last-saved',
-          'container-inline',
+  $form_object = $form_state->getFormObject();
+  if ($form_object instanceof EntityFormInterface) {
+    /** @var \Drupal\node\NodeInterface $node */
+    $node = $form_object->getEntity();
+
+    $form['#theme'] = ['node_edit_form'];
+    $form['advanced']['#type'] = 'container';
+    $is_new = !$node->isNew() ? \Drupal::service('date.formatter')->format($node->getChangedTime(), 'short') : t('Not saved yet');
+    $form['meta'] = [
+      '#attributes' => ['class' => ['entity-meta__header']],
+      '#type' => 'container',
+      '#group' => 'advanced',
+      '#weight' => -100,
+      'published' => [
+        '#type' => 'html_tag',
+        '#tag' => 'h3',
+        '#value' => $node->isPublished() ? t('Published') : t('Not published'),
+        '#access' => !$node->isNew(),
+        '#attributes' => [
+          'class' => 'entity-meta__title',
         ],
       ],
-      '#markup'             => '<h4 class="label inline">' . t('Last saved') . '</h4> ' . $is_new,
-    ],
-    'author'      => [
-      '#type'               => 'item',
-      '#wrapper_attributes' => [
-        'class' => [
-          'author',
-          'container-inline',
+      'changed' => [
+        '#type' => 'item',
+        '#wrapper_attributes' => [
+          'class' => [
+            'entity-meta__last-saved',
+            'container-inline',
+          ],
         ],
+        '#markup' => '<h4 class="label inline">' . t('Last saved') . '</h4> ' . $is_new,
       ],
-      '#markup'             => '<h4 class="label inline">' . t('Author') . '</h4> ' . $node->getOwner()
-        ->getDisplayName(),
-    ],
-  ];
-  $form['revision_information']['#type'] = 'container';
-  $form['revision_information']['#group'] = 'meta';
+      'author' => [
+        '#type' => 'item',
+        '#wrapper_attributes' => [
+          'class' => [
+            'author',
+            'container-inline',
+          ],
+        ],
+        '#markup' => '<h4 class="label inline">' . t('Author') . '</h4> ' . $node->getOwner()
+          ->getDisplayName(),
+      ],
+    ];
+    $form['revision_information']['#type'] = 'container';
+    $form['revision_information']['#group'] = 'meta';
+  }
 }
 
 /**

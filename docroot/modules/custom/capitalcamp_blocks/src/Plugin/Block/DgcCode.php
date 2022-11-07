@@ -23,6 +23,20 @@ use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 class DgcCode extends BlockBase implements ContainerFactoryPluginInterface {
 
   /**
+   * The Entity Type Manager.
+   *
+   * @var \Drupal\Core\Entity\EntityTypeManager
+   */
+  protected $entityTypeManager;
+
+  /**
+   * The Account.
+   *
+   * @var \Drupal\Core\Session\AccountInterface
+   */
+  protected $account;
+
+  /**
    * {@inheritdoc}
    */
   public function __construct(array $configuration, $plugin_id, $plugin_definition, EntityTypeManager $entity_type_manager, AccountProxy $account) {
@@ -93,6 +107,7 @@ class DgcCode extends BlockBase implements ContainerFactoryPluginInterface {
         '#plain_text' => $this->configuration['dgc_registration_code'] ?? NULL,
       ];
     }
+    return [];
   }
 
 }

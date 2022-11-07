@@ -20,6 +20,20 @@ use Drupal\capitalcamp_blocks\Plugin\views\access\SessionAccess;
 class SessionPrimaryLinks extends FieldPluginBase {
 
   /**
+   * The Entity Type Manager.
+   *
+   * @var \Drupal\Core\Entity\EntityTypeManager
+   */
+  protected $entityTypeManager;
+
+  /**
+   * The Account.
+   *
+   * @var \Drupal\Core\Session\AccountProxy
+   */
+  protected $account;
+
+  /**
    * {@inheritdoc}
    */
   public function __construct(array $configuration, $plugin_id, $plugin_definition, EntityTypeManager $entity_type_manager, AccountProxy $account) {
@@ -61,6 +75,7 @@ class SessionPrimaryLinks extends FieldPluginBase {
     $access = SessionAccess::determineAccess($this->account, $webformStorage);
     if ($access == TRUE) {
       $node = $values->_entity;
+      /** @var \Drupal\node\Entity\Node $node */
       $room = $node->get("field_room")->getValue();
       if (isset($room[0]['target_id'])) {
         $term = Term::load($room[0]['target_id']);

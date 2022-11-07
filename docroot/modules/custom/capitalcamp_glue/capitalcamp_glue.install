@@ -316,15 +316,14 @@ function capitalcamp_glue_update_9005() {
     ->execute();
   if (!empty($node_results)) {
     foreach ($node_results as $node_result) {
-      /** @var \Drupal\Core\Entity\EntityBase|Drupal\Core\Entity\EntityInterface $session */
+      /** @var \Drupal\node\Entity\Node $session */
       $session = Node::load($node_result);
-      $url = $session->field_video_embed->value;
+      $url = $session->get('field_video_embed')->getValue();
       $media_results = _find_video($url);
       if ($media_results) {
         _update_session($session, $media_results);
       }
       else {
-        /** @var Drupal\media\Entity\Media $video */
         Media::create([
           'field_video_type' => $tid,
           'uid' => '1',
@@ -410,7 +409,7 @@ function _find_video($url) {
  *   The remote videos that have been found.
  */
 function _update_session(EntityInterface $session, array $video_results) {
-  /** @var \Drupal\Core\Entity\EntityBase|Drupal\Core\Entity\EntityInterface $session */
+  /** @var \Drupal\node\Entity\Node $session */
   $session->set('field_video', $video_results[key($video_results)]);
   $session->set('field_video_embed', NULL);
   $session->save();

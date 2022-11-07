@@ -23,6 +23,13 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 class DgcProposedSessions extends BlockBase implements ContainerFactoryPluginInterface {
 
   /**
+   * The Conference Years.
+   *
+   * @var \Drupal\taxonomy\TermInterface
+   */
+  protected $conferenceYearTermsOptions;
+
+  /**
    * Term storage.
    *
    * @var \Drupal\taxonomy\TermStorageInterface

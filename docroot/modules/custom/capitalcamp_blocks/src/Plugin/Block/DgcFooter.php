@@ -19,6 +19,13 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 class DgcFooter extends BlockBase implements ContainerFactoryPluginInterface {
 
   /**
+   * The MenuLinkTreeInterface.
+   *
+   * @var \Drupal\Core\Menu\MenuLinkTreeInterface
+   */
+  protected $menuTree;
+
+  /**
    * {@inheritdoc}
    */
   public function __construct(array $configuration, $plugin_id, $plugin_definition, MenuLinkTreeInterface $menu_tree) {
