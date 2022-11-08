@@ -2,8 +2,6 @@ _core:
   default_config_hash: 6phbBhcYjncqxncwDHAImFHb0MAKamGB_HQy53AfN9s
 subscription_name: ''
 debug: false
-cron_interval: 30
-cron_interval_override: 0
 hide_signup_messages: 0
 spi:
   server: 'https://nspi.acquia.com'
@@ -12,7 +10,6 @@ spi:
   admin_priv: 1
   send_node_user: 1
   send_watchdog: 1
-  use_cron: 1
   dynamic_banner: 1
   set_variables_override: 1
   set_variables_automatic:
@@ -34,6 +31,9 @@ spi:
     variables: {  }
     time: 0
   cron_interval: 28800
+  site_environment: dev
+  site_uuid: 56909b85-c2fa-43e9-8015-539203211c58
+  env_detection_enabled: true
 mapping:
   acquia_spi_send_node_user:
     - acquia_connector.settings

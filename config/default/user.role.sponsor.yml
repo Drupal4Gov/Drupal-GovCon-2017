@@ -5,13 +5,9 @@ dependencies:
   config:
     - node.type.sponsor
   module:
-    - lightning_core
     - node
     - system
     - toolbar
-third_party_settings:
-  lightning_core:
-    description: 'Conference sponsor'
 id: sponsor
 label: Sponsor
 weight: 8
