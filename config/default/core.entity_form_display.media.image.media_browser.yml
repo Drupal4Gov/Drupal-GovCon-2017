@@ -9,9 +9,8 @@ dependencies:
     - image.style.medium
     - media.type.image
   module:
-    - image
-    - lightning_media
     - path
+    - svg_image
 _core:
   default_config_hash: 1U5XavhCARUa63Cs1qKuE5u_UOMDj8jqZoJ2jVWdfw0
 id: media.image.media_browser
@@ -26,10 +25,7 @@ content:
     settings:
       progress_indicator: throbber
       preview_image_style: medium
-    third_party_settings:
-      lightning_media:
-        file_links: false
-        remove_button: false
+    third_party_settings: {  }
   field_media_in_library:
     type: boolean_checkbox
     weight: 4
