@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c52abadd04d0041173c60ae602b88bb3",
+    "content-hash": "4d2dd057122592ff632d8bf7bbdad590",
     "packages": [
         {
             "name": "acquia/blt",
@@ -4091,17 +4091,17 @@
         },
         {
             "name": "drupal/captcha",
-            "version": "1.5.0",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/captcha.git",
-                "reference": "8.x-1.5"
+                "reference": "8.x-1.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/captcha-8.x-1.5.zip",
-                "reference": "8.x-1.5",
-                "shasum": "36284ece721d3534d0c3bd6ae01cdb549920a024"
+                "url": "https://ftp.drupal.org/files/projects/captcha-8.x-1.6.zip",
+                "reference": "8.x-1.6",
+                "shasum": "24b755e77ff4a95f40ef074c91ed9132303fafbb"
             },
             "require": {
                 "drupal/core": ">=8.9 <11"
@@ -4109,8 +4109,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.5",
-                    "datestamp": "1662751122",
+                    "version": "8.x-1.6",
+                    "datestamp": "1667906819",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -7392,17 +7392,11 @@
         },
         {
             "name": "drupal/lightning_core",
-            "version": "5.11.0",
+            "version": "dev-5.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/lightning_core.git",
-                "reference": "8.x-5.11"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/lightning_core-8.x-5.11.zip",
-                "reference": "8.x-5.11",
-                "shasum": "c61308efc4c0b3b2dc45c9639765c9d00fccded2"
+                "reference": "70aa1795c099967be837a623dac9d22d78c45347"
             },
             "require": {
                 "drupal/acquia_telemetry-acquia_telemetry": "^1.0-alpha3",
@@ -7425,16 +7419,17 @@
             },
             "type": "drupal-module",
             "extra": {
-                "drupal": {
-                    "version": "8.x-5.11",
-                    "datestamp": "1660311584",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                },
                 "branch-alias": {
+                    "dev-5.x": "5.x-dev",
                     "dev-8.x-5.x": "5.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-5.10+1-dev",
+                    "datestamp": "1660308494",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
                 },
                 "drush": {
                     "services": {
@@ -17621,6 +17616,7 @@
     "stability-flags": {
         "drupal/config_ignore": 20,
         "drupal/core_context": 10,
+        "drupal/lightning_core": 20,
         "drupal/linkicon": 20,
         "drupal/qa_accounts": 20,
         "jquery-ui/jquery-ui-touch-punch": 20,
