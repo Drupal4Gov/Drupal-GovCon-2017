@@ -69,6 +69,24 @@
                     "composer/installers": "~1.0"
                 }
             }
+        },
+        "chartjs": {
+            "type": "package",
+            "package": {
+                "name": "chartjs/chartjs",
+                "version": "3.9.1",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "chartjs"
+                },
+                "dist": {
+                    "url": "https://api.github.com/repos/chartjs/Chart.js/zipball",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
         }
     },
     "config": {
@@ -94,6 +112,7 @@
         "acquia/blt-phpcs": "^1",
         "acquia/memcache-settings": "^1.1",
         "bower-asset/blazy": "^1.8",
+        "chartjs/chartjs": "3.9.1",
         "drupal/acquia_connector": "^3",
         "drupal/acquia_purge": "^1.1",
         "drupal/adminimal_admin_toolbar": "^1.0",
