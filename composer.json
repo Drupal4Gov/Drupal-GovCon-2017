@@ -69,6 +69,24 @@
                     "composer/installers": "~1.0"
                 }
             }
+        },
+        "chartjs": {
+            "type": "package",
+            "package": {
+                "name": "chartjs/chartjs",
+                "version": "3.9.1",
+                "type": "drupal-library",
+                "extra": {
+                    "installer-name": "chartjs"
+                },
+                "dist": {
+                    "url": "https://api.github.com/repos/chartjs/Chart.js/zipball",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
         }
     },
     "config": {
@@ -94,6 +112,7 @@
         "acquia/blt-phpcs": "^1",
         "acquia/memcache-settings": "^1.1",
         "bower-asset/blazy": "^1.8",
+        "chartjs/chartjs": "3.9.1",
         "drupal/acquia_connector": "^3",
         "drupal/acquia_purge": "^1.1",
         "drupal/adminimal_admin_toolbar": "^1.0",
@@ -119,7 +138,7 @@
         "drupal/google_analytics": "^3",
         "drupal/honeypot": "^2",
         "drupal/inline_entity_form": "^1.0-rc7",
-        "drupal/lightning_core": "^5",
+        "drupal/lightning_core": "5.x-dev",
         "drupal/lightning_layout": "^2.9",
         "drupal/lightning_media": "^4.6",
         "drupal/lightning_workflow": "^3.16",
@@ -211,6 +230,12 @@
             "acquia/blt": {
                 "fixes zsh git hooks": "https://github.com/acquia/blt/pull/4497.patch",
                 "debugging": "patches/debug.patch"
+            },
+            "mikemadison13/blt-lando": {
+                "m1": "https://github.com/mikemadison13/blt-lando/pull/32.patch"
+            },
+            "drupal/lightning_core": {
+                "behat failures": "https://www.drupal.org/files/issues/2022-06-30/3293692-2.patch"
             }
 
         },

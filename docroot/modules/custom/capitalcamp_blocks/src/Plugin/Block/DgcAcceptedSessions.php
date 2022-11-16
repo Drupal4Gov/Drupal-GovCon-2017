@@ -44,6 +44,13 @@ class DgcAcceptedSessions extends BlockBase implements ContainerFactoryPluginInt
   protected $viewExecutableFactory;
 
   /**
+   * The Conference Years.
+   *
+   * @var \Drupal\taxonomy\TermInterface
+   */
+  protected $conferenceYearTermsOptions;
+
+  /**
    * {@inheritdoc}
    */
   public function __construct(array $configuration, $plugin_id, $plugin_definition, TermStorageInterface $termStorage, EntityStorageInterface $viewEntityStorage, ViewExecutableFactory $viewExecutableFactory) {

@@ -23,6 +23,20 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 class DgcSponsors extends BlockBase implements ContainerFactoryPluginInterface {
 
   /**
+   * The Conference Years.
+   *
+   * @var \Drupal\taxonomy\TermInterface
+   */
+  protected $conferenceYearTermsOptions;
+
+  /**
+   * The Sponsorship Levels.
+   *
+   * @var \Drupal\taxonomy\TermInterface
+   */
+  protected $sponsorshipLevelTermOptions;
+
+  /**
    * Term storage.
    *
    * @var \Drupal\taxonomy\TermStorageInterface
