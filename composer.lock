@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fd2e56a2afa7d2ab2204be02a45a3898",
+    "content-hash": "7f71ef264c827bc179f8d28862cb5964",
     "packages": [
         {
             "name": "acquia/blt",
@@ -3389,17 +3389,17 @@
         },
         {
             "name": "drupal/acquia_connector",
-            "version": "3.0.6",
+            "version": "4.0.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/acquia_connector.git",
-                "reference": "3.0.6"
+                "reference": "4.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/acquia_connector-3.0.6.zip",
-                "reference": "3.0.6",
-                "shasum": "8c37604b7bcc7c43e12ef9c2f1d1d65af3a75c4b"
+                "url": "https://ftp.drupal.org/files/projects/acquia_connector-4.0.1.zip",
+                "reference": "4.0.1",
+                "shasum": "69851795d3b6f868c0645837669da83f53d35029"
             },
             "require": {
                 "drupal/core": ">=8.9 <11.0.0-stable",
@@ -3408,19 +3408,19 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "3.0.6",
-                    "datestamp": "1665784287",
+                    "version": "4.0.1",
+                    "datestamp": "1670270139",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
                 },
                 "branch-alias": {
-                    "dev-3.x": "3.x-dev"
+                    "dev-4.x": "4.x-dev"
                 },
                 "drush": {
                     "services": {
-                        "drush.services.yml": "^9 || ^10"
+                        "drush.services.yml": ">=9"
                     }
                 }
             },
@@ -9343,26 +9343,27 @@
         },
         {
             "name": "drupal/smart_trim",
-            "version": "1.3.0",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/smart_trim.git",
-                "reference": "8.x-1.3"
+                "reference": "2.0.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/smart_trim-8.x-1.3.zip",
-                "reference": "8.x-1.3",
-                "shasum": "5894aa067fba19a3452ed8ce749f33bd9ae91907"
+                "url": "https://ftp.drupal.org/files/projects/smart_trim-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "d917ad4d78b50cf535f3a292a2e09cc73b87bf4f"
             },
             "require": {
-                "drupal/core": "^8 || ^9"
+                "drupal/core": "^8 || ^9 || ^10",
+                "drupal/token": "^1.0"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.3",
-                    "datestamp": "1589766531",
+                    "version": "2.0.0",
+                    "datestamp": "1666374010",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -9395,7 +9396,7 @@
             "description": "Provides a more robust alternative to 'summary or trimmed' textfield format.",
             "homepage": "https://drupal.org/project/smart_trim",
             "support": {
-                "source": "https://cgit.drupalcode.org/smart_trim",
+                "source": "https://git.drupalcode.org/project/smart_trim",
                 "issues": "https://drupal.org/project/issues/smart_trim"
             }
         },
