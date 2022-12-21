@@ -87,6 +87,21 @@
                     "composer/installers": "~1.0"
                 }
             }
+        },
+        "dropzonejs": {
+            "type": "package",
+            "package": {
+                "name": "enyo/dropzonejs",
+                "version": "5.7.1",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/enyo/dropzone/archive/v5.7.1.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
         }
     },
     "config": {
@@ -116,11 +131,11 @@
         "drupal/acquia_connector": "^3",
         "drupal/acquia_purge": "^1.1",
         "drupal/adminimal_admin_toolbar": "^1.0",
-        "drupal/better_exposed_filters": "^5.0-beta1",
+        "drupal/better_exposed_filters": "^6",
         "drupal/block_exclude_pages": "^2",
         "drupal/captcha": "^1.1",
         "drupal/cloudflare": "^1.0.0-alpha7",
-        "drupal/components": "^2.0-beta3",
+        "drupal/components": "^3",
         "drupal/config_ignore": "2.x-dev",
         "drupal/config_split": "^1.0.0",
         "drupal/core": "^9.1",
@@ -134,8 +149,8 @@
         "drupal/field_group": "^3.0",
         "drupal/field_permissions": "^1.0",
         "drupal/flag": "^4.0-beta2",
-        "drupal/focal_point": "^1.5",
-        "drupal/google_analytics": "^3",
+        "drupal/focal_point": "^2",
+        "drupal/google_analytics": "^4",
         "drupal/honeypot": "^2",
         "drupal/inline_entity_form": "^1.0-rc7",
         "drupal/lightning_core": "5.x-dev",
@@ -153,7 +168,7 @@
         "drupal/search_api": "^1.17",
         "drupal/seckit": "^2",
         "drupal/shield": "^1.1",
-        "drupal/simple_sitemap": "^3.7",
+        "drupal/simple_sitemap": "^4",
         "drupal/smart_trim": "^1.0",
         "drupal/svg_image": "^1.8",
         "drupal/twig_xdebug": "^1.2",
@@ -167,7 +182,8 @@
         "mikemadison13/blt-drupal-check": "dev-main",
         "mikemadison13/blt-lando": "dev-main",
         "mmenu/mmenu": "^8.5",
-        "superfish/superfish": "^1.7"
+        "superfish/superfish": "^1.7",
+        "enyo/dropzonejs": "^5"
     },
     "scripts": {
         "post-install-cmd": [
