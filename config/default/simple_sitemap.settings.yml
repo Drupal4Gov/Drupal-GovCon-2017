@@ -4,6 +4,7 @@ max_links: 2000
 cron_generate: true
 cron_generate_interval: 0
 generate_duration: 10000
+entities_per_queue_item: 50
 remove_duplicates: true
 skip_untranslated: true
 xsl: true
@@ -13,4 +14,3 @@ custom_links_include_images: false
 excluded_languages: {  }
 enabled_entity_types:
   - node
-entities_per_queue_item: 50
