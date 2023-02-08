@@ -6,6 +6,8 @@ id: prod
 label: Prod
 description: ''
 weight: 1
+stackable: false
+storage: folder
 folder: ../config/envs/prod
 module:
   acquia_connector: 0
@@ -14,7 +16,5 @@ module:
   purge_queuer_url: 0
   syslog: 0
 theme: {  }
-blacklist: {  }
-graylist: {  }
-graylist_dependents: true
-graylist_skip_equal: true
+complete_list: {  }
+partial_list: {  }

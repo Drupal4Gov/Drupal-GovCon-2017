@@ -6,6 +6,8 @@ id: dev
 label: Dev
 description: ''
 weight: 1
+stackable: false
+storage: folder
 folder: ../config/envs/dev
 module:
   acquia_connector: 0
@@ -13,7 +15,5 @@ module:
   shield: 0
   syslog: 0
 theme: {  }
-blacklist: {  }
-graylist: {  }
-graylist_dependents: true
-graylist_skip_equal: true
+complete_list: {  }
+partial_list: {  }
