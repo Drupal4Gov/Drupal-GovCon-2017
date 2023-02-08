@@ -1,37 +1,36 @@
-uuid: c772df87-db21-4e6c-aa1b-c15301a5926a
+uuid: 9c38e4e9-5ccd-4626-95ae-f9989c122b7d
 langcode: en
 status: true
 dependencies:
   config:
     - filter.format.simple_text
   module:
-    - ckeditor
+    - ckeditor5
 format: simple_text
-editor: ckeditor
+editor: ckeditor5
 settings:
   toolbar:
-    rows:
-      -
-        -
-          name: Formatting
-          items:
-            - Bold
-            - Italic
-        -
-          name: Links
-          items:
-            - DrupalLink
-            - DrupalUnlink
-        -
-          name: Lists
-          items:
-            - BulletedList
-            - NumberedList
-        -
-          name: Source
-          items:
-            - Source
-  plugins: {  }
+    items:
+      - bold
+      - italic
+      - '|'
+      - link
+      - '|'
+      - bulletedList
+      - numberedList
+      - '|'
+      - sourceEditing
+  plugins:
+    ckeditor5_sourceEditing:
+      allowed_tags:
+        - '<b>'
+        - '<i>'
+        - '<a hreflang>'
+        - '<ul type>'
+        - '<ol type>'
+    ckeditor5_list:
+      reversed: false
+      startIndex: true
 image_upload:
   status: false
   scheme: public

@@ -6,21 +6,18 @@ id: local
 label: Local
 description: ''
 weight: 1
+stackable: false
+storage: folder
 folder: ../config/envs/local
 module:
-  dblog: 0
   devel: 0
   webform_ui: 0
   views_ui: 0
 theme: {  }
-blacklist:
-  - dblog.settings
+complete_list:
   - devel.settings
   - devel.toolbar.settings
   - search_api.server.local
   - system.menu.devel
-  - views.view.watchdog
-graylist:
+partial_list:
   - system.performance
-graylist_dependents: true
-graylist_skip_equal: true

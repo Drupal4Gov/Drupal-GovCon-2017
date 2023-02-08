@@ -4,9 +4,12 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.embedded
+    - core.entity_view_mode.media.thumbnail
   module:
+    - blazy
     - editor
     - media
+    - slick
 _core:
   default_config_hash: xNqrUFmyyyy8JFxTT_Zd1CLPZ3fyIR8wqQkEfPrYj9o
 name: 'Rich Text'
@@ -43,7 +46,7 @@ filters:
     status: true
     weight: -50
     settings:
-      allowed_html: '<a href hreflang class> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <s> <sup> <sub> <img src alt data-entity-type data-entity-uuid data-align data-caption> <table> <caption> <hr> <p> <br> <h1> <pre> <drupal-entity data-*> <drupal-media data-entity-type data-entity-uuid>'
+      allowed_html: '<br> <p> <h1> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <a class hreflang href> <cite> <dl> <dt> <dd> <img src alt data-entity-type data-entity-uuid data-align data-caption> <drupal-entity data-*> <blockquote cite> <ul type> <ol type start> <drupal-media title data-entity-type data-entity-uuid alt data-view-mode data-caption data-align> <strong> <em> <code class="language-*"> <pre> <s> <sub> <sup> <li> <hr> <table> <tr> <td rowspan colspan> <th rowspan colspan> <thead> <tbody> <tfoot> <caption>'
       filter_html_help: true
       filter_html_nofollow: false
   filter_autop:
@@ -80,6 +83,7 @@ filters:
       default_view_mode: default
       allowed_view_modes:
         embedded: embedded
+        thumbnail: thumbnail
       allowed_media_types: {  }
   slick_filter:
     id: slick_filter
@@ -88,4 +92,42 @@ filters:
     weight: 4
     settings:
       optionset: default
+      layout: ''
+      skin: ''
+      background: false
+      loading: ''
+      preload: false
+      responsive_image_style: ''
+      image_style: ''
       media_switch: ''
+      ratio: ''
+      thumbnail_style: ''
+      overridables:
+        arrows: '0'
+        autoplay: '0'
+        dots: '0'
+        draggable: '0'
+        infinite: '0'
+        mouseWheel: '0'
+        randomize: '0'
+        variableWidth: '0'
+      optionset_thumbnail: ''
+      skin_thumbnail: ''
+      thumbnail_caption: ''
+      thumbnail_effect: ''
+      thumbnail_position: ''
+      override: false
+  blazy_filter:
+    id: blazy_filter
+    provider: blazy
+    status: false
+    weight: 3
+    settings:
+      media_switch: ''
+      hybrid_style: ''
+      box_style: ''
+      box_caption: ''
+      filter_tags:
+        img: img
+        iframe: iframe
+      use_data_uri: '0'

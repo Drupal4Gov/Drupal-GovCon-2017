@@ -1,61 +1,78 @@
-uuid: 708cc660-5da3-40b7-9719-6fb0d7933fa8
+uuid: 8c876226-db5a-4cad-81c4-816c0476cc61
 langcode: en
 status: true
 dependencies:
   config:
     - filter.format.rich_text
   module:
-    - ckeditor
-_core:
-  default_config_hash: 0bVELtfx9sXhjZ6s6W-dJo8SW-IR9jiEIEylzm-2Cro
+    - ckeditor5
 format: rich_text
-editor: ckeditor
+editor: ckeditor5
 settings:
   toolbar:
-    rows:
-      -
-        -
-          name: Formatting
-          items:
-            - Bold
-            - Italic
-            - Strike
-            - Superscript
-            - Subscript
-            - '-'
-            - RemoveFormat
-        -
-          name: Linking
-          items:
-            - DrupalLink
-            - DrupalUnlink
-        -
-          name: Lists
-          items:
-            - BulletedList
-            - NumberedList
-        -
-          name: Media
-          items:
-            - Blockquote
-            - DrupalMediaLibrary
-            - HorizontalRule
-        -
-          name: 'Block Formatting'
-          items:
-            - Format
-        -
-          name: Tools
-          items:
-            - ShowBlocks
-            - Source
-        -
-          name: Styles
-          items:
-            - Styles
+    items:
+      - bold
+      - italic
+      - strikethrough
+      - superscript
+      - subscript
+      - removeFormat
+      - '|'
+      - link
+      - '|'
+      - bulletedList
+      - numberedList
+      - '|'
+      - blockQuote
+      - drupalMedia
+      - horizontalLine
+      - '|'
+      - heading
+      - '|'
+      - sourceEditing
+      - '|'
+      - style
+      - '|'
+      - code
+      - insertTable
+      - codeBlock
   plugins:
-    stylescombo:
-      styles: 'a.button|Call to Action Link'
+    ckeditor5_heading:
+      enabled_headings:
+        - heading1
+        - heading2
+        - heading3
+        - heading4
+        - heading5
+        - heading6
+    ckeditor5_style:
+      styles:
+        -
+          label: 'Call to Action Link'
+          element: '<a class="button">'
+    ckeditor5_sourceEditing:
+      allowed_tags:
+        - '<cite>'
+        - '<dl>'
+        - '<dt>'
+        - '<dd>'
+        - '<img src alt data-entity-type data-entity-uuid data-align data-caption>'
+        - '<drupal-entity data-*>'
+        - '<a hreflang class>'
+        - '<blockquote cite>'
+        - '<ul type>'
+        - '<ol type>'
+        - '<h2 id>'
+        - '<h3 id>'
+        - '<h4 id>'
+        - '<h5 id>'
+        - '<h6 id>'
+        - '<drupal-media title>'
+    ckeditor5_list:
+      reversed: false
+      startIndex: true
+    media_media:
+      allow_view_mode_override: true
 image_upload:
   status: true
   scheme: public

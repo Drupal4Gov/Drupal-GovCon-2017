@@ -13,9 +13,7 @@ dependencies:
     - filter
     - moderation_sidebar
     - node
-    - panels_ipe
     - path
-    - quickedit
     - toolbar
 id: page_creator
 label: 'Basic page creator'
@@ -24,8 +22,6 @@ is_admin: false
 permissions:
   - 'access contextual links'
   - 'access image_browser entity browser pages'
-  - 'access in-place editing'
-  - 'access panels in-place editing'
   - 'access toolbar'
   - 'create page content'
   - 'create url aliases'
