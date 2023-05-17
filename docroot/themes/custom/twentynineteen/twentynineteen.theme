@@ -63,6 +63,7 @@ function twentynineteen_preprocess_page(&$variables) {
 function twentynineteen_preprocess_block(&$variables) {
   // Custom block type helper classes.
   if (isset($variables['elements']['content']['#block_content'])) {
+    $variables['attributes']['data-block-plugin-id'] = "block_content:" . $variables['elements']['content']['#block_content']->uuid();
     $bundle = $variables['elements']['content']['#block_content']->bundle();
     $bundle_class = str_replace('_', '-', $bundle);
     $variables['attributes']['class'][] = Html::cleanCssIdentifier('block--bundle-' . $bundle_class);
