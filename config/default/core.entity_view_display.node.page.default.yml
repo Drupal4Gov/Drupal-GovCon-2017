@@ -5,11 +5,11 @@ dependencies:
   config:
     - field.field.node.page.body
     - field.field.node.page.field_meta_tags
+    - field.field.node.page.layout_selection
     - node.type.page
   module:
     - layout_builder
     - layout_builder_restrictions
-    - layout_discovery
     - layout_library
     - metatag
     - text

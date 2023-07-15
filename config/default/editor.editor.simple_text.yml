@@ -21,6 +21,9 @@ settings:
       - '|'
       - sourceEditing
   plugins:
+    ckeditor5_list:
+      reversed: false
+      startIndex: true
     ckeditor5_sourceEditing:
       allowed_tags:
         - '<b>'
@@ -28,9 +31,6 @@ settings:
         - '<a hreflang>'
         - '<ul type>'
         - '<ol type>'
-    ckeditor5_list:
-      reversed: false
-      startIndex: true
 image_upload:
   status: false
   scheme: public

@@ -11,7 +11,7 @@ archive: false
 id: 2020_code_contribution_form
 title: '2020 Code Contribution Form'
 description: "<p>Drupal thrives on community! Interested in contributing back to Drupal?</p>\r\n\r\n<p>Please fill out form to participate in Drupal GovCon&#39;s code contribution on September 23 - 25, 2020.</p>\r\n<br />\r\n&nbsp;"
-category: ''
+categories: {  }
 elements: |-
   email_address:
     '#type': email
@@ -136,6 +136,8 @@ settings:
   wizard_toggle: true
   wizard_toggle_show_label: ''
   wizard_toggle_hide_label: ''
+  wizard_page_type: container
+  wizard_page_title_tag: h2
   preview: 0
   preview_label: ''
   preview_title: ''

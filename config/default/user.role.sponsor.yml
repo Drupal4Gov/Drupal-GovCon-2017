@@ -5,6 +5,7 @@ dependencies:
   config:
     - node.type.sponsor
   module:
+    - file
     - node
     - system
     - toolbar
@@ -16,6 +17,7 @@ permissions:
   - 'access content overview'
   - 'access toolbar'
   - 'create sponsor content'
+  - 'delete own files'
   - 'delete own sponsor content'
   - 'edit any sponsor content'
   - 'edit own sponsor content'
