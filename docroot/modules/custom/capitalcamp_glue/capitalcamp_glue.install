@@ -158,7 +158,7 @@ function capitalcamp_glue_update_8006() {
 
   foreach ($terms as $name) {
     // Check whether the term already exists.
-    $result = \Drupal::entityQuery('taxonomy_term')->condition('vid', $vocabulary)->condition('name', $name)->execute();
+    $result = \Drupal::entityQuery('taxonomy_term')->condition('vid', $vocabulary)->condition('name', $name)->accessCheck(TRUE)->execute();
     if (empty($result)) {
       $term = Term::create(['vid' => $vocabulary, 'name' => $name]);
       $term->save();
@@ -178,7 +178,7 @@ function capitalcamp_glue_update_8008() {
 
   foreach ($terms as $name) {
     // Check whether the term already exists.
-    $result = \Drupal::entityQuery('taxonomy_term')->condition('vid', $vocabulary)->condition('name', $name)->execute();
+    $result = \Drupal::entityQuery('taxonomy_term')->condition('vid', $vocabulary)->condition('name', $name)->accessCheck(TRUE)->execute();
     if (empty($result)) {
       $term = Term::create(['vid' => $vocabulary, 'name' => $name]);
       $term->save();
