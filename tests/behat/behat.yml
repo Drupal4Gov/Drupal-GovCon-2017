@@ -5,10 +5,9 @@ default:
         - "%paths.base%/features"
   extensions:
     Behat\MinkExtension:
-      default_session: goutte
       browser_name: chrome
       javascript_session: default
-      goutte: ~
+      browserkit_http: ~
       files_path: "%paths.base%/media"
     Drupal\DrupalExtension:
       blackbox: ~
