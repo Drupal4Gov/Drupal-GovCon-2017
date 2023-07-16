@@ -10,6 +10,7 @@ dependencies:
   module:
     - content_moderation
     - field_permissions
+    - file
     - filter
     - media
     - node
@@ -26,6 +27,7 @@ permissions:
   - 'access toolbar'
   - 'create page content'
   - 'create special_announcement content'
+  - 'delete own files'
   - 'delete own page content'
   - 'delete own special_announcement content'
   - 'edit any page content'

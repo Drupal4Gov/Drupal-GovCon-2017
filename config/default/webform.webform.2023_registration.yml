@@ -16,7 +16,7 @@ archive: false
 id: 2023_registration
 title: '2023 Registration'
 description: ''
-category: ''
+categories: {  }
 elements: |-
   markup_01:
     '#type': webform_markup
@@ -34,7 +34,7 @@ elements: |-
     '#required_error': 'Email is a required field.'
   please_indicate_the_days_when_you_ll_need_lunch_this_will_help_u:
     '#type': checkboxes
-    '#title': 'Please indicate the days when you''ll need lunch. This will help us order the right number of lunches for the conference.'
+    '#title': "Please indicate the days when you'll need lunch. This will help us order the right number of lunches for the conference."
     '#options':
       'Wednesday, Nov 1': Wednesday
       'Thursday, Nov 2': Thursday
@@ -59,19 +59,16 @@ elements: |-
       '#description': '<p>For example, Jose, Darren, or Mai.</p>'
       '#required': true
       '#required_error': 'First Name is a required field.'
-      '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
     last_name:
       '#type': textfield
       '#title': 'Last or family name'
       '#description': '<p>For example, Martinez Gonzales, Gu, or Smith.</p>'
       '#required': true
       '#required_error': 'Last Name is a required field.'
-      '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
     preferred_name:
       '#type': textfield
       '#title': 'Preferred name'
       '#description': '<p>I prefer to be addressed as</p><p>For example, Dr. Gu, Mrs. Schmidt, Alix Martinez.</p>'
-      '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
     drupal_org_user_name:
       '#type': textfield
       '#title': 'Drupal.org User Name'
@@ -81,7 +78,6 @@ elements: |-
     address:
       '#type': webform_address
       '#title': City/State/Country
-      '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
       '#address__access': false
       '#address_2__access': false
       '#city__access': false
@@ -104,7 +100,7 @@ elements: |-
       '#options':
         'This is my first Drupal GovCon!': 'This is my first Drupal GovCon!'
         'I’ve attended once before': 'I’ve attended once before'
-        'I''ve attended 2-3 Drupal GovCons': 'I''ve attended 2-3 Drupal GovCons'
+        "I've attended 2-3 Drupal GovCons": "I've attended 2-3 Drupal GovCons"
         'I’ve attended 4 or more Drupal GovCon': 'I’ve attended 4 or more Drupal GovCon'
       '#required': true
       '#required_error': 'Number of Times Attending is a required field.'
@@ -112,11 +108,11 @@ elements: |-
       '#type': select
       '#title': 'Are you interested in participating in contributions?'
       '#options':
-        'Yes, I''m going to contribute to Core or Contrib': 'Yes, I''m going to contribute to Core or Contrib'
+        "Yes, I'm going to contribute to Core or Contrib": "Yes, I'm going to contribute to Core or Contrib"
         'Yes, I want to be a contribution mentor': 'Yes, I want to be a contribution mentor'
         'No, I am not attending contributions': 'No, I am not attending contributions'
-        'I haven''t decided yet': 'I haven''t decided yet'
-        'I don''t know what this is': 'I don''t know what this is'
+        "I haven't decided yet": "I haven't decided yet"
+        "I don't know what this is": "I don't know what this is"
       '#required': true
     how_did_you_hear_about_drupal_govcon_:
       '#type': select
@@ -137,7 +133,7 @@ elements: |-
         'Sign me up for Drupal GovCon news': 'Sign me up for Drupal GovCon news'
         'Sign me up for Drupal4Gov infrequent educational / training news': 'Sign me up for Drupal4Gov infrequent educational / training news'
         'Sign me up for infrequent sponsor news and promotions': 'Sign me up for infrequent sponsor news and promotions'
-        'No thanks, I''m subscribed already or get my Drupal news elsewhere': 'No thanks, I''m subscribed already or get my Drupal news elsewhere'
+        "No thanks, I'm subscribed already or get my Drupal news elsewhere": "No thanks, I'm subscribed already or get my Drupal news elsewhere"
       '#required': true
       '#required_error': 'Sign up for news is a required field'
   company_information:
@@ -170,7 +166,7 @@ elements: |-
       '#required_error': 'How would you describe your company is a required field.'
     please_select_your_organization_s_size:
       '#type': select
-      '#title': 'Please select your organization''s size'
+      '#title': "Please select your organization's size"
       '#options':
         1: '1'
         2-10: 2-10
@@ -182,7 +178,7 @@ elements: |-
         '10,000+': '10,000+'
         'Don’t know/Not sure': 'Don’t know/Not sure'
       '#required': true
-      '#required_error': 'Please select your organization''s size is a required field.'
+      '#required_error': "Please select your organization's size is a required field."
     please_select_the_industries_that_you_work_in_select_all_that_ap:
       '#type': webform_checkboxes_other
       '#title': 'Please select the industries that you work in (select all that apply)'
@@ -238,8 +234,8 @@ elements: |-
       '#type': select
       '#title': 'What is your level of Drupal experience?'
       '#options':
-        'I''m just exploring Drupal': 'I''m just exploring Drupal'
-        'I''m a Drupal beginner': 'I''m a Drupal beginner'
+        "I'm just exploring Drupal": "I'm just exploring Drupal"
+        "I'm a Drupal beginner": "I'm a Drupal beginner"
         'I have some Drupal skills': 'I have some Drupal skills'
         'I have strong Drupal expertise': 'I have strong Drupal expertise'
         'I am a Drupal master': 'I am a Drupal master'

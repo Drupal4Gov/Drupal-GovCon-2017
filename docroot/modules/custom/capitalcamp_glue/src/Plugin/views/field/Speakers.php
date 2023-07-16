@@ -2,10 +2,10 @@
 
 namespace Drupal\capitalcamp_glue\Plugin\views\field;
 
+use Drupal\Core\Link;
+use Drupal\user\Entity\User;
 use Drupal\views\Plugin\views\field\FieldPluginBase;
 use Drupal\views\ResultRow;
-use Drupal\user\Entity\User;
-use Drupal\Core\Link;
 
 /**
  * Field handler to flag the node type.

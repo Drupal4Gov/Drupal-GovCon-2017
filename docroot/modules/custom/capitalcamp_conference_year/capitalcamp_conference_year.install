@@ -27,7 +27,7 @@ function capitalcamp_conference_year_install() {
  * @throws \Drupal\Core\Entity\EntityStorageException
  */
 function conference_year_setter($content_type, $year) {
-  $conference_year = \Drupal::entityQuery('taxonomy_term')->condition('vid', 'conference_year')->condition('name', $year)->execute();
+  $conference_year = \Drupal::entityQuery('taxonomy_term')->condition('vid', 'conference_year')->condition('name', $year)->accessCheck(TRUE)->execute();
   if ($conference_year) {
     foreach ($conference_year as $cy) {
       $conference_year = $cy;

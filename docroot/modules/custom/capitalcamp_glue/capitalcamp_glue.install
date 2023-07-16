@@ -6,12 +6,12 @@
  */
 
 use Drupal\block\Entity\Block;
-use Drupal\taxonomy\Entity\Term;
-use Drupal\menu_link_content\Entity\MenuLinkContent;
-use Drupal\user\Entity\Role;
-use Drupal\node\Entity\Node;
-use Drupal\media\Entity\Media;
 use Drupal\Core\Entity\EntityInterface;
+use Drupal\media\Entity\Media;
+use Drupal\menu_link_content\Entity\MenuLinkContent;
+use Drupal\node\Entity\Node;
+use Drupal\taxonomy\Entity\Term;
+use Drupal\user\Entity\Role;
 
 /**
  * DCG-107: Add terms to sponsorship level vocabulary.
@@ -158,7 +158,7 @@ function capitalcamp_glue_update_8006() {
 
   foreach ($terms as $name) {
     // Check whether the term already exists.
-    $result = \Drupal::entityQuery('taxonomy_term')->condition('vid', $vocabulary)->condition('name', $name)->execute();
+    $result = \Drupal::entityQuery('taxonomy_term')->condition('vid', $vocabulary)->condition('name', $name)->accessCheck(TRUE)->execute();
     if (empty($result)) {
       $term = Term::create(['vid' => $vocabulary, 'name' => $name]);
       $term->save();
@@ -178,7 +178,7 @@ function capitalcamp_glue_update_8008() {
 
   foreach ($terms as $name) {
     // Check whether the term already exists.
-    $result = \Drupal::entityQuery('taxonomy_term')->condition('vid', $vocabulary)->condition('name', $name)->execute();
+    $result = \Drupal::entityQuery('taxonomy_term')->condition('vid', $vocabulary)->condition('name', $name)->accessCheck(TRUE)->execute();
     if (empty($result)) {
       $term = Term::create(['vid' => $vocabulary, 'name' => $name]);
       $term->save();

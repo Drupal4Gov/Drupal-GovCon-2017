@@ -2,9 +2,9 @@
 
 namespace Drupal\capitalcamp_glue\Plugin\views\field;
 
+use Drupal\file\Entity\File;
 use Drupal\views\Plugin\views\field\FieldPluginBase;
 use Drupal\views\ResultRow;
-use Drupal\file\Entity\File;
 
 /**
  * Field handler to flag the node type.

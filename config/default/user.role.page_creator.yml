@@ -10,6 +10,7 @@ dependencies:
     - content_moderation
     - contextual
     - entity_browser
+    - file
     - filter
     - moderation_sidebar
     - node
@@ -25,6 +26,7 @@ permissions:
   - 'access toolbar'
   - 'create page content'
   - 'create url aliases'
+  - 'delete own files'
   - 'edit own page content'
   - 'use editorial transition create_new_draft'
   - 'use editorial transition review'

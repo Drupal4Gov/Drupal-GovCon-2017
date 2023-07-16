@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - field_ui
+    - file
     - node
 _core:
   default_config_hash: O15STNqaxZJp9WQvMNCRYzhPnpaMVU0W8eVoijQd3rw
@@ -13,3 +14,4 @@ weight: 2
 is_admin: false
 permissions:
   - 'administer node display'
+  - 'delete own files'

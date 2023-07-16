@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
+    - file
     - media
 _core:
   default_config_hash: C19s-DgCoW5aZz7bys6qI9jrW1Johq0cN-IGCtDbR0Y
@@ -13,3 +14,4 @@ is_admin: false
 permissions:
   - 'access media overview'
   - 'administer media'
+  - 'delete own files'

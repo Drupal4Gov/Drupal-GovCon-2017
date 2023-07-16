@@ -13,7 +13,7 @@ archive: false
 id: registration
 title: '2017 Registration'
 description: ''
-category: ''
+categories: {  }
 elements: |
   attendee_e_mail_address:
     '#type': email
@@ -373,6 +373,8 @@ settings:
   wizard_toggle: false
   wizard_toggle_show_label: ''
   wizard_toggle_hide_label: ''
+  wizard_page_type: container
+  wizard_page_title_tag: h2
   preview: 0
   preview_label: ''
   preview_title: ''

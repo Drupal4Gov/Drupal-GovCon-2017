@@ -123,7 +123,7 @@
         "ext-dom": "*",
         "ext-pdo": "*",
         "acquia/blt": "^13",
-        "acquia/blt-behat": "^1.1",
+        "acquia/blt-behat": "dev-master",
         "acquia/blt-phpcs": "^1",
         "acquia/memcache-settings": "^1.1",
         "bower-asset/blazy": "^1.8",
@@ -144,8 +144,8 @@
         "drupal/config_split": "^2.0.0-rc4",
         "drupal/conflict": "^2.0@alpha",
         "drupal/contact_storage": "^1.3",
-        "drupal/core": "^9.1",
-        "drupal/core-composer-scaffold": "^9.1",
+        "drupal/core": "^10",
+        "drupal/core-composer-scaffold": "^10",
         "drupal/core_context": "^1.0@beta",
         "drupal/ctools_block": "^4.0",
         "drupal/default_content": "^2",
@@ -183,7 +183,7 @@
         "drupal/r4032login": "^2",
         "drupal/recaptcha": "^3",
         "drupal/redirect": "^1.0",
-        "drupal/responsive_menu": "^4.4",
+        "drupal/responsive_menu": "4.4.x-dev",
         "drupal/search_api": "^1.17",
         "drupal/seckit": "^2",
         "drupal/shield": "^1.1",
@@ -191,8 +191,8 @@
         "drupal/slick": "^2.7",
         "drupal/slick_entityreference": "^2.1",
         "drupal/smart_trim": "^2",
-        "drupal/svg_image": "^1.8",
-        "drupal/upgrade_status": "^3.18",
+        "drupal/svg_image": "^3",
+        "drupal/upgrade_status": "^4",
         "drupal/webform": "^6.2.0-beta5",
         "drupal/webform_views": "^5.0-alpha8",
         "drush/drush": "^11",
@@ -270,16 +270,9 @@
             "mikemadison13/blt-lando": {
                 "m1": "https://github.com/mikemadison13/blt-lando/pull/32.patch"
             },
-            "drupal/lightning_core": {
-                "behat failures": "https://www.drupal.org/files/issues/2022-06-30/3293692-2.patch"
-            },
-            "drupal/responsive_menu": {
-                "D10": "https://www.drupal.org/files/issues/2023-01-22/responsive_menu-3297964-6-once.patch"
-            },
-            "drupal/svg_image": {
-                "D10": "https://www.drupal.org/files/issues/2023-01-20/svg_image-3299276-23-d10_compat.patch"
+            "drupal/google_analytics": {
+                "install from config": "https://git.drupalcode.org/project/google_analytics/-/merge_requests/33.patch"
             }
-
         },
         "drupal-scaffold": {
             "initial": {

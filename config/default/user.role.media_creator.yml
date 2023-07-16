@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - dropzonejs
+    - file
     - media
 _core:
   default_config_hash: sOivTdNRBzCVaqhc-dgc2Hemc3wgEMiQ3k4W1wI2BTY
@@ -15,5 +16,6 @@ permissions:
   - 'access media overview'
   - 'create media'
   - 'delete media'
+  - 'delete own files'
   - 'dropzone upload files'
   - 'update media'
