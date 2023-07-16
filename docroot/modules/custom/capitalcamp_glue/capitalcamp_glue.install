@@ -6,12 +6,12 @@
  */
 
 use Drupal\block\Entity\Block;
-use Drupal\taxonomy\Entity\Term;
-use Drupal\menu_link_content\Entity\MenuLinkContent;
-use Drupal\user\Entity\Role;
-use Drupal\node\Entity\Node;
-use Drupal\media\Entity\Media;
 use Drupal\Core\Entity\EntityInterface;
+use Drupal\media\Entity\Media;
+use Drupal\menu_link_content\Entity\MenuLinkContent;
+use Drupal\node\Entity\Node;
+use Drupal\taxonomy\Entity\Term;
+use Drupal\user\Entity\Role;
 
 /**
  * DCG-107: Add terms to sponsorship level vocabulary.
