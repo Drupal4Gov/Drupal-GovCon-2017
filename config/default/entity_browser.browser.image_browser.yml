@@ -2,6 +2,8 @@ uuid: 0e486d2b-56a2-4011-b6c9-b2e055956077
 langcode: en
 status: true
 dependencies:
+  config:
+    - views.view.image_browser
   module:
     - views
 _core:
@@ -27,9 +29,9 @@ widgets:
     settings:
       submit_text: Select
       upload_location: 'public://'
-      multiple: true
+      multiple: '1'
       extensions: 'jpg jpeg png gif'
-      media_type: null
+      media_type: image
       target_bundles: {  }
       upload_validators: {  }
       form_mode: media_browser
@@ -42,5 +44,5 @@ widgets:
     settings:
       submit_text: Select
       auto_select: false
-      view: media
-      view_display: entity_browser_2
+      view: image_browser
+      view_display: entity_browser
