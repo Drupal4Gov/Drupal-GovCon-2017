@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.sponsor.field_conference_year
+    - field.field.node.sponsor.field_logo_media
     - field.field.node.sponsor.field_sponsor_logo
     - field.field.node.sponsor.field_sponsor_related_attendees
     - field.field.node.sponsor.field_sponsor_sponsorship_level
@@ -20,6 +21,15 @@ targetEntityType: node
 bundle: sponsor
 mode: default
 content:
+  field_logo_media:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: embedded
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
   field_sponsor_logo:
     type: image
     label: hidden
@@ -41,7 +51,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 3
+    weight: 4
     region: content
   field_sponsor_sponsorship_level:
     type: entity_reference_label
@@ -49,7 +59,7 @@ content:
     settings:
       link: true
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
   field_sponsor_url:
     type: link
@@ -61,12 +71,12 @@ content:
       rel: '0'
       target: _blank
     third_party_settings: {  }
-    weight: 1
+    weight: 2
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 4
+    weight: 5
     region: content
 hidden:
   field_conference_year: true

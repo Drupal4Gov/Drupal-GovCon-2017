@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.sponsor.field_conference_year
+    - field.field.node.sponsor.field_logo_media
     - field.field.node.sponsor.field_sponsor_logo
     - field.field.node.sponsor.field_sponsor_related_attendees
     - field.field.node.sponsor.field_sponsor_sponsorship_level
@@ -37,6 +38,7 @@ content:
     region: content
 hidden:
   field_conference_year: true
+  field_logo_media: true
   field_sponsor_related_attendees: true
   field_sponsor_sponsorship_level: true
   field_sponsor_url: true
