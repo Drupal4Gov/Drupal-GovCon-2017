@@ -5,6 +5,7 @@ dependencies:
   config:
     - entity_browser.browser.image_browser
     - field.field.node.sponsor.field_conference_year
+    - field.field.node.sponsor.field_logo_media
     - field.field.node.sponsor.field_sponsor_logo
     - field.field.node.sponsor.field_sponsor_related_attendees
     - field.field.node.sponsor.field_sponsor_sponsorship_level
@@ -14,6 +15,7 @@ dependencies:
     - content_moderation
     - entity_browser
     - link
+    - media_library
     - path
 _core:
   default_config_hash: bD1HGmo0P8QiOV5pAoJlmVnAvH6ymTNcj38_qHDjXpU
@@ -33,6 +35,13 @@ content:
     weight: 12
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_logo_media:
+    type: media_library_widget
+    weight: 26
+    region: content
+    settings:
+      media_types: {  }
     third_party_settings: {  }
   field_sponsor_logo:
     type: entity_browser_file
