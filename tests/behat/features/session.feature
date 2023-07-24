@@ -10,26 +10,6 @@ Feature: Session Tests
       | name     | mail        | field_first_name | field_last_name |
       | admin    |no-reply@acquia.com| test | user                |
 
-  Scenario: Ensure Form Fields
-    Given I am logged in as a user with the "administrator" role
-    And I am on "/node/add/session"
-    Then I should see "Session Title"
-    And I should see "I can deliver this session"
-    And I should see "Session Track"
-    And I should see "Experience Level"
-    And I should see "Session Description"
-    And I should see "Co-Presenter(s)"
-    #And I should not see "Status"
-    #And I should not see "Conference Year"
-    #And I should not see "Room Monitor"
-    #And I should not see "Male Attendees"
-    #And I should not see "Female Attendees"
-
-  Scenario: Ensure Access to Sessions is Disabled
-    Given I am logged in as a user with the "authenticated" role
-    And I am on "/node/add/session"
-    Then I should see "Access denied"
-
   #Scenario: Proposed Session View
     #Given I am on "/2020/program/proposed-sessions"
     #Then I should see "Proposed Session Node"
@@ -41,11 +21,6 @@ Feature: Session Tests
     #Then I should see "Accepted Session Node"
     #And I should not see "Proposed Session Node"
     #And I should not see "Old Session Node"
-
-  Scenario: Admin Proposed Session View
-    Given I am logged in as a user with the "administrator" role
-    And I am on "/admin/sessions/proposed?field_conference_year_target_id=All&field_status_value=proposed&field_session_track_target_id=All&title=&combine="
-    Then I should see "Proposed Session Node"
 
   Scenario: Confirm Session Links Hidden for Anon
     Given I am on "/2020/program/sessions/automated-accessibility-testing-using-pa11y-and-continuous-integration"

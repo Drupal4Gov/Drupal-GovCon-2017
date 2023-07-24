@@ -3,10 +3,10 @@ langcode: en
 status: open
 dependencies:
   module:
-    - honeypot
+    - antibot
 third_party_settings:
-  honeypot:
-    honeypot: true
+  antibot:
+    antibot: true
 weight: 0
 open: null
 close: null
@@ -322,7 +322,7 @@ settings:
   ajax_effect: ''
   ajax_speed: null
   page: true
-  page_submit_path: ''
+  page_submit_path: /register
   page_confirm_path: ''
   page_theme_name: ''
   form_title: source_entity_webform
