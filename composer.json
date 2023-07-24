@@ -88,6 +88,21 @@
                 }
             }
         },
+        "slick": {
+            "type": "package",
+            "package": {
+                "name": "slick/slick",
+                "version": "v1.9.0",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/kenwheeler/slick/archive/master.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        },
         "dropzone": {
             "type": "package",
             "package": {
@@ -132,11 +147,12 @@
         "drupal/acquia_connector": "^4",
         "drupal/acquia_purge": "^1.1",
         "drupal/admin_toolbar": "^3.3",
+        "drupal/antibot": "^2.0",
         "drupal/autosave_form": "^1.4",
         "drupal/better_exposed_filters": "^6",
         "drupal/bg_image_formatter": "^1.16",
         "drupal/blazy": "^2.14",
-        "drupal/block_exclude_pages": "2.0.2-beta2",
+        "drupal/block_exclude_pages": "^2",
         "drupal/captcha": "^1.1",
         "drupal/cloudflare": "2.0.0-alpha1",
         "drupal/components": "^3",
@@ -164,14 +180,14 @@
         "drupal/honeypot": "^2",
         "drupal/image_widget_crop": "^2.4",
         "drupal/inline_entity_form": "^1.0-rc7",
-        "drupal/jquery_ui_droppable": "^1.5",
+        "drupal/jquery_ui_droppable": "^2",
         "drupal/layout_builder_restrictions": "^2.17",
         "drupal/layout_builder_styles": "^2.0",
         "drupal/layout_library": "^1.0@beta",
         "drupal/linkicon": "1.x-dev",
         "drupal/media_entity_instagram": "^3.0",
         "drupal/media_entity_twitter": "^2.9",
-        "drupal/metatag": "^1.22",
+        "drupal/metatag": "^2",
         "drupal/moderation_dashboard": "^2.1",
         "drupal/moderation_sidebar": "^1.7",
         "drupal/page_manager": "^4.0@RC",
@@ -203,6 +219,7 @@
         "mikemadison13/blt-drupal-check": "dev-main",
         "mikemadison13/blt-lando": "dev-main",
         "mmenu/mmenu": "^8.5",
+        "slick/slick": "^1.9.0",
         "superfish/superfish": "^1.7"
     },
     "scripts": {
