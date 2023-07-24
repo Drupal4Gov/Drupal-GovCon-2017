@@ -88,6 +88,21 @@
                 }
             }
         },
+        "slick": {
+            "type": "package",
+            "package": {
+                "name": "slick/slick",
+                "version": "v1.9.0",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://github.com/kenwheeler/slick/archive/master.zip",
+                    "type": "zip"
+                },
+                "require": {
+                    "composer/installers": "~1.0"
+                }
+            }
+        },
         "dropzone": {
             "type": "package",
             "package": {
@@ -203,7 +218,8 @@
         "mikemadison13/blt-drupal-check": "dev-main",
         "mikemadison13/blt-lando": "dev-main",
         "mmenu/mmenu": "^8.5",
-        "superfish/superfish": "^1.7"
+        "superfish/superfish": "^1.7",
+        "slick/slick": "^1.9.0"
     },
     "scripts": {
         "post-install-cmd": [
