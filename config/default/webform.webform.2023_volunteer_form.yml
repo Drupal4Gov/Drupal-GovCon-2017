@@ -15,14 +15,20 @@ categories: {  }
 elements: |-
   first_name:
     '#type': textfield
-    '#title': 'First Name'
+    '#title': 'First or given name'
+    '#description': '<p>For example, Jose, Darren, or Mai.</p>'
     '#required': true
     '#required_error': 'First Name is a required field.'
   last_name:
     '#type': textfield
-    '#title': 'Last Name'
+    '#title': 'Last or family name'
+    '#description': '<p>For example, Martinez Gonzales, Gu, or Smith.</p>'
     '#required': true
     '#required_error': 'Last Name is a required field.'
+  preferred_name:
+    '#type': textfield
+    '#title': 'Preferred name'
+    '#description': '<p>I prefer to be addressed as</p><p>For example, Dr. Gu, Mrs. Schmidt, Alix Martinez.</p>'
   email:
     '#type': email
     '#title': Email
@@ -245,5 +251,42 @@ access:
     roles: {  }
     users: {  }
     permissions: {  }
-handlers: {  }
+handlers:
+  email:
+    id: email
+    handler_id: email
+    label: Email
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: '[webform_submission:values:email:raw]'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Thank you for volunteering for Drupal GovCon 2023'
+      body: '<p>Thank you for volunteering. Our volunteer coordinators will be in touch with more specific instructions as we get closer to the event.</p><p>If you haven''t already, please:</p><ul><li>Make sure you are <a href="https://www.drupalgovcon.org/register">registered for 2023 Drupal GovCon</a>.</li><li>Join the <a href="https://drupal.slack.com" data-extlink="">Drupal slack workspace</a> and the <a href="https://drupal.slack.com/archives/C02EN4KGQFK">drupal-govcon slack channel</a>.</li></ul><p>Submitted on [webform_submission:created]</p><p>Submitted by: [webform_submission:user]</p><p>Submitted values are:</p><p>[webform_submission:values]</p>'
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
 variants: {  }
