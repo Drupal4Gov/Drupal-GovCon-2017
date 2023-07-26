@@ -47,6 +47,6 @@ function capitalcamp_glue_form_user_register_form_alter(&$form, FormStateInterfa
  */
 function _capitalcamp_glue_user_register_form_submit($form, FormStateInterface $form_state) {
   // Set redirect to login form.
-  $url = Url::fromUri('internal:/form/registration');
+  $url = Url::fromUri('internal:/register');
   $form_state->setRedirectUrl($url);
 }

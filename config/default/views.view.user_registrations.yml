@@ -326,7 +326,7 @@ display:
           plugin_id: text
           empty: true
           content:
-            value: 'Great! You''ve got an account, but need to <a href="/form/registration">grab a ticket</a> in order to attend the event!'
+            value: 'Great! You''ve got an account, but need to <a href="/register">grab a ticket</a> in order to attend the event!'
             format: simple_text
           tokenize: false
       sorts:
@@ -544,7 +544,7 @@ display:
           plugin_id: text
           empty: false
           content:
-            value: 'Welcome back! We hope to see you at GovCon this year! If you don''t see Registration for this year in the table below, you will need to <a href="/form/registration">register for a ticket</a> for this year''s event. You can also use this registration link to reserve another ticket for someone else.'
+            value: 'Welcome back! We hope to see you at GovCon this year! If you don''t see Registration for this year in the table below, you will need to <a href="/register">register for a ticket</a> for this year''s event. You can also use this registration link to reserve another ticket for someone else.'
             format: simple_text
           tokenize: false
       footer:
