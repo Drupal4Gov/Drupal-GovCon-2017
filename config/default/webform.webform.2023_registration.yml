@@ -30,6 +30,7 @@ elements: |-
   email:
     '#type': email
     '#title': 'Attendee Email'
+    '#default_value': '[current-user:mail]'
     '#required': true
     '#required_error': 'Email is a required field.'
   please_indicate_the_days_when_you_ll_need_lunch_this_will_help_u:
@@ -45,11 +46,25 @@ elements: |-
       - administrator
     '#access_view_roles':
       - authenticated
+  dietary_restrictions:
+    '#type': radios
+    '#title': 'Dietary Restrictions'
+    '#description': 'Please indicate any dietary restrictions you have. We will do our best to provide lunches that meet those restrictions.'
+    '#options':
+      vegan_veg: 'Vegan / Vegitarian'
+      gluten_free: 'Gluten Free'
+      no_restrictions.: 'I have no dietary restrictions.'
+    '#access_create_roles':
+      - administrator
+    '#access_update_roles':
+      - administrator
+    '#access_view_roles':
+      - authenticated
   markup:
     '#type': webform_markup
     '#access_create_roles':
       - administrator
-    '#markup': '<p><strong>NOTE:</strong>&nbsp;Late registrations (after October 16th) are not guaranteed lunch during the conference.</p>'
+    '#markup': 'NOTE:</strong>&nbsp;Late registrations (after October 16th) are not guaranteed lunch during the conference.</p>'
   personal_information:
     '#type': fieldset
     '#title': 'Personal Information'
@@ -104,16 +119,6 @@ elements: |-
         'I’ve attended 4 or more Drupal GovCon': 'I’ve attended 4 or more Drupal GovCon'
       '#required': true
       '#required_error': 'Number of Times Attending is a required field.'
-    are_you_attending_sprints_:
-      '#type': select
-      '#title': 'Are you interested in participating in contributions?'
-      '#options':
-        "Yes, I'm going to contribute to Core or Contrib": "Yes, I'm going to contribute to Core or Contrib"
-        'Yes, I want to be a contribution mentor': 'Yes, I want to be a contribution mentor'
-        'No, I am not attending contributions': 'No, I am not attending contributions'
-        "I haven't decided yet": "I haven't decided yet"
-        "I don't know what this is": "I don't know what this is"
-      '#required': true
     how_did_you_hear_about_drupal_govcon_:
       '#type': select
       '#title': 'How did you hear about Drupal GovCon?'
@@ -417,10 +422,10 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: url_message
+  confirmation_type: message
   confirmation_url: user
-  confirmation_title: ''
-  confirmation_message: "<p style=\"line-height:1.38\"><span style=\"font-size:11pt; font-variant:normal; white-space:pre-wrap\"><span style=\"font-family:Arial\"><span style=\"color:#000000\"><span style=\"font-weight:400\"><span style=\"font-style:normal\"><span style=\"text-decoration:none\">Thank you for registering for Drupal GovCon! </span></span></span></span></span></span><br />\r\n<br />\r\n<strong data-renderer-mark=\"true\">We&#39;re Virtual!</strong><br />\r\nNow that you have a ticket to the event on our website,&nbsp;go <a href=\"https://hopin.com/events/drupal-govcon-2021-66aa9629-a6b6-4f58-8b61-51875a68bf73?code=nmsCWgCyukwdSUxp3LVbBseTV\">claim your free Hopin ticket</a> with the same email.</p>\r\n\r\n<p style=\"line-height:1.38\"><span style=\"font-size:11pt; font-variant:normal; white-space:pre-wrap\"><span style=\"font-family:Arial\"><span style=\"color:#000000\"><span style=\"font-weight:400\"><span style=\"font-style:normal\"><span style=\"text-decoration:none\">If you have questions, please contact us at <a href=\"mailto:drupal4gov@gmail.com\">drupal4gov@gmail.com</a>. </span></span></span></span></span></span></p>"
+  confirmation_title: "You're Registered!"
+  confirmation_message: '<h2>You''re Registered!</h2><p>Now that you have a ticket to the event, review the list of <a href="/call-speakers">proposed sessions</a> and consider submitting one yourself!</p><h2>Interested in Training</h2><p>If you are considering signing up for training - you''ll need the training code <strong>DGCTRAIN2023 </strong>when you register for a class. Remember - while a ticket to Drupal GovCon is required to register for training - training registration is a separate step.&nbsp;</p><p>If you have questions, please contact us at <a href="mailto:drupal4gov@gmail.com">drupal4gov@gmail.com</a>.</p><p>Feel free to register additional attendees - but please ensure their email address is in the <em>Attendee Email</em> field.</p>'
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -527,8 +532,8 @@ handlers:
       return_path: ''
       sender_mail: ''
       sender_name: ''
-      subject: 'Thank you for registering for Drupal GovCon 2021'
-      body: "Thank you for registering for Drupal GovCon!\r\n\r\nWe're Virtual!\r\n\r\nNow that you have a ticket to the event on our website,\_go claim your free Hopin ticket with the same email (hopin.com/events/drupal-govcon-2021-66aa9629-a6b6-4f58-8b61-51875a68bf73?code=nmsCWgCyukwdSUxp3LVbBseTV).\r\n\r\nPlease be sure to follow us @drupalgovcon and keep an eye on your inbox for more information.\r\n\r\nIf you have questions, please contact us at drupal4gov@gmail.com."
+      subject: 'Thank you for registering for Drupal GovCon 2023'
+      body: "Thank you for registering for Drupal GovCon 2023.\r\n\r\nThanks to our awesome sponsors, we are able to provide complimentary lunch. Attendees who registered by October 16th will be given preference in line at lunch. Once all confirmed attendees have received a lunch, other attendees will be able to enjoy any remaining lunches we may have available. Don’t fear though, the nearby Bethesda area has many dining options to choose from.\r\n\r\nKeep an eye on your email - as we get closer to the event, we will require attendees to confirm their registration so that we have an accurate count for the caterers.\r\n\r\nRegistering for Training?\r\nIf you are registering for training, you will need to use the training code DGCTRAIN2023 to register for any of the training classes. While you must be registered for Drupal GovCon to attend training, you must register separately for the training course you wish to attend.\r\n\r\n>If you have questions, please contact us at drupal4gov@gmail.com.\r\n\r\nChange your mind about getting email alerts? Subscribe to our e-mail list:\r\nhttp://eepurl.com/bbJASn\r\n\r\nFollow us on social media:\r\nhttps://twitter.com/drupalgovcon\r\nhttps//facebook.com/DrupalGovCon\r\n\r\n- Drupal GovCon team"
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
