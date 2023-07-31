@@ -425,7 +425,7 @@ settings:
   confirmation_type: message
   confirmation_url: user
   confirmation_title: "You're Registered!"
-  confirmation_message: '<h2>You''re Registered!</h2><p>Now that you have a ticket to the event, review the list of <a href="/call-speakers">proposed sessions</a> and consider submitting one yourself!</p><h2>Interested in Training</h2><p>If you are considering signing up for training - you''ll need the training code <strong>DGCTRAIN2023 </strong>when you register for a class. Remember - while a ticket to Drupal GovCon is required to register for training - training registration is a separate step.&nbsp;</p><p>If you have questions, please contact us at <a href="mailto:drupal4gov@gmail.com">drupal4gov@gmail.com</a>.</p><p>Feel free to register additional attendees - but please ensure their email address is in the <em>Attendee Email</em> field.</p>'
+  confirmation_message: '<h2>You''re Registered!</h2><p>Now that you have a ticket to the event, review the list of <a href="/call-speakers">proposed sessions</a> and consider submitting one yourself!</p><h2>Interested in Training</h2><p>Yes? Awesome! You''ll need the training code <strong>DGCTRAIN2023 </strong>when you register for a class. Remember - while a ticket to Drupal GovCon is required to register for training - training registration is a separate step.&nbsp;</p><p>If you have questions, please contact us at <a href="mailto:drupalgovcontraining@gmail.com">drupalgovcontraining@gmail.com</a>.</p><p>Feel free to register additional attendees - but please ensure their email address is in the <em>Attendee Email</em> field.</p>'
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -433,7 +433,7 @@ settings:
   confirmation_exclude_query: false
   confirmation_exclude_token: false
   confirmation_update: false
-  limit_total: 450
+  limit_total: 540
   limit_total_interval: null
   limit_total_message: ''
   limit_total_unique: false
@@ -533,7 +533,7 @@ handlers:
       sender_mail: ''
       sender_name: ''
       subject: 'Thank you for registering for Drupal GovCon 2023'
-      body: "Thank you for registering for Drupal GovCon 2023.\r\n\r\nThanks to our awesome sponsors, we are able to provide complimentary lunch. Attendees who registered by October 16th will be given preference in line at lunch. Once all confirmed attendees have received a lunch, other attendees will be able to enjoy any remaining lunches we may have available. Don’t fear though, the nearby Bethesda area has many dining options to choose from.\r\n\r\nKeep an eye on your email - as we get closer to the event, we will require attendees to confirm their registration so that we have an accurate count for the caterers.\r\n\r\nRegistering for Training?\r\nIf you are registering for training, you will need to use the training code DGCTRAIN2023 to register for any of the training classes. While you must be registered for Drupal GovCon to attend training, you must register separately for the training course you wish to attend.\r\n\r\n>If you have questions, please contact us at drupal4gov@gmail.com.\r\n\r\nChange your mind about getting email alerts? Subscribe to our e-mail list:\r\nhttp://eepurl.com/bbJASn\r\n\r\nFollow us on social media:\r\nhttps://twitter.com/drupalgovcon\r\nhttps//facebook.com/DrupalGovCon\r\n\r\n- Drupal GovCon team"
+      body: "Thank you for registering for Drupal GovCon 2023.\r\n\r\nThanks to our awesome sponsors, we are able to provide complimentary lunch. Attendees who registered by October 16th will be given preference in line at lunch. Once all confirmed attendees have received a lunch, other attendees will be able to enjoy any remaining lunches we may have available. Don’t fear though, the nearby Bethesda area has many dining options to choose from.\r\n\r\nKeep an eye on your email - as we get closer to the event, we will require attendees to confirm their registration so that we have an accurate count for the caterers.\r\n\r\nInterested in Training?\r\nYes? Awesome! You'll need the training code DGCTRAIN2023 to register for any of the training classes. While you must be registered for Drupal GovCon to attend training, you must register separately for the training course you wish to attend.\r\n\r\nIf you have questions, please contact us at drupalgovcontraining@gmail.com.\r\n\r\nChange your mind about getting email alerts? Subscribe to our e-mail list:\r\nhttp://eepurl.com/bbJASn\r\n\r\nFollow us on social media:\r\nhttps://twitter.com/drupalgovcon\r\nhttps://facebook.com/DrupalGovCon\r\n\r\n- Drupal GovCon team"
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
