@@ -152,6 +152,7 @@ elements: |-
     how_would_you_describe_your_company_:
       '#type': webform_select_other
       '#title': 'How would you describe your company?'
+      '#multiple': true
       '#options':
         'Federal Agency': 'Federal Agency'
         'State Agency': 'State Agency'
@@ -165,6 +166,7 @@ elements: |-
         Recruiter/Staffing: Recruiter/Staffing
         'Systems Integrator (SI)': 'Systems Integrator (SI)'
         Training/Books: Training/Books
+      '#select2': true
       '#other__option_label': Other
       '#other__placeholder': ''
       '#required': true
@@ -182,11 +184,13 @@ elements: |-
         '1,001-10,000': '1,001-10,000'
         '10,000+': '10,000+'
         'Don’t know/Not sure': 'Don’t know/Not sure'
+      '#select2': true
       '#required': true
       '#required_error': "Please select your organization's size is a required field."
     please_select_the_industries_that_you_work_in_select_all_that_ap:
-      '#type': webform_checkboxes_other
+      '#type': webform_select_other
       '#title': 'Please select the industries that you work in (select all that apply)'
+      '#multiple': true
       '#options':
         Advertising: Advertising
         Agriculture: Agriculture
@@ -210,6 +214,7 @@ elements: |-
         'Retail or Wholesale Trade': 'Retail or Wholesale Trade'
         Services: Services
         Travel: Travel
+      '#select2': true
       '#other__option_label': Other
       '#other__placeholder': ''
       '#required': true
@@ -217,8 +222,9 @@ elements: |-
     '#type': fieldset
     '#title': 'Professional Experience'
     how_do_you_use_drupal_:
-      '#type': webform_checkboxes_other
+      '#type': webform_select_other
       '#title': 'How do you use Drupal?'
+      '#multiple': true
       '#options':
         'Back-End Developer': 'Back-End Developer'
         'Front-End Developer': 'Front-End Developer'
@@ -232,6 +238,7 @@ elements: |-
         'I am evaluating Drupal': 'I am evaluating Drupal'
         'I provide Drupal hosting solutions': 'I provide Drupal hosting solutions'
         'I provide tools/services that integrate with Drupal': 'I provide tools/services that integrate with Drupal'
+      '#select2': true
       '#other__option_label': Other
       '#other__placeholder': ''
       '#required': true
@@ -248,6 +255,7 @@ elements: |-
     what_is_your_role_at_your_organization_:
       '#type': webform_select_other
       '#title': 'What is your role at your organization?'
+      '#multiple': true
       '#options':
         'Business (Marketing / Sales / Bus. Dev)': 'Business (Marketing / Sales / Bus. Dev)'
         'C Level (CEO/CMO/CTO, Director, etc.)': 'C Level (CEO/CMO/CTO, Director, etc.)'
@@ -259,12 +267,14 @@ elements: |-
         'Project Management': 'Project Management'
         Trainer: Trainer
         Architect: Architect
+      '#select2': true
       '#other__option_label': Other
       '#other__placeholder': ''
       '#required': true
     in_my_organization_i_have_input_on_the_purchase_of_the_following:
-      '#type': webform_checkboxes_other
+      '#type': webform_select_other
       '#title': 'In my organization, I have input on the purchase of the following:'
+      '#multiple': true
       '#options':
         'Content Management Systems': 'Content Management Systems'
         'Customer Relationship Management (CRM) Tools': 'Customer Relationship Management (CRM) Tools'
@@ -273,6 +283,7 @@ elements: |-
         'E-Commerce Tools': 'E-Commerce Tools'
         'Hosting; Marketing Software': 'Hosting; Marketing Software'
         'Project Management Software': 'Project Management Software'
+      '#select2': true
       '#other__option_label': Other
       '#other__placeholder': ''
       '#required': true
@@ -422,10 +433,10 @@ settings:
   draft_loaded_message: ''
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
-  confirmation_type: message
+  confirmation_type: page
   confirmation_url: user
   confirmation_title: "You're Registered!"
-  confirmation_message: '<h2>You''re Registered!</h2><p>Now that you have a ticket to the event, review the list of <a href="/call-speakers">proposed sessions</a> and consider submitting one yourself!</p><h2>Interested in Training</h2><p>If you are considering signing up for training - you''ll need the training code <strong>DGCTRAIN2023 </strong>when you register for a class. Remember - while a ticket to Drupal GovCon is required to register for training - training registration is a separate step.&nbsp;</p><p>If you have questions, please contact us at <a href="mailto:drupal4gov@gmail.com">drupal4gov@gmail.com</a>.</p><p>Feel free to register additional attendees - but please ensure their email address is in the <em>Attendee Email</em> field.</p>'
+  confirmation_message: '<p>Now that you have a ticket to the event, review the list of <a href="/call-speakers">proposed sessions</a> and consider submitting one yourself!</p><h2>Interested in Training</h2><p>Yes? Awesome! You''ll need the training code <strong>DGCTRAIN2023 </strong>when you register for a class. Remember - while a ticket to Drupal GovCon is required to register for training - training registration is a separate step.&nbsp;</p><p>If you have questions, please contact us at <a href="mailto:drupalgovcontraining@gmail.com">drupalgovcontraining@gmail.com</a>.</p><p>Feel free to register additional attendees - but please ensure their email address (and not yours!) is in the <em>Attendee Email</em> field.</p>'
   confirmation_attributes: {  }
   confirmation_back: true
   confirmation_back_label: ''
@@ -533,7 +544,7 @@ handlers:
       sender_mail: ''
       sender_name: ''
       subject: 'Thank you for registering for Drupal GovCon 2023'
-      body: "Thank you for registering for Drupal GovCon 2023.\r\n\r\nThanks to our awesome sponsors, we are able to provide complimentary lunch. Attendees who registered by October 16th will be given preference in line at lunch. Once all confirmed attendees have received a lunch, other attendees will be able to enjoy any remaining lunches we may have available. Don’t fear though, the nearby Bethesda area has many dining options to choose from.\r\n\r\nKeep an eye on your email - as we get closer to the event, we will require attendees to confirm their registration so that we have an accurate count for the caterers.\r\n\r\nRegistering for Training?\r\nIf you are registering for training, you will need to use the training code DGCTRAIN2023 to register for any of the training classes. While you must be registered for Drupal GovCon to attend training, you must register separately for the training course you wish to attend.\r\n\r\n>If you have questions, please contact us at drupal4gov@gmail.com.\r\n\r\nChange your mind about getting email alerts? Subscribe to our e-mail list:\r\nhttp://eepurl.com/bbJASn\r\n\r\nFollow us on social media:\r\nhttps://twitter.com/drupalgovcon\r\nhttps://facebook.com/DrupalGovCon\r\n\r\n- Drupal GovCon team"
+      body: "Thank you for registering for Drupal GovCon 2023.\r\n\r\nThanks to our awesome sponsors, we are able to provide complimentary lunch. Attendees who registered by October 16th will be given preference in line at lunch. Once all confirmed attendees have received a lunch, other attendees will be able to enjoy any remaining lunches we may have available. Don’t fear though, the nearby Bethesda area has many dining options to choose from.\r\n\r\nKeep an eye on your email - as we get closer to the event, we will require attendees to confirm their registration so that we have an accurate count for the caterers.\r\n\r\nInterested in Training?\r\nYes? Awesome! You'll need the training code DGCTRAIN2023 to register for any of the training classes. While you must be registered for Drupal GovCon to attend training, you must register separately for the training course you wish to attend.\r\n\r\nIf you have questions, please contact us at drupalgovcontraining@gmail.com.\r\n\r\nChange your mind about getting email alerts? Subscribe to our e-mail list:\r\nhttp://eepurl.com/bbJASn\r\n\r\nFollow us on social media:\r\nhttps://twitter.com/drupalgovcon\r\nhttps://facebook.com/DrupalGovCon\r\n\r\n- Drupal GovCon team"
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
