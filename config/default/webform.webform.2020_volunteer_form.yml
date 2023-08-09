@@ -40,6 +40,21 @@ elements: |-
       'No': 'No'
     '#required': true
     '#required_error': 'Answered is required.'
+  roles_interested:
+    '#type': webform_checkboxes_other
+    '#title': 'What volunteer roles are you interested in?'
+    '#description': 'Review the different <a href="/volunteer-roles">volunteer roles</a>.'
+    '#options':
+      room: 'Room Monitor'
+      hd: 'Help Desk'
+      registration: 'Registration Desk'
+      keynote: Keynote
+      signs: Signage
+      clean: 'Clean up Crew'
+      lunch: Lunch
+      photo: 'Event photographer'
+    '#required': true
+    '#required_error': 'Answered is required.'
   comments:
     '#type': textarea
     '#title': Comments

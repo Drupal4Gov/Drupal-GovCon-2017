@@ -344,7 +344,7 @@ settings:
   form_title: source_entity_webform
   form_submit_once: false
   form_open_message: ''
-  form_close_message: 'Thank you for your interest in Drupal GovCon.&nbsp; Our registration and wait list are full.'
+  form_close_message: '<p>Thank you for your interest in Drupal GovCon.&nbsp; Our registration and wait list are full.</p>'
   form_exception_message: ''
   form_previous_submissions: true
   form_confidential: false
@@ -365,9 +365,9 @@ settings:
   form_autofocus: false
   form_details_toggle: false
   form_reset: false
-  form_access_denied: default
+  form_access_denied: login
   form_access_denied_title: ''
-  form_access_denied_message: ''
+  form_access_denied_message: '<p>You must be logged in with your drupalgovcon.org account to register for Drupal GovCon.</p>'
   form_access_denied_attributes: {  }
   form_file_limit: ''
   form_attributes: {  }

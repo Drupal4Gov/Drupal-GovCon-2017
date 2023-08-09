@@ -3,20 +3,20 @@ langcode: en
 status: true
 dependencies:
   config:
-    - entity_browser.browser.image_browser
     - field.field.node.sponsor.field_conference_year
     - field.field.node.sponsor.field_logo_media
     - field.field.node.sponsor.field_sponsor_logo
     - field.field.node.sponsor.field_sponsor_related_attendees
     - field.field.node.sponsor.field_sponsor_sponsorship_level
     - field.field.node.sponsor.field_sponsor_url
+    - image.style.thumbnail
     - node.type.sponsor
   module:
     - content_moderation
-    - entity_browser
     - link
     - media_library
     - path
+    - svg_image
 _core:
   default_config_hash: bD1HGmo0P8QiOV5pAoJlmVnAvH6ymTNcj38_qHDjXpU
 id: node.sponsor.default
@@ -44,17 +44,11 @@ content:
       media_types: {  }
     third_party_settings: {  }
   field_sponsor_logo:
-    type: entity_browser_file
+    type: image_image
     weight: 13
     region: content
     settings:
-      entity_browser: image_browser
-      field_widget_edit: true
-      field_widget_remove: true
-      field_widget_replace: false
-      open: false
-      selection_mode: selection_append
-      view_mode: default
+      progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
   field_sponsor_related_attendees:
