@@ -90,6 +90,7 @@ class SessionAccess extends AccessPluginBase {
       }
       // Find this user's webform(s), if present.
       $wids = $webformStorage->getQuery()
+        ->accessCheck(TRUE)
         ->condition('webform_id', '2021_registration')
         ->condition('uid', $account->id())
         ->execute();
