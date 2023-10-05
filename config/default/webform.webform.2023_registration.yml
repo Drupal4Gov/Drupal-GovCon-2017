@@ -33,38 +33,49 @@ elements: |-
     '#default_value': '[current-user:mail]'
     '#required': true
     '#required_error': 'Email is a required field.'
-  please_indicate_the_days_when_you_ll_need_lunch_this_will_help_u:
-    '#type': checkboxes
-    '#title': "Please indicate the days when you'll need lunch. This will help us order the right number of lunches for the conference."
-    '#options':
-      'Wednesday, Nov 1': Wednesday
-      'Thursday, Nov 2': Thursday
-      'I will not need lunch any of these days.': 'I will not need lunch any of these days.'
-    '#access_create_roles':
-      - administrator
-    '#access_update_roles':
-      - administrator
-    '#access_view_roles':
-      - authenticated
-  dietary_restrictions:
-    '#type': radios
-    '#title': 'Dietary Restrictions'
-    '#description': 'Please indicate any dietary restrictions you have. We will do our best to provide lunches that meet those restrictions.'
-    '#options':
-      vegan_veg: 'Vegan / Vegitarian'
-      gluten_free: 'Gluten Free'
-      no_restrictions.: 'I have no dietary restrictions.'
-    '#access_create_roles':
-      - administrator
-    '#access_update_roles':
-      - administrator
-    '#access_view_roles':
-      - authenticated
-  markup:
-    '#type': webform_markup
-    '#access_create_roles':
-      - administrator
-    '#markup': 'NOTE:</strong>&nbsp;Late registrations (after October 16th) are not guaranteed lunch during the conference.</p>'
+  lunches_t_shirts:
+    '#type': fieldset
+    '#title': 'Lunches & T-Shirts'
+    '#required': true
+    please_indicate_the_days_when_you_ll_need_lunch_this_will_help_u:
+      '#type': checkboxes
+      '#title': 'Days You Need Lunch'
+      '#options':
+        'Wednesday, Nov 1': Wednesday
+        'Thursday, Nov 2': Thursday
+        'I will not need lunch any of these days.': 'I will not need lunch any of these days.'
+      '#required': true
+    dietary_restrictions:
+      '#type': radios
+      '#title': 'Dietary Restrictions'
+      '#description': 'Please indicate any dietary restrictions you have. We will do our best to provide lunches that meet those restrictions.'
+      '#description_display': before
+      '#options':
+        vegan_veg: 'Vegan / Vegetarian'
+        gluten_free: 'Gluten Free'
+        no_restrictions.: 'I have no dietary restrictions.'
+      '#required': true
+    markup:
+      '#type': webform_markup
+      '#access_create_roles':
+        - administrator
+      '#markup': 'NOTE:</strong>&nbsp;Late registrations (after October 13th) are not guaranteed lunch during the conference.</p>'
+    t_shirt_size:
+      '#type': select
+      '#title': 'T-Shirt Size'
+      '#description': 'All sizes are unisex. We will do our best to provide every attendee with a T-Shirt in the size they requested - but your choice is not guaranteed.'
+      '#description_display': before
+      '#options':
+        XS: XS
+        S: S
+        M: M
+        L: L
+        XL: XL
+        2XL: 2XL
+        3XL: 3XL
+        "No Thanks, I don't want a Shirt": "No Thanks, I don't want a Shirt"
+      '#required': true
+      '#required_error': 'T-Shirt is a required field.'
   personal_information:
     '#type': fieldset
     '#title': 'Personal Information'
@@ -326,6 +337,10 @@ elements: |-
     '#default_value': Ticket
     '#access_create_roles':
       - administrator
+    '#access_update_roles':
+      - administrator
+    '#access_view_roles':
+      - administrator
   captcha:
     '#type': captcha
     '#captcha_type': recaptcha/reCAPTCHA
@@ -525,7 +540,10 @@ handlers:
     label: Email
     notes: ''
     status: true
-    conditions: {  }
+    conditions:
+      enabled:
+        ':input[name="ticket_status"]':
+          value: Ticket
     weight: 0
     settings:
       states:
@@ -545,6 +563,46 @@ handlers:
       sender_name: ''
       subject: 'Thank you for registering for Drupal GovCon 2023'
       body: "Thank you for registering for Drupal GovCon 2023.\r\n\r\nThanks to our awesome sponsors, we are able to provide complimentary lunch. Attendees who registered by October 16th will be given preference in line at lunch. Once all confirmed attendees have received a lunch, other attendees will be able to enjoy any remaining lunches we may have available. Don’t fear though, the nearby Bethesda area has many dining options to choose from.\r\n\r\nKeep an eye on your email - as we get closer to the event, we will require attendees to confirm their registration so that we have an accurate count for the caterers.\r\n\r\nInterested in Training?\r\nYes? Awesome! You'll need the training code DGCTRAIN2023 to register for any of the training classes. While you must be registered for Drupal GovCon to attend training, you must register separately for the training course you wish to attend.\r\n\r\nIf you have questions, please contact us at drupalgovcontraining@gmail.com.\r\n\r\nChange your mind about getting email alerts? Subscribe to our e-mail list:\r\nhttp://eepurl.com/bbJASn\r\n\r\nFollow us on social media:\r\nhttps://twitter.com/drupalgovcon\r\nhttps://facebook.com/DrupalGovCon\r\n\r\n- Drupal GovCon team"
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: false
+      attachments: false
+      twig: false
+      theme_name: ''
+      parameters: {  }
+      debug: false
+  email_waitlist:
+    id: email
+    handler_id: email_waitlist
+    label: 'Email Waitlist'
+    notes: ''
+    status: true
+    conditions:
+      enabled:
+        ':input[name="ticket_status"]':
+          value: Waitlist
+    weight: 1
+    settings:
+      states:
+        - completed
+      to_mail: '[webform_submission:values:email:raw]'
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: ''
+      cc_options: {  }
+      from_mail: '[site:mail]'
+      from_options: {  }
+      from_name: _default
+      reply_to: ''
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Thank you for registering for Drupal GovCon 2023'
+      body: "Thank you for registering for Drupal GovCon 2023. You are on our waitlist. Should a spot open up, you will receive an email confirmation letting you know that you've been moved off the waitlist.\r\n\r\nThanks to our awesome sponsors, we are able to provide complimentary lunch. Attendees who registered by October 13th will be given preference in line at lunch. Once all confirmed attendees have received a lunch, other attendees will be able to enjoy any remaining lunches we may have available. Don’t fear though, the nearby Bethesda area has many dining options to choose from.\r\n\r\nKeep an eye on your email - as we get closer to the event, we will require attendees to confirm their registration so that we have an accurate count for the caterers.\r\n\r\nInterested in Training?\r\nYes? Awesome! You'll need the training code DGCTRAIN2023 to register for any of the training classes. While you must be registered for Drupal GovCon to attend training, you must register separately for the training course you wish to attend.\r\n\r\nIf you have questions, please contact us at drupalgovcontraining@gmail.com.\r\n\r\nChange your mind about getting email alerts? Subscribe to our e-mail list:\r\nhttp://eepurl.com/bbJASn\r\n\r\nFollow us on social media:\r\nhttps://twitter.com/drupalgovcon\r\nhttps://facebook.com/DrupalGovCon\r\n\r\n- Drupal GovCon team3"
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
