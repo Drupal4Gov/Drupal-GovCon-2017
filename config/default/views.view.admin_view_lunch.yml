@@ -579,66 +579,62 @@ display:
       style:
         type: table
         options:
-          grouping:
-            -
-              field: webform_submission_value_3
-              rendered: false
-              rendered_strip: false
+          grouping: {  }
           row_class: ''
           default_row_class: true
           columns:
             view_webform_submission: view_webform_submission
             sid: sid
-            webform_submission_value: webform_submission_value
-            webform_submission_value_2: webform_submission_value_2
-            webform_submission_value_4: webform_submission_value_4
-            webform_submission_value_3: webform_submission_value_3
-            webform_submission_value_5: webform_submission_value_5
+            webform_submission_value_1: webform_submission_value_1
+            webform_submission_value_8: webform_submission_value_8
+            webform_submission_value_9: webform_submission_value_9
+            webform_submission_value_6: webform_submission_value_6
+            webform_submission_value_7: webform_submission_value_7
           default: '-1'
           info:
             view_webform_submission:
-              sortable: false
+              sortable: true
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
             sid:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            webform_submission_value_1:
               sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-            webform_submission_value:
-              sortable: false
+            webform_submission_value_8:
+              sortable: true
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-            webform_submission_value_2:
-              sortable: false
+            webform_submission_value_9:
+              sortable: true
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-            webform_submission_value_4:
-              sortable: false
-              default_sort_order: asc
+            webform_submission_value_6:
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-            webform_submission_value_3:
-              sortable: false
+            webform_submission_value_7:
+              sortable: true
               default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            webform_submission_value_5:
               align: ''
               separator: ''
               empty_column: false
