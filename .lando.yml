@@ -24,6 +24,7 @@ services:
       - echo "Run additional build commands here. Run lando rebuild after updating this file."
       - curl -sL https://deb.nodesource.com/setup_18.x | bash -
       - apt install -y nodejs
+      - npm install -g npm@9.8.1
     overrides:
       # Pass SSH keys.
       volumes:
