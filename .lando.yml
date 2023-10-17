@@ -22,7 +22,7 @@ services:
       - apt-get update
       - apt-get install libxss1
       - echo "Run additional build commands here. Run lando rebuild after updating this file."
-      - curl -sL https://deb.nodesource.com/setup_14.x | bash -
+      - curl -sL https://deb.nodesource.com/setup_18.x | bash -
       - apt install -y nodejs
     overrides:
       # Pass SSH keys.

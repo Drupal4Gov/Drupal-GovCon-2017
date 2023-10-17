@@ -33,7 +33,7 @@
     "gulp-stylelint": "^13.0.0",
     "gulp-uglify": "^3.0.0",
     "merge-stream": "^1.0.1",
-    "node": "^14.8.0",
+    "node": "^18",
     "pa11y-ci": "^2.4.0",
     "stylelint": "^13.3.3",
     "stylelint-config-recommended-scss": "^4.2.0",
@@ -43,7 +43,7 @@
     "webpack": "^5.82.1"
   },
   "engines": {
-    "node": "14.x"
+    "node": "18.x"
   },
   "private": true,
   "//": "The postinstall script is needed to work-around this Drupal core bug: https://www.drupal.org/node/2329453",
@@ -58,7 +58,7 @@
     "watch": "gulp watch"
   },
   "dependencies": {
-    "backstopjs": "^6.1.0",
+    "backstopjs": "^6.2.0",
     "chromium": "^3.0.2",
     "highlight.js": "^11.2.0",
     "node-sass": "^9.0.0"
