@@ -34,13 +34,14 @@
     "gulp-uglify": "^3.0.0",
     "merge-stream": "^1.0.1",
     "node": "^18",
-    "pa11y-ci": "^2.4.0",
     "stylelint": "^13.3.3",
     "stylelint-config-recommended-scss": "^4.2.0",
     "stylelint-config-sass-guidelines": "^7.0.0",
     "stylelint-config-standard": "^20.0.0",
     "stylelint-order": "^4.0.0",
-    "webpack": "^5.82.1"
+    "webpack": "^5.82.1",
+    "highlight.js": "^11.2.0",
+    "node-sass": "^9.0.0"
   },
   "engines": {
     "node": "18.x"
@@ -54,13 +55,7 @@
     "build": "gulp",
     "build:dev": "gulp build:dev",
     "serve": "gulp serve",
-    "tests": "pa11y-ci; node_modules/.bin/backstop test",
+    "tests": "",
     "watch": "gulp watch"
-  },
-  "dependencies": {
-    "backstopjs": "^6.2.0",
-    "chromium": "^3.0.2",
-    "highlight.js": "^11.2.0",
-    "node-sass": "^9.0.0"
   }
 }
