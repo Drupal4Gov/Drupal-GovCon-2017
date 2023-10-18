@@ -1,11 +1,13 @@
 uuid: 4e93445a-59cd-4eeb-b12f-7331bda09936
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - webform
 id: check_in_status
 label: 'Check In Status'
 bundles:
-  - 2019_registration
+  - 2023_registration
 entity_type: webform_submission
 global: true
 flag_short: Registered
