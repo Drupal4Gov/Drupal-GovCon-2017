@@ -19,8 +19,8 @@ events:
             script:
               - composer install --ansi
               - source ${BLT_DIR}/scripts/pipelines/setup_env
-              - nvm install 18.17.1
-              - npm install -g npm@9.8.1
+              - nvm install v14.17
+              - npm install -g npm@9.6.7
         - validate:
             type: script
             script:
