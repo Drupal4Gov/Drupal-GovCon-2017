@@ -94,6 +94,59 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+        view_webform_submission:
+          id: view_webform_submission
+          table: webform_submission
+          field: view_webform_submission
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: webform_submission
+          plugin_id: entity_link
+          label: 'View Ticket Status'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          text: 'View Ticket Status'
+          output_url_as_text: false
+          absolute: false
         edit_webform_submission:
           id: edit_webform_submission
           table: webform_submission
@@ -144,7 +197,9 @@ display:
           hide_empty: true
           empty_zero: false
           hide_alter_empty: true
-          text: update
+          text: 'Update Ticket'
+          output_url_as_text: false
+          absolute: false
         webform_submission_value_3:
           id: webform_submission_value_3
           table: webform_submission_field_registration_wait_list_checkboxes
@@ -445,34 +500,26 @@ display:
           row_class: ''
           default_row_class: true
           columns:
-            webform_submission_value_1: webform_submission_value_1
-            webform_submission_value_2: webform_submission_value_2
-            webform_submission_value: webform_submission_value
-            edit_webform_submission: edit_webform_submission
+            webform_id: webform_id
+            view_webform_submission: view_webform_submission
+            edit_webform_submission: view_webform_submission
             webform_submission_value_3: webform_submission_value_3
-            webform_submission_value_4: webform_submission_value_4
+            delete_webform_submission: delete_webform_submission
             webform_submission_value_5: webform_submission_value_5
           default: '-1'
           info:
-            webform_submission_value_1:
+            webform_id:
               sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-            webform_submission_value_2:
+            view_webform_submission:
               sortable: false
               default_sort_order: asc
               align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            webform_submission_value:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
+              separator: ' / '
               empty_column: false
               responsive: ''
             edit_webform_submission:
@@ -483,22 +530,18 @@ display:
               empty_column: false
               responsive: ''
             webform_submission_value_3:
-              sortable: false
-              default_sort_order: asc
               align: ''
               separator: ''
               empty_column: true
               responsive: ''
-            webform_submission_value_4:
+            delete_webform_submission:
               sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
-              empty_column: true
+              empty_column: false
               responsive: ''
             webform_submission_value_5:
-              sortable: false
-              default_sort_order: asc
               align: ''
               separator: ''
               empty_column: true
