@@ -1,6 +1,6 @@
 uuid: 0ca23c84-5487-4f92-b538-fddf357a05d7
 langcode: en
-status: open
+status: scheduled
 dependencies:
   module:
     - antibot
@@ -8,8 +8,8 @@ third_party_settings:
   antibot:
     antibot: true
 weight: 0
-open: null
-close: null
+open: '2023-10-22T08:00:00'
+close: '2023-10-27T18:00:00'
 uid: 11
 template: false
 archive: false
@@ -18,9 +18,29 @@ title: '2023 Registration'
 description: ''
 categories: {  }
 elements: |-
+  ticket:
+    '#type': webform_message
+    '#states':
+      visible:
+        ':input[name="ticket_status"]':
+          value: Ticket
+    '#display_on': both
+    '#message_message': 'Congratulations - you have a ticket to GovCon 2023! We can&#39;t wait to see you.'
+  waitlist_ticket:
+    '#type': webform_message
+    '#states':
+      visible:
+        ':input[name="ticket_status"]':
+          value: Waitlist
+        ':input[name="yes_i_have_read_and_will_adhere_to_the_drupal_govcon_code_of_con"]':
+          checked: true
+    '#display_on': both
+    '#message_type': error
+    '#message_message': 'You are on the waitlist and have NOT been issued a ticket to GovCon. Please do not show up at the conference - we will not have the space. If we are over capacity, we run the risk of having the entire event shut down by the fire marshall.'
   markup_01:
     '#type': webform_markup
-    '#markup': '<p><strong>We are at capacity. Your registration will be placed on a wait list and you will be contacted if a spot opens up. You are still encouraged to register - we are often able to accommodate our wait list.</strong></p>'
+    '#access': false
+    '#markup': '<p><strong>We are at capacity. Your registration will be placed on a wait list and you will be contacted if a spot opens up. Unless you are a speaker or a trainer, it is unlkely you will be moved off the wait list.</strong></p>'
   email:
     '#type': email
     '#title': 'Attendee Email'
@@ -454,7 +474,7 @@ settings:
   confirmation_exclude_query: false
   confirmation_exclude_token: false
   confirmation_update: false
-  limit_total: 600
+  limit_total: 650
   limit_total_interval: null
   limit_total_message: ''
   limit_total_unique: false
