@@ -1,4 +1,5 @@
 @media print {
+
   html,
   body {
     margin: 0;
@@ -27,6 +28,13 @@
     }
   }
 
+  // Class starts with.
+  [class^="alias--badges---submissions"] {
+    .mq-main {
+      display: none;
+    }
+  }
+
   .region-content {
     width: 100%;
     padding: 0 !important;
@@ -49,7 +57,7 @@
     margin: 0 !important;
   }
 
-  .body-sidebars-none section#content > * {
+  .body-sidebars-none section#content>* {
     padding: 0 !important;
   }
 
@@ -97,6 +105,7 @@
     }
 
     .views-field-webform-submission {
+
       &-value-2,
       &-value-3 {
         display: inline-block;
@@ -132,6 +141,7 @@
     }
   }
 
+  .post-menu-footer,
   footer {
     display: none;
   }
