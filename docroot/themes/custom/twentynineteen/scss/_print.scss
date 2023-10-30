@@ -20,6 +20,7 @@
     }
   }
 
+  [class*="alias--badges---submissions"],
   body.path--badges---submissions {
     @page {
       size: 4in 2.31in;
@@ -29,7 +30,8 @@
   }
 
   // Class starts with.
-  [class^="alias--badges---submissions"] {
+  [class*="alias--badges---submissions"] {
+    .block-page-title-block,
     .mq-main {
       display: none;
     }
