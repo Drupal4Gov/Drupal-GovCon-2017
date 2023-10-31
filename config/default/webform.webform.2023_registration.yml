@@ -51,7 +51,7 @@ elements: |-
     '#type': fieldset
     '#title': 'Lunches & T-Shirts'
     '#access_create_roles':
-      - administrator
+      - authenticated
     '#access_update_roles':
       - administrator
     '#access_view_roles':
