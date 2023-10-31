@@ -1,5 +1,4 @@
 @media print {
-
   html,
   body {
     margin: 0;
@@ -20,20 +19,11 @@
     }
   }
 
-  [class*="alias--badges---submissions"],
   body.path--badges---submissions {
     @page {
       size: 4in 2.31in;
       margin: 0;
       padding: 0;
-    }
-  }
-
-  // Class starts with.
-  [class*="alias--badges---submissions"] {
-    .block-page-title-block,
-    .mq-main {
-      display: none;
     }
   }
 
@@ -59,7 +49,7 @@
     margin: 0 !important;
   }
 
-  .body-sidebars-none section#content>* {
+  .body-sidebars-none section#content > * {
     padding: 0 !important;
   }
 
@@ -107,7 +97,6 @@
     }
 
     .views-field-webform-submission {
-
       &-value-2,
       &-value-3 {
         display: inline-block;
@@ -143,7 +132,6 @@
     }
   }
 
-  .post-menu-footer,
   footer {
     display: none;
   }
