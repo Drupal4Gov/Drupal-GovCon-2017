@@ -128,13 +128,14 @@
             "drupal/core-composer-scaffold": true,
             "acquia/blt": true,
             "oomphinc/composer-installers-extender": true,
-            "acquia/blt-phpcs": true
+            "acquia/blt-phpcs": true,
+            "phpro/grumphp": true
         }
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "php": ">=8.1",
+        "php": ">=8.2",
         "ext-dom": "*",
         "ext-pdo": "*",
         "acquia/blt": "^13",
@@ -333,5 +334,10 @@
         "psr-4": {
             "Drupal\\Tests\\PHPUnit\\": "tests/phpunit/src/"
         }
+    },
+    "require-dev": {
+        "friendsoftwig/twigcs": ">=4",
+        "php-parallel-lint/php-parallel-lint": "^1.3",
+        "phpro/grumphp": "^2.5"
     }
 }

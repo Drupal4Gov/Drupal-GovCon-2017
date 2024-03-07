@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - filter.format.simple_text
+    - filter.format.webform_default
     - node.type.session
   module:
     - contact
@@ -49,6 +50,7 @@ permissions:
   - 'unflag session_schedule'
   - 'update media'
   - 'use text format simple_text'
+  - 'use text format webform_default'
   - 'view body'
   - 'view field_alternate_video_link'
   - 'view field_conference_year'
