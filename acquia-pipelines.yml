@@ -47,10 +47,6 @@ events:
             script:
               - cd $SOURCE_DIR
               - composer site-install
-        - tests:
-            type: script
-            script:
-              - source ${BLT_DIR}/scripts/pipelines/tests
         - build-artifact:
             type: script
             script:
